@@ -20,7 +20,7 @@ Additionally, the Squeezebox Controller provides unparalleled control of all you
 - Squeezebox 3rd Generation
 - Squeezebox2
 - Squeezebox, SB1
-- SLIMP3
+- [SLIMP3](SLIMP3.md)
 
 After 2010 the LMS community developed a couple of hardware offerings. 
 
