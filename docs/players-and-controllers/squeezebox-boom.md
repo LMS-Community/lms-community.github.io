@@ -11,7 +11,7 @@ The Squeezebox Boom was released in August 2008. It is the first all-in-one Sque
 
 Based on the same architecture as the Squeezebox Classic, Squeezebox Boom includes front panel controls, auxiliary line-in, a 3.5mm jack output for subwoofer or headphones, front panel controls and a powerful DSP driving stereo bi-amplified two way speakers.
 
-Technical details about the careful and innovative acoustic design can be found in this white paper.
+Technical details about the careful and innovative acoustic design can be found in [this white paper](assets/Logitech_Squeezebox_Boom_Audio_Design.pdf).
 
 The Squeezebox Boom was discontinued in 2012. 
 
