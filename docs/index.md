@@ -22,7 +22,7 @@ To get a functioning LMS system you need to have three components, namely (1) a 
 | :-------------------------------------------------------------------------- | :------- | :------- | :--------- |
 | [Logitech Media Server](https://github.com/Logitech/slimserver/)            | yes      |          |            |
 | [Squeezebox Touch](https://wiki.slimdevices.com/index.php/Squeezebox_Touch) | optional | yes      | yes        |
-| Material Skin                                                               |          |          | yes        |
-| iPeng (iOS app)                                                             |          | optional | yes        |
+| [Material Skin](plugins/material-skin.md)                                   |          |          | yes        |
+| [iPeng (iOS app)](https://apps.apple.com/app/ipeng/id767266886)             |          | optional | yes        |
 
 
