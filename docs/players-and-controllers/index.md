@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Players & Controllers
+title: Overview
 ---
 
 ## Hardware based
@@ -11,15 +11,15 @@ Additionally, the Squeezebox Controller provides unparalleled control of all you
 
 - [Hardware comparison](hardware-comparison.md)
 - [Squeezebox Touch](squeezebox-touch.md)
-- Squeezebox Radio
-- Squeezebox Boom
+- [Squeezebox Radio](squeezebox-radio.md)
+- [Squeezebox Boom](squeezebox-boom.md)
 - Squeezebox Duet
-    - Squeezebox Controller
-    - Squeezebox Receiver 
-- Transporter 
-- Squeezebox 3rd Generation
-- Squeezebox2
-- Squeezebox, SB1
+    - [Squeezebox Controller](squeezebox-controller.md)
+    - [Squeezebox Receiver](squeezebox-receiver.md)
+- [Transporter](transporter.md)
+- [Squeezebox 3rd Generation](squeezebox-classic.md)
+- [Squeezebox2](squeezebox2.md)
+- [Squeezebox, SB1](squeezebox1.md)
 - [SLIMP3](SLIMP3.md)
 
 After 2010 the LMS community developed a couple of hardware offerings. 

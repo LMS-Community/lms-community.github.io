@@ -1,13 +1,18 @@
 site_name: LMS-Community
+site_url: https://lms-community.github.io/
+
 theme:
   name: material
   logo: assets/logo.png
   language: en
   features:
+    - content.action.edit
+    - content.action.view
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.path
+    - navigation.expand
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -30,16 +35,47 @@ theme:
         name: Switch to system preference
 #  font:
 #    text: sans-serif
+
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Logitech/slimserver
     - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/lmscommunity/logitechmediaserver
-            
+      link: https://hub.docker.com/r/lmscommunity/logitechmediaserver 
+
 # tabbed content
 markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
+
+nav:
+  - Home: index.md
+  - Getting Started with LMS: 
+    - Installation: getting-started-with-LMS.md
+  - Players & Controllers:
+    - players-and-controllers/index.md
+    - Hardware based:
+      - Hardware comparison: players-and-controllers/hardware-comparison.md
+      - Squeezebox Touch: players-and-controllers/squeezebox-touch.md
+      - Squeezebox Radio: players-and-controllers/squeezebox-radio.md
+      - Squeezebox Boom: players-and-controllers/squeezebox-boom.md
+      - Squeezebox Duet: 
+        - Squeezebox Controller: players-and-controllers/squeezebox-controller.md
+        - Squeezebox Receiver: players-and-controllers/squeezebox-receiver.md
+      - Transporter: players-and-controllers/transporter.md
+      - Squeezebox Classic: players-and-controllers/squeezebox-classic.md
+      - Squeezebox 2: players-and-controllers/squeezebox2.md
+      - Squeezebox 1: players-and-controllers/squeezebox1.md
+      - SLIMP3: players-and-controllers/SLIMP3.md
+    - Software based:
+      - Squeezelite: players-and-controllers/squeezelite.md
+      - piCorePlayer: players-and-controllers/picoreplayer.md
+  - Plugins:
+    - plugins/index.md
+    - Material skin: plugins/material-skin.md
+  - Reference:
+    - reference/index.md
+    - SlimProto protocol: reference/slimproto-protocol.md
+    - SLIMP3 protocol: reference/slimp3-protocol.md
