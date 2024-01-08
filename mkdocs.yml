@@ -1,0 +1,45 @@
+site_name: LMS-Community
+theme:
+  name: material
+  logo: assets/logo.png
+  language: en
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+#  font:
+#    text: sans-serif
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Logitech/slimserver
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/lmscommunity/logitechmediaserver
+            
+# tabbed content
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
