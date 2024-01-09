@@ -41,4 +41,5 @@ And a couple of vendors added Squeezebox-compatibility in their commercial offer
 - [piCorePlayer](https://www.picoreplayer.org/)
 - [Daphile](https://www.daphile.com/)
 - [Max2Play](https://www.max2play.com/)
-- iPeng (controller for iOS)
+- [iPeng](https://penguinlovesmusic.de/?lang=de) (controller app for iOS)
+- [Material Skin](https://github.com/CDrummond/lms-material) and [Android App](https://github.com/CDrummond/lms-material-app)
