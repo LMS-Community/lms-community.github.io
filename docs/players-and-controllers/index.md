@@ -22,18 +22,10 @@ Additionally, the Squeezebox Controller provides unparalleled control of all you
 - [Squeezebox, SB1](squeezebox1.md)
 - [SLIMP3](SLIMP3.md)
 
-After 2010 the LMS community developed a couple of hardware offerings. 
+After 2010 the LMS community developed DIY hardware offerings. 
 
-- SqueezeAMP
-- Squeezelite-ESP32
-
-And a couple of vendors added Squeezebox-compatibility in their commercial offerings:
-
-- Sonicorbiter SE
-- SOtM sMS-200
-- microRendu
-- Bryston BDP Pi
-- Musical Fidelity M6 Encore
+- [SqueezeAMP](https://github.com/philippe44/SqueezeAMP)
+- [Squeezelite-ESP32](https://github.com/sle118/squeezelite-esp32)
 
 ## Software based players
 
