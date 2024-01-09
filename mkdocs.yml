@@ -74,7 +74,6 @@ nav:
       - piCorePlayer: players-and-controllers/picoreplayer.md
   - Plugins:
     - plugins/index.md
-    - Material skin: plugins/material-skin.md
   - Reference:
     - reference/index.md
     - SlimProto protocol: reference/slimproto-protocol.md

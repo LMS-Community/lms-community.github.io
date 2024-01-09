@@ -9,8 +9,6 @@ title: Home
 
 Logitech Media Server is a fully open source server software to power a wide range of audio players. With the help of many plugins, Logitech Media Server can stream not only your local music collection, but content from many music services and internet radio stations to your players.
 
-Also your plugins can have their home on LMS-Community. If you want to host your plugin repository here, please contact ...
-
 ## LMS Ecosystem
 Although Squeezeboxes started in 2000 with hard- and software developed by Slim Devices, which became later Logitech, nowadays a wide array of hardware and software solutions exist which make up the LMS ecosystem.
 
