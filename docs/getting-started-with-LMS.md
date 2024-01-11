@@ -53,3 +53,6 @@ Double click the downloaded package to launch the installation process in the ma
 
 See [lmscommunity/logitechmediaserver](https://hub.docker.com/r/lmscommunity/logitechmediaserver) on Docker hub.
 
+## Configure
+
+Now you should be able to browse to http://yourserver:9000 and begin configuring the Logitech Media Server. Congrats, you're all finished! 

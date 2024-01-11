@@ -76,5 +76,7 @@ nav:
     - plugins/index.md
   - Reference:
     - reference/index.md
-    - SlimProto protocol: reference/slimproto-protocol.md
-    - SLIMP3 protocol: reference/slimp3-protocol.md
+    - Logitech Media Server: reference/logitech-media-server.md
+    - Development:
+      - SlimProto protocol: reference/slimproto-protocol.md
+      - SLIMP3 protocol: reference/slimp3-protocol.md

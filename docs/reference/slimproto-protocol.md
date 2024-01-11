@@ -451,7 +451,7 @@ Content-type related, related to playing remote songs
 
 ## Command "grfd" 
 
-[SqueezeboxG](SqueezeboxG.md) only, draw graphics
+SqueezeboxG only, draw graphics
 
 ## Command "irtm" 
 

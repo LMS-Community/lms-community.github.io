@@ -10,4 +10,4 @@ To get a local development environment up you can do the following:
 3. Use `mkdocs serve` (or `docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material` if you're using the Docker image) to setup a live preview server from the local repository. The server will automatically rebuild the site upon saving.
 4. Point your browser to [localhost:8000](http://localhost:8000).
 
-Adding a page is very simple, just add the appropriate .md page under the docs folder and the page is automatically picked up and added to the navigation. Please see https://squidfunk.github.io/mkdocs-material/reference/ for more information about the framework.
+Adding a page is very simple, just add the appropriate .md page under the docs folder. Ik you want to add the page to the navigation you can expand the nav structure in the mkdocs.yml. Please see https://squidfunk.github.io/mkdocs-material/reference/ for more information about the framework.

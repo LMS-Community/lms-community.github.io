@@ -15,12 +15,3 @@ Although Squeezeboxes started in 2000 with hard- and software developed by Slim 
 To get a functioning LMS system you need to have three components, namely (1) a server, (2) a controller and (3) one or more music players. These three components can also be supplied by one device, for instance a Raspberry Pi with a touch screen running piCorePlayer.
 
 ![](assets/lms-community.svg)
-
-|                                                                             | Server   | Player   | Controller |
-| :-------------------------------------------------------------------------- | :------- | :------- | :--------- |
-| [Logitech Media Server](https://github.com/Logitech/slimserver/)            | yes      |          |            |
-| [Squeezebox Touch](https://wiki.slimdevices.com/index.php/Squeezebox_Touch) | optional | yes      | yes        |
-| [Material Skin](plugins/material-skin.md)                                   |          |          | yes        |
-| [iPeng (iOS app)](https://apps.apple.com/app/ipeng/id767266886)             |          | optional | yes        |
-
-
