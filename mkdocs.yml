@@ -1,5 +1,7 @@
 site_name: LMS-Community
 site_url: https://lms-community.github.io/
+repo_url: https://github.com/lms-community/lms-community.github.io
+edit_uri: edit/main/docs/
 
 theme:
   name: material
