@@ -5,7 +5,9 @@ title: SlimProto protocol
 
 # SlimProto Protocol 
 
-*note: always check the perl source code, this documentation is not in sync with actual byte length in multiple places*
+!!! note
+
+    Always check the Perl source code, this documentation is not in sync with actual byte length in multiple places
 
 The SlimProto protocol is the new protocol developed for the squeezebox and replaces the [SLIMP3](slimp3-protocol.md) one. It is designed to allow the players to communicate effectively over WANs as well as LANs.
 
