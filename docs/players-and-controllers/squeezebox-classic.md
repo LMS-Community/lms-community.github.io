@@ -11,4 +11,6 @@ Released at the end of October 2005, this is the 3rd Generation Squeezebox or SB
 
 Functionally, it is the same as the Squeezebox2, however a new case designed by Fred Bould and crisper display make it a fine addition to one's home.
 
-Note: The 3rd Generation Squeezebox is identified as Squeezebox2 in `Settings->Player Information->Player Model`. 
+!!! note
+
+    The 3rd Generation Squeezebox is identified as Squeezebox2 in `Settings->Player Information->Player Model`.
