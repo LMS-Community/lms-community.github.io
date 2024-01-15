@@ -5,7 +5,7 @@ title: Plugins
 
 # Plugins
 
-Logitech Media Server is customisable through add-on components called extras or plugins. LMS comes with a number of plugins already installed (see the "server settings->plugins" page of the LMS web interface to see them), and you can also install your own through that plugins page. 
+Logitech Media Server is customisable through add-on components called extras or plugins. LMS comes with a number of plugins already installed (see the "Server Settings -> Plugins" page of the LMS web interface to see them), and you can also install your own through that plugins page. 
 
 Many people have written their own plugins and made them available to the Squeezebox community to make use of. Join us in the [3rd Party Plugins forum](https://forums.slimdevices.com/forum/user-forums/3rd-party-software) for a lively discussion or get started writing your own plugin. 
 
