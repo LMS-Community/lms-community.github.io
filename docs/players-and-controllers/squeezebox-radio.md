@@ -17,4 +17,4 @@ An accessory pack consisting of a battery and an infrared remote control is opti
 
 ## UE Smart Radio
 
-Some SB Radios have been "upgraded" to UE Smart Radio. Follow [this guide](migrate-from-uesr.md) if you want to revert to Squeezebox.
+Some SB Radios have been "upgraded" to UE Smart Radio. Follow [this guide](../getting-started/migrate-from-uesr.md) if you want to revert to Squeezebox.

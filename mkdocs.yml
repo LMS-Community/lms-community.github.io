@@ -59,8 +59,8 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started with LMS: 
-    - Installation: getting-started-with-LMS.md
-    - Migrate from UE Smart Radio: players-and-controllers/migrate-from-uesr.md
+    - Installation: getting-started/index.md
+    - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
   - Players & Controllers:
     - players-and-controllers/index.md
     - Hardware based:
