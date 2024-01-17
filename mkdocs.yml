@@ -85,5 +85,6 @@ nav:
     - reference/index.md
     - Logitech Media Server: reference/logitech-media-server.md
     - Development:
+      - Database structure: reference/database-structure.md
       - SlimProto protocol: reference/slimproto-protocol.md
       - SLIMP3 protocol: reference/slimp3-protocol.md
