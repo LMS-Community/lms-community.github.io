@@ -14,3 +14,7 @@ Squeezebox Radio includes front panel controls, auxiliary line-in, headphone out
 The Radio has a two-way, bi-amplified mono speaker (as opposed to a stereo speaker) -- this provides the best sound quality of any device it's size. Much of the acoustical treatment is the same as on the Squeezebox Boom, details of which can be in [this white paper](assets/Logitech_Squeezebox_Boom_Audio_Design.pdf). Using Logitech Media Server, two Squeezebox Radios can be synchronized to act as one stereo player.
 
 An accessory pack consisting of a battery and an infrared remote control is optional. 
+
+## UE Smart Radio
+
+Some SB Radios have been "upgraded" to UE Smart Radio. Follow [this guide](migrate-from-uesr.md) if you want to revert to Squeezebox.
