@@ -8,7 +8,7 @@ on:
 
 env:
   CHANGELOG_SRC: https://raw.githubusercontent.com/Logitech/slimserver/HEAD/Changelog8.html
-  CHANGELOG_TARGET: docs/getting/started/changelog-lms8.md
+  CHANGELOG_TARGET: docs/getting-started/changelog-lms8.md
 
 jobs:
   changelog:
