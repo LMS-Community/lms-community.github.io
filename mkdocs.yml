@@ -64,6 +64,9 @@ nav:
     - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
     - Changelog: 
       - LMS8 changelog: getting-started/changelog-lms8.md
+    - Contributing:
+      - Reporting a bug: contributing/reporting-a-bug.md
+      - Adding translations: contributing/adding-translations.md
   - Players & Controllers:
     - players-and-controllers/index.md
     - Hardware based:
