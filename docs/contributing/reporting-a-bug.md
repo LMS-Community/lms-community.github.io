@@ -24,7 +24,7 @@ Please search the [issue tracker](https://github.com/Logitech/slimserver/issues)
 If you did not find a previous report of your issue you can submit your report to the public [issue tracker](https://github.com/Logitech/slimserver/issues). Please include the following in your report:
 
 - descriptive title
-- context (OS, hardware used, Perl version)
-- description
+- context from Settings/Information in LMS: _LMS version!_, operating system, hardware used, Perl version
+- description of the issue
 - steps to reproduce the bug
 - browser used (if relevant)
