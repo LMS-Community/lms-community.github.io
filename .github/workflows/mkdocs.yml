@@ -1,9 +1,6 @@
-name: ci 
+name: Build website and publish to gh-pages branch 
 on:
-  push:
-    branches:
-      - master 
-      - main
+  workflow_call:
 permissions:
   contents: write
 jobs:

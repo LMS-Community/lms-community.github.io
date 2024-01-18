@@ -1,15 +1,9 @@
 name: Get changelog from LMS repo
-
 on:
-  push:
-    branches:
-      - master
-      - main
-
+  workflow_call:
 env:
   CHANGELOG_SRC: https://raw.githubusercontent.com/Logitech/slimserver/HEAD/Changelog8.html
   CHANGELOG_TARGET: docs/getting-started/changelog-lms8.md
-
 jobs:
   changelog:
     runs-on: ubuntu-latest
