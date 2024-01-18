@@ -1,6 +1,6 @@
 ## Version 8.4.0
 
-- [Upstream fixes from Logitech Media Server 8.3.x](http://raw.githubusercontent.com#v8.3.1)
+- [Upstream fixes from Logitech Media Server 8.3.x](#version-832)
 
 - New Features:
 
@@ -109,7 +109,7 @@
 
 ## Version 8.3.0 - 2022-11-04 (4e15dbdff)
 
-- [Upstream fixes from Logitech Media Server 8.2.x](http://raw.githubusercontent.com/Changelog8.html#v8.2.1)
+- [Upstream fixes from Logitech Media Server 8.2.x](#version-821)
 
 - New Features:
 
@@ -195,7 +195,7 @@
 
 ## Version 8.2.0 - 2021-08-03 (1ec16032b)
 
-- [Upstream fixes from Logitech Media Server 8.1.x](http://raw.githubusercontent.com/Changelog8.html#v8.1.2)
+- [Upstream fixes from Logitech Media Server 8.1.x](#version-812)
 
 - New Features:
 
@@ -284,7 +284,7 @@
 
 ## Version 8.1.0 - 2020-12-23 (effae8494)
 
-- [Upstream fixes from Logitech Media Server 8.0.x](http://raw.githubusercontent.com/Changelog8.html#v8.0.1)
+- [Upstream fixes from Logitech Media Server 8.0.x](#version-801)
 
 - New Features:
 
@@ -321,7 +321,7 @@
 
 ## Version 8.0.0 - 2020-11-20 (e0eee9c29)
 
-- [Upstream fixes from Logitech Media Server 7.9.3](http://raw.githubusercontent.com/Changelog7.html#v7.9.3)
+- [Upstream fixes from Logitech Media Server 7.9.3](#version-793)
 
 - New Features:
 
