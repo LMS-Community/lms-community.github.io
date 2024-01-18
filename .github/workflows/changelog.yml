@@ -1,0 +1,35 @@
+name: Get changelog from LMS repo
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+env:
+  CHANGELOG_SRC: https://raw.githubusercontent.com/Logitech/slimserver/HEAD/Changelog8.html
+  CHANGELOG_TARGET: docs/getting/started/changelog-lms8.md
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          go install github.com/suntong/html2md@latest
+          export PATH=${PATH}:`go env GOPATH`/bin
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get changelog and convert to markdown
+        run: |
+          html2md -i $CHANGELOG_SRC > $CHANGELOG_TARGET
+
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add $CHANGELOG_TARGET
+          git commit -a -m "Update changelog from slimserver repo"
+          git push
