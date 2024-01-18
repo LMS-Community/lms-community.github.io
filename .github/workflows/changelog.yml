@@ -14,6 +14,12 @@ jobs:
   changelog:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Go
+        uses: actions/setup-go@v4
+        if: ${{ env.ACT }}
+        with:
+          go-version: '>=1.17.0'
+
       - name: Install dependencies
         run: |
           go install github.com/suntong/html2md@latest
@@ -25,8 +31,10 @@ jobs:
         run: |
           export PATH=${PATH}:`go env GOPATH`/bin
           html2md -i $CHANGELOG_SRC > $CHANGELOG_TARGET
+          sed -Ei 's/http:\/\/raw.githubusercontent.com.*?#v([1-9]+)\.([0-9]+)\.([0-9]+)\)/#version-\1\2\3)/' $CHANGELOG_TARGET
 
       - name: Commit changes
+        if: ${{ !env.ACT }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
