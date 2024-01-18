@@ -17,13 +17,13 @@ jobs:
       - name: Install dependencies
         run: |
           go install github.com/suntong/html2md@latest
-          export PATH=${PATH}:`go env GOPATH`/bin
 
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Get changelog and convert to markdown
         run: |
+          export PATH=${PATH}:`go env GOPATH`/bin
           html2md -i $CHANGELOG_SRC > $CHANGELOG_TARGET
 
       - name: Commit changes
