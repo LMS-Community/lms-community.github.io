@@ -46,9 +46,9 @@ my $repo;
 
 print q(
 !!! info
-	Do net edit this page! It is automatically generated from the repository files.
-	Any change the the file would be overwritten next time changes from the plugin repository are embedded.
-	If you'd like to apply a change, update the plugin's repository file instead.
+	Do not edit this page! It is automatically generated from the repository files.
+	Any change to the file would be overwritten next time changes from the plugin repository are embedded.
+	If you'd like to apply a change, update the [plugin's repository file](https://github.com/LMS-Community/lms-plugin-repository) instead.
 );
 
 eval {
