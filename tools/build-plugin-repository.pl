@@ -15,6 +15,7 @@ my @categories = (
   "radio",
   "hardware",
   "skin",
+  "information",
   "playlists",
   "scanning",
   "tools",
@@ -25,6 +26,7 @@ my %categoryTitles = (
 	musicservices => 'Music Services',
 	radio => 'Internet Radio',
 	skin => 'Skins',
+	information => 'Information, Metadata',
 	misc => 'Miscellaneous',
 );
 
@@ -33,6 +35,7 @@ my %categoryIcons = (
 	radio => 'material-radio',
 	hardware => 'material-cast-audio',
 	skin => 'material-page-layout-header-footer',
+	information => 'material-information-box-outline',
 	playlists => 'material-playlist-music',
 	tools => 'material-tools',
 	scanning => 'material-file-search-outline',
@@ -40,6 +43,13 @@ my %categoryIcons = (
 );
 
 my $repo;
+
+print q(
+!!! info
+	Do net edit this page! It is automatically generated from the repository files.
+	Any change the the file would be overwritten next time changes from the plugin repository are embedded.
+	If you'd like to apply a change, update the plugin's repository file instead.
+);
 
 eval {
 	my $repoXML = TESTING

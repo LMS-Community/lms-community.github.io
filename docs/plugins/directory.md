@@ -1,3 +1,8 @@
+
+!!! info
+	Do net edit this page! It is automatically generated from the repository files.
+	Any change the the file would be overwritten next time changes from the plugin repository are embedded.
+	If you'd like to apply a change, update the plugin's repository file instead.
 ## :material-music-box-outline: Music Services
 
 <div class="grid cards" markdown>
@@ -18,14 +23,6 @@
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim/)
 
--   __:material-music-box-outline: LastMix - Don't Stop The Music support using Last.fm.__
-
-    ---
-
-    LastMix allows you to create Last.fm based mixes for the "Don't Stop The Music" plugin.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
-
 -   __:material-music-box-outline: Mixcloud__
 
     ---
@@ -34,13 +31,21 @@
 
     Christian Mueller, Daniel Vijge, KwarkLabs    - [:octicons-globe-24: Details](https://github.com/danielvijge/lms_mixcloud)
 
--   __:material-music-box-outline: Music and Artist Information__
+-   __:material-music-box-outline: phish.in'__
 
     ---
 
-    Read album reviews, artist biographies, related artists, see artist pictures and much more.
+    phish.in' gives you access to Live Phish Audio Streams
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicArtistInfo/)
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
+
+-   __:material-music-box-outline: Podcast Extensions__
+
+    ---
+
+    Add providers to podcast
+
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-PodcastExt)
 
 -   __:material-music-box-outline: Qobuz__
 
@@ -50,51 +55,11 @@
 
     [:octicons-mail-24: Pierre Beck / Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](http://forums.slimdevices.com/showthread.php?97146-Qobuz-com-streaming-plugin)
 
--   __:material-music-box-outline: Spicefly SugarCube__
-
-    ---
-
-    Travel through your music Library using MusicIPs recommendations. Features Include Filter, Genre, Artist and Recipe Mixing, Trackstat Integration, Artist Blocking, Genre Blocking, Custom Track Weighting Routines, Coming Up Next Display, Sleep Mode, Volume Fade and lots more.  See www.spicefly.com for Details and Change Log.
-
-    [:octicons-mail-24: Charles Parker](mailto:abuse@spicefly.com)    - [:octicons-globe-24: Details](http://www.spicefly.com/)
-
 -   __:material-music-box-outline: Spotify for Squeezebox. Still Spotty.__
 
     ---
 
     The next generation Spotify implementation for Squeezebox.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
-
--   __:material-music-box-outline: Spotty Helper Application for FreeBSD 13__
-
-    ---
-
-    Spotty Helper Application for FreeBSD 13. This plugin requires the Spotty plugin.
-
-    [:octicons-mail-24: Richard Herman](mailto:richard@neversimple.eu)
-
--   __:material-music-box-outline: Spotty Helper Application for Raspberry Pi Zero/1st Generation__
-
-    ---
-
-    These are the legacy Spotty Helper Application for ARMv6 based Raspberry Pi systems (0/1). Use these if your installation used to work pre Spotty 4.5.0, but stopped with the most recent helpers.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
-
--   __:material-music-box-outline: Spotty Helper Application for Solaris/Illumos__
-
-    ---
-
-    Spotty Helper Application for Solaris/Illumos. This plug-in requires the Spotty plugin.
-
-    [:octicons-mail-24: Reiner Paulus](mailto:lms@hashsum.org)
-
--   __:material-music-box-outline: Spotty Legacy Helper Application for ARMv6/7 architecture__
-
-    ---
-
-    These are the legacy Spotty Helper Application for ARMv6/7 based systems. Use these if your installation used to work pre Spotty 2.8.0, but stopped with the most recent helpers. Please note that these legacy versions come with certain limitations, eg. cannot stream OGG directly to your player.
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
@@ -193,14 +158,6 @@
 
     bpa
 
--   __:material-radio: phish.in'__
-
-    ---
-
-    phish.in' gives you access to Live Phish Audio Streams
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
-
 -   __:material-radio: Planet Radio__
 
     ---
@@ -208,22 +165,6 @@
     Programme, track and podcast information for Planet Radio / Bauer Media
 
     Paul Webster
-
--   __:material-radio: Podcast Extensions__
-
-    ---
-
-    Add providers to podcast
-
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-PodcastExt)
-
--   __:material-radio: Radio DRS Meta Information__
-
-    ---
-
-    Swiss Radio DRS Stream Meta Information Parser
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/DRS/)
 
 -   __:material-radio: Radio Favourites__
 
@@ -391,6 +332,14 @@
 
     [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](https://github.com/sle118/squeezelite-esp32)
 
+-   __:material-cast-audio: TVH__
+
+    ---
+
+    TVHeadend Radio Plugin for Logitech Media Server
+
+    [:octicons-mail-24: Andrew Jackson, Luke Easter](mailto:squeeze@codechimp.org)    - [:octicons-globe-24: Details](https://github.com/codechimp-org/lms-tvh)
+
 -   __:material-cast-audio: UPnP/DLNA bridge__
 
     ---
@@ -439,17 +388,199 @@
 
 </div>
 
-## :material-playlist-music: Playlists
+## :material-information-box-outline: Information, Metadata
 
 <div class="grid cards" markdown>
 
--   __:material-playlist-music: Alternative Play Count__
+-   __:material-information-box-outline: Alternative Play Count__
 
     ---
 
     Provides alternative play counts and skip counts that aim to reflect your true listening history. You set a time after which a song counts as played. If you skip the song before, it counts as skipped, not played. Create (scheduled) backups, restore from backups. More information on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-alternativeplaycount)
+
+-   __:material-information-box-outline: Database Query__
+
+    ---
+
+    Makes it possible to define and execute custom SQL statements towards SqueezeCenter database. The result can be displayed in the browser or exported as CSV or XML files. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
+
+    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Database_Query_plugin)
+
+-   __:material-information-box-outline: Date and Spelled time__
+
+    ---
+
+    
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/TimeSpeller/)
+
+-   __:material-information-box-outline: Files Viewer__
+
+    ---
+
+    Provides capability to view text files on a SqueezeBox Classic player.
+
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/FilesViewerPlugin.htm)
+
+-   __:material-information-box-outline: Files Viewer__
+
+    ---
+
+    
+
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/SongFileViewerPlugin.htm)
+
+-   __:material-information-box-outline: Fileviewer__
+
+    ---
+
+    
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/FileViewer/)
+
+-   __:material-information-box-outline: FuzzyTime__
+
+    ---
+
+    Provides a "date and time" screensaver that can act like a clock set "ahead" of the real time, and allows other plugins to display such "fast" times and set timers based on such displayed time. (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
+
+    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/FuzzyTime.html)
+
+-   __:material-information-box-outline: Information Screen__
+
+    ---
+
+    Configurable support plugin for Information Screen screen saver that makes it possible to switch between different kind of information. (Controller, Radio, Touch, SqueezePlay)
+
+    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)
+
+-   __:material-information-box-outline: Music and Artist Information__
+
+    ---
+
+    Read album reviews, artist biographies, related artists, see artist pictures and much more.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicArtistInfo/)
+
+-   __:material-information-box-outline: Music Information Screen__
+
+    ---
+
+    The Music Information Screen plugin allows customization of the player's Now Playing screen and other elements.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicInfoSCR/)
+
+-   __:material-information-box-outline: PlayLog__
+
+    ---
+
+    This plugin allows you you to log the tracks you listen to, either automatically or by pressing a few remote control buttons. It provides a web interface for viewing its log, linking to the web for more information about what you've listened to, and downloading XML and M3U playlists of played songs. (Boom, Classic, Slimp3, SoftSqueeze, Squeezebox1, Transporter; limited support for Radio, Receiver, and Touch)
+
+    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/PlayLog.html)
+
+-   __:material-information-box-outline: Radio DRS Meta Information__
+
+    ---
+
+    Swiss Radio DRS Stream Meta Information Parser
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/DRS/)
+
+-   __:material-information-box-outline: Rating Buttons__
+
+    ---
+
+    Use remote buttons and the default web interace to rate songs on Squeezebox Classic, Boom and Transporter
+
+    flipflip    - [:octicons-globe-24: Details](https://github.com/phkehl/lms-plugins)
+
+-   __:material-information-box-outline: Ratings Light__
+
+    ---
+
+    Takes care of rating your tracks. Set track ratings (also with plugins/apps and IR remote). Import track ratings from file tags or playlists. Export track ratings to playlist files. Create (scheduled) backups, restore from backups. Create virtual libraries for (top) rated tracks. Browse (top) rated tracks by artist or genre (browse menus). Keep track of your recently rated songs with a dedicated playlist or log file. Show rated songs for artist, album, genre, year or playlist (context menu). Support for online library tracks where possible. Includes "Don't Stop The Music" mixes. More information on the GitHub page.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-ratingslight)
+
+-   __:material-information-box-outline: SaverSwitcher__
+
+    ---
+
+    Configure multiple screensavers for the When Off, When Playing, and When Idle modes, either having SqueezeCenter cycle through a number of plugins or allowing you to change screensavers with a single button press. Easily change screensavers, or immediately jump to the When Playing screensaver, if used with ContextMenu. Can display "conditional" screensavers, as with KitchenTimer (set a screensaver to display onlly if it has something to report). (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
+
+    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SaverSwitcher.html)
+
+-   __:material-information-box-outline: Song Info__
+
+    ---
+
+    A plugin to make it possible to get various information about a song, can for example be used to get artist images from LastFM (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
+
+    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)
+
+-   __:material-information-box-outline: Song Lyrics__
+
+    ---
+
+    A plugin that shows lyrics from chartlyrics.com and musixmatch.com through the Song Info plugin. This plugin requires that the Song Info plugin also is installed. (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
+
+    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)
+
+-   __:material-information-box-outline: SuperDateTime__
+
+    ---
+
+    Displays local time, date, weather, sports, and stock information.
+
+    G Brown, D Grossman    - [:octicons-globe-24: Details](https://sourceforge.net/projects/sdt-weather-com/)
+
+-   __:material-information-box-outline: Title Switcher__
+
+    ---
+
+    Makes it possible to get text information on the player screen that switches between different kind of information, for example showing artist 5 seconds and album name 5 seconds. The plugin requires that the Music Information Screen(MusicInfoSCR) plugin is installed. (Boom, Transporter, Classic, SoftSqueeze)
+
+    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Title_Switcher_plugin)
+
+-   __:material-information-box-outline: TrackStat__
+
+    ---
+
+    Store statistics such as rating, last played time and play counts so it survives a rescan and allows to to browse your library based on the statistic information. You can set the ratings via the Squeezebox player, CLI, Squeezebox Controller or web interface, ratings and statistic data can also be imported/exported from/to iTunes, Amarok and MusicIP Mixer. It also supports Dynamic Playlist plugin by adding dynamic playlists for all its statistics. Please note that TrackStat needs a bit more resources than small plugins and might also slow down startup of SqueezeCenter a bit, so you might get problems if you are running SqueezeCenter on slow hardware. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
+
+    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/TrackStat_plugin)
+
+-   __:material-information-box-outline: Visual Statistics__
+
+    ---
+
+    Have a look at your library statistics with charts. More information on the GitHub page.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-visualstatistics)
+
+-   __:material-information-box-outline: What Was That Tune?__
+
+    ---
+
+    Keep track of what was playing while you were too busy to check the display.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins)
+
+-   __:material-information-box-outline: XSqueezeDisplay__
+
+    ---
+
+    Display Kodi (XBMC) Now Playing info on a Squeezebox SB2/3/Classic display.
+
+    [:octicons-mail-24: bossanova808](mailto:bossanova808@gmail.com)
+
+</div>
+
+## :material-playlist-music: Playlists
+
+<div class="grid cards" markdown>
 
 -   __:material-playlist-music: Custom Skip__
 
@@ -515,6 +646,14 @@
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylists)
 
+-   __:material-playlist-music: LastMix - Don't Stop The Music support using Last.fm.__
+
+    ---
+
+    LastMix allows you to create Last.fm based mixes for the "Don't Stop The Music" plugin.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
+
 -   __:material-playlist-music: Playlist Generator__
 
     ---
@@ -530,6 +669,14 @@
     Provides functionality to add songs or albums to any chosen playlist.
 
     [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/PlaylistManPlugin.htm)
+
+-   __:material-playlist-music: Spicefly SugarCube__
+
+    ---
+
+    Travel through your music Library using MusicIPs recommendations. Features Include Filter, Genre, Artist and Recipe Mixing, Trackstat Integration, Artist Blocking, Genre Blocking, Custom Track Weighting Routines, Coming Up Next Display, Sleep Mode, Volume Fade and lots more.  See www.spicefly.com for Details and Change Log.
+
+    [:octicons-mail-24: Charles Parker](mailto:abuse@spicefly.com)    - [:octicons-globe-24: Details](http://www.spicefly.com/)
 
 -   __:material-playlist-music: SQL Playlist__
 
@@ -593,14 +740,6 @@
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-customtagimporter)
 
--   __:material-file-search-outline: Ignore files and folders__
-
-    ---
-
-    Set a regular expression to ignore files and folders when scanning or browsing folders.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
-
 -   __:material-file-search-outline: LazySearch2__
 
     ---
@@ -616,6 +755,14 @@
     Makes it possible to divide your SqueezeCenter library into different sub libraries, requires Custom Browse plugin to be able to browse the sub libraries. Please note that Multi Library needs a bit more resources than small plugins and might also slow down startup of SqueezeCenter a bit, so you might get problems if you are running SqueezeCenter on slow hardware. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Multi_Library_plugin)
+
+-   __:material-file-search-outline: Phil's Libraries__
+
+    ---
+
+    Creates new libraries for "Not Rated" and "Rated High", dependent on Erlands TrackStat plugin
+
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)
 
 -   __:material-file-search-outline: Simple Library Views__
 
@@ -679,14 +826,6 @@
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim/)
 
--   __:material-tools: Community Firmware__
-
-    ---
-
-    Community Firmware for SqueezeBox Touch/Radio/Controller
-
-    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)
-
 -   __:material-tools: Custom Clock Helper__
 
     ---
@@ -694,22 +833,6 @@
     This is a helper plugin for the Custom Clock screen saver applet, it makes it possible to create your own clock styles and modify the existing styles (Controller, Radio, Touch, SqueezePlay)
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Custom_Clock_applet)
-
--   __:material-tools: Database Query__
-
-    ---
-
-    Makes it possible to define and execute custom SQL statements towards SqueezeCenter database. The result can be displayed in the browser or exported as CSV or XML files. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Database_Query_plugin)
-
--   __:material-tools: Date and Spelled time__
-
-    ---
-
-    
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/TimeSpeller/)
 
 -   __:material-tools: Enable/disable access to server settings__
 
@@ -719,29 +842,13 @@
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
--   __:material-tools: Files Viewer__
+-   __:material-tools: Group Players__
 
     ---
 
-    Provides capability to view text files on a SqueezeBox Classic player.
+    on-the-fly group creation
 
-    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/FilesViewerPlugin.htm)
-
--   __:material-tools: Files Viewer__
-
-    ---
-
-    
-
-    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/SongFileViewerPlugin.htm)
-
--   __:material-tools: Fileviewer__
-
-    ---
-
-    
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/FileViewer/)
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-Groups)
 
 -   __:material-tools: Hide Menus__
 
@@ -751,6 +858,14 @@
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Hide_Menus_plugin)
 
+-   __:material-tools: Ignore files and folders__
+
+    ---
+
+    Set a regular expression to ignore files and folders when scanning or browsing folders.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
+
 -   __:material-tools: Image Proxy configuration helper__
 
     ---
@@ -759,21 +874,21 @@
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
--   __:material-tools: Information Screen__
+-   __:material-tools: KidsPlay__
 
     ---
 
-    Configurable support plugin for Information Screen screen saver that makes it possible to switch between different kind of information. (Controller, Radio, Touch, SqueezePlay)
+    Have SqueezeCenter execute specific sets of commands for certain buttons, so you can give a child a remote control with limited function, or redefine Boom or Radio 1-6 preset buttons or the button on a Squeezebox Receiver. (Boom, Classic, Radio, Receiver, Slimp3, Squeezebox1, Transporter)
 
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)
+    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/KidsPlay.html)
 
--   __:material-tools: Music Information Screen__
+-   __:material-tools: KitchenTimer__
 
     ---
 
-    The Music Information Screen plugin allows customization of the player's Now Playing screen and other elements.
+    This plugin allows you to set simple countdown timers. Timers can be given names and saved for later re-use. Timers can be shortened or extended if needed. Includes a countdown screensaver designed for use with SaverSwitcher (only displayed if there's an active timer). (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicInfoSCR/)
+    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/KitchenTimer.html)
 
 -   __:material-tools: Music Walk With Me__
 
@@ -799,21 +914,29 @@
 
     [:octicons-mail-24: bpa](mailto:baltontwo@eircom.net)
 
--   __:material-tools: Rating Buttons__
+-   __:material-tools: PowerCenter__
 
     ---
 
-    Use remote buttons and the default web interace to rate songs on Squeezebox Classic, Boom and Transporter
+    Control X-10 and Insteon modules with a Squeezebox Controller, Radio, Touch, old-style infrared remote, or Boom or Transporter buttons. Use Insteon or X-10 to have a device turn on and off when a specific player is turned on or off. Turn a coffee pot on when an alarm sounds. (Boom, Classic, Controller, Radio, Receiver, Slimp3, SoftSqueeze, Squeezebox1, Touch, Transporter)
 
-    flipflip    - [:octicons-globe-24: Details](https://github.com/phkehl/lms-plugins)
+    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/PowerCenter.html)
 
--   __:material-tools: Ratings Light__
+-   __:material-tools: PowerSave__
 
     ---
 
-    Takes care of rating your tracks. Set track ratings (also with plugins/apps and IR remote). Import track ratings from file tags or playlists. Export track ratings to playlist files. Create (scheduled) backups, restore from backups. Create virtual libraries for (top) rated tracks. Browse (top) rated tracks by artist or genre (browse menus). Keep track of your recently rated songs with a dedicated playlist or log file. Show rated songs for artist, album, genre, year or playlist (context menu). Support for online library tracks where possible. Includes "Don't Stop The Music" mixes. More information on the GitHub page.
+    Power off your squeezebox after a certain amount of time (idle or otherwise)
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-ratingslight)
+    [:octicons-mail-24: Jason Holtzapple](mailto:jasonholtzapple@gmail.com)
+
+-   __:material-tools: SettingsManager__
+
+    ---
+
+    Provides a Web interface for copying settings from one player to another, permanently "linking" settings on multiple Squeezeboxes, setting defaults for newly connected Squeezeboxes or remote /stream.mp3 clients, and importing/exporting client settings, to make it easier to manage multiple Squeezebox players. (Boom, Classic, Receiver, Slimp3, SoftSqueeze, Squeezebox1, Transporter)
+
+    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SettingsManager.html)
 
 -   __:material-tools: Signal Generator__
 
@@ -822,22 +945,6 @@
     Signal Generator plugin.  Now supports Squeezeplay as well as SB2/3/Transporter.
 
     [:octicons-mail-24: Triode](mailto:triode1@btinternet.com)
-
--   __:material-tools: Song Info__
-
-    ---
-
-    A plugin to make it possible to get various information about a song, can for example be used to get artist images from LastFM (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)
-
--   __:material-tools: Song Lyrics__
-
-    ---
-
-    A plugin that shows lyrics from chartlyrics.com and musixmatch.com through the Song Info plugin. This plugin requires that the Song Info plugin also is installed. (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)
 
 -   __:material-tools: SqueezeboxEQ__
 
@@ -855,37 +962,21 @@
 
     Jonathan Fox
 
--   __:material-tools: Title Switcher__
+-   __:material-tools: SyncOptions__
 
     ---
 
-    Makes it possible to get text information on the player screen that switches between different kind of information, for example showing artist 5 seconds and album name 5 seconds. The plugin requires that the Music Information Screen(MusicInfoSCR) plugin is installed. (Boom, Transporter, Classic, SoftSqueeze)
+    Gives new settings for synchronizing players: "wait for next track" to avoid disruptions; "unsync at power off"; restore local playlist after leaving a sync group. (Boom, Classic, Radio, Receiver, Squeezebox1, Slimp3, SoftSqueeze, Touch, Transporter) 
 
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Title_Switcher_plugin)
+    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SyncOptions.html)
 
--   __:material-tools: TrackStat__
-
-    ---
-
-    Store statistics such as rating, last played time and play counts so it survives a rescan and allows to to browse your library based on the statistic information. You can set the ratings via the Squeezebox player, CLI, Squeezebox Controller or web interface, ratings and statistic data can also be imported/exported from/to iTunes, Amarok and MusicIP Mixer. It also supports Dynamic Playlist plugin by adding dynamic playlists for all its statistics. Please note that TrackStat needs a bit more resources than small plugins and might also slow down startup of SqueezeCenter a bit, so you might get problems if you are running SqueezeCenter on slow hardware. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/TrackStat_plugin)
-
--   __:material-tools: Visual Statistics__
+-   __:material-tools: xAP Home Automation__
 
     ---
 
-    Have a look at your library statistics with charts. More information on the GitHub page.
+    xAP Home Automation connects Squeezebox Server with other xAP-enabled services and devices around the home.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-visualstatistics)
-
--   __:material-tools: What Was That Tune?__
-
-    ---
-
-    Keep track of what was playing while you were too busy to check the display.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins)
+    Edward Pearson    - [:octicons-globe-24: Details](http://www.erspearson.com/xAP/Slim/slim_main.htm)
 
 </div>
 
@@ -908,6 +999,14 @@
     Screensaver that simply makes the screen go dark -- most useful with SaverSwitcher, providing an easy way to make the display go dark without having to cycle through all brightness options. (Boom, Classic, Squeezebox1, Slimp3, SoftSqueeze)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/BlankSaver.html)
+
+-   __:material-toy-brick-outline: Community Firmware__
+
+    ---
+
+    Community Firmware for SqueezeBox Touch/Radio/Controller
+
+    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)
 
 -   __:material-toy-brick-outline: ContextMenu__
 
@@ -933,38 +1032,6 @@
 
     [:octicons-mail-24: Jason Holtzapple](mailto:jasonholtzapple@gmail.com)
 
--   __:material-toy-brick-outline: FuzzyTime__
-
-    ---
-
-    Provides a "date and time" screensaver that can act like a clock set "ahead" of the real time, and allows other plugins to display such "fast" times and set timers based on such displayed time. (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
-
-    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/FuzzyTime.html)
-
--   __:material-toy-brick-outline: Group Players__
-
-    ---
-
-    on-the-fly group creation
-
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-Groups)
-
--   __:material-toy-brick-outline: KidsPlay__
-
-    ---
-
-    Have SqueezeCenter execute specific sets of commands for certain buttons, so you can give a child a remote control with limited function, or redefine Boom or Radio 1-6 preset buttons or the button on a Squeezebox Receiver. (Boom, Classic, Radio, Receiver, Slimp3, Squeezebox1, Transporter)
-
-    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/KidsPlay.html)
-
--   __:material-toy-brick-outline: KitchenTimer__
-
-    ---
-
-    This plugin allows you to set simple countdown timers. Timers can be given names and saved for later re-use. Timers can be shortened or extended if needed. Includes a countdown screensaver designed for use with SaverSwitcher (only displayed if there's an active timer). (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
-
-    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/KitchenTimer.html)
-
 -   __:material-toy-brick-outline: License Manager__
 
     ---
@@ -972,38 +1039,6 @@
     A plugin that's required for licensed plugins to work, it will give you an overview of licensed plugins available and their current licensing status and links to pay for them. (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)
-
--   __:material-toy-brick-outline: Phil's Libraries__
-
-    ---
-
-    Creates new libraries for "Not Rated" and "Rated High", dependent on Erlands TrackStat plugin
-
-    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)
-
--   __:material-toy-brick-outline: PlayLog__
-
-    ---
-
-    This plugin allows you you to log the tracks you listen to, either automatically or by pressing a few remote control buttons. It provides a web interface for viewing its log, linking to the web for more information about what you've listened to, and downloading XML and M3U playlists of played songs. (Boom, Classic, Slimp3, SoftSqueeze, Squeezebox1, Transporter; limited support for Radio, Receiver, and Touch)
-
-    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/PlayLog.html)
-
--   __:material-toy-brick-outline: PowerCenter__
-
-    ---
-
-    Control X-10 and Insteon modules with a Squeezebox Controller, Radio, Touch, old-style infrared remote, or Boom or Transporter buttons. Use Insteon or X-10 to have a device turn on and off when a specific player is turned on or off. Turn a coffee pot on when an alarm sounds. (Boom, Classic, Controller, Radio, Receiver, Slimp3, SoftSqueeze, Squeezebox1, Touch, Transporter)
-
-    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/PowerCenter.html)
-
--   __:material-toy-brick-outline: PowerSave__
-
-    ---
-
-    Power off your squeezebox after a certain amount of time (idle or otherwise)
-
-    [:octicons-mail-24: Jason Holtzapple](mailto:jasonholtzapple@gmail.com)
 
 -   __:material-toy-brick-outline: QuickAccess__
 
@@ -1021,22 +1056,6 @@
 
     [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](https://github.com/philippe44/LMS-reliable)
 
--   __:material-toy-brick-outline: SaverSwitcher__
-
-    ---
-
-    Configure multiple screensavers for the When Off, When Playing, and When Idle modes, either having SqueezeCenter cycle through a number of plugins or allowing you to change screensavers with a single button press. Easily change screensavers, or immediately jump to the When Playing screensaver, if used with ContextMenu. Can display "conditional" screensavers, as with KitchenTimer (set a screensaver to display onlly if it has something to report). (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
-
-    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SaverSwitcher.html)
-
--   __:material-toy-brick-outline: SettingsManager__
-
-    ---
-
-    Provides a Web interface for copying settings from one player to another, permanently "linking" settings on multiple Squeezeboxes, setting defaults for newly connected Squeezeboxes or remote /stream.mp3 clients, and importing/exporting client settings, to make it easier to manage multiple Squeezebox players. (Boom, Classic, Receiver, Slimp3, SoftSqueeze, Squeezebox1, Transporter)
-
-    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SettingsManager.html)
-
 -   __:material-toy-brick-outline: SleepFade__
 
     ---
@@ -1044,6 +1063,38 @@
     Allows the "sleep" mode for any given player to fade the music out over the entire sleep period, rather than playing at a constant volume until the last minute. (Boom, Classic, Radio, Receiver, Slimp3, SoftSqueeze, Squeezebox1, Touch, Transporter)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SleepFade.html)
+
+-   __:material-toy-brick-outline: Spotty Helper Application for FreeBSD 13__
+
+    ---
+
+    Spotty Helper Application for FreeBSD 13. This plugin requires the Spotty plugin.
+
+    [:octicons-mail-24: Richard Herman](mailto:richard@neversimple.eu)
+
+-   __:material-toy-brick-outline: Spotty Helper Application for Raspberry Pi Zero/1st Generation__
+
+    ---
+
+    These are the legacy Spotty Helper Application for ARMv6 based Raspberry Pi systems (0/1). Use these if your installation used to work pre Spotty 4.5.0, but stopped with the most recent helpers.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
+
+-   __:material-toy-brick-outline: Spotty Helper Application for Solaris/Illumos__
+
+    ---
+
+    Spotty Helper Application for Solaris/Illumos. This plug-in requires the Spotty plugin.
+
+    [:octicons-mail-24: Reiner Paulus](mailto:lms@hashsum.org)
+
+-   __:material-toy-brick-outline: Spotty Legacy Helper Application for ARMv6/7 architecture__
+
+    ---
+
+    These are the legacy Spotty Helper Application for ARMv6/7 based systems. Use these if your installation used to work pre Spotty 2.8.0, but stopped with the most recent helpers. Please note that these legacy versions come with certain limitations, eg. cannot stream OGG directly to your player.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
 -   __:material-toy-brick-outline: SqueezeCLI Handler__
 
@@ -1077,30 +1128,6 @@
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/StatusFirst.html)
 
--   __:material-toy-brick-outline: SuperDateTime__
-
-    ---
-
-    Displays local time, date, weather, sports, and stock information.
-
-    G Brown, D Grossman    - [:octicons-globe-24: Details](https://sourceforge.net/projects/sdt-weather-com/)
-
--   __:material-toy-brick-outline: SyncOptions__
-
-    ---
-
-    Gives new settings for synchronizing players: "wait for next track" to avoid disruptions; "unsync at power off"; restore local playlist after leaving a sync group. (Boom, Classic, Radio, Receiver, Squeezebox1, Slimp3, SoftSqueeze, Touch, Transporter) 
-
-    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SyncOptions.html)
-
--   __:material-toy-brick-outline: TVH__
-
-    ---
-
-    TVHeadend Radio Plugin for Logitech Media Server
-
-    [:octicons-mail-24: Andrew Jackson, Luke Easter](mailto:squeeze@codechimp.org)    - [:octicons-globe-24: Details](https://github.com/codechimp-org/lms-tvh)
-
 -   __:material-toy-brick-outline: VolumeLock__
 
     ---
@@ -1108,22 +1135,6 @@
     Allows you to lock the analog and digital output levels of any Squeezebox, Transporter, or SliMP3. Can either prevent any changes in volume, or simply set a maximum volume. (Boom, Classic, Radio, Receiver, Slimp3, SoftSqueeze, Squeezebox1, Touch, Transporter)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/VolumeLock.html)
-
--   __:material-toy-brick-outline: xAP Home Automation__
-
-    ---
-
-    xAP Home Automation connects Squeezebox Server with other xAP-enabled services and devices around the home.
-
-    Edward Pearson    - [:octicons-globe-24: Details](http://www.erspearson.com/xAP/Slim/slim_main.htm)
-
--   __:material-toy-brick-outline: XSqueezeDisplay__
-
-    ---
-
-    Display Kodi (XBMC) Now Playing info on a Squeezebox SB2/3/Classic display.
-
-    [:octicons-mail-24: bossanova808](mailto:bossanova808@gmail.com)
 
 </div>
 
