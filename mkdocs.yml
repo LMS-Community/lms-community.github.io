@@ -64,9 +64,6 @@ nav:
     - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
     - Changelog: 
       - LMS8 changelog: getting-started/changelog-lms8.md
-    - Contributing:
-      - Reporting a bug: contributing/reporting-a-bug.md
-      - Adding translations: contributing/adding-translations.md
   - Players & Controllers:
     - players-and-controllers/index.md
     - Hardware based:
@@ -87,6 +84,10 @@ nav:
       - piCorePlayer: players-and-controllers/picoreplayer.md
   - Plugins:
     - plugins/index.md
+  - Contributing:
+    - contributing/index.md
+    - Reporting a bug: contributing/reporting-a-bug.md
+    - Adding translations: contributing/adding-translations.md
   - Reference:
     - reference/index.md
     - Logitech Media Server: reference/logitech-media-server.md
