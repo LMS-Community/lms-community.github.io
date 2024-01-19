@@ -7,11 +7,14 @@ title: Database structure
 
 Logitech Media Server stores its data in a SQLite databases, though it is possible to also use MySQL/MariaDB. 
 
+!!! warning
+     SQLite is what is being tested and used by probably 99.9...% of all users. If you decide to go with MySQL/MariaDB, you're on your own. And some features (eg. fulltext search) will not be available. Good luck! And let us know about your experience.
+
 ## Databases
 
-- artwork.db - Artwork Database
-- library.db - Database Library
+- library.db - Database Library.
 - persist.db - Persistant Database Library, ie holds data which will survives a full clear and database rescan.
+- artwork.db, cached.db, imgproxy.db - Database files used to cache specific data. They're simple key/value stores.
 
 ## Main tables library.db
 
