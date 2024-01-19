@@ -4,6 +4,7 @@ on:
 env:
   CHANGELOG_SRC: https://raw.githubusercontent.com/Logitech/slimserver/HEAD/Changelog8.html
   CHANGELOG_TARGET: docs/getting-started/changelog-lms8.md
+  PLUGIN_TARGET: docs/plugins/directory.md
 jobs:
   changelog:
     runs-on: ubuntu-latest
@@ -32,16 +33,16 @@ jobs:
 
       - name: Get plugin repository and convert to markdown
         run: |
-          tools/build-plugin-repository.pl
+          tools/build-plugin-repository.pl > $PLUGIN_TARGET
 
       - name: Commit changes
         if: ${{ !env.ACT }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add $CHANGELOG_TARGET
+          git add $CHANGELOG_TARGET $PLUGIN_TARGET
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -a -m "Update changelog from slimserver repo"
+            git commit -a -m "Update external data sources"
             git push
           else
             echo "No changes to commit";
