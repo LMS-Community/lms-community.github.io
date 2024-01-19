@@ -56,6 +56,10 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
   - Home: index.md
@@ -83,7 +87,8 @@ nav:
       - Squeezelite: players-and-controllers/squeezelite.md
       - piCorePlayer: players-and-controllers/picoreplayer.md
   - Plugins:
-    - plugins/index.md
+    - Overview: plugins/index.md
+    - Available Plugins: plugins/directory.md
   - Contributing:
     - contributing/index.md
     - Reporting a bug: contributing/reporting-a-bug.md

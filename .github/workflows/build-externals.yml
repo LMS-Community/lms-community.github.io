@@ -17,6 +17,8 @@ jobs:
       - name: Install dependencies
         run: |
           go install github.com/suntong/html2md@latest
+          apt update
+          apt install -y libjson-perl libwww-perl libxml-simple-perl
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,6 +28,10 @@ jobs:
           export PATH=${PATH}:`go env GOPATH`/bin
           html2md -i $CHANGELOG_SRC > $CHANGELOG_TARGET
           sed -Ei 's/http:\/\/raw.githubusercontent.com.*?#v([1-9]+)\.([0-9]+)\.([0-9]+)\)/#version-\1\2\3)/' $CHANGELOG_TARGET
+
+      - name: Get plugin repository anc convert to markdown
+        run: |
+          tools/build-plugin-repository.pl
 
       - name: Commit changes
         if: ${{ !env.ACT }}

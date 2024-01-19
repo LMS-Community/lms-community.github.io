@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-  call-changelog:
-    uses: ./.github/workflows/changelog.yml
+  call-build-externals:
+    uses: ./.github/workflows/build-externals.yml
   call-mkdocs:
     if: ${{ always() }}
-    needs: call-changelog
+    needs: call-build-externals
     uses: ./.github/workflows/mkdocs.yml
