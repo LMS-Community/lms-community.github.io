@@ -1,4 +1,4 @@
-name: Get changelog from LMS repo
+name: Import external data sources from LMS repo
 on:
   workflow_call:
 env:
@@ -29,7 +29,7 @@ jobs:
           html2md -i $CHANGELOG_SRC > $CHANGELOG_TARGET
           sed -Ei 's/http:\/\/raw.githubusercontent.com.*?#v([1-9]+)\.([0-9]+)\.([0-9]+)\)/#version-\1\2\3)/' $CHANGELOG_TARGET
 
-      - name: Get plugin repository anc convert to markdown
+      - name: Get plugin repository and convert to markdown
         run: |
           tools/build-plugin-repository.pl
 
