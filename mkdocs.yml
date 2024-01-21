@@ -46,7 +46,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Logitech/slimserver
     - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/lmscommunity/logitechmediaserver 
+      link: https://hub.docker.com/r/lmscommunity/logitechmediaserver
 
 # tabbed content
 markdown_extensions:
@@ -63,10 +63,10 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started with LMS: 
+  - Getting Started with LMS:
     - Installation: getting-started/index.md
     - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
-    - Changelog: 
+    - Changelog:
       - LMS8 changelog: getting-started/changelog-lms8.md
   - Players & Controllers:
     - players-and-controllers/index.md
@@ -75,7 +75,7 @@ nav:
       - Squeezebox Touch: players-and-controllers/squeezebox-touch.md
       - Squeezebox Radio: players-and-controllers/squeezebox-radio.md
       - Squeezebox Boom: players-and-controllers/squeezebox-boom.md
-      - Squeezebox Duet: 
+      - Squeezebox Duet:
         - Squeezebox Controller: players-and-controllers/squeezebox-controller.md
         - Squeezebox Receiver: players-and-controllers/squeezebox-receiver.md
       - Transporter: players-and-controllers/transporter.md
@@ -100,3 +100,4 @@ nav:
       - Database structure: reference/database-structure.md
       - SlimProto protocol: reference/slimproto-protocol.md
       - SLIMP3 protocol: reference/slimp3-protocol.md
+      - "#CURTRACK Guide": reference/curtrack.md
