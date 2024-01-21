@@ -1,6 +1,6 @@
 ---
 layout: default
-title: `#CURTRACK` Guide
+title: #CURTRACK Guide
 ---
 
 # `#CURTRACK` Guide
