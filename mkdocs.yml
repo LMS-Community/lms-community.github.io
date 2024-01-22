@@ -48,6 +48,8 @@ extra:
       link: https://github.com/Logitech/slimserver
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/lmscommunity/logitechmediaserver
+    - icon: simple/vbulletin
+      link: https://forums.slimdevices.com
 
 # tabbed content
 markdown_extensions:
