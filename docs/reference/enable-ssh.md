@@ -7,6 +7,13 @@ title: SSH Access to Radio/Touch/Controller
 
 SSH access is only available on devices running the SqueezeOS platform. This is not the case for Squeezebox Classic/Boom/Transporter/Receiver.
 
+!!! warning "Using SSH on *nix/macOS"
+    If you are using the original firmware on the SB Radio/Touch/Controller devices you will find that you will need some additional ssh parameters to connect to the device as the algorithms used by these elderly devices haven't aged well and are deprecated. These extra parameters are not needed if you are using the [community firmware](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/110192-announce-community-firmware-for-squeezebox-radio-touch-controller-and-lms-8).
+
+    ```
+    ssh -c aes128-cbc -oHostKeyAlgorithms=+ssh-rsa,ssh-dss -oKexAlgorithms=+diffie-hellman-group1-sha1 root@[IP address or hostname of your device]
+    ```
+
 ## Squeezebox Radio / Touch / Controller
 
 On the Squeezeboxen SSH can be enabled in Settings/Advanced Settings/Remote Access. Follow the instructions on screen.
@@ -25,10 +32,3 @@ On the UE Smart Radio enabling SSH is a little more complicated. Many of those u
 
 * Follow the instructions on screen.
 
-## Using SSH on *nix/macOS
-
-If you are using the original firmware on the SB Radio/Touch/Controller devices you will find that you will need some additional ssh parameters to connect to the device as the algorithms used by these elderly devices haven't aged well and are deprecated. These extra parameters are not needed if you are using the [community firmware](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/110192-announce-community-firmware-for-squeezebox-radio-touch-controller-and-lms-8).
-
-```
-ssh -c aes128-cbc -oHostKeyAlgorithms=+ssh-rsa,ssh-dss -oKexAlgorithms=+diffie-hellman-group1-sha1 root@[IP address or hostname of your device]
-```
