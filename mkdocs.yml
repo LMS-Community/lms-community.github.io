@@ -101,3 +101,5 @@ nav:
       - SlimProto protocol: reference/slimproto-protocol.md
       - SLIMP3 protocol: reference/slimp3-protocol.md
       - "#CURTRACK Guide": reference/curtrack.md
+      - Special IR Keys: reference/special-ir-keys-reset.md
+      - SSH Access: reference/enable-ssh.md
