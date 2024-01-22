@@ -38,8 +38,9 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-#  font:
-#    text: sans-serif
+
+plugins:
+  - search
 
 extra:
   social:
@@ -62,7 +63,9 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
-  - Home: index.md
+  - Home:
+    - Overview: index.md
+    - Community Forums: https://forums.slimdevices.com
   - Getting Started with LMS:
     - Installation: getting-started/index.md
     - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
