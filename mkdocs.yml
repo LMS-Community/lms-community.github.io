@@ -109,7 +109,6 @@ nav:
         - Home Menu vs. SlimBrowse: reference/home-vs-slimbrowse.md
         - Home Menu Items: reference/adding-menus-squeezeplay.md
         - SlimBrowse Protocol: reference/slimbrowse.md
-      - Adding Menus from Plugins: reference/adding-menus-squeezeplay.md
       - "#CURTRACK Guide": reference/curtrack.md
       - Special IR Keys: reference/special-ir-keys-reset.md
       - SSH Access: reference/enable-ssh.md
