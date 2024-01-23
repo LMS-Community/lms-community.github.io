@@ -607,7 +607,7 @@ export LUA_PATH=$LUA_PATH\;/Users/bklaas/svk/squeezeplay/7.5/trunk/squeezeplay/s
 export LUA_PATH=$LUA_PATH\;/Users/bklaas/svk/squeezeplay/7.5/trunk/squeezeplay/src/squeezeplay_test/share/?.lua
 ```
 
-#### Testing custom changes on the target hardware
+### Testing custom changes on the target hardware
 
 For testing on the target device (e.g., Squeezebox Radio) use secure copy (scp) to transfer the appropiate files to the device. You can do this with scp on a console like
 
