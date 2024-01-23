@@ -87,7 +87,7 @@ my @menu = ({
 Slim::Control::Jive::registerPluginMenu(\@menu, 'settings', $client);
 ```
 
-See [SlimBrowse Protocol](slimbrowse) for more information on the API for actions, menu items, etc.
+See [SlimBrowse Protocol](slimbrowse.md) for more information on the API for actions, menu items, etc.
 
 ## Refreshing menus on SqueezePlay
 

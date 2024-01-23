@@ -105,10 +105,14 @@ nav:
       - Database Structure: reference/database-structure.md
       - SlimProto Protocol: reference/slimproto-protocol.md
       - SLIMP3 Protocol: reference/slimp3-protocol.md
+      - Squeezeplay Applet:
+        - Applet Development: reference/squeezeplay-applet.md
+        - Installing Applets: reference/installing-applets.md
       - SqueezePlay Menu System:
         - Home Menu vs. SlimBrowse: reference/home-vs-slimbrowse.md
         - Home Menu Items: reference/adding-menus-squeezeplay.md
         - SlimBrowse Protocol: reference/slimbrowse.md
+      - Plugin/Applet Repositories: reference/repository-dev.md
       - "#CURTRACK Guide": reference/curtrack.md
       - Special IR Keys: reference/special-ir-keys-reset.md
       - SSH Access: reference/enable-ssh.md
