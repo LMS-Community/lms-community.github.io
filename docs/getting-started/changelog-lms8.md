@@ -50,6 +50,7 @@
 	- [#911](https://github.com/Logitech/slimserver/issues/911) \- Don't shut down the server on "restartserver" when we actually can't restart it.
 	- [#939](https://github.com/Logitech/slimserver/issues/939) \- Player can't be switched from MySqueezebox.com to LMS
 	- [#962](https://github.com/Logitech/slimserver/issues/962) \- Fix album\_contributor updates in New & Changed scan (thanks darrell!)
+	- [#979](https://github.com/Logitech/slimserver/issues/979) \- New and changed contributor scanning improvements (thanks darrell!)
 	- [Respect a contributor's Musicbrainz ID to separate artists of the same name.](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1648813)
 	- [#969](https://github.com/Logitech/slimserver/pull/969) \- Add utf-8 guess decoding on Ogg metadata - thanks philippe44!
 	- Try harder to avoid duplicate (but empty) album entries on singles.
