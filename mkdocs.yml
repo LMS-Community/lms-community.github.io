@@ -116,3 +116,4 @@ nav:
       - "#CURTRACK Guide": reference/curtrack.md
       - Special IR Keys: reference/special-ir-keys-reset.md
       - SSH Access: reference/enable-ssh.md
+      - Using the CLI: reference/using-the-cli.md
