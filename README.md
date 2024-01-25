@@ -1,5 +1,5 @@
 # lms-community.github.io
-This is the web page for the LMS Community repository
+This is the [web page](https://lms-community.github.io) for the LMS Community repository
 
 The site is based on mkdocs-material (https://squidfunk.github.io/mkdocs-material/). 
 
