@@ -94,6 +94,7 @@ nav:
   - Plugins:
     - Overview: plugins/index.md
     - Available Plugins: plugins/directory.md
+    - Repository File Reference: reference/repository-dev/
   - Contributing:
     - contributing/index.md
     - Reporting a bug: contributing/reporting-a-bug.md
