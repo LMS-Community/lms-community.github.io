@@ -21,6 +21,6 @@ These codes apply to the ip3k-based players: Squeezebox1 (G), Squeezebox2, Squee
 
 These tips are applicable to SqueezePlay-based players only: Controller, Touch, and Radio.
 
-* Revert to previous FW - hold down Volume UP (with a non-Boom remote) and press the fab4 rear power button. Keep button held down until you see the "Free Your Music" screen.
+* Revert to previous FW - hold down Volume UP (with a non-Boom remote), or REW (on device, where available), and power up the device. Keep the button held down until you see the "Free Your Music" screen.
 
 * Factory Reset - hold down Add ("+") (with a non-Boom remote) and press the fab4 rear power button. Keep button held down until you see the "Free Your Music" screen.
