@@ -42,4 +42,4 @@ zip -p custom.baby.bin jive.version > custom.baby.version
 
 The two files `custom.baby.bin` and `custom.baby.version` need to be placed in the Cache/Updates folder of the LMS installation. See Settings/Information in LMS to see where that folder is on your system.
 
-Once you restart your LMS and your device connects to it, it show offer you the new firmware for installation.
+Once you restart your LMS and your device connects to it, it should offer you the new firmware for installation.
