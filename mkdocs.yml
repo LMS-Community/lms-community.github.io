@@ -73,6 +73,8 @@ nav:
     - Migrate from UE Smart Radio:
       - English: getting-started/migrate-from-uesr.md
       - Deutsch: getting-started/migrate-from-uesr-de.md
+    - Beginner's guides:
+      - Beginner's Docker Guide on Synology: getting-started/beginners-guide-synology-docker.md
     - Changelog:
       - LMS8 changelog: getting-started/changelog-lms8.md
   - Players & Controllers:
