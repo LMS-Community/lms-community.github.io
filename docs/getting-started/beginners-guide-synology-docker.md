@@ -75,4 +75,12 @@ Now the correct image has been downloaded, it is time to start and configure the
     | PGID | 100 (for example, see the [UID/GID step above](#find-out-the-uid-and-gid-of-your-user)) |
     | TZ | Europe/Zurich |
 
-6. Select "Next" and "Done". The container will atomatically start. Congrats, you're done!
+6. Select "Next" and "Done". The container will automatically start.
+
+## Configure LMS
+
+1. Launch your web browser (eg. Edge, Firefox) and type: `http://[hostname or ip address of your nas]:9000`. Then, press Enter. The Logitech Media Server web interface will open.
+2. Skip the MySqueezebox.com account credentials step (because the MySB.com service is shut down).
+3. Browse to your music folder location (`/volume1/music`), highlight the directory, and click "Next".
+4. (Optional) browse to your playlists folder location (`/volume1/playlist`), highlight the directory, and click "Next".
+5. You'll see the Summary page for your Logitech Media Server install. Click "Finish" to complete the installation. Congrats, you're done!
