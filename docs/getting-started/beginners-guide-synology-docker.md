@@ -17,9 +17,9 @@ This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommun
 In this guide the following assumptions apply:
 
 - If you already have the Synology LMS packaged installed, uninstall it first. This will free up the LMS network ports so the container can use them.
-- This docker container runs as your user. You can also create a specific user for running the container, in that case replace the UID/PUID with the correct identifier. 
-- Your music is stored in the shared folder `music` on the first volume (so the path to your music collection is `/volume1/music`).
-- (Optional) you have a shared folder called playlist on the first volume with path `/volume1/playlist`.
+- This docker container runs as your user. Note, you can also create a specific user for running the container, in that case replace the UID/PUID with the correct identifier. 
+- Your music is stored in the shared folder `music`.
+- (Optional) you have a shared folder called playlist where LMS can store playlists.
 - Your user has read-only or read-write access to the music folder. If you also have a playlist folder, your user needs read-write access to this folder.
 - The state of the docker image is saved in the folder `/docker/logitechmediaserver`. The path can be anything, but it is advisable to restrict write access for other users to this folder. 
 
@@ -66,8 +66,8 @@ Now the correct image has been downloaded, it is time to start and configure the
     | Local folder | Container folder | Mode |
     | --- | --- | --- |
     | /docker/logitechmediaserver | /config | rw |
-    | /volume1/music | /music | ro |
-    | /volume1/playlist | /playlist | rw |
+    | /music | /music | ro |
+    | /playlist | /playlist | rw |
 
 5. Add the UID and GID from the step above, and the correct TZ ([timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)) to the "Enviroment" section:
 
@@ -83,6 +83,6 @@ Now the correct image has been downloaded, it is time to start and configure the
 
 1. Launch your web browser (eg. Edge, Firefox) and type: `http://[hostname or ip address of your nas]:9000`. Then, press Enter. The Logitech Media Server web interface will open.
 2. Skip the MySqueezebox.com account credentials step (because the MySB.com service is shut down).
-3. Browse to your music folder location (`/volume1/music`), highlight the directory, and click "Next".
-4. (Optional) browse to your playlists folder location (`/volume1/playlist`), highlight the directory, and click "Next".
+3. Browse to your music folder location (`/music`), highlight the directory, and click "Next".
+4. (Optional) browse to your playlists folder location (`/playlist`), highlight the directory, and click "Next".
 5. You'll see the Summary page for your Logitech Media Server install. Click "Finish" to complete the installation. Congrats, you're done!
