@@ -70,7 +70,9 @@ nav:
     - Community Forums: https://forums.slimdevices.com
   - Getting Started with LMS:
     - Installation: getting-started/index.md
-    - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
+    - Migrate from UE Smart Radio:
+      - English: getting-started/migrate-from-uesr.md
+      - Deutsch: getting-started/migrate-from-uesr-de.md
     - Changelog:
       - LMS8 changelog: getting-started/changelog-lms8.md
   - Players & Controllers:
@@ -94,7 +96,7 @@ nav:
   - Plugins:
     - Overview: plugins/index.md
     - Available Plugins: plugins/directory.md
-    - Repository File Reference: reference/repository-dev/
+    - Repository File Reference: reference/repository-dev.md
   - Contributing:
     - contributing/index.md
     - Reporting a bug: contributing/reporting-a-bug.md
