@@ -106,6 +106,8 @@ nav:
   - Reference:
     - reference/index.md
     - Logitech Media Server: reference/logitech-media-server.md
+    - Docker:
+      - Add locales to the Docker container: reference/add-locales-to-docker.md
     - Development:
       - Database Structure: reference/database-structure.md
       - SlimProto Protocol: reference/slimproto-protocol.md

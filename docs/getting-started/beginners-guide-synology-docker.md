@@ -8,7 +8,9 @@ title: Beginner's Docker Guide on Synology
 !!! note
     In case you have any difficulties following this guide or have found some errors, please leave a note on the [forums](https://forums.slimdevices.com/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers). Thanks!
 
-If you have a Synology NAS which can run Docker containers, you are in luck! Check [here](https://www.synology.com/nl-nl/dsm/packages/ContainerManager) to check if your Synology NAS is able to run Docker containers.
+If you have a Synology NAS which can run Docker containers, you are in luck! Look [here](https://www.synology.com/en-global/dsm/packages/ContainerManager) to check if your Synology NAS is able to run Docker containers.
+
+This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommunity/logitechmediaserver/). Source and the dockerfile of the image can be found [here](https://github.com/Logitech/slimserver-platforms/tree/HEAD/Docker).
 
 ## Assumptions
 
