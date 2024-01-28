@@ -38,7 +38,7 @@ Install using your operating system's package manager:
     ```
 
 !!! note
-    It's recommended to use Raspberry Pi OS, otherwise you might have to rebuild binaries (CPAN).
+    If you want make a custom installation on a Raspberry Pi, prefer Raspberry Pi OS, otherwise you might have to rebuild binaries (CPAN).
 
 ### Install (easily) on Raspberry Pi
 
