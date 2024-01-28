@@ -44,7 +44,7 @@ The [UID](https://en.wikipedia.org/wiki/User_identifier) and [GID](https://en.wi
 1. In the Synology GUI start up the app Container Manager.
 2. Go to Register.
 3. Search for `logitechmediaserver` and download the `lmscommunity/logitechmediaserver` image.
-4. Select the `stable` tag. The image will now download.
+4. Select the `latest` tag. The image will now download.
 
 ## Configure the Docker container
 
@@ -86,3 +86,15 @@ Now the correct image has been downloaded, it is time to start and configure the
 3. Browse to your music folder location (`/music`), highlight the directory, and click "Next".
 4. (Optional) browse to your playlists folder location (`/playlist`), highlight the directory, and click "Next".
 5. You'll see the Summary page for your Logitech Media Server install. Click "Finish" to complete the installation. Congrats, you're done!
+
+## Updating the Docker image
+
+It is always advisable to regularly update your software, and with Docker on Synology it is made very easy.
+
+1. In the "Container Manager" app, go to "Image", and check if the `lmscommunity/logitechmediaserver` image has any updates available.
+2. If there are updates, click "Update available" and press "Update" twice.
+3. Now the image is updated, refreshed and automatically restarted. If you followed the guide above all important data is saved and stored in Docker volumes, so this update will not overwrite anything in your configuration.
+4. Done, and enjoy all new features and fixes!
+
+!!! note
+    If you use a different tag as `latest` then Synology does not automatically check for updates. To update go to "Container" and stop the LMS container. Then go to "Registry", search the `lmscommunity/logitechmediaserver` image and select the tag you are using. Once the updated image had been downloaded, go to "Container", select the LMS container and press "Reset". You get a warning that all data in the container will be lost, but that does not matter since all your configuration is in Docker volumes so you can press "Yes"! When that's done you can start the container again.
