@@ -69,7 +69,7 @@ Now the correct image has been downloaded, it is time to start and configure the
     | /music | /music | ro |
     | /playlist | /playlist | rw |
 
-5. Add the UID and GID from the step above, and the [appropriate TZ (timezone)]((https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)) to the "Enviroment" section:
+5. Add the UID and GID from the step above, and the [appropriate TZ (timezone)](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) to the "Enviroment" section:
 
     | Variable | Value |
     | --- | --- |
