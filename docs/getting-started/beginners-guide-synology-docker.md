@@ -69,13 +69,13 @@ Now the correct image has been downloaded, it is time to start and configure the
     | /music | /music | ro |
     | /playlist | /playlist | rw |
 
-5. Add the UID and GID from the step above, and the correct TZ ([timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)) to the "Enviroment" section:
+5. Add the UID and GID from the step above, and the [appropriate TZ (timezone)]((https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)) to the "Enviroment" section:
 
     | Variable | Value |
     | --- | --- |
-    | PUID | 1026 (for example, see the [UID/GID step above](#find-out-the-uid-and-gid-of-your-user)) |
-    | PGID | 100 (for example, see the [UID/GID step above](#find-out-the-uid-and-gid-of-your-user)) |
-    | TZ | Europe/Zurich |
+    | PUID | for example `1026` (see the [UID/GID step above](#find-out-the-uid-and-gid-of-your-user)) |
+    | PGID | for example `100` (see the [UID/GID step above](#find-out-the-uid-and-gid-of-your-user)) |
+    | TZ | for example `Europe/Zurich` |
 
 6. Select "Next" and "Done". The container will automatically start.
 
