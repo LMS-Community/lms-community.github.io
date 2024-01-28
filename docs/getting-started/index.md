@@ -18,7 +18,7 @@ There are a couple of ways to get started with a server:
 - [Install on Linux](#install-on-linux)
 - [Install (easily) on Raspberry Pi](#install-on-raspberry-pi)
 - [Install on Windows](#install-on-windows)
-- [Install on MacOS](#install-on-macos)
+- [Install on macOS](#install-on-macos)
 - [Install using Docker](#install-using-docker)
 
 ### Install on Linux
@@ -37,7 +37,10 @@ Install using your operating system's package manager:
     sudo rpm -i logitechmediaserver-8.3.1-1.noarch.rpm
     ```
 
-### Install on Raspberry Pi
+!!! note
+    It's recommended to use Raspberry Pi OS, otherwise you might have to rebuild binaries (CPAN).
+
+### Install (easily) on Raspberry Pi
 
 If you want to have an easily installed LMS on a Raspberry Pi and don't want to go the full Linux route as outlined above, you can use [piCorePlayer](https://picoreplayer.org). While its name suggests it's a player, it can be used to build a full LMS server with only a few clicks. See eg. [https://docs.picoreplayer.org/projects/build-simple-lms-server/](https://docs.picoreplayer.org/projects/build-simple-lms-server/).
 
