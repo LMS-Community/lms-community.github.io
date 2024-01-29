@@ -58,4 +58,5 @@ See [lmscommunity/logitechmediaserver](https://hub.docker.com/r/lmscommunity/log
 
 ## Configure
 
-Now you should be able to browse to http://yourserver:9000 and begin configuring the Logitech Media Server. Congrats, you're all finished!
+Now you should be able to browse to http://yourserver:9000 (replace "yourserver" with localhost if you are at the same system as your new installation or with the hostname or IP address of that system if using a different device) and begin configuring the Logitech Media Server.  
+Congrats, you're all finished! 
