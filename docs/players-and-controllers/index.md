@@ -24,7 +24,7 @@ Additionally, the Squeezebox Controller provides control of all your players via
 
 The Radio, Touch and Controller software (operating system and application) is available as source code and have been modified by "the community".  
 Software from Logitech: [Operating system](https://github.com/Logitech/squeezeos) - [Application](https://github.com/Logitech/squeezeplay)  
-Community versions: [Operating system](https://github.com/ralph-irving/squeezeos)  - [Application](https://github.com/ralph-irving/squeezeplay)
+Community versions: [Operating system](https://github.com/ralph-irving/squeezeos)  - [Application](https://github.com/ralph-irving/squeezeos-squeezeplay)
 
 After 2010 the LMS community developed DIY hardware offerings. 
 
