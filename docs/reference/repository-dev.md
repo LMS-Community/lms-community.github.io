@@ -79,8 +79,8 @@ The xml format is:
 
     'hardware', 'information', 'misc', 'musicservices', 'playlists', 'radio', 'scanning', 'skin', 'tools'
 
-    If you are unsure which category to pick then do not provide one or use 'misc' for miscellaneous.  
-    If the plugin could be in more than one category then pick the one that you think end-users would be most likely to think of first when trying to find it.  
+    If you are unsure which category to pick then do not provide one or use 'misc' for miscellaneous.
+    If the plugin could be in more than one category then pick the one that you think end-users would be most likely to think of first when trying to find it.
     If you invent your own categorycode then it will be ignored and the plugin will appear in the 'misc' category.
 
 Further details are available in the comments of the Slim::Plugins::Extensions::Plugin source file.
@@ -94,7 +94,10 @@ Authors should create their plugins in the standard way with packages named as P
 
 A common starting point for new development is to look at a pre-existing plugin (probably a simple one) to see how it was put together.
 
-Plugins may be packaged into a zip file using PluginBuilder (ed: link required) or by manually zipping the contents of the directory into a zip file. A sha1 checksum of the zip file should also be created. The zip file should then be hosted at a url which is defined in the url element of the plugin xml entry with the sha1 element containing its sha1 checksum.
+Plugins may be packaged into a zip file zipping the contents of the directory into a zip file. A sha1 checksum of the zip file should also be created. The zip file should then be hosted at a url which is defined in the url element of the plugin xml entry with the sha1 element containing its sha1 checksum.
+
+!!! note
+    It's important to include the version number in the archive's filename, as LMS otherwise might be re-using cached data, failing the upgrade.
 
 ## Hashing Files
 

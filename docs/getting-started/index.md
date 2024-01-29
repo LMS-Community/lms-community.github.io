@@ -49,6 +49,9 @@ Double click the downloaded package to launch the installation process in a fami
 
 Double click the downloaded package to launch the installation process in the macOS installer.
 
+!!! note
+    Sometimes macOS would refuse to open the installer, because the authenticity of the developer can't be confirmed. If that happens to you, open the installer using a right mouse click (or control-click), then "Open". You might have to do this twice, as first time you'd stil be rejected. But the second time around you should be able to launch it anyway.
+
 ### Install using Docker
 
 See [lmscommunity/logitechmediaserver](https://hub.docker.com/r/lmscommunity/logitechmediaserver) on Docker hub.
