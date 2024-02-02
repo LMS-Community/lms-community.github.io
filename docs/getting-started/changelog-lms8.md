@@ -7,9 +7,10 @@
 	- [#879](https://github.com/Logitech/slimserver/issues/879) \- Add support for Release Types (see eg. on [MusicBrainz](https://musicbrainz.org/doc/Release_Group/Type)).
 	- New "Advanced Tag View" plugin allows you to show more information in the Track Info menu, without the need to drill down to "View Tags"
 	- Allow editing of a favourite's icon.
-	- Add plugins for ClassicRadio.com, DI.fm, JazzRadio.com, RadioTunes.com, RockRadio.com, ZenRadio.com.
+	- Add plugins for ClassicalRadio.com, DI.fm, JazzRadio.com, RadioTunes.com, RockRadio.com, ZenRadio.com.
 	- Add an optional artist albums view which groups albums by release type and contribution. (thanks darrell-k!)
 	- Add an option to import playlists from online music services.
+	- [#987](https://github.com/Logitech/slimserver/pull/987) \- Add OggFlac support (thanks philippe44!)
 
 - Server Changes:
 
