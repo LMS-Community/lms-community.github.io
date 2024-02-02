@@ -2,8 +2,9 @@ name: GH Actions workflow
 on:
   push:
     branches:
-      - master 
       - main
+  schedule:
+    - cron: "06 0 * * *"
   workflow_dispatch:
 jobs:
   build:
