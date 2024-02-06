@@ -31,7 +31,7 @@
 	- [#862](https://github.com/Logitech/slimserver/pull/862) \- Make lyrics on Default skin songinfo page collapsible (thanks AF-1!)
 	- [#868](https://github.com/Logitech/slimserver/pull/868) \- Populate the release year ('year') attribute for remote tracks in the player queue (thanks SamInPgh!)
 	- [#956](https://github.com/Logitech/slimserver/pull/956) \- Add raw AAC (ADTS) file support (thanks philippe44!)
-	- [#964](https://github.com/Logitech/slimserver/pull/964) \- Handle case where user moves/adds/removes tracks in a playlist while the next track is already fully streamed (thanks philippe44!)
+	- [#964](https://github.com/Logitech/slimserver/pull/964)/ [#985](https://github.com/Logitech/slimserver/pull/985) \- Handle case where user moves/adds/removes tracks in a playlist while the next track is already fully streamed (thanks philippe44!)
 	- Fix Napster playback on community firmware players
 
 - Platform Support:
