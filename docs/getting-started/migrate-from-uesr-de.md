@@ -23,3 +23,8 @@ Wählen Sie die bevorzugte Sprache, und folgen Sie den Anweisungen, um das Netzw
 ![](assets/uesr-migration/choose-network.png)
 
 Falls Sie gefragt werden, ob Sie ein Konto auf MySqueezebox.com erstellen wollen, so können Sie das überspringen. Sie sollten dann im Hauptmenü die Möglichkeit haben, per "Eigene Musik" auf ihr LMS zuzugreifen.
+
+Falls Sie die Mitteilung "Verbindungsproblem - Problem bei der Verbindung mit mysqueezebox.com" erhalten, dann können nach "Bibliothek umschalten" runter scrollen und sich mit ihrem LMS verbinden.
+
+![](assets/uesr-migration/verbindungsproblem-mysb.png)
+

@@ -25,3 +25,8 @@ Choose your preferred language. Then follow the network setup according to your 
 ![](assets/uesr-migration/choose-network.png)
 
 When asked to create an account on MySqueezebox.com, skip that step and continue without account. You should then get the main menu where you can select "My Music" to connect to your LMS.
+
+If you get an error "Problem Connecting - There is a problem connecting to mysqueezebox.com", you should be able to scroll down to "Switch Library", from where you can connect to your LMS.
+
+![](assets/uesr-migration/problem-connecting-mysb.png)
+
