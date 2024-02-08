@@ -1,4 +1,16 @@
-## Version 8.4.0
+## Version 8.4.1
+
+- New Features:
+
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
+## Version 8.4.0 - 2024-02-08 (e225575dc)
 
 - [Upstream fixes from Logitech Media Server 8.3.x](#version-832)
 
@@ -68,10 +80,6 @@
 
 ## Version 8.3.2
 
-- New Features:
-
-- Server Changes:
-
 - Platform Support:
 
 	- [#891](https://github.com/Logitech/slimserver/issues/891) \- Add Perl 5.36 support for Linux aarch64, armv7.
@@ -83,8 +91,6 @@
 	- Add CPAN/auto/5.14 to lib search path for Windows builds to include Font::FreeType.
 	- Fix another absolute path to a stylesheet in the Default skin.
 	- Fix an issue where registering a pre-cache resolution would cause a subsequent LMS start to fail.
-
-- Other:
 
 ## Version 8.3.1 - 2023-02-17 (026019bb7)
 
