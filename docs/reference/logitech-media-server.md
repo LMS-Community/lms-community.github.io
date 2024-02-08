@@ -19,7 +19,13 @@ Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com
 
 Current stable. Initially released on Feb 8, 2024.
 
-[Release notes](../getting-started/changelog-lms8.md)
+* Add support for Release Types (see eg. on MusicBrainz).
+* Add plugins for ClassicalRadio.com, DI.fm, JazzRadio.com, RadioTunes.com, RockRadio.com, ZenRadio.com.
+* ​Add an optional artist albums view which groups albums by release type and contribution.
+* New "Advanced Tag View" plugin allows you to show more information in the Track Info menu, without the need to drill down to "View Tags"
+* ​Add experimental support for Windows 64-bit​
+
+[Release notes](../getting-started/changelog-lms8.md), [Announcement](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1673928-logitech-media-server-8-4-0-released)
 
 
 ### LMS 8.3
