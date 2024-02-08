@@ -17,7 +17,10 @@ Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com
 
 ### LMS 8.4
 
-Still under development, not yet released.
+Current stable. Initially released on Feb 8, 2024.
+
+[Release notes](../getting-started/changelog-lms8.md)
+
 
 ### LMS 8.3
 

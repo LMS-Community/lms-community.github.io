@@ -6,7 +6,7 @@ title: UE Smart Radio nach Squeezebox umwandeln
 # UE Smart Radio (UESR) nach Squeezebox umwandeln
 
 !!! note
-    Bitte beachten Sie, dass UE Smart Radios, die in eine Squeezebox umgewandelt wurden, zwingend [Logitech Media Server (LMS)](../getting-started/index.md)</a> Version 8.3.1 oder neiuer voraussetzen. Installieren Sie dieses Programm, bevor Sie mit der Migration fortfahren.
+    Bitte beachten Sie, dass UE Smart Radios, die in eine Squeezebox umgewandelt wurden, zwingend [Logitech Media Server (LMS)](../getting-started/index.md)</a>. Installieren Sie dieses Programm, bevor Sie mit der Migration fortfahren.
 
 Um den Prozess zu starten, navigieren Sie zu den "Erweiterten Einstellungen" auf dem Smart Radio. Verwenden Sie Option am Ende des Menüs, um den Prozess zu starten.
 

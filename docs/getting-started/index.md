@@ -28,13 +28,13 @@ Install using your operating system's package manager:
 === "Debian  (or Raspberry Pi OS, Ubuntu etc.)"
 
     ```
-    sudo dpkg -i logitechmediaserver_8.3.1_amd64.deb
+    sudo dpkg -i logitechmediaserver_8.4.0_amd64.deb
     ```
 
 === "RedHat"
 
     ```
-    sudo rpm -i logitechmediaserver-8.3.1-1.noarch.rpm
+    sudo rpm -i logitechmediaserver-8.4.0-1.noarch.rpm
     ```
 
 ### Install on Raspberry Pi
@@ -58,5 +58,5 @@ See [lmscommunity/logitechmediaserver](https://hub.docker.com/r/lmscommunity/log
 
 ## Configure
 
-Now you should be able to browse to http://yourserver:9000 (replace "yourserver" with [localhost](http://localhost:9000) if you are at the same system as your new installation or with the hostname or IP address of that system if using a different device) and begin configuring the Logitech Media Server.  
-Congrats, you're all finished! 
+Now you should be able to browse to http://yourserver:9000 (replace "yourserver" with [localhost](http://localhost:9000) if you are at the same system as your new installation or with the hostname or IP address of that system if using a different device) and begin configuring the Logitech Media Server.
+Congrats, you're all finished!
