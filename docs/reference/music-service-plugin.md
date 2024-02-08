@@ -27,6 +27,7 @@ Here's a rough layout of a typical folder and file structure for a plugin:
     * `Bin/*`: provide a home for platform specific binaries, if needed.
     * `lib`: put your additional CPAN modules in there.
     * `install.xml`: the plugin's manifest file.
+    * `strings.txt`: a simple text file with string translations. See [Adding Translations](../contributing/adding-translations.md) for details about the format.
 
 
 ## Important Notes
@@ -40,5 +41,5 @@ Here's a rough layout of a typical folder and file structure for a plugin:
     * Don't try to avoid paywalls! We want to be good citizens. Doing illegal activity could not only harm you, but all of the LMS community!
 * Start small, release often. Start with a basic plugin and add features as requests come up. This allows you to optimize your code along the way, before you've got too much code.
 * Try to support multiple accounts. Your users sooner or later will ask for them. In order to do this you should make the API implementation instantiable. That way each client can carry a reference to their API instance.
-
+* Don't hard code textual content. Always use localizable string tokens.
 
