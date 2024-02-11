@@ -396,7 +396,7 @@
 
     ---
 
-    Provides alternative play counts and skip counts that aim to reflect your true listening history. You set a time after which a song counts as played. If you skip the song before, it counts as skipped, not played. Create (scheduled) backups, restore from backups. More information on the GitHub page.
+    Provides alternative play counts and skip counts that aim to reflect your true listening history. You set a time after which a song counts as played. If you skip the song before, it counts as skipped, not played. Create (scheduled) backups, restore from backups. More information, screenshots and FAQ on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-alternativeplaycount)
 
@@ -500,7 +500,7 @@
 
     ---
 
-    Takes care of rating your tracks. Set track ratings (also with plugins/apps and IR remote). Import track ratings from file tags or playlists. Export track ratings to playlist files. Create (scheduled) backups, restore from backups. Create virtual libraries for (top) rated tracks. Browse (top) rated tracks by artist or genre (browse menus). Keep track of your recently rated songs with a dedicated playlist or log file. Show rated songs for artist, album, genre, year or playlist (context menu). Support for online library tracks where possible. Includes "Don't Stop The Music" mixes. More information on the GitHub page.
+    Takes care of rating your tracks. Set track ratings (also with plugins/apps and IR remote). Import track ratings from file tags or playlists. Export track ratings to playlist files. Create (scheduled) backups, restore from backups. Create virtual libraries for (top) rated tracks. Browse (top) rated tracks by artist or genre (browse menus). Keep track of your recently rated songs with a dedicated playlist or log file. Show rated songs for artist, album, genre, year or playlist (context menu). Support for online library tracks where possible. Includes "Don't Stop The Music" mixes. More information, screenshots and FAQ on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-ratingslight)
 
@@ -556,7 +556,7 @@
 
     ---
 
-    Have a look at your library statistics with charts. More information on the GitHub page.
+    Have a look at your library statistics with charts. Screenshots and more information on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-visualstatistics)
 
@@ -594,7 +594,7 @@
 
     ---
 
-    Lets you set player-specific rules for when the current track or upcoming tracks in your playlist should be skipped and removed from the playlist automatically. More information on the GitHub page.
+    Lets you set player-specific rules for when the current track or upcoming tracks in your playlist should be skipped and removed from the playlist automatically. More information, screenshots and FAQ on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-customskip)
 
@@ -602,7 +602,7 @@
 
     ---
 
-    Allows you to start and stop tracks at a specific playback/song time or to skip a specific part of the song (e.g. silence). Just add custom start, stop or skip times to a track's comment tag and, with the help of this plugin, the song will start or end, when you want it to, or skip an unwanted part. No more annoying song intros or minutes of silence. More information on the GitHub page.
+    Allows you to start and stop tracks at a specific playback/song time or to skip a specific part of the song (e.g. silence). Just add custom start, stop or skip times to a track's comment tag and, with the help of this plugin, the song will start or end, when you want it to, or skip an unwanted part. No more annoying song intros or minutes of silence. More information and screenshots on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-customstartstoptimes)
 
@@ -634,7 +634,7 @@
 
     ---
 
-    Helps you create custom smart playlists (dynamic playlists) for the Dynamic Playlists plugin using templates. More information on the GitHub page.
+    Helps you create custom smart playlists (dynamic playlists) for the Dynamic Playlists plugin using templates. More information, screenshots and FAQ on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylistcreator)
 
@@ -642,7 +642,7 @@
 
     ---
 
-    Use smart playlists (dynamic playlists) to play continuous music mixes based on your selection criteria. Comes with a number of ready-to-use dynamic playlists. More information on the GitHub page.
+    Use smart playlists (dynamic playlists) to play continuous music mixes based on your selection criteria. Comes with a number of ready-to-use dynamic playlists. More information, screenshots and FAQ on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylists)
 
@@ -736,7 +736,7 @@
 
     ---
 
-    Scans track information from custom tags in your music files (incl. rating tags). More information on the GitHub page.
+    Scans track information from custom tags in your music files (incl. rating tags). More information and screenshots on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-customtagimporter)
 
@@ -776,7 +776,7 @@
 
     ---
 
-    Create custom virtual libraries with optional LMS browse menus using a template in a browser or by adding files with customized SQLite statements. More information on the GitHub page.
+    Create custom virtual libraries with optional LMS browse menus using a template in a browser or by adding files with customized SQLite statements. More information, screenshots and FAQ on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-virtuallibrarycreator)
 
