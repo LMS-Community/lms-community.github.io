@@ -164,7 +164,7 @@
 
     Programme, track and podcast information for Planet Radio / Bauer Media
 
-    Paul Webster
+    Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/111006-announce-planet-radio-bauer-media-plugin-planetrock-absolute-kiss-scala#post111006)
 
 -   __:material-radio: Radio Favourites__
 
