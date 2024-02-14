@@ -1,8 +1,14 @@
+---
+layout: default
+title: Available Plugins
+---
 
-!!! info
+<!--
 	Do not edit this page! It is automatically generated from the repository files.
 	Any change to the file would be overwritten next time changes from the plugin repository are embedded.
-	If you'd like to apply a change, update the [plugin's repository file](https://github.com/LMS-Community/lms-plugin-repository) instead.
+	If you'd like to apply a change, update the plugin's repository file
+	(https://github.com/LMS-Community/lms-plugin-repository) instead.
+-->
 ## :material-music-box-outline: Music Services
 
 <div class="grid cards" markdown>
