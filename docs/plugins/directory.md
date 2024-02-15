@@ -69,6 +69,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
+-   __:material-music-box-outline: TIDAL local__
+
+    ---
+
+    TIDAL for local LMS use
+
+    
+
 -   __:material-music-box-outline: YouTube__
 
     ---
