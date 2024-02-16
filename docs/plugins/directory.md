@@ -75,7 +75,7 @@ title: Available Plugins
 
     TIDAL for local LMS use
 
-    
+    philippe_44, Michael Herger    - [:octicons-globe-24: Details](https://github.com/michaelherger/lms-plugin-tidal)
 
 -   __:material-music-box-outline: YouTube__
 
@@ -983,6 +983,14 @@ title: Available Plugins
     Gives new settings for synchronizing players: "wait for next track" to avoid disruptions; "unsync at power off"; restore local playlist after leaving a sync group. (Boom, Classic, Radio, Receiver, Squeezebox1, Slimp3, SoftSqueeze, Touch, Transporter) 
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SyncOptions.html)
+
+-   __:material-tools: xAP Home Automation__
+
+    ---
+
+    xAP Home Automation connects Squeezebox Server with other xAP-enabled services and devices around the home.
+
+    Edward Pearson    - [:octicons-globe-24: Details](http://www.erspearson.com/xAP/Slim/slim_main.htm)
 
 </div>
 
