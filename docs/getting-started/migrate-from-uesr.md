@@ -10,10 +10,13 @@ title: Migrate from UE Smart Radio
 !!! note
     Please note that Smart Radios transitioned to Squeezebox Radios will require [Logitech Media Server](../getting-started/index.md)</a>. Install it before you continue the migration.
 
-To initiate the transition, navigate to "Advanced Settings" on your Smart Radio and scroll down to select "Switch to Squeezebox", then "Free your music".
+To initiate the transition, power down the Radio, and restart it.
+
+<!-- navigate to "Advanced Settings" on your Smart Radio and scroll down to select "Switch to Squeezebox", then "Free your music".
 
 ![](assets/uesr-migration/migrate-uesr-sb.png)
 ![](assets/uesr-migration/migrate-uesr-sb-free.png)
+-->
 
 After a restart the Radio should start downloading the new firmware, followed by another reboot and a factory reset:
 
@@ -29,4 +32,3 @@ When asked to create an account on MySqueezebox.com, skip that step and continue
 If you get an error "Problem Connecting - There is a problem connecting to mysqueezebox.com", you should be able to scroll down to "Switch Library", from where you can connect to your LMS.
 
 ![](assets/uesr-migration/problem-connecting-mysb.png)
-
