@@ -4,9 +4,13 @@
 
 - Server Changes:
 
+	- Improve Release Type readout in Ogg and WMA files.
+
 - Platform Support:
 
 - Bug Fixes:
+
+	- Don't fail http caching due to extended characters in the URL.
 
 - Other:
 

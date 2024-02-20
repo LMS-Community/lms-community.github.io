@@ -53,6 +53,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-PodcastExt)
 
+-   __:material-music-box-outline: Pyrrha__
+
+    ---
+
+    Daughter of Pandora
+
+    sspiff
+
 -   __:material-music-box-outline: Qobuz__
 
     ---
