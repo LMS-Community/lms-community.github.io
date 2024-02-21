@@ -330,6 +330,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Triode](mailto:triode1@btinternet.com)
 
+-   __:material-cast-audio: Musical Fidelity M6 Encore__
+
+    ---
+
+    Support for Musical Fidelity M6 Encore
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
+
 -   __:material-cast-audio: ShairTunes2 (fork)__
 
     ---
