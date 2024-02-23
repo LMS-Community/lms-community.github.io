@@ -1,3 +1,21 @@
+## Version 8.5.0
+
+- [Upstream fixes from Logitech Media Server 8.4.x](#version-841)
+
+- New Features:
+
+- Server Changes:
+
+	- Remove all dependency on MySqueezebox.com.
+
+- Platform Support:
+
+- Bug Fixes:
+
+	- [#998](https://github.com/Logitech/slimserver/pull/998) \- Fix Sounds & Effects playback when password protection is enabled.
+
+- Other:
+
 ## Version 8.4.1
 
 - New Features:
