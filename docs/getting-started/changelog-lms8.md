@@ -29,6 +29,7 @@
 - Bug Fixes:
 
 	- Don't fail http caching due to extended characters in the URL.
+	- Playing all items from a genre might fail under certain circumstances.
 
 - Other:
 
