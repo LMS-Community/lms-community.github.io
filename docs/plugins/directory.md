@@ -314,6 +314,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Kimmo, Triode, Ralphy](mailto:triode1@btinternet.com)
 
+-   __:material-cast-audio: IR Blaster__
+
+    ---
+
+    IR Blaster can control other equipment (i.e. your amp) via IR sent out by your SB Classic, Transporter or SB Touch on some events (i.e. power on/off and volume up/down).
+
+    [:octicons-mail-24: Felix Mueller](mailto:felix.mueller@gwendesign.com)    - [:octicons-globe-24: Details](http://www.gwendesign.com/slimserver/dev_hard_and_software.htm)
+
 -   __:material-cast-audio: Local Player__
 
     ---
