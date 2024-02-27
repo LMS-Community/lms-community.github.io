@@ -7,6 +7,7 @@
 - Server Changes:
 
 	- Remove all dependency on MySqueezebox.com.
+	- Remove warning about "incompatible" Radio firmware version 7.\*.
 
 - Platform Support:
 
