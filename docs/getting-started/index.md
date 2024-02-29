@@ -31,8 +31,8 @@ Logitech Media Server is a fully open source server software to power a wide ran
 === ":material-redhat: RedHat / :material-fedora: Fedora"
     [:material-redhat: RedHat / :material-fedora: Fedora (87 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/logitechmediaserver-8.4.0-1.noarch.rpm){ .md-button }
 
-=== ":material-apple: Apple OSX"
-    [:material-apple: Apple OSX (44 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/LogitechMediaServer-8.4.0.pkg){ .md-button }
+=== ":material-apple: Apple macOS"
+    [:material-apple: Apple macOS (44 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/LogitechMediaServer-8.4.0.pkg){ .md-button }
 
 <!--ENDDOWNLOADS-->
 
