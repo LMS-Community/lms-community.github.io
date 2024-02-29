@@ -8,6 +8,7 @@
 
 	- Remove all dependency on MySqueezebox.com.
 	- Remove warning about "incompatible" Radio firmware version 7.\*.
+	- [#1003](https://github.com/Logitech/slimserver/issues/1003) \- Add alarm information to player "status" query.
 
 - Platform Support:
 
