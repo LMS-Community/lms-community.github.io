@@ -9,7 +9,36 @@ Logitech Media Server is a fully open source server software to power a wide ran
 
 ## Download
 
-You can find packages for most platforms on the [https://lms-community.github.io/lms-server-repository/](https://lms-community.github.io/lms-server-repository/). Download the package for your preferred platform and follow the instructions below.
+<!--
+	Do not edit this below section marked with DOWNLOADS/ENDDONWLOADS! It is automatically generated from the repository files.
+	Any change to the file would be overwritten next time changes from the plugin repository are embedded.
+	If you'd like to apply a change, update the plugin's repository file
+	(https://github.com/LMS-Community/lms-server-repository) instead.
+-->
+<!--DOWNLOADS-->
+
+=== ":material-microsoft-windows: Windows"
+    [:material-microsoft-windows: Windows 32-bit (70 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/LogitechMediaServer-8.4.0.exe){ .md-button }
+    [:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/LogitechMediaServer-8.4.0-win64.exe){ .md-button }
+
+=== ":material-debian: Debian / :material-ubuntu: Ubuntu"
+    [:material-debian: Debian / :material-ubuntu: Ubuntu x86_64 (25 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/logitechmediaserver_8.4.0_amd64.deb){ .md-button }
+    [:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (32 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/logitechmediaserver_8.4.0_arm.deb){ .md-button }
+
+=== ":simple-raspberrypi: Raspberry Pi OS:"
+    [:simple-raspberrypi: Raspberry Pi OS (32 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/logitechmediaserver_8.4.0_arm.deb){ .md-button }
+
+=== ":material-redhat: RedHat / :material-fedora: Fedora"
+    [:material-redhat: RedHat / :material-fedora: Fedora (87 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/logitechmediaserver-8.4.0-1.noarch.rpm){ .md-button }
+
+=== ":material-apple: Apple OSX"
+    [:material-apple: Apple OSX (44 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/LogitechMediaServer-8.4.0.pkg){ .md-button }
+
+<!--ENDDOWNLOADS-->
+
+You can find more packages for more platforms on [https://lms-community.github.io/lms-server-repository/](https://lms-community.github.io/lms-server-repository/). For the Docker image [see below](#install-using-docker).
+
+Download the package for your preferred platform and follow the instructions in the next section.
 
 ## Install
 
@@ -25,13 +54,13 @@ There are a couple of ways to get started with a server:
 
 Install using your operating system's package manager:
 
-=== "Debian  (or Raspberry Pi OS, Ubuntu etc.)"
+=== ":material-debian: Debian / :simple-raspberrypi: Raspberry Pi OS / :material-ubuntu: Ubuntu"
 
     ```
     sudo dpkg -i logitechmediaserver_8.4.0_amd64.deb
     ```
 
-=== "RedHat"
+=== ":material-redhat: RedHat / :material-fedora: Fedora"
 
     ```
     sudo rpm -i logitechmediaserver-8.4.0-1.noarch.rpm

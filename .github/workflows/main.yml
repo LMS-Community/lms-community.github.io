@@ -62,6 +62,10 @@ jobs:
           sed -Ei 's/http:\/\/raw.githubusercontent.com.*?#v([1-9]+)\.([0-9]+)\.([0-9]+)\)/#version-\1\2\3)/' $CHANGELOG_TARGET
           sed -Ei 's/^\s\s*/\t/g' $CHANGELOG_TARGET
 
+      - name: Get release downloads and embed in Getting Started document
+        run: |
+          tools/build-server-downloads.pl
+
       - name: Get plugin repository and convert to markdown
         run: |
           tools/build-plugin-repository.pl > $PLUGIN_TARGET
@@ -84,7 +88,7 @@ jobs:
   deploy-mkdocs:
 
     if: ${{ always() }}
-    name: Build website and publish to gh-pages branch 
+    name: Build website and publish to gh-pages branch
     needs: get-external-changelog
     runs-on: ubuntu-latest
 
@@ -111,6 +115,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
 
-      - run: pip install mkdocs-material 
+      - run: pip install mkdocs-material
 
       - run: mkdocs gh-deploy --force
