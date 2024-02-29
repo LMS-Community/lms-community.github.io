@@ -64,7 +64,7 @@ jobs:
 
       - name: Get release downloads and embed in Getting Started document
         run: |
-          tools/build-server-downloads.pl
+          tools/build-server-downloads-page.pl
 
       - name: Get plugin repository and convert to markdown
         run: |
