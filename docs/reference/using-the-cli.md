@@ -29,7 +29,7 @@ The response will be a JSON-encoded object which echoes the params/id/method par
 
 Example:
 
-> **`curl -g -X POST -d '{"id":1,"method":"slim.request","params":["00:04:20:ab:cd:ef",["playlist","name","?"]]}' http://192.168.10:9000/jsonrpc.js`**
+> **`curl -g -X POST -d '{"id":1,"method":"slim.request","params":["00:04:20:ab:cd:ef",["playlist","name","?"]]}' http://192.168.1.1:9000/jsonrpc.js`**
 
 Response:
 

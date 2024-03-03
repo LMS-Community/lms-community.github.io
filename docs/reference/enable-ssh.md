@@ -14,6 +14,8 @@ SSH access is only available on devices running the SqueezeOS platform. This is 
     ssh -c aes128-cbc -oHostKeyAlgorithms=+ssh-rsa,ssh-dss -oKexAlgorithms=+diffie-hellman-group1-sha1 root@[IP address or hostname of your device]
     ```
 
+    Please note that some Linux distributions wouldn't even install the necessary algorithms any more. See eg. [this document for Fedora](https://fedoraproject.org/wiki/Changes/StrongCryptoSettings2#Upgrade/compatibility_impact).
+
 ## Squeezebox Radio / Touch / Controller
 
 On the Squeezeboxen SSH can be enabled in Settings/Advanced Settings/Remote Access. Follow the instructions on screen.
