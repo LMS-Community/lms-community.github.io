@@ -83,7 +83,7 @@ title: Available Plugins
 
     TIDAL for local LMS use
 
-    philippe_44, Michael Herger    - [:octicons-globe-24: Details](https://github.com/michaelherger/lms-plugin-tidal)
+    Michael Herger, philippe_44    - [:octicons-globe-24: Details](https://github.com/michaelherger/lms-plugin-tidal)
 
 -   __:material-music-box-outline: YouTube__
 
@@ -219,14 +219,6 @@ title: Available Plugins
     Radio Paradise in lossless FLAC streaming! Give access to Radio Paradise's HD stream pictures. Get better quality artwork (requires LMS 7.8 or more recent).
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins/)
-
--   __:material-radio: RadioFeeds UK and Ireland__
-
-    ---
-
-    Access RadioFeeds UK and Ireland on your Squeezebox including AAC+ and HLS streams (requires PlayHLS). We are the internet's most up-to-date directory of live streams for UK and Irish radio stations. Please register for a username before using at [http://www.radiofeeds.co.uk/squeeze](http://www.radiofeeds.co.uk/squeeze)
-
-    The AlienBBC Team and Vincent Lo    - [:octicons-globe-24: Details](http://www.radiofeeds.co.uk/squeeze/)
 
 -   __:material-radio: RadioNet__
 
