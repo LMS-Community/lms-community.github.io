@@ -220,6 +220,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins/)
 
+-   __:material-radio: RadioFeeds UK and Ireland__
+
+    ---
+
+    Access RadioFeeds UK and Ireland on your Squeezebox including AAC+ and HLS streams (requires PlayHLS). We are the internet's most up-to-date directory of live streams for UK and Irish radio stations. Please register for a username before using at [http://www.radiofeeds.co.uk/squeeze](http://www.radiofeeds.co.uk/squeeze)
+
+    The AlienBBC Team and Vincent Lo    - [:octicons-globe-24: Details](http://www.radiofeeds.co.uk/squeeze/)
+
 -   __:material-radio: RadioNet__
 
     ---
@@ -691,14 +699,6 @@ title: Available Plugins
     Provides functionality to add songs or albums to any chosen playlist.
 
     [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/PlaylistManPlugin.htm)
-
--   __:material-playlist-music: Spicefly SugarCube__
-
-    ---
-
-    Travel through your music Library using MusicIPs recommendations. Features Include Filter, Genre, Artist and Recipe Mixing, Trackstat Integration, Artist Blocking, Genre Blocking, Custom Track Weighting Routines, Coming Up Next Display, Sleep Mode, Volume Fade and lots more.  See www.spicefly.com for Details and Change Log.
-
-    [:octicons-mail-24: Charles Parker](mailto:abuse@spicefly.com)    - [:octicons-globe-24: Details](http://www.spicefly.com/)
 
 -   __:material-playlist-music: SQL Playlist__
 
