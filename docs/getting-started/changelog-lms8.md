@@ -32,6 +32,8 @@
 
 	- Don't fail http caching due to extended characters in the URL.
 	- Playing all items from a genre might fail under certain circumstances.
+	- Use valid sorting arguments if sort order "albums" is requested when queuing up items.
+	- Fix Last.fm scrobbling issue with some streaming service tracks.
 
 - Other:
 
