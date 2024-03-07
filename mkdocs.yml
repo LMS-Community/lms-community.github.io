@@ -119,11 +119,14 @@ nav:
         - Home Menu vs. SlimBrowse: reference/home-vs-slimbrowse.md
         - Home Menu Items: reference/adding-menus-squeezeplay.md
         - SlimBrowse Protocol: reference/slimbrowse.md
+      - SSH/SCP:
+        - SSH Access: reference/enable-ssh.md
+        - WinSCP How To: reference/winscp.md
+        - WinSCP as root: reference/winscp-root.md
       - Plugin/Applet Repositories: reference/repository-dev.md
       - Music Service Plugin: reference/music-service-plugin.md
       - "#CURTRACK Guide": reference/curtrack.md
       - Special IR Keys: reference/special-ir-keys-reset.md
       - Custom Firmware: reference/custom-firmware.md
       - Custom OS support: reference/slim-utils-os-custom.md
-      - SSH Access: reference/enable-ssh.md
       - Using the CLI: reference/using-the-cli.md
