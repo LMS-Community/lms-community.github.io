@@ -5,7 +5,7 @@ title: WinSCP - How To
 
 # How to transfer files using WinSCP
 
-## Downlaod WinSCP
+## Install WinSCP
 
 [Download the latest version of WinSCP](https://winscp.net/eng/download.php) and install according to their instructions.
 
@@ -13,25 +13,27 @@ title: WinSCP - How To
 
 This is the method to transfer a opml file but it demonstrates the general procedure to transfer any file or folder e.g. music folders, if one does not use SMB.
 
+!!! note
+    This tutorial is written with a [piCorePlayer (or short pCP)](https://picoreplayer.org) as the remote machine. The same principles apply to any SSH server. Change machine- and/or username as needed.
+
 * Both the Windows computer and the Raspberry Pi have to be on the same network.
 
-* On the Windows computer make a new folder on the desktop (I called mine FILES FOR PCP) and paste the favourites.opml inside
+* On the Windows computer make a new folder on the desktop and paste the favourites.opml inside
 
-I seem to remember that when one starts WinSCP for the first time one is given the option to start in two different modes; I can't remember the name but you want the one that gives two panes side by side.
+!!! tip
+    When one starts WinSCP for the first time one is given the option to start in two different modes; we recommend the one that gives two panes side by side.
 
-* Stop LMS from running on the pCP LMS tab page
+* Stop LMS from running (on pCP you find the button on the LMS tab page)
 
-* I always right click on the shortcut and "Run as Administrator"
+* Leave the File Profile at SFTP (Note; this setting can be changed, but for pCP it seems to work without a problem)
 
-* Leave the File Profile at SFTP   (Note; this setting can be changed, but for pCP it seems to work without a problem)
-
-* Then Log in to the Raspberry Pi, you need the IP address (or use pcp.local)
+* Then Log in to the Raspberry Pi, you need the IP address (or use its host name, like eg. pcp.local)
 
 * Leave the port # at 22
 
-* The user name which is, by default `tc`
+* Enter the user name (which on pCP is `tc` by default)
 
-* The user password by default is `piCore`
+* Enter the user password (pCP: `piCore` by default)
 
 * Click on Login
 
@@ -45,7 +47,7 @@ You are presented with two screens:
 
 ![](assets/winscp/3-winscp.png)
 
-The one on the left is the Windows computer you are using and the one on the right the Raspberry Pi with pCP
+The one on the left is the Windows computer you are using and the one on the right the remote machine (a Raspberry Pi with pCP).
 
 * In the Left Pane, select the location from the dropdown and then double click on the rewuired folder to open it.
 
@@ -75,9 +77,30 @@ Close WinSCP (click yes on the Termination warning box) and reboot the Pi.
 
 ![](assets/winscp/9-winscp.png)
 
+## Transfer a file as user `root`
 
+Normally I use SFTP or SCP as File Protocal but sometimes one is denied permission to perform the task and one needs to utilise the user `root`.
 
+* Fill in the login detail as required and then click on Advanced
 
+![](assets/winscp/1-root-winscp.png)
 
+* In the window that opens click on the following areas in sequence: "Shell"
+
+![](assets/winscp/2-root-winscp.png)
+
+* then "`sudo su`" from the dropdown
+
+![](assets/winscp/3-root-winscp.png)
+
+* then on OK
+
+![](assets/winscp/4-root-winscp.png)
+
+* The window will close and then click on Login
+
+This is a rpi 4B with LMS installed on the Raspberry Pi OS Bookworm Lite 64 bit:
+
+![](assets/winscp/5-root-winscp.png)
 
 
