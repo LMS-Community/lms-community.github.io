@@ -15,6 +15,7 @@
 - Bug Fixes:
 
 	- [#998](https://github.com/Logitech/slimserver/pull/998) \- Fix Sounds & Effects playback when password protection is enabled.
+	- [#1007](https://github.com/Logitech/slimserver/pull/1007) \- Fix track favorite links in album listings (thanks darrell-k!).
 
 - Other:
 
