@@ -338,6 +338,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
+-   __:material-cast-audio: piCorePlayer Support__
+
+    ---
+
+    Access pCP Settings pages
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
+
 -   __:material-cast-audio: ShairTunes2 (fork)__
 
     ---
@@ -855,6 +863,14 @@ title: Available Plugins
     Remove orphaned client configurations
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim/)
+
+-   __:material-tools: Create docsets for Dash__
+
+    ---
+
+    Export your music library as a Docset to be used with Dash ([http://kapeli.com/dash).](http://kapeli.com/dash).) This allows you to quickly search your library on your Mac computer without firing up the Logitech Media Server web UI.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
 -   __:material-tools: Custom Clock Helper__
 
