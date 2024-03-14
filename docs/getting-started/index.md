@@ -7,8 +7,6 @@ title: Getting Started with LMS
 
 Logitech Media Server is a fully open source server software to power a wide range of audio players. With the help of many plugins, Logitech Media Server can stream not only your local music collection, but content from many music services and internet radio stations to your players.
 
-## Download
-
 <!--
 	Do not edit this below section marked with DOWNLOADS/ENDDONWLOADS! It is automatically generated from the repository files.
 	Any change to the file would be overwritten next time changes from the plugin repository are embedded.
@@ -16,6 +14,8 @@ Logitech Media Server is a fully open source server software to power a wide ran
 	(https://github.com/LMS-Community/lms-server-repository) instead.
 -->
 <!--DOWNLOADS-->
+
+## Download Logitech Media Server v8.5.0
 
 === ":material-microsoft-windows: Windows"
     [:material-microsoft-windows: Windows 32-bit (70 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0.exe){ .md-button }
@@ -57,13 +57,13 @@ Install using your operating system's package manager:
 === ":material-debian: Debian / :simple-raspberrypi: Raspberry Pi OS / :material-ubuntu: Ubuntu"
 
     ```
-    sudo dpkg -i logitechmediaserver_8.4.0_amd64.deb
+    sudo dpkg -i logitechmediaserver_x.y.z_amd64.deb
     ```
 
 === ":material-redhat: RedHat / :material-fedora: Fedora"
 
     ```
-    sudo rpm -i logitechmediaserver-8.4.0-1.noarch.rpm
+    sudo rpm -i logitechmediaserver-x.y.z-1.noarch.rpm
     ```
 
 ### Install on Raspberry Pi

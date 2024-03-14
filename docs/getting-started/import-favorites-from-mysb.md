@@ -5,7 +5,7 @@ title: Import Favorites from MySqueezebox.com
 
 # How to Import Favorites from MySqueezebox.com
 
-You can import the existing list of Favorites from MySqueezebox.com into Logitech Media Server. In LMS versions before 8.5.0 the list was automatically linked to from the Favorites list. But it remained on the server. As this server it to go away, you should import the list and store it in Logitech Media Server. Luckily all you need to do this already is there.
+You can import the existing list of Favorites from MySqueezebox.com into Logitech Media Server. In LMS versions before v8.5.0 the list was automatically linked to from the Favorites list. But it remained on the server. As this server it to go away, you should import the list and store it in Logitech Media Server. Luckily all you need to do this already is there.
 
 ## Get the URL for your Favorites
 

@@ -10,7 +10,7 @@ It is possible to tell Logitech Media Server to push a specific build of Squeeze
 !!! danger
     Load custom firmware at your own risk. While an unlikely scenario, it is possible to "brick" your device by loading a corrupted or buggy-because-not-formally-qualified firmware. If you get in a situation where the custom firmware you've attempted to install won't load, you may be able to recover it by booting to the previous firmware. This is done by continually [holding down the rew key during boot](special-ir-keys-reset.md).
 
-## Loading Custom Radio Firmware
+## Loading Custom Squeezebox Firmware
 
 * Begin by obtaining a firmware for the device that you want to load. These are typically named in the form `baby_X.Y.Z_rXXXX`.bin, where "baby" is the device type (Radio - use "fab4" for the SB Touch, or "jive" for the SB Controller), X.Y.Z is the software branch, and rXXXX is the subversion revision. For example, `baby_7.6.0_r9155.bin`.
 
@@ -39,6 +39,14 @@ It is possible to tell Logitech Media Server to push a specific build of Squeeze
 ```
 zip -p custom.baby.bin jive.version > custom.baby.version
 ```
+
+## Install firmware using SD card or USB stick (SB Controller/Touch)
+
+If you're the owner of a Squeezebox Touch or Controller, you're lucky! Those devices feature an SD card slot or USB port (Touch only).
+
+You can install the firmware by copying the files to the storage medium of your choice (and availability). Insert the medium to your device, restart it. You should now be able to install the firmware from the device's Settings/Advanced/Software Update menu.
+
+## Have firmware served by your Logitech Media Server
 
 The two files `custom.baby.bin` and `custom.baby.version` need to be placed in the Cache/Updates folder of the LMS installation. See Settings/Information in LMS to see where that folder is on your system.
 

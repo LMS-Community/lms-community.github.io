@@ -15,9 +15,17 @@ Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com
 
 ## Version history
 
+### LMS 8.5
+
+Current stable. Initially released on March 14, 2024.
+
+This is the last Logitech branded release. It's main change compared to the previous version is the removal of all MySqueezebox.com integration.
+
+[Release notes](../getting-started/changelog-lms8.md)
+
 ### LMS 8.4
 
-Current stable. Initially released on Feb 8, 2024.
+Initially released on Feb 8, 2024.
 
 * Add support for Release Types (see eg. on MusicBrainz).
 * Add plugins for ClassicalRadio.com, DI.fm, JazzRadio.com, RadioTunes.com, RockRadio.com, ZenRadio.com.
@@ -30,9 +38,9 @@ Current stable. Initially released on Feb 8, 2024.
 
 ### LMS 8.3
 
-Current stable. Initially released on Nov 4, 2022.
+Initially released on Nov 4, 2022.
 
-Logitech Media Server 8.3.0 is mostly a maintenance release without any major new features. Oh, hold on... unless you're a Mac user! Apple provided a good reason to get LMS 8.3.0 out: macOS 13 Ventura removed the Perl version we've relied on for about a decade. So, the new feature is:
+Logitech Media Server v8.3.0 is mostly a maintenance release without any major new features. Oh, hold on... unless you're a Mac user! Apple provided a good reason to get LMS v8.3.0 out: macOS 13 Ventura removed the Perl version we've relied on for about a decade. So, the new feature is:
 
 - Support for macOS 13 (native Apple Silicon as well as Intel)
 

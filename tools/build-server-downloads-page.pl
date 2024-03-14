@@ -31,22 +31,27 @@ eval {
 my $downloads = $repo->{latest};
 
 my %releases;
+my $version;
 foreach (@platforms) {
-	my $platformId = $_->[0];
-	my $download = $downloads->{$platformId};
+    my $platformId = $_->[0];
+    my $download = $downloads->{$platformId};
 
-	if (my $url = $download->{url}) {
-		$url =~ s/^http:/https:/;
-		my $filename = (split(m|/|, $url))[-1];
-		my $timestamp = $download->{revision};
-		$releases{$_->[0]} = "[$_->[1] ($download->{size})]($url){ .md-button }";
-	}
+    if (my $url = $download->{url}) {
+        $version ||= $download->{version};
+
+        $url =~ s/^http:/https:/;
+        my $filename = (split(m|/|, $url))[-1];
+        my $timestamp = $download->{revision};
+        $releases{$_->[0]} = "[$_->[1] ($download->{size})]($url){ .md-button }";
+    }
 }
 
 $releases{pi} = $releases{debarm};
 $releases{pi} =~ s/:material-debian: Debian \/ :material-ubuntu: Ubuntu - ARM/:simple-raspberrypi: Raspberry Pi OS/;
 
 my $content = qq(
+## Download Logitech Media Server v$version
+
 === ":material-microsoft-windows: Windows"
     $releases{win}
     $releases{win64}
