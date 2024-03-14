@@ -18,21 +18,21 @@ Logitech Media Server is a fully open source server software to power a wide ran
 <!--DOWNLOADS-->
 
 === ":material-microsoft-windows: Windows"
-    [:material-microsoft-windows: Windows 32-bit (70 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/LogitechMediaServer-8.4.0.exe){ .md-button }
-    [:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/LogitechMediaServer-8.4.0-win64.exe){ .md-button }
+    [:material-microsoft-windows: Windows 32-bit (70 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0.exe){ .md-button }
+    [:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0-win64.exe){ .md-button }
 
 === ":material-debian: Debian / :material-ubuntu: Ubuntu"
-    [:material-debian: Debian / :material-ubuntu: Ubuntu x86_64 (25 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/logitechmediaserver_8.4.0_amd64.deb){ .md-button }
-    [:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (32 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/logitechmediaserver_8.4.0_arm.deb){ .md-button }
+    [:material-debian: Debian / :material-ubuntu: Ubuntu x86_64 (24 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.5.0/logitechmediaserver_8.5.0_amd64.deb){ .md-button }
+    [:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (31 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.5.0/logitechmediaserver_8.5.0_arm.deb){ .md-button }
 
 === ":simple-raspberrypi: Raspberry Pi OS:"
-    [:simple-raspberrypi: Raspberry Pi OS (32 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/logitechmediaserver_8.4.0_arm.deb){ .md-button }
+    [:simple-raspberrypi: Raspberry Pi OS (31 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.5.0/logitechmediaserver_8.5.0_arm.deb){ .md-button }
 
 === ":material-redhat: RedHat / :material-fedora: Fedora"
-    [:material-redhat: RedHat / :material-fedora: Fedora (87 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/logitechmediaserver-8.4.0-1.noarch.rpm){ .md-button }
+    [:material-redhat: RedHat / :material-fedora: Fedora (86 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.5.0/logitechmediaserver-8.5.0-1.noarch.rpm){ .md-button }
 
 === ":material-apple: Apple macOS"
-    [:material-apple: Apple macOS (44 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.4.0/LogitechMediaServer-8.4.0.pkg){ .md-button }
+    [:material-apple: Apple macOS (43 MB)](https://downloads.slimdevices.com/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0.pkg){ .md-button }
 
 <!--ENDDOWNLOADS-->
 

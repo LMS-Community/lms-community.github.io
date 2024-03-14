@@ -1,8 +1,20 @@
-## Version 8.5.0
+## Version 8.5.1
 
-- [Upstream fixes from Logitech Media Server 8.4.x](#version-841)
+- [Upstream fixes from Logitech Media Server 8.5.0](#version-850)
 
 - New Features:
+
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
+## Version 8.5.0 - 2024-03-14 (8762186a4)
+
+- [Upstream fixes from Logitech Media Server 8.4.x](#version-841)
 
 - Server Changes:
 
@@ -10,24 +22,16 @@
 	- Remove warning about "incompatible" Radio firmware version 7.\*.
 	- [#1003](https://github.com/Logitech/slimserver/issues/1003) \- Add alarm information to player "status" query.
 
-- Platform Support:
-
 - Bug Fixes:
 
 	- [#998](https://github.com/Logitech/slimserver/pull/998) \- Fix Sounds & Effects playback when password protection is enabled.
 	- [#1007](https://github.com/Logitech/slimserver/pull/1007) \- Fix track favorite links in album listings (thanks darrell-k!).
 
-- Other:
-
 ## Version 8.4.1
-
-- New Features:
 
 - Server Changes:
 
 	- Improve Release Type readout in Ogg and WMA files.
-
-- Platform Support:
 
 - Bug Fixes:
 
@@ -35,8 +39,6 @@
 	- Playing all items from a genre might fail under certain circumstances.
 	- Use valid sorting arguments if sort order "albums" is requested when queuing up items.
 	- Fix Last.fm scrobbling issue with some streaming service tracks.
-
-- Other:
 
 ## Version 8.4.0 - 2024-02-08 (e225575dc)
 
