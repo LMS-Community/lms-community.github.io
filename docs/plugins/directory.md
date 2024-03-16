@@ -29,6 +29,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim/)
 
+-   __:material-music-box-outline: Deezer local__
+
+    ---
+
+    Deezer for local LMS use
+
+    philippe_44, Michael Herger    - [:octicons-globe-24: Details](https://github.com/philippe44/lms-deezer)
+
 -   __:material-music-box-outline: Mixcloud__
 
     ---
