@@ -57,7 +57,7 @@ Install using your operating system's package manager:
 === ":material-debian: Debian / :simple-raspberrypi: Raspberry Pi OS / :material-ubuntu: Ubuntu"
 
     ```
-    sudo dpkg -i logitechmediaserver_x.y.z_amd64.deb
+    sudo dpkg -i logitechmediaserver_x.y.z_*.deb
     ```
 
 === ":material-redhat: RedHat / :material-fedora: Fedora"
