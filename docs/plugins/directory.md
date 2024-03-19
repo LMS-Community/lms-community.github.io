@@ -640,7 +640,7 @@ title: Available Plugins
 
     ---
 
-    Lets you set player-specific rules for when the current track or upcoming tracks in your playlist should be skipped and removed from the playlist automatically. More information, screenshots and FAQ on the GitHub page.
+    Set player-specific rules for when the current track or upcoming tracks in your playlist should be skipped and removed from the playlist automatically. More information, screenshots and FAQ on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-customskip)
 
@@ -648,7 +648,7 @@ title: Available Plugins
 
     ---
 
-    Allows you to start and stop tracks at a specific playback/song time or to skip a specific part of the song (e.g. silence). Just add custom start, stop or skip times to a track's comment tag and, with the help of this plugin, the song will start or end, when you want it to, or skip an unwanted part. No more annoying song intros or minutes of silence. More information and screenshots on the GitHub page.
+    Start and stop tracks at a specific playback/song time or to skip a specific part of the song (e.g. silence) by simply adding custom start, stop or skip times to a track's comments tag. More information and screenshots on the GitHub page.
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-customstartstoptimes)
 
