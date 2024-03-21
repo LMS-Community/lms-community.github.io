@@ -10,6 +10,8 @@
 
 - Bug Fixes:
 
+	- Fix definition of track-level favorites' artwork.
+
 - Other:
 
 ## Version 8.5.0 - 2024-03-14 (8762186a4)
