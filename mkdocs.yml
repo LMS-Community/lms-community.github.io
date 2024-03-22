@@ -78,6 +78,7 @@ nav:
       - Beginner's Docker Guide on Synology: getting-started/beginners-guide-synology-docker.md
     - Changelog:
       - LMS8 changelog: getting-started/changelog-lms8.md
+      - LMS9 changelog: getting-started/changelog-lms9.md
   - Players & Controllers:
     - players-and-controllers/index.md
     - Hardware based:

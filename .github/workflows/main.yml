@@ -26,8 +26,10 @@ permissions:
   contents: write
 
 env:
-  CHANGELOG_SRC: https://raw.githubusercontent.com/Logitech/slimserver/HEAD/Changelog8.html
-  CHANGELOG_TARGET: docs/getting-started/changelog-lms8.md
+  CHANGELOG_LMS8_SRC: https://raw.githubusercontent.com/Logitech/slimserver/HEAD/Changelog8.html
+  CHANGELOG_LMS8_TARGET: docs/getting-started/changelog-lms8.md
+  CHANGELOG_LMS9_SRC: https://raw.githubusercontent.com/Logitech/slimserver/HEAD/Changelog9.html
+  CHANGELOG_LMS9_TARGET: docs/getting-started/changelog-lms9.md
   PLUGIN_TARGET: docs/plugins/directory.md
 
 
@@ -58,9 +60,15 @@ jobs:
       - name: Get changelog and convert to markdown
         run: |
           export PATH=${PATH}:`go env GOPATH`/bin
-          html2md -i $CHANGELOG_SRC > $CHANGELOG_TARGET
-          sed -Ei 's/http:\/\/raw.githubusercontent.com.*?#v([1-9]+)\.([0-9]+)\.([0-9]+)\)/#version-\1\2\3)/' $CHANGELOG_TARGET
-          sed -Ei 's/^\s\s*/\t/g' $CHANGELOG_TARGET
+          
+          html2md -i $CHANGELOG_LMS8_SRC > $CHANGELOG_LMS8_TARGET
+          sed -Ei 's/http:\/\/raw.githubusercontent.com.*?#v([1-9]+)\.([0-9]+)\.([0-9]+)\)/#version-\1\2\3)/' $CHANGELOG_LMS8_TARGET
+          sed -Ei 's/^\s\s*/\t/g' $CHANGELOG_LMS8_TARGET
+          
+          html2md -i $CHANGELOG_LMS9_SRC > $CHANGELOG_LMS9_TARGET
+          sed -Ei 's/http:\/\/raw.githubusercontent.com.*?#v([1-9]+)\.([0-9]+)\.([0-9]+)\)/#version-\1\2\3)/' $CHANGELOG_LMS9_TARGET
+          sed -Ei 's/^\s\s*/\t/g' $CHANGELOG_LMS9_TARGET
+
 
       - name: Get release downloads and embed in Getting Started document
         run: |
