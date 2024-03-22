@@ -14,6 +14,7 @@
 
 	- Fix definition of track-level favorites' artwork.
 	- Correctly prefix settings links from Plugins page with the web root.
+	- [#1020](https://github.com/Logitech/slimserver/pull/1020) \- Add icon to favorites in Default web UI et al. (thanks philippe44 && darrell-k)
 
 - Other:
 
