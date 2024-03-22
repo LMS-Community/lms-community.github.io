@@ -6,11 +6,14 @@
 
 - Server Changes:
 
+	- Add links to the settings of the AudioAddict based services.
+
 - Platform Support:
 
 - Bug Fixes:
 
 	- Fix definition of track-level favorites' artwork.
+	- Correctly prefix settings links from Plugins page with the web root.
 
 - Other:
 
