@@ -17,11 +17,11 @@ This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommun
 In this guide the following assumptions apply:
 
 - If you already have the Synology LMS packaged installed, uninstall it first. This will free up the LMS network ports so the container can use them.
-- This docker container runs as your user. Note, you can also create a specific user for running the container, in that case replace the UID/PUID with the correct identifier. 
+- This docker container runs as your user. Note, you can also create a specific user for running the container, in that case replace the UID/PUID with the correct identifier.
 - Your music is stored in the shared folder `music`.
 - (Optional) you have a shared folder called playlist where LMS can store playlists.
 - Your user has read-only or read-write access to the music folder. If you also have a playlist folder, your user needs read-write access to this folder.
-- The state of the docker image is saved in the folder `/docker/logitechmediaserver`. The path can be anything, but it is advisable to restrict write access for other users to this folder. 
+- The state of the docker image is saved in the folder `/docker/logitechmediaserver`. The path can be anything, but it is advisable to restrict write access for other users to this folder.
 
 ## Find out the UID and GID of your user
 
@@ -76,6 +76,10 @@ Now the correct image has been downloaded, it is time to start and configure the
     | PUID | for example `1026` (see the [UID/GID step above](#find-out-the-uid-and-gid-of-your-user)) |
     | PGID | for example `100` (see the [UID/GID step above](#find-out-the-uid-and-gid-of-your-user)) |
     | TZ | for example `Europe/Zurich` |
+    | EXTRA_ARGS | `"--advertiseaddr=192.168.0.100"` (your Synology's IP address) |
+
+    !!! note
+        Please note that the `EXTRA_ARGS` entry is only required if you use the default `bridge` networking mode. If you decide to expose all of the container's services to the local network using the `host` mode, then defining the `advertiseaddr` is not required.
 
 6. Select "Next" and "Done". The container will automatically start.
 
