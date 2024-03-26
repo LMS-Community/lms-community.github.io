@@ -7,6 +7,7 @@
 - Server Changes:
 
 	- Add links to the settings of the AudioAddict based services.
+	- Add support for "DELETE" HTTP verb to SimpleAsyncHTTP.
 
 - Platform Support:
 
