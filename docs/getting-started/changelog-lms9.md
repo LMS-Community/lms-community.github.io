@@ -1,6 +1,6 @@
 ## Version 9.0.0
 
-- [Upstream fixes from Logitech Media Server 8.5.x](http://raw.githubusercontent.com/Changelog8.html)
+- [Upstream fixes from Logitech Media Server 8.5.x](changelog-lms8.mdChangelog8.html)
 
 - New Features:
 

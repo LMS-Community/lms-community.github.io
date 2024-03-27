@@ -1,6 +1,6 @@
 ## Version 8.5.1
 
-- [Upstream fixes from Logitech Media Server 8.5.0](#version-850)
+- [Upstream fixes from Logitech Media Server 8.4.1](#version-841)
 
 - New Features:
 
