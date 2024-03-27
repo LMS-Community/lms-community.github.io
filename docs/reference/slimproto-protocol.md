@@ -3,7 +3,7 @@ layout: default
 title: SlimProto protocol
 ---
 
-# SlimProto Protocol 
+# SlimProto Protocol
 
 !!! note
 
@@ -19,9 +19,9 @@ The client also listens on UDP port 3483 for SlimProto commands from the server 
 
 The byte order is critical for several of the fields. The best way to check this out is to look at the server source code.
 
-## Client -> Server Communications 
+## Client -> Server Communications
 
-For an authoritative answer on the format of the packets see the file [Slim/Networking/Slimproto.pm](https://github.com/Logitech/slimserver/blob/HEAD/Slim/Networking/Slimproto.pm). Different versions of the firmware send different formatted packets.
+For an authoritative answer on the format of the packets see the file [Slim/Networking/Slimproto.pm](https://github.com/LMS-Community/slimserver/blob/HEAD/Slim/Networking/Slimproto.pm). Different versions of the firmware send different formatted packets.
 
 A command to the server consists of three parts:
 
@@ -49,7 +49,7 @@ A command to the server consists of three parts:
 
 Most of the operations above are detailed below:
 
-### HELO 
+### HELO
 
 This alerts the server to a clients presence and is the first thing normally transmitted by a client powering up.
 
@@ -67,7 +67,7 @@ Format:
 |Bytes received|8 bytes|Number of data-stream bytes received (not sent by softsqueeze)|
 |Language|2 bytes|Country code (not sent by softsqueeze)|
 
-#### Capabilities 
+#### Capabilities
 
 *This is an extension implemented in LMS 7.4 or later.*
 
@@ -88,7 +88,7 @@ CODECs should be stated in order of preference. The following are recognized at 
 * **alc** - Apple Lossless
 * **aac** - AAC & HE-AAC, with or without MP4 wrapper
 
-The following could be anticipated: 
+The following could be anticipated:
 
 * **rtsp**
 * **aud**
@@ -105,7 +105,7 @@ The following other capabilities are supported (case sensitive):
 * **HasPreAmp** - does the player have a separate analogue volume control.
 * **HasDisableDac** - can the player's DAC be disabled.
 
-### "IR " (Note: padded with two spaces to make it up to 4 characters.) 
+### "IR " (Note: padded with two spaces to make it up to 4 characters.)
 
 One of these packets is received for each IR code received by the player.
 
@@ -117,23 +117,23 @@ Format:
  Time   4 bytes Time since player startup in ticks (@1kHz)
  Format 1 byte  Code Format (ignored by the server for now.
                 Code represents type of IR code - NEC, JVC or Sony)
- NoBits 1 byte  Length of IR Code.	
+ NoBits 1 byte  Length of IR Code.
                 (ignored by the server for now
                 16 bits for JVC, 32 bits for NEC?)
  IRCode 4 bytes the IR Code itself (upto 32 bits)
 ```
 
-### RESP 
+### RESP
 
-### BODY 
+### BODY
 
 HTTP (or MMS) response headers or message body from the data stream. These can be parsed for metadata (title, format, bitrate, etc.), or (in the case of a body) for a playlist.
 
-### META 
+### META
 
 Embedded metadata from the data stream from which useful information may be extracted,
 
-### STAT 
+### STAT
 
 These are sent by the player in response to commands and periodically when there are no commands as a sort of keep-alive. They inform the server of the status of various player internals.
 
@@ -200,22 +200,22 @@ The error codes are internal and codec-specific. Not all decoders make use of er
 |200|WMA_ERROR_SPEECH_SUPERFRAMES|
 |201|WMA_ERROR_LOSSLESS|
 
-### ANIC 
+### ANIC
 
 The display animation is complete. This seems to be undocumented. in the squeezecenter code
 Slim\Display\Display.pm there a brief description of the client capabilities.
 
-### BYE! 
+### BYE!
 
 The player is disconnecting.
 
 If the first data byte to this command is 0x01 then the player is going out for an upgrade...
 
-## Server -> Client Communication 
+## Server -> Client Communication
 
 Data from the server to the player consists of 2 bytes of length data (in network order), a 4 byte command header, then the command data itself. The length sent is the size of the data plus the 4 byte command header; it does not include the 2 byte length field itself.
 
-### Command: "strm" 
+### Command: "strm"
 
 This takes 24 bytes data of the form:
 
@@ -251,7 +251,7 @@ The Auth line is only sent if authorization is in use. $client-id is the usually
 
 Other headers to be included in the HTTP request may also be supplied.
 
-#### **u**, **p**, **a** & **t** commands and _replay_gain_ field 
+#### **u**, **p**, **a** & **t** commands and _replay_gain_ field
 
 The **u**, **p**, **a** & **t** commands all make special use of the _replay_gain_ field, as follows:
 
@@ -263,13 +263,13 @@ The **u**, **p**, **a** & **t** commands all make special use of the _replay_gai
 
 **t** - a timestamp field from the server to be returned in the corresponding **STMt** status message (used to measure round-trip latency).
 
-#### FLAC-specific notes 
+#### FLAC-specific notes
 
 For FLAC, some of the fields are reused, as follows:
 
 _pcmsamplesize_ - container type: '?' (flac), 'o' (ogg/flac)
 
-#### WMA-specific notes 
+#### WMA-specific notes
 
 For WMA, some of the fields are reused, as follows:
 
@@ -279,13 +279,13 @@ _pcmsamplerate_ - the audio stream number to play;
 
 _pcmchannels_ - the metadata stream number, if any.
 
-#### AAC-specific notes 
+#### AAC-specific notes
 
 For AAC, some of the fields are reused, as follows:
 
 _pcmsamplesize_ - container type and bitstream format: '1' (adif), '2' (adts), '3' (latm within loas), '4' (rawpkts), '5' (mp4ff), '6' (latm within rawpkts);
 
-### Command: "aude" 
+### Command: "aude"
 
 Tell the client to enable/disable the audio outputs.
 
@@ -296,7 +296,7 @@ Tell the client to enable/disable the audio outputs.
  $dac_enable     1 byte  0x0 = disable DAC, 0x1 = enable DAC output
 ```
 
-### Command: "audg" 
+### Command: "audg"
 
 Tell the client to adjust the audio gain (volume level)
 
@@ -312,7 +312,7 @@ Tell the client to adjust the audio gain (volume level)
  $sequence      4 bytes unsigned int, optional
 ```
 
-total: 18-22 bytes (+ 4 bytes command header "audg") 
+total: 18-22 bytes (+ 4 bytes command header "audg")
 
 ```
 old_left/old_right should range from 0..128 new_left/new_right are 16.16 fixed point
@@ -322,7 +322,7 @@ old_left/old_right should range from 0..128 new_left/new_right are 16.16 fixed p
 Firmware v22+ on the SB2 use the new style; older use the old-style.
 ```
 
-### Command: "grfb" 
+### Command: "grfb"
 
 Tells the client to adjust the brightness of the display.
 
@@ -330,7 +330,7 @@ Send a short int (2 bytes, network byte order) with a brightness level from 0-4 
 On newer firmwares (squeezecenter 7.3), it seems to range from -1 up to and including 5.
 -1 means totally off, 5 is the brightest.
 
-### Command: "grfe" 
+### Command: "grfe"
 
 Sends a bitmap to the client for display. It starts with a header of 4 bytes, followed by 1280 bytes of data.
 The header is:
@@ -347,9 +347,9 @@ if $transition is a capital, the frame is bounced a few pixels, a lowercase valu
 For instance, the 4-byte sequence (in binary):
 
 ```
- 1000 0000 
- 0000 0000 
- 0000 0000 
+ 1000 0000
+ 0000 0000
+ 0000 0000
  0000 0011
 ```
 
@@ -357,7 +357,7 @@ would light up the top pixel and the two bottom pixels on the row; send a grfe w
 
 It is also possible to send compressed graphics. the highest byte of 'g' in the 'grfe' command should be set. The frame is then assumed to be compressed using LZF. The length in the header is the length of the compressed data (+4 for the command code).
 
-### Command: "i2cc" 
+### Command: "i2cc"
 
 Squeezebox1 only, sends an i2c command to the client.
 
@@ -365,7 +365,7 @@ The data is the i2c command to send in the same format as for the SLIMP3 protoco
 
 This is used to control the setup of the mas chip. Volume commands are embedded in this.
 
-### Command: "serv" 
+### Command: "serv"
 
 Tells the client to switch to another server.
 
@@ -377,23 +377,23 @@ Tells the client to switch to another server.
                to the new server so that it may re-join its sync-group.
 ```
 
-### Command "stat" 
+### Command "stat"
 
 Request a STAT update from the player
 
-### Command: "vfdc" 
+### Command: "vfdc"
 
 Sends VFD data to the client.
 
 The data is the vfd data to send in the same format as for the SLIMP3 protocol.
 
-### Command: "vers" 
+### Command: "vers"
 
 Sends server version string to the client.
 
 The data is the human readable version information for the server (a simple string)
 
-### Command "visu" 
+### Command "visu"
 
 Tells the server to activate/deactivate visualizer for the music.
 
@@ -408,85 +408,85 @@ Values for $which:
 
 ```
  0    Blank
- 1    Vumeter   
+ 1    Vumeter
  2    Spectrum
  3    Waveform
 ```
 
 ```
- $channels    0=stereo 1=mono   
- $style       0=digital 1=analog   
- $position    left/right position in pixels (0=left side)   
- $width       width in pixels   
- $r_position  left/right position of the right channel (stereo only)   
- $r_width     width in pixels of the right channel (stereo only)2    Spectrum analyzer   
- $channels   as for vumeter   
- $bandwidth   0=0..22050Hz, 1=0..11025Hz   
- $Preemphasis in dB per KHz   
- $position    left/right position in pixels (0=left side)   
- $width       width in pixels   $orientation 0=left to right  1=right to left   
- $bar_width   Bar width in pixels   $bar_space   Bar spacing in pixels   
- $clipping    0 = show all subbands  1= clip higher bands   
- $intensity   Bar intensity (greyscale) 1-3   
- $cap         Bar cap intensity (greyscale) 1-3For stereo, repeat the channel-specific   
- $r_position  Right side position   ...   
+ $channels    0=stereo 1=mono
+ $style       0=digital 1=analog
+ $position    left/right position in pixels (0=left side)
+ $width       width in pixels
+ $r_position  left/right position of the right channel (stereo only)
+ $r_width     width in pixels of the right channel (stereo only)2    Spectrum analyzer
+ $channels   as for vumeter
+ $bandwidth   0=0..22050Hz, 1=0..11025Hz
+ $Preemphasis in dB per KHz
+ $position    left/right position in pixels (0=left side)
+ $width       width in pixels   $orientation 0=left to right  1=right to left
+ $bar_width   Bar width in pixels   $bar_space   Bar spacing in pixels
+ $clipping    0 = show all subbands  1= clip higher bands
+ $intensity   Bar intensity (greyscale) 1-3
+ $cap         Bar cap intensity (greyscale) 1-3For stereo, repeat the channel-specific
+ $r_position  Right side position   ...
  $r_cap       Right side bar cap intensity
 ```
 
-## Undocumented commands, brief rundown 
+## Undocumented commands, brief rundown
 
-### Command "audc" 
+### Command "audc"
 
 Transporter only, update clock source
 
-### Command "audp" 
+### Command "audp"
 
 Transporter only, update audio source
 
-### Command "body" 
+### Command "body"
 
 Request part of the body of a file from the player (to get remotely downloaded playlists, find bit rates of mp3, etc)
 
-### Command "cont" 
+### Command "cont"
 
 Content-type related, related to playing remote songs
 
-### Command "grfd" 
+### Command "grfd"
 
 SqueezeboxG only, draw graphics
 
-### Command "irtm" 
+### Command "irtm"
 
 Send timing info to client about when IR messages are processed
 
-### Command "knoa" 
+### Command "knoa"
 
 Knob on a remote control?
 
-### Command "knob" 
+### Command "knob"
 
 Transporter only, knob-related
 
-### Command "rhap" 
+### Command "rhap"
 
 Rhapsody-specific
 
-### Command "rsps" 
+### Command "rsps"
 
 Transporter only, adjust RS232 baud rate
 
-### Command "rstx" 
+### Command "rstx"
 
 Transporter only, send RS232 TX
 
-### Command "setd" 
+### Command "setd"
 
 Get/set player firmware settings
 
-### Command "upda" 
+### Command "upda"
 
-### Command "updn" 
+### Command "updn"
 
-### Command "ureq" 
+### Command "ureq"
 
 The last 3 are firmware update related commands

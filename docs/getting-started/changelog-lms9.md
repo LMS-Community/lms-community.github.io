@@ -10,7 +10,7 @@
 
 - Bug Fixes:
 
-	- [#999](https://github.com/Logitech/slimserver/issues/999) \-
+	- [#999](https://github.com/LMS-Community/slimserver/issues/999) \-
 
 - Other:
 

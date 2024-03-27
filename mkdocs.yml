@@ -45,7 +45,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/Logitech/slimserver
+      link: https://github.com/LMS-Community/slimserver
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/lmscommunity/logitechmediaserver
     - icon: simple/vbulletin

@@ -11,7 +11,7 @@ Before version 7.7 LMS was known as Squeezebox Server (version 7.4 to 7.6) and S
 
 Logitech Media Server is Open Source Software and written in Perl. Logitech Media Server runs on pretty much any platform that Perl runs on, including Linux, Mac OSX, Solaris and Windows.
 
-Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com/Logitech/slimserver](https://github.com/Logitech/slimserver).
+Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com/LMS-Community/slimserver](https://github.com/LMS-Community/slimserver).
 
 ## Version history
 
