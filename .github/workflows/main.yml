@@ -67,6 +67,7 @@ jobs:
 
           html2md -i $CHANGELOG_LMS9_SRC > $CHANGELOG_LMS9_TARGET
           sed -Ei 's/http:\/\/raw.githubusercontent.com.*?#v([1-9]+)\.([0-9]+)\.([0-9]+)\)/#version-\1\2\3)/' $CHANGELOG_LMS9_TARGET
+          sed -Ei 's/http:\/\/raw.githubusercontent.com\//changelog-lms8.md/' $CHANGELOG_LMS9_TARGET
           sed -Ei 's/^\s\s*/\t/g' $CHANGELOG_LMS9_TARGET
 
 
