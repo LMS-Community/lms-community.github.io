@@ -1,4 +1,4 @@
-## Version 9.0.0
+## Introducing... Lyrion Music Server Version 9.0.0!
 
 - [Upstream fixes from Logitech Media Server 8.5.x](changelog-lms8.md)
 
