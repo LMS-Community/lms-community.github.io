@@ -5,7 +5,7 @@ title: Custom Firmware for Radio/Touch/Controller
 
 # How to install Custom Firmware for SB Radio/Touch/Controller
 
-It is possible to tell Logitech Media Server to push a specific build of Squeezebox Radio/Touch/Controller firmware out to devices that connect to it by using specially named `custom.<device>.*` files.
+It is possible to tell Lyrion Music Server to push a specific build of Squeezebox Radio/Touch/Controller firmware out to devices that connect to it by using specially named `custom.<device>.*` files.
 
 !!! danger
     Load custom firmware at your own risk. While an unlikely scenario, it is possible to "brick" your device by loading a corrupted or buggy-because-not-formally-qualified firmware. If you get in a situation where the custom firmware you've attempted to install won't load, you may be able to recover it by booting to the previous firmware. This is done by continually [holding down the rew key during boot](special-ir-keys-reset.md).
@@ -46,7 +46,7 @@ If you're the owner of a Squeezebox Touch or Controller, you're lucky! Those dev
 
 You can install the firmware by copying the files to the storage medium of your choice (and availability). Insert the medium to your device, restart it. You should now be able to install the firmware from the device's Settings/Advanced/Software Update menu.
 
-## Have firmware served by your Logitech Media Server
+## Have firmware served by your Lyrion Music Server
 
 The two files `custom.baby.bin` and `custom.baby.version` need to be placed in the Cache/Updates folder of the LMS installation. See Settings/Information in LMS to see where that folder is on your system.
 

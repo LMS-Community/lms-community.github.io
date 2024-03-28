@@ -5,7 +5,7 @@ title: Database structure
 
 # Database structure
 
-Logitech Media Server stores its data in a SQLite databases, though it is possible to also use MySQL/MariaDB. 
+Lyrion Music Server stores its data in a SQLite databases, though it is possible to also use MySQL/MariaDB. 
 
 !!! warning
      SQLite is what is being tested and used by probably 99.9...% of all users. If you decide to go with MySQL/MariaDB, you're on your own. And some features (eg. fulltext search) will not be available. Good luck! And let us know about your experience.

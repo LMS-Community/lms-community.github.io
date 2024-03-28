@@ -85,11 +85,11 @@ Now the correct image has been downloaded, it is time to start and configure the
 
 ## Configure LMS
 
-1. Launch your web browser (eg. Edge, Firefox) and type: `http://[hostname or ip address of your nas]:9000`. Then, press Enter. The Logitech Media Server web interface will open.
+1. Launch your web browser (eg. Edge, Firefox) and type: `http://[hostname or ip address of your nas]:9000`. Then, press Enter. The Lyrion Music Server web interface will open.
 2. Skip the MySqueezebox.com account credentials step (because the MySB.com service is shut down).
 3. Browse to your music folder location (`/music`), highlight the directory, and click "Next".
 4. (Optional) browse to your playlists folder location (`/playlist`), highlight the directory, and click "Next".
-5. You'll see the Summary page for your Logitech Media Server install. Click "Finish" to complete the installation. Congrats, you're done!
+5. You'll see the Summary page for your Lyrion Music Server install. Click "Finish" to complete the installation. Congrats, you're done!
 
 ## Updating the Docker image
 

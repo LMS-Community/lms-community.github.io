@@ -286,7 +286,7 @@ title: Available Plugins
 
     ---
 
-    A Plugin to enable an audio CD in the PC CD drive to be played through LogitechMediaServer. Requires CDDA2WAV to be installed.
+    A Plugin to enable an audio CD in the PC CD drive to be played through Lyrion Music Server. Requires CDDA2WAV to be installed.
 
     [:octicons-mail-24: bpa](mailto:baltontwo@eircom.net)    - [:octicons-globe-24: Details](http://forums.slimdevices.com/showthread.php?t=47288)
 
@@ -302,7 +302,7 @@ title: Available Plugins
 
     ---
 
-    This plugin will control a network ready Denon/Marantz AVP/AVR from the Logitech Media Server or Squeezebox.  The plugin will turn the device on/off, adjust and synchronize the volume, and optionally set the audio modes.
+    This plugin will control a network ready Denon/Marantz AVP/AVR from the Lyrion Music Server or Squeezebox.  The plugin will turn the device on/off, adjust and synchronize the volume, and optionally set the audio modes.
 
     [:octicons-mail-24: Chris Couper](mailto:chris.c.couper@gmail.com)    - [:octicons-globe-24: Details](https://github.com/aesculus/denonavpcontrol)
 
@@ -366,7 +366,7 @@ title: Available Plugins
 
     ---
 
-    A Plugin to enable a Griffin RadioShark2 USB FM/AM tuner to be tuned and played through LogitechMediaServer
+    A Plugin to enable a Griffin RadioShark2 USB FM/AM tuner to be tuned and played through Lyrion Music Server
 
     [:octicons-mail-24: bpa](mailto:baltontwo@eircom.net)    - [:octicons-globe-24: Details](http://forums.slimdevices.com/showthread.php?t=54926)
 
@@ -382,7 +382,7 @@ title: Available Plugins
 
     ---
 
-    TVHeadend Radio Plugin for Logitech Media Server
+    TVHeadend Radio Plugin for Lyrion Music Server
 
     [:octicons-mail-24: Andrew Jackson, Luke Easter](mailto:squeeze@codechimp.org)    - [:octicons-globe-24: Details](https://github.com/codechimp-org/lms-tvh)
 
@@ -398,7 +398,7 @@ title: Available Plugins
 
     ---
 
-    A Plugin to enable Windows PC audio to be captured and played through LogitechMediaServer
+    A Plugin to enable Windows PC audio to be captured and played through Lyrion Music Server
 
     [:octicons-mail-24: Joe Bryan updated by bpa](mailto:baltontwo@eircom.net)    - [:octicons-globe-24: Details](http://forums.slimdevices.com/showthread.php?t=35718)
 
@@ -844,7 +844,7 @@ title: Available Plugins
 
     ---
 
-    Automatically makes all third party plugin repositories that are listed on the Logitech wiki site available through Extension Downloader. The plugin doesn't actually read the wiki page directly since that would open up a security hole, instead it reads the repositories from a list available on the lms-autorepo GitHub project. New repostories added to the wiki page will be added after they have been checked so they provide serious plugins and not spam urls. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
+    Automatically makes all third party plugin repositories that are listed on the wiki site available through Extension Downloader. The plugin doesn't actually read the wiki page directly since that would open up a security hole, instead it reads the repositories from a list available on the lms-autorepo GitHub project. New repostories added to the wiki page will be added after they have been checked so they provide serious plugins and not spam urls. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Auto_Repositories_plugin)
 
@@ -876,7 +876,7 @@ title: Available Plugins
 
     ---
 
-    Export your music library as a Docset to be used with Dash ([http://kapeli.com/dash).](http://kapeli.com/dash).) This allows you to quickly search your library on your Mac computer without firing up the Logitech Media Server web UI.
+    Export your music library as a Docset to be used with Dash ([http://kapeli.com/dash).](http://kapeli.com/dash).) This allows you to quickly search your library on your Mac computer without firing up the Lyrion Music Server web UI.
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 

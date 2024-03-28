@@ -7,7 +7,7 @@ title: SLIMP3 protocol
 
 ## Overview 
 
-This documents the SLIMP3 protocol, as implemented in [LMS](logitech-media-server.md) 5.0.1 and SLIMP3 v2.2 firmware. The protocol is UDP based. The SLIMP3 communicates using a custom UDP-based protocol. This protocol is designed to be extremely light-weight. It gives the server low-level access to the hardware and full control over the user interface, so as to mimize the amount of hardware and software required on the client side.
+This documents the SLIMP3 protocol, as implemented in [LMS](lyrion-music-server.md) 5.0.1 and SLIMP3 v2.2 firmware. The protocol is UDP based. The SLIMP3 communicates using a custom UDP-based protocol. This protocol is designed to be extremely light-weight. It gives the server low-level access to the hardware and full control over the user interface, so as to mimize the amount of hardware and software required on the client side.
 
 All packets are preceded by an 18-byte header. The first byte in this header is a token which indicates the format of the rest of the header. Some kinds of packets may have also have variable amounts of data after the header. Variable length data is not delimited - the length is taken from the UDP header. All numbers are unsigned integers, in network order. The server listens on port 1069, and replies to the source port of the packets it receives from the client. The server identifies individual clients by MAC address. The last 6 bytes of any Client -> Server message are the client's MAC address.
 

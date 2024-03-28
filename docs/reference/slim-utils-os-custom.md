@@ -3,7 +3,7 @@ layout: default
 title: Custom OS support
 ---
 
-# Customizing Logitech Media Server using `Slim::Utils::OS::Custom`
+# Customizing Lyrion Music Server using `Slim::Utils::OS::Custom`
 
 If you've been working on porting SC to a new platform, a NAS or similar, you might have seen needs to patch Squeezebox Server to achieve your goal. Many of these changes were due to different file system layouts or other OS specifics. Some of them had been hardcoded into Slim::Utils::OSDetect or other modules for the officially supported platforms.
 As of Squeezebox Server (formerly known as SqueezeCenter) version 7.3 there's a new infrastructure to better encapuslate and simplify such changes. While we do provide modules for the supported platforms, you can easily add your own platform support using a Slim::Utils::OS::Custom module.

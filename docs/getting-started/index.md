@@ -5,7 +5,7 @@ title: Getting Started with LMS
 
 # Getting Started
 
-Logitech Media Server is a fully open source server software to power a wide range of audio players. With the help of many plugins, Logitech Media Server can stream not only your local music collection, but content from many music services and internet radio stations to your players.
+Lyrion Music Server is a fully open source server software to power a wide range of audio players. With the help of many plugins, Lyrion Music Server can stream not only your local music collection, but content from many music services and internet radio stations to your players.
 
 <!--
 	Do not edit this below section marked with DOWNLOADS/ENDDONWLOADS! It is automatically generated from the repository files.
@@ -87,5 +87,5 @@ See [lmscommunity/logitechmediaserver](https://hub.docker.com/r/lmscommunity/log
 
 ## Configure
 
-Now you should be able to browse to http://yourserver:9000 (replace "yourserver" with [localhost](http://localhost:9000) if you are at the same system as your new installation or with the hostname or IP address of that system if using a different device) and begin configuring the Logitech Media Server.
+Now you should be able to browse to http://yourserver:9000 (replace "yourserver" with [localhost](http://localhost:9000) if you are at the same system as your new installation or with the hostname or IP address of that system if using a different device) and begin configuring the Lyrion Music Server.
 Congrats, you're all finished!
