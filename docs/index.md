@@ -10,7 +10,7 @@ title: Home
 !!! info
     *This site is under heavy construction while content is being transferred from the old [wiki](https://wiki.slimdevices.com). If you want to help out, please reach out on the [forums](https://forums.slimdevices.com/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers).*
 
-Logitech Media Server is a fully open source server software to power a wide range of audio players. With the help of many plugins, Logitech Media Server can stream not only your local music collection, but content from many music services and internet radio stations to your players.
+Lyrion Music Server is a fully open source server software to power a wide range of audio players. With the help of many plugins, Logitech Music Server can stream not only your local music collection, but content from many music services and internet radio stations to your players.
 
 ## LMS Ecosystem
 

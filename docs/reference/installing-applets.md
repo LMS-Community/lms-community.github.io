@@ -19,7 +19,7 @@ For the applet installer to work, applet developers have to provide a repository
 
 Installing an applet is a two step process.
 
-* You need to have a 'repository-URL' which points to a repository XML file. See [Repositories](repository-dev.md) for some existing respositories you can use. _You need to configure this on your Logitech Media Server_.
+* You need to have a 'repository-URL' which points to a repository XML file. See [Repositories](repository-dev.md) for some existing respositories you can use. _You need to configure this on your Lyrion Music Server_.
 
 * On your SqueezeBox-Server (http://ServerName:9000) navigate to the settings-screen.
 * Select the 'Manage Plugins' tab

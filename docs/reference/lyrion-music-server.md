@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Logitech Media Server
+title: Lyrion Music Server
 ---
 
-# Logitech Media Server
+# Lyrion Music Server
 
-Logitech Media Server is the server software that powers audio players from Logitech (formerly known as Slim Devices), including [Squeezebox 3rd Generation](../players-and-controllers/squeezebox-classic.md), [Squeezebox Boom](../players-and-controllers/squeezebox-boom.md), [Squeezebox Receiver](../players-and-controllers/squeezebox-receiver.md), [Transporter](../players-and-controllers/transporter.md), [Squeezebox2](../players-and-controllers/squeezebox2.md), [Squeezebox](../players-and-controllers/squeezebox1.md) and [SLIMP3](../players-and-controllers/SLIMP3.md).
+Lyrion Music Server is the server software that powers audio players from Logitech (formerly known as Slim Devices), including [Squeezebox 3rd Generation](../players-and-controllers/squeezebox-classic.md), [Squeezebox Boom](../players-and-controllers/squeezebox-boom.md), [Squeezebox Receiver](../players-and-controllers/squeezebox-receiver.md), [Transporter](../players-and-controllers/transporter.md), [Squeezebox2](../players-and-controllers/squeezebox2.md), [Squeezebox](../players-and-controllers/squeezebox1.md) and [SLIMP3](../players-and-controllers/SLIMP3.md).  The LMS server also powers various open-source clients using the same protocols.
 
-Before version 7.7 LMS was known as Squeezebox Server (version 7.4 to 7.6) and SlimServer (before 7.4). Version 7.7 was the last version released by Logitech, from version 7.8 and onwards LMS had been released by the LMS Community.
+Before version 9.0 LMS was known as Logitech Media Server, and before 7.7 LMS was known as Squeezebox Server (version 7.4 to 7.6) and SlimServer (before 7.4). Version 7.7 was the last version released by Logitech, from version 7.8 and onwards LMS had been released by the LMS Community.
 
-Logitech Media Server is Open Source Software and written in Perl. Logitech Media Server runs on pretty much any platform that Perl runs on, including Linux, Mac OSX, Solaris and Windows.
+Lyrion Music Server is Open Source Software and written in Perl. Lyrion Music Server runs on pretty much any platform that Perl runs on, including Linux, Mac OSX, Solaris and Windows.
 
 Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com/LMS-Community/slimserver](https://github.com/LMS-Community/slimserver).
 

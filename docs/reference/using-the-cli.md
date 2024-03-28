@@ -11,7 +11,7 @@ The complete documentation of the CLI API can be found within your LMS installat
 
 LMS provides a command-line interface to the players via TCP/IP. After starting the server, commands and queries may be sent by connecting to a specific TCP/IP port. The server will reply echoing the request (for commands) or by returning the requested data (for queries). By default, the server will listen for connections on TCP/IP port 9090. This format is designed for ease of integration into AMX, Crestron and other automation systems.
 
-The end of line separator is line feed (<LF\> ASCII decimal 10, hexadecimal 0x0A). The server accepts LF, CR or 0x00 (or any combination thereof) as end of line, and replies with whatever was used for the command. For strings, Logitech Media Server uses the UTF-8 character-set encoding.
+The end of line separator is line feed (<LF\> ASCII decimal 10, hexadecimal 0x0A). The server accepts LF, CR or 0x00 (or any combination thereof) as end of line, and replies with whatever was used for the command. For strings, Lyrion Music Server uses the UTF-8 character-set encoding.
 
 To use the command line interface interactively, use the telnet command from your system's command prompt: `telnet localhost 9090` and when it connects, you can start typing commands. Beware that the server expects parameters to be encoded using percent-style escaping (the same method as is used in URLs); `"` and `\\` are not supported as in shell-like environments.
 

@@ -8,7 +8,7 @@ title: Migrate from UE Smart Radio
 ([Deutsche Version](migrate-from-uesr-de.md))
 
 !!! note
-    Please note that Smart Radios transitioned to Squeezebox Radios will require [Logitech Media Server](../getting-started/index.md)</a>. Install it before you continue the migration.
+    Please note that Smart Radios transitioned to Squeezebox Radios will require [Lyrion Music Server](../getting-started/index.md)</a>. Install it before you continue the migration.
 
 To initiate the transition, power down the Radio, and restart it.
 
