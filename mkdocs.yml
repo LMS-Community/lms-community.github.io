@@ -82,7 +82,7 @@ nav:
   - Players & Controllers:
     - players-and-controllers/index.md
     - Hardware based:
-      - Hardware comparison: players-and-controllers/hardware-comparison.md
+      - Hardware Comparison: players-and-controllers/hardware-comparison.md
       - Squeezebox Touch: players-and-controllers/squeezebox-touch.md
       - Squeezebox Radio: players-and-controllers/squeezebox-radio.md
       - Squeezebox Boom: players-and-controllers/squeezebox-boom.md

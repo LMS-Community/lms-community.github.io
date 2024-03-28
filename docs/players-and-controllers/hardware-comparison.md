@@ -1,3 +1,27 @@
+---
+layout: default
+title: Hardware Comparison
+hide:
+  - navigation
+  - toc
+---
+
+<style>
+    .md-grid {
+        max-width: 80rem
+    }
+    tbody tr:nth-child(1) {
+        background-color: white !important;
+    }
+    tbody tr:nth-child(1) td {
+        vertical-align: middle !important;
+    }
+    tbody tr:nth-child(1) img {
+        max-width: 120px;
+    }
+</style>
+
+
 | &nbsp; | **[SLIMP3](SLIMP3.md)** | **[Squeezebox](squeezebox1.md)** | **[Squeezebox2](squeezebox2.md)** | **[Squeezebox v3/Squeezebox Classic](squeezebox-classic.md)** | **[Transporter](transporter.md)** | **[Squeezebox Receiver](squeezebox-receiver.md)** | **[Squeezebox Controller](squeezebox-controller.md)** | **[Squeezebox Boom](squeezebox-boom.md)** | **[Squeezebox Radio](squeezebox-radio.md)** | **[Squeezebox Touch](squeezebox-touch.md)** |
 | --- | --- | ---  | --- | --- | --- | --- | --- | --- | --- | --- |
 | &nbsp; | ![SLIMP3](assets/slimp3_200.jpg) | ![Squeezebox](assets/sb_black_200.jpg) | ![Squeezebox2](assets/sb2_plat_200.jpg) | ![Squeezebox Classic](assets/sb3_hero_200.jpg) | ![Transporter](assets/transporter-black-front-200.jpg) | ![Receiver](assets/receiver_hero_200.jpg) | ![Controller](assets/controller_200.jpg) | ![SB Boom](assets/boom_200.jpg) | ![SB Radio](assets/sb_radio.jpg) | ![SB Touch](assets/sb_touch.jpg) |

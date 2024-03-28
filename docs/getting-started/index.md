@@ -50,7 +50,7 @@ There are a couple of ways to get started with a server:
 - [Install on MacOS](#install-on-macos)
 - [Install using Docker](#install-using-docker)
 
-### Install on Linux
+### :material-linux: Install on Linux
 
 Install using your operating system's package manager:
 
@@ -66,22 +66,22 @@ Install using your operating system's package manager:
     sudo rpm -i logitechmediaserver-x.y.z-1.noarch.rpm
     ```
 
-### Install on Raspberry Pi
+### :simple-raspberrypi: Install on Raspberry Pi
 
 If you want to have an easily installed LMS on a Raspberry Pi and don't want to go the full Linux route as outlined above, you can use [piCorePlayer](https://picoreplayer.org). While its name suggests it's a player, it can be used to build a full LMS server with only a few clicks. See eg. [https://docs.picoreplayer.org/projects/build-simple-lms-server/](https://docs.picoreplayer.org/projects/build-simple-lms-server/).
 
-### Install on Windows
+### :material-microsoft-windows: Install on Windows
 
 Double click the downloaded package to launch the installation process in a familar installation assistant.
 
-### Install on macOS
+### :material-apple: Install on macOS
 
 Double click the downloaded package to launch the installation process in the macOS installer.
 
 !!! note
     Sometimes macOS would refuse to open the installer, because the authenticity of the developer can't be confirmed. If that happens to you, open the installer using a right mouse click (or control-click), then "Open". You might have to do this twice, as first time you'd stil be rejected. But the second time around you should be able to launch it anyway.
 
-### Install using Docker
+### :material-docker: Install using Docker
 
 See [lmscommunity/logitechmediaserver](https://hub.docker.com/r/lmscommunity/logitechmediaserver) on Docker hub.
 
