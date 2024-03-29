@@ -70,7 +70,6 @@ nav:
     - Community Forums: https://forums.slimdevices.com
   - Getting Started with LMS:
     - Installation: getting-started/index.md
-    - Import Favorites from MySqueezebox.com: getting-started/import-favorites-from-mysb.md
     - Migrate from UE Smart Radio:
       - English: getting-started/migrate-from-uesr.md
       - Deutsch: getting-started/migrate-from-uesr-de.md
