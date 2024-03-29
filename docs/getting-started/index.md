@@ -36,7 +36,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 <!--ENDDOWNLOADS-->
 
-You can find more packages for more platforms on [https://lms-community.github.io/lms-server-repository/](https://lms-community.github.io/lms-server-repository/). For the Docker image [see below](#install-using-docker).
+You can find more packages for more platforms on [https://downloads.lyrion.org/](https://downloads.lyrion.org/). For the Docker image [see below](#install-using-docker).
 
 Download the package for your preferred platform and follow the instructions in the next section.
 
