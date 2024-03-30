@@ -7,7 +7,7 @@ use JSON;
 use LWP::UserAgent;
 
 use constant REPO_FILE => 'https://raw.githubusercontent.com/LMS-Community/lms-server-repository/master/servers.json';
-use constant TEMPLATE => 'docs/getting-started/index.md';
+use constant DATA_YAML => 'docs/getting-started/downloads.yaml';
 
 my @platforms = (
    ['win', ':material-microsoft-windows: Windows 32-bit'],
@@ -52,13 +52,6 @@ foreach (@platforms) {
 $releases{pi} = $releases{debarm};
 $releases{pi} =~ s/:material-debian: Debian \/ :material-ubuntu: Ubuntu - ARM/:simple-raspberrypi: Raspberry Pi OS/;
 
-my $document = do {
-	local $/ = undef;
-	open my $fh, '<', TEMPLATE
-		or die "could not open: $!";
-	<$fh>;
-};
-
 my %placeholders = (
     win => "$releases{win} $releases{win64}",
     deb => "$releases{debamd64} $releases{debarm}",
@@ -68,11 +61,10 @@ my %placeholders = (
     version => $version
 );
 
-while (my ($k, $v) = each %placeholders) {
-    $document =~ s/(<!--$k-->).*?(<!--\/$k-->)/$1$v$2/s;
+open my $fh, '>', DATA_YAML or die "could not open: $!";
+
+for my $k (sort keys %placeholders) {
+    print $fh "$k: \"$placeholders{$k}\"\n";
 }
 
-open my $fh, '>', TEMPLATE or die "could not open: $!";
-print $fh $document;
 close($fh);
-

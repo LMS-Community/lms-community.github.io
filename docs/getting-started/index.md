@@ -7,19 +7,10 @@ title: Getting Started with LMS
 
 Lyrion Music Server is a fully open source server software to power a wide range of audio players. With the help of many plugins, Lyrion Music Server can stream not only your local music collection, but content from many music services and internet radio stations to your players.
 
-<!--
-    Please edit below section carefully: anything between the special comment tags will be replaced automatically
-    with the latest information from the repository files. Removing the comment tags will break the auto updating.
-    Changes within them will be overwritten.
-
-    If you'd like to apply a change, update the plugin's repository file
-    (https://github.com/LMS-Community/lms-server-repository) instead.
--->
-
-## Download and install Logitech Media Server v<!--version-->8.5.0<!--/version-->
+## Download and install Logitech Media Server v{{ version }}
 
 === ":material-microsoft-windows: Windows"
-    <!--win-->[:material-microsoft-windows: Windows 32-bit (70 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0.exe){ .md-button } [:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0-win64.exe){ .md-button }<!--/win-->
+    {{ win }}
 
     Then double click the downloaded package to launch the installation process in a familar installation assistant.
 
@@ -33,7 +24,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
     If you prefer to run your LMS on a full Linux system, or in parallel to other applications, use this method.
 
-    <!--depbi-->[:simple-raspberrypi: Raspberry Pi OS (31 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/logitechmediaserver_8.5.0_arm.deb){ .md-button }<!--/debpi-->
+    {{ debpi }}
 
     Then install using your operating system's package manager `dpkg`:
 
@@ -43,7 +34,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 
 === ":material-linux: Linux"
-    <!--deb-->[:material-debian: Debian / :material-ubuntu: Ubuntu x86_64 (24 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/logitechmediaserver_8.5.0_amd64.deb){ .md-button } [:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (31 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/logitechmediaserver_8.5.0_arm.deb){ .md-button }<!--/deb-->
+    {{ deb }}
 
     Then install using your operating system's package manager `dpkg`:
 
@@ -51,7 +42,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
     sudo dpkg -i logitechmediaserver_x.y.z_*.deb
     ```
 
-    <!--rpm-->[:material-redhat: RedHat / :material-fedora: Fedora (86 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/logitechmediaserver-8.5.0-1.noarch.rpm){ .md-button }<!--/rpm-->
+    {{ rpm }}
 
     Install using `rpm`:
 
@@ -61,7 +52,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 
 === ":material-apple: Apple macOS"
-    <!--mac-->[:material-apple: Apple macOS (43 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0.pkg){ .md-button }<!--/mac-->
+    {{ mac }}
 
     Then double click the downloaded package to launch the installation process in the macOS installer.
 
@@ -72,6 +63,8 @@ Lyrion Music Server is a fully open source server software to power a wide range
 === ":material-docker: Docker"
 
     See [lmscommunity/logitechmediaserver](https://hub.docker.com/r/lmscommunity/logitechmediaserver) on Docker hub.
+
+    For Docker on Synology NAS see the [Beginner's Docker Guide on Synology](beginners-guide-synology-docker.md).
 
 
 === ":material-download: Other Downloads"

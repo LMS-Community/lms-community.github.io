@@ -42,6 +42,9 @@ theme:
 plugins:
   - search
   - privacy
+  - macros:
+      include_yaml:
+        - docs/getting-started/downloads.yaml
 
 extra:
   social:
