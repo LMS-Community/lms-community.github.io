@@ -16,7 +16,7 @@ These four parts are enough for your own inexpensive, energy-saving and long-las
 - Memory Card 8GB
 - Power Adapter 5V 1A
 
-[Here](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/#find-reseller) you can find a store in your area which sells these items.
+[Here](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/#find-reseller){:target="_blank"} you can find a store in your area which sells these items.
 
 ![Hardware for LMS](assets/lms-beginners-guide/all-you-need.jpg){ align=left }
 
