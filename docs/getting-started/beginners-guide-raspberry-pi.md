@@ -16,9 +16,11 @@ These four parts are enough for your own inexpensive, energy-saving and long-las
 - Memory Card 8GB
 - Power Adapter 5V 1A
 
-[Here](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/#find-reseller){:target="_blank"} you can find a store in your area which sells these items.
+[Here](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/#find-reseller){:target="_blank"} you can find a store in your area which sells these items. Some stores also sell these items as a bundle.
 
 ![Hardware for LMS](assets/lms-beginners-guide/all-you-need.jpg){ align=left }
+
+Other Raspberry Pi models are suited as well (such as [3B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/#find-reseller), [4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/#find-reseller), [5](https://www.raspberrypi.com/products/raspberry-pi-5/#find-reseller)), but please make sure you buy an enclosure that suits your model. The advantage of these models over the "Raspberry Pi Zero 2 W" is that they feature an ethernet port, which might suit your personal situation better (do not forget to also order an ethernet cable).
 
 ## Installing and configuring the software
 
