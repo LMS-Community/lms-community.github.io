@@ -69,12 +69,12 @@ Lyrion Music Server is a fully open source server software to power a wide range
         Sometimes macOS would refuse to open the installer, because the authenticity of the developer can't be confirmed. If that happens to you, open the installer using a right mouse click (or control-click), then "Open". You might have to do this twice, as first time you'd stil be rejected. But the second time around you should be able to launch it anyway.
 
 
-=== ":material-docker: Install using Docker"
+=== ":material-docker: Docker"
 
     See [lmscommunity/logitechmediaserver](https://hub.docker.com/r/lmscommunity/logitechmediaserver) on Docker hub.
 
 
-=== ":material-download: Other"
+=== ":material-download: Other Downloads"
 
     You can find more packages for more platforms on [https://downloads.lyrion.org/](https://downloads.lyrion.org/).
 
