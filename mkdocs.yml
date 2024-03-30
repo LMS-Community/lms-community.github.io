@@ -41,6 +41,7 @@ theme:
 
 plugins:
   - search
+  - privacy
 
 extra:
   social:

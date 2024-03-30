@@ -4,7 +4,7 @@ use strict;
 
 # use Data::Dump;
 use JSON;
-use LWP::Simple;
+use LWP::UserAgent;
 
 use constant REPO_FILE => 'https://raw.githubusercontent.com/LMS-Community/lms-server-repository/master/servers.json';
 use constant TEMPLATE => 'docs/getting-started/index.md';
@@ -25,7 +25,10 @@ my @platforms = (
 
 my $repo;
 eval {
-	$repo = from_json(get(REPO_FILE));
+    my $ua = LWP::UserAgent->new();
+    # $ua->ssl_opts(verify_hostname => 0);
+    my $resp = $ua->get(REPO_FILE);
+	$repo = from_json($resp->content);
 } || die "$@";
 
 my $downloads = $repo->{latest};
@@ -49,27 +52,6 @@ foreach (@platforms) {
 $releases{pi} = $releases{debarm};
 $releases{pi} =~ s/:material-debian: Debian \/ :material-ubuntu: Ubuntu - ARM/:simple-raspberrypi: Raspberry Pi OS/;
 
-my $content = qq(
-## Download Logitech Media Server v$version
-
-=== ":material-microsoft-windows: Windows"
-    $releases{win}
-    $releases{win64}
-
-=== ":material-debian: Debian / :material-ubuntu: Ubuntu"
-    $releases{debamd64}
-    $releases{debarm}
-
-=== ":simple-raspberrypi: Raspberry Pi OS:"
-    $releases{pi}
-
-=== ":material-redhat: RedHat / :material-fedora: Fedora"
-    $releases{rpm}
-
-=== ":material-apple: Apple macOS"
-    $releases{osx}
-);
-
 my $document = do {
 	local $/ = undef;
 	open my $fh, '<', TEMPLATE
@@ -77,7 +59,18 @@ my $document = do {
 	<$fh>;
 };
 
-$document =~ s/<!--DOWNLOADS-->.*<!--ENDDOWNLOADS-->/<!--DOWNLOADS-->\n$content\n<!--ENDDOWNLOADS-->/s;
+my %placeholders = (
+    win => "$releases{win} $releases{win64}",
+    deb => "$releases{debamd64} $releases{debarm}",
+    debpi => $releases{pi},
+    rpm => $releases{rpm},
+    mac => $releases{osx},
+    version => $version
+);
+
+while (my ($k, $v) = each %placeholders) {
+    $document =~ s/(<!--$k-->).*?(<!--\/$k-->)/$1$v$2/s;
+}
 
 open my $fh, '>', TEMPLATE or die "could not open: $!";
 print $fh $document;
