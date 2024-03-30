@@ -5,6 +5,9 @@ title: Beginner's Guide for LMS
 
 # Beginner's Guide for LMS
 
+!!! note
+    This guide is primarily targeted at users that just use their Squeezeboxes for internet streaming. If you are looking for a more capable music system which can also serve local music, the Raspberry Pi model specified below is underpowered. If you want to serve local music, please use a Raspberry Pi 3B+ or better.
+
 Were you an user of the now defunct MySqueezebox.com service and do you just want to continue listening to internet radio? Maybe a few podcasts too? You're not interested in having your own digital music collection at your fingertips? Just follow the steps below!
 
 ## Getting the hardware
