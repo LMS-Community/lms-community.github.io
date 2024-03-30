@@ -3,33 +3,22 @@ layout: default
 title: Overview
 ---
 
-## Hardware based
+## Hardware
+Although Slim Devices and Logitech players are no longer produced, there is a huge selection of hardware players that are available and compatible with LMS.  In fact, many users have moved on to do it yourself (DIY) hardware.  The DIY choices range from simple and free (install software on your computer or phone) to complex and expensive (reclockers with femtosecond accuracy, ultracapacitors, etc.)
 
-Between 2001 and 2010 Logitech (and its predecessor Slim Devices) released a series of network music players. The lineup consisted of the Squeezebox Classic, an all-in-one Squeezebox Boom, the dual unit Squeezebox Duet, the audiophile grade Transporter, the small and optionally battery powered Squeezebox Radio, and the newest of the bunch, the Squeezebox Touch.
-
-Additionally, the Squeezebox Controller provides control of all your players via an attractive full color display. The Controller and Receiver were sold together as the Squeezebox Duet package.
-
-- [Hardware comparison](hardware-comparison.md)
-- [Squeezebox Touch](squeezebox-touch.md)
-- [Squeezebox Radio](squeezebox-radio.md)
-- [Squeezebox Boom](squeezebox-boom.md)
-- Squeezebox Duet
-    - [Squeezebox Controller](squeezebox-controller.md)
-    - [Squeezebox Receiver](squeezebox-receiver.md)
-- [Transporter](transporter.md)
-- [Squeezebox 3rd Generation](squeezebox-classic.md)
-- [Squeezebox2](squeezebox2.md)
-- [Squeezebox, SB1](squeezebox1.md)
-- [SLIMP3](SLIMP3.md)
-
-The Radio, Touch and Controller software (operating system and application) is available as source code and have been modified by "the community".
-Software from Logitech: [Operating system](https://github.com/LMS-Community/squeezeos) - [Application](https://github.com/LMS-Community/squeezeplay)
-Community versions: [Operating system](https://github.com/ralph-irving/squeezeos)  - [Application](https://github.com/ralph-irving/squeezeos-squeezeplay)
-
-After 2010 the LMS community developed DIY hardware offerings.
-
-- [Squeezelite-ESP32](https://github.com/sle118/squeezelite-esp32)
-- [SqueezeAMP](https://github.com/philippe44/SqueezeAMP) - which is an implementation of Sqeezelite-ESP32
+### Legacy Hardware
+Between 2001 and 2010 Logitech (and its predecessor Slim Devices) released [a series of network music players](hardware-comparison.md).  This hardware is still widely used (and treasured!) and used units can be found to purchase online. 
+ 
+### DIY hardware offerings
+DIY choices can range from relatively simple to complex, depending on your needs, budget, and skill level.  The examples below is not a complete list and is not an endorsement of one vs another, but an example of the range of products that are available.
+#### ESP32 based
+- [SqueezeAMP](https://github.com/philippe44/SqueezeAMP) running [Squeezelite-ESP32](https://github.com/sle118/squeezelite-esp32)
+#### Raspberry Pi based
+- [Allo](https://allo.com/)
+- [HiFiBerry](https://www.hifiberry.com/)
+- [IanCanada](https://iancanada.ca/)
+- [JustBoom](https://shop.justboom.co/collections/raspberry-pi-audio-boards)
+- [Raspberry Pi DACs](https://www.raspberrypi.com/products/)
 
 ## Software based players
 
