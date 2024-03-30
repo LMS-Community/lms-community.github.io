@@ -9,7 +9,7 @@ This guide describes the procedure to install OpenVPN on your Squeezebox Touch o
 
 ## Squeezebox Touch
 
-We need the modified community firmware and your ovpn.config as text.
+We need the `openvpn` binary and the `tun` kernel module for the SB Touch and your ovpn.config as text.
 
 Download the latest `fab4-openvpn-x.y.z.zip` from [Ralphy's repository](https://sourceforge.net/projects/lmsclients/files/squeezeos/) and copy it into the SB Touch:
 
