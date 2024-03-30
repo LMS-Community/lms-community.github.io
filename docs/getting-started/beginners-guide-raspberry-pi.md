@@ -56,3 +56,7 @@ If you need any help with the steps above, please check [this guide](https://doc
 ## Connecting your Squeezebox to LMS
 
 The last step is to switch your Squeezebox device from MySqueezebox.com to your LMS instance. Turn on your Squeezebox, go to "My Music", then select "Change collection...", click on the server name defined above, and... that's it, your Squeezebox is connected to your LMS 24/7 !
+
+## Troubleshooting
+
+In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com) for assistance. See also [this thread](https://forums.slimdevices.com/forum/user-forums/general-discussion/1668970-new-to-lms-get-help-here-installing-on-a-raspberry-pi/)  which specifically deals with helping newcomers installing LMS on a Raspberry Pi.
