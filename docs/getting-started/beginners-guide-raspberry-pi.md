@@ -55,7 +55,7 @@ If you need any help with the steps above, please check [this guide](https://doc
 
 ## Connecting your Squeezebox to LMS
 
-The last step is to switch your Squeezebox device from MySqueezebox.com to your LMS instance. Turn on your Squeezebox, go to "My Music", then select "Change collection...", click on the server name defined above, and... that's it, your Squeezebox is connected to your LMS 24/7 !
+The last step is to switch your Squeezebox device from MySqueezebox.com to your LMS instance. Turn on your Squeezebox, go to "My Music", then select "Switch library...", click on the server name defined above, and... that's it, your Squeezebox is connected to your LMS 24/7 !
 
 ## Troubleshooting
 
