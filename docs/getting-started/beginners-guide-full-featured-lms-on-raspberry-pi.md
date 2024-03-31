@@ -22,7 +22,7 @@ These five parts are enough for your own powerful but energy-saving and long-las
 
 [Here](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/#find-reseller){:target="_blank"} you can find a store in your area which sells these items. Some stores also sell these items as a bundle for your convenience.
 
-There are more powerful alternatives for the 3B+, such as the [Raspberry Pi 4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/#find-reseller){:target="_blank"} or the [Raspberry Pi 5](https://www.raspberrypi.com/products/raspberry-pi-5/#find-reseller){:target="_blank"}. Please make sure you buy an enclosure and a power adapter that suits your model (3A power supply for the 3B+ and a 5A power supply for the Raspberry Pi 5).
+There are more powerful alternatives than the 3B+, such as the [Raspberry Pi 4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/#find-reseller){:target="_blank"} or the [Raspberry Pi 5](https://www.raspberrypi.com/products/raspberry-pi-5/#find-reseller){:target="_blank"}. Please make sure you buy an enclosure and a power adapter that suits your model (3A power supply for the 3B+ and a 5A power supply for the Raspberry Pi 5).
 
 ## Installing and configuring the software
 
