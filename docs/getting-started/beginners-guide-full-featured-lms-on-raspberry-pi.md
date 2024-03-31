@@ -14,15 +14,15 @@ This guide will not only make it possible to use internet streaming services on 
 
 These five parts are enough for your own powerful but energy-saving and long-lasting LMS music & radio server.
 
-- Raspberry Pi 3B+
+- Raspberry Pi 4B
 - Enclosure (make sure to choose one specifically for your Raspberry model)
-- Memory Card 8GB
-- Power Adapter 5V 2.5A
+- Micro SD memory card, 8GB or higher
+- Power Adapter 5V 3A
 - Ethernet cable
 
-[Here](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/#find-reseller){:target="_blank"} you can find a store in your area which sells these items. Some stores also sell these items as a bundle for your convenience.
+[Here](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/#find-reseller){:target="_blank"} you can find a store in your area which sells these items. Some stores also sell these items as a bundle for your convenience. You can also use [rpilocator.com](https://rpilocator.com/) to check if local stores have the model you are looking for in stock.
 
-There are more powerful alternatives than the 3B+, such as the [Raspberry Pi 4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/#find-reseller){:target="_blank"} or the [Raspberry Pi 5](https://www.raspberrypi.com/products/raspberry-pi-5/#find-reseller){:target="_blank"}. Please make sure you buy an enclosure and a power adapter that suits your model (3A power supply for the 3B+ and a 5A power supply for the Raspberry Pi 5).
+There are other options than the 4B that will also work, such as the [Raspberry Pi 3B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/#find-reseller){:target="_blank"} or the [Raspberry Pi 5](https://www.raspberrypi.com/products/raspberry-pi-5/#find-reseller){:target="_blank"}. Please make sure you buy an enclosure and a power adapter that suits your model (2.5A power supply for the 3B+ and a 5A power supply for the Raspberry Pi 5).
 
 ## Installing and configuring the software
 

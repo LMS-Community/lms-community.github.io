@@ -16,7 +16,7 @@ These four parts are enough for your own inexpensive, energy-saving and long-las
 
 - Raspberry Pi Zero 2 W
 - Enclosure (make sure to choose one specifically for the Raspberry Pi Zero)
-- Memory Card 8GB
+- Micro SD memory card, 8GB or higher
 - Power Adapter 5V 2A
 
 [Here](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/#find-reseller){:target="_blank"} you can find a store in your area which sells these items. Some stores also sell these items as a bundle.
