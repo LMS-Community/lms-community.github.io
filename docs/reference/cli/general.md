@@ -227,7 +227,7 @@ Response: "stopserver<LF>"
 (Connection terminated)
 ```
 
-## retartserver
+## restartserver
 `restartserver`
 
 The `restartserver` command restarts the server. Please note that restarting the server using this command is not available on all platforms.
