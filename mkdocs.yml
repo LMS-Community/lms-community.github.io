@@ -121,6 +121,16 @@ nav:
     - Docker:
       - Add locales to the Docker container: reference/add-locales-to-docker.md
     - Development:
+      - Command Line Interface (JSON/RPC):
+        - Introduction: reference/cli/introduction.md
+        - Using the CLI: reference/cli/using-the-cli.md
+        - General: reference/cli/general.md
+        - Players: reference/cli/players.md
+        - Database: reference/cli/database.md
+        - Playlist: reference/cli/playlist.md
+        - Compound Queries: reference/cli/compoundqueries.md
+        - Notifications: reference/cli/notifications.md
+        - Alarms: reference/cli/alarms.md
       - Database Structure: reference/database-structure.md
       - SlimProto Protocol: reference/slimproto-protocol.md
       - SLIMP3 Protocol: reference/slimp3-protocol.md
@@ -140,4 +150,3 @@ nav:
       - Special IR Keys: reference/special-ir-keys-reset.md
       - Custom Firmware: reference/custom-firmware.md
       - Custom OS support: reference/slim-utils-os-custom.md
-      - Using the CLI: reference/using-the-cli.md
