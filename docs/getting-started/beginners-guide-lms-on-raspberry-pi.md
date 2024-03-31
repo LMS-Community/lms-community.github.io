@@ -29,7 +29,7 @@ Other Raspberry Pi models are suited as well (such as [3B+](https://www.raspberr
 
 For new users to Raspberry Pi and LMS the easiest way to LMS is to install [piCorePlayer](https://www.picoreplayer.org/) (pCP). There is [already great guide for pCP](https://docs.picoreplayer.org/getting-started/), but for clarity, below are the steps for this particular combination of hardware:
 
-1. [Download piCorePlayer](https://docs.picoreplayer.org/how-to/download_picoreplayer/)
+1. [Download piCorePlayer](https://docs.picoreplayer.org/how-to/download_picoreplayer/) (use the 32-bits variant)
 2. [Burn pCP to the SD card](https://docs.picoreplayer.org/how-to/burn_pcp_onto_a_sd_card/)
 3. [Setup WiFi](https://docs.picoreplayer.org/how-to/setup_wifi_on_pcp_without_ethernet/)
 4. Eject the SD card and insert into the Raspberry Pi
