@@ -5,6 +5,7 @@ use strict;
 # use Data::Dump;
 use JSON;
 use LWP::UserAgent;
+use YAML;
 
 use constant REPO_FILE => 'https://raw.githubusercontent.com/LMS-Community/lms-server-repository/master/servers.json';
 use constant DATA_YAML => 'docs/getting-started/downloads.yaml';
@@ -61,10 +62,4 @@ my %placeholders = (
     version => $version
 );
 
-open my $fh, '>', DATA_YAML or die "could not open: $!";
-
-for my $k (sort keys %placeholders) {
-    print $fh "$k: \"$placeholders{$k}\"\n";
-}
-
-close($fh);
+YAML::DumpFile(DATA_YAML, \%placeholders);

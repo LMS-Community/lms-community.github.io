@@ -47,6 +47,7 @@ plugins:
   - macros:
       include_yaml:
         - docs/getting-started/downloads.yaml
+        - docs/players-and-controllers/firmware-versions.yaml
 
 extra:
   social:
