@@ -5,7 +5,9 @@ title: Squeezebox Radio
 
 # Squeezebox Radio
 
-![Squeezebox Radio](assets/sb_radio.jpg){ align=right, width="300" }
+<figure markdown="span">
+  ![](assets/sb_radio.jpg){ width="300" }
+</figure>
 
 Squeezebox Radio, released in September 2009, is the now defunct Squeezebox Boom's little brother, and the first full color, Squeezeplay/Linux based Squeezebox. The Radio uses the same acoustic platform as the award winning Squeezebox Boom, and uses an updated version of SqueezeOS, the software from Squeezebox Controller.
 

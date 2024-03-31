@@ -5,7 +5,9 @@ title: Squeezebox Receiver
 
 # Squeezebox Receiver
 
-![Squeezebox Receiver](assets/receiver_hero_500.jpg){ align=right, width="300" }
+<figure markdown="span">
+  ![](assets/receiver_hero_500.jpg){ width="75%" }
+</figure>
 
 The Squeezebox Receiver (SBR), announced in January of 2008, is based on the Squeezebox2/v3 architecture, but lacks a display and headphone jack and is part of the Squeezebox Duet bundle, together with the Squeezebox Controller.
 

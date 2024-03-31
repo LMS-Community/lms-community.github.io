@@ -5,7 +5,9 @@ title: Squeezebox Boom
 
 # Squeezebox Boom
 
-![Squeezebox Boom](assets/boom_200.jpg){ align=right, width="300" }
+<figure markdown="span">
+  ![](assets/boom_200.jpg){ width="300" }
+</figure>
 
 The Squeezebox Boom was released in August 2008. It is the first all-in-one Squeezebox.
 
