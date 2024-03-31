@@ -42,7 +42,7 @@ Congrats, piCorePlayer is now booting!
 After your new piCorePlayer has finished booting up, there are a few steps left to install and configure LMS:
 
 1. [First determine the IP-address of the new piCorePlayer](https://docs.picoreplayer.org/how-to/determine_your_pcp_ip_address/). This IP-address is needed in the steps below.
-2. Launch your web browser (eg. Edge, Firefox) and type: `http://[ip address from the previous step]:9000`. Then, press Enter. The piCorePlayer web interface will open.
+2. Launch your web browser (eg. Edge, Firefox) and type: `http://[ip address from the previous step]`. Then, press Enter. The piCorePlayer web interface will open.
 3. Go to the Main Page tab, then to `Resize FS` in `Additional functions`.
 4. Enter the value 2000 MB and click on `Resize`. Wait until the operation is complete (pCP may restart).
 5. At the bottom left of the page, click on `Player/server`.
