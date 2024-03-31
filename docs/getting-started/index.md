@@ -18,7 +18,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 === ":simple-raspberrypi: Raspberry Pi"
     **Easy install using piCorePlayer**
 
-    If you want to have an easily installed LMS on a Raspberry Pi and don't want to go the full Linux route as outlined below, you can use [piCorePlayer](https://picoreplayer.org). See the "[Beginner's guide...](beginners-guide-raspberry-pi.md)".
+    If you want to have an easily installed LMS on a Raspberry Pi and don't want to go the full Linux route as outlined below, you can use [piCorePlayer](https://picoreplayer.org). See the "[Beginner's guide...](beginners-guide-lms-on-raspberry-pi.md)".
 
     **Installation on Raspberry Pi OS**
 

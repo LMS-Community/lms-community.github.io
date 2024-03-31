@@ -17,7 +17,7 @@ To get a functioning LMS system you need to have three components, namely (1) a 
 
 With Lyrion, you have greater control and customization of your music - how the server works, how you interact with it, and what it looks like.  You have the ability to use the same interface to access your music on almost any device, and to select the appropriate player for every need. There is wide support by the LMS community to add new functionality, fix issues, integrate with other products, and help support users to get the most enjoyment from their music.
 
-If you're new to Lyrion, click on [Getting Started with LMS](/getting-started/index.md) to learn more.
+If you're new to Lyrion, click on [Getting Started with LMS](getting-started/index.md) to learn more.
 
 <figure markdown="span">
   ![](assets/lms-community.svg)

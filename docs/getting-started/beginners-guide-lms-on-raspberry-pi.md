@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Beginner's Guide for LMS
+title: Beginner's Guide for LMS on Raspberry Pi
 ---
 
-# Beginner's Guide for LMS
+# Beginner's Guide for LMS on Raspberry Pi
 
 !!! note
     This guide is primarily targeted at users that just use their Squeezeboxes for internet streaming. If you are looking for a more capable music system which can also serve local music, the Raspberry Pi model specified below is underpowered. If you want to serve local music, please use a Raspberry Pi 3B+ or better.
@@ -23,7 +23,7 @@ These four parts are enough for your own inexpensive, energy-saving and long-las
 
 ![Hardware for LMS](assets/lms-beginners-guide/all-you-need.jpg){ align=left }
 
-Other Raspberry Pi models are suited as well (such as [3B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/#find-reseller), [4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/#find-reseller), [5](https://www.raspberrypi.com/products/raspberry-pi-5/#find-reseller)), but please make sure you buy an enclosure that suits your model. The advantage of these models over the "Raspberry Pi Zero 2 W" is that they feature an ethernet port, which might suit your personal situation better (do not forget to also order an ethernet cable).
+Other Raspberry Pi models are suited as well (such as [3B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/#find-reseller), [4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/#find-reseller), [5](https://www.raspberrypi.com/products/raspberry-pi-5/#find-reseller)), but please make sure you buy an enclosure and a power adapter that suits your model. The advantage of these models over the "Raspberry Pi Zero 2 W" is that they feature an ethernet port, which might suit your personal situation better (do not forget to also order an ethernet cable).
 
 ## Installing and configuring the software
 
