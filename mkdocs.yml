@@ -82,6 +82,7 @@ nav:
       - Deutsch: getting-started/migrate-from-uesr-de.md
     - Beginner's guides:
       - Beginner's guide for LMS: getting-started/beginners-guide-lms-on-raspberry-pi.md
+      - Beginner's guide for a full-featured LMS: getting-started/beginners-guide-full-featured-lms-on-raspberry-pi.md
       - Beginner's Docker guide on Synology: getting-started/beginners-guide-synology-docker.md
     - Advanced guides:
       - Use OpenVPN on SB Touch/Radio: getting-started/advanced-guide-openvpn.md
