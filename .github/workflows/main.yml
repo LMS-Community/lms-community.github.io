@@ -52,7 +52,7 @@ jobs:
         run: |
           go install github.com/suntong/html2md@latest
           sudo apt-get update
-          sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl
+          sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl libyaml-perl
 
       - name: Checkout code
         uses: actions/checkout@v4
