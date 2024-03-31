@@ -1,0 +1,4 @@
+# Python virtualenv module requirements for mkdocs
+
+mkdocs-material
+mkdocs-macros-plugin

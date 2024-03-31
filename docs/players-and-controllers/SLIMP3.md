@@ -3,11 +3,15 @@ layout: default
 title: SLIMP3
 ---
 
+# SLIMP3
+
+<figure markdown="span">
+  ![](assets/slimp3_200.jpg){ width="300" }
+</figure>
+
 The SLIMP3, released in 2001, is the first generation network media player, produced by Slim Devices. 
 It plays MP3, WMA, AAC, FLAC, WAV, OggVorbis, Shoutcast (and more using plugins), which are streamed 
 over a network from Slim Devices' custom software, Squeezebox Server.
-
-![SLIMP3](assets/slimp3_200.jpg)
 
 Though getting harder to come by, these are beautiful units. If you come across one for sale on EBay, 
 then buy it quick before anyone else notices!

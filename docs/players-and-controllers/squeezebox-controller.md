@@ -5,7 +5,9 @@ title: Squeezebox Controller
 
 # Squeezebox Controller
 
-![Squeezebox Controller](assets/controller_hero_500.jpg){ align=right, width="300" }
+<figure markdown="span">
+  ![](assets/controller_hero_500.jpg){ width="75%" }
+</figure>
 
 The Squeezebox Controller (SBC) was announced along with the Squeezebox Receiver in January of 2008. Not to be confused with Logitech Squeezebox Controller App which is a free software solution for using an Android phone to remote control Squeezebox units.
 
