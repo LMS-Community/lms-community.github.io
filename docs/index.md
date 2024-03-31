@@ -7,9 +7,6 @@ title: Home
 
 # Lyrion Music Server
 
-!!! info
-    *This site is under heavy construction while content is being transferred from the old [wiki](https://wiki.slimdevices.com). If you want to help out, please reach out on the [forums](https://forums.slimdevices.com/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers).*
-
 Lyrion Music Server (formerly Logitech Media Server) is open-source server software that powers a wide range of audio players. With the help of many plugins, Lyrion can stream your local music collection, internet radio stations, and content from many music services.
 
 ## LMS Ecosystem
