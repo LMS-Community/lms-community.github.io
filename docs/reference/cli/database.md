@@ -3,17 +3,23 @@ layout: default
 title: CLI - Database commands
 ---
 
+<style>
+    td code {
+        word-break: normal !important;
+    }
+</style>
+
 # Database commands and queries
 
 ***
 ## rescan
 `rescan <|playlists|onlinelibrary|external|full singlefolder|?>`
 
-The `rescan` command causes the server to rescan the entire music library, reloading the music file information. 
+The `rescan` command causes the server to rescan the entire music library, reloading the music file information.
 
-* If `playlists` is indicated (`rescan playlists`), only the playlist directory is rescanned. 
-* If `onlinelibrary` is indicated (`rescan onlinelibrary`), only the import from online music services is run. 
-* If `external` is requested, the rescan will be performed using the external scanner process instead of the in-process scanner. 
+* If `playlists` is indicated (`rescan playlists`), only the playlist directory is rescanned.
+* If `onlinelibrary` is indicated (`rescan onlinelibrary`), only the import from online music services is run.
+* If `external` is requested, the rescan will be performed using the external scanner process instead of the in-process scanner.
 * If `full file://some/path` is defined, then only this path will be scanned. Issued with a `?`, `rescan ?` returns if the server is currently scanning.
 
 Scanning occurs when the server starts and following `rescan` and `wipecache` commands.
@@ -191,7 +197,7 @@ Note that the server supports multiple genres per track, depending on the `Multi
 | For each genre: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 ||`id` | Genre ID. Item delimiter. |
 ||`genre` | Genre name. |
-|| `s` | textkey | 
+|| `s` | textkey |
 
 The genre's `textkey` is the first letter of the sorting key.
 
@@ -399,7 +405,7 @@ The `playlists` query returns all playlists known by the server.
 | `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is empty. |
 
 **Returned tagged parameters:**
- 
+
 | Block | Tag | Description |
 |---|---|---|
 | First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
@@ -437,8 +443,8 @@ The `playlists tracks` query returns the tracks of a given playlist.
 | `playlist_id` | Playlist ID as returned by the `playlists` query. This is a mandatory parameter. |
 | `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command `songinfo` for a list of possible fields and their identifying letter). The default tags value for this command is `gald`. |
 
-**Returned tagged parameters:** 
- 
+**Returned tagged parameters:**
+
 | Block | Tag | Description |
 |---|---|---|
 | First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
@@ -462,7 +468,7 @@ This command renames a saved playlist.
 | `newname` | The new name of the playlist (without .m3u). |
 | `dry_run` | Used to check if the new name is already used by another playlist. The command performs the name check but does not overwrite the existing playlist. If a name conflict occurs, the command will return a `overwritten_playlist_id` parameter. |
 
-**Returned tagged parameters:** 
+**Returned tagged parameters:**
 
 | Tag | Description |
 |---|---|
@@ -486,7 +492,7 @@ This command creates an empty saved playlist, to be further manipulated by other
 |---|---|
 | `name` | The name of the playlist (without .m3u). |
 
-**Returned tagged parameters:** 
+**Returned tagged parameters:**
 
 | Tag | Description |
 |---|---|
@@ -556,7 +562,7 @@ The `songinfo` command returns all the information on a song known by the server
 | `track_id` | Track ID as returned by other CLI commands. This is a mandatory parameter, except if `url` is provided. |
 | `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is all info except the url (`u`) and the multi-valued tags for genre(s) (`G` & `P`) and artists (`A` & `S`) |
 
-**Returned tagged parameters:** 
+**Returned tagged parameters:**
 
 | Tag | Description | |
 |---|---|---|
@@ -644,7 +650,7 @@ The `titles` command returns all titles known by the server.
 | `CC` | Only return the number of results, but not the results themselves. |
 | `sort` | Sorting, one of:-<br>`title` (the default), <br>`tracknum` (in which case the track field (`t`) is added automatically to the response) or <br>`albumtrack` (in which case the track and album-title fields (`l` and `t`) are added automatically to the response). <br><br>Sorting by tracks is possible only if tracks are defined and for a single album. |
 
-**Returned tagged parameters:** 
+**Returned tagged parameters:**
 
 | Block | Tag | Description |
 |---|---|---|
@@ -677,7 +683,7 @@ Please note that `start` and `itemsPerResponse` are calculated per category. If 
 |---|---|
 | `term` | Search string |
 
-**Returned tagged parameters:** 
+**Returned tagged parameters:**
 
 | Block | Tag | Description |
 |---|---|---|

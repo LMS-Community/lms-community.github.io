@@ -3,13 +3,19 @@ layout: default
 title: CLI - Notifications
 ---
 
+<style>
+    td code {
+        word-break: normal !important;
+    }
+</style>
+
 # Notifications
 
-All commands listed in this document are notifications as well as being commands and can be received when using `listen 1` (if they do not originate from the command-line connection that issued them; no command is echoed twice). 
+All commands listed in this document are notifications as well as being commands and can be received when using `listen 1` (if they do not originate from the command-line connection that issued them; no command is echoed twice).
 
-Note that queries (for example, `display ? ?`) are not notified. 
+Note that queries (for example, `display ? ?`) are not notified.
 
-Other available notifications are listed below with their meaning. 
+Other available notifications are listed below with their meaning.
 
 Please note that other notifications or commands may exist, but internal to the server and therefore not documented in this CLI document. Likewise, commands originating from the server may have more parameters than those described in this document, or parameters consisting of internal Perl data structures with strange text representations.
 
@@ -51,7 +57,7 @@ Note: This is only available on SB Classic, SB Boom and Transporter. SB Touch an
 
 Various Notifications related to Playlists
 
-### playlist newsong 
+### playlist newsong
 
 `<playerid> playlist newsong [<current_title>] [<playlist index>]`
 

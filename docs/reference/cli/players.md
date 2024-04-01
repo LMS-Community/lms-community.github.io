@@ -3,6 +3,12 @@ layout: default
 title: CLI - Players commands
 ---
 
+<style>
+    td code {
+        word-break: normal !important;
+    }
+</style>
+
 # Player commands and queries
 
 ***
@@ -592,14 +598,14 @@ Response: "players  count:3"
 
 Request: "players 0 2 playerprefs:doublesize,idleBrightness<LF>"
 Response: "players 0 2 count:2
-playerindex:0 playerid:a5:41:d2:cd:cd:05 ip:127.0.0.1:60488 name:127.0.0.1 model:softsqueeze displaytype:graphic-280x16 connected:1 doublesize:0 idleBrightness:2 
+playerindex:0 playerid:a5:41:d2:cd:cd:05 ip:127.0.0.1:60488 name:127.0.0.1 model:softsqueeze displaytype:graphic-280x16 connected:1 doublesize:0 idleBrightness:2
 playerindex:1 playerid:00:04:20:02:00:c8 ip:192.168.1.22:3483 name:Movy model:slimp3 displaytype:noritake-katakana connected:1 doublesize:1 idleBrightness:1
 <LF>"
 
 Request: "players 0 4"
-Response: "players 0 4 count:4 
-playerindex:0 playerid:a0:ce:c8:ce:a1:3b uuid: ip:192.168.5.20:50591 name:Squeezelite-X seq_no:0 model:squeezelite modelname:Squeezelite-X power:1 isplaying:1 displaytype:none isplayer:1 canpoweroff:1 connected:1 firmware:v1.9.9-1419 
-playerindex:1 playerid:00:04:20:28:c7:f1 uuid:ca1c8fbf2d48cbb1c859b5ea7ce4ecf9 ip:192.168.5.102:41372 name:Stalking Horse seq_no:41 model:baby modelname:Squeezebox Radio power:1 isplaying:1 displaytype:none isplayer:1 canpoweroff:1 connected:1 firmware:8.0.1-r16924 
-playerindex:2 playerid:00:04:20:2a:e0:74 uuid:7147ee259b66f5c9c39c0eb14cfefb5c ip:192.168.5.101:40890 name:Runcible Red seq_no:2 model:baby modelname:Squeezebox Radio power:1 isplaying:0 displaytype:none isplayer:1 canpoweroff:1 connected:1 firmware:8.0.1-r16924 
+Response: "players 0 4 count:4
+playerindex:0 playerid:a0:ce:c8:ce:a1:3b uuid: ip:192.168.5.20:50591 name:Squeezelite-X seq_no:0 model:squeezelite modelname:Squeezelite-X power:1 isplaying:1 displaytype:none isplayer:1 canpoweroff:1 connected:1 firmware:v1.9.9-1419
+playerindex:1 playerid:00:04:20:28:c7:f1 uuid:ca1c8fbf2d48cbb1c859b5ea7ce4ecf9 ip:192.168.5.102:41372 name:Stalking Horse seq_no:41 model:baby modelname:Squeezebox Radio power:1 isplaying:1 displaytype:none isplayer:1 canpoweroff:1 connected:1 firmware:8.0.1-r16924
+playerindex:2 playerid:00:04:20:2a:e0:74 uuid:7147ee259b66f5c9c39c0eb14cfefb5c ip:192.168.5.101:40890 name:Runcible Red seq_no:2 model:baby modelname:Squeezebox Radio power:1 isplaying:0 displaytype:none isplayer:1 canpoweroff:1 connected:1 firmware:8.0.1-r16924
 playerindex:3 playerid:00:04:20:12:ae:f5 uuid: ip:192.168.5.103:28931 name:Dittography seq_no:0 model:squeezebox3 modelname:Squeezebox Classic power:1 isplaying:1 displaytype:graphic-320x32 isplayer:1 canpoweroff:1 connected:1 firmware:137<LF>"
 ```

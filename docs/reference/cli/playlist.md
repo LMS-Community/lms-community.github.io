@@ -3,6 +3,12 @@ layout: default
 title: CLI - Playlists commands and queries
 ---
 
+<style>
+    td code {
+        word-break: normal !important;
+    }
+</style>
+
 # Playlist commands and queries
 
 ***
@@ -34,7 +40,7 @@ Response: "04:20:00:12:23:45 stop<LF>"
 
 `<playerid> pause <0|1|> <fadeInSecs> <suppressShowBriefly>`
 
-You may use `pause 1` to force the player to pause, `pause 0` to force the player to unpause and `pause` to toggle the pause state. The `fadeInSecs` parameter may be passed to specify a fade-in period when unpausing. 
+You may use `pause 1` to force the player to pause, `pause 0` to force the player to unpause and `pause` to toggle the pause state. The `fadeInSecs` parameter may be passed to specify a fade-in period when unpausing.
 
 The `suppressShowBriefly` parameter may be passed to specify **not** to show a pause icon on squeezeplay-based devices (as is the case with hitting 'power off' on the SBController, which pauses play but should not display an icon, see bug 13521). The popup on squeezeplay-based devices which shows the pause icon is referred  to as the `showBriefly` popup.
 
@@ -49,7 +55,7 @@ Response: "04:20:00:12:23:45 pause<LF>"
 
 `<playerid> mode ?`
 
-The `mode` command allows to query the player state and returns one of `play`, `stop` or `pause`. 
+The `mode` command allows to query the player state and returns one of `play`, `stop` or `pause`.
 
 If the player is off, `mode ?` returned value is undefined.
 
@@ -243,7 +249,7 @@ Response: "04:20:00:12:23:45 playlist delete 5<LF>"
 ## playlist preview
 `<playerid> playlist preview <taggedParameters>`
 
-When called **without** a cmd param of `stop`, replace the current playlist with the playlist specified by url, but save the current playlist to tempplaylist_<playerid>.m3u for later retrieval. 
+When called **without** a cmd param of `stop`, replace the current playlist with the playlist specified by url, but save the current playlist to tempplaylist_<playerid>.m3u for later retrieval.
 
 When called **with** the cmd param of `stop`, stops the currently playing playlist and loads (if possible) the previous playlist. Restored playlist jumps to beginning of CURTRACK when present in m3u file, and does not autoplay restored playlist.
 
@@ -260,7 +266,7 @@ Response: "04:20:00:12:23:45 playlist preview cmd:stop<LF>"
 ## playlist resume
 `<playerid> playlist resume <playlist> <taggedParameters>`
 
-Replace the current playlist with the playlist specified by `<playlist>` (p2), starting at the song that was playing when the file was saved. (Resuming works only with M3U files saved with the `playlist save` command below.) 
+Replace the current playlist with the playlist specified by `<playlist>` (p2), starting at the song that was playing when the file was saved. (Resuming works only with M3U files saved with the `playlist save` command below.)
 
 Shortcut: use a bare playlist name (without leading directories or trailing .m3u suffix) to load a playlist in the saved playlists folder.
 
@@ -312,7 +318,7 @@ Request: "04:20:00:12:23:45 playlist addalbum Rock Abba *<LF>"
 Response: "04:20:00:12:23:45 playlist addalbum Rock Abba *<LF>"
 ```
 
-*** 
+***
 ## playlist loadtracks
 `<playerid> playlist loadtracks <searchparam>`
 
@@ -335,7 +341,7 @@ Response: "04:20:00:12:23:45 playlist loadtracks contributor.namesearch=prince <
 
 `<playerid> playlist addtracks <searchparam>`
 
-The `playlist addtracks` command appends all songs matching the specified criteria onto the end of the playlist. Songs currently playing or already on the playlist are not affected. 
+The `playlist addtracks` command appends all songs matching the specified criteria onto the end of the playlist. Songs currently playing or already on the playlist are not affected.
 
 Note: you must provide a particular form to the searchparam (see examples)
 
@@ -442,7 +448,7 @@ Request: "04:20:00:12:23:45 playlist modified ?<LF>"
 Response: "04:20:00:12:23:45 playlist modified 0<LF>"
 ```
 
-*** 
+***
 ## playlist playslistsinfo
 
 `<playerid> playlist playlistsinfo <taggedParameters>`
@@ -478,9 +484,9 @@ Response: "a5:41:d2:cd:cd:05 playlist playlistsinfo id:267 name:A98 modified:0 u
 
 `<playerid> playlist index <index|+index|-index|?> <fadeInSecs>`
 
-The `playlist index` command sets or queries the song that is currently playing by index. When setting, a zero-based value may be used to indicate which song to play. 
+The `playlist index` command sets or queries the song that is currently playing by index. When setting, a zero-based value may be used to indicate which song to play.
 
-An explicitly positive or negative number may be used to jump to a song relative to the currently playing song. The index can only be set if the playlist is not empty. 
+An explicitly positive or negative number may be used to jump to a song relative to the currently playing song. The index can only be set if the playlist is not empty.
 
 If an index parameter is set then `fadeInSecs` may be passed to specify a fade-in period. The value of the current song index may be obtained by passing in `?` as a parameter.
 
@@ -499,7 +505,7 @@ Response: "04:20:00:12:23:45 playlist index 5<LF>"
 ***
 ## Querying a Song on a Playlist
 
-The `playlist genre`, `playlist artist`, `playlist album`, `playlist title`, `playlist path`, `playlist remote` and `playlist duration` queries return the requested information for a given song at an index position in the current playlist. 
+The `playlist genre`, `playlist artist`, `playlist album`, `playlist title`, `playlist path`, `playlist remote` and `playlist duration` queries return the requested information for a given song at an index position in the current playlist.
 
 See also the commands under [Querying the Song Playing](#querying-the-song-playing) which provided similar information for the song currently playing (plus an additional query, `current_title`)
 
@@ -583,13 +589,13 @@ Response: "04:20:00:12:23:45 playlist tracks 7<LF>"
 ## playlist shuffle
 `<playerid> playlist shuffle <0|1|2|?|>`
 
-The `playlist shuffle` command is used to shuffle, unshuffle or query the shuffle state for the current playlist. 
+The `playlist shuffle` command is used to shuffle, unshuffle or query the shuffle state for the current playlist.
 
 Meaning of the `shuffle` parameters:-
 
-* `0` indicates that the playlist is not shuffled, 
+* `0` indicates that the playlist is not shuffled,
 * `1` indicates that the playlist is shuffled by song,
-* `2` indicates that the playlist is shuffled by album. 
+* `2` indicates that the playlist is shuffled by album.
 * Used with no parameter, the command toggles the shuffling state.
 
 Example:
@@ -606,13 +612,13 @@ Response: "04:20:00:12:23:45 playlist shuffle 0<LF>"
 
 `<playerid> playlist repeat <0|1|2|?|>`
 
-The `playlist repeat` command is used to indicate or query if the player will stop playing at the end of the playlist, repeat the current song indefinitely, or repeat the current playlist indefinitely. 
+The `playlist repeat` command is used to indicate or query if the player will stop playing at the end of the playlist, repeat the current song indefinitely, or repeat the current playlist indefinitely.
 
 Meaning of the `repeat` parameters
 
-* `0` indicates that the player will stop at the end of the playlist, 
+* `0` indicates that the player will stop at the end of the playlist,
 * `1` indicates that the player will repeat the current song indefinitely
-* `2` indicates that the player will repeat the entire playlist indefinitely. 
+* `2` indicates that the player will repeat the entire playlist indefinitely.
 * Used with no parameter, the command toggles the repeat state.
 
 Example:
@@ -645,7 +651,7 @@ The`playlistcontrol` command enables playlist operations using IDs as returned b
 | `playlist_name` | Playlist name, to restrict the results to this playlist_name. If this parameter is provided, then any `genre_id`, `artist_id`, `album_id`, `track_id` and/or `playlist_id` parameter is ignored. |
 | `play_index` | If this parameter is provided along with `cmd:load` then playback will start with the indicated track. |
 | `sort` | Album sort order. One of<br>`album`, (the default), <br>`new` (sort by change date in descending order), <br>`artflow` which sorts by artist, year, album for use with artwork-centric interfaces, <br>`artistalbum`, <br>`yearalbum`, <br>`yearartistalbum`, <br>`random`<br>Only of relevance if `genre_id`, `artist_id`, `year` or `year_id` is supplied. |
- 
+
 **Returned tagged parameters:**
 
 | Tag | Description |

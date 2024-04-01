@@ -3,11 +3,17 @@ layout: default
 title: CLI - Alarms commands
 ---
 
+<style>
+    td code {
+        word-break: normal !important;
+    }
+</style>
+
 # Alarm commands and queries
 
 Two main commands:- `alarm` and `alarms`
 
-See also 
+See also
 
 * [`alarm` under Notifications](notifications.md#alarm).
 * [`playerpref` under Players](players.md#playerpref)
@@ -76,7 +82,7 @@ The `alarm playlists` returns all the playlists, sounds, favorites etc. availabl
 |---|---|---|
 | First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || Count | The number of items available |
-| For each playlist: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}| 
+| For each playlist: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `title` | The item's name or title
 || `category` | The category under which the item is grouped (eg. Favorites, Natural Sounds etc.)
 || `url` | The item's URL, or the empty value as a placeholder for the current playlist.
@@ -85,9 +91,9 @@ The `alarm playlists` returns all the playlists, sounds, favorites etc. availabl
 Example:
 ```
 Request: "alarm playlists 0 3<LF>"
-Response: "alarm playlists 0 100 category:The current playlist 
-title:Use Current Playlist url: singleton:1 category:Favorites 
-title:Random%20Artists url:randomplay://contributor singleton:0 category:Favorites 
+Response: "alarm playlists 0 100 category:The current playlist
+title:Use Current Playlist url: singleton:1 category:Favorites
+title:Random%20Artists url:randomplay://contributor singleton:0 category:Favorites
 title:Random%20Tracks url:randomplay://track singleton:0 count:29 <LF>"
 ```
 
@@ -110,10 +116,10 @@ The `alarms` query returns information about player alarms. `<start>` is the ind
 
 | Block | Preference | Description |
 |---|---|---|
-| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|  
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `fade` | 1 if the alarms fade in. |
 || `count` | Number of alarms returned, based on the filters above. |
-| For each alarm: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|  
+| For each alarm: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `dow` | Days Of Week of this alarm. |
 || `enabled` | 1 if the alarm is enabled. |
 || `volume` | Mixer volume of the alarm. |
@@ -124,7 +130,7 @@ Example:
 ```
 Request: "bd:a5:a9:9b:9d:df alarms 0 3<LF>"
 Response: "bd:a5:a9:9b:9d:df alarms 0 3 count:2 fade:0
-dow:1 enabled:1 time:3600 volume:50 url:randomplay://track 
+dow:1 enabled:1 time:3600 volume:50 url:randomplay://track
 dow:5 enabled:1 time:81000 volume:77 playlist url:file:///Volumes/Smurf/playlists/Playlists/AAA.m3u <LF>"
 ```
 
