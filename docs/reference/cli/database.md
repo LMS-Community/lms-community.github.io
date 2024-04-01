@@ -189,12 +189,12 @@ Note that the server supports multiple genres per track, depending on the `Multi
 
 | Block | Tag | Description |
 |---|---|---|
-|First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 || `count` | Number of results returned by the query. If no filter parameter is present, this is the same value as returned by `info total genres ?`. |
 || `CC` `count`  | - Only return the number of results, but not the results themselves. |
 || `Z` `indexList` | An array of arrays indicating how many items start with each key letter. |
-| For each genre: |||
+| For each genre: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 ||`id` | Genre ID. Item delimiter. |
 ||`genre` | Genre name. |
 || `s` | textkey | 
@@ -235,12 +235,12 @@ The `artists` query returns all artists known by the server. The results of this
 
 | Block | Tag | Description |
 |---|---|---|
-| First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 || `count` | Number of results returned by the query. If no search string is present, this is the same value as returned by `info total artists ?` |
 || `CC`  `count`  | Only return the number of results, but not the results themselves. |
 || `Z`  `indexList` | An array of arrays indicating how many items start with each key letter. |
-| For each artist: |||
+| For each artist: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `id` | Artist ID. Item delimiter. |
 || `artist` | Artist name. |
 || `s` `textkey` | The artist's `textkey` is the first letter of the sorting key. CLARIFICATION-NEEDED |
@@ -280,12 +280,12 @@ The `albums` query returns all albums known by the server. The results of this q
 
 | Block | Tag | Description |
 |---|---|---|
-| First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 || `count` | Number of results returned by the query. If no filter is present, this is the same value as returned by `info total albums ?` |
 || `CC`  `count` | Only return the number of results, but not the results themselves. CLARIFICATION-NEEDED|
 || `Z` `indexList` | An array of arrays indicating how many items start with each key letter (or year for a year-dominated sort order). CLARIFICATION-NEEDED |
-| For each album: |||
+| For each album: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 ||   `id` | Album ID. Item delimiter. |
 || `l` `album` | Album name, including the server's added `(N of M)` if the server is set to group multi disc albums together. See tag `title` for the unmodified value. CLARIFICATION-NEEDED |
 || `y` `year` | Album year. This is determined by the server based on the album tracks. |
@@ -333,9 +333,9 @@ The `years` query returns all years known by the server.
 
 | Block | Tag | Description |
 |---|---|---|
-| First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
-| For each year: |||
+| For each year: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 ||  `year` | Year. Item delimiter.|
 
 Example:
@@ -368,10 +368,10 @@ The `musicfolder` query returns the content of a given music folder, starting fr
 
 | Block | Tag | Description |
 |---|---|---|
-| First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 || `count` | Number of results returned by the query. |
-| For each item in the folder: |||
+| For each item in the folder: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `id` | Track, playlist or folder ID. Item delimiter. |
 || `type` | One of `track`, `folder`, `playlist`, or `unknown`. |
 || `c` `coverid` | coverid to use when constructing an artwork URL, such as /music/$coverid/cover.jpg |
@@ -408,12 +408,12 @@ The `playlists` query returns all playlists known by the server.
  
 | Block | Tag | Description |
 |---|---|---|
-| First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 || `count` | Number of results returned by the query. |
-| For each playlist: |||
+| For each playlist: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `id` | Playlist ID. Item delimiter. |
-||   `playlist` | Playlist name |
+|| `playlist` | Playlist name |
 || `u` `url` | Playlist file url |
 || `s` `textkey` | The playlist's `textkey` is the first letter of the sorting key. |
 || `u`  `url` | The playlist's url. |
@@ -447,10 +447,10 @@ The `playlists tracks` query returns the tracks of a given playlist.
  
 | Block | Tag | Description |
 |---|---|---|
-| First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 || `count` | Number of tracks in the playlist. |
-| For each track: |||
+| For each track: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `playlist index` | Index (first item is 0) of the track in the playlist. The first returned instance of this field is equal to start. Item seperator. |
 || `Tags` | Same tags as defined in command `songinfo`. |
 
@@ -654,10 +654,10 @@ The `titles` command returns all titles known by the server.
 
 | Block | Tag | Description |
 |---|---|---|
-| First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 || `count` | Number of results returned by the query. If no search string or album/artist/genre filter is present, this is the same value as returned by `info total songs ?`. |
-| For each title: |||
+| For each title: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `Tags` | Same tags as defined in command `songinfo`.|
 
 Example:
@@ -687,23 +687,23 @@ Please note that `start` and `itemsPerResponse` are calculated per category. If 
 
 | Block | Tag | Description |
 |---|---|---|
-| First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 || `count` | Total number of results returned by the query. This is the sum of `artists_count`, `albums_count` and `tracks_count`. |
 || `artists_count` | Total number of artists found. |
 || `albums_count` | Total number of albums found. |
 || `genres_count` | Total number of genres found. |
 || `tracks_count` | Total number of tracks found. |
-| For each artist: |||
+| For each artist: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `artist_id` | Artist ID. |
 || `artist` | Artist name. |
-| For each album: |||
+| For each album: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `album_id` | Album ID. |
 || `albu` | Album title |
-| For each genre: |||
+| For each genre: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `genre_id` | Genre ID. |
 || `genre` | Genre title. |
-| For each track: |||
+| For each track: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `track_id` | Track ID. |
 || `track` | Track title. |
 

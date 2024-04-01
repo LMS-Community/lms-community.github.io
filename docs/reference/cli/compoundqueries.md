@@ -38,7 +38,7 @@ Please note this mechanism is completely distinct from the `listen` and `subscri
 
 | Block | Tag | Description |
 | --- | --- | --- |
-| First block ||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}| 
  || `rescan` | Returned with value `1` if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
  || `lastscan` | Returned with the timestamp when the last scan finished. Not returned if no scan has been run yet. |
  || `progressname` | Returned with the name for the current scan phase. Not returned if no scan is in progress. |
@@ -54,10 +54,10 @@ Please note this mechanism is completely distinct from the `listen` and `subscri
  || `info total artists` | Number of artists known to the server. Equivalent to `info total artists ?` |
  || `info total genres` | Number of genres known to the server. Equivalent to `info total genres ?` |
  || `info total songs` | Number of songs known to the server. Equivalent to `info total songs ?` |
-| For each defined pref requested: ||
+| For each defined pref requested: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}| 
  || `prefName` | Preference value. Only if the value is defined. Equivalent to `pref prefName ?`. |
 || `player count` | Number of players known by the server. Equivalent to `player count ?`. |
-| For each player:  Essentially, this list is equivalent to the one returned by `players`. |
+| For each player:  <br>Essentially, this list is equivalent to the one returned by `players`.  {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `playerid` | Player unique identifier. Item delimiter. Equivalent to `player id ?`. |
 || `uuid` | Player unique identifier. Equivalent to `player uuid ?`. |
 || `ip` | Player IP and port. Equivalent to `player ip ?`. |
@@ -71,18 +71,41 @@ Please note this mechanism is completely distinct from the `listen` and `subscri
 ||  `player_needs_upgrade` | Connected player needs a firmware upgrade. |
 ||  `player_is_upgrading` | Connected player is in the process of performing a firmware update. |
 || `other player count` | Number of players connected to other discovered servers in the local network. |
-| For each player connected to some other server in the local network:||
+| For each player connected to some other server in the local network:  {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 ||  `playerid` | Player unique identifier (MAC address). |
 ||  `name` | Player name. |
 ||  `server` | The server to which the player is connected
 ||  `model` | Player model. Please note that only Squeezebox2 and later can be remotely disconnected. |
-| For each defined player pref requested: ||
+| For each defined player pref requested: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}| 
 ||  `prefName` | Preference value. Only if the value is defined. Equivalent to `playerpref prefName ?`. |
 
 
-Example:
+
+Examples: showing response to same command from Telnet and as output as JSON
 ```
-***Add some examples here CLARIFICATION-NEEDED***
+request: "serverstatus"
+
+response: via TELNET (some line breaks added here to improve readability)
+response: "serverstatus   lastscan%3A1711201749 version%3A8.5.0 
+uuid%3A9caf975e-f502-47db-ad3e-135ab16a86fa ip%3A192.168.5.75 httpport%3A9005 
+info%20total%20albums%3A539 info%20total%20artists%3A515 
+info%20total%20genres%3A116 info%20total%20songs%3A8880 
+info%20total%20duration%3A7091295.34500001 player%20count%3A4 
+other%20player%20count%3A0"
+
+response: via JSON
+{'lastscan': '1711201749',
+ 'version': '8.5.0',
+ 'uuid': '9caf975e-f502-47db-ad3e-135ab16a86fa',
+ 'ip': '192.168.5.75',
+ 'httpport': '9005',
+ 'info total albums': 539,
+ 'info total artists': 515,
+ 'info total genres': 116,
+ 'info total songs': 8880,
+ 'info total duration': 7091295.34500001,
+ 'player count': 4,
+ 'other player count': 0}
 ```
 
 ***

@@ -74,9 +74,9 @@ The `alarm playlists` returns all the playlists, sounds, favorites etc. availabl
 
 | Block | Tag | Description |
 |---|---|---|
-|First block ||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || Count | The number of items available |
-| For each playlist: | 
+| For each playlist: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}| 
 || `title` | The item's name or title
 || `category` | The category under which the item is grouped (eg. Favorites, Natural Sounds etc.)
 || `url` | The item's URL, or the empty value as a placeholder for the current playlist.
@@ -110,10 +110,10 @@ The `alarms` query returns information about player alarms. `<start>` is the ind
 
 | Block | Preference | Description |
 |---|---|---|
-| First block 
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|  
 || `fade` | 1 if the alarms fade in. |
 || `count` | Number of alarms returned, based on the filters above. |
-| For each alarm: | 
+| For each alarm: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|  
 || `dow` | Days Of Week of this alarm. |
 || `enabled` | 1 if the alarm is enabled. |
 || `volume` | Mixer volume of the alarm. |

@@ -563,9 +563,9 @@ Results returned as two blocks.
 
 | Block | Tag | Description |
 |---|---|---|
-| First block |||
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || count | Number of players known by the server. Equivalent to `player count ?`. |
-| For each player:|||
+| For each player: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || playerindex | Player index. Values 0, 1, 2 etc |
 || playerid | Player unique identifier. Equivalent to `player id <playerindex> ?`. |
 || uuid | Player uuid. Equivalent to `player uuid <playerindex> ?`. |
@@ -581,7 +581,7 @@ Results returned as two blocks.
 || canpoweroff | Whether the player can be powered off. This value is false for streaming connections. Equivalent to `player canpoweroff <playerindex|playerid> ?` |
 || connected | Connected state. Equivalent to `<playerid> connected ?`. |
 || firmware | Firmware version |
-| For each defined pref requested:-|||
+| For each defined pref requested: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || prefName | Preference value. Only if the value is defined. Equivalent to `<playerid> playerpref <prefname|namespace:prefname> <prefvalue|?>`. |
 
 
