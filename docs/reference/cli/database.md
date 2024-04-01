@@ -29,15 +29,9 @@ Response: "rescan 1<LF>"
 
 ***
 ## rescanprogress
-`rescanprogress <taggedParameters>`
+`rescanprogress`
 
-The `rescanprogress` query returns details on the scanning progress.
-
-**Accepted tagged parameters:**
-
-| Tag | Description |
-|---|---|
-| none | specified CLARIFICATION-NEEDED |
+The `rescanprogress` query returns details on the scanning progress. This query does not take any parameters.
 
 **Returned tagged parameters:**
 
@@ -45,7 +39,7 @@ The `rescanprogress` query returns details on the scanning progress.
 |---|---|
 | `rescan` | Returned with value 1 if the server is still scanning the database, otherwise returned with value 0 and the fields below are not returned. |
 | `totaltime` | Total elapsed time since the start of the scan, format `hh:mm:ss`. |
-| `importer` | A completion percentage for each importer. Importers include `directory` (Music folder), `playlist`(Playlist folder), `iTunes` (iTunes), `musicip` (MusicIP), as well as more technical ones such as `mergeva` (Various Artists merging) and `dboptimize` (Database optimization).<BR><BR> The type, quantity and order of importers is determined dynamically as rescan progresses. |
+| `importer` | A completion percentage for each importer. Importers include:-<br> `directory` (Music folder), <br>`playlist`(Playlist folder), <br>`iTunes` (iTunes), <br>`musicip` (MusicIP), <br><br> as well as more technical ones such as <br> `mergeva` (Various Artists merging) and <br> `dboptimize` (Database optimization).<BR><BR> The type, quantity and order of importers is determined dynamically as rescan progresses. |
 | `info` | Additional information about the current scanning step, like eg. the currently scanned file name. |
 | `steps` | Scanning steps in the order they've been executed. |
 | `lastscanfailed` | Information about a possible failure in case a scan has not finished in an attended manner. |
