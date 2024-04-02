@@ -3,11 +3,7 @@ layout: default
 title: CLI - Database commands
 ---
 
-<style>
-    td code {
-        word-break: normal !important;
-    }
-</style>
+<link rel="stylesheet" href="../cli-doc.css">
 
 # Database commands and queries
 

@@ -3,11 +3,7 @@ layout: default
 title: CLI - Compound Queries commands
 ---
 
-<style>
-    td code {
-        word-break: normal !important;
-    }
-</style>
+<link rel="stylesheet" href="../cli-doc.css">
 
 # Compound queries
 

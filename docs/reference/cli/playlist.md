@@ -3,11 +3,7 @@ layout: default
 title: CLI - Playlists commands and queries
 ---
 
-<style>
-    td code {
-        word-break: normal !important;
-    }
-</style>
+<link rel="stylesheet" href="../cli-doc.css">
 
 # Playlist commands and queries
 

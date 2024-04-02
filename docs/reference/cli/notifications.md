@@ -3,11 +3,7 @@ layout: default
 title: CLI - Notifications
 ---
 
-<style>
-    td code {
-        word-break: normal !important;
-    }
-</style>
+<link rel="stylesheet" href="../cli-doc.css">
 
 # Notifications
 
