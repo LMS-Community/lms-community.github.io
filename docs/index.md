@@ -9,6 +9,10 @@ title: Home
 
 Lyrion Music Server (formerly Logitech Media Server) is open-source server software that powers a wide range of audio players. With the help of many plugins, Lyrion can stream your local music collection, internet radio stations, and content from many music services.
 
+<figure markdown="span">
+  ![](assets/screenshot.png){ width="500" }
+</figure>
+
 ## LMS Ecosystem
 
 Although Squeezeboxes started in 2000 with hardware and software developed by Slim Devices, which was later acquired by  Logitech, nowadays a wide array of hardware and software solutions make up the LMS ecosystem.
@@ -18,7 +22,3 @@ To get a functioning LMS system you need to have three components, namely (1) a 
 With Lyrion, you have greater control and customization of your music - how the server works, how you interact with it, and what it looks like.  You have the ability to use the same interface to access your music on almost any device, and to select the appropriate player for every need. There is wide support by the LMS community to add new functionality, fix issues, integrate with other products, and help support users to get the most enjoyment from their music.
 
 If you're new to Lyrion, click on [Getting Started with LMS](getting-started/index.md) to learn more.
-
-<figure markdown="span">
-  ![](assets/lms-community.svg)
-</figure>
