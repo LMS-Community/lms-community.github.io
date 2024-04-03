@@ -1,3 +1,11 @@
+---
+layout: default
+title: squeezelite(1) manpage
+hide:
+  - navigation
+  - toc
+---
+
 # squeezelite(1) - Lightweight headless Squeezebox emulator
 
 Debian Project, 2024-04-03
