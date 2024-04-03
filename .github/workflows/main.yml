@@ -31,8 +31,8 @@ env:
   CHANGELOG_LMS9_SRC: https://raw.githubusercontent.com/LMS-Community/slimserver/HEAD/Changelog9.html
   CHANGELOG_LMS9_TARGET: docs/getting-started/changelog-lms9.md
   PLUGIN_TARGET: docs/plugins/directory.md
-
-
+  SQUEEZELITE_MANPAGE_SRC: https://raw.githubusercontent.com/ralph-irving/squeezelite/master/doc/squeezelite.1
+  SQUEEZELITE_MANPAGE_TARGET: docs/players-and-controllers/squeezelite-manpage.md
 
 jobs:
 
@@ -70,7 +70,12 @@ jobs:
           sed -Ei 's/http:\/\/raw.githubusercontent.com\/Changelog8.html/changelog-lms8.md/' $CHANGELOG_LMS9_TARGET
           sed -Ei 's/^\s\s*/\t/g' $CHANGELOG_LMS9_TARGET
 
-
+          : # TODO not the most elegant way of running a Perl script from Github
+          : # We download this specific commit as this version is verified
+          curl -O https://raw.githubusercontent.com/mle86/man-to-md/f484095dbbe741469ff5180f20d829172c2ff571/man-to-md.pl
+          perl man-to-md.pl <(curl -s $SQUEEZELITE_MANPAGE_SRC) >$SQUEEZELITE_MANPAGE_TARGET
+          rm man-to-md.pl
+          
       - name: Get release downloads and embed in Getting Started document
         run: |
           tools/build-server-downloads-page.pl
@@ -84,15 +89,13 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add $CHANGELOG_LMS8_TARGET $CHANGELOG_LMS9_TARGET $PLUGIN_TARGET
+          git add $CHANGELOG_LMS8_TARGET $CHANGELOG_LMS9_TARGET $PLUGIN_TARGET $SQUEEZELITE_MANPAGE_TARGET
           if [ -n "$(git status --porcelain)" ]; then
             git commit -a -m "Update external data sources"
             git push
           else
             echo "No changes to commit";
           fi
-
-
 
   deploy-mkdocs:
 
