@@ -14,3 +14,5 @@
 
 - Other:
 
+	- Move CLI documentation out of the server code to [lyrion.org](https://lyrion.org/reference/cli/introduction/).
+
