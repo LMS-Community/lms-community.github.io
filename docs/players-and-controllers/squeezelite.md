@@ -14,3 +14,7 @@ Squeezelite supports gapless playback, a wide range of sample rates (44.1 kHz / 
 ## Download
 
 Binaries compiled from the [source code](https://github.com/ralph-irving/squeezelite) can be found [here](https://sourceforge.net/projects/lmsclients/files/squeezelite/).
+
+## Usage
+
+See the [squeezelite manpage](squeezelite-manpage.md) for usage details.
