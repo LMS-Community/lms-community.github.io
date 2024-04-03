@@ -75,7 +75,7 @@ jobs:
           : # TODO not the most elegant way of running a Perl script from Github
           : # We download this specific commit as this version is verified
           curl -O https://raw.githubusercontent.com/mle86/man-to-md/f484095dbbe741469ff5180f20d829172c2ff571/man-to-md.pl
-          echo -e "---\nlayout: default\ntitle: squeezelite(1) manpage\nhide:\n  - navigation\n  - toc\n---\n" >$SQUEEZELITE_MANPAGE_TARGET
+          echo -e "---\nlayout: default\ntitle: squeezelite(1) manpage\nhide:\n  - toc\n---\n" >$SQUEEZELITE_MANPAGE_TARGET
           perl man-to-md.pl <(curl -s $SQUEEZELITE_MANPAGE_SRC) >>$SQUEEZELITE_MANPAGE_TARGET
           rm man-to-md.pl
           
