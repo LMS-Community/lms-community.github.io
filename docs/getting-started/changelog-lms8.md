@@ -16,6 +16,7 @@
 	- Fix definition of track-level favorites' artwork.
 	- Correctly prefix settings links from Plugins page with the web root.
 	- [#1020](https://github.com/LMS-Community/slimserver/pull/1020) \- Add icon to favorites in Default web UI et al. (thanks philippe44 && darrell-k)
+	- [#1029](https://github.com/LMS-Community/slimserver/pull/1029) \- Fix incorrect HTTP skipping (thanks philippe44 && bpa!)
 
 - Other:
 
