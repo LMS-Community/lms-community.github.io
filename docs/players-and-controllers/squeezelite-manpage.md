@@ -2,7 +2,6 @@
 layout: default
 title: squeezelite(1) manpage
 hide:
-  - navigation
   - toc
 ---
 
