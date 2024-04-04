@@ -604,7 +604,7 @@ title: Available Plugins
 
 <div class="grid cards" markdown>
 
--   __:material-playlist-music: Custom Skip 3__
+-   __:material-playlist-music: Custom Skip__
 
     ---
 
@@ -644,7 +644,7 @@ title: Available Plugins
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylistcreator)
 
--   __:material-playlist-music: Dynamic Playlists 4__
+-   __:material-playlist-music: Dynamic Playlists__
 
     ---
 
