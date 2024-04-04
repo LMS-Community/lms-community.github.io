@@ -416,14 +416,6 @@ title: Available Plugins
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-darkdefaultskin)
 
--   __:material-page-layout-header-footer: iPeng__
-
-    ---
-
-    A Skin optimized for iPhone and iPod touch. Not intended to replace any main skin for PC/MAC. See manual at [http://penguinlovesmusic.com](http://penguinlovesmusic.com)
-
-    [:octicons-mail-24: Joerg Schwieder](mailto:coolio@penguinlovesmusic.com)    - [:octicons-globe-24: Details](http://penguinlovesmusic.com)
-
 -   __:material-page-layout-header-footer: Material Skin__
 
     ---
@@ -452,7 +444,7 @@ title: Available Plugins
 
     Makes it possible to define and execute custom SQL statements towards SqueezeCenter database. The result can be displayed in the browser or exported as CSV or XML files. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Database_Query_plugin)
+    [:octicons-mail-24: Mike Spertus, Erland Isaksson](mailto:mike@spertus.com)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Database_Query_plugin)
 
 -   __:material-information-box-outline: Date and Spelled time__
 
@@ -493,14 +485,6 @@ title: Available Plugins
     Provides a "date and time" screensaver that can act like a clock set "ahead" of the real time, and allows other plugins to display such "fast" times and set timers based on such displayed time. (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/FuzzyTime.html)
-
--   __:material-information-box-outline: Information Screen__
-
-    ---
-
-    Configurable support plugin for Information Screen screen saver that makes it possible to switch between different kind of information. (Controller, Radio, Touch, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)
 
 -   __:material-information-box-outline: Music and Artist Information__
 
@@ -590,14 +574,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Title_Switcher_plugin)
 
--   __:material-information-box-outline: TrackStat__
-
-    ---
-
-    Store statistics such as rating, last played time and play counts so it survives a rescan and allows to to browse your library based on the statistic information. You can set the ratings via the Squeezebox player, CLI, Squeezebox Controller or web interface, ratings and statistic data can also be imported/exported from/to iTunes, Amarok and MusicIP Mixer. It also supports Dynamic Playlist plugin by adding dynamic playlists for all its statistics. Please note that TrackStat needs a bit more resources than small plugins and might also slow down startup of SqueezeCenter a bit, so you might get problems if you are running SqueezeCenter on slow hardware. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/TrackStat_plugin)
-
 -   __:material-information-box-outline: Visual Statistics__
 
     ---
@@ -627,14 +603,6 @@ title: Available Plugins
 ## :material-playlist-music: Playlists
 
 <div class="grid cards" markdown>
-
--   __:material-playlist-music: Custom Skip__
-
-    ---
-
-    Makes it possible to skip tracks automatically in dynamic playlists. Makes it possible to skip tracks with low ratings, zapped tracks, short tracks and much more. (Boom, Transporter, Classic, Receiver, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Custom_Skip_plugin)
 
 -   __:material-playlist-music: Custom Skip 3__
 
@@ -668,14 +636,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/DynamicMixPlugin.htm)
 
--   __:material-playlist-music: Dynamic Playlist__
-
-    ---
-
-    Make it easy to create dynamic playlists for your own plugin. You simply need to implement two methods in your own plugin which returns the playlists and the next tracks. Currently at least supported by SQL Playlist plugin, TrackStat plugin, SugarCube plugin, iTunes Party Shuffle plugins and builtin support for saved static playlists. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Dynamic_Playlist_plugin)
-
 -   __:material-playlist-music: Dynamic Playlist Creator__
 
     ---
@@ -700,14 +660,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
--   __:material-playlist-music: Playlist Generator__
-
-    ---
-
-    Makes it possible to generate static playlists based on information in SqueezeCenter database, such as ratings and played tracks. This is useful when you like to have a playlist as a .m3u file which you can export to other tools. This plugin works by itself but if you also install Custom Scan you will be able to re-generate all playlists automatically when you perform a rescan in SqueezeCenter. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Playlist_Generator_plugin)
-
 -   __:material-playlist-music: Playlist Manager__
 
     ---
@@ -724,14 +676,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Charles Parker](mailto:abuse@spicefly.com)    - [:octicons-globe-24: Details](http://www.spicefly.com/)
 
--   __:material-playlist-music: SQL Playlist__
-
-    ---
-
-    Creates smart playlists based on SQL queries, its possible to create playlists similar to iTunes smart playlists if used together with ratings set with the TrackStat plugin. It requires Dynamic Playlist plugin. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/SQL_Playlist_plugin)
-
 -   __:material-playlist-music: Switch Player (Groups compatible)__
 
     ---
@@ -739,14 +683,6 @@ title: Available Plugins
     Switch Playlist between players (Triode plugin compatible with Group Player plugin)
 
     [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/SwitchGroupPlayer)
-
--   __:material-playlist-music: TrackStat Playlist__
-
-    ---
-
-    Makes it possible to export the TrackStat statistics such as ratings and played tracks to static playlists. This is useful when you like to manually update ratings in for example J River Media Center based on a playlist that contains all 4 rated tracks. Please note that this plugin requires you to install both TrackStat and Custom Scan plugin. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/TrackStat_Playlist_plugin)
 
 </div>
 
@@ -761,22 +697,6 @@ title: Available Plugins
     AutoRescan detects changes to your music folder and automatically triggers a rescan of that directory if any files have been added, removed or changed.
 
     James Marsh; Stuart Hickinbottom
-
--   __:material-file-search-outline: Custom Browse__
-
-    ---
-
-    Makes it possible to customize the structure, contents and sorting of the browse menus on the Squeezebox. A new browse menu is configured as a xml file containing the structure and SQL-statements. Please note that Custom Browse needs a bit more resources than small plugins and might also slow down startup of SqueezeCenter a bit, so you might get problems if you are running SqueezeCenter on slow hardware. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Custom_Browse_plugin)
-
--   __:material-file-search-outline: Custom Scan__
-
-    ---
-
-    Make it easier to develop modules that retreive additional information about artist, album, tracks from somehere. If used together with Custom Browse plugin, the included scanning modules for LastFM and custom tags makes it possible to browse music by LastFM tags or by a custom tag. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Custom_Scan_plugin)
 
 -   __:material-file-search-outline: Custom Tag Importer__
 
@@ -793,14 +713,6 @@ title: Available Plugins
     Lazy Search Music is a plugin that lets you search for music without having to multi-tap each letter in the search text you're after, and displays search results "as you type". This plugin works with Squeezeboxes and Transporters when using a remote control featuring number keys, and doesn't affect the operation of the Controller.
 
     [:octicons-mail-24: Stuart Hickinbottom](mailto:stuart@hickinbottom.com)    - [:octicons-globe-24: Details](http://www.hickinbottom.com/lazysearch)
-
--   __:material-file-search-outline: Multi Library__
-
-    ---
-
-    Makes it possible to divide your SqueezeCenter library into different sub libraries, requires Custom Browse plugin to be able to browse the sub libraries. Please note that Multi Library needs a bit more resources than small plugins and might also slow down startup of SqueezeCenter a bit, so you might get problems if you are running SqueezeCenter on slow hardware. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Multi_Library_plugin)
 
 -   __:material-file-search-outline: Phil's Libraries__
 
@@ -836,17 +748,9 @@ title: Available Plugins
 
     ---
 
-    Set automatic display dimming, as for making the display go dark at bedtime and become visible again in the morning. (modified version of code from Eric Koldinger, koldware.com). Will use FuzzyTime "displayed time" if FuzzyTime is installed (optional).
+    Set automatic display dimming, as for making the display go dark at bedtime and become visible again in the morning. (modified version of code from Eric Koldinger, koldware.com). Will use FuzzyTime "displayed time" if FuzzyTime is installed (optional). (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/AutoDisplay.html)
-
--   __:material-tools: Auto Repositories__
-
-    ---
-
-    Automatically makes all third party plugin repositories that are listed on the Logitech wiki site available through Extension Downloader. The plugin doesn't actually read the wiki page directly since that would open up a security hole, instead it reads the repositories from a list available on the lms-autorepo GitHub project. New repostories added to the wiki page will be added after they have been checked so they provide serious plugins and not spam urls. (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Auto_Repositories_plugin)
 
 -   __:material-tools: Bookmarks__
 
@@ -880,14 +784,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
--   __:material-tools: Custom Clock Helper__
-
-    ---
-
-    This is a helper plugin for the Custom Clock screen saver applet, it makes it possible to create your own clock styles and modify the existing styles (Controller, Radio, Touch, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Custom_Clock_applet)
-
 -   __:material-tools: Enable/disable access to server settings__
 
     ---
@@ -903,14 +799,6 @@ title: Available Plugins
     on-the-fly group creation
 
     [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-Groups)
-
--   __:material-tools: Hide Menus__
-
-    ---
-
-    Makes it possible to hide standard browse menus, typically used together with Custom Browse to replace them with a customized version (Boom, Transporter, Classic, Receiver, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
-
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.slimdevices.com/index.php/Hide_Menus_plugin)
 
 -   __:material-tools: Ignore files and folders__
 
@@ -1020,7 +908,7 @@ title: Available Plugins
 
     ---
 
-    Gives new settings for synchronizing players: "wait for next track" to avoid disruptions; "unsync at power off"; restore local playlist after leaving a sync group. (Boom, Classic, Radio, Receiver, Squeezebox1, Slimp3, SoftSqueeze, Touch, Transporter) 
+    Gives new settings for synchronizing players: relative volume sync; "wait for next track" to avoid disruptions; "unsync at power off"; restore local playlist after leaving a sync group. (Boom, Classic, Radio, Receiver, Squeezebox1, Slimp3, SoftSqueeze, Touch, Transporter) 
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SyncOptions.html)
 
@@ -1061,14 +949,6 @@ title: Available Plugins
     ContextMenu provides a mechanism for context menus much like the right-click context menus provided by computer operating system desktop environments. Provides a way to use any regular Squeezebox remote control button, even on the Boom. Other plugins that provide ContextMenu options include AllQuiet, KitchenTimer, PlayLog, and SaverSwitcher. (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/ContextMenu.html)
-
--   __:material-toy-brick-outline: CPAN Modules (Windows)__
-
-    ---
-
-    Some perl modules for Windows that are required by some of my plugins (Meteo, AlbumReview, Biography)
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
 
 -   __:material-toy-brick-outline: DirectPlay__
 
@@ -1157,14 +1037,6 @@ title: Available Plugins
     Browse, search and play urls from soundcloud
 
     Robert Siebert, Daniel Vijge, Robert Gibbon, David Blackman, KwarkLabs    - [:octicons-globe-24: Details](https://github.com/danielvijge/SqueezeCloud)
-
--   __:material-toy-brick-outline: SqueezeScrobbler__
-
-    ---
-
-    LastFM radio playback and scrobbling of played music. Works for regions not covered by the SlimDevices included plugin
-
-    [:octicons-mail-24: SqueezeScrobbler Team](mailto:james.craig@london.com)    - [:octicons-globe-24: Details](http://slimscrobbler.sourceforge.net/)
 
 -   __:material-toy-brick-outline: StatusFirst__
 

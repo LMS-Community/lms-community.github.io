@@ -93,6 +93,7 @@ my %categories;
 my %seen;
 
 foreach (@$plugins) {
+	next if $_->{maxTarget} !~ /^[89*]/;
 	push @{$categories{$_->{category}}}, $_;
 }
 
