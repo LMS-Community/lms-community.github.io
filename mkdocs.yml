@@ -135,6 +135,7 @@ nav:
       - Database Structure: reference/database-structure.md
       - SlimProto Protocol: reference/slimproto-protocol.md
       - SLIMP3 Protocol: reference/slimp3-protocol.md
+      - Classic/Boom/Transporter Graphics: reference/ip3k-graphics.md
       - Squeezeplay Applet:
         - Applet Development: reference/squeezeplay-applet.md
         - Installing Applets: reference/installing-applets.md
