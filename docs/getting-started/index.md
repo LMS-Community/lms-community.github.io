@@ -36,6 +36,12 @@ Lyrion Music Server is a fully open source server software to power a wide range
 === ":material-linux: Linux"
     {{ deb }}
 
+    For Debian/Ubuntu you first need to install the necessary Perl dependencies:
+
+    ```
+    sudo apt install libcrypt-openssl-rsa-perl
+    ```
+    
     Then install using your operating system's package manager `dpkg`:
 
     ```
