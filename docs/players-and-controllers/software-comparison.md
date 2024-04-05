@@ -5,28 +5,28 @@ hide:
   - toc
 ---
 
-| &nbsp;               | &nbsp;                   | **[Squeezelite](squeezelite.md)** | **[Jivelite](jivelite.md)** | **[SqueezePlay](squeezeplay.md)** | **[SoftSqueeze](softsqueeze.md)** | 
+| &nbsp;               | &nbsp;                   | **[Squeezelite](squeezelite.md)** | **[Jivelite](jivelite.md)** | **[SqueezePlay](squeezeplay.md)** | **[SoftSqueeze](softsqueeze.md)** |
 | ---                  | ---                      | :---:             | :---:             | :---:             | :---:             |
-| **Platform support** | Windows                  | :material-circle: | :material-circle: | :material-circle: | :material-circle: |
-|                      | macOS                    | :material-circle: | :material-circle: | :material-circle: | :material-circle: |
-|                      | Linux x86_64             | :material-circle: | :material-circle: | :material-circle: | :material-circle: |
-|                      | Linux arm64              | :material-circle: | :material-circle: | :material-circle: |                   |
-| **Audio playback**   |                          | :material-circle: |                   | :material-circle: | :material-circle: |
-|                      | Gapless playback         | :material-circle: |                   | :material-circle: | :material-circle: |
-|                      | Direct streaming         | :material-circle: |                   |                   |                   |
-|                      | Mono output channel mode | :material-circle: |                   | :material-circle: |                   |
-| **PCM sample freq.** | 44.1 kHz                 | :material-circle: |                   | :material-circle: | :material-circle: |
-|                      | 48 kHz                   | :material-circle: |                   | :material-circle: |                   |
-|                      | 88.2 kHz                 | :material-circle: |                   | :material-circle: |                   |
-|                      | 96 kHz                   | :material-circle: |                   | :material-circle: |                   |
-|                      | 176.4 kHz                | :material-circle: |                   | :material-circle: |                   |
-|                      | 192 kHz                  | :material-circle: |                   | :material-circle: |                   |
-|                      | 352.8 kHz                | :material-circle: |                   |                   |                   |
-|                      | 384 kHz                  | :material-circle: |                   |                   |                   |
-| **PCM sample size**  | 16 bit                   | :material-circle: |                   | :material-circle: | :material-circle: |
-|                      | 24 bit                   | :material-circle: |                   | :material-circle: | :material-circle: |
-| **DSD playback**     | Native                   | :material-circle: |                   |                   |                   |
-|                      | DoP                      | :material-circle: |                   |                   |                   |
-| **User interface**   | Graphical user interface |                   | :material-circle: | :material-circle: | :material-circle: |
-|                      | Support for multiple resolutions|            | :material-circle: |                   |                   |
-|                      | VFD emulation            |                   |                   |                   | :material-circle: |
+| **Platform support** | Windows                  | :material-check: | :material-check: | :material-check: | :material-check: |
+|                      | macOS                    | :material-check: | :material-check: | :material-check: | :material-check: |
+|                      | Linux x86_64             | :material-check: | :material-check: | :material-check: | :material-check: |
+|                      | Linux arm64              | :material-check: | :material-check: | :material-check: |                   |
+| **Audio playback**   |                          | :material-check: |                   | :material-check: | :material-check: |
+|                      | Gapless playback         | :material-check: |                   | :material-check: | :material-check: |
+|                      | Direct streaming         | :material-check: |                   |                   |                   |
+|                      | Mono output channel mode | :material-check: |                   | :material-check: |                   |
+| **PCM sample freq.** | 44.1 kHz                 | :material-check: |                   | :material-check: | :material-check: |
+|                      | 48 kHz                   | :material-check: |                   | :material-check: |                   |
+|                      | 88.2 kHz                 | :material-check: |                   | :material-check: |                   |
+|                      | 96 kHz                   | :material-check: |                   | :material-check: |                   |
+|                      | 176.4 kHz                | :material-check: |                   | :material-check: |                   |
+|                      | 192 kHz                  | :material-check: |                   | :material-check: |                   |
+|                      | 352.8 kHz                | :material-check: |                   |                   |                   |
+|                      | 384 kHz                  | :material-check: |                   |                   |                   |
+| **PCM sample size**  | 16 bit                   | :material-check: |                   | :material-check: | :material-check: |
+|                      | 24 bit                   | :material-check: |                   | :material-check: | :material-check: |
+| **DSD playback**     | Native                   | :material-check: |                   |                   |                   |
+|                      | DoP                      | :material-check: |                   |                   |                   |
+| **User interface**   | Graphical user interface |                   | :material-check: | :material-check: | :material-check: |
+|                      | Support for multiple resolutions|            | :material-check: |                   |                   |
+|                      | VFD emulation            |                   |                   |                   | :material-check: |
