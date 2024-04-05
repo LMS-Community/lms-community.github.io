@@ -4,6 +4,8 @@
 
 - New Features:
 
+	- [Massive upgrade for Classical music lovers](https://github.com/LMS-Community/slimserver/pull/930): add support for Works. Thanks a ton @darrel-k!
+
 - Server Changes:
 
 - Platform Support:
