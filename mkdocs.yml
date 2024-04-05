@@ -118,7 +118,6 @@ nav:
     - Reporting a bug: contributing/reporting-a-bug.md
     - Adding translations: contributing/adding-translations.md
   - Reference:
-    - reference/index.md
     - Lyrion Music Server: reference/lyrion-music-server.md
     - Docker:
       - Add locales to the Docker container: reference/add-locales-to-docker.md

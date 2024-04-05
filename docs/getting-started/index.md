@@ -26,9 +26,10 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
     {{ debpi }}
 
-    Then install using your operating system's package manager `dpkg`:
+    Then install using your operating system's package manager `dpkg` (after installing a dependency):
 
     ```
+    sudo apt install libcrypt-openssl-rsa-perl
     sudo dpkg -i logitechmediaserver_x.y.z_*.deb
     ```
 
@@ -41,7 +42,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
     ```
     sudo apt install libcrypt-openssl-rsa-perl
     ```
-    
+
     Then install using your operating system's package manager `dpkg`:
 
     ```
