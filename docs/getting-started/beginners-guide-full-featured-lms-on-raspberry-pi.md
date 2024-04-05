@@ -31,7 +31,7 @@ For new users to Raspberry Pi and LMS the easiest way to LMS is to install [piCo
 1. [Download piCorePlayer](https://docs.picoreplayer.org/how-to/download_picoreplayer/) (use the 64-bits variant)
 2. [Burn pCP to the SD card](https://docs.picoreplayer.org/how-to/burn_pcp_onto_a_sd_card/)
 3. Eject the SD card and insert into the Raspberry Pi
-4. Connect the Raspberry Pi with an ethernet cable to your router
+4. Connect the Raspberry Pi with an Ethernet cable to your router
 5. Connect the power adapter to the Raspberry Pi
 
 Congrats, piCorePlayer is now booting!
@@ -58,7 +58,7 @@ The last step is to switch your Squeezebox device from MySqueezebox.com to your 
 
 ## Add your local music collection
 
-Your Lyrion Music Server is able to serve your local music collection to your Squeezebox players. You can attach an external hard drive which contains all your music to the Raspberry Pi or, if you already have all your music available via a netwerk share, you can add this network share to the piCorePlayer.
+Your Lyrion Music Server is able to serve your local music collection to your Squeezebox players. You can attach an external hard drive which contains all your music to the Raspberry Pi or, if you already have all your music available via a network share, you can add this network share to the piCorePlayer.
 
 ### External hard drive
 

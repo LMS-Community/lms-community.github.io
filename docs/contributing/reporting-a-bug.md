@@ -13,7 +13,7 @@ Please do the following things before creating an issue:
 
 ### Update to latest version
 
-Chances are that the bug you discovered was already fixed in a subsequent version. Thus, before reporting an issue, ensure that you're running the latest version of LMS. Please follow the [installation guide](../getting-started/index.md) to install the lastest version.
+Chances are that the bug you discovered was already fixed in a subsequent version. Thus, before reporting an issue, ensure that you're running the latest version of LMS. Please follow the [installation guide](../getting-started/index.md) to install the latest version.
 
 ### Search for solutions
 

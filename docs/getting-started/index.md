@@ -12,7 +12,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 === ":material-microsoft-windows: Windows"
     {{ win }}
 
-    Then double click the downloaded package to launch the installation process in a familar installation assistant.
+    Then double click the downloaded package to launch the installation process in a familiar installation assistant.
 
 
 === ":simple-raspberrypi: Raspberry Pi"
@@ -64,7 +64,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
     Then double click the downloaded package to launch the installation process in the macOS installer.
 
     !!! note
-        Sometimes macOS would refuse to open the installer, because the authenticity of the developer can't be confirmed. If that happens to you, open the installer using a right mouse click (or control-click), then "Open". You might have to do this twice, as first time you'd stil be rejected. But the second time around you should be able to launch it anyway.
+        Sometimes macOS would refuse to open the installer, because the authenticity of the developer can't be confirmed. If that happens to you, open the installer using a right mouse click (or control-click), then "Open". You might have to do this twice, as first time you'd still be rejected. But the second time around you should be able to launch it anyway.
 
 
 === ":material-docker: Docker"

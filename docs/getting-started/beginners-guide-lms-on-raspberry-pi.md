@@ -23,7 +23,7 @@ These four parts are enough for your own inexpensive, energy-saving and long-las
 
 ![Hardware for LMS](assets/lms-beginners-guide/all-you-need.jpg){ align=left }
 
-Other Raspberry Pi models are suited as well (such as [3B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/#find-reseller), [4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/#find-reseller), [5](https://www.raspberrypi.com/products/raspberry-pi-5/#find-reseller)), but please make sure you buy an enclosure and a power adapter that suits your model. The advantage of these models over the "Raspberry Pi Zero 2 W" is that they feature an ethernet port, which might suit your personal situation better (do not forget to also order an ethernet cable).
+Other Raspberry Pi models are suited as well (such as [3B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/#find-reseller), [4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/#find-reseller), [5](https://www.raspberrypi.com/products/raspberry-pi-5/#find-reseller)), but please make sure you buy an enclosure and a power adapter that suits your model. The advantage of these models over the "Raspberry Pi Zero 2 W" is that they feature an Ethernet port, which might suit your personal situation better (do not forget to also order an Ethernet cable).
 
 ## Installing and configuring the software
 
