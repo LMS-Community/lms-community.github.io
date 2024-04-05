@@ -33,9 +33,14 @@ After 2010 the LMS community developed DIY hardware offerings.
 
 ## Software based players
 
-- [Squeezelite](https://github.com/ralph-irving/squeezelite)
-- [SqueezePlay](https://sourceforge.net/projects/lmsclients/files/squeezeplay/) - [Source](https://github.com/ralph-irving/squeezeplay)
+- [Squeezelite](squeezelite.md)
+- [SqueezePlay](squeezeplay.md) - [Source](https://github.com/ralph-irving/squeezeplay)
   This is based on the player and user interface in Squeezebox Radio and Squeezebox Touch
+- [Jivelite](jivelite.md)
+- [SoftSqueeze](softsqueeze.md)
+
+For mobile phones and tablets:
+
 - [iPeng](https://penguinlovesmusic.de/) (iOS - paid) - in-app purchase to also be a player
 - [SlimLibrary](https://apps.apple.com/us/app/slimlibrary/id1022479972) (iOS - paid) [Announcement](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/100649-announce-slimlibrary-new-ios-remote-control-and-player-for-logitech-media-server?view=thread)
 - [SB Player](https://play.google.com/store/apps/details?id=com.angrygoat.android.sbplayer) (Android - paid)

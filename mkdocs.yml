@@ -106,9 +106,12 @@ nav:
       - Squeezebox 1: players-and-controllers/squeezebox1.md
       - SLIMP3: players-and-controllers/SLIMP3.md
     - Software based:
-      - Squeezelite: 
-        - players-and-controllers/squeezelite.md
-        - Squeezelite manpage: players-and-controllers/squeezelite-manpage.md
+      - Software Comparison: players-and-controllers/software-comparison.md
+      - Squeezelite: players-and-controllers/squeezelite.md
+      - Squeezelite manpage: players-and-controllers/squeezelite-manpage.md
+      - Jivelite: players-and-controllers/jivelite.md
+      - SqueezePlay: players-and-controllers/squeezeplay.md
+      - SoftSqueeze: players-and-controllers/softsqueeze.md
       - piCorePlayer: players-and-controllers/picoreplayer.md
   - Plugins:
     - Overview: plugins/index.md
