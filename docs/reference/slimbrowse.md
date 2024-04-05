@@ -293,8 +293,8 @@ JSON RPC commands consist of a hash with the following keys:
     * Hash of parameters, f.e. `{sort = new}`. Passed to the server in the form "key:value", f.e. 'sort:new'.
         * The value `__INPUT__` is replaced by any user entered data.
         * The value `__TAGGEDINPUT__` is replaced by user entered data in a "key:value" format. For example, the param foo = `__TAGGEDINPUT__` would be replaced by 'foo:<user-entered input>'
-* `itemParams`
-    * In base level commands, this defines the name of the field in the item [`#action_fields <actions_fields>`] that must be used to complete the command for a particular item. See the example below.
+* `itemsParams`
+    * In base level commands, this defines the name of the field in the item [`<actions_fields>`](#actions_fields) that must be used to complete the command for a particular item. See the example below.
 * `nextWindow`
     * If a `nextWindow` param is given at the json command level, it takes precedence over a `nextWindow` param at the item level, which in turn takes precendence over a `nextWindow` param at the base level. See <item_fields> section for more detail on this parameter.
 * `setSelectedIndex`
@@ -396,6 +396,142 @@ Some actions have "built in" defaults: the presence of a new action overrides Ji
 * play, play-hold, add, add-hold, rew-hold, fwd-hold
     * These have no predefined command.
 
+### Example
+
+```
+{
+    // no base defined as most items have a very different command set
+
+    count = 3,
+    // because the top menu contains few elements, Jive got them all in one step and this is equal to the number of elements
+    // in the item_loop array below.
+
+    item_loop = [
+        {
+            text = 'Albums',
+            // this is what the menu item will show. No icon or icon-id defined, so the menu item is text only.
+
+            actions = {
+                go = {
+                    cmd = ['albums'],
+                    params = {
+                            menu = "tracks"
+                    }
+                }
+                // our action command will requests albums from the server using JSON
+
+                // no other actions defined, so pressing play f.e. has no effect
+            }
+        },
+        {
+            text = 'New music',
+
+            window = {
+                text = 'Surprise!',
+                icon = 'http://....'
+            },
+            // Normally Jive opens a window titled using the text of the menu item (i.e. "text"), but in this case
+            // we want the window title to be different and read "Surprise!"
+
+            actions = {
+                go = {
+                    cmd = ['albums'],
+                    params = {
+                        sort = 'new',
+                        tags = 'jsjs',
+                        menu = 'tracks',
+                    }
+                }
+            }
+        },
+        {
+            text = 'Browse SlimNetwork',
+            actions = {
+                go = "http://slimnetwork/browse"
+                // SN uses URLs, not JSON commands
+            }
+        },
+        {
+            text = 'Settings',
+
+            // this is hierarchical so we define here the items
+            count = 5,
+            item_loop = [
+                ...
+            ]
+        },
+        {
+            text = 'Search',
+            // ask user for at least 3 chars before firing the action
+            input = 3,
+            actions = {
+                go = {
+                    cmd = ['search'],
+                    params = {
+                        // __TAGGEDINPUT__ will be replaced by the entered text in the form "search:"
+                        search = '__TAGGEDINPUT__',
+                        tags = 'blabla',
+                        menu = 'tracks',
+                    }
+                }
+            }
+        },
+    ]
+}
+```
+
+Selecting albums issues the command defined in actions.action and returns the following data:
+
+```
+{
+    base = {
+            icon = "art?id="
+            actions = {
+                    go = {
+                            cmd = ['tracks'],
+                            params = {
+                                    menu = "songinfo",
+                            },
+                            itemParams = 'anyParams',
+                    }
+                    play = {
+                            player = 0,
+                            cmd = ['playlistctrl'],
+                            params = {
+                                    cmd = 'load'
+                            },
+                            itemParams = 'anyParams',
+                    }
+            }
+    }
+
+    count = 12,
+
+    item_loop = [
+        {
+            text = "Play all",
+            actions = {
+                do = {...} // overrides go in base
+            },
+        },
+        {
+            text = "Rock",
+            icon = "rock.jpg", // a partial URL, combined with the above
+            anyParams = {
+                genre_id = 33,
+            },
+        },
+        {
+            text = "Alternative",
+            icon-id = 33,  // a SS artworkId
+            anyParams = {
+                genre_id = 34,
+            },
+        },
+        ...
+    ]
+}
+```
 
 ## showBriefly communications
 
