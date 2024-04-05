@@ -13,7 +13,7 @@ Lyrion Music Server (formerly Logitech Media Server) is open-source server softw
   ![](assets/screenshot.png){ width="500" }
 </figure>
 
-## LMS Ecosystem
+## LMS ecosystem
 
 Squeezebox players hit the market in 2000 as hardware and software developed by Slim Devices, later acquired by Logitech. A wide array of hardware and software solutions make up the LMS ecosystem to support Squeezebox devices and OS.
 
