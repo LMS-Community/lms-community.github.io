@@ -13,11 +13,11 @@ SqueezePlay is the desktop version of the Jive/Squeezebox Controller software. I
 
 If you are looking for a practical all-in-one solution for playback and to control your music from your desktop, SqueezePlay is your best pick. If you are looking for more advanced playback capabilities and more customization for the control application, please look into the [Jivelite](jivelite.md)+[Squeezelite](squeezelite.md) combination.
 
-Currently SqueezePlay is maintained by Ralph Irving and the source code can be found of [Github](https://github.com/ralph-irving/squeezeplay).
+Currently SqueezePlay is maintained by Ralph Irving and the source code can be found of :octicons-mark-github-16: [Github](https://github.com/ralph-irving/squeezeplay).
 
 ## Downloads
 
-SqueezePlay runs on macOS, Windows, Linux and Solaris desktop operating systems. Current builds can be downloaded from [Sourceforge](https://sourceforge.net/projects/lmsclients/files/squeezeplay/).
+SqueezePlay runs on macOS, Windows, Linux and Solaris desktop operating systems. Current builds can be downloaded from :simple-sourceforge: [Sourceforge](https://sourceforge.net/projects/lmsclients/files/squeezeplay/).
 
 ## Main features
 

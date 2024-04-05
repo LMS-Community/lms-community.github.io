@@ -19,6 +19,8 @@ Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com
 
 Currently in development. This version will be the first release using the new name Lyrion Music Server! This version is undergoing major refactoring because of the name change and is thus not suitable for usage unless you are prepared to deal with occasional breakage.
 
+* Massive upgrade for Classical music lovers; this version adds support for works!
+
 ### LMS 8.5
 
 Current stable. Initially released on March 14, 2024.

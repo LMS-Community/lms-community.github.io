@@ -21,7 +21,7 @@ It is capable of utilizing Lyrion Music Server's client synchronization feature 
 
 ### Windows and macOS
 
-Binaries compiled from the [source code](https://github.com/ralph-irving/squeezelite) can be found on [SourceForge](https://sourceforge.net/projects/lmsclients/files/squeezelite/).
+Binaries compiled from the :octicons-mark-github-16: [source code](https://github.com/ralph-irving/squeezelite) can be found on :simple-sourceforge: [SourceForge](https://sourceforge.net/projects/lmsclients/files/squeezelite/).
 
 ### Linux/BSD
 

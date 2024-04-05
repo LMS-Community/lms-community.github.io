@@ -16,7 +16,7 @@ SoftSqueeze is written in Java by Richard Titmuss and is currently maintained by
 
 ## Download
 
-SoftSqueeze can be downloaded from [SourceForge](https://softsqueeze.sourceforge.net/). The source code can be found on [Github](https://github.com/ralph-irving/softsqueeze3).
+SoftSqueeze can be downloaded from :simple-sourceforge: [SourceForge](https://softsqueeze.sourceforge.net/). The source code can be found on :octicons-mark-github-16: [Github](https://github.com/ralph-irving/softsqueeze3).
 
 ## Features
 
