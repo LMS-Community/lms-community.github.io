@@ -20,4 +20,8 @@ Jivelite is originally developed by Adrian Smith and now maintained by [Ralph Ir
 
 Jivelite runs on Windows, macOS and Linux. Builds for these platforms can be found on [SourceForge](https://sourceforge.net/projects/lmsclients/files/jivelite/). Instructions to install can be found in the builds repository.
 
-If you are running [piCorePlayer](picoreplayer.md), Jivelite is very easy to install! Jivelite can be installed on piCorePlayer via the \[Tweaks\] page on the piCorePlayer web interface. piCorePlayer fully supports Jivelite on the Raspberry Pi’s Official 7" Touch Display (among other screens).
+If you are running [piCorePlayer](picoreplayer.md), Jivelite is very easy to install! Jivelite can be installed on piCorePlayer via the \[Tweaks\] page on the piCorePlayer web interface. piCorePlayer fully supports Jivelite on the Raspberry Pi’s official 7" touch display (among other screens).
+
+## Troubleshooting
+
+In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com/forum/user-forums/linux-unix/95254-announce-jivelite-cut-down-squeezebox-control-application) for assistance. 

@@ -40,3 +40,7 @@ Use the package manager of your distribution to install. If your distribution is
 ## Usage
 
 See the [squeezelite manpage](squeezelite-manpage.md) for usage details.
+
+## Troubleshooting
+
+In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com/forum/user-forums/linux-unix/94258-announce-squeezelite-a-small-headless-squeezeplay-emulator-for-linux-alsa-only) for assistance. 

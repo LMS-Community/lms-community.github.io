@@ -61,3 +61,7 @@ Search				/
 :					Favorites
 Play Favorite 0-9	0-9
 ```
+
+## Troubleshooting
+
+In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com/forum/user-forums/general-discussion/93838-squeezeplay-for-windows-with-asio-directsound-wasapi-and-wdmks-device-support) for assistance. 

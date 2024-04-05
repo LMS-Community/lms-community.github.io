@@ -12,7 +12,7 @@ title: SoftSqueeze
 
 SoftSqueeze is a community supported software music player that allows you to play music streamed from Lyrion Music Server. Since 2009 SoftSqueeze is no longer included in the LMS distribution and is replaced by [SqueezePlay](squeezeplay.md). Although it has since been replaced, SoftSqueeze can still be useful in the present day to simulate the screens of for instance the [Squeezebox Classic](squeezebox-classic.md) and [Transporter](transporter.md). The SoftSqueeze emulator has the look and feel of the [Transporter](transporter.md), [Squeezebox Classic](squeezebox-classic.md), [Squeezebox Boom](squeezebox-boom.md), [Squeezebox 2](squeezebox2.md) and [Squeezebox 1](squeezebox1.md) hardware, and their remote controls.
 
-SoftSqueeze was written in Java by Richard Titmuss and is currently maintained by Ralph Irving.
+SoftSqueeze is written in Java by Richard Titmuss and is currently maintained by Ralph Irving.
 
 ## Download
 
