@@ -87,6 +87,10 @@ jobs:
         run: |
           tools/build-plugin-repository.pl > $PLUGIN_TARGET
 
+      - name: Get translation coverage of slimseerver strings.txt
+        run: |
+          tools/strings-coverage.py <(curl -s https://raw.githubusercontent.com/LMS-Community/slimserver/HEAD/strings.txt) >docs/contributing/strings-coverage.json
+
       - name: Commit changes
         if: ${{ !env.ACT }}
         run: |
@@ -133,5 +137,6 @@ jobs:
       - run: |
           pip install mkdocs-material
           pip install mkdocs-macros-plugin
+          pip install mkdocs-charts-plugin
 
       - run: mkdocs gh-deploy --force

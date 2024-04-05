@@ -22,3 +22,19 @@ Every string must be available in English (`EN`), as that's what LMS would fall 
 
 !!! tip
     If your translation would be identical to the English version, there's no need to redefine it for your language, as LMS would automatically fall back to English.
+
+## Current coverage of translations
+
+The data below can be skewed towards English, as there's no need to define terms for your languages when the translations is identical to the English version.
+
+```vegalite
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "/contributing/strings-coverage.json"},
+  "mark": "bar",
+  "encoding": {
+    "y": {"field": "Language", "type": "nominal",       "sort": "-x"},
+    "x": {"field": "Coverage", "type": "quantitative"}
+  }
+}
+```
