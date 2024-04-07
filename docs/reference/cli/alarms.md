@@ -116,11 +116,14 @@ The `alarms` query returns information about player alarms. `<start>` is the ind
 || `fade` | 1 if the alarms fade in. |
 || `count` | Number of alarms returned, based on the filters above. |
 | For each alarm: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
+|| `id` | The alarm's ID. |
 || `dow` | Days Of Week of this alarm. |
 || `enabled` | 1 if the alarm is enabled. |
+|| `repeat` | 1 if the alarm is repeated. |
+|| `shufflemode` | 0 if off, 1 for songs, 2 for albums. |
+|| `time` | The time for this alarm. |
 || `volume` | Mixer volume of the alarm. |
-|| either:`url`| URL of track to be played |
-|| or:`playlist` | URL of playlist to be played |
+|| `url`| URL of track or playlist to be played. |
 
 Example:
 ```
