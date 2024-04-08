@@ -22,3 +22,14 @@ Every string must be available in English (`EN`), as that's what LMS would fall 
 
 !!! tip
     If your translation would be identical to the English version, there's no need to redefine it for your language, as LMS would automatically fall back to English.
+
+## Current coverage of translations
+
+The data below can be skewed towards English, as there's no need to define terms for your language when the translation is identical to the English version.
+
+```mermaid
+xychart-beta horizontal
+    x-axis [{{ translationLabels }}]
+    y-axis "Coverage in %" 0 --> 100
+    bar [{{ translationCoverage }}]
+```

@@ -33,6 +33,7 @@ env:
   PLUGIN_TARGET: docs/plugins/directory.md
   SQUEEZELITE_MANPAGE_SRC: https://raw.githubusercontent.com/ralph-irving/squeezelite/master/doc/squeezelite.1
   SQUEEZELITE_MANPAGE_TARGET: docs/players-and-controllers/squeezelite-manpage.md
+  STRINGS_COVERAGE_YAML: docs/contributing/strings-coverage.yaml
 
 jobs:
 
@@ -52,7 +53,7 @@ jobs:
         run: |
           go install github.com/suntong/html2md@latest
           sudo apt-get update
-          sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl libyaml-perl
+          sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl libyaml-perl python3-babel
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -87,12 +88,16 @@ jobs:
         run: |
           tools/build-plugin-repository.pl > $PLUGIN_TARGET
 
+      - name: Get translation coverage of slimserver strings.txt
+        run: |
+          tools/strings-coverage.py <(curl -s https://raw.githubusercontent.com/LMS-Community/slimserver/HEAD/strings.txt) >$STRINGS_COVERAGE_YAML
+
       - name: Commit changes
         if: ${{ !env.ACT }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add $CHANGELOG_LMS8_TARGET $CHANGELOG_LMS9_TARGET $PLUGIN_TARGET $SQUEEZELITE_MANPAGE_TARGET
+          git add $CHANGELOG_LMS8_TARGET $CHANGELOG_LMS9_TARGET $PLUGIN_TARGET $SQUEEZELITE_MANPAGE_TARGET $STRINGS_COVERAGE_YAML
           if [ -n "$(git status --porcelain)" ]; then
             git commit -a -m "Update external data sources"
             git push
