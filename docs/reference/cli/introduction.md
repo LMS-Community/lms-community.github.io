@@ -18,7 +18,7 @@ The available commands and queries are listed below, grouped by their scope:
 * [Players](players.md): management of players.
 * [Database](database.md): mangement of the music database.
 * [Playlist](playlist.md): management of the playlist of each player.
-* [Coumpound Queries](compoundqueries.md): queries to get most of the information about the server or a player in one convenient query, that can be updated by the server automatically.
+* [Compound Queries](compoundqueries.md): queries to get most of the information about the server or a player in one convenient query, that can be updated by the server automatically.
 * [Notifications](notifications.md): internal server commands echoed to the CLI by using the "listen" or "subscribe" commands.
 * [Alarms](alarms.md): management of alarms.
 
@@ -26,7 +26,7 @@ The available commands and queries are listed below, grouped by their scope:
 
 ### Migration of the CLI documentation (April 2024)
 
-* The CLI documentation was previously included as part of the embedded help in the LMS server distribution, accessible as a single (big) HTML page on a url like `LMS-SERVER:LMS-PORT/html/docs/cli-api.html`. 
+* The CLI documentation was previously included as part of the embedded help in the LMS server distribution, accessible as a single (big) HTML page on a url like `LMS-SERVER:LMS-PORT/html/docs/cli-api.html`.
 * The documentation here is based on `cli-api.html` from LMS Server v8.5. It is essentially unchanged, beyond dividing it into separate pages, formatting, plus a few corrections.
 * Original sections "Deprecated", and "Plugins" have not been migrated.
 * Future LMS server distributions (from v9 onwards) will no longer have the CLI documentation in the embedded help.
