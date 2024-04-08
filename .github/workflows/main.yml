@@ -89,7 +89,7 @@ jobs:
 
       - name: Get translation coverage of slimseerver strings.txt
         run: |
-          tools/strings-coverage.py <(curl -s https://raw.githubusercontent.com/LMS-Community/slimserver/HEAD/strings.txt) >docs/contributing/strings-coverage.json
+          tools/strings-coverage.py <(curl -s https://raw.githubusercontent.com/LMS-Community/slimserver/HEAD/strings.txt) >docs/contributing/strings-coverage.yaml
 
       - name: Commit changes
         if: ${{ !env.ACT }}

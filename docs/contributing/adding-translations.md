@@ -25,16 +25,11 @@ Every string must be available in English (`EN`), as that's what LMS would fall 
 
 ## Current coverage of translations
 
-The data below can be skewed towards English, as there's no need to define terms for your languages when the translations is identical to the English version.
+The data below can be skewed towards English, as there's no need to define terms for your language when the translation is identical to the English version.
 
-```vegalite
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "/contributing/strings-coverage.json"},
-  "mark": "bar",
-  "encoding": {
-    "y": {"field": "Language", "type": "nominal",       "sort": "-x"},
-    "x": {"field": "Coverage", "type": "quantitative"}
-  }
-}
+```mermaid
+xychart-beta horizontal
+    x-axis [{{ translationLabels }}]
+    y-axis "Coverage in %" 0 --> 100
+    bar [{{ translationCoverage }}]
 ```
