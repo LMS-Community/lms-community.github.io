@@ -63,8 +63,8 @@ The available commands and queries are listed below, grouped by their scope:
 
 ### Changes starting from Squeezebox Server 7.6
 
-* Added tag 'M' for [`songinfo`](../database/#songinfo) to return track musicmagic_mixable value.
-* Added tag 'c' for [`songinfo`](../database/#songinfo) to return the track's coverid value, used for artwork URLs. If you were using the track's ID directly in artwork URLs, you should switch to using the coverid value.
+* Added tag 'M' for [`songinfo`](database.md/#songinfo) to return track musicmagic_mixable value.
+* Added tag 'c' for [`songinfo`](database.md/#songinfo) to return the track's coverid value, used for artwork URLs. If you were using the track's ID directly in artwork URLs, you should switch to using the coverid value.
 * Added "pragma" command for changing SQLite behavior.
 * Added artist_id tagged parameter to artists.
 * Added album_id tagged parameter to albums.
@@ -121,7 +121,7 @@ The following syntax changes apply to the CLI in Squeezebox Server 7.0. These ch
 * Updated the "status" query to return the time stamp of the last change to the current player playlist.
 * Updated the "playlist newsong" notification to return the song title and playlist index.
 * Updated the "pref" and "playerpref" commands to support the namespaces for preferences.
-* Changed tags in queries "status", "titles", "playlists tracks" and "[songinfo](../database/#songinfo)" for artist(s)/contributor(s) (band, composer, conductor, trackartist, etc) and genre(s). Multiple items may now be returned.
+* Changed tags in queries "status", "titles", "playlists tracks" and "[songinfo](database.md/#songinfo)" for artist(s)/contributor(s) (band, composer, conductor, trackartist, etc) and genre(s). Multiple items may now be returned.
 * New notification mechanism for preference changes: "prefset".
 * The following changes or new commands & queries are available starting with Squeezebox Server 7.0. These changes should not have any impact on existing clients:
 
@@ -141,8 +141,8 @@ The following syntax changes apply to the CLI in Squeezebox Server 7.0. These ch
 * Added the "name" query/command to get/change the player name.
 * Added the "irenable" query/command to enable/disable IR processing for a player.
 * Added the "displaystatus" query which allows subscription to display update messages.
-* Updated queries "status", "titles", "playlists tracks" and "[`songinfo`](../database/#songinfo)" to support a new tag J to return the artwork_track_id (as returned by the "albums"). This enables clients to cache one image for all songs of the same album.
-* Updated queries "status", "titles", "playlists tracks" and "[`songinfo`](../database/#songinfo)" to support new tags for previously missing information like sample rate/size, rating, etc.
+* Updated queries "status", "titles", "playlists tracks" and "[`songinfo`](database.md/#songinfo)" to support a new tag J to return the artwork_track_id (as returned by the "albums"). This enables clients to cache one image for all songs of the same album.
+* Updated queries "status", "titles", "playlists tracks" and "[`songinfo`](database.md/#songinfo)" to support new tags for previously missing information like sample rate/size, rating, etc.
 * Order of tracks passed to "playlistcontrol" command is maintained.
 * Command "playlistcontrol" now accepts also a folder_id as returned by the new "musicfolder" query.
 * Slightly reorganised this document to introduce a "Compound queries" section to document queries "serverstatus" and "status".

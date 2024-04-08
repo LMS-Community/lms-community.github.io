@@ -437,7 +437,7 @@ The `playlists tracks` query returns the tracks of a given playlist.
 | Tag | Description |
 |---|---|
 | `playlist_id` | Playlist ID as returned by the `playlists` query. This is a mandatory parameter. |
-| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command [`songinfo`](./#songinfo) for a list of possible fields and their identifying letter). The default tags value for this command is `gald`. |
+| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command [`songinfo`](#songinfo) for a list of possible fields and their identifying letter). The default tags value for this command is `gald`. |
 
 **Returned tagged parameters:**
 
@@ -448,7 +448,7 @@ The `playlists tracks` query returns the tracks of a given playlist.
 || `count` | Number of tracks in the playlist. |
 | For each track: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `playlist index` | Index (first item is 0) of the track in the playlist. The first returned instance of this field is equal to start. Item seperator. |
-|| `Tags` | Same tags as defined in command [`songinfo`](./#songinfo). |
+|| `Tags` | Same tags as defined in command [`songinfo`](#songinfo). |
 
 ***
 ## playlists rename
@@ -642,7 +642,7 @@ The `titles` command returns all titles known by the server.
 | `library_id` | Virtual library ID, to restrict the results to a virtual library view. |
 | `year` | Year, to restrict the results to the titles of that year. |
 | `search` | Search substring. The search is case insensitive and obeys the `Search Within Words` server parameter. |
-| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command `songinfo` for a list of possible fields and their identifying letter). The default tags value for this command is `gald`. |
+| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command [`songinfo`](#songinfo) for a list of possible fields and their identifying letter). The default tags value for this command is `gald`. |
 | `CC` | Only return the number of results, but not the results themselves. |
 | `sort` | Sorting, one of:-<br>`title` (the default), <br>`tracknum` (in which case the track field (`t`) is added automatically to the response) or <br>`albumtrack` (in which case the track and album-title fields (`l` and `t`) are added automatically to the response). <br><br>Sorting by tracks is possible only if tracks are defined and for a single album. |
 
@@ -654,7 +654,7 @@ The `titles` command returns all titles known by the server.
 || `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 || `count` | Number of results returned by the query. If no search string or album/artist/genre filter is present, this is the same value as returned by `info total songs ?`. |
 | For each title: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
-|| `Tags` | Same tags as defined in command `songinfo`.|
+|| `Tags` | Same tags as defined in command [`songinfo`](#songinfo).|
 
 Example:
 ```
