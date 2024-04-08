@@ -20,12 +20,12 @@ STRING_TOKEN
 
 Every string must be available in English (`EN`), as that's what LMS would fall back to if a translation was missing.
 
-!!! tip
-    If your translation would be identical to the English version, there's no need to redefine it for your language, as LMS would automatically fall back to English.
-
 ## Current coverage of translations
 
 The data below can be skewed towards English, as there's no need to define terms for your language when the translation is identical to the English version.
+
+!!! tip
+    If your translation would be identical to the English version, there's no need to redefine it for your language, as LMS would automatically fall back to English. Therefore there's no need to try to achieve 100% coverage!
 
 ```mermaid
 xychart-beta horizontal
