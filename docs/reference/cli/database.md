@@ -437,7 +437,7 @@ The `playlists tracks` query returns the tracks of a given playlist.
 | Tag | Description |
 |---|---|
 | `playlist_id` | Playlist ID as returned by the `playlists` query. This is a mandatory parameter. |
-| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command `songinfo` for a list of possible fields and their identifying letter). The default tags value for this command is `gald`. |
+| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command [`songinfo`](./#songinfo) for a list of possible fields and their identifying letter). The default tags value for this command is `gald`. |
 
 **Returned tagged parameters:**
 
@@ -448,7 +448,7 @@ The `playlists tracks` query returns the tracks of a given playlist.
 || `count` | Number of tracks in the playlist. |
 | For each track: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `playlist index` | Index (first item is 0) of the track in the playlist. The first returned instance of this field is equal to start. Item seperator. |
-|| `Tags` | Same tags as defined in command `songinfo`. |
+|| `Tags` | Same tags as defined in command [`songinfo`](./#songinfo). |
 
 ***
 ## playlists rename

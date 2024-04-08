@@ -127,7 +127,7 @@ Clients can subscribe to `status` queries, so that the query results are automat
 
 | Tag | Description |
 |---|---|
-| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command `songinfo` for a list of possible fields and their identifying letter). The default tags value for this query is `gald`. In addition to the tags supported by `songinfo` there's the special `DD` tag, which would return no track information, but the total duration of the current playlist only. |
+| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command [`songinfo`](../database/#songinfo) for a list of possible fields and their identifying letter). The default tags value for this query is `gald`. In addition to the tags supported by [`songinfo`](../database/#songinfo) there's the special `DD` tag, which would return no track information, but the total duration of the current playlist only. |
 | `alarmData` | If set to a truthy value will return information about the next upcoming alarm. |
 | `subscribe` | This optional parameter controls the subscription to the player status. Only one status subscription is possible per player and connection. |
 
@@ -190,7 +190,7 @@ In non subscription mode, the query simply echoes itself (i.e. produces no resul
 | `playlist_tracks` | Number of tracks in the current playlist. Only if there is a playlist. |
 |If playlist information exist/requested, for each song in the playlist: |
 | `playlist index` | Index (first item is 0) of the playlist entry in the player playlist. Unless <start> is `-`, the first returned instance of this field is equal to start. If <start> is `-`, the first returned instance of this field contains the index of the currently playing song in the player playlist. Item separator. |
-| `Tags` | Same tags as defined in command `songinfo`. |
+| `Tags` | Same tags as defined in command [`songinfo`](../database/#songinfo). |
 
 
 Examples:

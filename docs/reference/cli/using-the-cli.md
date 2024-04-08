@@ -90,7 +90,7 @@ Skip to the next track on player `00:04:20:ab:cd:ef`:
     ```sh
     printf "00:04:20:ab:cd:ef playlist index +1\n" | nc 192.168.1.1 9090
     ```
-    
+
 ***
 ## Command format
 
@@ -186,7 +186,7 @@ Commands that use paths to songs or playlists (<item> parameters below) can use 
 
 ### Cover Art
 
-The HTTP server can return cover art for songs using the track ID as returned by the CLI functions. If no cover art exists for the given song, the server returns a special "no artwork" image. Please refer to the Artwork Setup documentation for more details on artwork management in LMS. 
+The HTTP server can return cover art for songs using the track ID as returned by the CLI functions. If no cover art exists for the given song, the server returns a special "no artwork" image. Please refer to the Artwork Setup documentation for more details on artwork management in LMS.
 
 Use the following URL:
 `http://<server>:<port>/music/<track_id>/cover.jpg`
@@ -213,7 +213,7 @@ where:
 
 ### Positional Parameters
 
-For commands using positional parameters, any extra parameters (after all required ones) will be returned. For commands using tagged parameters, parameters using unknown tags will be returned as well. This allows the client to add to commands and queries some context information. 
+For commands using positional parameters, any extra parameters (after all required ones) will be returned. For commands using tagged parameters, parameters using unknown tags will be returned as well. This allows the client to add to commands and queries some context information.
 
 For example:
 ```
@@ -226,7 +226,7 @@ Response: "players 0 2 context:1 count:2 id:00:04:20:02:00:c8 ...(same as above)
 
 ### Returned URLs, escaping
 
-All paths returned as URLs, for example the ones returned by the query `songinfo` are double URL escaped. To get a useable path (that you can use with your file system), you will need to unescape the field twice. Also note the URLs are not translated or re-encoded: they use the encoding of the underlying filesystem API, typically (but not necessarily) the current locale.
+All paths returned as URLs, for example the ones returned by the query [`songinfo`](../database/#songinfo) are double URL escaped. To get a useable path (that you can use with your file system), you will need to unescape the field twice. Also note the URLs are not translated or re-encoded: they use the encoding of the underlying filesystem API, typically (but not necessarily) the current locale.
 
 ### Transporter Digital Inputs
 
