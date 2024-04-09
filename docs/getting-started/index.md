@@ -10,9 +10,15 @@ Lyrion Music Server is a fully open source server software to power a wide range
 ## Download and install Logitech Media Server v{{ version }}
 
 === ":material-microsoft-windows: Windows"
+    !!! warning
+        Please note that the 64-bit version still is somewhat experimental. It's recommended to uninstall an existing 32-bit version before installing the 64-bit version. Unless you tell the uninstaller to delete everything, the data should survive the upgrade.
+
     {{ win }}
 
     Then double click the downloaded package to launch the installation process in a familiar installation assistant.
+
+    !!! note
+        The 64-bit version does _not_ provide a control panel or tray icon. It must be started/stopped using the Windows service manager.
 
 
 === ":simple-raspberrypi: Raspberry Pi"
