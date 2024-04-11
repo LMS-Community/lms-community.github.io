@@ -127,26 +127,29 @@ nav:
     - Adding translations: contributing/adding-translations.md
   - Reference:
     - Lyrion Music Server: reference/lyrion-music-server.md
+    - Command Line Interface (JSON/RPC):
+      - Introduction: reference/cli/introduction.md
+      - Using the CLI: reference/cli/using-the-cli.md
+      - General: reference/cli/general.md
+      - Players: reference/cli/players.md
+      - Database: reference/cli/database.md
+      - Playlist: reference/cli/playlist.md
+      - Compound Queries: reference/cli/compoundqueries.md
+      - Notifications: reference/cli/notifications.md
+      - Alarms: reference/cli/alarms.md
     - Docker:
       - Add locales to the Docker container: reference/add-locales-to-docker.md
+    - Plugins/applets:
+      - Squeezeplay Applet:
+        - Applet Development: reference/squeezeplay-applet.md
+        - Installing Applets: reference/installing-applets.md
+      - Music Service Plugin: reference/music-service-plugin.md
+      - Plugin/Applet Repositories: reference/repository-dev.md
     - Development:
-      - Command Line Interface (JSON/RPC):
-        - Introduction: reference/cli/introduction.md
-        - Using the CLI: reference/cli/using-the-cli.md
-        - General: reference/cli/general.md
-        - Players: reference/cli/players.md
-        - Database: reference/cli/database.md
-        - Playlist: reference/cli/playlist.md
-        - Compound Queries: reference/cli/compoundqueries.md
-        - Notifications: reference/cli/notifications.md
-        - Alarms: reference/cli/alarms.md
       - Database Structure: reference/database-structure.md
       - SlimProto Protocol: reference/slimproto-protocol.md
       - SLIMP3 Protocol: reference/slimp3-protocol.md
       - Classic/Boom/Transporter Graphics: reference/ip3k-graphics.md
-      - Squeezeplay Applet:
-        - Applet Development: reference/squeezeplay-applet.md
-        - Installing Applets: reference/installing-applets.md
       - SqueezePlay Menu System:
         - Home Menu vs. SlimBrowse: reference/home-vs-slimbrowse.md
         - Home Menu Items: reference/adding-menus-squeezeplay.md
@@ -154,8 +157,6 @@ nav:
       - SSH/SCP:
         - Enable SSH Access to the Squeezebox: reference/enable-ssh.md
         - WinSCP How To: reference/winscp.md
-      - Plugin/Applet Repositories: reference/repository-dev.md
-      - Music Service Plugin: reference/music-service-plugin.md
       - "#CURTRACK Guide": reference/curtrack.md
       - Special IR Keys: reference/special-ir-keys-reset.md
       - Custom Firmware: reference/custom-firmware.md
