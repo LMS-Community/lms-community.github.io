@@ -1,23 +1,23 @@
 ---
-countries: |
-  "GB": 7
+countries: |-
+  "GB": 9
+  "DE": 5
   "NL": 4
-  "DE": 3
   "CH": 3
   "US": 2
+  "PL": 1
+  "DK": 1
   "BE": 1
-
-os: |
-  "linux": 3
+os: |-
+  "linux": 15
   "piCore": 2
   "Debian (Docker)": 2
+  "windows": 1
   "macOS 14.4.1": 1
   "macOS 12.7.4": 1
   "darwin": 1
   "Windows 10": 1
   "QLMS 2.X (QNAP TurboStation) [Debian 9 stretch]": 1
   "Debian": 1
-
-
-pluginLabels: "\"RandomPlay\",\"MyApps\",\"Favorites\",\"Extensions\",\"CLI\",\"PresetsEditor\",\"MaterialSkin\",\"FullTextSearch\",\"RadioParadise\",\"ExtendedBrowseModes\",\"ViewTags\",\"Sounds\",\"DontStopTheMusic\",\"SongScanner\",\"DateTime\",\"Visualizer\",\"RemoteLibrary\",\"InternetRadio\",\"RadioNet\",\"OnlineLibrary\",\"NetTest\",\"JiveExtras\",\"SavePlaylist\",\"RadioNowPlaying\",\"Podcast\",\"DnDPlay\",\"Rescan\",\"CommunityFirmware\",\"MusicArtistInfo\",\"Bandcamp\",\"BBCSounds\",\"SqueezeESP32\",\"Spotty\",\"PlayHLS\",\"ClientCleanup\",\"AudioScrobbler\",\"PlayHistory\",\"LastMix\",\"InfoBrowser\",\"LineIn\",\"1001Albums\",\"iHeartRadio\",\"YouTube\",\"PowerSave\",\"PlaylistMan\",\"RadioFrance\",\"RSSNews\",\"PodcastExt\",\"PlanetRadio\",\"MusicInfoSCR\",\"GlobalPlayerUK\",\"DigitalInput\",\"WalkWithMe\",\"UPnP\",\"PlayWMA\",\"Live365\",\"DSDPlayer\",\"ARDAudiothek\",\"VirginRadio\",\"TIDAL\",\"RadioFavourites\",\"Qobuz\",\"PiCorePlayer\",\"IgnoreDirREManager\",\"Groups\",\"CustomClockHelper\",\"CastBridge\",\"BlankSaver\",\"UPnPBridge\",\"SongLyrics\",\"SongInfo\",\"RaopBridge\",\"RadioFeedsSBS\",\"LineOut\",\"DynamicPlaylists4\",\"DynamicPlaylistCreator\",\"Deezer\",\"DRS\",\"ClassicalRadio\",\"BookmarkHistory\",\"VolumeLock\",\"TimesRadio\",\"TimeSpeller\",\"SyncOptions\",\"SqueezePlayAdminClient\",\"SigGen\",\"ShairTunes2W\",\"SBNetIO\",\"RemoteControl\",\"PreventStandby\",\"Phishin\",\"MixCloud\",\"LMSdbopt\",\"LMSannounce\",\"KidsPlay\",\"ImageProxy\",\"ClassicFM\",\"iTunes\",\"ZenRadio\",\"Wefunk\",\"WaveInput\",\"VisualStatistics\",\"UKRadioPlayer\",\"TitleSwitcher\",\"TVH\",\"SqueezeCloud\",\"SqueezeCLIHandler\",\"SpottyAARCH64Bin\",\"SQLPlayList\",\"RockRadio\",\"ResonanceFM\",\"RemoteShell\",\"Reliable\",\"RadioTunes\",\"Pyrrha\",\"PlayMP4\",\"Myph\",\"MusicMagic\",\"LocalPlayer\",\"LicenseManagerPlugin\",\"JazzRadio\",\"HideMenus\",\"DynamicPlaylists3\",\"DocsetCreator\",\"DIfm\",\"CustomBrowse\",\"ContextMenu\",\"CDplayer\",\"CBCCanadaFrancais\",\"BlissMixer\",\"BBCiPlayerExtra\",\"BBCiPlayer\",\"AutoDisplay\",\"AllQuiet\",\"Accuradio\""
-pluginCounts: "20,20,20,20,20,19,19,19,18,18,17,17,17,16,16,15,15,15,14,14,14,14,13,13,13,13,12,12,11,11,11,10,10,10,10,10,9,9,9,8,8,7,7,7,7,6,6,6,6,6,6,6,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+pluginCounts: '26,26,26,26,25,25,24,24,23,22,22,22,21,21,21,20,20,20,19,19,19,18,17,17,16,16,15,15,15,15,14,13,13,12,12,11,11,11,11,11,11,10,9,8,7,7,7,7,7,7,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1'
+pluginLabels: '"MyApps","Favorites","Extensions","CLI","RandomPlay","MaterialSkin","PresetsEditor","FullTextSearch","ExtendedBrowseModes","ViewTags","Sounds","DontStopTheMusic","SongScanner","RadioParadise","DateTime","Visualizer","RemoteLibrary","InternetRadio","SavePlaylist","NetTest","JiveExtras","DnDPlay","Rescan","OnlineLibrary","RadioNowPlaying","RadioNet","Podcast","MusicArtistInfo","CommunityFirmware","AudioScrobbler","InfoBrowser","LineIn","BBCSounds","Spotty","Bandcamp","SqueezeESP32","RSSNews","PlayHistory","LastMix","DigitalInput","ClientCleanup","PlayHLS","1001Albums","PlaylistMan","iHeartRadio","YouTube","PowerSave","PodcastExt","PlanetRadio","GlobalPlayerUK","WalkWithMe","UPnP","TIDAL","RadioFrance","MusicInfoSCR","VirginRadio","SongLyrics","SongInfo","ShairTunes2W","RaopBridge","RadioFavourites","PlayWMA","Live365","Groups","DSDPlayer","CastBridge","ARDAudiothek","RadioFeedsSBS","Qobuz","PiCorePlayer","IgnoreDirREManager","CustomClockHelper","BlankSaver","UPnPBridge","TimesRadio","PreventStandby","MixCloud","LineOut","DynamicPlaylists4","DynamicPlaylistCreator","Deezer","DRS","ClassicalRadio","BookmarkHistory","iTunes","VolumeLock","TimeSpeller","SyncOptions","SqueezePlayAdminClient","SqueezeCloud","SigGen","SBNetIO","RemoteControl","Phishin","MusicMagic","LMSdbopt","LMSannounce","KidsPlay","ImageProxy","ClassicFM","BlissMixer","ZenRadio","Wefunk","WaveInput","VisualStatistics","UKRadioPlayer","TitleSwitcher","TVH","SqueezeCLIHandler","SqueezeCEC","SpottyAARCH64Bin","SQLPlayList","RockRadio","ResonanceFM","RemoteShell","Reliable","RadioTunes","Pyrrha","PlayMP4","Myph","LocalPlayer","LicenseManagerPlugin","JazzRadio","HideMenus","DynamicPlaylists3","DocsetCreator","DIfm","CustomStartStopTimes","CustomBrowse","ContextMenu","CDplayer","CBCCanadaFrancais","BBCiPlayerExtra","BBCiPlayer","AutoDisplay","AllQuiet","Accuradio"'
