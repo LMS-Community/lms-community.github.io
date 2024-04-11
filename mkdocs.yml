@@ -46,6 +46,7 @@ plugins:
   - privacy
   - macros:
       include_yaml:
+        - docs/assets/chartStyles.yaml
         - docs/analytics/stats.yaml
         - docs/contributing/strings-coverage.yaml
         - docs/getting-started/downloads.yaml
