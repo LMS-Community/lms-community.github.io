@@ -79,7 +79,7 @@ jobs:
           echo -e "---\nlayout: default\ntitle: squeezelite(1) manpage\nhide:\n  - toc\n---\n" >$SQUEEZELITE_MANPAGE_TARGET
           perl man-to-md.pl <(curl -s $SQUEEZELITE_MANPAGE_SRC) >>$SQUEEZELITE_MANPAGE_TARGET
           rm man-to-md.pl
-          
+
       - name: Get release downloads and embed in Getting Started document
         run: |
           tools/build-server-downloads-page.pl
@@ -87,6 +87,10 @@ jobs:
       - name: Get plugin repository and convert to markdown
         run: |
           tools/build-plugin-repository.pl > $PLUGIN_TARGET
+
+      - name: Get analytics data
+        run: |
+          tools/get-analytics-data.pl
 
       - name: Get translation coverage of slimserver strings.txt
         run: |
