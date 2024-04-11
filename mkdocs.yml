@@ -46,9 +46,10 @@ plugins:
   - privacy
   - macros:
       include_yaml:
+        - docs/analytics/stats.yaml
+        - docs/contributing/strings-coverage.yaml
         - docs/getting-started/downloads.yaml
         - docs/players-and-controllers/firmware-versions.yaml
-        - docs/contributing/strings-coverage.yaml
 
 extra:
   social:
