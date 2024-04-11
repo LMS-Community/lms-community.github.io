@@ -39,7 +39,7 @@ jobs:
 
   get-external-changelog:
 
-    name: Import external data sources from LMS repo
+    name: Import external data sources
     runs-on: ubuntu-latest
     steps:
 
@@ -101,13 +101,8 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add $CHANGELOG_LMS8_TARGET $CHANGELOG_LMS9_TARGET $PLUGIN_TARGET $SQUEEZELITE_MANPAGE_TARGET $STRINGS_COVERAGE_YAML
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -a -m "Update external data sources"
-            git push
-          else
-            echo "No changes to commit";
-          fi
+          git commit -a -m "Update external data sources"
+          git push
 
   deploy-mkdocs:
 
