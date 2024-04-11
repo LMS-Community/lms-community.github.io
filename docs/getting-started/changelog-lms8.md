@@ -4,6 +4,8 @@
 
 - New Features:
 
+	- Add optional plugin to report data about your LMS installation - see [forum discussion](https://forums.slimdevices.com/forum/user-forums/general-discussion/1697108).
+
 - Server Changes:
 
 	- Add links to the settings of the AudioAddict based services.
