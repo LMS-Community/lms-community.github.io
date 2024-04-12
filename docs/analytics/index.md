@@ -36,3 +36,7 @@ xychart-beta horizontal
     y-axis "Installations"
     bar [{{ pluginCounts }}]
 ```
+
+---
+
+[Learn more about how this data is gathered](learn-more.md) 
