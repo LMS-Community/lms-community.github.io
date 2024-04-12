@@ -79,9 +79,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
-  - Home:
-    - Overview: index.md
-    - Community Forums: https://forums.slimdevices.com
+  - Home: index.md
   - Getting Started with LMS:
     - Download & Installation: getting-started/index.md
     - Migrate from UE Smart Radio:
