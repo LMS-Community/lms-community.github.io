@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Some Stats
+title: Some Numbers about LMS Installations
 ---
 
+[Learn more about how this data is gathered](learn-more.md)
 
 ## Countries
 
@@ -10,6 +11,15 @@ title: Some Stats
 %%{ {{ pieStyles }} }%%
 pie title Countries
 {{ countries }}
+```
+
+
+## LMS Versions
+
+```mermaid
+%%{ {{ pieStyles }} }%%
+pie title LMS Versions
+{{ versions }}
 ```
 
 
@@ -28,7 +38,7 @@ pie title Operating Systems
 ---
 config:
     xyChart:
-        height: 1800
+        height: 3000
     {{ xyBarStyles }}
 ---
 xychart-beta horizontal
@@ -36,7 +46,3 @@ xychart-beta horizontal
     y-axis "Installations"
     bar [{{ pluginCounts }}]
 ```
-
----
-
-[Learn more about how this data is gathered](learn-more.md) 

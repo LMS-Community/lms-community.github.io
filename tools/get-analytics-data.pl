@@ -19,9 +19,11 @@ eval {
 } || die "$@";
 
 my %stats;
-$stats{countries} = join("\n", map { my ($k, $v) = each %$_; qq("$k": $v) } @{$stats->{countries} || []});
-$stats{os} = join("\n", map { my ($k, $v) = each %$_; qq("$k": $v) } @{$stats->{os} || []});
-$stats{pluginLabels} = $stats->{plugins}->{names};
-$stats{pluginCounts} = $stats->{plugins}->{counts};
+$stats{versions}     = join("\n", map { my ($k, $v) = each %$_; qq("$k": $v) } @{$stats->{versions} || []});
+$stats{countries}    = join("\n", map { my ($k, $v) = each %$_; qq("$k": $v) } @{$stats->{countries} || []});
+$stats{os}           = join("\n", map { my ($k, $v) = each %$_; qq("$k": $v) } @{$stats->{os} || []});
+
+$stats{pluginLabels} = join(',', map { sprintf('"%s"', keys %$_) } @{$stats->{plugins} || []});
+$stats{pluginCounts} = join(',', map { (values %$_)[0] } @{$stats->{plugins} || []});
 
 YAML::DumpFile(STATS_YAML, \%stats);
