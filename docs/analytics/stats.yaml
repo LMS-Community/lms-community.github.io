@@ -1,12 +1,12 @@
 ---
 countries: |-
-  "GB": 12
-  "US": 11
+  "GB": 15
+  "US": 13
   "DE": 9
-  "NL": 5
+  "NL": 7
+  "FR": 4
   "CH": 3
   "SE": 2
-  "FR": 2
   "ES": 2
   "DK": 2
   "CA": 2
@@ -15,13 +15,15 @@ countries: |-
   "CZ": 1
   "CR": 1
   "BE": 1
+histDates: '"2024-04-11","2024-04-12"'
+histInstallations: '44,59'
+histPlayers: '127,247'
 os: |-
-  "linux": 42
-  "windows": 5
+  "linux": 51
+  "windows": 6
   "darwin": 4
   "piCore": 2
   "QLMS 2.X (QNAP TurboStation) [Debian 9 stretch]": 1
-  "Debian (Docker)": 1
-pluginCounts: '51,50,49,49,48,47,47,47,46,45,45,43,42,42,42,40,39,39,39,39,39,39,37,37,35,34,32,31,31,30,28,27,26,25,24,23,22,22,21,18,16,16,16,16,15,15,13,13,12,11,11,11,11,10,10,10,10,10,10,9,9,9,9,7,7,7,7,7,7,7,7,6,6,6,6,6,6,5,5,5,5,5,5,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1'
-pluginLabels: '"FullTextSearch","RandomPlay","ViewTags","ExtendedBrowseModes","PresetsEditor","SavePlaylist","MaterialSkin","DontStopTheMusic","InternetRadio","Sounds","NetTest","OnlineLibrary","SongScanner","Rescan","DateTime","RemoteLibrary","Visualizer","MyApps","Favorites","Extensions","DnDPlay","CLI","RadioParadise","JiveExtras","InfoBrowser","MusicArtistInfo","CommunityFirmware","LineIn","AudioScrobbler","RadioNowPlaying","RSSNews","DigitalInput","RadioNet","Podcast","Spotty","BBCSounds","ClientCleanup","Bandcamp","PlayHistory","1001Albums","PlayHLS","MusicInfoSCR","LastMix","Groups","SqueezeESP32","PowerSave","YouTube","SongLyrics","SongInfo","TIDAL","RaopBridge","Qobuz","PodcastExt","iHeartRadio","WalkWithMe","UPnP","PlaylistMan","GlobalPlayerUK","CastBridge","UPnPBridge","ShairTunes2W","PiCorePlayer","ARDAudiothek","VisualStatistics","VirginRadio","RadioFrance","RadioFavourites","PlanetRadio","DynamicPlaylists4","DynamicPlaylistCreator","DSDPlayer","SqueezeCloud","SigGen","PlayWMA","Live365","Deezer","CustomClockHelper","PreventStandby","LineOut","ImageProxy","IgnoreDirREManager","BookmarkHistory","BlankSaver","WaveInput","TimesRadio","SyncOptions","RatingsLight","RadioFeedsSBS","Pyrrha","MixCloud","DRS","VolumeLock","VirtualLibraryCreator","UseCommentTagInfo","SwitchGroupPlayer","SleepFade","MusicMagic","LocalPlayer","LicenseManagerPlugin","LMSdbopt","CustomBrowse","ClassicalRadio","BlissMixer","AutoRescan","iTunes","TitleSwitcher","TimeSpeller","SqueezePlayAdminClient","SqueezeDSP","SqueezeCLIHandler","SpottyAARCH64Bin","SettingsManager","SQLPlayList","SBNetIO","RemoteControl","Reliable","RadioTunes","Phishin","NoSetup","LMSannounce","KidsPlay","JazzRadio","DynamicPlaylists3","CustomTagImporter","CustomStartStopTimes","CustomSkip3","ContextMenu","ClassicFM","CBCCanadaFrancais","AllQuiet","Accuradio","ZenRadio","Wefunk","UltralightSkin","UKRadioPlayer","TVH","SuperDateTime","SugarCube","SqueezeCEC","SimpleLibraryViews","RockRadio","ResonanceFM","ResetVolume","RemovePlayedSongs","RemoteShell","RatingButtons","PowerSwitchII","PlayMP4","Myph","LMSplaylistEditor","LMSeventTrigger","JustCovers","InguzEQ","HideMenus","FileViewer","DynamicPlayList","DocsetCreator","DirectPlay","DenonAvpControl","DatabaseQuery","DIfm","CDplayer","C3PO","BBCiPlayerExtra","BBCiPlayer","AutoDisplay","AlternativePlayCount"'
-versions: "\"8.5.1\": 43\n\"9.0.0\": 12"
+pluginCounts: '60,59,59,58,56,56,54,54,54,53,52,50,49,49,48,47,47,46,44,42,42,39,37,37,37,37,37,37,37,34,33,32,31,28,27,26,24,23,23,19,18,18,18,18,15,15,15,15,13,13,12,12,12,12,11,11,11,10,10,10,10,10,9,9,8,8,8,8,8,8,8,7,7,7,6,6,6,6,6,5,5,5,5,5,5,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1'
+pluginLabels: '"FullTextSearch","ViewTags","RandomPlay","ExtendedBrowseModes","SavePlaylist","PresetsEditor","NetTest","MaterialSkin","InternetRadio","Sounds","DontStopTheMusic","DateTime","Rescan","OnlineLibrary","SongScanner","Visualizer","DnDPlay","RemoteLibrary","JiveExtras","RadioParadise","InfoBrowser","MusicArtistInfo","MyApps","LineIn","Favorites","Extensions","CommunityFirmware","CLI","AudioScrobbler","RadioNowPlaying","RSSNews","DigitalInput","RadioNet","Podcast","BBCSounds","Spotty","PlayHistory","ClientCleanup","Bandcamp","1001Albums","PlayHLS","MusicInfoSCR","LastMix","Groups","YouTube","SqueezeESP32","PowerSave","PodcastExt","UPnP","SongLyrics","UPnPBridge","TIDAL","RaopBridge","Qobuz","iHeartRadio","SongInfo","ShairTunes2W","WalkWithMe","RadioFrance","PlaylistMan","GlobalPlayerUK","CastBridge","PiCorePlayer","ARDAudiothek","VisualStatistics","VirginRadio","SqueezeCloud","RadioFavourites","DynamicPlaylists4","Deezer","DSDPlayer","PlayWMA","PlanetRadio","DynamicPlaylistCreator","SigGen","PreventStandby","Live365","LineOut","CustomClockHelper","TimesRadio","MixCloud","ImageProxy","IgnoreDirREManager","BookmarkHistory","BlankSaver","WaveInput","SyncOptions","RatingsLight","RadioFeedsSBS","Pyrrha","LicenseManagerPlugin","DRS","ClassicalRadio","VolumeLock","VirtualLibraryCreator","UseCommentTagInfo","TitleSwitcher","SwitchGroupPlayer","SleepFade","SettingsManager","MusicMagic","LocalPlayer","LMSdbopt","CustomBrowse","BlissMixer","AutoRescan","iTunes","TimeSpeller","SqueezePlayAdminClient","SqueezeDSP","SqueezeCLIHandler","SpottyAARCH64Bin","SQLPlayList","SBNetIO","RemoteControl","Reliable","RadioTunes","Phishin","NoSetup","LMSannounce","KidsPlay","JazzRadio","DynamicPlaylists3","DatabaseQuery","CustomTagImporter","CustomStartStopTimes","CustomSkip3","ContextMenu","ClassicFM","CBCCanadaFrancais","AllQuiet","Accuradio","ZenRadio","Wefunk","UKRadioPlayer","TrackStat","TVH","SuperDateTime","SugarCube","SqueezeCEC","SimpleLibraryViews","RockRadio","ResonanceFM","ResetVolume","RemovePlayedSongs","RemoteShell","RatingButtons","PowerSwitchII","PlayMP4","Myph","LMSplaylistEditor","LMSeventTrigger","JustCovers","InguzEQ","IRBlaster","HideMenus","FileViewer","DynamicPlayList","DocsetCreator","DirectPlay","DenonAvpControl","DIfm","CDplayer","C3PO","BBCiPlayerExtra","BBCiPlayer","AutoDisplay","AlternativePlayCount"'
+versions: "\"8.5.1\": 52\n\"9.0.0\": 12"
