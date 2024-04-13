@@ -9,6 +9,7 @@ use XML::Simple;
 
 use constant TESTING => 0;
 use constant REPO_FILE => 'https://raw.githubusercontent.com/LMS-Community/lms-plugin-repository/master/extensions.xml';
+use constant STATS_URL => 'https://stats.lms-community.org/api/stats';
 
 my @categories = (
   "musicservices",
@@ -28,6 +29,7 @@ my %categoryTitles = (
 	skin => 'Skins',
 	information => 'Information, Metadata',
 	misc => 'Miscellaneous',
+	top => 'Most popular',
 );
 
 my %categoryIcons = (
@@ -40,9 +42,10 @@ my %categoryIcons = (
 	tools => 'material-tools',
 	scanning => 'material-file-search-outline',
 	misc => 'material-toy-brick-outline',
+	top => 'material-star-shooting',
 );
 
-my $repo;
+my ($repo, $stats);
 
 print q(---
 layout: default
@@ -85,21 +88,41 @@ eval {
 		},
 		ForceArray => [ 'applet', 'wallpaper', 'sound', 'plugin', 'patch', 'title', 'desc', 'changes' ],
 	);
+
+	$stats = from_json(TESTING
+		? do {
+			warn 'TESTING local file!!!';
+			local $/ = undef;
+			open my $fh, "<", 'stats.json'
+				or die "could not open: $!";
+			<$fh>;
+		}
+		: get(STATS_URL));
+
+	if ($stats && ref $stats && $stats->{plugins}) {
+		map {
+			my ($k, $v) = each %$_;
+			$stats->{$k} = $v;
+		} @{$stats->{plugins} || []};
+	}
+	$stats ||= {};
 } || die "$@";
 
 my $plugins = $repo->{plugins};
 
 my %categories;
 my %seen;
+my %pluginsRef;
 
 foreach (@$plugins) {
 	next if $_->{maxTarget} !~ /^[89*]/;
+	$pluginsRef{$_->{name}} = $_;
 	push @{$categories{$_->{category}}}, $_;
 }
 
 # known categories as listed above first, then those provided by the repo file
 foreach (@categories, keys %categories) {
-	next if $_ eq 'misc';
+	next if $_ =~ /^(?:misc|top)$/;
 
 	my $category = delete $categories{$_};
 	next unless $category;
@@ -107,17 +130,30 @@ foreach (@categories, keys %categories) {
 	printCategory($_, $category);
 }
 
+if (scalar @$plugins > 10) {
+	my @topPlugins;
+	foreach my $plugin (@{$stats->{plugins}}) {
+		my ($name) = keys %$plugin;
+		push @topPlugins, $pluginsRef{$name} if $pluginsRef{$name};
+		last if scalar @topPlugins > 10;
+	}
+
+	if (scalar @topPlugins) {
+		printCategory('top', \@topPlugins, 'nofilter');
+	}
+}
+
 # Miscellaneous last but not least
 printCategory('misc', $categories{'misc'});
 
 sub printCategory {
-	my ($category, $data) = @_;
+	my ($category, $data, $noFilter) = @_;
 
 	$data = [ sort {
 		lc($a->{title}->{EN}) cmp lc($b->{title}->{EN})
 	} grep {
 		!$seen{$_->{name}}++
-	} @$data ];
+	} @$data ] unless $noFilter;
 
 	return unless scalar @$data;
 
@@ -145,6 +181,7 @@ sub printCategory {
 		printf("    %s", $author) if !$_->{email};
 		printf("    [:octicons-mail-24: %s](mailto:%s)", $author, $_->{email}) if $_->{email};
 		printf("    - [:octicons-globe-24: Details](%s)", $_->{link}) if $_->{link};
+		printf("    - :octicons-download-24: %s", $stats->{$_->{name}}) if $stats->{$_->{name}};
 		print  "\n\n";
 	}
 
