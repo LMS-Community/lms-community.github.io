@@ -12,6 +12,7 @@ countries: |-
   "ES": 2
   "PL": 1
   "NZ": 1
+  "IT": 1
   "CZ": 1
   "CR": 1
   "BE": 1
@@ -21,7 +22,7 @@ histInstallations: '44,80,80'
 histPlayers: '127,50,345'
 os: |-
   "piCore - aarch64": 20
-  "Debian (Docker) - x86_64": 11
+  "Debian (Docker) - x86_64": 12
   "Windows - 8664": 9
   "piCore - armv7l": 9
   "Debian - aarch64": 8
@@ -34,9 +35,9 @@ os: |-
   "Gentoo Linux - armv5tel": 1
   "Linux - aarch64": 1
   "Linux - x86_64": 1
-pluginCounts: '78,77,77,76,74,73,73,70,70,70,69,66,65,65,64,62,62,62,58,57,51,50,49,49,47,47,45,42,40,37,31,31,30,27,27,27,27,26,24,24,23,23,23,20,19,18,17,17,16,16,16,15,14,14,14,13,13,12,12,12,11,11,11,11,11,10,10,10,10,10,9,8,8,8,8,7,7,7,7,7,6,6,6,6,6,6,6,6'
-pluginLabels: '"FullTextSearch","ViewTags","RandomPlay","ExtendedBrowseModes","PresetsEditor","SavePlaylist","InternetRadio","Sounds","NetTest","MaterialSkin","DontStopTheMusic","DateTime","SongScanner","Rescan","OnlineLibrary","Visualizer","RemoteLibrary","DnDPlay","JiveExtras","InfoBrowser","RadioParadise","AudioScrobbler","MusicArtistInfo","LineIn","RSSNews","CommunityFirmware","RadioNowPlaying","DigitalInput","RadioNet","Podcast","Spotty","BBCSounds","PlayHistory","MyApps","Favorites","Extensions","CLI","ClientCleanup","MusicInfoSCR","Bandcamp","PlayHLS","Groups","1001Albums","LastMix","YouTube","PodcastExt","UPnP","SqueezeESP32","SongLyrics","Qobuz","PowerSave","SongInfo","UPnPBridge","RaopBridge","CastBridge","iHeartRadio","TIDAL","WalkWithMe","GlobalPlayerUK","DynamicPlaylists4","ShairTunes2W","RadioFrance","PlaylistMan","PiCorePlayer","DynamicPlaylistCreator","VisualStatistics","VirginRadio","SqueezeCloud","RadioFavourites","ARDAudiothek","DSDPlayer","PreventStandby","PlanetRadio","Deezer","CustomClockHelper","TimesRadio","PlayWMA","Live365","LineOut","BlankSaver","SyncOptions","SigGen","RatingsLight","MusicMagic","MixCloud","LicenseManagerPlugin","CustomBrowse","BookmarkHistory"'
+pluginCounts: '79,78,78,77,74,74,74,71,71,70,70,66,66,66,65,62,62,62,59,58,51,50,50,49,47,47,46,42,40,37,32,31,30,27,27,27,27,26,25,25,24,23,23,21,20,18,17,17,17,16,16,16,15,14,14,13,13,12,12,12,12,11,11,11,11,10,10,10,10,10,9,8,8,8,8,7,7,7,7,7,6,6,6,6,6,6,6,6'
+pluginLabels: '"FullTextSearch","ViewTags","RandomPlay","ExtendedBrowseModes","SavePlaylist","PresetsEditor","InternetRadio","Sounds","MaterialSkin","NetTest","DontStopTheMusic","SongScanner","Rescan","DateTime","OnlineLibrary","Visualizer","RemoteLibrary","DnDPlay","JiveExtras","InfoBrowser","RadioParadise","MusicArtistInfo","AudioScrobbler","LineIn","RSSNews","CommunityFirmware","RadioNowPlaying","DigitalInput","RadioNet","Podcast","Spotty","BBCSounds","PlayHistory","MyApps","Favorites","Extensions","CLI","ClientCleanup","MusicInfoSCR","Bandcamp","PlayHLS","Groups","1001Albums","LastMix","YouTube","PodcastExt","UPnP","SqueezeESP32","SongLyrics","SongInfo","Qobuz","PowerSave","RaopBridge","UPnPBridge","CastBridge","iHeartRadio","TIDAL","WalkWithMe","ShairTunes2W","GlobalPlayerUK","DynamicPlaylists4","RadioFrance","PlaylistMan","PiCorePlayer","DynamicPlaylistCreator","VisualStatistics","VirginRadio","SqueezeCloud","RadioFavourites","ARDAudiothek","DSDPlayer","PreventStandby","PlanetRadio","Deezer","CustomClockHelper","TimesRadio","PlayWMA","Live365","LineOut","BlankSaver","SyncOptions","SigGen","RatingsLight","MusicMagic","MixCloud","LicenseManagerPlugin","CustomBrowse","BookmarkHistory"'
 versions: |-
   "8.5.1": 61
-  "9.0.0": 20
+  "9.0.0": 21
   "8.5.0": 1
