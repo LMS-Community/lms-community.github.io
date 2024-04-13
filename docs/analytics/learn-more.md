@@ -23,20 +23,23 @@ You can enable debug logging for `plugin.analytics` to see what is being reporte
 
 ```
 Slim::Plugin::Analytics::Plugin::_reportStats (53) nIj.............YhF8: {
-  os => "macOS 14.4.1",
-  perl => "5.34.0",
-  platform => "arm64",
-  players => 0,
-  plugins => [
-        "1001Albums",
-        "AudioScrobbler",
-        "Bandcamp",
-        .........
-        "TIDAL",
-        "ViewTags",
-      ],
-  skin => "Default",
-  tracks => 441,
-  version => "8.5.1",
+  os          => "linux",
+  osname      => "Debian (Docker)",
+  perl        => "5.32.1",
+  platform    => "x86_64-linux",
+  playerTypes => { baby => 1, fab4 => 1, receiver => 1 },
+  players     => 3,
+  plugins     => [
+                   "1001Albums",
+                   "AudioScrobbler",
+                   "Bandcamp",
+                   .........
+                   "TIDAL",
+                   "ViewTags",
+                 ],
+  revision    => "1712965357",
+  skin        => "Default",
+  tracks      => 441,
+  version     => "9.0.0",
 }
 ```
