@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "06 0 * * *"
+    - cron: "06 5 * * *"
   workflow_dispatch:
     inputs:
       branch:
@@ -108,7 +108,7 @@ jobs:
           else
             echo "No changes to commit";
           fi
-          
+
   deploy-mkdocs:
 
     if: ${{ always() }}
