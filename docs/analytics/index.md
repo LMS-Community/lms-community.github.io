@@ -24,7 +24,6 @@ config:
 ---
 xychart-beta
     x-axis [{{ histDates }}]
-    y-axis 0 --> 200
     line [{{ histInstallations }}]
 ```
 
@@ -40,7 +39,6 @@ config:
 ---
 xychart-beta
     x-axis [{{ histDates }}]
-    y-axis 0 --> 500
     line [{{ histPlayers }}]
 ```
 
