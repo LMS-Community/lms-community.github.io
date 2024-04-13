@@ -17,10 +17,10 @@ eval {
     my $ua = LWP::UserAgent->new();
     # $ua->ssl_opts(verify_hostname => 0);
     my $resp = $ua->get(STATS_SUMMARY);
-	$stats   = from_json($resp->content);
+    $stats   = from_json($resp->content);
 
     $resp    = $ua->get(STATS_HISTORY);
-	$history = from_json($resp->content);
+    $history = from_json($resp->content);
 } || die "$@";
 
 my $c;
@@ -35,7 +35,7 @@ my %stats = (
     histDates   => join(',', map { sprintf('"%s"', $_->{d}) } @$history),
     # get the total number of installations from the versions counts
     histInstallations => join(',', map { $c = 0; map { my ($k, $v) = each %$_; $c+=$v } @{from_json($_->{v})}; $c } @$history),
-    histPlayers => join(',', map { $_->{p} } @$history),
+    histPlayers => join(',', map { $_->{p} || 0 } @$history),
 );
 
 YAML::DumpFile(STATS_YAML, \%stats);
