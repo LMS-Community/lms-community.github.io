@@ -33,7 +33,7 @@ env:
   PLUGIN_TARGET: docs/plugins/directory.md
   SQUEEZELITE_MANPAGE_SRC: https://raw.githubusercontent.com/ralph-irving/squeezelite/master/doc/squeezelite.1
   SQUEEZELITE_MANPAGE_TARGET: docs/players-and-controllers/squeezelite-manpage.md
-  STRINGS_COVERAGE_YAML: docs/contributing/strings-coverage.yaml
+  STRINGS_COVERAGE_JSON: docs/contributing/strings-coverage.json
 
 jobs:
 
@@ -94,7 +94,7 @@ jobs:
 
       - name: Get translation coverage of slimserver strings.txt
         run: |
-          tools/strings-coverage.py <(curl -s https://raw.githubusercontent.com/LMS-Community/slimserver/HEAD/strings.txt) >$STRINGS_COVERAGE_YAML
+          tools/get-strings-coverage.py <(curl -s https://raw.githubusercontent.com/LMS-Community/slimserver/HEAD/strings.txt) >$STRINGS_COVERAGE_JSON
 
       - name: Commit changes
         if: ${{ !env.ACT }}

@@ -27,16 +27,15 @@ The data below can be skewed towards English, as there's no need to define terms
 !!! tip
     If your translation would be identical to the English version, there's no need to redefine it for your language, as LMS would automatically fall back to English. Therefore there's no need to try to achieve 100% coverage!
 
-<p style="text-align: center;">Coverage in %</p>
-```mermaid
----
-config:
-    xyChart:
-        height: 400
-    {{ xyBarStyles }}
----
-xychart-beta horizontal
-    x-axis [{{ translationLabels }}]
-    y-axis 0 --> 100
-    bar [{{ translationCoverage }}]
+```vegalite
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Coverage in %",
+  "data": {"url": "/contributing/strings-coverage.json"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Coverage", "type": "quantitative"},
+    "y": {"field": "Language", "type": "nominal", "sort": "-x"}
+  }
+}
 ```

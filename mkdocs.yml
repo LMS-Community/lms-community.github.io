@@ -18,8 +18,9 @@ theme:
     - navigation.path
     - navigation.expand
     - navigation.sections
-    - navigation.instant
-    - navigation.instant.progress
+    # Not compatible in combination with privacy feature and mkdocs-charts-plugin 
+    #- navigation.instant
+    #- navigation.instant.progress
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -44,6 +45,7 @@ theme:
 plugins:
   - search
   - privacy
+  - charts
   - macros:
       include_yaml:
         - docs/assets/chartStyles.yaml
@@ -51,6 +53,11 @@ plugins:
         - docs/contributing/strings-coverage.yaml
         - docs/getting-started/downloads.yaml
         - docs/players-and-controllers/firmware-versions.yaml
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/vega@5
+  - https://cdn.jsdelivr.net/npm/vega-lite@5
+  - https://cdn.jsdelivr.net/npm/vega-embed@6
 
 extra:
   social:
@@ -70,6 +77,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: vegalite
+          class: vegalite
+          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
