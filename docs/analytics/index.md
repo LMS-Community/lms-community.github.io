@@ -76,7 +76,7 @@ pie title Operating Systems
 ---
 config:
     xyChart:
-        height: 3000
+        height: 2000
     {{ xyBarStyles }}
 ---
 xychart-beta horizontal

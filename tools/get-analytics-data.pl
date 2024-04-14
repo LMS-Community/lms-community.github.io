@@ -45,7 +45,7 @@ sub prepareData {
             qq("$k ($v)": $v);
         } @{$data || []}
     ];
-    push @$data, qq("Others": $others) if $others;
+    push @$data, qq("Others ($others)": $others) if $others;
 
     return join("\n", @$data);
 }
@@ -62,13 +62,11 @@ foreach (@{$stats->{plugins} || []}) {
 my $c;
 my %stats = (
     versions  => prepareData($stats->{versions}),
-    countries => prepareData($stats->{countries}, 3),
-    os        => prepareData($stats->{os}, 4),
+    countries => prepareData($stats->{countries}, 10),
+    os        => prepareData($stats->{os}, 6),
 
     pluginLabels => join(',', @pluginLabels),
     pluginCounts => join(',', @pluginCounts),
-    # pluginLabels => join(',', map { sprintf('"%s"', keys %$_) } @{$stats->{plugins} || []}),
-    # pluginCounts => join(',', map { (values %$_)[0] } @{$stats->{plugins} || []}),
 
     histDates   => join(',', map { sprintf('"%s"', $_->{d}) } @$history),
     # get the total number of installations from the versions counts
