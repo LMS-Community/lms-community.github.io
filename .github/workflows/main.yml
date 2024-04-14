@@ -142,5 +142,6 @@ jobs:
       - run: |
           pip install mkdocs-material
           pip install mkdocs-macros-plugin
+          pip install mkdocs-charts-plugin
 
       - run: mkdocs gh-deploy --force
