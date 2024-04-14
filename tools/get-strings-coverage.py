@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sys
+import json
 import fileinput
 from babel import Locale
 
@@ -32,7 +32,7 @@ for lang in translations.keys():
 	total = max(total, len(translations[lang]))
 
 # Get display name of language code and calculate percentage
-output = {}
+output = []
 for lang in translations.keys():
 	loc = Locale.parse(lang)
 
@@ -40,17 +40,6 @@ for lang in translations.keys():
 	language_id = lang
 	coverage = 100.0 * len(translations[lang]) / total
 
-	output[language] = coverage
+	output.append({"Language": language, "Identifier": language_id, "Coverage": coverage})
 
-# Sort on percentage
-output_view = [ (v,k) for k,v in output.items() ]
-output_view.sort(reverse=True)
-
-# Output to stdout
-sys.stdout.write('---\n')
-sys.stdout.write('translationLabels: "\\"')
-sys.stdout.write('\\", \\"'.join([lang for _,lang in output_view]))
-sys.stdout.write('\\""\n')
-sys.stdout.write('translationCoverage: "')
-sys.stdout.write(', '.join([str(coverage) for coverage,_ in output_view]))
-sys.stdout.write('"\n')
+print(json.dumps(output))
