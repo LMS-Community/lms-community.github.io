@@ -15,7 +15,7 @@ my ($stats, $history);
 
 eval {
     my $ua = LWP::UserAgent->new();
-    # $ua->ssl_opts(verify_hostname => 0);
+    $ua->ssl_opts(verify_hostname => 0);
     my $resp = $ua->get(STATS_SUMMARY);
     $stats   = from_json($resp->content);
 
@@ -23,14 +23,52 @@ eval {
     $history = from_json($resp->content);
 } || die "$@";
 
+sub prepareData {
+    my ($data, $cutoff) = @_;
+    $cutoff ||= 0;
+
+    my $others = 0;
+
+    $data = [
+        grep {
+            my $keep = 1;
+            if (/": (\d+)/) {
+                if ($1 < $cutoff) {
+                    $others += $1;
+                    $keep = 0;
+                }
+            }
+
+            $keep;
+        } map {
+            my ($k, $v) = each %$_;
+            qq("$k ($v)": $v);
+        } @{$data || []}
+    ];
+    push @$data, qq("Others": $others) if $others;
+
+    return join("\n", @$data);
+}
+
+my (@pluginLabels, @pluginCounts);
+foreach (@{$stats->{plugins} || []}) {
+    my ($k, $v) = each %$_;
+    if ($v > 10) {
+        push @pluginCounts, $v;
+        push @pluginLabels, qq("$k");
+    }
+}
+
 my $c;
 my %stats = (
-    versions  => join("\n", map { my ($k, $v) = each %$_; qq("$k": $v) } @{$stats->{versions} || []}),
-    countries => join("\n", map { my ($k, $v) = each %$_; qq("$k": $v) } @{$stats->{countries} || []}),
-    os        => join("\n", map { my ($k, $v) = each %$_; qq("$k": $v) } @{$stats->{os} || []}),
+    versions  => prepareData($stats->{versions}),
+    countries => prepareData($stats->{countries}, 3),
+    os        => prepareData($stats->{os}, 4),
 
-    pluginLabels => join(',', map { sprintf('"%s"', keys %$_) } @{$stats->{plugins} || []}),
-    pluginCounts => join(',', map { (values %$_)[0] } @{$stats->{plugins} || []}),
+    pluginLabels => join(',', @pluginLabels),
+    pluginCounts => join(',', @pluginCounts),
+    # pluginLabels => join(',', map { sprintf('"%s"', keys %$_) } @{$stats->{plugins} || []}),
+    # pluginCounts => join(',', map { (values %$_)[0] } @{$stats->{plugins} || []}),
 
     histDates   => join(',', map { sprintf('"%s"', $_->{d}) } @$history),
     # get the total number of installations from the versions counts
