@@ -1,17 +1,25 @@
-## Version 8.5.1
-
-- [Upstream fixes from Logitech Media Server 8.4.1](#version-841)
+## Version 8.5.2
 
 - New Features:
 
-	- Add optional plugin to report data about your LMS installation - see [forum discussion](https://forums.slimdevices.com/forum/user-forums/general-discussion/1697108).
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
+## Version 8.5.1 - 2024-04-15 (3b46196aa)
+
+- New Features:
+
+	- Add plugin to report data about your LMS installation - see [forum discussion](https://forums.slimdevices.com/forum/user-forums/general-discussion/1697108).
 
 - Server Changes:
 
 	- Add links to the settings of the AudioAddict based services.
 	- Add support for "DELETE" HTTP verb to SimpleAsyncHTTP.
-
-- Platform Support:
 
 - Bug Fixes:
 
