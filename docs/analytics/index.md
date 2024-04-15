@@ -151,8 +151,8 @@ title: Some numbers about LMS Installations
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 750,
-  "height": 350,
+  "width": 850,
+  "height": 450,
   "data": {
     "url": "/analytics/world_map.json",
     "format": {"property": "features"}
