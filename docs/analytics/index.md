@@ -105,6 +105,8 @@ title: Some numbers about LMS Installations
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 250,
   "description": "Player types",
   "data": {
     "url": "/analytics/stats.json",
@@ -130,11 +132,13 @@ title: Some numbers about LMS Installations
 }
 ```
 
-## Operating systems
+## Operating systems and architectures
 
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 250,
   "description": "Player types",
   "data": {
     "url": "/analytics/stats.json",
@@ -144,24 +148,6 @@ title: Some numbers about LMS Installations
   "encoding": {
     "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
     "color": {"field": "o", "type": "nominal", "title": "Operating System"}
-  }
-}
-```
-
-## Architectures
-
-```vegalite
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Player types",
-  "data": {
-    "url": "/analytics/stats.json",
-    "format": {"property": "arch"}
-  },
-  "mark": {"type": "arc", "tooltip": true},
-  "encoding": {
-    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
-    "color": {"field": "a", "type": "nominal", "title": "Architecture"}
   }
 }
 ```
