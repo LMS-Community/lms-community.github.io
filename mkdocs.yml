@@ -91,6 +91,7 @@ markdown_extensions:
 nav:
   - Home:
     - Overview: index.md
+    - Analytics: analytics/index.md
     - Community Forums: https://forums.slimdevices.com
   - Getting Started with LMS:
     - Download & Installation: getting-started/index.md
