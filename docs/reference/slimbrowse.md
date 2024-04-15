@@ -99,6 +99,7 @@ These fields are parsed into a menu item. Some fields are designed to complement
     textkey = "."
     icon-id = ...
     icon = "..."
+    extid = "..."
     radio = val
     checkbox = val
     slider = val
@@ -107,6 +108,7 @@ These fields are parsed into a menu item. Some fields are designed to complement
     nextWindow = val
     setSelectedIndex = integer
     onClick = val
+    showBigArtwork = ...
     input = {
         <input_fields>
     }
@@ -116,6 +118,7 @@ These fields are parsed into a menu item. Some fields are designed to complement
     actions = {
         <actions_fields>
     }
+    <action_alias> = "..."
 }
 ```
 
@@ -129,6 +132,8 @@ Where (items in bold are mandatory):
     * Artwork ID. Will be fetched using a separate http request to LMS using the well known URL. The size is defined by the style. `icon-id` has precedence over `icon` (defined below).
 * `icon`
     * Full or partial URL of some image to display.
+* `extid`
+    * The album's external ID, if it is eg. from an online music service.
 * `radio`
     * If present, indicates a radio button is to be created for this item. Radio buttons must also involve a do action, defined in `<action_fields>`.
 * `checkbox`
@@ -141,6 +146,9 @@ Where (items in bold are mandatory):
     * Must be paired with `selectedIndex` and actions->do->choices. An array of strings to use in coordination with the choices array.
 * `onClick`
     * specify a specific window for items to refresh with new data when the item is selected (this is really for use with radio/checkbox/choice items). `refreshMe`, `refreshOrigin`, and `refreshGrandparent` are valid values
+* `showBigArtWork`
+    * If present, indicates that the "go"/"do" action will return an artwork id or
+      URL, which can be used the fetch an image to display in a popup.
 * `nextWindow`
     * `nextWindow` is a special directive to tell Squeezeplay to load or refresh a particular window after executing the command.
     * `nextWindow` param at the item level takes precedence over a `nextWindow` directive at the base level, but a `nextWindow` param at the json command level (e.g., 'go' action) is highest precedence.
@@ -162,6 +170,16 @@ Where (items in bold are mandatory):
     * Allows specifying the elements to use for a window opened from this menu. See <window_fields>.
 * `actions`
     * Allows specifying the command(s) to use for this menu. See <actions_fields>.
+* `<action_alias>`
+  * If present in item, instructs the client to use a different Action for the given action.
+  * The actions which can be renamed and their aliases are:
+
+    | Action      | Alias            |
+    |-------------|------------------|
+    | "play"      | "playAction"     |
+    | "play-hold" | "playHoldAction" |
+    | "add"       | "addAction"      |
+    | "go"        | "goAction"       |
 
 
 ## `<input_fields>`
@@ -211,6 +229,7 @@ If selecting an item results in opening a new window (i.e. the "go" action), the
     icon = "..."
     titleStyle = "..."
     menuStyle = "..."
+    windowStyle = "..."
     help = {
              text = "..."
     }
@@ -228,6 +247,12 @@ Where (items in bold are mandatory):
     * Same as textarea, but send a string token that is translated on the client-side. Same caveats as textarea apply. `textareaToken` is used for a specific case and is unlikely to be useful for plugin development.
 * `titleStyle` and `menuStyle`
     * Style of the title (resp. menu) of the new window. Typically, this is the same for all items and is defined in `<base_fields>.<window_fields>`. The only supported value is "album" (for multiline with icon title/item).
+* `windowStyle`
+  * Style of the new window. If absent and menuStyle is "album" then use "icon_list". Default value is "text_list".
+  * Supported values:
+    * "home_menu"
+    * "icon_list"
+    * "text_list"
 * `help{text}`
     * Displays help text at the bottom of a window.
 * `windowId`
@@ -260,8 +285,8 @@ Actions are identified by their name, corresponding to the keys or other control
 Actions are defined using a string composed of the key pressed and its holding state.
 
 * __`keys`__
-    * One of "go"/"do", "back", "play", "add", "rew", "fwd" or "pause".
-* __holding state__ or "-hold" (not for "go"/"do" and "back")
+    * One of "go"/"do", "more", "back", "play", "add", "rew", "fwd" or "pause".
+* __holding state__ or "-hold" (not for "go"/"do", "more" and "back")
 
 For example, field play-hold defines the command to send when the play key is held. It can be defined at the item level (applies to the item only), or at the base level. In this last case, it can be complemented by params defined at the item level.
 
@@ -377,6 +402,11 @@ For further reference Slim::Control::Jive has several spots where sliders are co
 
 Paging parameters (json: _index and _qty, url: TBD) are added automatically by Jive for "go".
 
+### More actions
+"more" refers to a command that opens as a context menu.
+
+Paging parameters (json: _index and _qty, url: TBD) are added automatically by Jive.
+
 ### Choices array in Do action
 If a "choices" array of commands is sent in the do actions hashref along with a selectedIndex var and choiceStrings array in the main body of the item, each of the choices array elements will be paired with the choiceStrings and the menu item will be delivered with a choice widget. Each element in the choices array will form the command callback when that choice is selected.
 
@@ -395,6 +425,49 @@ Some actions have "built in" defaults: the presence of a new action overrides Ji
     * Does `stop`
 * play, play-hold, add, add-hold, rew-hold, fwd-hold
     * These have no predefined command.
+
+### Special params
+Some parameters have special meaning in the client.
+
+* slideshow
+    * If present, the action is expected to return a list of images in the format described in Slideshow.
+* isContextMenu
+    * If present, the action result shall display in a context menu instead of a new window.
+
+### Slideshow
+
+```perl
+{
+    base = {
+        <base_fields>
+    },
+    offset = 0,
+    title = "...",
+    data = [
+        {
+            <image_fields>
+        },
+        {
+            <image_fields>
+        },
+        ...,
+    ],
+}
+```
+
+### `<image_fields>`
+
+```perl
+{
+    image = "...",
+    caption = "..."
+}
+```
+
+* __`image`__
+  * Full or partial URL of some image to display.
+* __`caption`__
+  * A short piece of text that describes the image
 
 ### Example
 
