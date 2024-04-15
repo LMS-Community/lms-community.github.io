@@ -16,53 +16,9 @@ title: Some numbers about LMS Installations
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Number of LMS installations",
-  "data": {
-    "url": "analytics/stats.json",
-    "format": {"property": "history"}
-  },
-  "encoding": {
-    "x": {"field": "date", "type": "temporal", "title": "Date"},
-    "y": {"field": "installations", "type": "quantitative", "title": "Installations"}
-  },
-  "layer": [
-    {
-        "mark": {
-            "type": "line",
-            "point": {
-                "filled": false,
-                "fill": "white"
-            }
-        }
-    },
-    {
-        "params": [{
-            "name": "hover",
-            "select": {"type": "point", "on": "pointerover", "clear": "pointerout"}
-        }],
-        "mark": {"type": "circle", "tooltip": true},
-        "encoding": {
-            "opacity": {
-                "condition": {"test": {"param": "hover", "empty": false}, "value": 1},
-                "value": 0
-            },
-            "size": {
-                "condition": {"test": {"param": "hover", "empty": false}, "value": 48},
-                "value": 100
-            }
-        }
-    }]
-}
-```
-
-## Version history
-
-```vegalite
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "LMS Installations by Version",
   "data": {
-    "url": "analytics/stats.json",
+    "url": "/analytics/stats.json",
     "format": {"property": "versions"}
   },
   "encoding": {
@@ -107,13 +63,13 @@ title: Some numbers about LMS Installations
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Player types",
   "data": {
-    "url": "analytics/stats.json",
+    "url": "/analytics/stats.json",
     "format": {"property": "players"}
   },
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
-    "theta": {"field": "value", "type": "quantitative", "stack": "normalize"},
-    "color": {"field": "player type", "type": "nominal"}
+    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
+    "color": {"field": "p", "type": "nominal", "title": "Player type"}
   }
 }
 ```
@@ -125,13 +81,13 @@ title: Some numbers about LMS Installations
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Player types",
   "data": {
-    "url": "analytics/stats.json",
+    "url": "/analytics/stats.json",
     "format": {"property": "os"}
   },
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
-    "theta": {"field": "value", "type": "quantitative", "stack": "normalize"},
-    "color": {"field": "operating system", "type": "nominal"}
+    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
+    "color": {"field": "o", "type": "nominal", "title": "Operating System"}
   }
 }
 ```
@@ -143,13 +99,13 @@ title: Some numbers about LMS Installations
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Player types",
   "data": {
-    "url": "analytics/stats.json",
+    "url": "/analytics/stats.json",
     "format": {"property": "arch"}
   },
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
-    "theta": {"field": "value", "type": "quantitative", "stack": "normalize"},
-    "color": {"field": "architecture", "type": "nominal"}
+    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
+    "color": {"field": "a", "type": "nominal", "title": "Architecture"}
   }
 }
 ```
@@ -162,7 +118,7 @@ title: Some numbers about LMS Installations
   "width": 750,
   "height": 350,
   "data": {
-    "url": "analytics/world_map.json",
+    "url": "/analytics/world_map.json",
     "format": {"property": "features"}
   },
   "projection": {"type": "naturalEarth1"},
@@ -170,24 +126,23 @@ title: Some numbers about LMS Installations
     {
       "lookup": "properties.iso_a2",
       "from": {
-        "key": "country",
-        "fields": ["installs"],
+        "key": "c",
+        "fields": ["i"],
         "data": {
-          "url": "analytics/stats.json",
+          "url": "/analytics/stats.json",
           "format": {"property": "countries"}
-        } 
+        }
       }
     }
   ],
   "mark": {
     "type": "geoshape",
-    
     "stroke": "#141010",
     "strokeWidth": 0.5
   },
   "encoding": {
     "color": {
-      "field": "installs",
+      "field": "i",
       "type": "quantitative",
       "scale": {"scheme": "greens"},
       "legend": null
@@ -195,9 +150,9 @@ title: Some numbers about LMS Installations
     "tooltip": [
       {"field": "properties.name", "title": "Country"},
       {
-        "field": "installs",
+        "field": "i",
         "type": "quantitative",
-        "title": "Installs"
+        "title": "Installations"
       }
     ]
   },
@@ -212,13 +167,13 @@ title: Some numbers about LMS Installations
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": {"step": 17},
   "data": {
-    "url": "analytics/stats.json",
+    "url": "/analytics/stats.json",
     "format": {"property": "plugins"}
   },
   "mark": "bar",
   "encoding": {
-    "y": {"field": "plugin", "title": "Plugins", "type": "nominal", "sort": "-x"},
-    "x": {"field": "installations", "title": "Installations", "type": "quantitative"}
+    "y": {"field": "p", "title": "Plugins", "type": "nominal", "sort": "-x"},
+    "x": {"field": "i", "title": "Installations", "type": "quantitative"}
   }
 }
 ```
