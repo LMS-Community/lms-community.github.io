@@ -56,6 +56,51 @@ title: Some numbers about LMS Installations
 }
 ```
 
+## Number of connected players
+
+```vegalite
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Connected players",
+  "data": {
+    "url": "/analytics/stats.json",
+    "format": {"property": "players"}
+  },
+  "encoding": {
+    "x": {"field": "d", "type": "temporal", "title": "Date"},
+    "y": {"field": "p", "type": "quantitative", "title": "Connected Players"},
+    "color": {"field": "c", "type": "nominal", "title": "Total"}
+  },
+  "layer": [
+    {
+        "mark": {
+            "type": "line",
+            "point": {
+                "filled": false,
+                "fill": "white"
+            }
+        }
+    },
+    {
+        "params": [{
+            "name": "hover",
+            "select": {"type": "point", "on": "pointerover", "clear": "pointerout"}
+        }],
+        "mark": {"type": "circle", "tooltip": true},
+        "encoding": {
+            "opacity": {
+                "condition": {"test": {"param": "hover", "empty": false}, "value": 1},
+                "value": 0
+            },
+            "size": {
+                "condition": {"test": {"param": "hover", "empty": false}, "value": 48},
+                "value": 100
+            }
+        }
+    }]
+}
+```
+
 ## Player types
 
 ```vegalite
@@ -64,7 +109,7 @@ title: Some numbers about LMS Installations
   "description": "Player types",
   "data": {
     "url": "/analytics/stats.json",
-    "format": {"property": "players"}
+    "format": {"property": "playerTypes"}
   },
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
@@ -173,7 +218,7 @@ title: Some numbers about LMS Installations
   "mark": "bar",
   "encoding": {
     "y": {"field": "p", "title": "Plugins", "type": "nominal", "sort": "-x"},
-    "x": {"field": "i", "title": "Installations", "type": "quantitative"}
+    "x": {"field": "c", "title": "Installations", "type": "quantitative"}
   }
 }
 ```

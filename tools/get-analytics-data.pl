@@ -9,7 +9,6 @@ use YAML;
 
 use constant STATS_SUMMARY => 'https://stats.lms-community.org/api/stats';
 use constant STATS_HISTORY => 'https://stats.lms-community.org/api/stats/history';
-use constant STATS_YAML    => 'docs/analytics/stats.yaml';
 
 my ($stats, $history);
 
@@ -24,17 +23,19 @@ eval {
 } || die "$@";
 
 sub prepareData {
-    my ($data, $cutoff) = @_;
+    my ($data, $cutoff, $valueLabel, $countLabel) = @_;
     $cutoff ||= 0;
+    $countLabel ||= 'c';
 
     my $others = 0;
 
     $data = [
         grep {
             my $keep = 1;
-            if (/": (\d+)/) {
-                if ($1 < $cutoff) {
-                    $others += $1;
+
+            if ($cutoff && (my $c = $_->{$countLabel})) {
+                if ($c < $cutoff) {
+                    $others += $c;
                     $keep = 0;
                 }
             }
@@ -42,36 +43,55 @@ sub prepareData {
             $keep;
         } map {
             my ($k, $v) = each %$_;
-            qq("$k ($v)": $v);
+            my $r = {
+                $valueLabel => $k,
+                $countLabel => $v
+            };
         } @{$data || []}
     ];
-    push @$data, qq("Others ($others)": $others) if $others;
 
-    return join("\n", @$data);
+    push @$data, {
+        $valueLabel => 'Others',
+        $countLabel => $others
+    } if $others;
+
+    return $data;
 }
 
-my (@pluginLabels, @pluginCounts);
-foreach (@{$stats->{plugins} || []}) {
-    my ($k, $v) = each %$_;
-    if ($v > 10) {
-        push @pluginCounts, $v;
-        push @pluginLabels, qq("$k");
-    }
+my (@players, @versions);
+
+foreach my $historical (@$history) {
+    push @players, {
+        d => $historical->{d},
+        p => $historical->{p}
+    };
+
+    my $total = 0;
+    push @versions, map {
+        my ($k, $v) = each %$_;
+        $total += $v;
+        {
+            d => $historical->{d},
+            v => $k,
+            c => $v,
+        };
+    } @{from_json($historical->{v}) || []};
+
+    push @versions, {
+        d => $historical->{d},
+        v => "All",
+        c => $total
+    };
 }
 
 my $c;
 my %stats = (
-    versions  => prepareData($stats->{versions}),
-    countries => prepareData($stats->{countries}, 10),
-    os        => prepareData($stats->{os}, 6),
-
-    pluginLabels => join(',', @pluginLabels),
-    pluginCounts => join(',', @pluginCounts),
-
-    histDates   => join(',', map { sprintf('"%s"', $_->{d}) } @$history),
-    # get the total number of installations from the versions counts
-    histInstallations => join(',', map { $c = 0; map { my ($k, $v) = each %$_; $c+=$v } @{from_json($_->{v})}; $c } @$history),
-    histPlayers => join(',', map { $_->{p} || 0 } @$history),
+    versions  => \@versions,
+    players   => \@players,
+    playerTypes => prepareData($stats->{playerTypes}, 0, 'p'),
+    countries => prepareData($stats->{countries}, 10, 'c', 'i'),
+    os        => prepareData($stats->{os}, 6, 'o'),
+    plugins   => prepareData($stats->{plugins}, 10, 'p'),
 );
 
-YAML::DumpFile(STATS_YAML, \%stats);
+print to_json(\%stats);
