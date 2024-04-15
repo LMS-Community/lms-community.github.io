@@ -120,8 +120,9 @@ title: Some numbers about LMS Installations
   ],
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
-    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
-    "color": {"field": "displayname", "type": "nominal", "title": "Player type"}
+    "theta": {"field": "c", "type": "quantitative", "stack": "true", "title": "Count"},
+    "color": {"field": "displayname", "type": "nominal", "title": "Player type", "sort": "c"},
+    "order": {"field": "c", "type": "quantitative", "sort": "descending"}
   }
 }
 ```
@@ -141,7 +142,8 @@ title: Some numbers about LMS Installations
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
     "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
-    "color": {"field": "o", "type": "nominal", "title": "Operating System"}
+    "color": {"field": "o", "type": "nominal", "title": "Operating System", "sort": "c"},
+    "order": {"field": "c", "type": "quantitative", "sort": "descending"}
   }
 }
 ```
