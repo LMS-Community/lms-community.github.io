@@ -34,6 +34,7 @@ env:
   SQUEEZELITE_MANPAGE_SRC: https://raw.githubusercontent.com/ralph-irving/squeezelite/master/doc/squeezelite.1
   SQUEEZELITE_MANPAGE_TARGET: docs/players-and-controllers/squeezelite-manpage.md
   STRINGS_COVERAGE_JSON: docs/contributing/strings-coverage.json
+  STATS_JSON: docs/analytics/stats.json
 
 jobs:
 
@@ -90,7 +91,7 @@ jobs:
 
       - name: Get analytics data
         run: |
-          tools/get-analytics-data.pl
+          tools/get-analytics-data.pl > $STATS_JSON
 
       - name: Get translation coverage of slimserver strings.txt
         run: |

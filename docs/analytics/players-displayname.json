@@ -1,0 +1,82 @@
+[
+  {
+    "name": "slimp3",
+    "displayname": "SliMP3"
+  },
+  {
+    "name": "squeezebox",
+    "displayname": "Squeezebox 1"
+  },
+  {
+    "name": "squeezebox2",
+    "displayname": "Squeezebox 2"
+  },
+  {
+    "name": "squeezebox3",
+    "displayname": "Squeezebox 3"
+  },
+  {
+    "name": "squeezelite",
+    "displayname": "Squeezelite"
+  },
+  {
+    "name": "baby",
+    "displayname": "Squeezebox Radio"
+  },
+  {
+    "name": "fab4",
+    "displayname": "Squeezebox Touch"
+  },
+  {
+    "name": "boom",
+    "displayname": "Squeezebox Boom"
+  },
+  {
+    "name": "receiver",
+    "displayname": "Squeezebox Receiver"
+  },
+  {
+    "name": "controller",
+    "displayname": "Squeezebox Controller"
+  },
+  {
+    "name": "squeezeesp32",
+    "displayname": "SqueezeEsp32"
+  },
+  {
+    "name": "squeezeplay",
+    "displayname": "SqueezePlay"
+  },
+  {
+    "name": "transporter",
+    "displayname": "Transporter"
+  },
+  {
+    "name": "iPengiPod",
+    "displayname": "iPeng iPod"
+  },
+  {
+    "name": "iPengiPad",
+    "displayname": "iPeng iPad"
+  },
+  {
+    "name": "http",
+    "displayname": "HTTP"
+  },
+  {
+    "name": "squeezeplayer",
+    "displayname": "SqueezePlayer"
+  },
+  {
+    "name": "softsqueeze",
+    "displayname": "Softsqueeze"
+  },
+  {
+    "name": "Squeeze connect",
+    "displayname": "Squeeze Connect"
+  },
+  {
+    "name": "daphile",
+    "displayname": "Daphile"
+  }
+]
