@@ -1,0 +1,836 @@
+{
+  "history": [
+    {
+      "date": "2024-04-11",
+      "installations": 44,
+      "players": 127
+    },
+    {
+      "date": "2024-04-12",
+      "installations": 80,
+      "players": 50
+    },
+    {
+      "date": "2024-04-13",
+      "installations": 277,
+      "players": 925
+    },
+    {
+      "date": "2024-04-14",
+      "installations": 609,
+      "players": 1838
+    },
+    {
+      "date": "2024-04-15",
+      "installations": 960,
+      "players": 2748
+    }
+  ],
+  "versions": [
+    {
+      "d": "2024-04-12",
+      "v": "8.5.1",
+      "c": 61
+    },
+    {
+      "d": "2024-04-12",
+      "v": "9.0.0",
+      "c": 18
+    },
+    {
+      "d": "2024-04-12",
+      "v": "8.5.0",
+      "c": 1
+    },
+    {
+      "d": "2024-04-11",
+      "v": "8.5.1",
+      "c": 37
+    },
+    {
+      "d": "2024-04-11",
+      "v": "9.0.0",
+      "c": 7
+    },
+    {
+      "d": "2024-04-13",
+      "v": "8.5.1",
+      "c": 201
+    },
+    {
+      "d": "2024-04-13",
+      "v": "9.0.0",
+      "c": 75
+    },
+    {
+      "d": "2024-04-13",
+      "v": "8.5.0",
+      "c": 1
+    },
+    {
+      "d": "2024-04-14",
+      "v": "8.5.1",
+      "c": 453
+    },
+    {
+      "d": "2024-04-14",
+      "v": "9.0.0",
+      "c": 154
+    },
+    {
+      "d": "2024-04-14",
+      "v": "8.5.0",
+      "c": 2
+    }
+  ],
+  "countries": [
+    {
+      "country": "DE",
+      "installs": 266
+    },
+    {
+      "country": "US",
+      "installs": 150
+    },
+    {
+      "country": "GB",
+      "installs": 105
+    },
+    {
+      "country": "NL",
+      "installs": 63
+    },
+    {
+      "country": "FR",
+      "installs": 59
+    },
+    {
+      "country": "CH",
+      "installs": 42
+    },
+    {
+      "country": "AT",
+      "installs": 34
+    },
+    {
+      "country": "CA",
+      "installs": 25
+    },
+    {
+      "country": "SE",
+      "installs": 24
+    },
+    {
+      "country": "IT",
+      "installs": 19
+    },
+    {
+      "country": "BE",
+      "installs": 15
+    }
+  ],
+  "players": [
+    {
+      "player type": "fab4",
+      "value": 55
+    },
+    {
+      "player type": "baby",
+      "value": 16
+    },
+    {
+      "player type": "squeezelite",
+      "value": 10
+    },
+    {
+      "player type": "squeezeesp32",
+      "value": 3
+    }
+  ],
+  "os": [
+    {
+      "operating system": "Linux",
+      "value": 64
+    },
+    {
+      "operating system": "Windows 10",
+      "value": 36
+    },
+    {
+      "operating system": "macOS",
+      "value": 10
+    },
+    {
+      "operating system": "Debian (docker)",
+      "value": 3
+    },
+    {
+      "operating system": "Other",
+      "value": 34
+    }
+  ],
+  "arch": [
+    {
+      "architecture": "x86_64",
+      "value": 64
+    },
+    {
+      "architecture": "aarch64",
+      "value": 36
+    }
+  ],
+  "plugins": [
+    {
+      "plugin": "ViewTags",
+      "installations": 995
+    },
+    {
+      "plugin": "FullTextSearch",
+      "installations": 983
+    },
+    {
+      "plugin": "InternetRadio",
+      "installations": 981
+    },
+    {
+      "plugin": "SavePlaylist",
+      "installations": 965
+    },
+    {
+      "plugin": "Rescan",
+      "installations": 965
+    },
+    {
+      "plugin": "ExtendedBrowseModes",
+      "installations": 959
+    },
+    {
+      "plugin": "RandomPlay",
+      "installations": 948
+    },
+    {
+      "plugin": "DontStopTheMusic",
+      "installations": 925
+    },
+    {
+      "plugin": "Sounds",
+      "installations": 921
+    },
+    {
+      "plugin": "PresetsEditor",
+      "installations": 919
+    },
+    {
+      "plugin": "DateTime",
+      "installations": 918
+    },
+    {
+      "plugin": "NetTest",
+      "installations": 906
+    },
+    {
+      "plugin": "OnlineLibrary",
+      "installations": 901
+    },
+    {
+      "plugin": "SongScanner",
+      "installations": 889
+    },
+    {
+      "plugin": "InfoBrowser",
+      "installations": 877
+    },
+    {
+      "plugin": "DnDPlay",
+      "installations": 871
+    },
+    {
+      "plugin": "JiveExtras",
+      "installations": 854
+    },
+    {
+      "plugin": "Visualizer",
+      "installations": 848
+    },
+    {
+      "plugin": "RemoteLibrary",
+      "installations": 834
+    },
+    {
+      "plugin": "LineIn",
+      "installations": 738
+    },
+    {
+      "plugin": "DigitalInput",
+      "installations": 735
+    },
+    {
+      "plugin": "AudioScrobbler",
+      "installations": 735
+    },
+    {
+      "plugin": "RSSNews",
+      "installations": 716
+    },
+    {
+      "plugin": "MaterialSkin",
+      "installations": 588
+    },
+    {
+      "plugin": "Spotty",
+      "installations": 391
+    },
+    {
+      "plugin": "MusicArtistInfo",
+      "installations": 280
+    },
+    {
+      "plugin": "CommunityFirmware",
+      "installations": 280
+    },
+    {
+      "plugin": "RadioParadise",
+      "installations": 242
+    },
+    {
+      "plugin": "UPnPBridge",
+      "installations": 223
+    },
+    {
+      "plugin": "UPnP",
+      "installations": 205
+    },
+    {
+      "plugin": "Podcast",
+      "installations": 188
+    },
+    {
+      "plugin": "YouTube",
+      "installations": 174
+    },
+    {
+      "plugin": "RaopBridge",
+      "installations": 172
+    },
+    {
+      "plugin": "RadioNowPlaying",
+      "installations": 165
+    },
+    {
+      "plugin": "RadioNet",
+      "installations": 165
+    },
+    {
+      "plugin": "MusicMagic",
+      "installations": 157
+    },
+    {
+      "plugin": "SongInfo",
+      "installations": 152
+    },
+    {
+      "plugin": "PreventStandby",
+      "installations": 152
+    },
+    {
+      "plugin": "SongLyrics",
+      "installations": 147
+    },
+    {
+      "plugin": "MusicInfoSCR",
+      "installations": 146
+    },
+    {
+      "plugin": "BBCSounds",
+      "installations": 143
+    },
+    {
+      "plugin": "CastBridge",
+      "installations": 142
+    },
+    {
+      "plugin": "iTunes",
+      "installations": 134
+    },
+    {
+      "plugin": "Qobuz",
+      "installations": 133
+    },
+    {
+      "plugin": "PlayHistory",
+      "installations": 131
+    },
+    {
+      "plugin": "ShairTunes2W",
+      "installations": 116
+    },
+    {
+      "plugin": "ClientCleanup",
+      "installations": 116
+    },
+    {
+      "plugin": "Groups",
+      "installations": 111
+    },
+    {
+      "plugin": "PlaylistMan",
+      "installations": 109
+    },
+    {
+      "plugin": "Bandcamp",
+      "installations": 105
+    },
+    {
+      "plugin": "TIDAL",
+      "installations": 103
+    },
+    {
+      "plugin": "WalkWithMe",
+      "installations": 99
+    },
+    {
+      "plugin": "LastMix",
+      "installations": 96
+    },
+    {
+      "plugin": "ARDAudiothek",
+      "installations": 93
+    },
+    {
+      "plugin": "PlayHLS",
+      "installations": 91
+    },
+    {
+      "plugin": "DSDPlayer",
+      "installations": 90
+    },
+    {
+      "plugin": "PodcastExt",
+      "installations": 87
+    },
+    {
+      "plugin": "AutoRescan",
+      "installations": 86
+    },
+    {
+      "plugin": "SqueezeCloud",
+      "installations": 81
+    },
+    {
+      "plugin": "PowerSave",
+      "installations": 75
+    },
+    {
+      "plugin": "1001Albums",
+      "installations": 75
+    },
+    {
+      "plugin": "GlobalPlayerUK",
+      "installations": 70
+    },
+    {
+      "plugin": "Deezer",
+      "installations": 64
+    },
+    {
+      "plugin": "DynamicPlaylists4",
+      "installations": 63
+    },
+    {
+      "plugin": "iHeartRadio",
+      "installations": 61
+    },
+    {
+      "plugin": "PiCorePlayer",
+      "installations": 61
+    },
+    {
+      "plugin": "RadioFrance",
+      "installations": 60
+    },
+    {
+      "plugin": "SqueezeESP32",
+      "installations": 55
+    },
+    {
+      "plugin": "VisualStatistics",
+      "installations": 52
+    },
+    {
+      "plugin": "SettingsManager",
+      "installations": 52
+    },
+    {
+      "plugin": "DynamicPlaylistCreator",
+      "installations": 52
+    },
+    {
+      "plugin": "PlayWMA",
+      "installations": 49
+    },
+    {
+      "plugin": "LicenseManagerPlugin",
+      "installations": 49
+    },
+    {
+      "plugin": "SyncOptions",
+      "installations": 48
+    },
+    {
+      "plugin": "RadioFavourites",
+      "installations": 48
+    },
+    {
+      "plugin": "VirginRadio",
+      "installations": 46
+    },
+    {
+      "plugin": "RadioFeedsSBS",
+      "installations": 45
+    },
+    {
+      "plugin": "SwitchGroupPlayer",
+      "installations": 44
+    },
+    {
+      "plugin": "PlanetRadio",
+      "installations": 43
+    },
+    {
+      "plugin": "MixCloud",
+      "installations": 43
+    },
+    {
+      "plugin": "RatingsLight",
+      "installations": 41
+    },
+    {
+      "plugin": "BookmarkHistory",
+      "installations": 39
+    },
+    {
+      "plugin": "ClassicalRadio",
+      "installations": 38
+    },
+    {
+      "plugin": "TimesRadio",
+      "installations": 35
+    },
+    {
+      "plugin": "LocalPlayer",
+      "installations": 35
+    },
+    {
+      "plugin": "JazzRadio",
+      "installations": 35
+    },
+    {
+      "plugin": "SuperDateTime",
+      "installations": 34
+    },
+    {
+      "plugin": "RadioTunes",
+      "installations": 34
+    },
+    {
+      "plugin": "WaveInput",
+      "installations": 33
+    },
+    {
+      "plugin": "Live365",
+      "installations": 33
+    },
+    {
+      "plugin": "CustomClockHelper",
+      "installations": 32
+    },
+    {
+      "plugin": "InguzEQ",
+      "installations": 31
+    },
+    {
+      "plugin": "DenonAvpControl",
+      "installations": 31
+    },
+    {
+      "plugin": "Accuradio",
+      "installations": 31
+    },
+    {
+      "plugin": "Pyrrha",
+      "installations": 30
+    },
+    {
+      "plugin": "SigGen",
+      "installations": 29
+    },
+    {
+      "plugin": "VolumeLock",
+      "installations": 28
+    },
+    {
+      "plugin": "DIfm",
+      "installations": 28
+    },
+    {
+      "plugin": "RockRadio",
+      "installations": 27
+    },
+    {
+      "plugin": "LineOut",
+      "installations": 26
+    },
+    {
+      "plugin": "SqueezeDSP",
+      "installations": 25
+    },
+    {
+      "plugin": "DatabaseQuery",
+      "installations": 23
+    },
+    {
+      "plugin": "VirtualLibraryCreator",
+      "installations": 22
+    },
+    {
+      "plugin": "NoSetup",
+      "installations": 22
+    },
+    {
+      "plugin": "IgnoreDirREManager",
+      "installations": 22
+    },
+    {
+      "plugin": "ImageProxy",
+      "installations": 21
+    },
+    {
+      "plugin": "ZenRadio",
+      "installations": 20
+    },
+    {
+      "plugin": "Snow",
+      "installations": 20
+    },
+    {
+      "plugin": "SimpleLibraryViews",
+      "installations": 20
+    },
+    {
+      "plugin": "AlternativePlayCount",
+      "installations": 20
+    },
+    {
+      "plugin": "CustomBrowse",
+      "installations": 19
+    },
+    {
+      "plugin": "Wefunk",
+      "installations": 18
+    },
+    {
+      "plugin": "SleepFade",
+      "installations": 18
+    },
+    {
+      "plugin": "CustomTagImporter",
+      "installations": 18
+    },
+    {
+      "plugin": "AutoDisplay",
+      "installations": 18
+    },
+    {
+      "plugin": "TrackStat",
+      "installations": 17
+    },
+    {
+      "plugin": "Reliable",
+      "installations": 17
+    },
+    {
+      "plugin": "KitchenTimer",
+      "installations": 17
+    },
+    {
+      "plugin": "TVH",
+      "installations": 16
+    },
+    {
+      "plugin": "DRS",
+      "installations": 16
+    },
+    {
+      "plugin": "CDplayer",
+      "installations": 16
+    },
+    {
+      "plugin": "BlankSaver",
+      "installations": 16
+    },
+    {
+      "plugin": "SugarCube",
+      "installations": 14
+    },
+    {
+      "plugin": "DirectPlay",
+      "installations": 14
+    },
+    {
+      "plugin": "DynamicMix",
+      "installations": 13
+    },
+    {
+      "plugin": "BlissMixer",
+      "installations": 13
+    },
+    {
+      "plugin": "UKRadioPlayer",
+      "installations": 12
+    },
+    {
+      "plugin": "TimeSpeller",
+      "installations": 12
+    },
+    {
+      "plugin": "SpottyARMLegacyBin",
+      "installations": 12
+    },
+    {
+      "plugin": "Phishin",
+      "installations": 12
+    },
+    {
+      "plugin": "IRBlaster",
+      "installations": 11
+    },
+    {
+      "plugin": "CustomSkip3",
+      "installations": 11
+    },
+    {
+      "plugin": "C3PO",
+      "installations": 11
+    },
+    {
+      "plugin": "PlayLog",
+      "installations": 10
+    },
+    {
+      "plugin": "MyApps",
+      "installations": 10
+    },
+    {
+      "plugin": "LMSdbopt",
+      "installations": 10
+    },
+    {
+      "plugin": "Favorites",
+      "installations": 10
+    },
+    {
+      "plugin": "Extensions",
+      "installations": 10
+    },
+    {
+      "plugin": "ContextMenu",
+      "installations": 10
+    },
+    {
+      "plugin": "CLI",
+      "installations": 10
+    },
+    {
+      "plugin": "BBCiPlayer",
+      "installations": 10
+    },
+    {
+      "plugin": "AllQuiet",
+      "installations": 10
+    },
+    {
+      "plugin": "TitleSwitcher",
+      "installations": 9
+    },
+    {
+      "plugin": "FilesViewer",
+      "installations": 9
+    },
+    {
+      "plugin": "CBCCanadaFrancais",
+      "installations": 9
+    },
+    {
+      "plugin": "SqueezeCLIHandler",
+      "installations": 8
+    },
+    {
+      "plugin": "SlimTris",
+      "installations": 8
+    },
+    {
+      "plugin": "KidsPlay",
+      "installations": 8
+    },
+    {
+      "plugin": "UseCommentTagInfo",
+      "installations": 7
+    },
+    {
+      "plugin": "SqueezeSonic",
+      "installations": 7
+    },
+    {
+      "plugin": "SpottyAARCH64Bin",
+      "installations": 7
+    },
+    {
+      "plugin": "SaverSwitcher",
+      "installations": 7
+    },
+    {
+      "plugin": "SQLPlayList",
+      "installations": 7
+    },
+    {
+      "plugin": "QuickAccess",
+      "installations": 7
+    },
+    {
+      "plugin": "CustomScan",
+      "installations": 7
+    },
+    {
+      "plugin": "xPL",
+      "installations": 6
+    },
+    {
+      "plugin": "SpottyARMPi0Bin",
+      "installations": 6
+    },
+    {
+      "plugin": "RadiRuKo",
+      "installations": 6
+    },
+    {
+      "plugin": "PlaylistGenerator",
+      "installations": 6
+    },
+    {
+      "plugin": "PhilsLibraries",
+      "installations": 6
+    },
+    {
+      "plugin": "NewShoutcast",
+      "installations": 6
+    },
+    {
+      "plugin": "MultiLibrary",
+      "installations": 6
+    },
+    {
+      "plugin": "LibraryDemo",
+      "installations": "6}]"
+    }
+  ]
+}
