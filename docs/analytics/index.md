@@ -68,8 +68,7 @@ title: Some numbers about LMS Installations
   },
   "encoding": {
     "x": {"field": "d", "type": "temporal", "title": "Date"},
-    "y": {"field": "p", "type": "quantitative", "title": "Connected Players"},
-    "color": {"field": "c", "type": "nominal", "title": "Total"}
+    "y": {"field": "p", "type": "quantitative", "title": "Connected Players"}
   },
   "layer": [
     {
@@ -111,10 +110,22 @@ title: Some numbers about LMS Installations
     "url": "/analytics/stats.json",
     "format": {"property": "playerTypes"}
   },
+  "transform": [
+    {
+      "lookup": "p",
+      "from": {
+        "key": "name",
+        "fields": ["displayname"],
+        "data": {
+          "url": "/analytics/players-displayname.json"
+        }
+      }
+    }
+  ],
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
     "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
-    "color": {"field": "p", "type": "nominal", "title": "Player type"}
+    "color": {"field": "displayname", "type": "nominal", "title": "Player type"}
   }
 }
 ```
