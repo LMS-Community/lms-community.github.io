@@ -143,7 +143,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
   ],
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
-    "theta": {"field": "c", "type": "quantitative", "stack": "true", "title": "Count"},
+    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
     "color": {"field": "displayname", "type": "nominal", "title": "Player type", "sort": "c"},
     "order": {"field": "c", "type": "quantitative", "sort": "descending"}
   }
@@ -205,7 +205,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
       "field": "i",
       "type": "quantitative",
       "scale": {"scheme": "greens"},
-      "legend": null
+      "title": "Installations"
     },
     "tooltip": [
       {"field": "properties.name", "title": "Country"},
@@ -230,10 +230,20 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
     "url": "/analytics/stats.json",
     "format": {"property": "plugins"}
   },
-  "mark": "bar",
+  "layer": [
+    {"mark": { "type": "bar", "tooltip": true }},
+    {
+        "mark": {
+            "type": "text",
+            "align": "right"
+        },
+        "encoding": {"text": {"field": "c", "type": "quantitative"}}
+    }
+  ],
   "encoding": {
     "y": {"field": "p", "title": "Plugins", "type": "nominal", "sort": "-x"},
-    "x": {"field": "c", "title": "Installations", "type": "quantitative"}
+    "x": {"field": "c", "title": "Installations", "type": "quantitative"},
+    "text": {"field": "c", "type": "quantitative"}
   }
 }
 ```
