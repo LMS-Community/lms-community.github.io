@@ -183,7 +183,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
       "field": "i",
       "type": "quantitative",
       "scale": {"scheme": "greens"},
-      "legend": null
+      "title": "Installations"
     },
     "tooltip": [
       {"field": "properties.name", "title": "Country"},
