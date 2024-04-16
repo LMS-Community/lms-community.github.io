@@ -88,6 +88,7 @@ my %stats = (
     versions  => \@versions,
     players   => \@players,
     playerTypes => prepareData($stats->{playerTypes}, 0, 'p'),
+    connectedPlayers => prepareData($stats->{connectedPlayers}, 0, 'p'),
     countries => prepareData($stats->{countries}, 0, 'c', 'i'),
     os        => prepareData($stats->{os}, 6, 'o'),
     plugins   => prepareData($stats->{plugins}, 10, 'p'),
