@@ -5,7 +5,6 @@ use strict;
 use Data::Dump;
 use JSON;
 use LWP::UserAgent;
-use YAML;
 
 use constant STATS_SUMMARY => 'https://stats.lms-community.org/api/stats';
 use constant STATS_HISTORY => 'https://stats.lms-community.org/api/stats/history';
@@ -89,7 +88,7 @@ my %stats = (
     versions  => \@versions,
     players   => \@players,
     playerTypes => prepareData($stats->{playerTypes}, 0, 'p'),
-    countries => prepareData($stats->{countries}, 10, 'c', 'i'),
+    countries => prepareData($stats->{countries}, 0, 'c', 'i'),
     os        => prepareData($stats->{os}, 6, 'o'),
     plugins   => prepareData($stats->{plugins}, 10, 'p'),
 );
