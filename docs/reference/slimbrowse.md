@@ -171,15 +171,15 @@ Where (items in bold are mandatory):
 * `actions`
     * Allows specifying the command(s) to use for this menu. See <actions_fields>.
 * `<action_alias>`
-  * If present in item, instructs the client to use a different Action for the given action.
-  * The actions which can be renamed and their aliases are:
+    * If present in item, instructs the client to use a different Action for the given action.
+    * The actions which can be renamed and their aliases are:
 
-    | Action      | Alias            |
-    |-------------|------------------|
-    | "play"      | "playAction"     |
-    | "play-hold" | "playHoldAction" |
-    | "add"       | "addAction"      |
-    | "go"        | "goAction"       |
+      | Action      | Alias            |
+      |-------------|------------------|
+      | "play"      | "playAction"     |
+      | "play-hold" | "playHoldAction" |
+      | "add"       | "addAction"      |
+      | "go"        | "goAction"       |
 
 
 ## `<input_fields>`
@@ -465,9 +465,9 @@ Some parameters have special meaning in the client.
 ```
 
 * __`image`__
-  * Full or partial URL of some image to display.
+    * Full or partial URL of some image to display.
 * __`caption`__
-  * A short piece of text that describes the image
+    * A short piece of text that describes the image
 
 ### Example
 
