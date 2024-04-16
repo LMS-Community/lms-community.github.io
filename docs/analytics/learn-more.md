@@ -44,3 +44,14 @@ Slim::Plugin::Analytics::Plugin::_reportStats (53) nIj.............YhF8: {
   version     => "9.0.0",
 }
 ```
+
+## How to disable the data collection
+
+If you want to disable the data collection you can inactivate the plugin "Report Analytics Data" within LMS.
+
+1. Launch your web browser (eg. Edge, Firefox) and type: http://\[ip address of LMS server\]:9000. Then, press Enter.
+2. Go to "Settings" (on the bottom right of the page).
+3. Go to the "Manage plugins" tab.
+4. Search for the "Report Analytics Data" plugin and deselect the checkbox in front of it.
+5. Press Apply (on the bottom right).
+6. You will be prompted to reboot LMS, after restart the data collection has been disabled.
