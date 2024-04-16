@@ -184,7 +184,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
   "projection": {"type": "naturalEarth1"},
   "transform": [
     {
-      "lookup": "properties.iso_a2",
+      "lookup": "properties.iso_a2_eh",
       "from": {
         "key": "c",
         "fields": ["i"],
