@@ -143,9 +143,9 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
   ],
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
-    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
+    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Percentage"},
     "color": {"field": "displayname", "type": "nominal", "title": "Player type", "sort": "c"},
-    "order": {"field": "c", "type": "quantitative", "sort": "descending"}
+    "order": {"field": "c", "type": "quantitative", "sort": "descending", "title": "Count"}
   }
 }
 ```
@@ -163,9 +163,9 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
   },
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
-    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
+    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Percentage"},
     "color": {"field": "o", "type": "nominal", "title": "Operating System", "sort": "c"},
-    "order": {"field": "c", "type": "quantitative", "sort": "descending"}
+    "order": {"field": "c", "type": "quantitative", "sort": "descending", "title": "Count"}
   }
 }
 ```
@@ -241,7 +241,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
     }
   ],
   "encoding": {
-    "y": {"field": "p", "title": "Plugins", "type": "nominal", "sort": "-x"},
+    "y": {"field": "p", "title": "Plugin", "type": "nominal", "sort": "-x"},
     "x": {"field": "c", "title": "Installations", "type": "quantitative"},
     "text": {"field": "c", "type": "quantitative"}
   }
