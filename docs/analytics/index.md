@@ -10,7 +10,7 @@ title: Some numbers about LMS Installations
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "LMS Installations by Version",
+  "description": "LMS installations by version",
   "data": {
     "url": "/analytics/stats.json",
     "format": {"property": "versions"}
@@ -55,7 +55,7 @@ title: Some numbers about LMS Installations
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Connected players",
+  "description": "Number of connected players",
   "data": {
     "url": "/analytics/stats.json",
     "format": {"property": "players"}
@@ -134,7 +134,7 @@ title: Some numbers about LMS Installations
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 250,
-  "description": "Player types",
+  "description": "Operating systems and architectures",
   "data": {
     "url": "/analytics/stats.json",
     "format": {"property": "os"}
@@ -155,6 +155,7 @@ title: Some numbers about LMS Installations
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 850,
   "height": 450,
+  "description": "LMS installations worldwide",
   "data": {
     "url": "/analytics/world_map.json",
     "format": {"property": "features"}
@@ -204,6 +205,7 @@ title: Some numbers about LMS Installations
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": {"step": 17},
+  "description": "Installed and activated plugins",
   "data": {
     "url": "/analytics/stats.json",
     "format": {"property": "plugins"}
