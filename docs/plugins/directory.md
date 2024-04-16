@@ -19,7 +19,7 @@ title: Available Plugins
 
     A book with 1001 albums chosen by a panel of music critics to be the most important and influential in popular music. This plugin will help you listen to them all. One album a day.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://1001albumsgenerator.com)    - :octicons-download-24: 121
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://1001albumsgenerator.com)    - :octicons-download-24: 122
 
 -   __:material-music-box-outline: Band's Campout__
 
@@ -83,7 +83,7 @@ title: Available Plugins
 
     The next generation Spotify implementation for Squeezebox.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 713
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 716
 
 -   __:material-music-box-outline: TIDAL local__
 
@@ -91,7 +91,7 @@ title: Available Plugins
 
     TIDAL for local LMS use
 
-    Michael Herger, philippe_44    - [:octicons-globe-24: Details](https://github.com/michaelherger/lms-plugin-tidal)    - :octicons-download-24: 182
+    Michael Herger, philippe_44    - [:octicons-globe-24: Details](https://github.com/michaelherger/lms-plugin-tidal)    - :octicons-download-24: 184
 
 -   __:material-music-box-outline: YouTube__
 
@@ -99,7 +99,7 @@ title: Available Plugins
 
     Play YouTube video
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-youtube)    - :octicons-download-24: 322
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-youtube)    - :octicons-download-24: 323
 
 </div>
 
@@ -121,7 +121,7 @@ title: Available Plugins
 
     Browse and listen to content of the ARD Audiothek.
 
-    [:octicons-mail-24: Max Zimmermann](mailto:mz.max.zimmermann@gmail.com)    - [:octicons-globe-24: Details](https://github.com/mzedd/LMS-ARD-Audiothek-Plugin/)    - :octicons-download-24: 178
+    [:octicons-mail-24: Max Zimmermann](mailto:mz.max.zimmermann@gmail.com)    - [:octicons-globe-24: Details](https://github.com/mzedd/LMS-ARD-Audiothek-Plugin/)    - :octicons-download-24: 179
 
 -   __:material-radio: BBC Sounds__
 
@@ -129,7 +129,7 @@ title: Available Plugins
 
     Complete BBC Sounds implementation as an LMS Plugin.
 
-    [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)    - :octicons-download-24: 245
+    [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)    - :octicons-download-24: 249
 
 -   __:material-radio: CBC Radio-Canada Français__
 
@@ -162,7 +162,7 @@ title: Available Plugins
 
     Global Radio's UK Stations (Classic FM, Capital, Heart, LBC, Radio X etc) Live Radio (with pause and rewind), Catch-up, Live Playlists, Podcasts.
 
-    [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_GlobalPlayer_Plugin)    - :octicons-download-24: 123
+    [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_GlobalPlayer_Plugin)    - :octicons-download-24: 124
 
 -   __:material-radio: iHeart Radio - v1.2__
 
@@ -170,7 +170,7 @@ title: Available Plugins
 
     Listen to iHeart Radio Live US,CA,AU,NZ and MX stations
 
-    [:octicons-mail-24: bpa](mailto:baltontwo@eircom.com)    - :octicons-download-24: 107
+    [:octicons-mail-24: bpa](mailto:baltontwo@eircom.com)    - :octicons-download-24: 108
 
 -   __:material-radio: LCI__
 
@@ -218,7 +218,7 @@ title: Available Plugins
 
     Programme and track information for a variety of radio stations
 
-    Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/showthread.php?115201-Announce-Radio-Now-Playing-plugin)    - :octicons-download-24: 249
+    Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/showthread.php?115201-Announce-Radio-Now-Playing-plugin)    - :octicons-download-24: 250
 
 -   __:material-radio: Radio Paradise__
 
@@ -226,7 +226,7 @@ title: Available Plugins
 
     Radio Paradise in lossless FLAC streaming! Give access to Radio Paradise's HD stream pictures. Get better quality artwork (requires LMS 7.8 or more recent).
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins/)    - :octicons-download-24: 389
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins/)    - :octicons-download-24: 391
 
 -   __:material-radio: RadioFeeds UK and Ireland__
 
@@ -242,7 +242,7 @@ title: Available Plugins
 
     RadioNet - provides access to Radio.net internet radio directory
 
-    bpa    - :octicons-download-24: 262
+    bpa    - :octicons-download-24: 263
 
 -   __:material-radio: Times Radio__
 
@@ -258,7 +258,7 @@ title: Available Plugins
 
     Virgin Radio (UK) Plugin.  Access to live Virgin Radio stations and 7 day catch up listening.
 
-    [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_Virgin_Radio_Plugin)    - :octicons-download-24: 76
+    [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_Virgin_Radio_Plugin)    - :octicons-download-24: 77
 
 -   __:material-radio: Wefunk Radio__
 
@@ -304,7 +304,7 @@ title: Available Plugins
 
     Use Chromecast devices in LMS
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-cast)    - :octicons-download-24: 262
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-cast)    - :octicons-download-24: 263
 
 -   __:material-cast-audio: Denon AVP/AVR Control__
 
@@ -328,7 +328,7 @@ title: Available Plugins
 
     Playback of DSD files (.dsf and .dff) via your Squeezebox.  Supports conversion to PCM or playback as DSD-over-PCM (DoP) for DACs supporting DoP.
 
-    [:octicons-mail-24: Kimmo, Triode, Ralphy](mailto:triode1@btinternet.com)    - :octicons-download-24: 168
+    [:octicons-mail-24: Kimmo, Triode, Ralphy](mailto:triode1@btinternet.com)    - :octicons-download-24: 169
 
 -   __:material-cast-audio: IR Blaster__
 
@@ -400,7 +400,7 @@ title: Available Plugins
 
     Use UPnP/DLNA players in LMS
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-upnp)    - :octicons-download-24: 372
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-upnp)    - :octicons-download-24: 373
 
 -   __:material-cast-audio: WaveInput__
 
@@ -430,7 +430,7 @@ title: Available Plugins
 
     Material themed skin, suitable for mobile use.
 
-    Craig Drummond    - :octicons-download-24: 1001
+    Craig Drummond    - :octicons-download-24: 1003
 
 </div>
 
@@ -500,7 +500,7 @@ title: Available Plugins
 
     Read album reviews, artist biographies, related artists, see artist pictures and much more.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicArtistInfo/)    - :octicons-download-24: 458
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicArtistInfo/)    - :octicons-download-24: 460
 
 -   __:material-information-box-outline: Music Information Screen__
 
@@ -508,7 +508,7 @@ title: Available Plugins
 
     The Music Information Screen plugin allows customization of the player's Now Playing screen and other elements.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicInfoSCR/)    - :octicons-download-24: 249
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicInfoSCR/)    - :octicons-download-24: 250
 
 -   __:material-information-box-outline: PlayLog__
 
@@ -556,7 +556,7 @@ title: Available Plugins
 
     A plugin to make it possible to get various information about a song, can for example be used to get artist images from LastFM (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 262
+    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 263
 
 -   __:material-information-box-outline: Song Lyrics__
 
@@ -564,7 +564,7 @@ title: Available Plugins
 
     A plugin that shows lyrics from chartlyrics.com and musixmatch.com through the Song Info plugin. This plugin requires that the Song Info plugin also is installed. (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 256
+    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 257
 
 -   __:material-information-box-outline: SuperDateTime__
 
@@ -596,7 +596,7 @@ title: Available Plugins
 
     Keep track of what was playing while you were too busy to check the display.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins)    - :octicons-download-24: 207
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins)    - :octicons-download-24: 208
 
 -   __:material-information-box-outline: XSqueezeDisplay__
 
@@ -642,7 +642,7 @@ title: Available Plugins
 
     Extension for Dynamic Playlist, using MusicIP to produce mixes.
 
-    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/DynamicMixPlugin.htm)    - :octicons-download-24: 25
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/DynamicMixPlugin.htm)    - :octicons-download-24: 26
 
 -   __:material-playlist-music: Dynamic Playlist Creator__
 
@@ -650,7 +650,7 @@ title: Available Plugins
 
     Helps you create custom smart playlists (dynamic playlists) for the Dynamic Playlists plugin using templates. More information, screenshots and FAQ on the GitHub page.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylistcreator)    - :octicons-download-24: 73
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylistcreator)    - :octicons-download-24: 74
 
 -   __:material-playlist-music: Dynamic Playlists__
 
@@ -658,7 +658,7 @@ title: Available Plugins
 
     Use smart playlists (dynamic playlists) to play continuous music mixes based on your selection criteria. Comes with a number of ready-to-use dynamic playlists. More information, screenshots and FAQ on the GitHub page.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylists)    - :octicons-download-24: 91
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylists)    - :octicons-download-24: 92
 
 -   __:material-playlist-music: LastMix - Don't Stop The Music support using Last.fm.__
 
@@ -666,7 +666,7 @@ title: Available Plugins
 
     LastMix allows you to create Last.fm based mixes for the "Don't Stop The Music" plugin.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 140
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 141
 
 -   __:material-playlist-music: Playlist Manager__
 
@@ -674,7 +674,7 @@ title: Available Plugins
 
     Provides functionality to add songs or albums to any chosen playlist.
 
-    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/PlaylistManPlugin.htm)    - :octicons-download-24: 178
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/PlaylistManPlugin.htm)    - :octicons-download-24: 180
 
 -   __:material-playlist-music: Spicefly SugarCube__
 
@@ -682,7 +682,7 @@ title: Available Plugins
 
     Travel through your music Library using MusicIPs recommendations. Features Include Filter, Genre, Artist and Recipe Mixing, Trackstat Integration, Artist Blocking, Genre Blocking, Custom Track Weighting Routines, Coming Up Next Display, Sleep Mode, Volume Fade and lots more.  See www.spicefly.com for Details and Change Log.
 
-    [:octicons-mail-24: Charles Parker](mailto:abuse@spicefly.com)    - [:octicons-globe-24: Details](http://www.spicefly.com/)    - :octicons-download-24: 25
+    [:octicons-mail-24: Charles Parker](mailto:abuse@spicefly.com)    - [:octicons-globe-24: Details](http://www.spicefly.com/)    - :octicons-download-24: 26
 
 -   __:material-playlist-music: Switch Player (Groups compatible)__
 
@@ -704,7 +704,7 @@ title: Available Plugins
 
     AutoRescan detects changes to your music folder and automatically triggers a rescan of that directory if any files have been added, removed or changed.
 
-    James Marsh; Stuart Hickinbottom    - :octicons-download-24: 158
+    James Marsh; Stuart Hickinbottom    - :octicons-download-24: 159
 
 -   __:material-file-search-outline: Custom Tag Importer__
 
@@ -782,7 +782,7 @@ title: Available Plugins
 
     Remove orphaned client configurations
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim/)    - :octicons-download-24: 174
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim/)    - :octicons-download-24: 175
 
 -   __:material-tools: Create docsets for Dash__
 
@@ -846,7 +846,7 @@ title: Available Plugins
 
     Continue your listening on a different player - easily.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 166
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 167
 
 -   __:material-tools: PlayHLS__
 
@@ -862,7 +862,7 @@ title: Available Plugins
 
     This plugin provides support on Linux and OSX for playing Windows Media (WMA, WMA lossless, WMA Pro)  streams and files using ffmpeg. It is mainly used for player which do not support WMA nativelysuch as SliMP3, SqueezeBox1, Softsqueeze, Squeezeslave and Squeezeplay
 
-    [:octicons-mail-24: bpa](mailto:baltontwo@eircom.net)    - :octicons-download-24: 87
+    [:octicons-mail-24: bpa](mailto:baltontwo@eircom.net)    - :octicons-download-24: 88
 
 -   __:material-tools: PowerCenter__
 
@@ -932,7 +932,7 @@ title: Available Plugins
 
     Material themed skin, suitable for mobile use.
 
-    Craig Drummond    - :octicons-download-24: 1001
+    Craig Drummond    - :octicons-download-24: 1003
 
 -   __:material-star-shooting: Spotify for Squeezebox. Still Spotty.__
 
@@ -940,7 +940,7 @@ title: Available Plugins
 
     The next generation Spotify implementation for Squeezebox.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 713
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 716
 
 -   __:material-star-shooting: Community Firmware__
 
@@ -948,7 +948,7 @@ title: Available Plugins
 
     Community Firmware for SqueezeBox Touch/Radio/Controller
 
-    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)    - :octicons-download-24: 461
+    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)    - :octicons-download-24: 462
 
 -   __:material-star-shooting: Music and Artist Information__
 
@@ -956,7 +956,7 @@ title: Available Plugins
 
     Read album reviews, artist biographies, related artists, see artist pictures and much more.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicArtistInfo/)    - :octicons-download-24: 458
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicArtistInfo/)    - :octicons-download-24: 460
 
 -   __:material-star-shooting: Radio Paradise__
 
@@ -964,7 +964,7 @@ title: Available Plugins
 
     Radio Paradise in lossless FLAC streaming! Give access to Radio Paradise's HD stream pictures. Get better quality artwork (requires LMS 7.8 or more recent).
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins/)    - :octicons-download-24: 389
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins/)    - :octicons-download-24: 391
 
 -   __:material-star-shooting: UPnP/DLNA bridge__
 
@@ -972,7 +972,7 @@ title: Available Plugins
 
     Use UPnP/DLNA players in LMS
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-upnp)    - :octicons-download-24: 372
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-upnp)    - :octicons-download-24: 373
 
 -   __:material-star-shooting: YouTube__
 
@@ -980,7 +980,7 @@ title: Available Plugins
 
     Play YouTube video
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-youtube)    - :octicons-download-24: 322
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-youtube)    - :octicons-download-24: 323
 
 -   __:material-star-shooting: AirPlay bridge__
 
@@ -996,7 +996,7 @@ title: Available Plugins
 
     A plugin to make it possible to get various information about a song, can for example be used to get artist images from LastFM (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
-    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 262
+    [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 263
 
 -   __:material-star-shooting: RadioNet__
 
@@ -1004,7 +1004,7 @@ title: Available Plugins
 
     RadioNet - provides access to Radio.net internet radio directory
 
-    bpa    - :octicons-download-24: 262
+    bpa    - :octicons-download-24: 263
 
 -   __:material-star-shooting: Chromecast bridge__
 
@@ -1012,7 +1012,7 @@ title: Available Plugins
 
     Use Chromecast devices in LMS
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-cast)    - :octicons-download-24: 262
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-cast)    - :octicons-download-24: 263
 
 </div>
 
@@ -1042,7 +1042,7 @@ title: Available Plugins
 
     Community Firmware for SqueezeBox Touch/Radio/Controller
 
-    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)    - :octicons-download-24: 461
+    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)    - :octicons-download-24: 462
 
 -   __:material-toy-brick-outline: ContextMenu__
 
@@ -1058,7 +1058,7 @@ title: Available Plugins
 
     Play albums, artists or songs directly by database ID
 
-    [:octicons-mail-24: Jason Holtzapple](mailto:jasonholtzapple@gmail.com)    - :octicons-download-24: 20
+    [:octicons-mail-24: Jason Holtzapple](mailto:jasonholtzapple@gmail.com)    - :octicons-download-24: 21
 
 -   __:material-toy-brick-outline: License Manager__
 
@@ -1074,7 +1074,7 @@ title: Available Plugins
 
     QuickAccess provides similar functionality as Favorites plus the possibility to pass a playlist from player to player. Just press and hold a number button and the assigned playlist starts playing. You may select playlists from each player or your server's web interface. You will also need to place the custom.map file ([http://jasonholtzapple.github.io/slimdevices/plugins/quickaccess/7.3/custom.map)](http://jasonholtzapple.github.io/slimdevices/plugins/quickaccess/7.3/custom.map)) in your Squeezecenter/IR directory by hand.
 
-    [:octicons-mail-24: Jason Holtzapple](mailto:jasonholtzapple@gmail.com)    - :octicons-download-24: 16
+    [:octicons-mail-24: Jason Holtzapple](mailto:jasonholtzapple@gmail.com)    - :octicons-download-24: 17
 
 -   __:material-toy-brick-outline: Reliable HTTP__
 
@@ -1138,7 +1138,7 @@ title: Available Plugins
 
     Browse, search and play urls from soundcloud
 
-    Robert Siebert, Daniel Vijge, Robert Gibbon, David Blackman, KwarkLabs    - [:octicons-globe-24: Details](https://github.com/danielvijge/SqueezeCloud)    - :octicons-download-24: 131
+    Robert Siebert, Daniel Vijge, Robert Gibbon, David Blackman, KwarkLabs    - [:octicons-globe-24: Details](https://github.com/danielvijge/SqueezeCloud)    - :octicons-download-24: 132
 
 -   __:material-toy-brick-outline: StatusFirst__
 
@@ -1154,7 +1154,7 @@ title: Available Plugins
 
     Allows you to lock the analog and digital output levels of any Squeezebox, Transporter, or SliMP3. Can either prevent any changes in volume, or simply set a maximum volume. (Boom, Classic, Radio, Receiver, Slimp3, SoftSqueeze, Squeezebox1, Touch, Transporter)
 
-    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/VolumeLock.html)    - :octicons-download-24: 46
+    [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/VolumeLock.html)    - :octicons-download-24: 47
 
 </div>
 
