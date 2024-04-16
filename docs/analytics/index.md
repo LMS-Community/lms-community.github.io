@@ -121,7 +121,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
   ],
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
-    "theta": {"field": "c", "type": "quantitative", "stack": "true", "title": "Count"},
+    "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Count"},
     "color": {"field": "displayname", "type": "nominal", "title": "Player type", "sort": "c"},
     "order": {"field": "c", "type": "quantitative", "sort": "descending"}
   }
