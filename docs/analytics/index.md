@@ -5,6 +5,8 @@ hide:
   - toc
 ---
 
+Lyrion Music Server encourages users to share their usage data with the LMS community. It is used to steer and influence Lyrion Music Server development priorities. The plugin responsible for the data collection is part of LMS since version 8.5.1.
+
 [Learn more about how this data is gathered](learn-more.md)
 
 ```vegalite
