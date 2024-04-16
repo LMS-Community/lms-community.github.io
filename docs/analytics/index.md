@@ -99,6 +99,28 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Connected players per LMS installation",
+  "description": "Histogram which shows how many players are connected per LMS installation",
+  "data": {
+    "url": "/analytics/stats.json",
+    "format": {"property": "connectedPlayers"}
+  },
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {
+      "field": "p",
+      "type": "ordinal",
+      "title": "Connected players per installation",
+      "sort": ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25"]
+    },
+    "y": {"field": "c", "type": "quantitative", "title": "Count of installations"}
+  }
+}
+```
+
+```vegalite
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 300,
   "title": "Player types",
