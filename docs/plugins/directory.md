@@ -83,7 +83,7 @@ title: Available Plugins
 
     The next generation Spotify implementation for Squeezebox.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 986
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 987
 
 -   __:material-music-box-outline: TIDAL local__
 
@@ -186,7 +186,7 @@ title: Available Plugins
 
     Live365 - provides access to Live365 directory of internet stations
 
-    bpa    - :octicons-download-24: 68
+    bpa    - :octicons-download-24: 69
 
 -   __:material-radio: Planet Radio__
 
@@ -384,7 +384,7 @@ title: Available Plugins
 
     SqueezeESP32 additional player id (100/101)
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](https://github.com/sle118/squeezelite-esp32)    - :octicons-download-24: 110
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](https://github.com/sle118/squeezelite-esp32)    - :octicons-download-24: 111
 
 -   __:material-cast-audio: TVH__
 
@@ -400,7 +400,7 @@ title: Available Plugins
 
     Use UPnP/DLNA players in LMS
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-upnp)    - :octicons-download-24: 503
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-upnp)    - :octicons-download-24: 504
 
 -   __:material-cast-audio: WaveInput__
 
@@ -408,7 +408,7 @@ title: Available Plugins
 
     A Plugin to enable Windows PC audio to be captured and played through LogitechMediaServer
 
-    [:octicons-mail-24: Joe Bryan updated by bpa](mailto:baltontwo@eircom.net)    - [:octicons-globe-24: Details](http://forums.slimdevices.com/showthread.php?t=35718)    - :octicons-download-24: 69
+    [:octicons-mail-24: Joe Bryan updated by bpa](mailto:baltontwo@eircom.net)    - [:octicons-globe-24: Details](http://forums.slimdevices.com/showthread.php?t=35718)    - :octicons-download-24: 70
 
 </div>
 
@@ -430,7 +430,7 @@ title: Available Plugins
 
     Material themed skin, suitable for mobile use.
 
-    Craig Drummond    - :octicons-download-24: 1353
+    Craig Drummond    - :octicons-download-24: 1354
 
 </div>
 
@@ -806,7 +806,7 @@ title: Available Plugins
 
     on-the-fly group creation
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-Groups)    - :octicons-download-24: 219
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-Groups)    - :octicons-download-24: 220
 
 -   __:material-tools: Ignore files and folders__
 
@@ -932,7 +932,7 @@ title: Available Plugins
 
     Material themed skin, suitable for mobile use.
 
-    Craig Drummond    - :octicons-download-24: 1353
+    Craig Drummond    - :octicons-download-24: 1354
 
 -   __:material-star-shooting: Spotify for Squeezebox. Still Spotty.__
 
@@ -940,7 +940,7 @@ title: Available Plugins
 
     The next generation Spotify implementation for Squeezebox.
 
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 986
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 987
 
 -   __:material-star-shooting: Music and Artist Information__
 
@@ -956,7 +956,7 @@ title: Available Plugins
 
     Community Firmware for SqueezeBox Touch/Radio/Controller
 
-    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)    - :octicons-download-24: 614
+    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)    - :octicons-download-24: 615
 
 -   __:material-star-shooting: Radio Paradise__
 
@@ -972,7 +972,7 @@ title: Available Plugins
 
     Use UPnP/DLNA players in LMS
 
-    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-upnp)    - :octicons-download-24: 503
+    [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-to-upnp)    - :octicons-download-24: 504
 
 -   __:material-star-shooting: YouTube__
 
@@ -1042,7 +1042,7 @@ title: Available Plugins
 
     Community Firmware for SqueezeBox Touch/Radio/Controller
 
-    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)    - :octicons-download-24: 614
+    [:octicons-mail-24: Michael Herger, Ralph Irving](mailto:ralph_irving@hotmail.com)    - :octicons-download-24: 615
 
 -   __:material-toy-brick-outline: ContextMenu__
 
