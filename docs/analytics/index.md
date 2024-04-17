@@ -19,7 +19,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
     "format": {"property": "versions"}
   },
   "encoding": {
-    "x": {"field": "d", "type": "temporal", "title": "Date"},
+    "x": {"field": "d", "type": "temporal", "title": "Date", "timeUnit": "yearmonthdate"},
     "y": {"field": "c", "type": "quantitative", "title": "Installations"},
     "color": {"field": "v", "type": "nominal", "title": "Version"}
   },
@@ -63,7 +63,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
     "format": {"property": "players"}
   },
   "encoding": {
-    "x": {"field": "d", "type": "temporal", "title": "Date"},
+    "x": {"field": "d", "type": "temporal", "title": "Date", "timeUnit": "yearmonthdate"},
     "y": {"field": "p", "type": "quantitative", "title": "Connected Players"}
   },
   "layer": [
