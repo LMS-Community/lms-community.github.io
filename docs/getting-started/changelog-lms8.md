@@ -29,8 +29,6 @@
 	- [#1029](https://github.com/LMS-Community/slimserver/pull/1029) \- Fix incorrect HTTP skipping (thanks philippe44 && bpa!)
 	- [#1045](https://github.com/LMS-Community/slimserver/issues/1045) \- "shufflemode" is missing from "alarms" query (thanks @CDrummond!)
 
-- Other:
-
 ## Version 8.5.0 - 2024-03-14 (8762186a4)
 
 - [Upstream fixes from Logitech Media Server 8.4.x](#version-841)
