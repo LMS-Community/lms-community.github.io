@@ -18,7 +18,7 @@ The following data is gathered:
 - List of installed plugins
 - Selected skin
 - Number of tracks
-- Country
+- Country (a lookup is done based on the IP address of the LMS-server which is then discarded)
 
 You can enable debug logging for `plugin.analytics` to see what is being reported:
 
