@@ -8,6 +8,8 @@
 
 - Bug Fixes:
 
+	- [#1056](https://github.com/Logitech/slimserver/pull/1056) \- Fix playback of certain mp4 files (thanks philippe44!)
+
 - Other:
 
 ## Version 8.5.1 - 2024-04-15 (3b46196aa)
