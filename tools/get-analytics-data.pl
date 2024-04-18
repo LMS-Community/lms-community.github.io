@@ -8,12 +8,13 @@ use LWP::UserAgent;
 
 use constant STATS_SUMMARY => 'https://stats.lms-community.org/api/stats';
 use constant STATS_HISTORY => 'https://stats.lms-community.org/api/stats/history';
+use constant PLAYERNAME_MAP => 'docs/analytics/players-displayname.json';
 
 my ($stats, $history);
 
 eval {
     my $ua = LWP::UserAgent->new();
-    $ua->ssl_opts(verify_hostname => 0);
+    # $ua->ssl_opts(verify_hostname => 0);
     my $resp = $ua->get(STATS_SUMMARY);
     $stats   = from_json($resp->content);
 
@@ -82,6 +83,37 @@ foreach my $historical (@$history) {
         c => $total
     };
 }
+
+# Update the player name mapping: add new values, or we'll end up with "null" values
+
+my $fh;
+my $json = do {
+    local $/ = undef;
+    open $fh, "<", PLAYERNAME_MAP
+        or die "could not open: $!";
+    <$fh>;
+};
+close $fh;
+
+my $playerTypes = from_json($json);
+my $dirty;
+foreach (grep { $_ } @{$stats->{playerTypes}}) {
+    my ($playerType) = each %$_;
+
+    if ($playerType && !grep { $_->{name} eq $playerType } @$playerTypes) {
+        $dirty++;
+        push @$playerTypes, {
+            name => $playerType,
+            displayname => ucfirst($playerType)
+        };
+    }
+}
+
+if ($dirty) {
+    open my $fh, ">", PLAYERNAME_MAP || die "could not open: $!";
+    print $fh to_json($playerTypes);
+}
+
 
 my $c;
 my %stats = (
