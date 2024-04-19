@@ -9,7 +9,7 @@ use XML::Simple;
 
 use constant TESTING => 0;
 use constant REPO_FILE => 'https://raw.githubusercontent.com/LMS-Community/lms-plugin-repository/master/extensions.xml';
-use constant STATS_URL => 'https://stats.lms-community.org/api/stats';
+use constant STATS_URL => 'https://stats.lms-community.org/api/stats/plugins';
 
 my @categories = (
   "musicservices",
@@ -45,7 +45,7 @@ my %categoryIcons = (
 	top => 'material-star-shooting',
 );
 
-my ($repo, $stats);
+my ($repo, $stats, %pluginCounts);
 
 print q(---
 layout: default
@@ -93,20 +93,19 @@ eval {
 		? do {
 			warn 'TESTING local file!!!';
 			local $/ = undef;
-			open my $fh, "<", 'stats.json'
+			open my $fh, "<", 'plugins.json'
 				or die "could not open: $!";
 			<$fh>;
 		}
-		: get(STATS_URL));
+		: get(STATS_URL)) || [];
 
-	if ($stats && ref $stats && $stats->{plugins}) {
-		map {
-			my ($k, $v) = each %$_;
-			$stats->{$k} = $v;
-		} @{$stats->{plugins} || []};
+	foreach (@$stats) {
+		my ($k, $v) = each %$_;
+		$pluginCounts{$k} = $v;
 	}
-	$stats ||= {};
-} || die "$@";
+};
+
+die "$@" if $@;
 
 my $plugins = $repo->{plugins};
 
@@ -132,7 +131,7 @@ foreach (@categories, keys %categories) {
 
 if (scalar @$plugins > 10) {
 	my @topPlugins;
-	foreach my $plugin (@{$stats->{plugins}}) {
+	foreach my $plugin (@$stats) {
 		my ($name) = keys %$plugin;
 		push @topPlugins, $pluginsRef{$name} if $pluginsRef{$name};
 		last if scalar @topPlugins > 10;
@@ -181,7 +180,7 @@ sub printCategory {
 		printf("    %s", $author) if !$_->{email};
 		printf("    [:octicons-mail-24: %s](mailto:%s)", $author, $_->{email}) if $_->{email};
 		printf("    - [:octicons-globe-24: Details](%s)", $_->{link}) if $_->{link};
-		printf("    - :octicons-download-24: %s", $stats->{$_->{name}}) if $stats->{$_->{name}};
+		printf("    - :octicons-download-24: %s", $pluginCounts{$_->{name}}) if $pluginCounts{$_->{name}};
 		print  "\n\n";
 	}
 
