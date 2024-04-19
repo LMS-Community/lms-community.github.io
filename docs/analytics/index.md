@@ -129,22 +129,10 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
     "url": "/analytics/stats.json",
     "format": {"property": "playerTypes"}
   },
-  "transform": [
-    {
-      "lookup": "p",
-      "from": {
-        "key": "name",
-        "fields": ["displayname"],
-        "data": {
-          "url": "/analytics/players-displayname.json"
-        }
-      }
-    }
-  ],
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
     "theta": {"field": "c", "type": "quantitative", "stack": "normalize", "title": "Percentage"},
-    "color": {"field": "displayname", "type": "nominal", "title": "Player type", "sort": "c"},
+    "color": {"field": "p", "type": "nominal", "title": "Player type", "sort": "c"},
     "order": {"field": "c", "type": "quantitative", "sort": "descending", "title": "Count"}
   }
 }

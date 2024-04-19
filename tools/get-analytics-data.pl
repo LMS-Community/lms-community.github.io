@@ -10,6 +10,32 @@ use constant STATS_SUMMARY => 'https://stats.lms-community.org/api/stats';
 use constant STATS_HISTORY => 'https://stats.lms-community.org/api/stats/history';
 use constant PLAYERNAME_MAP => 'docs/analytics/players-displayname.json';
 
+my $playerTypes = {
+    baby => 'Squeezebox Radio',
+    boom => 'Squeezebox Boom',
+    controller => 'Squeezebox Controller',
+    daphile => 'Daphile',
+    Euphony => 'Euphony',
+    fab4 => 'Squeezebox Touch',
+    http => 'HTTP',
+    iPengiPad => 'iPeng iPad',
+    iPengiPod => 'iPeng iPod',
+    m6encore => 'M6 Encore',
+    receiver => 'Squeezebox Receiver',
+    slimp3 => 'SliMP3',
+    softsqueeze => 'Softsqueeze',
+    'Squeeze connect' => 'Squeeze Connect',
+    squeezebox => 'Squeezebox 1',
+    squeezebox2 => 'Squeezebox 2/3/Classic',
+    squeezebox3 => 'Squeezebox 3',
+    squeezeesp32 => 'SqueezeEsp32',
+    squeezelite => 'Squeezelite',
+    squeezeplay => 'SqueezePlay',
+    squeezeplayer => 'SqueezePlayer',
+    squeezeslave => 'Squeezeslave',
+    transporter => 'Transporter'
+};
+
 my ($stats, $history);
 
 eval {
@@ -84,42 +110,14 @@ foreach my $historical (@$history) {
     };
 }
 
-# Update the player name mapping: add new values, or we'll end up with "null" values
-
-my $fh;
-my $json = do {
-    local $/ = undef;
-    open $fh, "<", PLAYERNAME_MAP
-        or die "could not open: $!";
-    <$fh>;
-};
-close $fh;
-
-my $playerTypes = from_json($json);
-my $dirty;
-foreach (grep { $_ } @{$stats->{playerTypes}}) {
-    my ($playerType) = each %$_;
-
-    if ($playerType && !grep { $_->{name} eq $playerType } @$playerTypes) {
-        $dirty++;
-        push @$playerTypes, {
-            name => $playerType,
-            displayname => ucfirst($playerType)
-        };
-    }
-}
-
-if ($dirty) {
-    open my $fh, ">", PLAYERNAME_MAP || die "could not open: $!";
-    print $fh to_json($playerTypes);
-}
-
-
 my $c;
 my %stats = (
     versions  => \@versions,
     players   => \@players,
-    playerTypes => prepareData($stats->{playerTypes}, 0, 'p'),
+    playerTypes => [ map {
+        $_->{p} = $playerTypes->{$_->{p}} || ucfirst($_->{p});
+        $_;
+    } @{prepareData($stats->{playerTypes}, 0, 'p') || []} ],
     connectedPlayers => prepareData($stats->{connectedPlayers}, 0, 'p'),
     countries => prepareData($stats->{countries}, 0, 'c', 'i'),
     os        => prepareData($stats->{os}, 6, 'o'),
