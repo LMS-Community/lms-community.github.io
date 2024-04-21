@@ -132,6 +132,7 @@ nav:
     - contributing/index.md
     - Reporting a bug: contributing/reporting-a-bug.md
     - Adding translations: contributing/adding-translations.md
+    - The Future Roadmap: contributing/Roadmap.md
   - Reference:
     - Lyrion Music Server: reference/lyrion-music-server.md
     - Command Line Interface (JSON/RPC):
