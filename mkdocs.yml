@@ -48,7 +48,7 @@ plugins:
   - charts
   - macros:
       include_yaml:
-        - docs/getting-started/downloads.yaml
+        - docs/downloads/downloads.yaml
         - docs/players-and-controllers/firmware-versions.yaml
 
 extra_javascript:

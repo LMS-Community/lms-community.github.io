@@ -8,7 +8,7 @@ For the archeologists among you. Or those who believe that SlimServer v6.3.1 pro
 !!! warning
     These releases are unsupported. Many probably don't work any more. Use at your own risk.
 
-[Go back to safety, get the latest release](../../getting-started/).
+[Go back to safety, get the latest release](../getting-started/index.md).
 
 ## Logitech Media Server (7.7.0 - 8.5.x)
 

@@ -7,7 +7,7 @@ title: Getting Started with LMS
 
 Lyrion Music Server is a fully open source server software to power a wide range of audio players. With the help of many plugins, Lyrion Music Server can stream not only your local music collection, but content from many music services and internet radio stations to your players.
 
-## Download and install Logitech Media Server v{{ version }}
+## Download and install Logitech Media Server v{{ latest.version }}
 
 === ":material-microsoft-windows: Windows"
     !!! warning
@@ -18,7 +18,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
     Then double click the downloaded package to launch the installation process in a familiar installation assistant.
 
     !!! note
-        The 64-bit version does _not_ provide a control panel or tray icon. It must be started/stopped using the Windows service manager.
+        If you're coming from an older version of LMS on Windows: the 64-bit version does _not_ provide a control panel or tray icon. It must be started/stopped using the Windows service manager.
 
 
 === ":simple-raspberrypi: Raspberry Pi"
