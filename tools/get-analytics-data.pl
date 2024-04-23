@@ -121,7 +121,6 @@ my %stats = (
     connectedPlayers => prepareData($stats->{connectedPlayers}, 0, 'p'),
     countries => prepareData($stats->{countries}, 0, 'c', 'i'),
     os        => prepareData($stats->{os}, 6, 'o'),
-    plugins   => prepareData($stats->{plugins}, 10, 'p'),
 );
 
 print to_json(\%stats);

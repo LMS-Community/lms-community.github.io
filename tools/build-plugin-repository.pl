@@ -10,6 +10,7 @@ use XML::Simple;
 use constant TESTING => 0;
 use constant REPO_FILE => 'https://raw.githubusercontent.com/LMS-Community/lms-plugin-repository/master/extensions.xml';
 use constant STATS_URL => 'https://stats.lms-community.org/api/stats/plugins';
+use constant MAX_TOP_PLUGINS => 20;
 
 my @categories = (
   "musicservices",
@@ -129,17 +130,15 @@ foreach (@categories, keys %categories) {
 	printCategory($_, $category);
 }
 
-if (scalar @$plugins > 10) {
-	my @topPlugins;
-	foreach my $plugin (@$stats) {
-		my ($name) = keys %$plugin;
-		push @topPlugins, $pluginsRef{$name} if $pluginsRef{$name};
-		last if scalar @topPlugins > 10;
-	}
+my @topPlugins;
+foreach my $plugin (@$stats) {
+	my ($name) = keys %$plugin;
+	push @topPlugins, $pluginsRef{$name} if $pluginsRef{$name};
+	last if scalar @topPlugins >= MAX_TOP_PLUGINS;
+}
 
-	if (scalar @topPlugins) {
-		printCategory('top', \@topPlugins, 'nofilter');
-	}
+if (scalar @topPlugins) {
+	printCategory('top', \@topPlugins, 'nofilter');
 }
 
 # Miscellaneous last but not least

@@ -207,31 +207,3 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
   "config": {"mark": {"invalid": null}}
 }
 ```
-
-```vegalite
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "height": {"step": 17},
-  "title": "Installed and activated plugins",
-  "description": "List of installed and activated plugins",
-  "data": {
-    "url": "/analytics/stats.json",
-    "format": {"property": "plugins"}
-  },
-  "layer": [
-    {"mark": { "type": "bar", "tooltip": true }},
-    {
-        "mark": {
-            "type": "text",
-            "align": "right"
-        },
-        "encoding": {"text": {"field": "c", "type": "quantitative"}}
-    }
-  ],
-  "encoding": {
-    "y": {"field": "p", "title": "Plugin", "type": "nominal", "sort": "-x"},
-    "x": {"field": "c", "title": "Installations", "type": "quantitative"},
-    "text": {"field": "c", "type": "quantitative"}
-  }
-}
-```
