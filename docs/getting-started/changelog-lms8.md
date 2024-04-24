@@ -9,6 +9,7 @@
 - Bug Fixes:
 
 	- [#1056](https://github.com/Logitech/slimserver/pull/1056) \- Fix playback of certain mp4 files (thanks philippe44!)
+	- [#1047](https://github.com/Logitech/slimserver/pull/1047) \- Fix sort collation when requesting artists
 	- Fix /music/current/cover artwork handler for certain cases where resizing would fail (eg. [Podcasts](https://forums.slimdevices.com/forum/developer-forums/developers/1699734))
 	- Use ORIGINALYEAR, ORIGINALDATE, or DATE to parse the year from Ogg files.
 
