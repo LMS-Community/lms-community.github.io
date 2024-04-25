@@ -111,7 +111,3 @@ For the archeologists among you. Or those who believe that SlimServer v6.3.1 pro
 * [SLIMP3_Server_v3.1b2](https://archive.lms-community.org/SLIMP3_Server_v3.1b2)
 * [SLIMP3_Server_v3.1b1](https://archive.lms-community.org/SLIMP3_Server_v3.1b1)
 
-## Squeezebox Firmware
-
-[Last official Squeezebox Firmware images](http://archive.lms-community.org/update/firmware/8.5.1/)
-
