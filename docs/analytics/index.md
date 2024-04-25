@@ -111,9 +111,55 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
       "field": "p",
       "type": "ordinal",
       "title": "Connected players per installation",
-      "sort": ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
+      "sort": ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"]
     },
     "y": {"field": "c", "type": "quantitative", "title": "Count of installations"}
+  }
+}
+```
+
+```vegalite
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Number of tracks in library",
+  "description": "Histogram which shows how many tracks (about) are in a LMS installation",
+  "data": {
+    "url": "/analytics/stats.json",
+    "format": {"property": "tracks"}
+  },
+  "mark": {"type": "bar", "tooltip": true},
+  "transform": [
+    {
+      "lookup": "t",
+      "from": {
+        "key": "t",
+        "fields": ["l"],
+        "data": {
+          "values": [
+            { "t": "0", "l": "0" },
+            { "t": "1", "l": "1-500" },
+            { "t": "500", "l": "501-1,000" },
+            { "t": "1000", "l": "1,001-5,000" },
+            { "t": "5000", "l": "5,001-10,000" },
+            { "t": "10000", "l": "10,001-20,000" },
+            { "t": "20000", "l": "20,001-50,000" },
+            { "t": "50000", "l": "50,001-100,000" },
+            { "t": "100000", "l": "100,001-500,000" },
+            { "t": "500000", "l": "500,001-1,000,000" },
+            { "t": "1000000", "l": ">1,000,001" }
+          ]
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "l",
+      "type": "ordinal",
+      "title": "Tracks in Library",
+      "sort": ["0","1","500","1000","5000","10000","20000","50000","100000","500000","1000000"]
+    },
+    "x": {"field": "c", "type": "quantitative", "title": "Count of installations"}
   }
 }
 ```
