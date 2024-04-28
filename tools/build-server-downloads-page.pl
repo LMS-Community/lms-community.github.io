@@ -13,7 +13,7 @@ use constant DATA_YAML => 'docs/downloads/downloads.yaml';
 my @platforms = (
    ['win', ':material-microsoft-windows: Windows 32-bit'],
    ['win64', ':material-microsoft-windows: Windows 64-bit'],
-   ['osx', ':material-apple: Apple macOS'],
+   ['mac', ':material-apple: Apple macOS'],
    ['debamd64', ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'],
    ['debarm', ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'],
    ['debi386', ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'],
@@ -87,6 +87,8 @@ sub renderRelease {
 
     foreach (@platforms) {
         my $platformId = $_->[0];
+        $platformId = 'osx' if $platformId eq 'mac';
+
         my $download = $downloads->{$platformId};
 
         if (my $url = $download->{url}) {
