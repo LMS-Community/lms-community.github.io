@@ -140,8 +140,8 @@ latest:
     size: 16 MB
     timestamp: Sun Apr 14 05:32:38 2024
     url: https://downloads.lms-community.org/LogitechMediaServer_v8.5.1/LogitechMediaServer-8.5.1-win64.exe
+mac: '[:material-apple: Apple macOS (43 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.1/LogitechMediaServer-8.5.1.pkg){ .md-button }'
 nocpan: '[:material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries (17 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.1/logitechmediaserver-8.5.1-noCPAN.tgz){ .md-button }'
-osx: '[ ()](){ .md-button }'
 rpm: '[:material-redhat: RedHat / :material-fedora: Fedora (86 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.1/logitechmediaserver-8.5.1-1.noarch.rpm){ .md-button }'
 src: '[:material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM (118 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.1/logitechmediaserver-8.5.1.tgz){ .md-button }'
 stable:
