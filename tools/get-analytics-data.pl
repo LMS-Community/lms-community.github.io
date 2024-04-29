@@ -120,7 +120,7 @@ my %stats = (
     } @{prepareData($stats->{playerTypes}, 0, 'p') || []} ],
     connectedPlayers => prepareData($stats->{connectedPlayers}, 0, 'p'),
     countries => prepareData($stats->{countries}, 0, 'c', 'i'),
-    os        => prepareData($stats->{os}, 6, 'o'),
+    os        => prepareData($stats->{os}, 20, 'o'),
     tracks    => prepareData($stats->{tracks}, 0, 't'),
 );
 
