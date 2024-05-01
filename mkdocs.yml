@@ -60,8 +60,8 @@ extra:
       link: https://hub.docker.com/r/lmscommunity/lyrionmusicserver
     - icon: simple/vbulletin
       link: https://forums.slimdevices.com
-    - icon: octicons/graph-16
-      link: /analytics/
+
+copyright: <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
 
 # tabbed content
 markdown_extensions:
@@ -124,11 +124,10 @@ nav:
     - Available Plugins: plugins/directory.md
     - Repository File Reference: reference/repository-dev.md
   - Contributing:
-    - contributing/index.md
+    - Overview: contributing/index.md
     - Reporting a bug: contributing/reporting-a-bug.md
     - Adding translations: contributing/adding-translations.md
-    - Community:
-      - Community forums: https://forums.slimdevices.com/
+    - Community forums: https://forums.slimdevices.com/
   - Reference:
     - Lyrion Music Server: reference/lyrion-music-server.md
     - Command Line Interface (JSON/RPC):
