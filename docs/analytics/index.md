@@ -2,8 +2,17 @@
 layout: default
 title: Some numbers about LMS Installations
 hide:
+  - navigation
   - toc
 ---
+
+<style>
+.md-content {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
 Lyrion Music Server encourages users to share their usage data with the LMS community. It is used to steer and influence Lyrion Music Server development priorities. The plugin responsible for the data collection is part of LMS since version 8.5.1.
 
