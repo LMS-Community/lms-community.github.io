@@ -127,6 +127,8 @@ nav:
     - contributing/index.md
     - Reporting a bug: contributing/reporting-a-bug.md
     - Adding translations: contributing/adding-translations.md
+    - Community:
+      - Community forums: https://forums.slimdevices.com/
   - Reference:
     - Lyrion Music Server: reference/lyrion-music-server.md
     - Command Line Interface (JSON/RPC):
