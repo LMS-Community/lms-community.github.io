@@ -1,17 +1,30 @@
-## Version 8.5.1
-
-- [Upstream fixes from Logitech Media Server 8.4.1](#version-841)
+## Version 8.5.2
 
 - New Features:
 
-	- Add optional plugin to report data about your LMS installation - see [forum discussion](https://forums.slimdevices.com/forum/user-forums/general-discussion/1697108).
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+	- [#1056](https://github.com/Logitech/slimserver/pull/1056) \- Fix playback of certain mp4 files (thanks philippe44!)
+	- [#1047](https://github.com/Logitech/slimserver/pull/1047) \- Fix sort collation when requesting artists
+	- Fix /music/current/cover artwork handler for certain cases where resizing would fail (eg. [Podcasts](https://forums.slimdevices.com/forum/developer-forums/developers/1699734))
+	- Use ORIGINALYEAR, ORIGINALDATE, or DATE to parse the year from Ogg files.
+
+- Other:
+
+## Version 8.5.1 - 2024-04-15 (3b46196aa)
+
+- New Features:
+
+	- Add plugin to report data about your LMS installation - see [forum discussion](https://forums.slimdevices.com/forum/user-forums/general-discussion/1697108).
 
 - Server Changes:
 
 	- Add links to the settings of the AudioAddict based services.
 	- Add support for "DELETE" HTTP verb to SimpleAsyncHTTP.
-
-- Platform Support:
 
 - Bug Fixes:
 
@@ -20,8 +33,6 @@
 	- [#1020](https://github.com/LMS-Community/slimserver/pull/1020) \- Add icon to favorites in Default web UI et al. (thanks philippe44 && darrell-k)
 	- [#1029](https://github.com/LMS-Community/slimserver/pull/1029) \- Fix incorrect HTTP skipping (thanks philippe44 && bpa!)
 	- [#1045](https://github.com/LMS-Community/slimserver/issues/1045) \- "shufflemode" is missing from "alarms" query (thanks @CDrummond!)
-
-- Other:
 
 ## Version 8.5.0 - 2024-03-14 (8762186a4)
 

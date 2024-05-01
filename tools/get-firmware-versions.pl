@@ -6,7 +6,7 @@ use Data::Dump;
 use LWP::UserAgent;
 use YAML;
 
-use constant VERSION => '8.5.0';
+use constant VERSION => '8.5.1';
 use constant COMMUNITY_FIRMWARE_REPOSITORY => 'https://ralph_irving.gitlab.io/lms-community-firmware/update/firmware/%s/%s';
 use constant FIRMWARE_YAML => 'docs/players-and-controllers/firmware-versions.yaml';
 

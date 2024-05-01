@@ -1,7 +1,0 @@
----
-deb: '[:material-debian: Debian / :material-ubuntu: Ubuntu x86_64 (24 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/logitechmediaserver_8.5.0_amd64.deb){ .md-button } [:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (31 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/logitechmediaserver_8.5.0_arm.deb){ .md-button }'
-debpi: '[:simple-raspberrypi: Raspberry Pi OS (31 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/logitechmediaserver_8.5.0_arm.deb){ .md-button }'
-mac: '[:material-apple: Apple macOS (43 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0.pkg){ .md-button }'
-rpm: '[:material-redhat: RedHat / :material-fedora: Fedora (86 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/logitechmediaserver-8.5.0-1.noarch.rpm){ .md-button }'
-version: 8.5.0
-win: '[:material-microsoft-windows: Windows 32-bit (70 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0.exe){ .md-button } [:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.0/LogitechMediaServer-8.5.0-win64.exe){ .md-button }'
