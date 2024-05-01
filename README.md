@@ -1,5 +1,5 @@
-# lms-community.github.io
-This is the [web page](https://lms-community.github.io) for the LMS Community repository
+# lyrion.org
+This is the [web page](https://lyrion.org) for the LMS Community.
 
 The site is based on mkdocs-material (https://squidfunk.github.io/mkdocs-material/).
 
