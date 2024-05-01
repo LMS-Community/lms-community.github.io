@@ -65,6 +65,8 @@ extra:
     - icon: simple/vbulletin
       link: https://forums.slimdevices.com
 
+copyright: <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
+
 # tabbed content
 markdown_extensions:
   - admonition
@@ -83,10 +85,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
-  - Home:
-    - Overview: index.md
-    - Analytics: analytics/index.md
-    - Community Forums: https://forums.slimdevices.com
+  - Home: index.md
   - Getting Started with LMS:
     - Download & Installation: getting-started/index.md
     - Migrate from UE Smart Radio:
@@ -129,9 +128,10 @@ nav:
     - Available Plugins: plugins/directory.md
     - Repository File Reference: reference/repository-dev.md
   - Contributing:
-    - contributing/index.md
+    - Overview: contributing/index.md
     - Reporting a bug: contributing/reporting-a-bug.md
     - Adding translations: contributing/adding-translations.md
+    - Community forums: https://forums.slimdevices.com/
   - Reference:
     - Lyrion Music Server: reference/lyrion-music-server.md
     - Command Line Interface (JSON/RPC):

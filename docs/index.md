@@ -1,9 +1,18 @@
 ---
 hide:
+  - navigation
   - toc
 layout: default
 title: Home
 ---
+
+<style>
+.md-content {
+  max-width: 900px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
 # Lyrion Music Server
 
