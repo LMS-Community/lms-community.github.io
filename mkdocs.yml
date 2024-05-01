@@ -60,6 +60,8 @@ extra:
       link: https://hub.docker.com/r/lmscommunity/lyrionmusicserver
     - icon: simple/vbulletin
       link: https://forums.slimdevices.com
+    - icon: octicons/graph-16
+      link: /analytics/
 
 # tabbed content
 markdown_extensions:
