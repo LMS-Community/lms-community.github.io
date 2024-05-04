@@ -322,7 +322,7 @@ A Work is a (usually classical) piece of music made up of one or more movements,
 
 A Work is defined by its name and its composer.
 
-An Album can contain many Works, and an instance of a Work can exist on many albums. There is therefore a many-to-many relationship between Works and Albums.
+An Album can contain many Works, and an instance of a Work can exist on many Albums. There is therefore a many-to-many relationship between Works and Albums.
 This many-to-many relationship is resolved in the Tracks table which contains the album id and the work id.
 
 **Accepted tagged parameters:**
@@ -349,11 +349,9 @@ This many-to-many relationship is resolved in the Tracks table which contains th
 || `artwork_track_id` | the id of the artwork for the first album found containing the work |
 || `artwork_track_ids` | a list of all artwork ids of albums containing the work |
 || `album_id` | a list of the ids of all albums containing the work |
-|| `textkey` | if `single_composer` (see above), the first letter of the composer name, otherwise, the first letter of the work name |
+|| `textkey` | if `single_composer` (see above), the first letter of the work name, otherwise, the first letter of the composer name |
 || `favorites_url` | the URL for favoriting the work |
 || `favorites_title` | the text to be used for the favorite |
-
-The work's `textkey` is the first letter of the sorting key.
 
 ***
 ## years
