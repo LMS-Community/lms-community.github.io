@@ -66,6 +66,9 @@ The tracks_persistent table contains additional statistics information about a t
 
 The tracks_persistent table was added in SqueezeCenter 7.1.
  
+### works 
+
+The works table contains an entry for each Work in your music library.
 
 ### genres 
 
