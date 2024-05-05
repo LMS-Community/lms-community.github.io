@@ -338,10 +338,11 @@ This many-to-many relationship is resolved in the Tracks table which contains th
 
 **Returned parameters:**
 
-| Result | Tag | Description |
+| Block | Tag | Description |
 |---|---|---|
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 | count | `count` | Number of results returned by the query.  |
-| works_loop | `work_id` | unique work identifier |
+| For each work: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `single_composer` | only returned if the results contain works from a single composer who is also the searched-for contributor |
 || `composer` | the name of the composer of the work |
 || `work` | the name of the work |
