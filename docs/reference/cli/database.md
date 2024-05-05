@@ -313,6 +313,48 @@ Response: "albums 0 5 artist_id:19 count:1 id:5 album:Bounce%20[Single]<LF>"
 ```
 
 ***
+## works
+`works <start> <itemsPerResponse> <taggedParameters>`
+
+The `works` query returns all works known by the server.
+
+A Work is a (usually classical) piece of music made up of one or more movements, acts, scenes etc, each of which is usually a separate track.
+
+A Work is defined by its name and its composer.
+
+An Album can contain many Works, and an instance of a Work can exist on many Albums. There is therefore a many-to-many relationship between Works and Albums.
+This many-to-many relationship is resolved in the Tracks table which contains the album id and the work id.
+
+**Accepted tagged parameters:**
+
+| Tag | Description |
+|---|---|
+| `search` | Search string. The search is case insensitive and obeys the `Search Within Words` server parameter. |
+| `artist_id` | Limit results to those works on which the artist identified by `artist_id` performs. |
+| `genre_id` | Limit results to the genre(s) identified by `genre_id`. The genre_id may be a list of comma separated IDs. |
+| `library_id` | Virtual library ID, to restrict the results to a virtual library view. |
+| `work_id` | Limit results to an individual `work`. |
+| `role_id` | Limit results to the role(s) identified by `role_id`. The role_id may be a list of comma separated IDs. |
+
+**Returned parameters:**
+
+| Block | Tag | Description |
+|---|---|---|
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
+| count | `count` | Number of results returned by the query.  |
+| For each work: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
+|| `single_composer` | only returned if the results contain works from a single composer who is also the searched-for contributor |
+|| `composer` | the name of the composer of the work |
+|| `work` | the name of the work |
+|| `composer_id` | the id of the composer of the work |
+|| `artwork_track_id` | the id of the artwork for the first album found containing the work |
+|| `artwork_track_ids` | a list of all artwork ids of albums containing the work |
+|| `album_id` | a list of the ids of all albums containing the work |
+|| `textkey` | if `single_composer` (see above), the first letter of the work name, otherwise, the first letter of the composer name |
+|| `favorites_url` | the URL for favoriting the work |
+|| `favorites_title` | the text to be used for the favorite |
+
+***
 ## years
 `years <start> <itemsPerResponse> <taggedParameters>`
 
