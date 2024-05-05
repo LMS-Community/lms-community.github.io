@@ -12,7 +12,7 @@
 
 - Bug Fixes:
 
-	- [#999](https://github.com/LMS-Community/slimserver/issues/999) \-
+	- [#1027](https://github.com/LMS-Community/slimserver/issues/1027) \- Play count increase with in-track jumps (thanks @darrel-k!)
 
 - Other:
 
