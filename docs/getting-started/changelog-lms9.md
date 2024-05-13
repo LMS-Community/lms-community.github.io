@@ -8,6 +8,9 @@
 
 - Server Changes:
 
+	- Improve Plugin Manager: add categories, icons, search, nicer UX.
+	- Fall back to "latest" firmware folder if no server version specific files can be found.
+
 - Platform Support:
 
 - Bug Fixes:
