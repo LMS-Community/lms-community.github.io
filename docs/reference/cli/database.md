@@ -708,6 +708,28 @@ Response: "titles 0 12 album:Anastacia tags:p count:12 id:4 title:Heavy%20On%20M
 ```
 
 ***
+## tags
+`tags <url|track_id>`
+
+Return the tracks found in the file referenced by the `url` or `track_id`.
+
+Please note that returned data depends on the file format, tagging software used, etc.
+
+**Accepted tagged parameters:**
+
+| Tag | Description |
+|---|---|
+| `url` | The `file://` or `tmp://` URL to the audio file. |
+| `track_id` | The track's ID |
+
+Example:
+```
+Request: "tags track_id:454<LF>"
+Response: tags track_id%3A454 ALBUM%3A0 ARTIST%3ALow%20Roar COMMENT%3A%40JW DATE%3A2014 GENRE%3AAlternative REPLAYGAIN_ALBUM_GAIN%3A-9.18%20dB REPLAYGAIN_ALBUM_PEAK%3A1.00000000 REPLAYGAIN_REFERENCE_LOUDNESS%3A89.0%20dB REPLAYGAIN_TRACK_GAIN%3A-3.16%20dB REPLAYGAIN_TRACK_PEAK%3A0.96447754 TITLE%3AIn%20the%20Morning TRACKNUMBER%3A8 VENDOR%3Areference%20libFLAC%201.2.1%2020070917
+```
+
+
+***
 ## search
 `search <start> <itemsPerResponse> <taggedParameters>`
 

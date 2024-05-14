@@ -31,31 +31,35 @@ The available commands and queries are listed below, grouped by their scope:
 * Original sections "Deprecated", and "Plugins" have not been migrated.
 * Future LMS server distributions (from v9 onwards) will no longer have the CLI documentation in the embedded help.
 
-### Changes starting from Squeezebox Server 8.5
+### Changes starting from Lyrion Music Server 9.0
+
+* Added `tags` query to return a file's raw tag information.
+
+### Changes starting from Logitech Media Server 8.5
 
 * Removed all calls and code related to MySqueezebox.com related systems.
 * Added "alarmData" parameter to the "status" query to report information about the upcoming alarm.
 
-### Changes starting from Squeezebox Server 8.4
+### Changes starting from Logitech Media Server 8.4
 
 * Added support for release types and roles to albums, and titles queries.
 * Added support for a list of album IDs while fetching albums.
 
-### Changes starting from Squeezebox Server 8.2
+### Changes starting from Logitech Media Server 8.2
 
 * Added query to figure out whether fulltext search is enabled or not (fulltextsearch).
 
-### Changes starting from Squeezebox Server 8.0
+### Changes starting from Logitech Media Server 8.0
 
 * Added support for external IDs: when libraries from online music services are imported, artists, albums, and titles store the external, service specific ID in the 'extid' field. Artists can have multiple, comma separated values, as one artist can be found on multiple services.
 
-### Changes starting from Squeezebox Server 7.9
+### Changes starting from Logitech Media Server 7.9
 
 * Added support for virtual library views. artists, albums, genres, titles etc. queries now accept a library_id parameter to filter the results by virtual libraries. libraries returns a list of libraries with their name and IDs.
 * Added support for new "random" sort order for the albums query.
 * Added support for these queries to filter by the contributor's role (role_id).
 
-### Changes starting from Squeezebox Server 7.7
+### Changes starting from Logitech Media Server 7.7
 
 * Extended "rescan" with optional singledir parameter.
 * Added "info total duration ?" query to return the total number of seconds for the library.
