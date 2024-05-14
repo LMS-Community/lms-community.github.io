@@ -4,10 +4,9 @@ use strict;
 
 # use Data::Dump;
 use JSON;
-use LWP::Simple;
+use LWP::UserAgent;
 use XML::Simple;
 
-use constant TESTING => 0;
 use constant REPO_FILE => 'https://raw.githubusercontent.com/LMS-Community/lms-plugin-repository/master/extensions.xml';
 use constant STATS_URL => 'https://stats.lms-community.org/api/stats/plugins';
 use constant MAX_TOP_PLUGINS => 20;
@@ -61,18 +60,12 @@ title: Available Plugins
 -->
 );
 
-eval {
-	my $repoXML = TESTING
-		? do {
-			warn 'TESTING local file!!!';
-			local $/ = undef;
-			open my $fh, "<", 'extensions.xml'
-				or die "could not open: $!";
-			<$fh>;
-		}
-		: get(REPO_FILE);
+my $ua = LWP::UserAgent->new();
 
-	$repo = XMLin($repoXML,
+eval {
+	my $repoXML = $ua->get(REPO_FILE);
+
+	$repo = XMLin($repoXML->content,
 		SuppressEmpty => undef,
 		KeyAttr     => {
 			title   => 'lang',
@@ -90,15 +83,7 @@ eval {
 		ForceArray => [ 'applet', 'wallpaper', 'sound', 'plugin', 'patch', 'title', 'desc', 'changes' ],
 	);
 
-	$stats = from_json(TESTING
-		? do {
-			warn 'TESTING local file!!!';
-			local $/ = undef;
-			open my $fh, "<", 'plugins.json'
-				or die "could not open: $!";
-			<$fh>;
-		}
-		: get(STATS_URL)) || [];
+	$stats = from_json($ua->get(STATS_URL)->content) || [];
 
 	foreach (@$stats) {
 		my ($k, $v) = each %$_;
@@ -163,6 +148,7 @@ sub printCategory {
 
 	foreach (@$data) {
 		my $title = $_->{title}->{EN};
+		$title =~ s/\s*$//;
 		utf8::encode($title);
 
 		my $desc = $_->{desc}->{EN};
