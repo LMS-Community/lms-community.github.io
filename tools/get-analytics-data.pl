@@ -40,7 +40,7 @@ my ($stats, $history);
 
 eval {
     my $ua = LWP::UserAgent->new();
-    $ua->ssl_opts(verify_hostname => 0);
+    # $ua->ssl_opts(verify_hostname => 0);
     my $resp = $ua->get(STATS_SUMMARY);
     $stats   = from_json($resp->content);
 
@@ -120,7 +120,7 @@ my %stats = (
     } @{prepareData($stats->{playerTypes}, 0, 'p') || []} ],
     connectedPlayers => prepareData($stats->{connectedPlayers}, 0, 'p'),
     countries => prepareData($stats->{countries}, 0, 'c', 'i'),
-    os        => prepareData($stats->{os}, 20, 'o'),
+    os        => prepareData($stats->{os}, 30, 'o'),
     tracks    => prepareData($stats->{tracks}, 0, 't'),
 );
 
