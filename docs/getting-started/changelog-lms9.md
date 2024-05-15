@@ -4,6 +4,9 @@
 
 - New Features:
 
+	- New product name! Welcome Lyrion Music Server!
+	- New visuals - thanks @gobuleberbu & @mikes!
+	- Default skin refresh (the old version is still available as "Logic Teal")
 	- [Massive upgrade for Classical music lovers](https://github.com/LMS-Community/slimserver/pull/930): add support for Works. Thanks a ton @darrel-k!
 
 - Server Changes:
