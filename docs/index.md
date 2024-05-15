@@ -8,7 +8,7 @@ title: Home
 
 <style>
 .md-content {
-  max-width: 900px; 
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -19,7 +19,7 @@ title: Home
 Lyrion Music Server (formerly Logitech Media Server) is open-source server software which controls a wide range of Squeezebox audio players. Lyrion can stream your local music collection, internet radio stations, and content from many streaming services (with and without subscriptions).
 
 <figure markdown="span">
-  ![](assets/screenshot.png){ width="500" }
+  ![](assets/screenshot.png){ width="600" }
 </figure>
 
 ## LMS ecosystem

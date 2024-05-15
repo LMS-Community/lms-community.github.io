@@ -19,7 +19,7 @@ my $playerTypes = {
     fab4 => 'Squeezebox Touch',
     http => 'HTTP',
     iPengiPad => 'iPeng iPad',
-    iPengiPod => 'iPeng iPod',
+    iPengiPod => 'iPeng iPhone',
     m6encore => 'M6 Encore',
     receiver => 'Squeezebox Receiver',
     slimp3 => 'SliMP3',
@@ -40,7 +40,7 @@ my ($stats, $history);
 
 eval {
     my $ua = LWP::UserAgent->new();
-    # $ua->ssl_opts(verify_hostname => 0);
+    $ua->ssl_opts(verify_hostname => 0);
     my $resp = $ua->get(STATS_SUMMARY);
     $stats   = from_json($resp->content);
 
