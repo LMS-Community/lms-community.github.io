@@ -15,16 +15,21 @@ my $playerTypes = {
     boom => 'Squeezebox Boom',
     controller => 'Squeezebox Controller',
     daphile => 'Daphile',
-    Euphony => 'Euphony',
+    euphony => 'Euphony',
     fab4 => 'Squeezebox Touch',
     http => 'HTTP',
-    iPengiPad => 'iPeng iPad',
-    iPengiPod => 'iPeng iPhone',
+    'ipeng ipad' => 'iPeng iPad',
+    'ipeng ipod' => 'iPeng iPhone',
+    'ipeng iphone' => 'iPeng iPhone',
+    ipengipad => 'iPeng iPad',
+    ipengipod => 'iPeng iPhone',
     m6encore => 'M6 Encore',
     receiver => 'Squeezebox Receiver',
+    'ropieee [ropieeexl]' => 'Ropieee',
+    slimlibrary => 'SlimLibrary',
     slimp3 => 'SliMP3',
     softsqueeze => 'Softsqueeze',
-    'Squeeze connect' => 'Squeeze Connect',
+    'squeeze connect' => 'Squeeze Connect',
     squeezebox => 'Squeezebox 1',
     squeezebox2 => 'Squeezebox 2/3/Classic',
     squeezebox3 => 'Squeezebox 3',
@@ -39,7 +44,9 @@ my $playerTypes = {
 my ($stats, $history);
 
 eval {
-    my $ua = LWP::UserAgent->new();
+    my $ua = LWP::UserAgent->new(
+        agent => 'Lyrion/0.1 - analytics aggregator'
+    );
     # $ua->ssl_opts(verify_hostname => 0);
     my $resp = $ua->get(STATS_SUMMARY);
     $stats   = from_json($resp->content);
@@ -49,25 +56,13 @@ eval {
 } || die "$@";
 
 sub prepareData {
-    my ($data, $cutoff, $valueLabel, $countLabel) = @_;
-    $cutoff ||= 0;
+    my ($data, $valueLabel, $countLabel) = @_;
     $countLabel ||= 'c';
 
     my $others = 0;
 
     $data = [
-        grep {
-            my $keep = 1;
-
-            if ($cutoff && (my $c = $_->{$countLabel})) {
-                if ($c < $cutoff) {
-                    $others += $c;
-                    $keep = 0;
-                }
-            }
-
-            $keep;
-        } map {
+        map {
             my ($k, $v) = each %$_;
             my $r = {
                 $valueLabel => $k,
@@ -115,13 +110,13 @@ my %stats = (
     versions  => \@versions,
     players   => \@players,
     playerTypes => [ map {
-        $_->{p} = $playerTypes->{$_->{p}} || ucfirst($_->{p});
+        $_->{p} = $playerTypes->{lc($_->{p})} || ucfirst($_->{p});
         $_;
-    } @{prepareData($stats->{playerTypes}, 0, 'p') || []} ],
-    connectedPlayers => prepareData($stats->{connectedPlayers}, 0, 'p'),
-    countries => prepareData($stats->{countries}, 0, 'c', 'i'),
-    os        => prepareData($stats->{os}, 30, 'o'),
-    tracks    => prepareData($stats->{tracks}, 0, 't'),
+    } @{prepareData($stats->{playerTypes}, 'p') || []} ],
+    connectedPlayers => prepareData($stats->{connectedPlayers}, 'p'),
+    countries => prepareData($stats->{countries}, 'c', 'i'),
+    os        => prepareData($stats->{os}, 'o'),
+    tracks    => prepareData($stats->{tracks}, 't'),
 );
 
 print to_json(\%stats);

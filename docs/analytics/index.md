@@ -177,7 +177,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 350,
+  "height": 420,
   "title": "Player types",
   "description": "Pie chart with player types",
   "data": {
@@ -197,7 +197,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 350,
+  "height": 420,
   "title": "Operating systems and architectures",
   "description": "Pie chart with operating systems and architectures",
   "data": {
