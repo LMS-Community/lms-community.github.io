@@ -37,8 +37,8 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
         "mark": {
             "type": "line",
             "point": {
-                "filled": false,
-                "fill": "white"
+                "filled": true,
+                "size": 15
             }
         }
     },
@@ -80,8 +80,8 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
         "mark": {
             "type": "line",
             "point": {
-                "filled": false,
-                "fill": "white"
+                "filled": true,
+                "size": 15
             }
         }
     },
