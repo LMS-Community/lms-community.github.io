@@ -4,13 +4,19 @@
 
 - Server Changes:
 
+	- Fall back to "latest" firmware folder if no server version specific files can be found.
+	- Improve Analytics reporting to cover more player types.
+
 - Platform Support:
+
+	- Improve macOS architecture detection
 
 - Bug Fixes:
 
 	- [#1056](https://github.com/Logitech/slimserver/pull/1056) \- Fix playback of certain mp4 files (thanks philippe44!)
 	- [#1047](https://github.com/Logitech/slimserver/pull/1047) \- Fix sort collation when requesting artists
 	- Fix /music/current/cover artwork handler for certain cases where resizing would fail (eg. [Podcasts](https://forums.slimdevices.com/forum/developer-forums/developers/1699734))
+	- [Fix RandomPlay](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/106269-announce-material-skin/page652#post1707487) when overriding a selected library view with "all music" (see when using Material skin)
 	- Use ORIGINALYEAR, ORIGINALDATE, or DATE to parse the year from Ogg files.
 
 - Other:

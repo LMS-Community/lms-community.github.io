@@ -147,71 +147,71 @@ src: '[:material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64,
 stable:
   deb:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
-    name: logitechmediaserver_8.5.2~1716026176_all.deb
+    name: logitechmediaserver_8.5.2~1716145112_all.deb
     size: 57 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.2~1716026176_all.deb
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.2~1716145112_all.deb
   debamd64:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'
-    name: logitechmediaserver_8.5.2~1716026176_amd64.deb
+    name: logitechmediaserver_8.5.2~1716145112_amd64.deb
     size: 24 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.2~1716026176_amd64.deb
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.2~1716145112_amd64.deb
   debarm:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
-    name: logitechmediaserver_8.5.2~1716026176_arm.deb
+    name: logitechmediaserver_8.5.2~1716145112_arm.deb
     size: 31 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.2~1716026176_arm.deb
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.2~1716145112_arm.deb
   debi386:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'
-    name: logitechmediaserver_8.5.2~1716026176_i386.deb
+    name: logitechmediaserver_8.5.2~1716145112_i386.deb
     size: 17 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.2~1716026176_i386.deb
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.2~1716145112_i386.deb
   mac:
     desc: ':material-apple: Apple macOS'
-    name: LogitechMediaServer-8.5.2-1716026176.pkg
+    name: LogitechMediaServer-8.5.2-1716145112.pkg
     size: 43 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.2-1716026176.pkg
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.2-1716145112.pkg
   nocpan:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'
-    name: logitechmediaserver-8.5.2-1716026176-noCPAN.tgz
+    name: logitechmediaserver-8.5.2-1716145112-noCPAN.tgz
     size: 17 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.2-1716026176-noCPAN.tgz
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.2-1716145112-noCPAN.tgz
   rpm:
     desc: ':material-redhat: RedHat / :material-fedora: Fedora'
-    name: logitechmediaserver-8.5.2-0.1.1716026176.noarch.rpm
+    name: logitechmediaserver-8.5.2-0.1.1716145112.noarch.rpm
     size: 86 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.2-0.1.1716026176.noarch.rpm
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.2-0.1.1716145112.noarch.rpm
   src:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'
-    name: logitechmediaserver-8.5.2-1716026176.tgz
+    name: logitechmediaserver-8.5.2-1716145112.tgz
     size: 118 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.2-1716026176.tgz
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.2-1716145112.tgz
   tararm:
     desc: ':material-linux::material-code-braces: ARM Linux Tarball'
-    name: logitechmediaserver-8.5.2-1716026176-arm-linux.tgz
+    name: logitechmediaserver-8.5.2-1716145112-arm-linux.tgz
     size: 55 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.2-1716026176-arm-linux.tgz
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.2-1716145112-arm-linux.tgz
   version: 8.5.2
   win:
     desc: ':material-microsoft-windows: Windows 32-bit'
-    name: LogitechMediaServer-8.5.2-1716026176.exe
+    name: LogitechMediaServer-8.5.2-1716145112.exe
     size: 70 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.2-1716026176.exe
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.2-1716145112.exe
   win64:
     desc: ':material-microsoft-windows: Windows 64-bit'
-    name: LogitechMediaServer-8.5.2-1716026176-win64.exe
+    name: LogitechMediaServer-8.5.2-1716145112-win64.exe
     size: 16 MB
-    timestamp: Sat May 18 09:56:16 2024
-    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.2-1716026176-win64.exe
+    timestamp: Sun May 19 18:58:32 2024
+    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.2-1716145112-win64.exe
 tararm: '[:material-linux::material-code-braces: ARM Linux Tarball (55 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.1/logitechmediaserver-8.5.1-arm-linux.tgz){ .md-button }'
 win: '[:material-microsoft-windows: Windows 32-bit (70 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.1/LogitechMediaServer-8.5.1.exe){ .md-button } [:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.1/LogitechMediaServer-8.5.1-win64.exe){ .md-button }'
 win64: '[:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.1/LogitechMediaServer-8.5.1-win64.exe){ .md-button }'
