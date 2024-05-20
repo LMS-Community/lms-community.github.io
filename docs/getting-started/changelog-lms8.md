@@ -15,6 +15,7 @@
 
 	- [#1056](https://github.com/Logitech/slimserver/pull/1056) \- Fix playback of certain mp4 files (thanks philippe44!)
 	- [#1047](https://github.com/Logitech/slimserver/pull/1047) \- Fix sort collation when requesting artists
+	- [#1083](https://github.com/LMS-Community/slimserver/pull/1083) \- Fixes for playlist add via Release Type groups (thanks darrel-k!)
 	- Fix /music/current/cover artwork handler for certain cases where resizing would fail (eg. [Podcasts](https://forums.slimdevices.com/forum/developer-forums/developers/1699734))
 	- [Fix RandomPlay](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/106269-announce-material-skin/page652#post1707487) when overriding a selected library view with "all music" (see when using Material skin)
 	- Use ORIGINALYEAR, ORIGINALDATE, or DATE to parse the year from Ogg files.
