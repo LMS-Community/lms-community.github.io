@@ -10,8 +10,8 @@ Lyrion Music Server is a fully open source server software to power a wide range
 ## Download and install Logitech Media Server v{{ latest.version }}
 
 === ":material-microsoft-windows: Windows"
-    !!! warning
-        Please note that the 64-bit version still is somewhat experimental. It's recommended to uninstall an existing 32-bit version before installing the 64-bit version. Unless you tell the uninstaller to delete everything, the data should survive the upgrade.
+    !!! note
+        The 64-bit version is the way to go moving forward. It's recommended to uninstall an existing 32-bit version before installing the 64-bit version. But please note that there's no Control Panel app any more, nor a try icon. Tools like eg. [ServiceTray](https://www.coretechnologies.com/products/ServiceTray/) allow you to easily start/stop the LMS service.
 
     {{ win }}
 
@@ -72,6 +72,8 @@ Lyrion Music Server is a fully open source server software to power a wide range
     !!! note
         Sometimes macOS would refuse to open the installer, because the authenticity of the developer can't be confirmed. If that happens to you, open the installer using a right mouse click (or control-click), then "Open". You might have to do this twice, as first time you'd still be rejected. But the second time around you should be able to launch it anyway.
 
+        If you want to use external disks, you'll have to grant the `perl` "full disk access" permissions. You'd usually find this file in `/Library/PreferencePanes/Squeezebox.prefPane/Contents/perl/bin/perl`. See "Security & Privacy Preferences > Privacy > Full Disk Access" in the Mac's preference pane.
+
 
 === ":material-docker: Docker"
 
@@ -82,7 +84,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 === ":material-download: Other Downloads"
 
-    You can find more packages for more platforms on [https://downloads.lyrion.org/](https://downloads.lyrion.org/).
+    You can find more packages for more platforms on [https://lyrion.org/downloads](../downloads).
 
 
 ## Configure
