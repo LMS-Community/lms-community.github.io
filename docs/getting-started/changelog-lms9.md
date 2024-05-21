@@ -12,6 +12,7 @@
 - Server Changes:
 
 	- Updated Czech translation - thanks @mipa87!
+	- Updated French translation - thanks @Franck-Berry!
 	- Improve Plugin Manager: add categories, icons, search, nicer UX.
 
 - Platform Support:
