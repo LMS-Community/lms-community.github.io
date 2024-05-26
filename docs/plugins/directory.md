@@ -462,7 +462,7 @@ title: Available Plugins
 
     Material themed skin, suitable for mobile use.
 
-    Craig Drummond    - :octicons-download-24: 6693
+    Craig Drummond    - :octicons-download-24: 6694
 
 </div>
 
@@ -964,7 +964,7 @@ title: Available Plugins
 
     Material themed skin, suitable for mobile use.
 
-    Craig Drummond    - :octicons-download-24: 6693
+    Craig Drummond    - :octicons-download-24: 6694
 
 -   __:material-star-shooting: Spotify for Squeezebox. Still Spotty.__
 
