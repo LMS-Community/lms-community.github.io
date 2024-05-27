@@ -58,6 +58,8 @@ foreach ('latest', 'stable', 'dev') {
         src => $releases->{src},
         nocpan => $releases->{nocpan},
         version => $version,
+        majorVersion => (split(/\./, $version))[0],
+        minorVersion => join('.', (split(/\./, $version))[0..1]),
     };
 
     if ($_ eq 'latest') {
@@ -102,7 +104,7 @@ sub renderRelease {
                 desc => $_->[1],
                 size => $download->{size},
                 url => $url,
-                timestamp => scalar localtime $download->{revision}
+                timestamp => scalar gmtime $download->{revision}
             }
         }
     }

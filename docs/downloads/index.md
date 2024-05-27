@@ -11,6 +11,8 @@ title: LMS Downloads
 ## v{{ latest.version }} - Latest Release
 
 This is the released version. Please see [Getting Started](../getting-started/index.md) for more information.
+([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/{{ latest.version }}/Changelog{{ latest.majorVersion }}.html) -
+[Git Commit Log](https://github.com/LMS-Community/slimserver/commits/{{ latest.version }}))
 
 | Name | Size | Creation Date | Desc |
 | ---  | --- :| ---           | ---  |
@@ -30,6 +32,8 @@ This is the released version. Please see [Getting Started](../getting-started/in
 ## v{{ stable.version }} - Stable Nightly Build
 
 The stable branch is like the officially released latest version, with some additional bug fixes. Use this if you want to use a reliable system, but need an important fix.
+([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/public/{{ stable.minorVersion }}/Changelog{{ stable.majorVersion }}.html) -
+[Git Commit Log](https://github.com/LMS-Community/slimserver/commits/public/{{ stable.minorVersion }}))
 
 | Name | Size | Creation Date | Desc |
 | ---  | --- :| ---           | ---  |
@@ -49,6 +53,8 @@ The stable branch is like the officially released latest version, with some addi
 ## Lyrion Music Server v{{ dev.version }} - Development Build
 
 The development version is where you’ll find all the latest and greatest features. But as it’s under development you might encounter bugs, or changing behaviour.
+([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/public/{{ dev.minorVersion }}/Changelog{{ dev.majorVersion }}.html) -
+[Git Commit Log](https://github.com/LMS-Community/slimserver/commits/public/{{ dev.minorVersion }}))
 
 !!! danger
     Please only use this build if you’re willing to deal with the occasional broken build!

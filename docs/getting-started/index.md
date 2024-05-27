@@ -84,7 +84,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 === ":material-download: Other Downloads"
 
-    You can find more packages for more platforms on [https://lyrion.org/downloads](../downloads).
+    You can find more packages for more platforms on [https://lyrion.org/downloads](../downloads/index.md).
 
 
 ## Configure
