@@ -7,6 +7,7 @@
 	- New product name! Welcome Lyrion Music Server!
 	- New visuals - thanks @gobuleberbu & @mikes!
 	- Default skin refresh (the old version is still available as "Logic Teal")
+	- Improved first start setup: suggest a few plugins to install on initial startup.
 	- [Massive upgrade for Classical music lovers](https://github.com/LMS-Community/slimserver/pull/930): add support for Works. Thanks a ton @darrel-k!
 	- [#1095](https://github.com/LMS-Community/slimserver/issues/1095) \- Link from online tracks and albums to local library (if possible).
 
