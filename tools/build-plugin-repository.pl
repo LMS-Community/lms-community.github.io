@@ -8,7 +8,6 @@ use LWP::UserAgent;
 use XML::Simple;
 
 use constant REPO_FILE => 'https://raw.githubusercontent.com/LMS-Community/lms-plugin-repository/master/extensions.xml';
-use constant STATS_URL => 'https://stats.lms-community.org/api/stats/plugins';
 use constant MAX_TOP_PLUGINS => 20;
 
 my @categories = (
@@ -45,7 +44,7 @@ my %categoryIcons = (
 	top => 'material-star-shooting',
 );
 
-my ($repo, $stats, %pluginCounts);
+my $repo;
 
 print q(---
 layout: default
@@ -82,13 +81,6 @@ eval {
 		},
 		ForceArray => [ 'applet', 'wallpaper', 'sound', 'plugin', 'patch', 'title', 'desc', 'changes' ],
 	);
-
-	$stats = from_json($ua->get(STATS_URL)->content) || [];
-
-	foreach (@$stats) {
-		my ($k, $v) = each %$_;
-		$pluginCounts{$k} = $v;
-	}
 };
 
 die "$@" if $@;
@@ -115,12 +107,11 @@ foreach (@categories, keys %categories) {
 	printCategory($_, $category);
 }
 
-my @topPlugins;
-foreach my $plugin (@$stats) {
-	my ($name) = keys %$plugin;
-	push @topPlugins, $pluginsRef{$name} if $pluginsRef{$name};
-	last if scalar @topPlugins >= MAX_TOP_PLUGINS;
-}
+my @topPlugins = (sort {
+	$b->{installations} <=> $a->{installations}
+} grep {
+	$_->{installations} && $_->{maxTarget} =~ /^[89*]/;
+} @$plugins)[0..(MAX_TOP_PLUGINS-1)];
 
 if (scalar @topPlugins) {
 	printCategory('top', \@topPlugins, 'nofilter');
@@ -165,7 +156,7 @@ sub printCategory {
 		printf("    %s", $author) if !$_->{email};
 		printf("    [:octicons-mail-24: %s](mailto:%s)", $author, $_->{email}) if $_->{email};
 		printf("    - [:octicons-globe-24: Details](%s)", $_->{link}) if $_->{link};
-		printf("    - :octicons-download-24: %s", $pluginCounts{$_->{name}}) if $pluginCounts{$_->{name}};
+		printf("    - :octicons-download-24: %s", $_->{installations}) if $_->{installations};
 		print  "\n\n";
 	}
 
