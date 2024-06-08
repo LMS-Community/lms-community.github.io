@@ -33,7 +33,7 @@ Jcrummy has created a tool for multiple platforms to take care of the initializa
 ### SBCONFIG instructions
 1. Download and launch the relevant executable for your OS.
 2. Select the network interface that is connect to the same LAN as your Receiver. If you have only 1 network interface there is no need to select one. Be sure to use a network cable. 
-3. Make sure you have restored the factory settings and that the LED is blinking red. [See here for clarification of the various LED color codes](https://wiki.slimdevices.com/index.php/SBR_front_button_and_LED). 
+3. Make sure you have restored the factory settings and that the LED is blinking red. See below for clarification of the various LED color codes. 
 4. Now type discover. If your device is detected you will see the MAC address and 0.0.0.0 as the IP.
 5. Type configure and the device number (0 in most cases)
 6. You now enter the programming mode
