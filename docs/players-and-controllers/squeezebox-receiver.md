@@ -42,3 +42,5 @@ Jcrummy has created a tool for multiple platforms to take care of the initializa
 8. Commit your changes by typing save.
 9. Restart your Receiver. If you did everything right, the light now turns green, signaling that an IP address has been acquired via DHCP.
 10. Once the Receiver is connected to LMS, the light will turn white and the device shows up in the list of players.
+
+- It may be recommendable to use wired network with the Receiver. There are reports that the wireless connections suffer from poor connection.
