@@ -38,7 +38,7 @@ Jcrummy has created a tool for multiple platforms to take care of the initializa
 4. Now type discover. If your device is detected you will see the MAC address and 0.0.0.0 as the IP.
 5. Type configure and the device number (0 in most cases)
 6. You now enter the programming mode
-7. Set the LAN gateway, the Squeezebox server address and select wired, unless you want to used WLAN. For WLAN enter the name of the Wi-Fi network (SSID) and the Network key.
+7. Set the LanGateway, the SqueezeCenterAddress and select Interface (1 for wired, 0 for wireless). For WLAN enter the name of the WirelessMode, WirelessSSID and the WirelessWPAPSK (this is the network key).
 8. Commit your changes by typing save.
 9. Restart your Receiver. If you did everything right, the light now turns green, signaling that an IP address has been acquired via DHCP.
 10. Once the Receiver is connected to LMS, the light will turn white and the device shows up in the list of players.
