@@ -2,7 +2,6 @@
 layout: default
 title: Squeezebox Receiver
 ---
-
 # Squeezebox Receiver
 
 <figure markdown="span">
@@ -23,18 +22,18 @@ The Squeezebox Receiver (SBR), announced in January of 2008, is based on the Squ
 - ROM: Rewritable flash program memory, EEPROM configuration memory
 - Power supply: 9V DC, regulated, center positive, sleeve ground. Connector: 1.05mm ID, 3.5mm OD, 7mm long. Min supply rating: 550mA
 - Supported protocols: DHCP, ARP, IP, ICMP, UDP, Support for subnets/gateways (see documentation section on WANs), UDP-based SlimProto, TCP-based SlimProto and audio streaming, direct HTTP audio streaming, direct connection to MySqueezebox.com. Will automatically reconnect to LMS.
-- Compatible with LMS/SBS version 7.0+.
+- Compatible with LMS/SBS version 7.0+. 
 
 ## Connecting a Squeezebox Receiver to your LMS
 
-Before first use the Receiver needs to be connected to your LMS system using the Squeezebox Controller. In case a Controller is not available, the Receiver can be connected by using the `Net::UDAP` protocol.
+Before first use the Receiver needs to be connected to your LMS system using the Squeezebox Controller. In case a Controller is not available, the Receiver can be connected by using the Net::UDAP protocol. 
 
-[Jcrummy](https://github.com/jcrummy) has created a tool for multiple platforms to take care of the initialization, which is called [`sbconfig` and can be found here](https://jcrummy.github.io/gosqueeze/). This tool can also be used for older Squeezebox systems, like Classic and Boom and is particularly of use when the VFD display fails.
+Jcrummy has created a tool for multiple platforms to take care of the initialization, which is called [SBCONFIG and can be found here](https://jcrummy.github.io/gosqueeze/). This tool can also be used for older Squeezebox systems, like Classic and Boom and is particularly of use when the VFD display fails.
 
-### `sbconfig` instructions
+### SBCONFIG instructions
 1. Download and launch the relevant executable for your OS.
-2. Select the network interface that is connect to the same LAN as your Receiver. If you have only 1 network interface there is no need to select one. Be sure to use a network cable.
-3. Make sure you have restored the factory settings and that the LED is blinking red. [See here for clarification of the various LED color codes](https://wiki.slimdevices.com/index.php/SBR_front_button_and_LED).
+2. Select the network interface that is connect to the same LAN as your Receiver. If you have only 1 network interface there is no need to select one. Be sure to use a network cable. 
+3. Make sure you have restored the factory settings and that the LED is blinking red. [See here for clarification of the various LED color codes](https://wiki.slimdevices.com/index.php/SBR_front_button_and_LED). 
 4. Now type discover. If your device is detected you will see the MAC address and 0.0.0.0 as the IP.
 5. Type configure and the device number (0 in most cases)
 6. You now enter the programming mode
@@ -43,12 +42,37 @@ Before first use the Receiver needs to be connected to your LMS system using the
 9. Restart your Receiver. If you did everything right, the light now turns green, signaling that an IP address has been acquired via DHCP.
 10. Once the Receiver is connected to LMS, the light will turn white and the device shows up in the list of players.
 
-!!! note
-    It may be recommendable to use wired network with the Receiver. There are reports that the wireless connections suffer from poor connection.
+- It may be recommendable to use wired network with the Receiver. There are reports that the wireless connections suffer from poor connection.
 
-### Alternative setup methods
+## Receiver LED codes
+### SBR front button and LED
+The Squeezebox Receiver has one button with a TricolorLED behind it.
+Button usage
+- To put Squeezebox Receiver into setup mode, press and hold the button for about 3 seconds or until it blinks slow red then release it. 
+- To do a factory reset on Squeezebox Receiver, continue holding for a total of 6 seconds until it starts blinking fast red. Release and after factory reset, it will start flashing slower and be ready to set up. 
+- If you press and hold the button while plugging in the Receiver, you'll see the button sequence through a series of colors and a set of ascending test tones will be played through the audio outputs. 
+- When connected to Squeezebox Server or MySqueezebox.com the button is WHITE, press to pause the music. Press again to start the music up again. 
+- While music plays the button is bright white; when paused it is dark white. 
 
-There are a few alternatives to using `sbconfig`. But some are harder to use, for others the current state is lesser known:
+### LED Color codes
+| LED color | Meaning |
+| ---- | ---- |
+| <font color="red"> Red (solid) </font>|	Booting up |
+|	Red (blinking slow) | Awaiting to be setup |
+|	Yellow | Waiting for wireless to connect / Link down on ethernet |
+|	Green |	Network connected, waiting for DHCP to get IP address (skipped when using static IP) |
+|	Blue |	Waiting to connect to Squeezebox Server or MySqueezebox.com |
+|	White |	Connected to Squeezebox Server or MySqueezebox.com |
+|	White (blinking fast) |	Firmware update in progress |
+|	Red (blinking fast) |	Factory Reset and xilinx update in progress |
+|	Purple |	Hard error with blink codes, a number of blinks with a one second pause in between (Note: The white light might have a purplish tint. If it's not blinking, everything is normal.) |
 
-- SqueezeConfig - UDAP Config tool for Android (see eg. the [announcement in the forums](https://forums.slimdevices.com/forum/user-forums/general-discussion/74718-beta-squeezeconfig-udap-config-tool-for-android))
-- The `Net::UDAP` Perl module by [robinbowes](https://github.com/robinbowes/net-udap)
+### Hard error codes
+| Number of blinks | Meaning |
+| ---- | ---- |
+| 1 blink |	MAC address missing/bad (checked second upon boot-up) |
+| 2 blinks |	Wireless card missing/bad (checked first upon boot-up) |
+| 3 blinks |	SNV failure/error |
+| 4 blinks |	Upgrade error |
+| 5 blinks |	CPLD XSVF file open error (xilinx file) |
+| 6 blinks | UUID not set/all zeros (Checked third upon boot-up) |
