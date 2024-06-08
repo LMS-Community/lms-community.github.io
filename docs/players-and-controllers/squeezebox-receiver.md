@@ -34,7 +34,7 @@ Before first use the Receiver needs to be connected to your LMS system using the
 ### `sbconfig` instructions
 1. Download and launch the relevant executable for your OS.
 2. Select the network interface that is connect to the same LAN as your Receiver. If you have only 1 network interface there is no need to select one. Be sure to use a network cable.
-3. Make sure you have restored the factory settings and that the LED is blinking red. [See here for clarification of the various LED color codes](https://wiki.slimdevices.com/index.php/SBR_front_button_and_LED).
+3. Make sure you have restored the factory settings and that the LED is blinking red. [See below for clarification of the various LED color codes](#receiver-led-codes).
 4. Now type discover. If your device is detected you will see the MAC address and 0.0.0.0 as the IP.
 5. Type configure and the device number (0 in most cases)
 6. You now enter the programming mode
@@ -52,3 +52,38 @@ There are a few alternatives to using `sbconfig`. But some are harder to use, fo
 
 - SqueezeConfig - UDAP Config tool for Android (see eg. the [announcement in the forums](https://forums.slimdevices.com/forum/user-forums/general-discussion/74718-beta-squeezeconfig-udap-config-tool-for-android))
 - The `Net::UDAP` Perl module by [robinbowes](https://github.com/robinbowes/net-udap)
+
+## Receiver LED codes
+### SBR front button and LED
+The Squeezebox Receiver has one button with a TricolorLED behind it.
+
+Button usage:
+
+- To put Squeezebox Receiver into setup mode, press and hold the button for about 3 seconds or until it blinks slow red then release it.
+- To do a factory reset on Squeezebox Receiver, continue holding for a total of 6 seconds until it starts blinking fast red. Release and after factory reset, it will start flashing slower and be ready to set up.
+- If you press and hold the button while plugging in the Receiver, you'll see the button sequence through a series of colors and a set of ascending test tones will be played through the audio outputs.
+- When connected to Lyrion Music Server the button is WHITE, press to pause the music. Press again to start the music up again.
+- While music plays the button is bright white; when paused it is dark white.
+
+### LED Color codes
+| LED color | Meaning |
+| ---- | ---- |
+| <span style="color: red"> Red (solid) </span>|	Booting up |
+|	<span style="color: red"> Red (blinking slow) </span> | Awaiting to be setup |
+|	<span style="color: yellow; background: black;"> Yellow</span> | Waiting for wireless to connect / Link down on ethernet |
+|	<span style="color: green"> Green </span> |	Network connected, waiting for DHCP to get IP address (skipped when using static IP) |
+|	<span style="color: blue"> Blue </span> |	Waiting to connect to Squeezebox Server or MySqueezebox.com |
+|	White |	Connected to Squeezebox Server or MySqueezebox.com |
+|	White (blinking fast) |	Firmware update in progress |
+|	<span style="color: red"> Red (blinking fast) </span> |	Factory Reset and xilinx update in progress |
+|	<span style="color: purple"> Purple </span> |	Hard error with blink codes, a number of blinks with a one second pause in between (Note: The white light might have a purplish tint. If it's not blinking, everything is normal.) |
+
+### Hard error codes
+| Number of blinks | Meaning |
+| ---- | ---- |
+| 1 blink |	MAC address missing/bad (checked second upon boot-up) |
+| 2 blinks |	Wireless card missing/bad (checked first upon boot-up) |
+| 3 blinks |	SNV failure/error |
+| 4 blinks |	Upgrade error |
+| 5 blinks |	CPLD XSVF file open error (xilinx file) |
+| 6 blinks | UUID not set/all zeros (Checked third upon boot-up) |
