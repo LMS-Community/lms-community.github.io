@@ -452,9 +452,17 @@ title: Available Plugins
 
     ---
 
-    Dark-themed version of the LMS Default skin.
+    Dark-themed version of the LMS Default skin
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-darkdefaultskin)
+
+-   __:material-page-layout-header-footer: Dark Logic Skin__
+
+    ---
+
+    Dark-themed version of the LMS Logic Teal skin
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-darklogicskin)
 
 -   __:material-page-layout-header-footer: Material Skin__
 
