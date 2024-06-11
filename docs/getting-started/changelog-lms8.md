@@ -8,6 +8,8 @@
 
 - Bug Fixes:
 
+	- Sometimes setting a music or playlist folder might lead the server into an infinite recursion.
+
 - Other:
 
 ## Version 8.5.2 - 2024-05-26 (88ba56f2c)
