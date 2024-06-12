@@ -11,14 +11,11 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 === ":material-microsoft-windows: Windows"
     !!! note
-        The 64-bit version is the way to go moving forward. It's recommended to uninstall an existing 32-bit version before installing the 64-bit version. But please note that there's no Control Panel app any more, nor a try icon. Tools like eg. [ServiceTray](https://www.coretechnologies.com/products/ServiceTray/) allow you to easily start/stop the LMS service.
+        The 64-bit version is the way to go moving forward. It's recommended to uninstall an existing 32-bit version before installing the 64-bit version. Please note that there's no Control Panel app any more, nor a try icon. Tools like eg. [ServiceTray](https://www.coretechnologies.com/products/ServiceTray/) allow you to easily start/stop the LMS service.
 
     {{ win }}
 
     Then double click the downloaded package to launch the installation process in a familiar installation assistant.
-
-    !!! note
-        If you're coming from an older version of LMS on Windows: the 64-bit version does _not_ provide a control panel or tray icon. It must be started/stopped using the Windows service manager.
 
 
 === ":simple-raspberrypi: Raspberry Pi"
