@@ -9,6 +9,7 @@
 - Bug Fixes:
 
 	- Sometimes setting a music or playlist folder might lead the server into an infinite recursion.
+	- Fix running the scanner from outside LMS on Windows 64-bit.
 
 - Other:
 
