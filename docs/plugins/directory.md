@@ -386,6 +386,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 67
 
+-   __:material-cast-audio: Musical Fidelity Remote Access Enabler__
+
+    ---
+
+    This plugin tries to enable SSH on your Musical Fidelity Encore device. USE AT YOUR OWN RISK! DO NOT USE IF YOU ALREADY HAVE SSH ACCESS TO YOUR MF. Once access has been successfully established, you can uninstall the plugin again.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)
+
 -   __:material-cast-audio: piCorePlayer Support__
 
     ---
