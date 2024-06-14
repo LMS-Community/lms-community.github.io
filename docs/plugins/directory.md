@@ -240,7 +240,7 @@ title: Available Plugins
 
     ---
 
-    Track, cover art and, occasionally, programme information for more than 3600 radio stations
+    Track, cover art and, occasionally, programme information for more than 4000 radio stations
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/showthread.php?115201-Announce-Radio-Now-Playing-plugin)    - :octicons-download-24: 1572
 
@@ -1122,7 +1122,7 @@ title: Available Plugins
 
     ---
 
-    Track, cover art and, occasionally, programme information for more than 3600 radio stations
+    Track, cover art and, occasionally, programme information for more than 4000 radio stations
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/showthread.php?115201-Announce-Radio-Now-Playing-plugin)    - :octicons-download-24: 1572
 
