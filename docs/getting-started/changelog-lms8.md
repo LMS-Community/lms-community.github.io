@@ -6,6 +6,8 @@
 
 - Platform Support:
 
+	- Add Windows Start menu item to run LMS interactively when not using as a background service (64-bit version).
+
 - Bug Fixes:
 
 	- Sometimes setting a music or playlist folder might lead the server into an infinite recursion.
