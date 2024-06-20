@@ -17,8 +17,11 @@
 	- Updated Czech translation - thanks @mipa87!
 	- Updated French translation - thanks @Franck-Berry!
 	- Improve Plugin Manager: add categories, icons, search, nicer UX.
+	- Use the first added timestamp from the persistent track table rather than the file's time stamp for the "New Music" menu.
 
 - Platform Support:
+
+	- Upgrade Docker base image to Debian 12 (Bookworm)
 
 - Bug Fixes:
 
