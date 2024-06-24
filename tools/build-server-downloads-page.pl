@@ -20,6 +20,7 @@ my @platforms = (
    ['deb', ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'],
    ['rpm', ':material-redhat: RedHat / :material-fedora: Fedora'],
    ['tararm', ':material-linux::material-code-braces: ARM Linux Tarball'],
+   ['encore', ':material-linux::material-code-music-box: Musical Fidelity'],
    ['src', ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'],
    ['nocpan', ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'],
 );
@@ -57,6 +58,7 @@ foreach ('latest', 'stable', 'dev') {
         tararm => $releases->{tararm},
         src => $releases->{src},
         nocpan => $releases->{nocpan},
+        encore => $releases->{encore},
         version => $version,
         majorVersion => (split(/\./, $version))[0],
         minorVersion => join('.', (split(/\./, $version))[0..1]),

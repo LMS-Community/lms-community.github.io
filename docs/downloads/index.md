@@ -47,6 +47,7 @@ The stable branch is like the officially released latest version, with some addi
 | [{{ stable.rpm.name }}]({{ stable.rpm.url }}) | {{ stable.rpm.size }} | {{ stable.rpm.timestamp }} | {{ stable.rpm.desc }} |
 | [{{ stable.nocpan.name }}]({{ stable.nocpan.url }}) | {{ stable.nocpan.size }} | {{ stable.nocpan.timestamp }} | {{ stable.nocpan.desc }} |
 | [{{ stable.tararm.name }}]({{ stable.tararm.url }}) | {{ stable.tararm.size }} | {{ stable.tararm.timestamp }} | {{ stable.tararm.desc }} |
+| [{{ stable.encore.name }}]({{ stable.encore.url }}) | {{ stable.encore.size }} | {{ stable.encore.timestamp }} | {{ stable.encore.desc }} |
 | [{{ stable.src.name }}]({{ stable.src.url }}) | {{ stable.src.size }} | {{ stable.src.timestamp }} | {{ stable.src.desc }} |
 
 
