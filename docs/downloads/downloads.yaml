@@ -176,7 +176,12 @@ stable:
     size: 17 MB
     timestamp: Tue Jun 18 04:16:31 2024
     url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1718684191_i386.deb
-  encore: ~
+  encore:
+    desc: ':material-linux::material-code-music-box: Musical Fidelity'
+    name: logitechmediaserver-8.5.3-1718684191-MusicalFidelity.tgz
+    size: 18 MB
+    timestamp: Tue Jun 18 04:16:31 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1718684191-MusicalFidelity.tgz
   mac:
     desc: ':material-apple: Apple macOS'
     name: LogitechMediaServer-8.5.3-1718684191.pkg
