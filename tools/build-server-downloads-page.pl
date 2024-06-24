@@ -20,7 +20,7 @@ my @platforms = (
    ['deb', ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'],
    ['rpm', ':material-redhat: RedHat / :material-fedora: Fedora'],
    ['tararm', ':material-linux::material-code-braces: ARM Linux Tarball'],
-   ['encore', ':material-linux::material-code-music-box: Musical Fidelity'],
+   ['encore', ':material-linux::material-music-box: Musical Fidelity'],
    ['src', ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'],
    ['nocpan', ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'],
 );
