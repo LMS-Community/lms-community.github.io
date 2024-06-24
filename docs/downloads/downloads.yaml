@@ -29,6 +29,7 @@ dev:
     size: 17 MB
     timestamp: Sun Jun 23 14:18:59 2024
     url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1719152339_i386.deb
+  encore: ~
   mac:
     desc: ':material-apple: Apple macOS'
     name: LyrionMusicServer-9.0.0-1719152339.pkg
@@ -74,6 +75,7 @@ dev:
     size: 16 MB
     timestamp: Sun Jun 23 14:18:59 2024
     url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.0-1719152339-win64.exe
+encore: '[ ()](){ .md-button }'
 latest:
   deb:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
@@ -99,6 +101,7 @@ latest:
     size: 17 MB
     timestamp: Mon May 20 14:31:54 2024
     url: https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver_8.5.2_i386.deb
+  encore: ~
   mac:
     desc: ':material-apple: Apple macOS'
     name: LogitechMediaServer-8.5.2.pkg
@@ -173,6 +176,7 @@ stable:
     size: 17 MB
     timestamp: Tue Jun 18 04:16:31 2024
     url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1718684191_i386.deb
+  encore: ~
   mac:
     desc: ':material-apple: Apple macOS'
     name: LogitechMediaServer-8.5.3-1718684191.pkg
