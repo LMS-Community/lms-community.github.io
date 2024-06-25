@@ -12,6 +12,7 @@
 
 	- Sometimes setting a music or playlist folder might lead the server into an infinite recursion.
 	- Fix running the scanner from outside LMS on Windows 64-bit.
+	- [Drag'n'drop a track on the playlist pane sometimes wouldn't work](https://forums.slimdevices.com/forum/developer-forums/beta/1685846-9-0-0-development-build?p=1715083#post1715083) under certain circumstances.
 
 - Other:
 
