@@ -269,7 +269,7 @@ The `albums` query returns all albums known by the server. The results of this q
 | `library_id` | Virtual library ID, to restrict the results to a virtual library view. |
 | `year` | Year, to restrict the results to those albums of that year. |
 | `compilation` | Compilation, to restrict the results to those albums that are (1) or aren't (0) compilations. |
-| `sort` | Sort order of the returned list of albums. One of: <br>`album`, (the default), <br>`new` (sort by change date in descending order), <br>`artflow` which sorts by artist, year, album for use with artwork-centric interfaces, <br>`artistalbum`, <br>`yearalbum`, <br>`yearartistalbum`, <br>`random`. |
+| `sort` | Sort order of the returned list of albums. One of: <br>`album`, (the default), <br>`new` (sort by the date the item was added to the library, in descending order), <br>`changed` (sort by change date in descending order), <br>`artflow` which sorts by artist, year, album for use with artwork-centric interfaces, <br>`artistalbum`, <br>`yearalbum`, <br>`yearartistalbum`, <br>`random`. |
 | `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is `l`. |
 
 **Returned tagged parameters:**
