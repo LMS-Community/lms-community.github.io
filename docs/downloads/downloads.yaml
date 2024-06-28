@@ -5,81 +5,26 @@ debarm: '[:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (31 MB)](htt
 debi386: '[:material-debian: Debian / :material-ubuntu: Ubuntu - i386 (17 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver_8.5.2_i386.deb){ .md-button }'
 debpi: '[:simple-raspberrypi: Raspberry Pi OS (31 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver_8.5.2_arm.deb){ .md-button }'
 dev:
-  deb:
-    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
-    name: lyrionmusicserver_9.0.0~1719487757_all.deb
-    size: 57 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1719487757_all.deb
-  debamd64:
-    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'
-    name: lyrionmusicserver_9.0.0~1719487757_amd64.deb
-    size: 24 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1719487757_amd64.deb
-  debarm:
-    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
-    name: lyrionmusicserver_9.0.0~1719487757_arm.deb
-    size: 31 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1719487757_arm.deb
-  debi386:
-    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'
-    name: lyrionmusicserver_9.0.0~1719487757_i386.deb
-    size: 17 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1719487757_i386.deb
-  encore:
-    desc: ':material-linux::material-music-box: Musical Fidelity'
-    name: lyrionmusicserver-9.0.0-1719487757-MusicalFidelity.tgz
-    size: 18 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1719487757-MusicalFidelity.tgz
-  mac:
-    desc: ':material-apple: Apple macOS'
-    name: LyrionMusicServer-9.0.0-1719487757.pkg
-    size: 43 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.0-1719487757.pkg
+  deb: ~
+  debamd64: ~
+  debarm: ~
+  debi386: ~
+  encore: ~
+  mac: ~
   majorVersion: 9
   minorVersion: 9.0
-  nocpan:
-    desc: ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'
-    name: lyrionmusicserver-9.0.0-1719487757-noCPAN.tgz
-    size: 17 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1719487757-noCPAN.tgz
-  rpm:
-    desc: ':material-redhat: RedHat / :material-fedora: Fedora'
-    name: lyrionmusicserver-9.0.0-0.1.1719487757.noarch.rpm
-    size: 86 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-0.1.1719487757.noarch.rpm
-  src:
-    desc: ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'
-    name: lyrionmusicserver-9.0.0-1719487757.tgz
-    size: 118 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1719487757.tgz
-  tararm:
-    desc: ':material-linux::material-code-braces: ARM Linux Tarball'
-    name: lyrionmusicserver-9.0.0-1719487757-arm-linux.tgz
-    size: 55 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1719487757-arm-linux.tgz
+  nocpan: ~
+  rpm: ~
+  src: ~
+  tararm: ~
   version: 9.0.0
-  win:
-    desc: ':material-microsoft-windows: Windows 32-bit'
-    name: LyrionMusicServer-9.0.0-1719487757.exe
-    size: 70 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.0-1719487757.exe
+  win: ~
   win64:
     desc: ':material-microsoft-windows: Windows 64-bit'
-    name: LyrionMusicServer-9.0.0-1719487757-win64.exe
+    name: LyrionMusicServer-9.0.0-1719573325-win64.exe
     size: 16 MB
-    timestamp: Thu Jun 27 11:29:17 2024
-    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.0-1719487757-win64.exe
+    timestamp: Fri Jun 28 11:15:25 2024
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.0-1719573325-win64.exe
 encore: '[ ()](){ .md-button }'
 latest:
   deb:
@@ -159,79 +104,79 @@ src: '[:material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64,
 stable:
   deb:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
-    name: logitechmediaserver_8.5.3~1719290683_all.deb
+    name: logitechmediaserver_8.5.3~1719573260_all.deb
     size: 57 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1719290683_all.deb
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1719573260_all.deb
   debamd64:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'
-    name: logitechmediaserver_8.5.3~1719290683_amd64.deb
+    name: logitechmediaserver_8.5.3~1719573260_amd64.deb
     size: 24 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1719290683_amd64.deb
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1719573260_amd64.deb
   debarm:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
-    name: logitechmediaserver_8.5.3~1719290683_arm.deb
+    name: logitechmediaserver_8.5.3~1719573260_arm.deb
     size: 31 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1719290683_arm.deb
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1719573260_arm.deb
   debi386:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'
-    name: logitechmediaserver_8.5.3~1719290683_i386.deb
+    name: logitechmediaserver_8.5.3~1719573260_i386.deb
     size: 17 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1719290683_i386.deb
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1719573260_i386.deb
   encore:
     desc: ':material-linux::material-music-box: Musical Fidelity'
-    name: logitechmediaserver-8.5.3-1719290683-MusicalFidelity.tgz
+    name: logitechmediaserver-8.5.3-1719573260-MusicalFidelity.tgz
     size: 18 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1719290683-MusicalFidelity.tgz
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1719573260-MusicalFidelity.tgz
   mac:
     desc: ':material-apple: Apple macOS'
-    name: LogitechMediaServer-8.5.3-1719290683.pkg
+    name: LogitechMediaServer-8.5.3-1719573260.pkg
     size: 43 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.3-1719290683.pkg
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.3-1719573260.pkg
   majorVersion: 8
   minorVersion: 8.5
   nocpan:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'
-    name: logitechmediaserver-8.5.3-1719290683-noCPAN.tgz
+    name: logitechmediaserver-8.5.3-1719573260-noCPAN.tgz
     size: 17 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1719290683-noCPAN.tgz
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1719573260-noCPAN.tgz
   rpm:
     desc: ':material-redhat: RedHat / :material-fedora: Fedora'
-    name: logitechmediaserver-8.5.3-0.1.1719290683.noarch.rpm
+    name: logitechmediaserver-8.5.3-0.1.1719573260.noarch.rpm
     size: 86 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-0.1.1719290683.noarch.rpm
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-0.1.1719573260.noarch.rpm
   src:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'
-    name: logitechmediaserver-8.5.3-1719290683.tgz
+    name: logitechmediaserver-8.5.3-1719573260.tgz
     size: 118 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1719290683.tgz
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1719573260.tgz
   tararm:
     desc: ':material-linux::material-code-braces: ARM Linux Tarball'
-    name: logitechmediaserver-8.5.3-1719290683-arm-linux.tgz
+    name: logitechmediaserver-8.5.3-1719573260-arm-linux.tgz
     size: 55 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1719290683-arm-linux.tgz
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1719573260-arm-linux.tgz
   version: 8.5.3
   win:
     desc: ':material-microsoft-windows: Windows 32-bit'
-    name: LogitechMediaServer-8.5.3-1719290683.exe
+    name: LogitechMediaServer-8.5.3-1719573260.exe
     size: 70 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.3-1719290683.exe
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.3-1719573260.exe
   win64:
     desc: ':material-microsoft-windows: Windows 64-bit'
-    name: LogitechMediaServer-8.5.3-1719290683-win64.exe
+    name: LogitechMediaServer-8.5.3-1719573260-win64.exe
     size: 16 MB
-    timestamp: Tue Jun 25 04:44:43 2024
-    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.3-1719290683-win64.exe
+    timestamp: Fri Jun 28 11:14:20 2024
+    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.3-1719573260-win64.exe
 tararm: '[:material-linux::material-code-braces: ARM Linux Tarball (55 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver-8.5.2-arm-linux.tgz){ .md-button }'
 win: '[:material-microsoft-windows: Windows 32-bit (70 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/LogitechMediaServer-8.5.2.exe){ .md-button } [:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/LogitechMediaServer-8.5.2-win64.exe){ .md-button }'
 win64: '[:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/LogitechMediaServer-8.5.2-win64.exe){ .md-button }'

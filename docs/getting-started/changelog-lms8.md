@@ -7,12 +7,14 @@
 - Platform Support:
 
 	- Add Windows Start menu item to run LMS interactively when not using as a background service (64-bit version).
+	- On Debian based systems we need to add \`squeezeboxuser\` to \`audio\` group or plugins like LocalPlayer to work.
 
 - Bug Fixes:
 
 	- Sometimes setting a music or playlist folder might lead the server into an infinite recursion.
 	- Fix running the scanner from outside LMS on Windows 64-bit.
 	- [Drag'n'drop a track on the playlist pane sometimes wouldn't work](https://forums.slimdevices.com/forum/developer-forums/beta/1685846-9-0-0-development-build?p=1715083#post1715083) under certain circumstances.
+	- [Fix CUE sheets scanning](https://forums.slimdevices.com/forum/user-forums/ripping-encoding-transcoding-tagging/1715462) which would result in seemingly random album order when ALBUMSORT was defined at the album level only.
 
 - Other:
 
