@@ -3,9 +3,9 @@ layout: default
 title: Special IR Keys
 ---
 
-# Special IR Keys on Reboot for Factory Reset and Last FW
+# Special IR Keys on Reboot for Factory Reset and Last Firmware
 
-Some system operations that require you to point your remote control on the Squeezebox while starting the Squeezebox.
+Some system operations require you to point your remote control at the Squeezebox while starting the Squeezebox.
 
 !!! question
     To be sure you're doing it right, pull the power from the unit, press and hold the appropriate button on the remote while keeping it pointed at the unit, and give the unit power again, while all the time keeping the remote button pressed and the remote pointed at the unit.
@@ -24,7 +24,7 @@ These codes apply to the ip3k-based players: Squeezebox1 (G), Squeezebox2, Squee
 
 These tips are applicable to SqueezePlay-based players only: Controller, Touch, and Radio.
 
-* Revert to previous FW - hold down Volume UP (with a non-Boom remote), or REW (on device, where available), and power up the device. Keep the button held down until you see the "Free Your Music" screen.
+* Revert to previous firmware - hold down Volume UP (with a non-Boom remote), or REW (on device, where available), and power up the device. Keep the button held down until you see the "Free Your Music" screen.
 
 * Factory Reset - hold down Add ("+") (with a non-Boom remote) and press the fab4 rear power button. Keep button held down until you see the "Free Your Music" screen.
 
