@@ -12,7 +12,7 @@ It is possible to tell Lyrion Music Server to push a specific build of Squeezebo
 
 ## Loading Custom Squeezebox Firmware
 
-* Begin by obtaining a firmware for the device that you want to load. These are typically named in the form `baby_X.Y.Z_rXXXX`.bin, where "baby" is the device type (Radio - use "fab4" for the SB Touch, or "jive" for the SB Controller), X.Y.Z is the software branch, and rXXXX is the subversion revision. For example, `baby_7.6.0_r9155.bin`.
+* Begin by obtaining a firmware for the device that you want to load. These are typically named in the form `baby_X.Y.Z_rXXXX`.bin, where "baby" is the device type (use "baby" for Radio, "fab4" for the SB Touch, or "jive" for the SB Controller), X.Y.Z is the software branch, and rXXXX is the subversion revision. For example, `baby_7.6.0_r9155.bin`.
 
 * Rename this file `custom.baby.bin`.
 
