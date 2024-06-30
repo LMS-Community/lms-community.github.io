@@ -614,14 +614,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 1993
 
--   __:material-information-box-outline: SuperDateTime__
-
-    ---
-
-    Displays local time, date, weather, sports, and stock information.
-
-    G Brown, D Grossman    - [:octicons-globe-24: Details](https://sourceforge.net/projects/sdt-weather-com/)    - :octicons-download-24: 554
-
 -   __:material-information-box-outline: Title Switcher__
 
     ---
