@@ -7,19 +7,19 @@ The site is based on mkdocs-material (https://squidfunk.github.io/mkdocs-materia
 
 To get a local development environment up you can do **one of the following**:
 
+### Use docker
+
+1. Clone this repository (or fork this repository).
+2. Build the Docker image with additional plugins : `docker build -t LMS-Community/mkdocs-material-with-plugins .`
+3. Run `docker run --rm -it -p 8000:8000 -v ${PWD}:/docs LMS-Community/mkdocs-material-with-plugins` to setup a live preview server from the local repository. The server will automatically rebuild the site upon saving.
+4. Point your browser to [localhost:8000](http://localhost:8000).
+
 ### Install mkdocs-material
 
 1. Follow the installation instructions on https://squidfunk.github.io/mkdocs-material/getting-started/ to make sure that mkdocs-material is installed on your system.
 2. Clone this repository (or fork this repository).
 3. Use `mkdocs serve`. The server will automatically rebuild the site upon saving.
 4. Point your browser to [localhost:8000](http://localhost:8000).
-
-### Use docker
-
-1. Clone this repository (or fork this repository).
-2. Build the Docker image with additional plugins : `docker build -t LMS-Community/mkdocs-material-with-plugins .`
-1. Run `docker run --rm -it -p 8000:8000 -v ${PWD}:/docs LMS-Community/mkdocs-material-with-plugins` to setup a live preview server from the local repository. The server will automatically rebuild the site upon saving.
-2. Point your browser to [localhost:8000](http://localhost:8000).
 
 ## Edit the pages
 
