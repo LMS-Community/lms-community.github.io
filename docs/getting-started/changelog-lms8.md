@@ -16,6 +16,7 @@
 	- [Drag'n'drop a track on the playlist pane sometimes wouldn't work](https://forums.slimdevices.com/forum/developer-forums/beta/1685846-9-0-0-development-build?p=1715083#post1715083) under certain circumstances.
 	- [Fix CUE sheets scanning](https://forums.slimdevices.com/forum/user-forums/ripping-encoding-transcoding-tagging/1715462) which would result in seemingly random album order when ALBUMSORT was defined at the album level only.
 	- [Fix issue loading the plugins page](https://forums.slimdevices.com/forum/user-forums/general-discussion/1715826) after an invalid URL got added.
+	- [Fix "serverstatus" subscriptions](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1714557) for prefs changes.
 
 - Other:
 
