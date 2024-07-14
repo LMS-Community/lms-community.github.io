@@ -23,7 +23,6 @@
 - Platform Support:
 
 	- [#64](https://github.com/LMS-Community/slimserver-platforms/pull/64) \- Upgrade Docker base image to Debian 12 (Bookworm) - thanks @mavit!
-	- [#65](https://github.com/LMS-Community/slimserver-platforms/pull/65) \- Rebrand all components in the RPM build to lytionmusicserver - thanks @JohanSaaw!
 
 - Bug Fixes:
 
