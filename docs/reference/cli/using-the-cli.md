@@ -39,6 +39,11 @@ For commands that are global to the server and do not require a `<playerid>`, yo
 
 Note that percent-style encoding of parameters is not needed when using jsonrpc.js.
 
+
+### Running JSOP/RPC with Python
+
+[See this page](python-cli.md) for information on how to use the CLI with Python. This has some code examples, and includes a small Python module which provides a function to run the LMS CLI commands via JSON/RPC.  
+
 ## Examples
 
 ### Mute a player
