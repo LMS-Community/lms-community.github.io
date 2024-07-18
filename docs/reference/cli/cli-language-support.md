@@ -1,16 +1,29 @@
-# Using Python for LMS CLI
+# Using Python and other languages with LMS CLI
 
-This page provides some basic Python code to enable interaction with LMS via the cli using the JSON/RPC mechanism.
-There is a small module you can download and use to run JSON RPC commands. On this page there are some examples of Python code using this module.
+This page provides support to use various languages to run the JSON/RPC to interact with LMS.
+
+For each language:
+
+* Link to a Repository containing a module (or similar) which enables easy working with the LMS via JSON/RPC
+* Some examples of running LMS CLI commands using the linked module.
+
+Initially the only language is Python, but other (eg Javascript) will be added in due course.
+
+## Improvements
+If you have suggestions as to how this page, and the associated module could be improved, please post into the [Developer forums](https://forums.slimdevices.com/forum/developer-forums/developers) with 'Languages JSON/RPC' in the subject line. 
 
 
-## Getting started
+## Languages
 
-There is a Python module, filename: **lms_jsonrpc_module.py** available to download which contains a single function **lms_jsonrpc()**.
+
+### Python
+
+This section is based on the Python module  **lms_jsonrpc_module.py** available to download from Repository [https://github.com/Daksol/LMS-CLI-Minimal]
 
 To start:
 
-* Take this link to download file [lms_jsonrpc_module.py](lms_jsonrpc_module.py) to your Python working directory.
+* Take this link to download file [lms_jsonrpc_module.py](https://github.com/Daksol/LMS-CLI-Minimal/blob/main/Languages/Python/lms_jsonrpc_module.py) to your Python working directory.
+* This module contains a single function **lms_jsonrpc**
 * Create and run a script like this to verify it is working.
 
 ```
@@ -28,8 +41,6 @@ print(lms_jsonrpc(lms=myLMS, cmdlist = ['serverstatus']))
 'player count': 4, 'other player count': 0}
 ```
 
-### About the Python module
-
 #### Parameters for module
 
 See inline documentation in the module file itself - for instance by running this code.
@@ -38,18 +49,11 @@ from lms_jsonrpc_module import lms_jsonrpc
 print(lms_jsonrpc.__doc__)
 ```
 
-#### Creating a formal Python module accessible via 'pip' etc
+#### Code examples
 
-It is not currently the intention to put in the additional work to make this a formal Python module accessible by 'pip' or 'conda'. Taking that step requires an ongoing admin effort - but that will not significantly improve the user's experience.
+##### Seeing what the Server returns
 
-#### Improvements
-If you have suggestions as to how this page, and the associated module could be improved, please post into the [Developer forums](https://forums.slimdevices.com/forum/developer-forums/developers) with 'Python' in the subject line. 
-
-## Code examples
-
-### Seeing what the Server returns 
-
-In repsonse to a json query the Server returns a Python dictionary (essentially a json object) containing four items (`params`, `method`, `result`, `id`).
+In response to a json query the Server returns a Python dictionary (essentially a json object) containing four items (`params`, `method`, `result`, `id`).
 
 However the `lms_jsonrpc()` function only returns the `result` item by default. If the additional parameter `full_response=True` is passed, then all four items are returned. Doing this can be useful when debugging. 
 
@@ -71,7 +75,7 @@ Full response: {'result': {'_count': 4}, 'id': '', 'params': ['-', ['player', 'c
 Returning the result item only: {'_count': 4}
 Extracting the data item (the player count) from the result object: 4
 ```
-### Querying players using the player command
+##### Querying players using the player command
 
 The `player` command can be used to query some of the common player attributes. [Documentation on `player id` command](players.md#player-id).
 
@@ -110,11 +114,11 @@ Player Index   Player id (Mac Address)  Player Name
 ```
 
 
-### Use the `players` command for all available info on connected players
+##### Use the `players` command for all available info on connected players
 
 The `players` command returns a json object which contains all available information about players. [Documentation on `players` command](players.md#players).
 
-#### players command, full json response
+##### players command, full json response
 To see what this object looks like, run this code which prints out the full json with minimal formatting.
 
 Code:
@@ -133,7 +137,7 @@ allplayers_json = lms_jsonrpc(lms=myLMS, cmdlist=playerscmd)
 print(json.dumps(allplayers_json, indent=4)
 ```
 
-Response (partial, info about first two players only included)
+Response (partial, info about first player only included)
 ```
 {
 "count": 4,
@@ -155,26 +159,9 @@ Response (partial, info about first two players only included)
             "connected": 1,
             "firmware": "8.5.0-r16962"
         },
-        {
-            "playerindex": 1,
-            "playerid": "00:04:20:2a:e0:74",
-            "uuid": "7147ee259b66f5c9c39c0eb14cfefb5c",
-            "ip": "192.168.5.101:43170",
-            "name": "Runcible Red",
-            "seq_no": "241",
-            "model": "baby",
-            "modelname": "Squeezebox Radio",
-            "power": 1,
-            "isplaying": 0,
-            "displaytype": "none",
-            "isplayer": 1,
-            "canpoweroff": 1,
-            "connected": 1,
-            "firmware": "8.5.0-r16962"
-        },
 
 ```
-#### players command, output formatted
+##### players command, output formatted
 
 Code:
 ```
@@ -211,7 +198,7 @@ Index    id (MAC address)   firmware       ip address           name
    3     00:04:20:12:ae:f5  137            192.168.5.103:36396  Dittography
 ```
 
-### using name command to change name of a player
+##### using name command to change name of a player
 
 The `name` command can be used to query the name of a player, and to change its name. [Documentation on `name` command](players.md#name). The `name` command is an example of a player command where the first paramater is the id (= mac address) of the player.
 

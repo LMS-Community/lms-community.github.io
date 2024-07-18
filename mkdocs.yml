@@ -146,7 +146,7 @@ nav:
       - Compound Queries: reference/cli/compoundqueries.md
       - Notifications: reference/cli/notifications.md
       - Alarms: reference/cli/alarms.md
-      - Using Python: reference/cli/python-cli.md
+      - Language Support: reference/cli/cli-language-support.md
     - Docker:
       - Add locales to the Docker container: reference/add-locales-to-docker.md
     - Plugins/applets:
