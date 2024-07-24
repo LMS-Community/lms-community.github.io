@@ -151,7 +151,7 @@ title: Available Plugins
 
     ---
 
-    Complete BBC Sounds implementation as an LMS Plugin.
+    Complete BBC Sounds implementation as an LMS Plugin
 
     [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)    - :octicons-download-24: 2091
 
@@ -184,7 +184,7 @@ title: Available Plugins
 
     ---
 
-    Global Radio's UK Stations (Classic FM, Capital, Heart, LBC, Radio X etc) Live Radio (with pause and rewind), Catch-up, Live Playlists, Podcasts.
+    Global Radio's UK Stations (Classic FM, Capital, Heart, LBC, Radio X etc) Live, Catchup, Playlists, Podcasts.
 
     [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_GlobalPlayer_Plugin)    - :octicons-download-24: 809
 
@@ -219,14 +219,6 @@ title: Available Plugins
     Programme, track and podcast information for Planet Radio / Bauer Media
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/111006-announce-planet-radio-bauer-media-plugin-planetrock-absolute-kiss-scala#post111006)    - :octicons-download-24: 506
-
--   __:material-radio: Radio Favourites__
-
-    ---
-
-    Radio Favourites - Manage your favourite radios stations. Select your station according to the current live programme.
-
-    ExpectingToFly    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_Radio_Favourites_Plugin)    - :octicons-download-24: 792
 
 -   __:material-radio: Radio France__
 
@@ -288,7 +280,7 @@ title: Available Plugins
 
     ---
 
-    Virgin Radio (UK) Plugin.  Access to live Virgin Radio stations and 7 day catch up listening.
+    Virgin Radio (UK) Plugin.  Access to live Virgin Radio stations and 5 day catch up listening.
 
     [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_Virgin_Radio_Plugin)    - :octicons-download-24: 606
 
@@ -1090,7 +1082,7 @@ title: Available Plugins
 
     ---
 
-    Complete BBC Sounds implementation as an LMS Plugin.
+    Complete BBC Sounds implementation as an LMS Plugin
 
     [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)    - :octicons-download-24: 2091
 
@@ -1188,6 +1180,22 @@ title: Available Plugins
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 482
 
+-   __:material-toy-brick-outline: LMS Plugin Store__
+
+    ---
+
+    Plugin Store
+
+    [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)
+
+-   __:material-toy-brick-outline: Plugin Manager API__
+
+    ---
+
+    Plugin Manager API
+
+    Innuos    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)
+
 -   __:material-toy-brick-outline: QuickAccess__
 
     ---
@@ -1203,6 +1211,14 @@ title: Available Plugins
     Reliable HTTP connection for LMS
 
     [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](https://github.com/philippe44/LMS-reliable)    - :octicons-download-24: 142
+
+-   __:material-toy-brick-outline: REST API__
+
+    ---
+
+    RESTAPI
+
+    ExpectingToFly    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)
 
 -   __:material-toy-brick-outline: SleepFade__
 
@@ -1259,6 +1275,14 @@ title: Available Plugins
     Allows you to configure each player so it will display the current setting when you use the Sleep, Shuffle, Repeat, or volume keys on its remote control once, and only change the setting on subsequent button presses. Volume key behavio change does not work on Radio or Touch. (Boom,  Classic, Radio, Slimp3, Squeezebox1, Touch, Transporter)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/StatusFirst.html)    - :octicons-download-24: 105
+
+-   __:material-toy-brick-outline: UK Radio Player__
+
+    ---
+
+    UK Radio Player
+
+    ExpectingToFly    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)    - :octicons-download-24: 119
 
 -   __:material-toy-brick-outline: VolumeLock__
 
