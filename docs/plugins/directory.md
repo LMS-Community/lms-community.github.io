@@ -462,7 +462,7 @@ title: Available Plugins
 
     Dark-themed version of the LMS Default skin
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-darkdefaultskin)    - :octicons-download-24: 232
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#%EF%B8%8F-dark-default-skin)    - :octicons-download-24: 232
 
 -   __:material-page-layout-header-footer: Dark Logic Skin__
 
@@ -470,7 +470,7 @@ title: Available Plugins
 
     Dark-themed version of the LMS Logic Teal skin
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-darklogicskin)    - :octicons-download-24: 25
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-dark-logic-skin)    - :octicons-download-24: 25
 
 -   __:material-page-layout-header-footer: Material Skin__
 
@@ -492,7 +492,7 @@ title: Available Plugins
 
     Provides alternative play counts and skip counts that aim to reflect your true listening history. You set a time after which a song counts as played. If you skip the song before, it counts as skipped, not played. Use the data with other plugins to create/play smart playlists, virtual libraries or to skip specific tracks.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-alternativeplaycount)    - :octicons-download-24: 201
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-alternative-play-count)    - :octicons-download-24: 201
 
 -   __:material-information-box-outline: Database Query__
 
@@ -588,7 +588,7 @@ title: Available Plugins
 
     Set, import, export, log, backup and restore track ratings. Create virtual libraries for (top) rated tracks with browse menus.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-ratingslight)    - :octicons-download-24: 286
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-ratings-light)    - :octicons-download-24: 286
 
 -   __:material-information-box-outline: SaverSwitcher__
 
@@ -636,7 +636,7 @@ title: Available Plugins
 
     Have a look at your library statistics with charts.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-visualstatistics)    - :octicons-download-24: 492
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-ratings-light)    - :octicons-download-24: 492
 
 -   __:material-information-box-outline: What Was That Tune?__
 
@@ -666,7 +666,7 @@ title: Available Plugins
 
     Set player-specific rules for when the current track or upcoming tracks in your client playlist should be skipped and removed from the playlist automatically.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-customskip)    - :octicons-download-24: 119
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-skip)    - :octicons-download-24: 119
 
 -   __:material-playlist-music: Custom Start Stop Times__
 
@@ -674,7 +674,7 @@ title: Available Plugins
 
     Start and stop tracks at a specific playback time or skip a specific part of the song (e.g. silence) by simply adding custom start, stop or skip times to a track's comments tag.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-customstartstoptimes)    - :octicons-download-24: 72
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-start-stop-times)    - :octicons-download-24: 72
 
 -   __:material-playlist-music: Disable Shuffle__
 
@@ -698,7 +698,7 @@ title: Available Plugins
 
     Helps you create custom smart playlists (dynamic playlists) for the Dynamic Playlists plugin using templates.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylistcreator)    - :octicons-download-24: 469
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-dynamic-playlist-creator)    - :octicons-download-24: 469
 
 -   __:material-playlist-music: Dynamic Playlists__
 
@@ -706,7 +706,7 @@ title: Available Plugins
 
     Use smart playlists (dynamic playlists) to play continuous music mixes based on your selection criteria.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-dynamicplaylists)    - :octicons-download-24: 622
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-dynamic-playlists)    - :octicons-download-24: 622
 
 -   __:material-playlist-music: LastMix - Don't Stop The Music support using Last.fm.__
 
@@ -760,7 +760,7 @@ title: Available Plugins
 
     Scans track information from custom tags in your music files (incl. rating tags).
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-customtagimporter)    - :octicons-download-24: 214
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-tag-importer)    - :octicons-download-24: 214
 
 -   __:material-file-search-outline: LazySearch2__
 
@@ -792,7 +792,7 @@ title: Available Plugins
 
     Create custom virtual libraries with optional LMS browse menus using a template in a browser or by adding files with customized SQLite statements.
 
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/lms-virtuallibrarycreator)    - :octicons-download-24: 213
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-virtual-library-creator)    - :octicons-download-24: 213
 
 </div>
 
