@@ -143,6 +143,8 @@ nav:
       - Players: reference/cli/players.md
       - Database: reference/cli/database.md
       - Playlist: reference/cli/playlist.md
+      - Favorites: reference/cli/favorites.md
+      - Randomplay: reference/cli/randomplay.md
       - Compound Queries: reference/cli/compoundqueries.md
       - Notifications: reference/cli/notifications.md
       - Alarms: reference/cli/alarms.md
