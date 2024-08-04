@@ -12,6 +12,7 @@
 	- [Massive upgrade for Classical music lovers](https://github.com/LMS-Community/slimserver/pull/930): add support for Works, Performances, Disc Subtitles. Thanks a ton @darrel-k!
 	- [#1095](https://github.com/LMS-Community/slimserver/issues/1095) \- Link from online tracks and albums to local library (if possible).
 	- [#1115](https://github.com/LMS-Community/slimserver/pull/1115) \- Add option to show tracks from a given year, even if their album would be listed in a different year.
+	- [#1115](https://github.com/LMS-Community/slimserver/pull/1132) \- Allow user defined contributor roles.
 
 - Server Changes:
 
