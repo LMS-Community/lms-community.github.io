@@ -62,3 +62,7 @@ For mobile phones and tablets:
 - [Squeeze Ctrl](https://play.google.com/store/apps/details?id=com.angrygoat.android.squeezectrl) (Android - paid)
 - [Orange Squeeze](https://play.google.com/store/apps/details?id=com.orangebikelabs.orangesqueeze) (Android - paid)
 - [SqueezePad](https://apps.apple.com/us/app/squeezepad/id380003002) (iOS - paid)
+
+## Smart Home Integrations
+
+- [ioBroker](https://www.iobroker.net/) with the plugin [ioBroker.squeezeboxrpc](https://github.com/oweitman/ioBroker.squeezeboxrpc)
