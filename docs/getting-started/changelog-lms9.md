@@ -20,6 +20,7 @@
 	- Updated French translation - thanks @Franck-Berry!
 	- Improve Plugin Manager: add categories, icons, search, nicer UX.
 	- [#1124](https://github.com/LMS-Community/slimserver/pull/1124) \- Return 'Random Mix' state in player status message (thanks @CraigD!)
+	- [#1144](https://github.com/LMS-Community/slimserver/pull/1144) \- Remove unnecessary delay reporting volume changes (thanks @SamInPgh!)
 
 - Platform Support:
 
