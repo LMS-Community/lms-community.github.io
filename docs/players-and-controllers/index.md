@@ -3,7 +3,7 @@ layout: default
 title: Overview
 ---
 
-## Hardware based
+## Squeezebox Hardware (Discontinued)
 
 Between 2001 and 2010 Logitech (and its predecessor Slim Devices) released a series of network music players. The lineup consisted of the Squeezebox Classic, an all-in-one Squeezebox Boom, the dual unit Squeezebox Duet, the audiophile grade Transporter, the small and optionally battery powered Squeezebox Radio, and the newest of the bunch, the Squeezebox Touch.
 
@@ -22,6 +22,8 @@ Additionally, the Squeezebox Controller provides control of all your players via
 - [Squeezebox, SB1](squeezebox1.md)
 - [SLIMP3](SLIMP3.md)
 
+Though discontinued, Squeezebox hardware can often be found on eBay and other auction sites. Squeezebox Touch, if available, is an ideal LMS player having a touch screen, remote control, and both analog and S/PDIF (coaxial and optical) outputs supporting digital formats up to 24/96. With its optional "Enhanced Digital Output" add-in, the Touch can support USB output and 24/192 including DoP (DSD-over-PCM; see LMS "DSDPlayer" plugin).
+
 The Radio, Touch and Controller software (operating system and application) is available as source code and have been modified by "the community".
 Software from Logitech: [Operating system](https://github.com/LMS-Community/squeezeos) - [Application](https://github.com/LMS-Community/squeezeplay)
 Community versions: [Operating system](https://github.com/ralph-irving/squeezeos)  - [Application](https://github.com/ralph-irving/squeezeos-squeezeplay)
@@ -30,6 +32,14 @@ After 2010 the LMS community developed DIY hardware offerings.
 
 - [Squeezelite-ESP32](https://github.com/sle118/squeezelite-esp32)
 - [SqueezeAMP](https://github.com/philippe44/SqueezeAMP) - which is an implementation of Sqeezelite-ESP32
+
+## Other Hardware
+
+Several streamers and amps available from [WiiM](https://www.wiimhome.com/) natively support LMS. Presently, this includes the WiiM Pro, Pro Plus, Ultra, and Amp.
+
+Using [piCorePlayer](https://www.picoreplayer.org/) as its operating system, a basic Raspberry Pi can be configured to act as a full-featured LMS player. Raspberry Pi can output via USB to an external DAC or power attached headphones. With the addition of an appropriate [HAT board](https://www.raspberrypi.com/news/introducing-raspberry-pi-hats/), the Raspberry Pi can add S/PDIF digital outputs or a small stereo amplifier.
+
+With its "UPnP/DLNA bridge" plugin installed, LMS can play to any DLNA-compatible networked device.
 
 ## Software based players
 
