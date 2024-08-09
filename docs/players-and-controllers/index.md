@@ -28,18 +28,16 @@ The Radio, Touch and Controller software (operating system and application) is a
 Software from Logitech: [Operating system](https://github.com/LMS-Community/squeezeos) - [Application](https://github.com/LMS-Community/squeezeplay)
 Community versions: [Operating system](https://github.com/ralph-irving/squeezeos)  - [Application](https://github.com/ralph-irving/squeezeos-squeezeplay)
 
-After 2010 the LMS community developed DIY hardware offerings.
-
-- [Squeezelite-ESP32](https://github.com/sle118/squeezelite-esp32)
-- [SqueezeAMP](https://github.com/philippe44/SqueezeAMP) - which is an implementation of Sqeezelite-ESP32
-
 ## Other Hardware
 
 Several streamers and amps available from [WiiM](https://www.wiimhome.com/) natively support LMS. Presently, this includes the WiiM Pro, Pro Plus, Ultra, and Amp.
 
-Using [piCorePlayer](https://www.picoreplayer.org/) as its operating system, a basic Raspberry Pi can be configured to act as a full-featured LMS player. Raspberry Pi can output via USB to an external DAC or power attached headphones. With the addition of an appropriate [HAT board](https://www.raspberrypi.com/news/introducing-raspberry-pi-hats/), the Raspberry Pi can add S/PDIF digital outputs or a small stereo amplifier.
-
 With its "UPnP/DLNA bridge" plugin installed, LMS can play to any DLNA-compatible networked device.
+
+After 2010 the LMS community developed DIY hardware offerings:
+
+- [Squeezelite-ESP32](https://github.com/sle118/squeezelite-esp32)
+- [SqueezeAMP](https://github.com/philippe44/SqueezeAMP) - which is an implementation of Sqeezelite-ESP32
 
 ## Software based players
 
@@ -60,8 +58,10 @@ For mobile phones and tablets:
 ## Specialist operating system with player / server
 
 - [piCorePlayer](https://www.picoreplayer.org/) (Raspberry Pi)
-- [Daphile](https://www.daphile.com/) (x86 architecture - PC)
 
+Using piCorePlayer as its operating system, a basic Raspberry Pi can be configured to act as a full-featured LMS player. Raspberry Pi can output via USB to an external DAC or power attached headphones. With the addition of an appropriate [HAT board](https://www.raspberrypi.com/news/introducing-raspberry-pi-hats/), the Raspberry Pi can add S/PDIF digital outputs or a small stereo amplifier.
+
+- [Daphile](https://www.daphile.com/) (x86 architecture - PC)
 
 ## Software based controllers
 
