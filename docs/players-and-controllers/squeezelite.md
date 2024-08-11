@@ -23,6 +23,8 @@ It is capable of utilizing Lyrion Music Server's client synchronization feature 
 
 Binaries compiled from the :octicons-mark-github-16: [source code](https://github.com/ralph-irving/squeezelite) can be found on :simple-sourceforge: [SourceForge](https://sourceforge.net/projects/lmsclients/files/squeezelite/).
 
+Squeezelite-X combine Squeezelite player with Lyrion server default web user interface. It can be installed from [Microsoft App Store](https://apps.microsoft.com/search?query=Squuezelite-X&hl=en-us&gl=US).
+
 ### Linux/BSD
 
 Squeezelite is available in the following distribution repositories:
