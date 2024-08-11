@@ -32,6 +32,14 @@ Community versions: [Operating system](https://github.com/ralph-irving/squeezeos
 
 Several streamers and amps available from [WiiM](https://www.wiimhome.com/) natively support LMS. Presently, this includes the WiiM Pro, Pro Plus, Ultra, and Amp.
 
+Other streaming hardware manufacturers that offer native support of LMS include [Antipodes](https://antipodes.audio/), [Eversolo](https://eversolo.com/), [Holo Audio](https://www.kitsunehifi.com/), [Innuos](https://innuos.com/), [Sonore](https://www.sonore.us/), and [SOtM](https://sotm-audio.com/).
+
+Hardware streamers running the Android OS -- such as several available from [FiiO](https://www.fiio.com/) -- can install one of the Squeezebox player apps listed below.
+
+Any Android or Apple mobile device (tablet, phone, mini-PC) can be made into an LMS player with the installation of a controller and/or player app. Some of these devices allow connection to an external DAC.
+
+Any laptop PC, desktop PC, or mini-PC running Windows, macOS, or linux can serve as both LMS player and server. Configured with internal or external storage, it can hold your music library while providing convenient file transfer access via remote desktop. These devices typically connect via USB to an external DAC or digital receiver. A "fanless" configuration -- such as several offered by [MeLE](https://store.mele.cn/collections/mini-pc) -- is ideal if this device is to be placed in the listening room.
+
 With its "UPnP/DLNA bridge" plugin installed, LMS can play to any DLNA-compatible networked device.
 
 After 2010 the LMS community developed DIY hardware offerings:
@@ -61,7 +69,7 @@ For mobile phones and tablets:
 
 Using piCorePlayer as its operating system, a basic Raspberry Pi can be configured to act as a full-featured LMS player. Raspberry Pi can output via USB to an external DAC or power attached headphones. With the addition of an appropriate [HAT board](https://www.raspberrypi.com/news/introducing-raspberry-pi-hats/), the Raspberry Pi can add S/PDIF digital outputs or a small stereo amplifier.
 
-- [Daphile](https://www.daphile.com/) (x86 architecture - PC)
+- [Daphile](https://www.daphile.com/) (x86/x64 architecture - PC)
 
 ## Software based controllers
 
