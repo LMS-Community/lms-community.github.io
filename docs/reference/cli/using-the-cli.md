@@ -15,6 +15,8 @@ The end of line separator is line feed (<LF\> ASCII decimal 10, hexadecimal 0x0A
 
 To use the command line interface interactively, use the telnet command from your system's command prompt: `telnet localhost 9090` and when it connects, you can start typing commands. Beware that the server expects parameters to be encoded using percent-style escaping (the same method as is used in URLs); `"` and `\\` are not supported as in shell-like environments.
 
+A limited subset of the CometD functionality supported over HTTP is also available to CLI clients. This allows for an alternate command/query and response syntax using JSON structured data instead of the space delimited positional parameters and percent-style escaping format. 
+
 For debugging purposes, CLI formatted commands can be sent using standard in and out. This support is only available on Unix platforms (MacOS X included), and must be enabled by launching the server with the `--stdio` command line option.
 
 ## jsonrpc.js
@@ -169,6 +171,25 @@ where:
 
 >`<pN+1>` through `<pM>` is the tagged returned data. See the command description for definitions. In general commands do return some information about the command performed.
 
+## CometD/JSON format
+
+To use the limited CometD/JSON format over the CLI, first request a `clientId` by sending a handshake to the `/meta/handshake` channel and then include that `clientId` in all subsequent commands and queries for the duration of the CLI session. Note that the requests and responses are encapsulated in a JSON encoded array. The beginning `[` and ending `]`square brackets are required.
+
+Example:
+
+Send a handshake and receive a response that includes a new `clientId`:
+
+```
+Request: [{"channel":"/meta/handshake"}]
+Response: [{"clientId":"3a6772d3","supportedConnectionTypes":["long-polling","streaming"],"successful":true,"advice":{"timeout":60000,"reconnect":"retry","interval":0},"version":"1.0","channel":"/meta/handshake","id":""}]
+```
+
+Send a query to the server using the `/slim/request` channel. Note that the `clientId` is used in two places:
+
+```
+Request: [{"id":"1","clientId":"3a6772d3","channel":"/slim/request","data":{"response":"/slim/3a6772d3/request","request":["00:04:20:02:00:c8",["status","-","1","tags:aclKN"]]}}]
+Response: [{"channel":"/slim/request","id":"1","successful":true,"clientId":"3a6772d3"},{"channel":"/slim/3a6772d3/request","id":"1","ext":{"priority":""},"data":{"mode":"stop","playlist repeat":0,"playlist_cur_index":"8","rate":1,"player_connected":1,"player_name":"sodco","player_ip":"10.0.0.33:47924","seq_no":0,"time":0,"duration":299.417,"playlist_timestamp":1723945752.73756,"playlist mode":"off","power":1,"digital_volume_control":1,"mixer volume":90,"playlist_loop":[{"playlist index":8,"id":29926,"title":"Dark Hours","artist":"Shadwick Wilde","coverid":"5466de2c","album":"Forever Home"}],"signalstrength":0,"can_seek":1,"playlist_tracks":10,"playlist shuffle":0}}]
+```
 
 ***
 ## Notes
