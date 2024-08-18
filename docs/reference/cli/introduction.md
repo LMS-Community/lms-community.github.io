@@ -34,6 +34,7 @@ The available commands and queries are listed below, grouped by their scope:
 ### Changes starting from Lyrion Music Server 9.0
 
 * Added `tags` query to return a file's raw tag information.
+* Restore partial Cometd/JSON support for CLI clients
 
 ### Changes starting from Logitech Media Server 8.5
 
