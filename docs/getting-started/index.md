@@ -54,10 +54,10 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
     {{ rpm }}
 
-    Install using `rpm`:
+    Install the RPM package:
 
     ```
-    sudo rpm -i logitechmediaserver-x.y.z-1.noarch.rpm
+    sudo dnf install logitechmediaserver-x.y.z-1.noarch.rpm
     ```
 
 
