@@ -50,7 +50,7 @@ dev:
     timestamp: Sun Aug 18 07:14:46 2024
     url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1723965286-noCPAN.tgz
   rpm:
-    desc: ':material-redhat: RedHat / :material-fedora: Fedora'
+    desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
     name: lyrionmusicserver-9.0.0-0.1.1723965286.noarch.rpm
     size: 86 MB
     timestamp: Sun Aug 18 07:14:46 2024
@@ -122,7 +122,7 @@ latest:
     timestamp: Mon May 20 14:31:54 2024
     url: https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver-8.5.2-noCPAN.tgz
   rpm:
-    desc: ':material-redhat: RedHat / :material-fedora: Fedora'
+    desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
     name: logitechmediaserver-8.5.2-1.noarch.rpm
     size: 86 MB
     timestamp: Mon May 20 14:31:54 2024
@@ -154,7 +154,7 @@ latest:
     url: https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/LogitechMediaServer-8.5.2-win64.exe
 mac: '[:material-apple: Apple macOS (43 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/LogitechMediaServer-8.5.2.pkg){ .md-button }'
 nocpan: '[:material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries (17 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver-8.5.2-noCPAN.tgz){ .md-button }'
-rpm: '[:material-redhat: RedHat / :material-fedora: Fedora (86 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver-8.5.2-1.noarch.rpm){ .md-button }'
+rpm: '[:material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution (86 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver-8.5.2-1.noarch.rpm){ .md-button }'
 src: '[:material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM (118 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver-8.5.2.tgz){ .md-button }'
 stable:
   deb:
@@ -202,7 +202,7 @@ stable:
     timestamp: Mon Jul 15 05:42:04 2024
     url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1721022124-noCPAN.tgz
   rpm:
-    desc: ':material-redhat: RedHat / :material-fedora: Fedora'
+    desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
     name: logitechmediaserver-8.5.3-0.1.1721022124.noarch.rpm
     size: 86 MB
     timestamp: Mon Jul 15 05:42:04 2024
