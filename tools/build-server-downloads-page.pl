@@ -18,7 +18,7 @@ my @platforms = (
    ['debarm', ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'],
    ['debi386', ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'],
    ['deb', ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'],
-   ['rpm', ':material-redhat: RedHat / :material-fedora: Fedora'],
+   ['rpm', ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution' ],
    ['tararm', ':material-linux::material-code-braces: ARM Linux Tarball'],
    ['encore', ':material-linux::material-music-box: Musical Fidelity'],
    ['src', ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'],
