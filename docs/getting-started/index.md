@@ -33,7 +33,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
     ```
     sudo apt install libcrypt-openssl-rsa-perl
-    sudo dpkg -i logitechmediaserver_x.y.z_*.deb
+    sudo dpkg -i logitechmediaserver_{{ latest.version }}_*.deb
     ```
 
 
@@ -49,15 +49,21 @@ Lyrion Music Server is a fully open source server software to power a wide range
     Then install using your operating system's package manager `dpkg`:
 
     ```
-    sudo dpkg -i logitechmediaserver_x.y.z_*.deb
+    sudo dpkg -i logitechmediaserver_{{ latest.version }}_*.deb
     ```
 
     {{ rpm }}
 
-    Install the RPM package:
+    Install on Fedora/Red Hat Enterprise Linux/CentOS, etc.:
 
     ```
-    sudo dnf install logitechmediaserver-x.y.z-1.noarch.rpm
+    sudo dnf install {{ latest.rpm.url }}
+    ```
+
+    Install on openSUSE and derivatives:
+
+    ```
+    sudo zypper install {{ latest.rpm.url }}
     ```
 
 
