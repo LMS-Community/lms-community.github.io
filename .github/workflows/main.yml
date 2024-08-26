@@ -93,9 +93,15 @@ jobs:
         run: |
           tools/get-analytics-data.pl > $STATS_JSON
 
+      - name: Check out LMS code for strings coverage
+        uses: actions/checkout@v4
+        with:
+          repository: LMS-Community/slimserver
+          path: slimserver
+
       - name: Get translation coverage of slimserver strings.txt
         run: |
-          tools/get-strings-coverage.py <(curl -s https://raw.githubusercontent.com/LMS-Community/slimserver/HEAD/strings.txt) >$STRINGS_COVERAGE_JSON
+          tools/get-strings-coverage.py <(find slimserver -name strings.txt -exec cat {} \;) >$STRINGS_COVERAGE_JSON
 
       - name: Commit changes
         if: ${{ !env.ACT }}
