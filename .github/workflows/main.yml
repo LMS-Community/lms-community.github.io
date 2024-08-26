@@ -102,6 +102,7 @@ jobs:
       - name: Get translation coverage of slimserver strings.txt
         run: |
           tools/get-strings-coverage.py <(find slimserver -name strings.txt -exec cat {} \;) >$STRINGS_COVERAGE_JSON
+          rm -rf slimserver
 
       - name: Commit changes
         if: ${{ !env.ACT }}
