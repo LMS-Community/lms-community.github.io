@@ -73,7 +73,7 @@ The development version is where you’ll find all the latest and greatest featu
 | [{{ dev.rpm.name }}]({{ dev.rpm.url }}) | {{ dev.rpm.size }} | {{ dev.rpm.timestamp }} | {{ dev.rpm.desc }} |
 | [{{ dev.nocpan.name }}]({{ dev.nocpan.url }}) | {{ dev.nocpan.size }} | {{ dev.nocpan.timestamp }} | {{ dev.nocpan.desc }} |
 | [{{ dev.tararm.name }}]({{ dev.tararm.url }}) | {{ dev.tararm.size }} | {{ dev.tararm.timestamp }} | {{ dev.tararm.desc }} |
-| [{{ stable.encore.name }}]({{ stable.encore.url }}) | {{ stable.encore.size }} | {{ stable.encore.timestamp }} | {{ stable.encore.desc }} |
+| [{{ dev.encore.name }}]({{ dev.encore.url }}) | {{ dev.encore.size }} | {{ dev.encore.timestamp }} | {{ dev.encore.desc }} |
 | [{{ dev.src.name }}]({{ dev.src.url }}) | {{ dev.src.size }} | {{ dev.src.timestamp }} | {{ dev.src.desc }} |
 
 
