@@ -26,6 +26,7 @@
 - Platform Support:
 
 	- [#64](https://github.com/LMS-Community/slimserver-platforms/pull/64) \- Upgrade Docker base image to Debian 12 (Bookworm) - thanks @mavit!
+	- Much improved RPM packages to better integrate with system standards (thanks @JohanSaaw!)
 
 - Bug Fixes:
 
