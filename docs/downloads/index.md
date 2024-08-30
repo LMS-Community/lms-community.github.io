@@ -66,6 +66,7 @@ The development version is where you’ll find all the latest and greatest featu
 | [{{ dev.win.name }}]({{ dev.win.url }}) | {{ dev.win.size }} | {{ dev.win.timestamp }} | {{ dev.win.desc }} |
 | [{{ dev.win64.name }}]({{ dev.win64.url }}) | {{ dev.win64.size }} | {{ dev.win64.timestamp }} | {{ dev.win64.desc }} |
 | [{{ dev.mac.name }}]({{ dev.mac.url }}) | {{ dev.mac.size }} | {{ dev.mac.timestamp }} | {{ dev.mac.desc }} |
+| [{{ dev.macos.name }}]({{ dev.macos.url }}) | {{ dev.macos.size }} | {{ dev.macos.timestamp }} | {{ dev.macos.desc }} |
 | [{{ dev.debamd64.name }}]({{ dev.debamd64.url }}) | {{ dev.debamd64.size }} | {{ dev.debamd64.timestamp }} | {{ dev.debamd64.desc }} |
 | [{{ dev.debarm.name }}]({{ dev.debarm.url }}) | {{ dev.debarm.size }} | {{ dev.debarm.timestamp }} | {{ dev.debarm.desc }} |
 | [{{ dev.debi386.name }}]({{ dev.debi386.url }}) | {{ dev.debi386.size }} | {{ dev.debi386.timestamp }} | {{ dev.debi386.desc }} |
