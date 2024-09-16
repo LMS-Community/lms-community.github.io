@@ -52,7 +52,6 @@ After 2010 the LMS community developed DIY hardware offerings:
 - [Squeezelite](squeezelite.md)
 - [SqueezePlay](squeezeplay.md) - [Source](https://github.com/ralph-irving/squeezeplay)
   This is based on the player and user interface in Squeezebox Radio and Squeezebox Touch
-- [Jivelite](jivelite.md)
 - [SoftSqueeze](softsqueeze.md)
 
 For mobile phones and tablets:
@@ -73,6 +72,7 @@ Using piCorePlayer as its operating system, a basic Raspberry Pi can be configur
 
 ## Software based controllers
 
+- [Jivelite](jivelite.md)
 - [iPeng](https://penguinlovesmusic.de/) (iOS - paid) - in-app purchase to also be a player
 - [Material Skin](https://github.com/CDrummond/lms-material) and [Android App](https://github.com/CDrummond/lms-material-app)
 - [Squeezer](https://github.com/kaaholst/android-squeezer) (Android)
