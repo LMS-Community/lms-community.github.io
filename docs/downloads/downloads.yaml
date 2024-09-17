@@ -35,14 +35,9 @@ dev:
     size: 19 MB
     timestamp: Tue Sep 17 05:14:35 2024
     url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1726550075-MusicalFidelity.tgz
-  mac:
-    desc: ':material-apple: Apple macOS'
-    name: LyrionMusicServer-9.0.0-1726550075.pkg
-    size: 43 MB
-    timestamp: Tue Sep 17 05:14:35 2024
-    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.0-1726550075.pkg
+  mac: ~
   macos:
-    desc: ':material-apple: Apple macOS - EXPERIMENTAL menubar item!'
+    desc: ':material-apple: Apple macOS'
     name: LyrionMusicServer-9.0.0-1726550075.dmg
     size: 40 MB
     timestamp: Tue Sep 17 05:14:35 2024
