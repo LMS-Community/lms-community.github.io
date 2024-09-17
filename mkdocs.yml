@@ -136,6 +136,7 @@ nav:
     - Community forums: https://forums.slimdevices.com/
   - Reference:
     - Lyrion Music Server: reference/lyrion-music-server.md
+    - Legacy Mac Uninstall: reference/uninstall-legacy-mac.md
     - Command Line Interface (JSON/RPC):
       - Introduction: reference/cli/introduction.md
       - Using the CLI: reference/cli/using-the-cli.md
