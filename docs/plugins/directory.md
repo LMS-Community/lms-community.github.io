@@ -216,7 +216,7 @@ title: Available Plugins
 
     ---
 
-    Programme, track and podcast information for Planet Radio / Bauer Media
+    Programme, track and podcast information for Planet Radio / Rayo / Bauer Media
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/111006-announce-planet-radio-bauer-media-plugin-planetrock-absolute-kiss-scala#post111006)    - :octicons-download-24: 538
 
@@ -251,6 +251,14 @@ title: Available Plugins
     Play the lossless, interactive Radio Paradise streams!
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins/)    - :octicons-download-24: 3303
+
+-   __:material-radio: RadioFeeds UK and Ireland__
+
+    ---
+
+    Access RadioFeeds UK and Ireland on your Squeezebox including AAC+ and HLS streams (requires PlayHLS). We are the internet's most up-to-date directory of live streams for UK and Irish radio stations. Please register for a username before using at [http://www.radiofeeds.co.uk/squeeze](http://www.radiofeeds.co.uk/squeeze)
+
+    The AlienBBC Team and Vincent Lo    - [:octicons-globe-24: Details](http://www.radiofeeds.co.uk/squeeze/)    - :octicons-download-24: 775
 
 -   __:material-radio: RadioNet__
 
@@ -959,6 +967,14 @@ title: Available Plugins
     Gives new settings for synchronizing players: relative volume sync; "wait for next track" to avoid disruptions; "unsync at power off"; restore local playlist after leaving a sync group. (Boom, Classic, Radio, Receiver, Squeezebox1, Slimp3, SoftSqueeze, Touch, Transporter) 
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SyncOptions.html)    - :octicons-download-24: 626
+
+-   __:material-tools: xAP Home Automation__
+
+    ---
+
+    xAP Home Automation connects Squeezebox Server with other xAP-enabled services and devices around the home.
+
+    Edward Pearson    - [:octicons-globe-24: Details](http://www.erspearson.com/xAP/Slim/slim_main.htm)    - :octicons-download-24: 42
 
 </div>
 
