@@ -34,6 +34,7 @@
 
 	- [#1027](https://github.com/LMS-Community/slimserver/issues/1027) \- Play count increase with in-track jumps (thanks @darrel-k!)
 	- [#1116](https://github.com/LMS-Community/slimserver/pull/1116) \- Fix album info track count when there are more than 50 tracks in an album (thanks @darrel-k!)
+	- [#1138](https://github.com/LMS-Community/slimserver/issues/1138) \- "Add all songs" from search not working (thanks @darrel-k!)
 	- [#1146](https://github.com/LMS-Community/slimserver/pull/1146) \- Restore partial Cometd support for CLI clients (thanks @sodface!)
 
 - Other:
