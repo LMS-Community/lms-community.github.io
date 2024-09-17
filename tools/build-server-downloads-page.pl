@@ -14,7 +14,7 @@ my @platforms = (
    ['win', ':material-microsoft-windows: Windows 32-bit'],
    ['win64', ':material-microsoft-windows: Windows 64-bit'],
    ['mac', ':material-apple: Apple macOS'],
-   ['macos', ':material-apple: Apple macOS - EXPERIMENTAL menubar item!'],
+   ['macos', ':material-apple: Apple macOS'],
    ['debamd64', ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'],
    ['debarm', ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'],
    ['debi386', ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'],
@@ -93,7 +93,11 @@ sub renderRelease {
 
     foreach (@platforms) {
         my $platformId = $_->[0];
-        $platformId = 'osx' if $platformId eq 'mac';
+
+        if ($platformId eq 'mac') {
+            next if $downloads->{macos};
+            $platformId = 'osx';
+        }
 
         my $download = $downloads->{$platformId};
 
