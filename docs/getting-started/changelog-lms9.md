@@ -28,7 +28,7 @@
 
 	- [#64](https://github.com/LMS-Community/slimserver-platforms/pull/64) \- Upgrade Docker base image to Debian 12 (Bookworm) - thanks @mavit!
 	- Much improved RPM packages to better integrate with system standards (thanks @JohanSaaw!)
-	- New macOS integration: replace the preference pane with a menubar item.
+	- New macOS integration: replace the preference pane with a menubar item (requires macOS 10.11 El Capitan).
 	- Update Windows 64-bit installer to be compatible with new Windows on ARM machines.
 
 - Bug Fixes:
