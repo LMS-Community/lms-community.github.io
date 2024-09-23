@@ -30,6 +30,7 @@
 	- Much improved RPM packages to better integrate with system standards (thanks @JohanSaaw!)
 	- New macOS integration: replace the preference pane with a menubar item (requires macOS 10.11 El Capitan).
 	- Update Windows 64-bit installer to be compatible with new Windows on ARM machines.
+	- Updated Audio::Scan to v1.09/1.10 on Windows 32/64-bit respectively - thanks @ralphy!
 
 - Bug Fixes:
 
