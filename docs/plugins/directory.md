@@ -155,11 +155,11 @@ title: Available Plugins
 
     [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)    - :octicons-download-24: 2605
 
--   __:material-radio: CBC Radio-Canada Français__
+-   __:material-radio: CBC Radio-Canada FranÃ§ais__
 
     ---
 
-    CBC Radio-Canada Français programme and track information
+    CBC Radio-Canada FranÃ§ais programme and track information
 			
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/108893-announce-song-info-plugin-for-cbc-radio-canada-english-and-french-services#post108893)    - :octicons-download-24: 225
