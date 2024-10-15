@@ -60,6 +60,10 @@ The development version is where you’ll find all the latest and greatest featu
 !!! danger
     Please only use this build if you’re willing to deal with the occasional broken build!
 
+!!! hint
+    Mac users please note: we no longer ship a preference pane, but a menu bar item. Please see
+    [Uninstalling the legacy Mac Settings Pane Item](../reference/uninstall-legacy-mac.md) for instructions
+    how to uninstall it.
 
 | Name | Size | Creation Date | Desc |
 | ---  | --- :| ---           | ---  |
