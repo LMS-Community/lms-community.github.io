@@ -20,7 +20,7 @@ dev:
   debarm:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
     name: lyrionmusicserver_9.0.0~1729095936_arm.deb
-    size: 31 MB
+    size: 32 MB
     timestamp: Wed Oct 16 16:25:36 2024
     url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1729095936_arm.deb
   debi386:
