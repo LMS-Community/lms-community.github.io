@@ -155,6 +155,15 @@ title: Available Plugins
 
     [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)    - :octicons-download-24: 2599
 
+-   __:material-radio: CBC Radio-Canada Français__
+
+    ---
+
+    CBC Radio-Canada Français programme and track information
+			
+
+    Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/108893-announce-song-info-plugin-for-cbc-radio-canada-english-and-french-services#post108893)    - :octicons-download-24: 229
+
 -   __:material-radio: CPlus__
 
     ---
@@ -203,6 +212,14 @@ title: Available Plugins
 
     bpa    - :octicons-download-24: 448
 
+-   __:material-radio: Planet Radio__
+
+    ---
+
+    Programme, track and podcast information for Planet Radio / Rayo / Bauer Media
+
+    Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/111006-announce-planet-radio-bauer-media-plugin-planetrock-absolute-kiss-scala#post111006)    - :octicons-download-24: 561
+
 -   __:material-radio: Radio Favourites__
 
     ---
@@ -210,6 +227,22 @@ title: Available Plugins
     Radio Favourites - Manage your favourite radios stations. Select your station according to the current live programme.
 
     ExpectingToFly    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_Radio_Favourites_Plugin)    - :octicons-download-24: 963
+
+-   __:material-radio: Radio France__
+
+    ---
+
+    Radio France programme and track information plus on demand replay
+
+    Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/forum/user-forums/fran-ais/103535-annonce-plugin-pour-radio-france-fip-france-musique-et-mouv?p=1287025#post1287025)    - :octicons-download-24: 1464
+
+-   __:material-radio: Radio Now Playing__
+
+    ---
+
+    Programme and track information including cover art for over 5500 radio stations
+
+    Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/111952-announce-radio-now-playing-plugin?view=thread)    - :octicons-download-24: 2250
 
 -   __:material-radio: Radio Paradise__
 
@@ -1093,6 +1126,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Kimmo, Triode, Ralphy](mailto:triode1@btinternet.com)    - :octicons-download-24: 2340
 
+-   __:material-star-shooting: Radio Now Playing__
+
+    ---
+
+    Programme and track information including cover art for over 5500 radio stations
+
+    Paul Webster    - [:octicons-globe-24: Details](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/111952-announce-radio-now-playing-plugin?view=thread)    - :octicons-download-24: 2250
+
 -   __:material-star-shooting: Music Information Screen__
 
     ---
@@ -1108,14 +1149,6 @@ title: Available Plugins
     Provides functionality to add songs or albums to any chosen playlist.
 
     [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/PlaylistManPlugin.htm)    - :octicons-download-24: 1681
-
--   __:material-star-shooting: SoundCloud__
-
-    ---
-
-    Play music from SoundCloud
-
-    Robert Siebert, Daniel Vijge, Robert Gibbon, David Blackman, KwarkLabs    - [:octicons-globe-24: Details](https://github.com/danielvijge/SqueezeCloud)    - :octicons-download-24: 1633
 
 </div>
 
