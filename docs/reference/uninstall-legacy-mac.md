@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Uninstalling the legacy Mac Settings Pane Item
+title: How to uninstall the legacy Mac Settings Pane Item
 ---
 
-# Uninstalling the legacy Mac Settings Pane Item
+# How to uninstall the legacy Mac Settings Pane Item
 
 Once you have migrated to Lyrion Music Server 9 or later on your Apple Mac computer, you'll realize it's now a Menu Bar item. You can therefore easily remove the legacy Settings Pane using a right click right there in the System Settings:
 
