@@ -65,9 +65,13 @@ The development version is where you’ll find all the latest and greatest featu
     [How to uninstall the legacy Mac Settings Pane Item](../reference/uninstall-legacy-mac.md) for instructions
     how to uninstall it.
 
+!!! hint
+    Windows users please note: if you want to migrate from a 32-bit to the new 64-bit version then please read
+    [How to migrate from Windows 32-bit build to 64-bit](../reference/migrate-win32-win64.md) first.
+
 | Name | Size | Creation Date | Desc |
 | ---  | --- :| ---           | ---  |
-| [{{ dev.win.name }}]({{ dev.win.url }}) | {{ dev.win.size }} | {{ dev.win.timestamp }} | {{ dev.win.desc }} |
+| [{{ dev.win.name }}]({{ dev.win.url }}) | {{ dev.win.size }} | {{ dev.win.timestamp }} | {{ dev.win.desc }} (legacy) |
 | [{{ dev.win64.name }}]({{ dev.win64.url }}) | {{ dev.win64.size }} | {{ dev.win64.timestamp }} | {{ dev.win64.desc }} |
 | [{{ dev.macos.name }}]({{ dev.macos.url }}) | {{ dev.macos.size }} | {{ dev.macos.timestamp }} | {{ dev.macos.desc }} |
 | [{{ dev.debamd64.name }}]({{ dev.debamd64.url }}) | {{ dev.debamd64.size }} | {{ dev.debamd64.timestamp }} | {{ dev.debamd64.desc }} |
