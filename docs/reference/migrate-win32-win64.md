@@ -14,7 +14,7 @@ the 32-bit Windows build will be gone. The build system will not be updated.
 ## Important to know
 
 The new 64-bit version doesn't provide a toolbar icon, or a control panel. There's a tool in the Start menu to configure
-the Lyrion Music Server startup mode. The remaining configuration happens through the LMS web UI [http://locahost:9000](http://locahost:9000).
+the Lyrion Music Server startup mode. The remaining configuration happens through the LMS web UI [http://localhost:9000](http://localhost:9000).
 
 ## Uninstall Logitech Media Server (or Lyrion Music Server) 32-bit
 
@@ -26,4 +26,4 @@ The 64-bit version is able to pick up the data from an older installation. So yo
 The first time you install the 64-bit version you'll have to be patient: the installer will bring
 [Strawberry Perl](https://strawberryperl.com) to your system. This can take several minutes, but only needs to be done once.
 
-Once the installation has completed LMS should be running, and you should be able to access it on [http://locahost:9000](http://locahost:9000).
+Once the installation has completed LMS should be running, and you should be able to access it on [http://localhost:9000](http://localhost:9000).
