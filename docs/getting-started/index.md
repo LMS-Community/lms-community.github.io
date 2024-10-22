@@ -32,7 +32,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
     Then install using your operating system's package manager `dpkg` (after installing a dependency):
 
     ```
-    sudo apt install libcrypt-openssl-rsa-perl
+    sudo apt install libio-socket-ssl-perl libnet-ssleay-perl libregexp-ipv6-perl liburi-perl libcrypt-openssl-rsa-perl
     sudo dpkg -i logitechmediaserver_{{ latest.version }}_*.deb
     ```
 
@@ -43,7 +43,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
     For Debian/Ubuntu you first need to install the necessary Perl dependencies:
 
     ```
-    sudo apt install libcrypt-openssl-rsa-perl
+    sudo apt install libio-socket-ssl-perl libnet-ssleay-perl libregexp-ipv6-perl liburi-perl libcrypt-openssl-rsa-perl
     ```
 
     Then install using your operating system's package manager `dpkg`:
