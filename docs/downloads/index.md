@@ -6,7 +6,7 @@ title: LMS Downloads
 ---
 
 !!! hint
-    If you’re looking for the Docker image of Lyrion Music Server/Logitech Media Server, please head over to the [:material-docker: Docker Hub Page](https://hub.docker.com/r/lmscommunity/logitechmediaserver).
+    If you’re looking for the Docker image of Lyrion Music Server/Logitech Media Server, please head over to the [:material-docker: Docker Hub Page](https://hub.docker.com/r/lmscommunity/lyrionmusicserver).
 
 ## v{{ latest.version }} - Latest Release
 
