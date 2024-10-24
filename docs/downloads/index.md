@@ -57,8 +57,10 @@ The development version is where you’ll find all the latest and greatest featu
 ([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/public/{{ dev.minorVersion }}/Changelog{{ dev.majorVersion }}.html) -
 [Git Commit Log](https://github.com/LMS-Community/slimserver/commits/public/{{ dev.minorVersion }}))
 
+<!-- disable for now, as we're pretty stable and don't want to scare off people
 !!! danger
     Please only use this build if you’re willing to deal with the occasional broken build!
+-->
 
 !!! hint
     Mac users please note: we no longer ship a preference pane, but a menu bar item. Please see
