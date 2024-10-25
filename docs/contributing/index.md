@@ -13,3 +13,5 @@ There are many ways that you can contribute to the LMS project with contribution
 - [Write documentation](https://github.com/lms-community/lms-community.github.io)
 - [Report bugs](reporting-a-bug.md)
 - [Adding translations](adding-translations.md)
+
+Financial contributions to support hosting and other related expenses for the Lyrion community should be made at [Open Collective](https://opencollective.com/lyrion)
