@@ -65,6 +65,8 @@ extra:
       link: https://hub.docker.com/r/lmscommunity/lyrionmusicserver
     - icon: simple/vbulletin
       link: https://forums.slimdevices.com
+    - icon: simple/opencollective
+      link: https://opencollective.com/lyrion
 
 copyright: <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
 
