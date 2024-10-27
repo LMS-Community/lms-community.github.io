@@ -250,6 +250,41 @@ Response: "artists 0 5 count:7 id:2 artist:Anastacia id:3 artist:Calogero id:4 a
 Request: "artists 0 5 genre_id:7<LF>"
 Response: "artists 0 5 genre_id:7 count:2 id:2 artist:Anastacia id:19 artist:Sarah%20Connor <LF>"
 ```
+
+***
+## roles
+`roles <start> <itemsPerResponse> <taggedParameters>`
+
+The `roles` query returns all roles known by the server for a given track, or releases.
+
+**Accepted tagged parameters:**
+
+| Tag | Description |
+|---|---|
+| `track_id` | Track ID, to restrict the results to the album of `track_id`. If specified, all other filters are ignored. |
+| `artist_id` | Artist ID, to restrict the results to those albums by `artist_id`. |
+| `album_id` | Album ID, to restrict the results to a single album. Or a comma sparated list of album IDs, to restrict the results to a specific list of albums. If specified, all other filters are ignored. |
+| `year` | Year, to restrict the results to those albums of that year. |
+| `work_id` | Limit results to an individual `work`. |
+| `library_id` | Virtual library ID, to restrict the results to a virtual library view. |
+| `tags` | Determines which tags are returned. Each returned tag is identified by a letter. The only valid values currently are `t` (textual representation of the contributor type), anc `CC` (only return count of results, but no other data). |
+
+**Returned tagged parameters:**
+
+| Block | Tag | Description |
+|---|---|---|
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
+|| `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
+| For each role: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
+||  `role_id` | The role ID. |
+||  `role_name` | The contributor role name (only if requested with `tag:t`) |
+
+Example:
+```
+Request: "roles 0 1 tags:t<LF>"
+Response: "roles 0 1 rescan:1 count:6 role_id:1 role_name:ARTIST <LF>"
+```
+
 ***
 ## albums
 `albums <start> <itemsPerResponse> <taggedParameters>`
