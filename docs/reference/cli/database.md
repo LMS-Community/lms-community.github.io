@@ -267,7 +267,7 @@ The `roles` query returns all roles known by the server for a given track, or re
 | `year` | Year, to restrict the results to those albums of that year. |
 | `work_id` | Limit results to an individual `work`. |
 | `library_id` | Virtual library ID, to restrict the results to a virtual library view. |
-| `tags` | Determines which tags are returned. Each returned tag is identified by a letter. The only valid values currently are `t` (textual representation of the contributor type), anc `CC` (only return count of results, but no other data). |
+| `tags` | Determines which tags are returned. Each returned tag is identified by a letter. The only valid values currently are `t` (textual representation of the contributor type), and `CC` (only return count of results, but no other data). |
 
 **Returned tagged parameters:**
 
