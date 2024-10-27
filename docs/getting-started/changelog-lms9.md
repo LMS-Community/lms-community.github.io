@@ -7,7 +7,7 @@
 	- New product name! Welcome Lyrion Music Server!
 	- New visuals - thanks @gobuleberbu & @mikes!
 	- Default skin refresh (the old version is still available as "Logic Teal")
-	- [Massive upgrade for Classical music lovers](https://github.com/LMS-Community/slimserver/pull/930): add support for Works, Performances, Disc Subtitles. Thanks a ton @darrel-k!
+	- [Massive upgrade for Classical music lovers](https://github.com/LMS-Community/slimserver/pull/930): add support for Works, Performances, Disc Subtitles, Roles. Thanks a ton @darrel-k!
 	- Improved first start setup: suggest a few plugins to install on initial startup.
 	- Add new "Recently Changed" browse mode to complement the "New Music" menu. The latter is no longer based on the file's timestamp, but on the time added to the collection, as stored in the persistant track table.
 	- [#1095](https://github.com/LMS-Community/slimserver/issues/1095) \- Link from online tracks and albums to local library (if possible).
