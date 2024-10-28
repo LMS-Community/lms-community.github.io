@@ -68,7 +68,7 @@ extra:
     - icon: simple/opencollective
       link: https://opencollective.com/lyrion
 
-copyright: <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
+copyright: <a href="privacy.md">Privacy Statement</a> | <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
 
 # tabbed content
 markdown_extensions:
