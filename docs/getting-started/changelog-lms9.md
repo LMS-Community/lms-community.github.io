@@ -27,6 +27,7 @@
 - Platform Support:
 
 	- [#64](https://github.com/LMS-Community/slimserver-platforms/pull/64) \- Upgrade Docker base image to Debian 12 (Bookworm) - thanks @mavit!
+	- [#1198](https://github.com/LMS-Community/slimserver/issues/1198) \- Add support for Perl 5.40 on x86\_64 Linux.
 	- Much improved RPM packages to better integrate with system standards (thanks @JohanSaaw!)
 	- New macOS integration: replace the preference pane with a menubar item (requires macOS 10.11 El Capitan).
 	- Update Windows 64-bit installer to be compatible with new Windows on ARM machines.
