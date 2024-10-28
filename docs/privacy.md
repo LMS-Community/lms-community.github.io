@@ -3,8 +3,6 @@ layout: default
 title: Privacy Statement
 ---
 
-# Privacy Statement
-
 Last Updated: October 28 2024
 
 ## Introduction
