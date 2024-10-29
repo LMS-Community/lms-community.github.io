@@ -1,33 +1,54 @@
 ---
 layout: default
-title: Advanced guide to OpenVPN on SB Touch/Radio
+title: Advanced guide to OpenVPN on SB Radio/Touch
 ---
 
-# Advanced guide to OpenVPN on SB Touch/Radio
+# Advanced guide to OpenVPN on SB Radio/Touch
 
-This guide describes the procedure to install OpenVPN on your Squeezebox Touch or Squeezebox Radio. You can use this to connect your Squeezebox player to your remote home network using OpenVPN. This guide assumes you have a functioning OpenVPN setup on your network. Also this guide assumes basic knowledge of \*nix administration (especially for the usage of `vi`).
+This guide describes the procedure to install OpenVPN on your Squeezebox Radio *(`baby`)* or Squeezebox Touch *(`fab4`)*.  
+You can use this to connect your Squeezebox player to your remote home network using OpenVPN. This guide assumes you have a functioning OpenVPN setup on your network. Also this guide assumes basic knowledge of \*nix administration (especially for the usage of `vi`).
 
-## Squeezebox Touch
+## OpenVPN installation
 
-We need the `openvpn` binary and the `tun` kernel module for the SB Touch and your ovpn.config as text.
+We need the `openvpn` binary and the `tun` kernel module for the SB Radio/Touch and your `ovpn.config` as text.
 
-Download the latest `fab4-openvpn-x.y.z.zip` from [Ralphy's repository](https://sourceforge.net/projects/lmsclients/files/squeezeos/) and copy it into the SB Touch:
+Download the latest `baby-openvpn-x.y.z.zip` or `fab4-openvpn-x.y.z.zip` from [Ralphy's repository](https://sourceforge.net/projects/lmsclients/files/squeezeos/) and then copy it into the SB Radio/Touch:
 
-```bash
-scp -O /path/to/fab4-openvpn-x.y.z.zip root@192.168.1.100:/dev
-```
+=== "Radio"
+    ```bash
+    scp -O /path/to/baby-openvpn-x.y.z.zip root@RADIO-IP:/dev
+    ```
 
-Then we `ssh` into the SB Touch and enter the following commands:
+=== "Touch"
+    ```bash
+    scp -O /path/to/fab4-openvpn-x.y.z.zip root@TOUCH-IP:/dev
+    ```
 
-```bash
-ssh root@192.168.1.100
-cd /dev
-unzip fab4-openvpn-2.5.10.zip
-mv /dev/openvpn /usr/sbin
-chmod 755 /usr/sbin/openvpn
-mv /dev/tun.ko /lib/modules/2.6.26.8-rt16-332-g5849bfa
-mkdir -p /etc/openvpn
-```
+Then we `ssh` into the SB Radio/Touch and enter the following commands:
+
+=== "Radio"
+
+    ```bash
+    ssh root@RADIO-IP
+    cd /dev
+    unzip baby-openvpn-x.y.z.zip
+    mv /dev/openvpn /usr/sbin
+    chmod 755 /usr/sbin/openvpn
+    mv /dev/tun.ko /lib/modules/2.6.26.8-rt16
+    mkdir -p /etc/openvpn
+    ```
+
+=== "Touch"
+
+    ```bash
+    ssh root@TOUCH-IP
+    cd /dev
+    unzip fab4-openvpn-x.y.z.zip
+    mv /dev/openvpn /usr/sbin
+    chmod 755 /usr/sbin/openvpn
+    mv /dev/tun.ko /lib/modules/2.6.26.8-rt16-332-g5849bfa
+    mkdir -p /etc/openvpn
+    ```
 
 Next we create the file with `vi` and there you enter the text of your ovpn.config. Make sure you insert `auth-user-pass /etc/openvpn/up` into the config:
 ```bash
@@ -45,12 +66,24 @@ vi /etc/init.d/rcS.local
 ```
 
 We paste these two commands into that file:
-```bash
-# Load the tunnel kernel module.
-insmod /lib/modules/2.6.26.8-rt16-332-g5849bfa/tun.ko
-# Start openvpn
-/usr/sbin/openvpn --config /etc/openvpn/TUN.ovpn --daemon
-```
+
+=== "Radio"
+
+    ```bash
+    # Load the tunnel kernel module.
+    insmod /lib/modules/2.6.26.8-rt16-332-g5849bfa/tun.ko
+    # Start openvpn
+    /usr/sbin/openvpn --config /etc/openvpn/TUN.ovpn --daemon
+    ```
+
+=== "Touch"
+
+    ```bash
+    # Load the tunnel kernel module.
+    insmod /lib/modules/2.6.26.8-rt16/tun.ko
+    # Start openvpn
+    /usr/sbin/openvpn --config /etc/openvpn/TUN.ovpn --daemon
+    ```
 
 Then `chmod` that file:
 ```bash
@@ -88,17 +121,4 @@ chmod +x /etc/network/if-up.d/settime
 That’s it, we are done, hope it is running fine. We can now reboot:
 ```
 reboot
-```
-
-## Squeezebox Radio
-
-For the Radio it is the same, only 2 differences:
-```
-scp -O /path/to/baby-openvpn-x.y.z.zip root@192.168.1.100:/dev
-mv /dev/tun.ko /lib/modules/2.6.26.8-rt16
-```
-
-The `rcS.local` should have this line instead:
-```
-insmod /lib/modules/2.6.26.8-rt16/tun.ko
 ```

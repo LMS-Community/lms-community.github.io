@@ -13,6 +13,7 @@ theme:
   features:
     - content.action.edit
     - content.action.view
+    - content.tabs.link
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -100,7 +101,7 @@ nav:
       - Beginner's Docker guide on Synology: getting-started/beginners-guide-synology-docker.md
       - Beginner's Docker guide on QNAP: getting-started/beginners-guide-qnap-docker.md
     - Advanced guides:
-      - Use OpenVPN on SB Touch/Radio: getting-started/advanced-guide-openvpn.md
+      - Use OpenVPN on SB Radio/Touch: getting-started/advanced-guide-openvpn.md
     - Changelog:
       - LMS 8 changelog: getting-started/changelog-lms8.md
       - LMS 9 changelog: getting-started/changelog-lms9.md
