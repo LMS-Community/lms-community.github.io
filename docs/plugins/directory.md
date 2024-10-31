@@ -1244,14 +1244,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Richard Herman](mailto:richard@neversimple.eu)    - :octicons-download-24: 322
 
--   __:material-toy-brick-outline: Spotty Helper Application for Raspberry Pi Zero/1st Generation__
-
-    ---
-
-    These are the legacy Spotty Helper Application for ARMv6 based Raspberry Pi systems (0/1). Use these if your installation used to work pre Spotty 4.5.0, but stopped with the most recent helpers.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 282
-
 -   __:material-toy-brick-outline: Spotty Helper Application for Solaris/Illumos__
 
     ---
@@ -1259,14 +1251,6 @@ title: Available Plugins
     Spotty Helper Application for Solaris/Illumos. This plug-in requires the Spotty plugin.
 
     [:octicons-mail-24: Reiner Paulus](mailto:lms@hashsum.org)
-
--   __:material-toy-brick-outline: Spotty Legacy Helper Application for ARMv6/7 architecture__
-
-    ---
-
-    These are the legacy Spotty Helper Application for ARMv6/7 based systems. Use these if your installation used to work pre Spotty 2.8.0, but stopped with the most recent helpers. Please note that these legacy versions come with certain limitations, eg. cannot stream OGG directly to your player.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 449
 
 -   __:material-toy-brick-outline: SqueezeCLI Handler__
 
