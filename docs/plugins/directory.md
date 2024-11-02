@@ -510,6 +510,22 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/TimeSpeller/)    - :octicons-download-24: 301
 
+-   __:material-information-box-outline: Files Viewer__
+
+    ---
+
+    Provides capability to view text files on a SqueezeBox Classic player.
+
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/FilesViewerPlugin.htm)    - :octicons-download-24: 257
+
+-   __:material-information-box-outline: Files Viewer__
+
+    ---
+
+    
+
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/SongFileViewerPlugin.htm)    - :octicons-download-24: 187
+
 -   __:material-information-box-outline: Fileviewer__
 
     ---
@@ -676,6 +692,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Martin Johnen](mailto:m.johnen@gmail.com)    - [:octicons-globe-24: Details](http://forums.slimdevices.com/showthread.php?102851-Plugin-to-suppress-quot-Shuffle-quot-quot-Repeat-quot-and-quot-Add-to-Playlist-quot-Modes)    - :octicons-download-24: 124
 
+-   __:material-playlist-music: Dynamic Mix__
+
+    ---
+
+    Extension for Dynamic Playlist, using MusicIP to produce mixes.
+
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/DynamicMixPlugin.htm)    - :octicons-download-24: 515
+
 -   __:material-playlist-music: Dynamic Playlist Creator__
 
     ---
@@ -699,6 +723,14 @@ title: Available Plugins
     LastMix allows you to create Last.fm based mixes for the "Don't Stop The Music" plugin.
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 718
+
+-   __:material-playlist-music: Playlist Manager__
+
+    ---
+
+    Provides functionality to add songs or albums to any chosen playlist.
+
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/PlaylistManPlugin.htm)    - :octicons-download-24: 1778
 
 -   __:material-playlist-music: Spicefly SugarCube__
 
@@ -745,6 +777,14 @@ title: Available Plugins
     Lazy Search Music is a plugin that lets you search for music without having to multi-tap each letter in the search text you're after, and displays search results "as you type". This plugin works with Squeezeboxes and Transporters when using a remote control featuring number keys, and doesn't affect the operation of the Controller.
 
     [:octicons-mail-24: Stuart Hickinbottom](mailto:stuart@hickinbottom.com)    - [:octicons-globe-24: Details](http://www.hickinbottom.com/lazysearch)    - :octicons-download-24: 18
+
+-   __:material-file-search-outline: Phil's Libraries__
+
+    ---
+
+    Creates new libraries for "Not Rated" and "Rated High", dependent on Erlands TrackStat plugin
+
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - :octicons-download-24: 127
 
 -   __:material-file-search-outline: Simple Library Views__
 
@@ -1110,13 +1150,13 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicInfoSCR/)    - :octicons-download-24: 2282
 
--   __:material-star-shooting: SoundCloud__
+-   __:material-star-shooting: Playlist Manager__
 
     ---
 
-    Play music from SoundCloud
+    Provides functionality to add songs or albums to any chosen playlist.
 
-    Robert Siebert, Daniel Vijge, Robert Gibbon, David Blackman, KwarkLabs    - [:octicons-globe-24: Details](https://github.com/danielvijge/SqueezeCloud)    - :octicons-download-24: 1693
+    [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/PlaylistManPlugin.htm)    - :octicons-download-24: 1778
 
 </div>
 
