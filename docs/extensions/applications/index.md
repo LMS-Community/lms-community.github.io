@@ -15,6 +15,7 @@ title: Applications
 - [ncsb](https://github.com/atisharma/ncsb) (Terminal): A ncurses Squeezebox controller for LMS.
 - [Open Squeeze](https://github.com/orangebikelabs/opensqueeze) (Android):  Orange Squeeze is an Android app that can be used to control Logitech Squeezebox devices on the Logitech Media Server platform.
 - [Squeeze Client](https://f-droid.org/en/packages/de.maniac103.squeezeclient/) (Android): An Android client/controller application for LMS with Material Design 3 UI.
+- [Squeeze Ctrl](https://play.google.com/store/apps/details?id=com.angrygoat.android.squeezectrl) (Android): Remote control app for the Squeezebox system.
 - [Squeezelite-X](https://apps.microsoft.com/detail/9pbhmtnp9037) (Windows): combines the Squeezelite player with Lyrion with easy access to LMS' user interface.
 - [Squeezer](https://github.com/kaaholst/android-squeezer) (Android): Control your Lyrion Music Server and players from your Android phone.
 - [Ultralight LMS skin](https://github.com/millerdev/lms-ultralight) (Browser): Ultralight is a responsive skin for Logitech Media Server that works well on desktop and mobile browsers.
