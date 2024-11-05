@@ -5,15 +5,15 @@ title: Squeezelite
 
 # Squeezelite
 
-Squeezelite is one of several software clients available for Lyrion Music Server. Squeezelite does not have any user interface of its own and must be controlled via Lyrion Music Server's web interface or another Lyrion Music Server client. 
+Squeezelite is one of several software clients available for Lyrion Music Server. Squeezelite does not have any user interface of its own and must be controlled via Lyrion Music Server's web interface or another Lyrion Music Server client.
 
 ## Features
 
 Squeezelite supports:
 
 - gapless playback,
-- a wide range of sample rates (44.1 kHz / 48 kHz / 88.2 kHz / 96 kHz / 176.4 kHz / 192 kHz / 352.8 kHz / 384 kHz) and 
-- direct streaming for Lyrion Music Server plugins that require it such as Spotify. 
+- a wide range of sample rates (44.1 kHz / 48 kHz / 88.2 kHz / 96 kHz / 176.4 kHz / 192 kHz / 352.8 kHz / 384 kHz) and
+- direct streaming for Lyrion Music Server plugins that require it such as Spotify.
 
 It is capable of utilizing Lyrion Music Server's client synchronization feature which allows grouping clients for simultaneous, synchronized music playback. Squeezelite uses ALSA for audio output on Linux and PortAudio for other platforms.
 
@@ -23,7 +23,7 @@ It is capable of utilizing Lyrion Music Server's client synchronization feature 
 
 Binaries compiled from the :octicons-mark-github-16: [source code](https://github.com/ralph-irving/squeezelite) can be found on :simple-sourceforge: [SourceForge](https://sourceforge.net/projects/lmsclients/files/squeezelite/).
 
-Squeezelite-X combine Squeezelite player with Lyrion server default web user interface. It can be installed from [Microsoft App Store](https://apps.microsoft.com/search?query=Squuezelite-X&hl=en-us&gl=US).
+Squeezelite-X combines the Squeezelite player with Lyrion server default web user interface. It can be installed from [Microsoft App Store](https://apps.microsoft.com/detail/9pbhmtnp9037).
 
 ### Linux/BSD
 
@@ -45,4 +45,4 @@ See the [squeezelite manpage](squeezelite-manpage.md) for usage details.
 
 ## Troubleshooting
 
-In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com/forum/user-forums/linux-unix/94258-announce-squeezelite-a-small-headless-squeezeplay-emulator-for-linux-alsa-only) for assistance. 
+In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com/forum/user-forums/linux-unix/94258-announce-squeezelite-a-small-headless-squeezeplay-emulator-for-linux-alsa-only) for assistance.
