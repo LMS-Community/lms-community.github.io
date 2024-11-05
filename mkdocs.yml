@@ -128,10 +128,12 @@ nav:
       - SqueezePlay: players-and-controllers/squeezeplay.md
       - SoftSqueeze: players-and-controllers/softsqueeze.md
       - piCorePlayer: players-and-controllers/picoreplayer.md
-  - Plugins:
-    - Overview: plugins/index.md
-    - Available Plugins: plugins/directory.md
-    - Repository File Reference: reference/repository-dev.md
+  - Extensions:
+    - Applications: extensions/applications/index.md
+    - Plugins:
+      - Overview: plugins/index.md
+      - Available Plugins: plugins/directory.md
+      - Repository File Reference: reference/repository-dev.md
   - Contributing:
     - Overview: contributing/index.md
     - Reporting a bug: contributing/reporting-a-bug.md
