@@ -32,6 +32,7 @@ title: Applications
 
 ## Integration
 - [Home Assistant](https://www.home-assistant.io/integrations/squeezebox/): The Squeezebox integration allows you to control music players from the LMS ecosystem.
+- [openHAB](https://www.openhab.org/addons/bindings/squeezebox/): Squeezebox binding, integrates the LMS and compatible Squeezebox players.
 - [slimpris2](https://github.com/mavit/slimpris2): slimpris2 provides MPRIS 2 remote control of LMS, allowing it to be controlled using the user interface integrated into your Linux desktop.
 - [Squeezelite player for Kodi](https://github.com/kodi-community-addons/plugin.audio.squeezebox): Transform Kodi in a Squeezebox player.
 
