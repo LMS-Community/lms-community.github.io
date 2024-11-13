@@ -1,0 +1,51 @@
+---
+layout: default
+title: Beginner's Guide to install on QNAP Container Station
+---
+
+# Beginners's Guide to install as a QNAP Container Station container
+
+!!! note
+    In case you have any difficulties following this guide or have found some errors, please leave a note on the [forums](https://forums.slimdevices.com/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers). Thanks!
+    
+!!! note two
+    This installation was tested on a QNAP TS-453mini
+
+
+## Assumptions
+
+In this guide the following assumptions apply:
+
+- Your music is stored in seperate share. The screenshots use `/media/audio/music`
+- Playlists are stored in `/media/playlists 
+- The configuration is kept in `/ContainerConfigs/lmsconf
+- To sync the timezone between QNAP NAS a symlink is needed. This requires SSH access. But this is not strictly needed it can be skipped.
+- You have nothing else running at port 9000 on your NAS.
+
+## Preperations
+Create a new folder (with _File Station_) under `ContainerCOnfigs` called `lmsconf`
+
+## Preperation [Optional] 
+In order to sync the timezone with the NAS access to /etc/TZ is needed. This folder is not accessible by containers so create a symlink in a location that is.
+1. Logon to your NAS with a user that has the proper rights and enter
+```sh
+ln -s /etc/TZ /share/ContainerConfigs/timezone
+```
+We will use this symlink to map the containers `/etc/timzone` to make both media server and NAS in the same timezone.
+
+## Add the published image to Container station
+1. Open Container station
+2. Under _Containers_ click _+ Create_
+3. Use image 'lmscommunity/logitechmediaserver` and click next
+4. Disable the _Default web URL port
+5. Click _Advaced settings_ at the lower left
+6. By networks select Custom and Host
+7. Under storage delete the locations of `/config`, `/music`, and `/playlist`
+8. [Optional] Select Bind Mount Host Path, navigate to `Container\timezone`, at Container enter `\etc\timezone` and make it RO
+9. Select _Bind Mount Host Path_, at Host select the location of your music files at Container type `/music`
+10. Repeat the same steps for your playlist connect to `\playlist`
+11. Repeat for `/ContainerConfigs` and `/config/`
+
+In the end it might look something like
+
+
