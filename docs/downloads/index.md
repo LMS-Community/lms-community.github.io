@@ -68,12 +68,12 @@ The development version is where you’ll find all the latest and greatest featu
     how to uninstall it.
 
 !!! hint
-    Windows users please note: if you want to migrate from a 32-bit to the new 64-bit version then please read
-    [How to migrate from Windows 32-bit build to 64-bit](../reference/migrate-win32-win64.md) first.
+    Windows 32-bit users please note: your beloved Windows 32-bit build is no longer available due to hardware
+    failure on the build system. You will have to migrate to the new 64-bit version. Please read
+    [How to migrate from Windows 32-bit build to 64-bit](../reference/migrate-win32-win64.md).
 
 | Name | Size | Creation Date | Desc |
 | ---  | --- :| ---           | ---  |
-| [{{ dev.win.name }}]({{ dev.win.url }}) | {{ dev.win.size }} | {{ dev.win.timestamp }} | {{ dev.win.desc }} (legacy) |
 | [{{ dev.win64.name }}]({{ dev.win64.url }}) | {{ dev.win64.size }} | {{ dev.win64.timestamp }} | {{ dev.win64.desc }} |
 | [{{ dev.macos.name }}]({{ dev.macos.url }}) | {{ dev.macos.size }} | {{ dev.macos.timestamp }} | {{ dev.macos.desc }} |
 | [{{ dev.debamd64.name }}]({{ dev.debamd64.url }}) | {{ dev.debamd64.size }} | {{ dev.debamd64.timestamp }} | {{ dev.debamd64.desc }} |
