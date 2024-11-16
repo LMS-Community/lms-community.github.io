@@ -12,6 +12,8 @@ For the archeologists among you. Or those who believe that SlimServer v6.3.1 pro
 
 ## Logitech Media Server (7.7.0 - 8.5.x)
 
+* [LogitechMediaServer_v8.5.3_unreleased](https://archive.lms-community.org/LogitechMediaServer_v8.5.3_unreleased)
+* [LogitechMediaServer_v8.5.2](https://archive.lms-community.org/LogitechMediaServer_v8.5.2)
 * [LogitechMediaServer_v8.5.1](https://archive.lms-community.org/LogitechMediaServer_v8.5.1)
 * [LogitechMediaServer_v8.5.0](https://archive.lms-community.org/LogitechMediaServer_v8.5.0)
 * [LogitechMediaServer_v8.4.1_unreleased](https://archive.lms-community.org/LogitechMediaServer_v8.4.1_unreleased)
