@@ -19,6 +19,7 @@
 	- Added Hungarian translations - thanks @ambrits!
 	- Updated Czech translation - thanks @mipa87!
 	- Updated Danish translation - thanks @cfuttrup!
+	- Updated Dutch translation - thanks @terual!
 	- Updated French translation - thanks @Franck-Berry!
 	- Updated Portuguese translation - thanks @DuLac!
 	- Improved Plugin Manager: add categories, icons, and search.
