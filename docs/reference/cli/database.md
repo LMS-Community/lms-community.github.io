@@ -487,7 +487,6 @@ The `playlists` query returns all playlists known by the server.
 | For each playlist: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 || `id` | Playlist ID. Item delimiter. |
 || `playlist` | Playlist name |
-|| `u` `url` | Playlist file url |
 || `s` `textkey` | The playlist's `textkey` is the first letter of the sorting key. |
 || `u`  `url` | The playlist's url. |
 || `E`  `extid` | The playlist's external ID, if it is eg. from an online music service. |
