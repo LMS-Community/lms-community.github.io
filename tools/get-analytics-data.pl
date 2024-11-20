@@ -7,7 +7,7 @@ use JSON;
 use LWP::UserAgent;
 
 use constant STATS_SUMMARY => 'https://stats.lms-community.org/api/stats';
-use constant STATS_HISTORY => 'https://stats.lms-community.org/api/stats/history';
+use constant STATS_HISTORY => 'https://stats.lms-community.org/api/stats/history?version=8.4.0';
 use constant PLAYERNAME_MAP => 'docs/analytics/players-displayname.json';
 
 my $playerTypes = {
