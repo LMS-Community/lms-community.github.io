@@ -45,6 +45,7 @@
 	- [#1146](https://github.com/LMS-Community/slimserver/pull/1146) \- Restore partial Cometd support for CLI clients (thanks @sodface!)
 	- [#1203](https://github.com/LMS-Community/slimserver/pull/1203) \- Fix display of album roles in the playlist (thanks @darrel-k!)
 	- [#1213](https://github.com/LMS-Community/slimserver/issues/1213) \- Modify #CURRTRACK to first track when playlist finishes
+	- [#1229](https://github.com/LMS-Community/slimserver/pull/1229) \- Only allow audio tracks for RandomPlay (thanks @jbylsma!)
 
 - Other:
 
