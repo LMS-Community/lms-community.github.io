@@ -13,6 +13,7 @@
 	- [#1095](https://github.com/LMS-Community/slimserver/issues/1095) \- Link from online tracks and albums to local library (if possible).
 	- [#1115](https://github.com/LMS-Community/slimserver/pull/1115) \- Add option to show tracks from a given year, even if their album would be listed in a different year.
 	- [#1132](https://github.com/LMS-Community/slimserver/pull/1132) \- Allow user defined contributor roles (thanks @darrel-k!).
+	- [#1228](https://github.com/LMS-Community/slimserver/issues/1228) \- Allow user to define how many HTTP requests to follow.
 
 - Server Changes:
 
