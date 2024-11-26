@@ -50,4 +50,5 @@
 - Other:
 
 	- Move CLI documentation out of the server code to [lyrion.org](https://lyrion.org/reference/cli/introduction/).
+	- Allow a caller (plugin) of Slim::Networking::SimpleAsyncHTTP to disable HTTPS certificate validation.
 
