@@ -1,0 +1,14 @@
+name = "lms-downloads-handler"
+main = "src/index.ts"
+compatibility_date = "2024-04-05"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[[r2_buckets]]
+binding = 'DOWNLOADS_BUCKET'
+bucket_name = 'downloads'
+preview_bucket_name = 'downloads'
+jurisdiction = "eu"

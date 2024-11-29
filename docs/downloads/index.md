@@ -14,7 +14,7 @@ This is the released version. Please see [Getting Started](../getting-started/in
 ([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/{{ latest.version }}/Changelog{{ latest.majorVersion }}.html) -
 [Git Commit Log](https://github.com/LMS-Community/slimserver/commits/{{ latest.version }}))
 
-| Name | Size | Creation Date | Desc |
+| Name | Size | Creation Date | Description |
 | ---  | --- :| ---           | ---  |
 | [{{ latest.win.name }}]({{ latest.win.url }}) | {{ latest.win.size }} | {{ latest.win.timestamp }} | {{ latest.win.desc }} |
 | [{{ latest.win64.name }}]({{ latest.win64.url }}) | {{ latest.win64.size }} | {{ latest.win64.timestamp }} | {{ latest.win64.desc }} |
@@ -35,7 +35,7 @@ The stable branch is like the officially released latest version, with some addi
 ([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/public/{{ stable.minorVersion }}/Changelog{{ stable.majorVersion }}.html) -
 [Git Commit Log](https://github.com/LMS-Community/slimserver/commits/public/{{ stable.minorVersion }}))
 
-| Name | Size | Creation Date | Desc |
+| Name | Size | Creation Date | Description |
 | ---  | --- :| ---           | ---  |
 | [{{ stable.win.name }}]({{ stable.win.url }}) | {{ stable.win.size }} | {{ stable.win.timestamp }} | {{ stable.win.desc }} |
 | [{{ stable.win64.name }}]({{ stable.win64.url }}) | {{ stable.win64.size }} | {{ stable.win64.timestamp }} | {{ stable.win64.desc }} |
@@ -72,7 +72,7 @@ The development version is where you’ll find all the latest and greatest featu
     failure on the build system. You will have to migrate to the new 64-bit version. Please read
     [How to migrate from Windows 32-bit build to 64-bit](../reference/migrate-win32-win64.md).
 
-| Name | Size | Creation Date | Desc |
+| Name | Size | Creation Date | Description |
 | ---  | --- :| ---           | ---  |
 | [{{ dev.win64.name }}]({{ dev.win64.url }}) | {{ dev.win64.size }} | {{ dev.win64.timestamp }} | {{ dev.win64.desc }} |
 | [{{ dev.macos.name }}]({{ dev.macos.url }}) | {{ dev.macos.size }} | {{ dev.macos.timestamp }} | {{ dev.macos.desc }} |

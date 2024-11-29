@@ -10,6 +10,7 @@ use YAML;
 use constant REPO_FILE => 'https://raw.githubusercontent.com/LMS-Community/lms-server-repository/master/servers.json';
 use constant DATA_YAML => 'docs/downloads/downloads.yaml';
 
+# keep in sync with docs/downloads/listing
 my @platforms = (
    ['win', ':material-microsoft-windows: Windows 32-bit'],
    ['win64', ':material-microsoft-windows: Windows 64-bit'],
