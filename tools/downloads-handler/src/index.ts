@@ -25,6 +25,10 @@ export default {
         const url = new URL(request.url)
         const prefix = url.pathname.slice(1)
 
+        if (!prefix) {
+            return Response.redirect('https://lyrion.org/getting-started')
+        }
+
         if (request.method === 'GET' && prefix && allowedPrefixes.some(p => new RegExp(p).test(prefix))) {
             const listing = await env.DOWNLOADS_BUCKET.list({ prefix })
 
