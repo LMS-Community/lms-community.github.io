@@ -10,6 +10,10 @@ For the archeologists among you. Or those who believe that SlimServer v6.3.1 pro
 
 [Go back to safety, get the latest release](../getting-started/index.md).
 
+## Lyrion Music Server (9.0.0)
+* [LyrionMusicServer_v9.0.0](listing.md?LyrionMusicServer_v9.0.0)
+
+
 ## Logitech Media Server (7.7.0 - 8.5.x)
 
 * [LogitechMediaServer_v8.5.3_unreleased](listing.md?LogitechMediaServer_v8.5.3_unreleased)

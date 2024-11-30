@@ -15,17 +15,23 @@ Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com
 
 ## Version history
 
+### LMS 9.1
+
+Currently in development.
+
 ### LMS 9.0
 
-Currently in development. This version will be the first release using the new name Lyrion Music Server! This version is undergoing major refactoring because of the name change and is thus not suitable for usage unless you are prepared to deal with occasional breakage.
+Current stable. Initially released on November 29, 2024.
+
+This version is the first release using the new name Lyrion Music Server!
 
 * Massive upgrade for Classical music lovers; this version adds support for works!
 
+[Release notes](../getting-started/changelog-lms9.md)
+
 ### LMS 8.5
 
-Current stable. Initially released on March 14, 2024.
-
-This is the last Logitech branded release. It's main change compared to the previous version is the removal of all MySqueezebox.com integration.
+This is the last Logitech branded release. Its main change compared to the previous version is the removal of all MySqueezebox.com integration.
 
 [Release notes](../getting-started/changelog-lms8.md)
 

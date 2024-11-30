@@ -14,11 +14,20 @@ This is the released version. Please see [Getting Started](../getting-started/in
 ([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/{{ latest.version }}/Changelog{{ latest.majorVersion }}.html) -
 [Git Commit Log](https://github.com/LMS-Community/slimserver/commits/{{ latest.version }}))
 
+!!! hint
+    Mac users please note: we no longer ship a preference pane, but a menu bar item. Please see
+    [How to uninstall the legacy Mac Settings Pane Item](../reference/uninstall-legacy-mac.md) for instructions
+    how to uninstall it.
+
+!!! hint
+    Windows 32-bit users please note: your beloved Windows 32-bit build is no longer available due to hardware
+    failure on the build system. You will have to migrate to the new 64-bit version. Please read
+    [How to migrate from Windows 32-bit build to 64-bit](../reference/migrate-win32-win64.md).
+
 | Name | Size | Creation Date | Description |
 | ---  | --- :| ---           | ---  |
-| [{{ latest.win.name }}]({{ latest.win.url }}) | {{ latest.win.size }} | {{ latest.win.timestamp }} | {{ latest.win.desc }} |
 | [{{ latest.win64.name }}]({{ latest.win64.url }}) | {{ latest.win64.size }} | {{ latest.win64.timestamp }} | {{ latest.win64.desc }} |
-| [{{ latest.mac.name }}]({{ latest.mac.url }}) | {{ latest.mac.size }} | {{ latest.mac.timestamp }} | {{ latest.mac.desc }} |
+| [{{ latest.macos.name }}]({{ latest.macos.url }}) | {{ latest.macos.size }} | {{ latest.macos.timestamp }} | {{ latest.macos.desc }} |
 | [{{ latest.debamd64.name }}]({{ latest.debamd64.url }}) | {{ latest.debamd64.size }} | {{ latest.debamd64.timestamp }} | {{ latest.debamd64.desc }} |
 | [{{ latest.debarm.name }}]({{ latest.debarm.url }}) | {{ latest.debarm.size }} | {{ latest.debarm.timestamp }} | {{ latest.debarm.desc }} |
 | [{{ latest.debi386.name }}]({{ latest.debi386.url }}) | {{ latest.debi386.size }} | {{ latest.debi386.timestamp }} | {{ latest.debi386.desc }} |
@@ -26,6 +35,7 @@ This is the released version. Please see [Getting Started](../getting-started/in
 | [{{ latest.rpm.name }}]({{ latest.rpm.url }}) | {{ latest.rpm.size }} | {{ latest.rpm.timestamp }} | {{ latest.rpm.desc }} |
 | [{{ latest.nocpan.name }}]({{ latest.nocpan.url }}) | {{ latest.nocpan.size }} | {{ latest.nocpan.timestamp }} | {{ latest.nocpan.desc }} |
 | [{{ latest.tararm.name }}]({{ latest.tararm.url }}) | {{ latest.tararm.size }} | {{ latest.tararm.timestamp }} | {{ latest.tararm.desc }} |
+| [{{ stable.encore.name }}]({{ stable.encore.url }}) | {{ stable.encore.size }} | {{ stable.encore.timestamp }} | {{ stable.encore.desc }} |
 | [{{ latest.src.name }}]({{ latest.src.url }}) | {{ latest.src.size }} | {{ latest.src.timestamp }} | {{ latest.src.desc }} |
 
 
@@ -37,9 +47,8 @@ The stable branch is like the officially released latest version, with some addi
 
 | Name | Size | Creation Date | Description |
 | ---  | --- :| ---           | ---  |
-| [{{ stable.win.name }}]({{ stable.win.url }}) | {{ stable.win.size }} | {{ stable.win.timestamp }} | {{ stable.win.desc }} |
 | [{{ stable.win64.name }}]({{ stable.win64.url }}) | {{ stable.win64.size }} | {{ stable.win64.timestamp }} | {{ stable.win64.desc }} |
-| [{{ stable.mac.name }}]({{ stable.mac.url }}) | {{ stable.mac.size }} | {{ stable.mac.timestamp }} | {{ stable.mac.desc }} |
+| [{{ stable.macos.name }}]({{ stable.macos.url }}) | {{ stable.macos.size }} | {{ stable.macos.timestamp }} | {{ stable.macos.desc }} |
 | [{{ stable.debamd64.name }}]({{ stable.debamd64.url }}) | {{ stable.debamd64.size }} | {{ stable.debamd64.timestamp }} | {{ stable.debamd64.desc }} |
 | [{{ stable.debarm.name }}]({{ stable.debarm.url }}) | {{ stable.debarm.size }} | {{ stable.debarm.timestamp }} | {{ stable.debarm.desc }} |
 | [{{ stable.debi386.name }}]({{ stable.debi386.url }}) | {{ stable.debi386.size }} | {{ stable.debi386.timestamp }} | {{ stable.debi386.desc }} |
@@ -57,20 +66,8 @@ The development version is where you’ll find all the latest and greatest featu
 ([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/public/{{ dev.minorVersion }}/Changelog{{ dev.majorVersion }}.html) -
 [Git Commit Log](https://github.com/LMS-Community/slimserver/commits/public/{{ dev.minorVersion }}))
 
-<!-- disable for now, as we're pretty stable and don't want to scare off people
 !!! danger
     Please only use this build if you’re willing to deal with the occasional broken build!
--->
-
-!!! hint
-    Mac users please note: we no longer ship a preference pane, but a menu bar item. Please see
-    [How to uninstall the legacy Mac Settings Pane Item](../reference/uninstall-legacy-mac.md) for instructions
-    how to uninstall it.
-
-!!! hint
-    Windows 32-bit users please note: your beloved Windows 32-bit build is no longer available due to hardware
-    failure on the build system. You will have to migrate to the new 64-bit version. Please read
-    [How to migrate from Windows 32-bit build to 64-bit](../reference/migrate-win32-win64.md).
 
 | Name | Size | Creation Date | Description |
 | ---  | --- :| ---           | ---  |
