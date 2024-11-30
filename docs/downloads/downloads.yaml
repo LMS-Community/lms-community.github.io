@@ -7,75 +7,75 @@ debpi: '[:simple-raspberrypi: Raspberry Pi OS (31 MB)](https://downloads.lms-com
 dev:
   deb:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
-    name: lyrionmusicserver_9.0.0~1732822968_all.deb
+    name: lyrionmusicserver_9.1.0~1732963735_all.deb
     size: 58 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1732822968_all.deb
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.1.0~1732963735_all.deb
   debamd64:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'
-    name: lyrionmusicserver_9.0.0~1732822968_amd64.deb
+    name: lyrionmusicserver_9.1.0~1732963735_amd64.deb
     size: 25 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1732822968_amd64.deb
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.1.0~1732963735_amd64.deb
   debarm:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
-    name: lyrionmusicserver_9.0.0~1732822968_arm.deb
+    name: lyrionmusicserver_9.1.0~1732963735_arm.deb
     size: 32 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1732822968_arm.deb
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.1.0~1732963735_arm.deb
   debi386:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'
-    name: lyrionmusicserver_9.0.0~1732822968_i386.deb
+    name: lyrionmusicserver_9.1.0~1732963735_i386.deb
     size: 17 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.0~1732822968_i386.deb
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.1.0~1732963735_i386.deb
   encore:
     desc: ':material-linux::material-music-box: Musical Fidelity'
-    name: lyrionmusicserver-9.0.0-1732822968-MusicalFidelity.tgz
-    size: 19 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1732822968-MusicalFidelity.tgz
+    name: lyrionmusicserver-9.1.0-1732963735-MusicalFidelity.tgz
+    size: 18 MB
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.1.0-1732963735-MusicalFidelity.tgz
   mac: ~
   macos:
     desc: ':material-apple: Apple macOS'
-    name: LyrionMusicServer-9.0.0-1732822968.dmg
+    name: LyrionMusicServer-9.1.0-1732963735.dmg
     size: 45 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.0-1732822968.dmg
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.1.0-1732963735.dmg
   majorVersion: 9
-  minorVersion: 9.0
+  minorVersion: 9.1
   nocpan:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'
-    name: lyrionmusicserver-9.0.0-1732822968-noCPAN.tgz
+    name: lyrionmusicserver-9.1.0-1732963735-noCPAN.tgz
     size: 17 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1732822968-noCPAN.tgz
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.1.0-1732963735-noCPAN.tgz
   rpm:
     desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
-    name: lyrionmusicserver-9.0.0-0.1.1732822968.noarch.rpm
+    name: lyrionmusicserver-9.1.0-0.1.1732963735.noarch.rpm
     size: 89 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-0.1.1732822968.noarch.rpm
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.1.0-0.1.1732963735.noarch.rpm
   src:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'
-    name: lyrionmusicserver-9.0.0-1732822968.tgz
+    name: lyrionmusicserver-9.1.0-1732963735.tgz
     size: 120 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1732822968.tgz
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.1.0-1732963735.tgz
   tararm:
     desc: ':material-linux::material-code-braces: ARM Linux Tarball'
-    name: lyrionmusicserver-9.0.0-1732822968-arm-linux.tgz
+    name: lyrionmusicserver-9.1.0-1732963735-arm-linux.tgz
     size: 56 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.0-1732822968-arm-linux.tgz
-  version: 9.0.0
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.1.0-1732963735-arm-linux.tgz
+  version: 9.1.0
   win: ~
   win64:
     desc: ':material-microsoft-windows: Windows 64-bit'
-    name: LyrionMusicServer-9.0.0-1732822968-win64.exe
+    name: LyrionMusicServer-9.1.0-1732963735-win64.exe
     size: 16 MB
-    timestamp: Thu Nov 28 19:42:48 2024
-    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.0-1732822968-win64.exe
+    timestamp: Sat Nov 30 10:48:55 2024
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.1.0-1732963735-win64.exe
 encore: '[ ()](){ .md-button }'
 latest:
   deb:
@@ -157,80 +157,75 @@ src: '[:material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64,
 stable:
   deb:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
-    name: logitechmediaserver_8.5.3~1727189510_all.deb
-    size: 57 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1727189510_all.deb
+    name: lyrionmusicserver_9.0.1~1732884050_all.deb
+    size: 58 MB
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.1~1732884050_all.deb
   debamd64:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'
-    name: logitechmediaserver_8.5.3~1727189510_amd64.deb
-    size: 24 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1727189510_amd64.deb
+    name: lyrionmusicserver_9.0.1~1732884050_amd64.deb
+    size: 25 MB
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.1~1732884050_amd64.deb
   debarm:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
-    name: logitechmediaserver_8.5.3~1727189510_arm.deb
-    size: 31 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1727189510_arm.deb
+    name: lyrionmusicserver_9.0.1~1732884050_arm.deb
+    size: 32 MB
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.1~1732884050_arm.deb
   debi386:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'
-    name: logitechmediaserver_8.5.3~1727189510_i386.deb
+    name: lyrionmusicserver_9.0.1~1732884050_i386.deb
     size: 17 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver_8.5.3~1727189510_i386.deb
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.1~1732884050_i386.deb
   encore:
     desc: ':material-linux::material-music-box: Musical Fidelity'
-    name: logitechmediaserver-8.5.3-1727189510-MusicalFidelity.tgz
-    size: 18 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1727189510-MusicalFidelity.tgz
-  mac:
+    name: lyrionmusicserver-9.0.1-1732884050-MusicalFidelity.tgz
+    size: 19 MB
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.1-1732884050-MusicalFidelity.tgz
+  mac: ~
+  macos:
     desc: ':material-apple: Apple macOS'
-    name: LogitechMediaServer-8.5.3-1727189510.pkg
-    size: 43 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.3-1727189510.pkg
-  macos: ~
-  majorVersion: 8
-  minorVersion: 8.5
+    name: LyrionMusicServer-9.0.1-1732884050.dmg
+    size: 45 MB
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.1-1732884050.dmg
+  majorVersion: 9
+  minorVersion: 9.0
   nocpan:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'
-    name: logitechmediaserver-8.5.3-1727189510-noCPAN.tgz
+    name: lyrionmusicserver-9.0.1-1732884050-noCPAN.tgz
     size: 17 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1727189510-noCPAN.tgz
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.1-1732884050-noCPAN.tgz
   rpm:
     desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
-    name: logitechmediaserver-8.5.3-0.1.1727189510.noarch.rpm
-    size: 86 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-0.1.1727189510.noarch.rpm
+    name: lyrionmusicserver-9.0.1-0.1.1732884050.noarch.rpm
+    size: 89 MB
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.1-0.1.1732884050.noarch.rpm
   src:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'
-    name: logitechmediaserver-8.5.3-1727189510.tgz
-    size: 118 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1727189510.tgz
+    name: lyrionmusicserver-9.0.1-1732884050.tgz
+    size: 120 MB
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.1-1732884050.tgz
   tararm:
     desc: ':material-linux::material-code-braces: ARM Linux Tarball'
-    name: logitechmediaserver-8.5.3-1727189510-arm-linux.tgz
-    size: 55 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/logitechmediaserver-8.5.3-1727189510-arm-linux.tgz
-  version: 8.5.3
-  win:
-    desc: ':material-microsoft-windows: Windows 32-bit'
-    name: LogitechMediaServer-8.5.3-1727189510.exe
-    size: 70 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.3-1727189510.exe
+    name: lyrionmusicserver-9.0.1-1732884050-arm-linux.tgz
+    size: 56 MB
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.1-1732884050-arm-linux.tgz
+  version: 9.0.1
+  win: ~
   win64:
     desc: ':material-microsoft-windows: Windows 64-bit'
-    name: LogitechMediaServer-8.5.3-1727189510-win64.exe
+    name: LyrionMusicServer-9.0.1-1732884050-win64.exe
     size: 16 MB
-    timestamp: Tue Sep 24 14:51:50 2024
-    url: https://downloads.lms-community.org/nightly/LogitechMediaServer-8.5.3-1727189510-win64.exe
+    timestamp: Fri Nov 29 12:40:50 2024
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.1-1732884050-win64.exe
 tararm: '[:material-linux::material-code-braces: ARM Linux Tarball (55 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/logitechmediaserver-8.5.2-arm-linux.tgz){ .md-button }'
 win: '[:material-microsoft-windows: Windows 32-bit (70 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/LogitechMediaServer-8.5.2.exe){ .md-button } [:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/LogitechMediaServer-8.5.2-win64.exe){ .md-button }'
 win64: '[:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LogitechMediaServer_v8.5.2/LogitechMediaServer-8.5.2-win64.exe){ .md-button }'

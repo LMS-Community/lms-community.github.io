@@ -1,3 +1,17 @@
+## Version 9.1.0
+
+- [Upstream fixes from Lyrion Music Server 9.0.x](#version-901)
+
+- New Features:
+
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
 ## Version 9.0.1
 
 - New Features:
