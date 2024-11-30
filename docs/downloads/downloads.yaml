@@ -227,5 +227,5 @@ stable:
     timestamp: Fri Nov 29 12:40:50 2024
     url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.1-1732884050-win64.exe
 tararm: '[:material-linux::material-code-braces: ARM Linux Tarball (56 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.0/lyrionmusicserver-9.0.0-arm-linux.tgz){ .md-button }'
-win: '[ ()](){ .md-button } [:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.0/LyrionMusicServer-9.0.0-win64.exe){ .md-button }'
+win: '[ ()](){ .md-button }'
 win64: '[:material-microsoft-windows: Windows 64-bit (16 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.0/LyrionMusicServer-9.0.0-win64.exe){ .md-button }'
