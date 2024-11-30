@@ -35,7 +35,7 @@ This is the released version. Please see [Getting Started](../getting-started/in
 | [{{ latest.rpm.name }}]({{ latest.rpm.url }}) | {{ latest.rpm.size }} | {{ latest.rpm.timestamp }} | {{ latest.rpm.desc }} |
 | [{{ latest.nocpan.name }}]({{ latest.nocpan.url }}) | {{ latest.nocpan.size }} | {{ latest.nocpan.timestamp }} | {{ latest.nocpan.desc }} |
 | [{{ latest.tararm.name }}]({{ latest.tararm.url }}) | {{ latest.tararm.size }} | {{ latest.tararm.timestamp }} | {{ latest.tararm.desc }} |
-| [{{ stable.encore.name }}]({{ stable.encore.url }}) | {{ stable.encore.size }} | {{ stable.encore.timestamp }} | {{ stable.encore.desc }} |
+| [{{ latest.encore.name }}]({{ latest.encore.url }}) | {{ latest.encore.size }} | {{ latest.encore.timestamp }} | {{ latest.encore.desc }} |
 | [{{ latest.src.name }}]({{ latest.src.url }}) | {{ latest.src.size }} | {{ latest.src.timestamp }} | {{ latest.src.desc }} |
 
 
