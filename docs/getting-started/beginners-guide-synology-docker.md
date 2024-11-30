@@ -113,3 +113,28 @@ It is always advisable to regularly update your software, and with Docker on Syn
     select the LMS container and press "Reset". You get a warning that all data in the container will be lost,
     but that does not matter since all your configuration is in Docker volumes so you can press "Yes"! When
     that's done you can start the container again.
+
+## Migrating from `lmscommunity/logitechmediaserver` to `lmscommunity/lyrionmusicserver`
+
+With the release of LMS9 the image `lmscommunity/logitechmediaserver` is deprecated and the image `lmscommunity/lyrionmusicserver` is used from now on. To migrate to the new image while retaining all settings, all you need to do is the following:
+
+1. In the "Container Manager" app, go to "Container" and click on your current LMS container. Then press "Action" and choose Export. Choose "Export container settings" and "Export to local computer". Click on "Export".
+2. You now have downloaded a json file which contains all the configuration of your LMS container. Use your favorite text editor and open the json file.
+3. Now find the following line in the json file:
+
+        "image" : "lmscommunity/logitechmediaserver:stable",
+
+    It could be that you used another tag, such as `dev`, in that case the line looks like this:
+
+        "image" : "lmscommunity/logitechmediaserver:dev",
+
+    Change this line to:
+
+        "image" : "lmscommunity/lyrionmusicserver:stable",
+        
+    It is recommended to use the `stable` tag, more information about which tag is most suitable for you is described [here](https://hub.docker.com/r/lmscommunity/lyrionmusicserver). Please also make sure that all the quotation marks and the trailing comma stays intact.
+
+4. Next step is to download the new image. Go to "Registry" and download the `lmscommunity/lyrionmusicserver` image. Choose the same tag you have specified in the json file.
+5. Before we recreate the container using the updated configuration we need to remove the current container (nothing important will be removed, as the data is stored in volumes and the container configuration is saved in the json file). Select the LMS container, choose "Action" > "Stop", and subsequently "Delete". 
+6. Last step is to recreate the container using the freshly downloaded image and the edited json file. Go to "Container", click "Action" and press "Import" > "From local device". Browse to the just edited file and enter a suitable "Container name" (for instance `lyrionmusicserver`). Press "Import".
+7. Start the new container and you are all set!
