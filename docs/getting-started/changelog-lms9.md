@@ -1,4 +1,16 @@
-## Introducing... Lyrion Music Server Version 9.0.0!
+## Version 9.0.1
+
+- New Features:
+
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
+## Introducing... Lyrion Music Server Version 9.0.0! - 2024-11-29 (2ed5e147e)
 
 - [Upstream fixes from Logitech Media Server 8.5.x](changelog-lms8.md)
 
