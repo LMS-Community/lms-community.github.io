@@ -19,15 +19,52 @@ Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com
 
 Currently in development.
 
+[Release notes](../getting-started/changelog-lms9.md)
+
 ### LMS 9.0
 
 Current stable. Initially released on November 29, 2024.
 
-This version is the first release using the new name Lyrion Music Server!
+This version is the first release using the new name Lyrion Music Server and the first post-Logitech era major release!
 
-* Massive upgrade for Classical music lovers; this version adds support for works!
+#### Works
 
-[Release notes](../getting-started/changelog-lms9.md)
+Besides the more cosmetic changes of re-branding the product and refreshing the Default web UI, great enhancements to the music browsing experience have been contributed. LMS now allows browsing and searching for classical works. To get started, ensure your classical music contains the tags "Work" and "Composer". You can also create a "worksort" tag if you like, though LMS will do its best to sequence works properly (eg "Symphony 100" will come after "Symphony 99") even without this.
+
+Highlights:
+
+* You will find a new main menu item "Works" which will show your classical works in Composer/Work name sequence.
+* With release type grouping enabled, when browing an artist you will see a Works category, under which will be one or more albums which contain the work.
+* The various search options in LMS have been enhanced so that you can search by, and/or see results by, Work.
+* In Additional Browse Modes, there is now an option to browse by Work for the additional menus you create.
+* If you have albums (probably a large box set) which includes more than one performance of the same work, you can add a "Performance" tag to those albums so that LMS knows to show you the performances separately even when they are on the same album. You could also use the "Performance" tag even if there is only one performance of a work on an album, to better describe the performance when browsing/searching.
+* `WORK` and `PERFORMANCE` can now be used in Title Formats for the Default web interface and player displays.
+
+#### Role enhancements
+
+LMS now allows you to create any number of user-defined roles for your music, eg Vocalist, Violinist, Drummer, Engineer..., limited only by your imagination. You can also create `xxxSORT` tags, for example if you've created a `DRUMMER` tag you can also create a `DRUMMERSORT` tag which LMS will respect.
+
+Highlights:
+
+* Once you have tagged your music accordingly and told LMS about the role tags you want it to scan, you can create menus for your new roles in Additional Browse Modes and see categories for your user-defined roles when browsing artists.
+* LMS now allows you to specify which roles (including your user-defined roles if you want) to include in the "All Artists" menu (or the "Artists" menu if you are using the unified artist list).
+* You can also specify which roles (including user-defined roles) to create artist links for in album listings, rather than have LMS decide for you.
+
+These changes will require a rescan of your library.
+
+#### Other changes
+
+Other noteworthy updates in LMS9 include:
+
+* Improved first-start experience, suggesting installation of some essential 3rd party plugins
+* Improved "New Music" behaviour: this is now based on the time when a song was added to the collection
+* New "Recently changed Music": this is what used to be the old "New music", based on a file's timestamp
+* Many translation updates: Czech, Danish, Dutch, French, Hungarian, Portuguese
+* Windows is now 64-bit only (please be patient on your first installation - the process can be a bit slow)
+* macOS integration has been completely rewritten. It's no longer a preference pane, but a simple menu bar item (macOS 10.11 required).
+* The Docker image now is based on Debian 12: you'll have to create a new container based on the [lmscommunity/lyrionmusicserver](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) image. But no worries: you'll be able to re-use your existing data folders.
+
+[Release notes](../getting-started/changelog-lms9.md), [Announcement](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1737174-announcing-lyrion-music-server-9-0-0)
 
 ### LMS 8.5
 
