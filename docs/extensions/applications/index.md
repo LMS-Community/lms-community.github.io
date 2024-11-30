@@ -18,7 +18,7 @@ title: Applications
 - [Squeeze Ctrl](https://play.google.com/store/apps/details?id=com.angrygoat.android.squeezectrl) (Android): Remote control app for the Squeezebox system.
 - [Squeezelite-X](https://apps.microsoft.com/detail/9pbhmtnp9037) (Windows): Combines the Squeezelite player with Lyrion with easy access to LMS' user interface.
 - [Squeezer](https://github.com/kaaholst/android-squeezer) (Android): Control your Lyrion Music Server and players from your Android phone.
-- [Ultralight LMS skin](https://github.com/millerdev/lms-ultralight) (Browser): A responsive skin for Logitech Media Server that works well on desktop and mobile browsers.
+- [Ultralight LMS skin](https://github.com/millerdev/lms-ultralight) (Browser): A responsive skin for Lyrion Music Server that works well on desktop and mobile browsers.
 
 ## Display
 - [LMSMonitor](https://github.com/shunte88/LMSMonitor): OLED information display control program for piCorePlayer or other Raspberry Pi and LMS based audio device.

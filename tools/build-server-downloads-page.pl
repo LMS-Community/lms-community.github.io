@@ -75,7 +75,6 @@ foreach ('latest', 'stable', 'dev') {
             $placeholders{$platformId} = sprintf('[%s (%s)](%s){ .md-button }', $item->{desc}, $item->{size}, $item->{url});
         }
 
-        $placeholders{win} = "$placeholders{win} $placeholders{win64}";
         $placeholders{deb} = "$placeholders{debamd64} $placeholders{debarm}";
 
         $placeholders{debpi} = $placeholders{debarm};

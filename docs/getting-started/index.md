@@ -7,13 +7,13 @@ title: Getting Started with LMS
 
 Lyrion Music Server is a fully open source server software to power a wide range of audio players. With the help of many plugins, Lyrion Music Server can stream not only your local music collection, but content from many music services and internet radio stations to your players.
 
-## Download and install Logitech Media Server v{{ latest.version }}
+## Download and install Lyrion Music Server v{{ latest.version }}
 
 === ":material-microsoft-windows: Windows"
     !!! note
-        The 64-bit version is the way to go moving forward. An existing 32-bit version must be unisntalled before installing the 64-bit version (The LMS 9 installer will do this automatically). Please note that there's no Control Panel app any more, nor a tray icon. Tools like eg. [ServiceTray](https://www.coretechnologies.com/products/ServiceTray/) allow you to easily start/stop the LMS service.
+        The 64-bit version is the way to go moving forward. An existing 32-bit version must be uninstalled before installing the 64-bit version (The LMS 9 installer will do this automatically). Please note that there's no Control Panel app any more, nor a tray icon. Tools like eg. [ServiceTray](https://www.coretechnologies.com/products/ServiceTray/) allow you to easily start/stop the LMS service.
 
-    {{ win }}
+    {{ win64 }}
 
     Then double click the downloaded package to launch the installation process in a familiar installation assistant.
 
@@ -61,19 +61,17 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 
 === ":material-apple: Apple macOS"
-    {{ mac }}
+    {{ macos }}
 
     Then double click the downloaded package to launch the installation process in the macOS installer.
 
     !!! note
-        Sometimes macOS would refuse to open the installer, because the authenticity of the developer can't be confirmed. If that happens to you, open the installer using a right mouse click (or control-click), then "Open". You might have to do this twice, as first time you'd still be rejected. But the second time around you should be able to launch it anyway.
-
         If you want to use external disks, you'll have to grant the `perl` "full disk access" permissions. You'd usually find this file in `/Library/PreferencePanes/Squeezebox.prefPane/Contents/perl/bin/perl`. See "Security & Privacy Preferences > Privacy > Full Disk Access" in the Mac's preference pane.
 
 
 === ":material-docker: Docker"
 
-    See [lmscommunity/logitechmediaserver](https://hub.docker.com/r/lmscommunity/logitechmediaserver) on Docker hub.
+    See [lmscommunity/lyrionmusicserver](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) on Docker hub.
 
     For Docker on Synology NAS see the [Beginner's Docker Guide on Synology](beginners-guide-synology-docker.md).
 
