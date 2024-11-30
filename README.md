@@ -10,8 +10,8 @@ To get a local development environment up you can do **one of the following**:
 ### Use docker
 
 1. Clone this repository (or fork this repository).
-2. Build the Docker image with additional plugins : `docker build -t LMS-Community/mkdocs-material-with-plugins .`
-3. Run `docker run --rm -it -p 8000:8000 -v ${PWD}:/docs LMS-Community/mkdocs-material-with-plugins` to setup a live preview server from the local repository. The server will automatically rebuild the site upon saving.
+2. Build the Docker image with additional plugins : `docker build -t mkdocs-material-with-plugins .`
+3. Run `docker run --rm -it -p 8000:8000 -v ${PWD}:/docs mkdocs-material-with-plugins` to setup a live preview server from the local repository. The server will automatically rebuild the site upon saving.
 4. Point your browser to [localhost:8000](http://localhost:8000).
 
 ### Install mkdocs-material
