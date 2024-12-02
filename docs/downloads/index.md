@@ -91,7 +91,7 @@ If you're interested in older releases, feel free to visit the [download museum]
 
 ## Squeezebox Firmware
 
-And [here](http://archive.lms-community.org/update/firmware/8.5.1/) are the last _official_ Squeezebox Firmware images available for you.
+And [here](listing.md?update/firmware/8.5.1/) are the last _official_ Squeezebox Firmware images available for you.
 
 More recent firmware images for Squeezebox Touch, Radio, and Controller are available through the "Community Firmware" plugin. See the [Plugins](../plugins/index.md) section for details about how to install plugins..
 

@@ -11,6 +11,7 @@ const allowedPrefixes = [
     'SqueezeCenter_v.*',
     'SlimServer_v.*',
     'SLIMP3_Server_v.*',
+    'update/firmware/*',
 ]
 
 const corsHeaders = {

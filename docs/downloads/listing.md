@@ -44,6 +44,11 @@ title: Downloads Archive
         const tararm = `<td>${icons.linux}${icons.source} Linux Tarball - ARM</td>`;
         const readynas = `<td>${icons.linux} Netgear ReadyNAS (legacy)</td>`;
 
+        // firmware files
+        const sbFirmware = `<td>${icons.firmware} Squeezebox Firmware</td>`;
+        const versionFile = `<td>${icons.version} Version file</td>`;
+        const sha = `<td>${icons.checksum} Checksum file</td>`;
+
         let tableRows = '';
 
         // render table rows for the various objects
@@ -65,12 +70,24 @@ title: Downloads Archive
             else if (item.key.endsWith('.tgz') || item.key.endsWith('.tar.gz')) fileType = tararm;
             else if (item.key.endsWith('readynas.bin')) fileType = readynas;
 
+            // firmware
+            else if (/(fab4|baby|boom|jive|receiver|squeezebox|transporter).*(\d+)?.*\.bin$/.test(item.key)) fileType = sbFirmware;
+            else if (item.key.endsWith('.version')) fileType = versionFile;
+            else if (item.key.endsWith('version.sha') || item.key.endsWith('bin.sha')) fileType = sha;
+
             tableRows = tableRows + `<tr>
                 <td><a href="https://downloads.lms-community.org/${item.key}">${item.key.split('/').pop()}</a></td>
-                <td style="text-align: right;">${Math.trunc(item.size/1024/1024)} MB</td>
+                <td style="text-align: right;">${formatFileSize(item.size)}</td>
                 ${fileType}
             </tr>`
         });
+
+        function formatFileSize(bytes) {
+            if (1024 > bytes) return bytes + ' Bytes';
+            else if (1024*1024 < bytes) return Math.trunc(bytes/1024/1024) + ' MB';
+
+            return Math.trunc(bytes/1024) + ' KB';
+        }
 
         const table = document.querySelector('#downloads');
         table.innerHTML = tableRows;
@@ -103,5 +120,8 @@ title: Downloads Archive
     <span class="icon redhat">:material-redhat:</span>
     <span class="icon ubuntu">:material-ubuntu:</span>
     <span class="icon windows">:material-microsoft-windows:</span>
+    <span class="icon firmware">:material-file-download-outline:</span>
+    <span class="icon version">:material-file-outline:</span>
+    <span class="icon checksum">:material-file-check-outline:</span>
 </span>
 
