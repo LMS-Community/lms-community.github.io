@@ -32,7 +32,7 @@ Community versions: [Operating system](https://github.com/ralph-irving/squeezeos
 
 Several streamers and amps available from [WiiM](https://www.wiimhome.com/) natively support LMS. Presently, this includes the WiiM Pro, Pro Plus, Ultra, and Amp.
 
-Other streaming hardware manufacturers that offer native support of LMS include [AmpliPro](https://www.amplipro.com/), [Antipodes](https://antipodes.audio/), [Eversolo](https://eversolo.com/), [Holo Audio](https://www.kitsunehifi.com/), [Innuos](https://innuos.com/), [Sonore](https://www.sonore.us/), and [SOtM](https://sotm-audio.com/).
+Other streaming hardware manufacturers that offer native support of LMS include [AmpliPro](https://www.amplipro.com/), [Antipodes](https://antipodes.audio/), [Eversolo](https://eversolo.com/), [Holo Audio](https://www.kitsunehifi.com/), [Innuos](https://innuos.com/), [Sonore](https://www.sonore.us/), [SOtM](https://sotm-audio.com/) and [Str@mbo](https://nohta.it/).
 
 Hardware streamers running the Android OS -- such as several available from [FiiO](https://www.fiio.com/) -- can install one of the Squeezebox player apps listed below.
 
