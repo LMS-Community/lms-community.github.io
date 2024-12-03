@@ -8,6 +8,8 @@
 
 - Platform Support:
 
+	- Make Docker a first class citizan: add Slim::Utils::OS::Docker insted of a Custom.pm
+
 - Bug Fixes:
 
 - Other:
@@ -21,6 +23,9 @@
 - Platform Support:
 
 - Bug Fixes:
+
+	- [#1235](https://github.com/LMS-Community/slimserver/pull/1235) \- Need to utf8Decode album title for new & changed (thanks @darrel-k!)
+	- [#1237](https://github.com/LMS-Community/slimserver/pull/1237) \- Fix create table syntax for MySQL (MariaDB) (thanks @JKDingwall!)
 
 - Other:
 
