@@ -10,9 +10,9 @@ title: Beginner's Docker Guide on QNAP
 
 If you have a QNAP NAS which can run Docker containers aka. "Container Station", you are in luck!
 
-If you're still running the QNAP AppCenter version of "LogitechMediaServer", you must know that it hasn't been updated since 2012 (v7.7.2). Upgrading using this method is recommended. 
+If you're still running the QNAP AppCenter version of "LogitechMediaServer", you must know that it hasn't been updated since 2012 (v7.7.2). Upgrading using this method is recommended.
 
-This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommunity/logitechmediaserver/). Source and the dockerfile of the image can be found [here](https://github.com/LMS-Community/slimserver-platforms/tree/HEAD/Docker).
+This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommunity/lyrionmusicserver/). Source and the dockerfile of the image can be found [here](https://github.com/LMS-Community/slimserver-platforms/tree/HEAD/Docker).
 
 ## Assumptions
 
@@ -34,7 +34,7 @@ In this guide the following assumptions apply:
     version: '3.9'
     services:
         lms:
-            image: lmscommunity/logitechmediaserver
+            image: lmscommunity/lyrionmusicserver
             volumes:
                 - /share/Container/app-data/lms-config/:/config:rw
                 - /share/Multimedia/Music/:/music:ro
@@ -71,7 +71,7 @@ In this guide the following assumptions apply:
 It is always advisable to regularly update your software, and with Docker on Synology it is made very easy.
 
 1. Open "Container Station"
-2. Go to "Images" and click on the cog wheel "⚙️" next to "lmscommunity/logitechmediaserver".
+2. Go to "Images" and click on the cog wheel "⚙️" next to "lmscommunity/lyrionmusicserver".
 3. In the drop-down menu choose "Pull". It will download the latest version.
 4. Go to "Applications"
 5. Click the cog wheel next to the application (i.e. "lms"), and in the drop-down menu chose "Recreate"

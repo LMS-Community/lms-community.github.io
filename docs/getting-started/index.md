@@ -32,7 +32,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
     Download the above package, then install it with its depencencies using the operating system's package manager `apt`:
 
     ```
-    sudo apt install /path/to/logitechmediaserver_{{ latest.version }}_*.deb
+    sudo apt install /path/to/lyrionmusicserver_{{ latest.version }}_*.deb
     ```
 
 
@@ -42,7 +42,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
     Download the package, then install it with its depencencies using the operating system's package manager `apt`:
 
     ```
-    sudo apt install /path/to/logitechmediaserver_{{ latest.version }}_*.deb
+    sudo apt install /path/to/lyrionmusicserver_{{ latest.version }}_*.deb
     ```
 
     {{ rpm }}
