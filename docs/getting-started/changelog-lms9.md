@@ -22,6 +22,8 @@
 
 - Server Changes:
 
+	- Analytics: only check asmall, well defined list of pref changes to decide whether a disconnected player had been active recently.
+
 - Platform Support:
 
 - Bug Fixes:
