@@ -8,6 +8,7 @@
 
 - Platform Support:
 
+	- [#74](https://github.com/LMS-Community/slimserver-platforms/issues/74) \- Speed up Perl installation during an initial installation on Windows.
 	- Make Docker a first class citizan: add Slim::Utils::OS::Docker insted of a Custom.pm
 	- Remove Win32 legacy support files, code, control panels, build pipeline, etc.
 	- Remove legacy Mac installer from build pipeline.
