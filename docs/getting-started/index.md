@@ -63,7 +63,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 === ":material-apple: Apple macOS"
     {{ macos }}
 
-    Then double click the downloaded package to launch the installation process in the macOS installer.
+    Then double click the downloaded image. Drag the application to the Applications folder. Launch Lyrion Music Server from the Applications folder, then check the menu bar item for Start/Stop options.
 
     !!! note
         If you want to use external disks, you'll have to grant the `perl` "full disk access" permissions. You'd usually find this file in `/Library/PreferencePanes/Squeezebox.prefPane/Contents/perl/bin/perl`. See "Security & Privacy Preferences > Privacy > Full Disk Access" in the Mac's preference pane.
