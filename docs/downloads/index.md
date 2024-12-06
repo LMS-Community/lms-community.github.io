@@ -60,7 +60,7 @@ The stable branch is like the officially released latest version, with some addi
 | [{{ stable.src.name }}]({{ stable.src.url }}) | {{ stable.src.size }} | {{ stable.src.timestamp }} | {{ stable.src.desc }} |
 
 
-## Lyrion Music Server v{{ dev.version }} - Development Build
+## v{{ dev.version }} - Development Build
 
 The development version is where you’ll find all the latest and greatest features. But as it’s under development you might encounter bugs, or changing behaviour.
 ([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/public/{{ dev.minorVersion }}/Changelog{{ dev.majorVersion }}.html) -
