@@ -70,7 +70,12 @@ dev:
     url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.1.0-1733505007-arm-linux.tgz
   version: 9.1.0
   win: ~
-  win64: ~
+  win64:
+    desc: ':material-microsoft-windows: Windows 64-bit'
+    name: LyrionMusicServer-9.1.0-1733505007-win64.exe
+    size: 16 MB
+    timestamp: Fri Dec  6 17:10:07 2024
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.1.0-1733505007-win64.exe
 encore: '[:material-linux::material-music-box: Musical Fidelity (19 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.0/lyrionmusicserver-9.0.0-MusicalFidelity.tgz){ .md-button }'
 latest:
   deb:
