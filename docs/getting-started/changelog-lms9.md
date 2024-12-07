@@ -27,6 +27,8 @@
 
 - Platform Support:
 
+	- Fix helper search path initialisation on older macOS using Perl 5.18.
+
 - Bug Fixes:
 
 	- Only re-initialize menu settings for connected players - otherwise Analytics considers them "active" due to a prefs change.
