@@ -8,7 +8,6 @@
 
 - Platform Support:
 
-	- [#74](https://github.com/LMS-Community/slimserver-platforms/issues/74) \- Speed up Perl installation during an initial installation on Windows.
 	- Make Docker a first class citizan: add Slim::Utils::OS::Docker insted of a Custom.pm
 	- Remove Win32 legacy support files, code, control panels, build pipeline, etc.
 	- Remove legacy Mac installer from build pipeline.
@@ -28,6 +27,7 @@
 - Platform Support:
 
 	- Fix helper search path initialisation on older macOS using Perl 5.18.
+	- [#74](https://github.com/LMS-Community/slimserver-platforms/issues/74) \- Speed up Perl installation during an initial installation on Windows.
 
 - Bug Fixes:
 
@@ -35,7 +35,7 @@
 	- [#1235](https://github.com/LMS-Community/slimserver/pull/1235) \- Need to utf8Decode album title for new & changed (thanks @darrel-k!)
 	- [#1237](https://github.com/LMS-Community/slimserver/pull/1237) \- Fix create table syntax for MySQL (MariaDB) (thanks @JKDingwall!)
 	- [#1238](https://github.com/LMS-Community/slimserver/pull/1238) \- Merge multiple works per track into one single work (thanks @darrel-k!)
-	- [#1242](https://github.com/LMS-Community/slimserver/pull/1242) \- Fix plugin download - must wait for the download to finish before restarting the server
+	- [#1242](https://github.com/LMS-Community/slimserver/issues/1242) \- Fix plugin download - must wait for the download to finish before restarting the server
 
 - Other:
 
