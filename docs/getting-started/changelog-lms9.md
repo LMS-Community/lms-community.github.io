@@ -28,6 +28,7 @@
 
 	- Fix helper search path initialisation on older macOS using Perl 5.18.
 	- [#74](https://github.com/LMS-Community/slimserver-platforms/issues/74) \- Speed up Perl installation during an initial installation on Windows.
+	- [#75](https://github.com/LMS-Community/slimserver-platforms/issues/75) \- Make sure newly installed LMS on Windows is running before sending the user to the web page.
 
 - Bug Fixes:
 
