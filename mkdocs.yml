@@ -92,9 +92,6 @@ nav:
   - Home: index.md
   - Getting Started with LMS:
     - Download & Installation: getting-started/index.md
-    - Migrate from UE Smart Radio:
-      - English: getting-started/migrate-from-uesr.md
-      - Deutsch: getting-started/migrate-from-uesr-de.md
     - Beginner's guides:
       - Beginner's guide for LMS: getting-started/beginners-guide-lms-on-raspberry-pi.md
       - Beginner's guide for a full-featured LMS: getting-started/beginners-guide-full-featured-lms-on-raspberry-pi.md
@@ -103,6 +100,7 @@ nav:
       - Beginner's guide to classical music on LMS: getting-started/beginners-guide-to-classical-music-on-lms.md
     - Advanced guides:
       - Use OpenVPN on SB Radio/Touch: getting-started/advanced-guide-openvpn.md
+      - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
     - Changelog:
       - LMS 8 changelog: getting-started/changelog-lms8.md
       - LMS 9 changelog: getting-started/changelog-lms9.md
