@@ -17,6 +17,8 @@ There is an option in the menu to start the server automatically (when the machi
 
 Unlike many server applications, the Lyrion Music Server app is effectively independent of the server – starting the app does not start the server, or vice versa; and stopping the app does not stop the server, and vice versa.
 
+!!! note
+    If you want to use external disks, you'll have to grant the `perl` executable "full disk access" permissions. You'd usually find it in `/Applications/Lyrion Music Server.prefPane/Contents/MacOS/perl`. See "Security & Privacy Preferences > Privacy > Full Disk Access" in the Mac's preference pane.
 
 ## Updating Lyrion Music Server
 

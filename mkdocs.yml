@@ -98,12 +98,13 @@ nav:
       - Beginner's Docker guide on Synology: getting-started/beginners-guide-synology-docker.md
       - Beginner's Docker guide on QNAP: getting-started/beginners-guide-qnap-docker.md
       - Beginner's guide to classical music on LMS: getting-started/beginners-guide-to-classical-music-on-lms.md
+      - Getting started on macOS: getting-started/mac-install.md
     - Advanced guides:
       - Use OpenVPN on SB Radio/Touch: getting-started/advanced-guide-openvpn.md
       - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
     - Changelog:
-      - LMS 8 changelog: getting-started/changelog-lms8.md
       - LMS 9 changelog: getting-started/changelog-lms9.md
+      - LMS 8 changelog: getting-started/changelog-lms8.md
   - Players & Controllers:
     - players-and-controllers/index.md
     - Hardware based:
