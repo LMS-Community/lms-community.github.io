@@ -29,7 +29,9 @@
 	- Fix helper search path initialisation on older macOS using Perl 5.18.
 	- [#74](https://github.com/LMS-Community/slimserver-platforms/issues/74) \- Speed up Perl installation during an initial installation on Windows.
 	- [#75](https://github.com/LMS-Community/slimserver-platforms/issues/75) \- Make sure newly installed LMS on Windows is running before sending the user to the web page.
+	- [#77](https://github.com/LMS-Community/slimserver-platforms/issues/77) \- Add instructions to the macOS DMG file.
 	- [#78](https://github.com/LMS-Community/slimserver-platforms/issues/78) \- Fix crypto library linking issues in the Docker image.
+	- [#80](https://github.com/LMS-Community/slimserver-platforms/issues/80) \- Reset update status when updating fromt he macOS menu bar item.
 
 - Bug Fixes:
 
@@ -40,6 +42,7 @@
 	- [#1238](https://github.com/LMS-Community/slimserver/pull/1238) \- Merge multiple works per track into one single work (thanks @darrel-k!)
 	- [#1240](https://github.com/LMS-Community/slimserver/pull/1240) \- Add option to limit works scanning to classical genre(s) (thanks @darrel-k!)
 	- [#1242](https://github.com/LMS-Community/slimserver/issues/1242) \- Fix plugin download - must wait for the download to finish before restarting the server
+	- [#1247](https://github.com/LMS-Community/slimserver/issues/1247) \- Fix display of final "Scan done" message and "Abort scan" link in Material/Classic skins.
 
 - Other:
 
