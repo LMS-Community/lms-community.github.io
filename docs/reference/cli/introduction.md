@@ -31,6 +31,10 @@ The available commands and queries are listed below, grouped by their scope:
 * Original sections "Deprecated", and "Plugins" have not been migrated.
 * Future LMS server distributions (from v9 onwards) will no longer have the CLI documentation in the embedded help.
 
+### Changes starting from Lyrion Music Server 9.1
+
+* Added `2` tag to `albums` query to return the number of an album's groupings.
+
 ### Changes starting from Lyrion Music Server 9.0
 
 * Added `tags` query to return a file's raw tag information.
