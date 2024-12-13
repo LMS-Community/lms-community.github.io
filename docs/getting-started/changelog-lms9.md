@@ -16,6 +16,8 @@
 
 - Other:
 
+	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (expectingtofly)
+
 ## Version 9.0.1
 
 - New Features:
