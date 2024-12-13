@@ -334,6 +334,7 @@ The `albums` query returns all albums known by the server. The results of this q
 || `E` `extid` | The album's external ID, if it is eg. from an online music service. |
 || `R` `role_ids` | A comma separated list of role ids for the album. |
 || `X` `album_replay_gain` | The album's replay-gain. |
+|| `2` `group_count` | Returns a count of distinct works/groupings/performances on the album, to assist UI formatting of the album results. |
 
 Examples:
 ```
