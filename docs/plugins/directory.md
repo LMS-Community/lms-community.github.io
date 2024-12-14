@@ -382,7 +382,7 @@ title: Available Plugins
 
     ---
 
-    Support for Musical Fidelity M6 Encore
+    Support for Musical Fidelity M6 Encore to your LMS
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 66
 
