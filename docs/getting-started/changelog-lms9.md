@@ -31,7 +31,7 @@
 	- Fix helper search path initialisation on older macOS using Perl 5.18.
 	- [#74](https://github.com/LMS-Community/slimserver-platforms/issues/74) \- Speed up Perl installation during an initial installation on Windows.
 	- [#75](https://github.com/LMS-Community/slimserver-platforms/issues/75) \- Make sure newly installed LMS on Windows is running before sending the user to the web page.
-	- [#77](https://github.com/LMS-Community/slimserver-platforms/issues/77) \- Add instructions to the macOS DMG file.
+	- [#77](https://github.com/LMS-Community/slimserver-platforms/issues/77) \- Add instructions to the macOS DMG file. Improve overall user experience.
 	- [#78](https://github.com/LMS-Community/slimserver-platforms/issues/78) \- Fix crypto library linking issues in the Docker image.
 	- [#80](https://github.com/LMS-Community/slimserver-platforms/issues/80) \- Reset update status when updating fromt he macOS menu bar item.
 
