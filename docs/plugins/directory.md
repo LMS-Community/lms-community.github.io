@@ -151,7 +151,7 @@ title: Available Plugins
 
     ---
 
-    Complete BBC Sounds implementation as an LMS Plugin.
+    Complete BBC Sounds implementation as an LMS Plugin.  BBC live radio, catch-up, music mixes and podcasts.
 
     [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)    - :octicons-download-24: 2968
 
@@ -1106,7 +1106,7 @@ title: Available Plugins
 
     ---
 
-    Complete BBC Sounds implementation as an LMS Plugin.
+    Complete BBC Sounds implementation as an LMS Plugin.  BBC live radio, catch-up, music mixes and podcasts.
 
     [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_BBC_Sounds_Plugin/wiki)    - :octicons-download-24: 2968
 
