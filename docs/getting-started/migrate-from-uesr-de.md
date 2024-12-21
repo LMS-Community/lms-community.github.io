@@ -30,5 +30,3 @@ Falls Sie gefragt werden, ob Sie ein Konto auf MySqueezebox.com erstellen wollen
 Falls Sie die Mitteilung "Verbindungsproblem - Problem bei der Verbindung mit mysqueezebox.com" erhalten, dann können nach "Bibliothek umschalten" runter scrollen und sich mit ihrem LMS verbinden.
 
 ![](assets/uesr-migration/verbindungsproblem-mysb.png)
-
--->
