@@ -161,7 +161,7 @@ Where (items in bold are mandatory):
         * `grandparent`: push back two windows in the stack
         * `refresh`: stay on this window, but resend the cli command that was used to construct it and refresh the window with the freshly returned data
         * `refreshOrigin`: push to the previous window in the stack, but resend the cli command that was used to construct it and refresh the window with the freshly returned data
-        * (7.4+) Any other value of a window that is present on the window stack and has a `windowId` in it's window fields. Search the window stack backwards until a window with this `windowId` is found and pop all windows above it.
+        * (7.4+) Any other value of a window that is present on the window stack and has a `windowId` in its window fields. Search the window stack backwards until a window with this `windowId` is found and pop all windows above it.
 * `setSelectedIndex`
     * Sets the selected index for the menu (if one exists) for the window loaded as specified by the `nextWindow` param. If no `nextWindow` is provided but a `setSelectedIndex` is, Squeezeplay will assume `nextWindow = 'refresh'`.
 * `input`
