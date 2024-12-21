@@ -625,7 +625,7 @@ Remember to restart SqueezePlay after the changes. Rebooting is one way to accom
 /etc/init.d/squeezeplay stopwdog && /etc/init.d/squeezeplay restart
 ```
 
-If you do this often, its recommended to upload this as a little script to your device:
+If you do this often, it's recommended to upload this as a little script to your device:
 
 ```
 #!/bin/sh

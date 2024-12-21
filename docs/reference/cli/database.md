@@ -436,7 +436,7 @@ The `musicfolder` query returns the content of a given music folder, starting fr
 | `url` | Browses the folder identified by `url`. If the content of `url` did not happen to be in the server database, it is added to it.<br><br> `url` has precedence over `folder_id` if both are provided. |
 | `type` | One of `audio`, or `list`. Select the media type you want to browse in the given folder. |
 | `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is empty. |
-| `recursive` | If set to 1, the query will return information about the requested folder and it's sub-folders, and all files in there. |
+| `recursive` | If set to 1, the query will return information about the requested folder and its sub-folders, and all files in there. |
 
 **Returned tagged parameters:**
 
