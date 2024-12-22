@@ -26,6 +26,7 @@
 
 	- Analytics: only check a small, well defined list of pref changes to decide whether a disconnected player had been active recently.
 	- Initialize autoincrement start value for contributors table to prevent ID re-use on full wipe & rescans.
+	- [#1259](https://github.com/LMS-Community/slimserver/issues/1259) \- Improve the way in which we initialize a "track added" timestamp. Use the file's timestamp on initial imports.
 
 - Platform Support:
 
