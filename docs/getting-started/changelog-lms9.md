@@ -6,6 +6,8 @@
 
 - Server Changes:
 
+	- Remove left-overs from removed picture/video scanning.
+
 - Platform Support:
 
 	- Make Docker a first class citizan: add Slim::Utils::OS::Docker insted of a Custom.pm
