@@ -6,7 +6,7 @@
 
 - Server Changes:
 
-	- Remove left-overs from removed picture/video scanning.
+	- Remove more left-overs from removed picture/video scanning.
 
 - Platform Support:
 
