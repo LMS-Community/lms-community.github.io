@@ -19,6 +19,7 @@
 - Other:
 
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (expectingtofly)
+	- [#1246](https://github.com/LMS-Community/slimserver/issues/1264) \- Windows registry value "DataPath" is in the wrong place.
 
 ## Version 9.0.1
 
