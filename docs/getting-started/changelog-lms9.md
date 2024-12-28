@@ -25,6 +25,8 @@
 
 - New Features:
 
+	- [#1267](https://github.com/LMS-Community/slimserver/issues/1267) \- Provide easy installation of Date and Time screensaver for Classic/Boom/Transporter users.
+
 - Server Changes:
 
 	- Analytics: only check a small, well defined list of pref changes to decide whether a disconnected player had been active recently.
