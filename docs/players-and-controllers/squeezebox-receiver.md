@@ -27,6 +27,9 @@ The Squeezebox Receiver (SBR), announced in January of 2008, is based on the Squ
 
 ## Connecting a Squeezebox Receiver to your LMS
 
+!!! note
+    If the front LED does not light up, please note that there are reports that the original power supply fails in a rather sneaky way as the output voltage of 9 V can be measured on the jack plug and the red glow of the optical link is visible at the back. Furthermore, a very faint clicking or humming sound might be heard by placing the ear on the receiver: The failing power supply only supplies voltage, but cannot supply sufficient amperage once the main circuit wants to boot up. Please replace with a generic power supply (see above for specifications).
+
 Before first use the Receiver needs to be connected to your LMS system using the Squeezebox Controller. In case a Controller is not available, the Receiver can be connected by using the `Net::UDAP` protocol.
 
 [Jcrummy](https://github.com/jcrummy) has created a tool for multiple platforms to take care of the initialization, which is called [`sbconfig` and can be found here](https://jcrummy.github.io/gosqueeze/). This tool can also be used for older Squeezebox systems, like Classic and Boom and is particularly of use when the VFD display fails.
