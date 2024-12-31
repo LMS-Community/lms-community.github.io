@@ -13,4 +13,4 @@ The Transporter is an audiophile grade addition to the Squeezebox family, announ
 
 Transporter has a serial port that provides access to the Squeezebox Server command-line interface. 
 
-Check out https://joes-tech-blog.blogspot.com/2017/12/logitech-slimdevices-transporter-repair.html for Transporter specific technical issues
+Check out https://joes-tech-blog.blogspot.com/2017/12/logitech-slimdevices-transporter-repair.html for Transporter specific technical issues.
