@@ -16,3 +16,7 @@ Functionally, it is the same as the Squeezebox2, however a new case designed by 
 !!! note
 
     The 3rd Generation Squeezebox is identified as Squeezebox2 in `Settings -> Player Information -> Player Model`.
+
+## See also
+
+- [Squeezebox Classic/3 Owner's Guide](https://downloads.lms-community.org/docs/Squeezebox%20Classic.pdf)

@@ -29,4 +29,8 @@ The Squeezebox Controller is a handheld remote controller that uses 802.11g wire
 - 1250 mAh Li-Ion battery
 - 3 axis accelerometer (for motion sensing)
 - Charging stand
-- Expansion connector that brings out: serial, USB (host or device), audio out, audio in, 3.3v out, 5v in 
+- Expansion connector that brings out: serial, USB (host or device), audio out, audio in, 3.3v out, 5v in
+
+## See also
+
+- [Squeezebox Duet User's Guide](https://downloads.lms-community.org/docs/Squeezebox%20Duet%20Users%20Guide%20International.pdf)

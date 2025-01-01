@@ -15,13 +15,13 @@ Based on the same architecture as the Squeezebox Classic, Squeezebox Boom includ
 
 Technical details about the careful and innovative acoustic design can be found in [this white paper](assets/Logitech_Squeezebox_Boom_Audio_Design.pdf).
 
-The Squeezebox Boom was discontinued in 2012. 
+The Squeezebox Boom was discontinued in 2012.
 
 ## Service and repair
 
 To open the Squeezebox Boom, you need a Torx TX10 screwdriver. Start by removing the speaker grilles. Pry with long fingernails or something that won't scratch them, and they should come off relatively easy.
 
-There is no need to remove the deep set screws behind the speakers, unless you want service said speakers. For display, power or control related repairs, concentrate on the screws near the middle of the unit. 
+There is no need to remove the deep set screws behind the speakers, unless you want service said speakers. For display, power or control related repairs, concentrate on the screws near the middle of the unit.
 
 ### Display
 
@@ -43,3 +43,7 @@ When a Squeezebox Boom has been used at loud volume settings with bass heavy mus
 
 - Forum thread: [Boom speaker repair](https://forums.slimdevices.com/showthread.php?108615-Boom-speaker-repair)
 - Forum thread: [Distorted Bass, Spilt Speaker, Exact Replacement Available ](https://forums.slimdevices.com/showthread.php?105534-Distorted-Bass-Spilt-Speaker-Exact-Replacement-Available)
+
+## See also
+
+- [Squeezebox Boom User Guide](https://downloads.lms-community.org/docs/Squeezebox%20Boom.pdf)

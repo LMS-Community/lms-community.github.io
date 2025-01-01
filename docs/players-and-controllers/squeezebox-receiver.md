@@ -90,3 +90,8 @@ Button usage:
 | 4 blinks |	Upgrade error |
 | 5 blinks |	CPLD XSVF file open error (xilinx file) |
 | 6 blinks | UUID not set/all zeros (Checked third upon boot-up) |
+
+
+## See also
+
+- [Squeezebox Duet User's Guide](https://downloads.lms-community.org/docs/Squeezebox%20Duet%20Users%20Guide%20International.pdf)

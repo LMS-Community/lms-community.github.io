@@ -12,6 +12,7 @@ const allowedPrefixes = [
     'SlimServer_v.*',
     'SLIMP3_Server_v.*',
     'update/firmware/*',
+    'docs/*',
 ]
 
 const corsHeaders = {
