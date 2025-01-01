@@ -13,13 +13,15 @@
 	- Make Docker a first class citizan: add Slim::Utils::OS::Docker insted of a Custom.pm
 	- Remove Win32 legacy support files, code, control panels, build pipeline, etc.
 	- Remove legacy Mac installer from build pipeline.
+	- Remove code dealing with Perl < 5.10.
+	- [#85](https://github.com/LMS-Community/slimserver-platforms/pull/85) \- Change permissions of user running LMS in Docker. Use "squeezeboxserver" group instead of "nogroup" (thanks @osnieh!)
+	- [#73](https://github.com/LMS-Community/slimserver-platforms/pull/73) \- Add a note about setting the hostname in a Docker container (thanks @hartzell!)
 
 - Bug Fixes:
 
 - Other:
 
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (expectingtofly)
-	- [#1246](https://github.com/LMS-Community/slimserver/issues/1264) \- Windows registry value "DataPath" is in the wrong place.
 
 ## Version 9.0.1
 
@@ -42,6 +44,7 @@
 	- [#77](https://github.com/LMS-Community/slimserver-platforms/issues/77) \- Add instructions to the macOS DMG file. Improve overall user experience.
 	- [#78](https://github.com/LMS-Community/slimserver-platforms/issues/78) \- Fix crypto library linking issues in the Docker image.
 	- [#80](https://github.com/LMS-Community/slimserver-platforms/issues/80) \- Reset update status when updating fromt he macOS menu bar item.
+	- Have a newly installed LMS on Windows use "Lyrion" as the data path, rather than "Squeezebox".
 
 - Bug Fixes:
 
@@ -54,6 +57,8 @@
 	- [#1242](https://github.com/LMS-Community/slimserver/issues/1242) \- Fix plugin download - must wait for the download to finish before restarting the server
 	- [#1247](https://github.com/LMS-Community/slimserver/issues/1247) \- Fix display of final "Scan done" message and "Abort scan" link in Material/Classic skins.
 	- [#1250](https://github.com/LMS-Community/slimserver/issues/1250) \- Radio stations wouldn't show album artwork any more.
+	- [#1246](https://github.com/LMS-Community/slimserver/issues/1264) \- Windows registry value "DataPath" is in the wrong place.
+	- [#1273](https://github.com/LMS-Community/slimserver/pull/1273) \- Remove grouping & discsubtitle in new & changed scan if tags were removed (thanks @darrel-k!)
 
 - Other:
 
