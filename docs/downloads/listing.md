@@ -4,7 +4,7 @@ title: Downloads Archive
 ---
 
 !!! warning
-    These releases are unsupported. Many probably don't work any more. Use at your own risk.
+    These files are unsupported. Many documents are outdated, software packages might not work any more. Use at your own risk.
 
 [Go back to safety, get the latest release](../getting-started/index.md).
 
@@ -15,8 +15,16 @@ title: Downloads Archive
      */
     async function fetchAndRender(prefix) {
         // get list of objects with given prefix
-        const response = await fetch('https://lms-downloads-handler.lyrion.workers.dev/' + prefix);
-        const releaseData = await response.json();
+        let releaseData = [];
+        try {
+            const response = await fetch('https://lms-downloads-handler.lyrion.workers.dev/' + prefix);
+            releaseData = await response.json();
+        }
+        catch(e) {
+            console.warn(e);
+        }
+
+        document.getElementById("loading-indicator").style.display = "none";
 
         // read rendered icons into variables - we can't have icon placeholders in JS code
         const icons = Array.from(document.querySelectorAll('.icon'))
@@ -48,6 +56,8 @@ title: Downloads Archive
         const sbFirmware = `<td>${icons.firmware} Squeezebox Firmware</td>`;
         const versionFile = `<td>${icons.version} Version file</td>`;
         const sha = `<td>${icons.checksum} Checksum file</td>`;
+        const pdf = `<td>${icons.pdf} Adobe PDF document</td>`;
+        const image = `<td>${icons.image} Image file</td>`;
 
         let tableRows = '';
 
@@ -75,6 +85,10 @@ title: Downloads Archive
             else if (item.key.endsWith('.version')) fileType = versionFile;
             else if (item.key.endsWith('version.sha') || item.key.endsWith('bin.sha')) fileType = sha;
 
+            // other file types
+            else if (item.key.endsWith('.pdf')) fileType = pdf;
+            else if (/\.(jpe?g|gif|png)$/.test(item.key)) fileType = image;
+
             tableRows = tableRows + `<tr>
                 <td><a href="https://downloads.lms-community.org/${item.key}">${item.key.split('/').pop()}</a></td>
                 <td style="text-align: right;">${formatFileSize(item.size)}</td>
@@ -90,11 +104,33 @@ title: Downloads Archive
         }
 
         const table = document.querySelector('#downloads');
-        table.innerHTML = tableRows;
+        table.innerHTML = tableRows || '<tr><td colspan=3>No files found.</td></tr>';
     }
 
     fetchAndRender(document.location.search.replace('?', ''))
 </script>
+
+<style>
+    /* https://css-loaders.com/dots/ */
+    .loader {
+        width: 30px;
+        aspect-ratio: 2;
+        --_g: no-repeat radial-gradient(circle closest-side,var(--md-default-fg-color) 90%,#0000);
+        background:
+            var(--_g) 0%   50%,
+            var(--_g) 50%  50%,
+            var(--_g) 100% 50%;
+        background-size: calc(100%/3) 50%;
+        animation: l3 1s infinite linear;
+    }
+
+    @keyframes l3 {
+        20%{background-position:0%   0%, 50%  50%,100%  50%}
+        40%{background-position:0% 100%, 50%   0%,100%  50%}
+        60%{background-position:0%  50%, 50% 100%,100%   0%}
+        80%{background-position:0%  50%, 50%  50%,100% 100%}
+    }
+</style>
 
 <table>
     <thead>
@@ -123,5 +159,8 @@ title: Downloads Archive
     <span class="icon firmware">:material-file-download-outline:</span>
     <span class="icon version">:material-file-outline:</span>
     <span class="icon checksum">:material-file-check-outline:</span>
+    <span class="icon pdf">:fontawesome-solid-file-pdf:</span>
+    <span class="icon image">:material-image:</span>
 </span>
 
+<div id="loading-indicator" class="loader"></div>
