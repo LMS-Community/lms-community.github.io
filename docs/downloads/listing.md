@@ -159,7 +159,7 @@ title: Downloads Archive
     <span class="icon firmware">:material-file-download-outline:</span>
     <span class="icon version">:material-file-outline:</span>
     <span class="icon checksum">:material-file-check-outline:</span>
-    <span class="icon pdf">:fontawesome-solid-file-pdf:</span>
+    <span class="icon pdf">:material-file-pdf-box:</span>
     <span class="icon image">:material-image:</span>
 </span>
 

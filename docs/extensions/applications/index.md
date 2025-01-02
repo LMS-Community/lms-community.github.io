@@ -31,6 +31,7 @@ title: Applications
 - [projectMSDL](https://www.nexus0.net/pub/sw/slvis-projectm/): [projectM](https://github.com/projectM-visualizer/projectm) visualizations for squeezelite.
 
 ## Integration
+- [Domoticz](https://wiki.domoticz.com/Logitech_Media_Server): allow Domoticz to control your Squeezebox and compatible players.
 - [Home Assistant](https://www.home-assistant.io/integrations/squeezebox/): The Squeezebox integration allows you to control music players from the LMS ecosystem.
 - [openHAB](https://www.openhab.org/addons/bindings/squeezebox/): Squeezebox binding, integrates the LMS and compatible Squeezebox players.
 - [slimpris2](https://github.com/mavit/slimpris2): slimpris2 provides MPRIS 2 remote control of LMS, allowing it to be controlled using the user interface integrated into your Linux desktop.
