@@ -16,6 +16,7 @@
         }
     },
     "postCreateCommand": "pip install -r mkdocs-requirements.txt",
+    "postStartCommand": "mkdocs serve",
     "forwardPorts": [
         8000
     ],
