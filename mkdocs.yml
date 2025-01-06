@@ -69,7 +69,7 @@ extra:
     - icon: simple/opencollective
       link: https://opencollective.com/lyrion
 
-copyright: <a href="/privacy">Privacy Statement</a> | <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
+copyright: <a href="/privacy">Privacy Statement</a> | <a href="/terms">Terms of Service</a> | <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
 
 # tabbed content
 markdown_extensions:
@@ -139,6 +139,7 @@ nav:
   - Contributing:
     - Overview: contributing/index.md
     - Reporting a bug: contributing/reporting-a-bug.md
+    - DCO Sign-off: contributing/dco-signoff.md
     - Adding translations: contributing/adding-translations.md
     - Community forums: https://forums.slimdevices.com/
   - Reference:
