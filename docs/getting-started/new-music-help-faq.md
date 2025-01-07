@@ -69,10 +69,15 @@ You can choose to reset your New Music list to be based on File Modified dates f
     Please be aware that starting with a fresh persist.db means you will __lose play history stats (counts and last played date) and ratings__. If you are using the Ratings Light plugin, ratings can be backed up and restored after you reset your persist.db. The same is true for the alternative play history stats if you use the Alternative Play Count plugin.
 
 Steps to reset your persisti.db (_Did you read the Note above first?_):
+
 1. Stop your Lyrion Server.
+
 2. Backup your persist.db (persist.db* from your Prefs directory) and library.db (library.db* from your Cache directory). There may be 3 files for each. You will want to have those backups if you are not happy with the results of this process or did not read the note above.
-3. Delete persist.db* from your Prefs directory and library.db* from your Cache directory. 
+
+3. Delete persist.db* from your Prefs directory and library.db* from your Cache directory.
+ 
 4. Upgrade to the latest 9.0.1 if you are not on that release or later.
+
 5. Start Lyrion and it should begin a new scan (if not go ahead and initiate a Clear Library and Rescan All).
 
 #### Why is my New Music list in reverse alphabetical order
