@@ -99,6 +99,8 @@ nav:
       - Beginner's Docker guide on QNAP: getting-started/beginners-guide-qnap-docker.md
       - Beginner's guide to classical music on LMS: getting-started/beginners-guide-to-classical-music-on-lms.md
       - Getting started on macOS: getting-started/mac-install.md
+    - Help Guides and FAQs:
+      - New Music changes in 9.0: getting-started/new-music-help-faq.md
     - Advanced guides:
       - Use OpenVPN on SB Radio/Touch: getting-started/advanced-guide-openvpn.md
       - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
