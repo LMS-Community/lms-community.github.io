@@ -4,7 +4,7 @@ title: New Music changes in 9.0
 ---
 
 # New Music browsing changes in 9.0
-Release 9.0 introduced changes to browsing your music by _New Music_ added to your Lryion music library and offers and additional new browse menu option for viewing music that was most _Recently Updated_. This guide is intended to provide clarification and further details about this change and answer some frequently asked questions.
+Release 9.0 introduced changes to browsing your music by _New Music_ added to your Lyrion music library and offers and additional new browse menu option for viewing music that was most _Recently Updated_. This guide is intended to provide clarification and further details about this change and answer some frequently asked questions.
 
 ## What's changed in 9.0
 ### New Music browsing
