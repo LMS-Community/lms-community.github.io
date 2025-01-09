@@ -10,7 +10,8 @@ For the archeologists among you. Or those who believe that SlimServer v6.3.1 pro
 
 [Go back to safety, get the latest release](../getting-started/index.md).
 
-## Lyrion Music Server (9.0.0)
+## Lyrion Music Server (9.0.*)
+* [LyrionMusicServer_v9.0.1](listing.md?LyrionMusicServer_v9.0.1)
 * [LyrionMusicServer_v9.0.0](listing.md?LyrionMusicServer_v9.0.0)
 
 
