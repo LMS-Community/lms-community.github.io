@@ -23,7 +23,19 @@
 
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (expectingtofly)
 
-## Version 9.0.1
+## Version 9.0.2
+
+- New Features:
+
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
+## Version 9.0.1 - 2025-01-09 (e3effbe91)
 
 - New Features:
 
@@ -47,7 +59,6 @@
 	- Have a newly installed LMS on Windows use "Lyrion" as the data path, rather than "Squeezebox".
 
 - Bug Fixes:
-
 	- Only re-initialize menu settings for connected players - otherwise Analytics considers them "active" due to a prefs change.
 	- Fix display of final "Scan done" message in Material skin.
 	- Fix track count caching in "titles" query.
@@ -60,8 +71,6 @@
 	- [#1250](https://github.com/LMS-Community/slimserver/issues/1250) \- Radio stations wouldn't show album artwork any more.
 	- [#1246](https://github.com/LMS-Community/slimserver/issues/1264) \- Windows registry value "DataPath" is in the wrong place.
 	- [#1273](https://github.com/LMS-Community/slimserver/pull/1273) \- Remove grouping & discsubtitle in new & changed scan if tags were removed (thanks @darrel-k!)
-
-- Other:
 
 ## Introducing... Lyrion Music Server Version 9.0.0! - 2024-11-29 (2ed5e147e)
 
