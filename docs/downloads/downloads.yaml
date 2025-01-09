@@ -17,8 +17,18 @@ dev:
     size: 25 MB
     timestamp: Thu Jan  9 20:10:32 2025
     url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.1.0~1736453432_amd64.deb
-  debarm: ~
-  debi386: ~
+  debarm:
+    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
+    name: lyrionmusicserver_9.1.0~1736453432_arm.deb
+    size: 32 MB
+    timestamp: Thu Jan  9 20:10:32 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.1.0~1736453432_arm.deb
+  debi386:
+    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'
+    name: lyrionmusicserver_9.1.0~1736453432_i386.deb
+    size: 17 MB
+    timestamp: Thu Jan  9 20:10:32 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.1.0~1736453432_i386.deb
   encore:
     desc: ':material-linux::material-music-box: Musical Fidelity'
     name: lyrionmusicserver-9.1.0-1736453432-MusicalFidelity.tgz
@@ -26,7 +36,12 @@ dev:
     timestamp: Thu Jan  9 20:10:32 2025
     url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.1.0-1736453432-MusicalFidelity.tgz
   mac: ~
-  macos: ~
+  macos:
+    desc: ':material-apple: Apple macOS'
+    name: LyrionMusicServer-9.1.0-1736453432.dmg
+    size: 45 MB
+    timestamp: Thu Jan  9 20:10:32 2025
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.1.0-1736453432.dmg
   majorVersion: 9
   minorVersion: 9.1
   nocpan:
