@@ -19,6 +19,8 @@
 
 - Bug Fixes:
 
+	- [#1287](https://github.com/LMS-Community/slimserver/pull/1287) \- fix method name for spdr protocol handler.
+
 - Other:
 
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (expectingtofly)
@@ -32,6 +34,8 @@
 - Platform Support:
 
 - Bug Fixes:
+
+	- [#1288](https://github.com/LMS-Community/slimserver/issues/1288) \- Update Carp::Assert to latest to fix compatibility with recent Perl versions.
 
 - Other:
 
