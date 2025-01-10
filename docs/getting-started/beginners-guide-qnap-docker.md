@@ -47,7 +47,7 @@ In this guide the following assumptions apply:
     ```
 6. Click "Validate" to ensure your syntax is correct
 7. Click "Create"
-8. Once created you should see your nous application in the list
+8. Once created you should see your new application in the list
 9. By default, Container Station exposes only one port per application in a NAT configuration. As we need multi ports, we'll switch to "bridge mode" :
    1. Click you application in the list (i.e. "lms")
    2. You'll see one container running (usually something like "lms-lms-1")
@@ -68,7 +68,7 @@ In this guide the following assumptions apply:
 
 ## Updating the Docker image
 
-It is always advisable to regularly update your software, and with Docker on Synology it is made very easy.
+It is always advisable to regularly update your software, and with Docker on QNAP it is made very easy.
 
 1. Open "Container Station"
 2. Go to "Images" and click on the cog wheel "⚙️" next to "lmscommunity/lyrionmusicserver".
