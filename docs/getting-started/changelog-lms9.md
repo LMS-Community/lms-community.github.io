@@ -33,6 +33,8 @@
 
 - Platform Support:
 
+	- Improve Windows installer to give better feedback on service start failure.
+
 - Bug Fixes:
 
 	- [#1288](https://github.com/LMS-Community/slimserver/issues/1288) \- Update Carp::Assert to latest to fix compatibility with recent Perl versions.
