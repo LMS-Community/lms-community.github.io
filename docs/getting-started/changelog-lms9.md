@@ -14,7 +14,6 @@
 	- Remove Win32 legacy support files, code, control panels, build pipeline, etc.
 	- Remove legacy Mac installer from build pipeline.
 	- Remove code dealing with Perl < 5.10.
-	- [#85](https://github.com/LMS-Community/slimserver-platforms/pull/85) \- Change permissions of user running LMS in Docker. Use "squeezeboxserver" group instead of "nogroup" (thanks @osnieh!)
 	- [#73](https://github.com/LMS-Community/slimserver-platforms/pull/73) \- Add a note about setting the hostname in a Docker container (thanks @hartzell!)
 
 - Bug Fixes:
@@ -34,6 +33,7 @@
 - Platform Support:
 
 	- Improve Windows installer to give better feedback on service start failure.
+	- [#85](https://github.com/LMS-Community/slimserver-platforms/pull/85) \- Change permissions of user running LMS in Docker. Use "squeezeboxserver" group instead of "nogroup" (thanks @osnieh!)
 
 - Bug Fixes:
 
