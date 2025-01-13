@@ -15,6 +15,6 @@ If you've found a bug in Lyrion Music Server or some related project, please rea
 
 ## Coordination
 
-Most of the Lyrion activities is coordinated by Michael Herger ([michael@herger.net](michael@herger.net)). Please note that you can not get support from that address directly.
+Most of the Lyrion activities is coordinated by Michael Herger ([michael@herger.net](mailto:michael@herger.net)). Please note that you can not get support from that address directly.
 
-Privacy related questions can be sent to [privacy@lyrion.org](privacy@lyrion.org).
+Privacy related questions can be sent to [privacy@lyrion.org](mailto:privacy@lyrion.org).

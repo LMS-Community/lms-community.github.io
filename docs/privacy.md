@@ -115,7 +115,7 @@ We use the following providers to host our documentation, chats, demo instances,
 
 * [GitHub](https://github.com)
 * [Docker Hub](https://hub.docker.com)
-* [vBulletin](vBulletin.com)
+* [vBulletin](https://vBulletin.com)
 
 If you would like to learn more about the data they collect and how it is processed, you can click on the corresponding link to view their privacy policy.
 
@@ -189,4 +189,4 @@ Our apps and backend services may store information in case of software errors. 
 
 ## Questions?
 
-You may contact us at [privacy@lyrion.org](privacy@lyrion.org) if you have any questions about this Privacy Policy, our practices, or other privacy-related topics. Visit [lyrion.org/contact](contact.md) to view our full contact information. We do our best to respond within five business days or less.
+You may contact us at [privacy@lyrion.org](mailto:privacy@lyrion.org) if you have any questions about this Privacy Policy, our practices, or other privacy-related topics. Visit [lyrion.org/contact](contact.md) to view our full contact information. We do our best to respond within five business days or less.
