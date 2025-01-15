@@ -65,7 +65,7 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/lmscommunity/lyrionmusicserver
     - icon: simple/vbulletin
-      link: https://forums.slimdevices.com
+      link: https://forums.lyrion.org
     - icon: simple/opencollective
       link: https://opencollective.com/lyrion
 
@@ -141,7 +141,7 @@ nav:
     - Reporting a bug: contributing/reporting-a-bug.md
     - DCO Sign-off: contributing/dco-signoff.md
     - Adding translations: contributing/adding-translations.md
-    - Community forums: https://forums.slimdevices.com/
+    - Community forums: https://forums.lyrion.org/
   - Reference:
     - Lyrion Music Server: reference/lyrion-music-server.md
     - Command Line Interface (JSON/RPC):

@@ -16,7 +16,7 @@ All you need to get started are for your classical tracks to contain tags for Co
 - Flac or ogg files: the tags you need to add are COMPOSER and WORK
 - MP3 files: the tags you need to add are TCOM for Composer and TIT1 for Work. Your tagging software will almost certainly show these tags with the friendly names of Composer and Work. But note that there is some confusion in the MP3 world over the WORK tag. Your tagging software might create a tag other than TIT1 for what is called "Work" in its user interface. If this happens, LMS will not recognise the Work you have tagged. You can view the raw tag names through LMS by browsing to the track via the album and then going to More/More Info/View Tags (after importing to LMS, of course). If the Work does not appear in a TIT1 tag, look for an "iTunes Compatible" (or similar) setting in your tagging software.
 
-Note that WORK should not contain the composer name. LMS uses the Composer and Work together to identify works, so works called, for example, "Symphony No. 9" will be kept separate if the composer is different. 
+Note that WORK should not contain the composer name. LMS uses the Composer and Work together to identify works, so works called, for example, "Symphony No. 9" will be kept separate if the composer is different.
 
 You can also add a COMPOSERSORT tag to ensure that composer names are listed in surname-first sequence:
 
@@ -38,15 +38,15 @@ Note: You may need to compromise on this tagging scheme if your music tags need 
 
 !!! note
 	The screenshots below are all using Material Skin, which is installed by default in new LMS 9.0 installations.
-	
+
 	If you don't have it, you can install the Material Skin plugin from the "3rd Party Plugins" section in Settings/Manage Plugins. You can then use Material Skin by appending "/material" to the LMS URL address in your browser, or set it as the default in Server/Interface.
-	
+
 	All the functionality exists also in Default Skin, but may look different and not so pretty!
 
 !!! note
 	Some of these menus and displays may be slightly different depending on your LMS Server Settings. That's something that deserves its own page, but see the "Support" section below if something seems wrong or doesn't make sense to you.
 
-Once you have tagged your music and done a full rescan of your library in LMS, you can start exploring the new features. 
+Once you have tagged your music and done a full rescan of your library in LMS, you can start exploring the new features.
 
 The first thing you will see is a new Works item in the "My Music" menu:
 
@@ -89,4 +89,4 @@ to do
 
 ## Support
 
-In case you encounter some problems, have some questions or suggestions for improvements, please head over to the [forums](https://forums.slimdevices.com) for assistance,  specifically [this thread](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1737175-lyrion-music-server-9-0-0-classical-works-functionality-support)
+In case you encounter some problems, have some questions or suggestions for improvements, please head over to the [forums](https://forums.lyrion.org) for assistance,  specifically [this thread](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1737175-lyrion-music-server-9-0-0-classical-works-functionality-support)

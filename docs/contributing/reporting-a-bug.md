@@ -17,7 +17,7 @@ Chances are that the bug you discovered was already fixed in a subsequent versio
 
 ### Search for solutions
 
-Please search the [issue tracker](https://github.com/LMS-Community/slimserver/issues) and [discussion board](https://github.com/LMS-Community/slimserver/discussions) if someone else already submitted your bug. Also check if there is also a discussion going on the [forums](https://forums.slimdevices.com/).
+Please search the [issue tracker](https://github.com/LMS-Community/slimserver/issues) and [discussion board](https://github.com/LMS-Community/slimserver/discussions) if someone else already submitted your bug. Also check if there is also a discussion going on the [forums](https://forums.lyrion.org/).
 
 ## Submitting an issue
 
