@@ -45,4 +45,4 @@ See the [squeezelite manpage](squeezelite-manpage.md) for usage details.
 
 ## Troubleshooting
 
-In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com/forum/user-forums/linux-unix/94258-announce-squeezelite-a-small-headless-squeezeplay-emulator-for-linux-alsa-only) for assistance.
+In case you encounter some problems please head over to the [forums](https://forums.lyrion.org/forum/user-forums/linux-unix/94258-announce-squeezelite-a-small-headless-squeezeplay-emulator-for-linux-alsa-only) for assistance.

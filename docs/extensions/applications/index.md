@@ -39,7 +39,7 @@ title: Applications
 
 ## Platforms
 - [Home Assistant Add-on: LMS](https://github.com/pssc/ha-addon-lms/tree/master/lms): A complete and easy way to run LMS
-- [LMS on Android](https://forums.slimdevices.com/forum/user-forums/general-discussion/1674045): Run LMS on an Android device using Termux.
+- [LMS on Android](https://forums.lyrion.org/forum/user-forums/general-discussion/1674045): Run LMS on an Android device using Termux.
 
 ## Automatic Playlist / Mix Creation
 - [LMS Recommender](https://www.nexus0.net/pub/sw/lmsrecommender/): A system to create music recommendations for local music based on positive and negative tracks. Results can be further refined by using filters (inferred track classifications (moods, genres, …) or track metadata (ratings, …).

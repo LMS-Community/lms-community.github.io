@@ -89,4 +89,4 @@ to do
 
 ## Support
 
-In case you encounter some problems, have some questions or suggestions for improvements, please head over to the [forums](https://forums.lyrion.org) for assistance,  specifically [this thread](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1737175-lyrion-music-server-9-0-0-classical-works-functionality-support)
+In case you encounter some problems, have some questions or suggestions for improvements, please head over to the [forums](https://forums.lyrion.org) for assistance,  specifically [this thread](https://forums.lyrion.org/forum/user-forums/logitech-media-server/1737175-lyrion-music-server-9-0-0-classical-works-functionality-support)

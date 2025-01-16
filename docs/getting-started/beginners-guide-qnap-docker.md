@@ -6,7 +6,7 @@ title: Beginner's Docker Guide on QNAP
 # Beginner's Docker Guide on QNAP
 
 !!! note
-    In case you have any difficulties following this guide or have found some errors, please leave a note on the [forums](https://forums.slimdevices.com/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers). Thanks!
+    In case you have any difficulties following this guide or have found some errors, please leave a note on the [forums](https://forums.lyrion.org/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers). Thanks!
 
 If you have a QNAP NAS which can run Docker containers aka. "Container Station", you are in luck!
 
