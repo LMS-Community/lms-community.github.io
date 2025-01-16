@@ -13,10 +13,10 @@
 
 	- Sometimes setting a music or playlist folder might lead the server into an infinite recursion.
 	- Fix running the scanner from outside LMS on Windows 64-bit.
-	- [Drag'n'drop a track on the playlist pane sometimes wouldn't work](https://forums.slimdevices.com/forum/developer-forums/beta/1685846-9-0-0-development-build?p=1715083#post1715083) under certain circumstances.
-	- [Fix CUE sheets scanning](https://forums.slimdevices.com/forum/user-forums/ripping-encoding-transcoding-tagging/1715462) which would result in seemingly random album order when ALBUMSORT was defined at the album level only.
-	- [Fix issue loading the plugins page](https://forums.slimdevices.com/forum/user-forums/general-discussion/1715826) after an invalid URL got added.
-	- [Fix "serverstatus" subscriptions](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1714557) for prefs changes.
+	- [Drag'n'drop a track on the playlist pane sometimes wouldn't work](https://forums.lyrion.org/forum/developer-forums/beta/1685846-9-0-0-development-build?p=1715083#post1715083) under certain circumstances.
+	- [Fix CUE sheets scanning](https://forums.lyrion.org/forum/user-forums/ripping-encoding-transcoding-tagging/1715462) which would result in seemingly random album order when ALBUMSORT was defined at the album level only.
+	- [Fix issue loading the plugins page](https://forums.lyrion.org/forum/user-forums/general-discussion/1715826) after an invalid URL got added.
+	- [Fix "serverstatus" subscriptions](https://forums.lyrion.org/forum/user-forums/logitech-media-server/1714557) for prefs changes.
 
 - Other:
 
@@ -36,15 +36,15 @@
 	- [#1056](https://github.com/Logitech/slimserver/pull/1056) \- Fix playback of certain mp4 files (thanks philippe44!)
 	- [#1047](https://github.com/Logitech/slimserver/pull/1047) \- Fix sort collation when requesting artists
 	- [#1083](https://github.com/LMS-Community/slimserver/pull/1083) \- Fixes for playlist add via Release Type groups (thanks darrel-k!)
-	- Fix /music/current/cover artwork handler for certain cases where resizing would fail (eg. [Podcasts](https://forums.slimdevices.com/forum/developer-forums/developers/1699734))
-	- [Fix RandomPlay](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/106269-announce-material-skin/page652#post1707487) when overriding a selected library view with "all music" (see when using Material skin)
+	- Fix /music/current/cover artwork handler for certain cases where resizing would fail (eg. [Podcasts](https://forums.lyrion.org/forum/developer-forums/developers/1699734))
+	- [Fix RandomPlay](https://forums.lyrion.org/forum/user-forums/3rd-party-software/106269-announce-material-skin/page652#post1707487) when overriding a selected library view with "all music" (see when using Material skin)
 	- Use ORIGINALYEAR, ORIGINALDATE, or DATE to parse the year from Ogg files.
 
 ## Version 8.5.1 - 2024-04-15 (3b46196aa)
 
 - New Features:
 
-	- Add plugin to report data about your LMS installation - see [forum discussion](https://forums.slimdevices.com/forum/user-forums/general-discussion/1697108).
+	- Add plugin to report data about your LMS installation - see [forum discussion](https://forums.lyrion.org/forum/user-forums/general-discussion/1697108).
 
 - Server Changes:
 
@@ -142,7 +142,7 @@
 	- [#939](https://github.com/LMS-Community/slimserver/issues/939) \- Player can't be switched from MySqueezebox.com to LMS
 	- [#962](https://github.com/LMS-Community/slimserver/issues/962) \- Fix album\_contributor updates in New & Changed scan (thanks darrell!)
 	- [#979](https://github.com/LMS-Community/slimserver/issues/979) \- New and changed contributor scanning improvements (thanks darrell!)
-	- [Respect a contributor's Musicbrainz ID to separate artists of the same name.](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1648813)
+	- [Respect a contributor's Musicbrainz ID to separate artists of the same name.](https://forums.lyrion.org/forum/user-forums/logitech-media-server/1648813)
 	- [#969](https://github.com/LMS-Community/slimserver/pull/969) \- Add utf-8 guess decoding on Ogg metadata - thanks philippe44!
 	- Try harder to avoid duplicate (but empty) album entries on singles.
 	- Clear the Various Artists ID when a scan has finished.

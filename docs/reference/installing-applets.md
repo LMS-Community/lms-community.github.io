@@ -58,4 +58,4 @@ If you want to install an applet manually you can do the following:
 * restart Squeezeplay
 
 Normally the applet will show up in the Extras menu but it can appear in the main menu as well.
-Source: [http://forums.lyrion.org/showthread.php?t=47798](http://forums.lyrion.org/showthread.php?t=47798)
+Source: [https://forums.lyrion.org/showthread.php?t=47798](https://forums.lyrion.org/showthread.php?t=47798)
