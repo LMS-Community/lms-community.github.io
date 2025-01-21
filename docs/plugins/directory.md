@@ -240,7 +240,7 @@ title: Available Plugins
 
     ---
 
-    Programme and track information including cover art for over 5800 radio stations
+    Programme and track information including cover art for over 6000 radio stations
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.lyrion.org/forum/user-forums/3rd-party-software/111952-announce-radio-now-playing-plugin?view=thread)    - :octicons-download-24: 4566
 
@@ -1058,7 +1058,7 @@ title: Available Plugins
 
     ---
 
-    Programme and track information including cover art for over 5800 radio stations
+    Programme and track information including cover art for over 6000 radio stations
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.lyrion.org/forum/user-forums/3rd-party-software/111952-announce-radio-now-playing-plugin?view=thread)    - :octicons-download-24: 4566
 
