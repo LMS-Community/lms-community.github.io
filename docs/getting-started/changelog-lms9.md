@@ -38,7 +38,9 @@
 
 - Bug Fixes:
 
+	- Mitigate an [issue with uppercase umlauts and other non-latin characters](https://forums.lyrion.org/forum/developer-forums/developers/1747258) in the full text search on Windows.
 	- [#1288](https://github.com/LMS-Community/slimserver/issues/1288) \- Update Carp::Assert to latest to fix compatibility with recent Perl versions.
+	- [#1303](https://github.com/LMS-Community/slimserver/pull/1303) \- Fix an issue where browsing releases would sometimes create thousands of parameters (and more - thanks @darrel-k!).
 
 - Other:
 
