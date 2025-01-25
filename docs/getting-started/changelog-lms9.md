@@ -6,7 +6,7 @@
 
 - Server Changes:
 
-	- Remove more left-overs from removed picture/video scanning.
+	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (expectingtofly)
 
 - Platform Support:
 
@@ -23,7 +23,8 @@
 
 - Other:
 
-	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (expectingtofly)
+	- Remove more left-overs from removed picture/video scanning.
+	- Remove more left-overs from removed MySqueezebox integration.
 
 ## Version 9.0.2
 
@@ -42,6 +43,8 @@
 	- [#1193](https://github.com/LMS-Community/slimserver/issues/1193) \- Don't throw error when fulltext search is being used before the end of a scan.
 	- [#1288](https://github.com/LMS-Community/slimserver/issues/1288) \- Update Carp::Assert to latest to fix compatibility with recent Perl versions.
 	- [#1303](https://github.com/LMS-Community/slimserver/pull/1303) \- Fix an issue where browsing releases would sometimes create thousands of parameters (and more - thanks @darrel-k!).
+	- [#1306](https://github.com/LMS-Community/slimserver/pull/1306) \- Don't run the scanner before we're done with the setup wizard.
+	- [#1307](https://github.com/LMS-Community/slimserver/pull/1307) \- Fix scanner progress information in the web UI.
 
 - Other:
 
