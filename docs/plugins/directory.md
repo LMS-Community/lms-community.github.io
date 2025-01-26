@@ -1252,6 +1252,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 264
 
+-   __:material-toy-brick-outline: Spotty Helper Application for Solaris/Illumos__
+
+    ---
+
+    Spotty Helper Application for Solaris/Illumos. This plug-in requires the Spotty plugin.
+
+    [:octicons-mail-24: Reiner Paulus](mailto:lms@hashsum.org)
+
 -   __:material-toy-brick-outline: SqueezeCLI Handler__
 
     ---
