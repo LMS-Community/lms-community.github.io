@@ -38,10 +38,10 @@ dev:
   mac: ~
   macos:
     desc: ':material-apple: Apple macOS'
-    name: LyrionMusicServer-9.1.0-1738220026.dmg
+    name: LyrionMusicServer-9.1.0-1738303045.dmg
     size: 46 MB
-    timestamp: Thu Jan 30 06:53:46 2025
-    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.1.0-1738220026.dmg
+    timestamp: Fri Jan 31 05:57:25 2025
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.1.0-1738303045.dmg
   majorVersion: 9
   minorVersion: 9.1
   nocpan:
