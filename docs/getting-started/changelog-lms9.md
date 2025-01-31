@@ -45,6 +45,8 @@
 	- [#1303](https://github.com/LMS-Community/slimserver/pull/1303) \- Fix an issue where browsing releases would sometimes create thousands of parameters (and more - thanks @darrel-k!).
 	- [#1306](https://github.com/LMS-Community/slimserver/pull/1306) \- Don't run the scanner before we're done with the setup wizard.
 	- [#1307](https://github.com/LMS-Community/slimserver/pull/1307) \- Fix scanner progress information in the web UI.
+	- [#1309](https://github.com/LMS-Community/slimserver/pull/1309) \- Limit works advanced search to discovered albums. (thanks @darrel-k)
+	- [#1314](https://github.com/LMS-Community/slimserver/issue/1314) \- The server would seemingly hang when trying to connect to the Material skin as long as no work has been found.
 
 - Other:
 
