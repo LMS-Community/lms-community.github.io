@@ -972,7 +972,7 @@ title: Available Plugins
 
     ---
 
-    DSP for Squeezebox server version 0.1.08d) - provides EQ and DSP. Fixes to custom-conv.conf 
+    DSP for Squeezebox server version 0.1.09a) - provides EQ and DSP. Fixes to custom-conv.conf 
 
     Jonathan Fox    - :octicons-download-24: 614
 
