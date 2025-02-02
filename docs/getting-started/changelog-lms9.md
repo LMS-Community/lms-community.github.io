@@ -50,6 +50,8 @@
 
 - Other:
 
+	- [#1315](https://github.com/LMS-Community/slimserver/pull/1315) \- Return contiguous/non-contiguous flag in statusQuery (thanks @darrel-k).
+
 ## Version 9.0.1 - 2025-01-09 (e3effbe91)
 
 - New Features:
