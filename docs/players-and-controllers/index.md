@@ -46,6 +46,8 @@ After 2010 the LMS community developed DIY hardware offerings:
 
 - [Squeezelite-ESP32](https://github.com/sle118/squeezelite-esp32)
 - [SqueezeAMP](https://github.com/philippe44/SqueezeAMP) - which is an implementation of Sqeezelite-ESP32
+- [Muse Radio](https://github.com/RASPIAUDIO/squeezelite-esp32) - An ESP32-S3 radio made for Lyrion, resembling the Squeezebox Radio and running Squeezelite-ESP32
+- [Muse Luxe](https://raspiaudio.com/muse/) - An ESP32 speaker made for Lyrion, running Squeezelite-ESP32
 
 ## Software based players
 
