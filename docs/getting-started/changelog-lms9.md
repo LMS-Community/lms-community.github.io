@@ -16,6 +16,7 @@
 	- Remove code dealing with Perl < 5.10.
 	- Upgrade DBD::SQLite to v1.75 for Perl 5.38 (Linux x86\_64), 5.36 (Linux x86\_64, aarch64, armv7), 5.34 (Linux x86\_64, aarch64; macOS), 5.32 (Linux x86\_64, aarch64, armv7).
 	- [#73](https://github.com/LMS-Community/slimserver-platforms/pull/73) \- Add a note about setting the hostname in a Docker container (thanks @hartzell!)
+	- [#86](https://github.com/LMS-Community/slimserver-platforms/pull/86) \- Add more tags to Docker images to better support automated updates (thanks @stavros-k!)
 
 - Bug Fixes:
 
@@ -48,6 +49,7 @@
 	- [#1309](https://github.com/LMS-Community/slimserver/pull/1309) \- Limit works advanced search to discovered albums. (@darrel-k)
 	- [#1314](https://github.com/LMS-Community/slimserver/issue/1314) \- The server would seemingly hang when trying to connect to the Material skin as long as no work has been found.
 	- [#1319](https://github.com/LMS-Community/slimserver/pull/1319) \- Don't filter by release types if user pref is ignoreReleaseTypes (@darrel-k).
+	- Improve compatibility with modern HTML/JS and more strict browsers (eg. Safari).
 
 - Other:
 
