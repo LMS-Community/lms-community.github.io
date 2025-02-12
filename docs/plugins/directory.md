@@ -684,14 +684,6 @@ title: Available Plugins
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-start-stop-times)    - :octicons-download-24: 87
 
--   __:material-playlist-music: Disable Shuffle__
-
-    ---
-
-    Allows to disable shuffle, repeat and "add to playlist" mode for all clients. You can allow or disable each of these modes in the plugin settings.
-
-    [:octicons-mail-24: Martin Johnen](mailto:m.johnen@gmail.com)    - [:octicons-globe-24: Details](http://forums.lyrion.org/showthread.php?102851-Plugin-to-suppress-quot-Shuffle-quot-quot-Repeat-quot-and-quot-Add-to-Playlist-quot-Modes)    - :octicons-download-24: 116
-
 -   __:material-playlist-music: Dynamic Mix__
 
     ---
@@ -815,14 +807,6 @@ title: Available Plugins
     Set automatic display dimming, as for making the display go dark at bedtime and become visible again in the morning. (modified version of code from Eric Koldinger, koldware.com). Will use FuzzyTime "displayed time" if FuzzyTime is installed (optional). (Boom, Transporter, Classic, Squeezebox1, Slimp3, SoftSqueeze)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/AutoDisplay.html)    - :octicons-download-24: 291
-
--   __:material-tools: Bookmarks__
-
-    ---
-
-    Bookmark Plugin - Adds the possibility to bookmark audio files. Useful for radio dramas and audio books. Please define the genres for which you want bookmarks in the settings, otherwise the plugin will create bookmarks also for music albums (which you probably don't want)
-
-    [:octicons-mail-24: Martin Johnen](mailto:m.johnen@gmail.com)    - [:octicons-globe-24: Details](http://forums.lyrion.org/showthread.php?102859-New-plugin-for-audio-bookmarks/)    - :octicons-download-24: 480
 
 -   __:material-tools: C-3PO Transcoding Helper__
 
