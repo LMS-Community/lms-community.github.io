@@ -31,6 +31,8 @@
 
 - New Features:
 
+	- Add a few more alarm clock sounds to the Sounds & Effects plugin.
+
 - Server Changes:
 
 - Platform Support:
