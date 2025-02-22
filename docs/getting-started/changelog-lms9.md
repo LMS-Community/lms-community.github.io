@@ -4,6 +4,8 @@
 
 - New Features:
 
+	- Allow GETting the JSONRPC.js handler with a "request" parameter to simplify access by limited clients.
+
 - Server Changes:
 
 	- Improve support for 3rd party player icons, add some for piCorePlayer, SqueezeAMP, WiiM players.
