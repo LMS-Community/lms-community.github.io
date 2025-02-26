@@ -33,7 +33,7 @@ If you did not find a previous report of your issue you can submit your report t
 
 We have a static copy of the former bugs.slimdevices.com bugzilla site.
 
-https://bugs-archive.lyrion.org
+[https://bugs-archive.lyrion.org](https://bugs-archive.lyrion.org)
 
 Use it for reference, or archeology. Or just for fun!
 
