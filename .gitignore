@@ -5,3 +5,4 @@ extensions.xml
 plugins.json
 **/node_modules
 .DS_Store
+**/.wrangler
