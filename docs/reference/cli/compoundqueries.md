@@ -190,8 +190,7 @@ In non subscription mode, the query simply echoes itself (i.e. produces no resul
 | `playlist_tracks` | Number of tracks in the current playlist. Only if there is a playlist. |
 |If playlist information exist/requested, for each song in the playlist: |
 | `playlist index` | Index (first item is 0) of the playlist entry in the player playlist. Unless <start> is `-`, the first returned instance of this field is equal to start. If <start> is `-`, the first returned instance of this field contains the index of the currently playing song in the player playlist. Item separator. |
-| `Tags` | Same tags as defined in command [`songinfo`](database.md/#songinfo). |
-
+| `Tags` | Same tags as defined in command [`songinfo`](database.md/#songinfo). Additionally, when returning the playlist_loop (ie current contents of the play queue) tag `2` will return a flag indicating whether the play queue entries are contiguous with respect to work/grouping/performance, to assist UI formatting of the play queue. |
 
 Examples:
 
