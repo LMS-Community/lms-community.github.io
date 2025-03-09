@@ -47,6 +47,7 @@
 
 	- Mitigate an [issue with uppercase umlauts and other non-latin characters](https://forums.lyrion.org/forum/developer-forums/developers/1747258) in the full text search on Windows.
 	- [#1193](https://github.com/LMS-Community/slimserver/issues/1193) \- Don't throw error when fulltext search is being used before the end of a scan.
+	- [#1214](https://github.com/LMS-Community/slimserver/issues/1214) \- If item in queue can't be played, StreamingController leaves player in a bad state, failing further playback.
 	- [#1288](https://github.com/LMS-Community/slimserver/issues/1288) \- Update Carp::Assert to latest to fix compatibility with recent Perl versions.
 	- [#1303](https://github.com/LMS-Community/slimserver/pull/1303) \- Fix an issue where browsing releases would sometimes create thousands of parameters (and more - thanks @darrel-k!).
 	- [#1306](https://github.com/LMS-Community/slimserver/pull/1306) \- Don't run the scanner before we're done with the setup wizard.
