@@ -29,6 +29,7 @@
 
 	- Remove more left-overs from removed picture/video scanning.
 	- Remove more left-overs from removed MySqueezebox integration.
+	- Remove support for MySQL. Existing configurations using it will log an error.
 
 ## Version 9.0.2
 
