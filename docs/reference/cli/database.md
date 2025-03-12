@@ -241,6 +241,7 @@ The `artists` query returns all artists known by the server. The results of this
 || `artist` | Artist name. |
 || `s` `textkey` | The artist's `textkey` is the first letter of the sorting key. CLARIFICATION-NEEDED |
 || `E` `extid` | The contributor's external ID, if it is eg. from an online music service. CLARIFICATION-NEEDED |
+|| `4` `portraitid` | The contributor's portrait ID |
 
 Example:
 ```
@@ -335,6 +336,7 @@ The `albums` query returns all albums known by the server. The results of this q
 || `R` `role_ids` | A comma separated list of role ids for the album. |
 || `X` `album_replay_gain` | The album's replay-gain. |
 || `2` `group_count & contiguous_groups` | Returns a count of distinct works/groupings/performances on the album and a flag indicating whether the groups are contiguous, to assist UI formatting of the album results. |
+|| `4` `portraitid` | The contributor's portrait ID |
 
 Examples:
 ```
@@ -691,6 +693,7 @@ The `songinfo` command returns all the information on a song known by the server
 | `y`  `year` | Song year. Only if known. |
 | `Y`  `replay_gain` | Replay gain (in dB), if any |
 | `V`  `live_edge` | The Live edge of a remote stream. -1 is not live, 0 is live at the edge, >0 is number of seconds from the live edge. |
+| `4`  `portraitid` | The contributor's portrait ID |
 
 Example:
 ```

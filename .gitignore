@@ -6,3 +6,4 @@ plugins.json
 **/node_modules
 .DS_Store
 **/.wrangler
+tools/bug-extractor
