@@ -4,6 +4,7 @@
 
 - New Features:
 
+	- Implement an artist portrait picture handler. This will read images from folders where you've stored them under the artist's name, or from the artist folder in a typical artist/album/track hierarchy.
 	- Allow GETting the JSONRPC.js handler with a "request" parameter to simplify access by limited clients.
 
 - Server Changes:
