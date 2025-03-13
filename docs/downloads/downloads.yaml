@@ -1,9 +1,9 @@
 ---
-deb: '[:material-debian: Debian / :material-ubuntu: Ubuntu x86_64 (25 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_amd64.deb){ .md-button } [:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (32 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_arm.deb){ .md-button }'
-debamd64: '[:material-debian: Debian / :material-ubuntu: Ubuntu x86_64 (25 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_amd64.deb){ .md-button }'
-debarm: '[:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (32 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_arm.deb){ .md-button }'
-debi386: '[:material-debian: Debian / :material-ubuntu: Ubuntu - i386 (17 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_i386.deb){ .md-button }'
-debpi: '[:simple-raspberrypi: Raspberry Pi OS (32 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_arm.deb){ .md-button }'
+deb: '[:material-debian: Debian / :material-ubuntu: Ubuntu x86_64 (25 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_amd64.deb){ .md-button } [:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (32 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_arm.deb){ .md-button }'
+debamd64: '[:material-debian: Debian / :material-ubuntu: Ubuntu x86_64 (25 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_amd64.deb){ .md-button }'
+debarm: '[:material-debian: Debian / :material-ubuntu: Ubuntu - ARM (32 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_arm.deb){ .md-button }'
+debi386: '[:material-debian: Debian / :material-ubuntu: Ubuntu - i386 (17 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_i386.deb){ .md-button }'
+debpi: '[:simple-raspberrypi: Raspberry Pi OS (32 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_arm.deb){ .md-button }'
 dev:
   deb:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
@@ -76,156 +76,156 @@ dev:
     size: 16 MB
     timestamp: Wed Mar 12 22:02:49 2025
     url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.1.0-1741816969-win64.exe
-encore: '[:material-linux::material-music-box: Musical Fidelity (19 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1-MusicalFidelity.tgz){ .md-button }'
+encore: '[:material-linux::material-music-box: Musical Fidelity (19 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-MusicalFidelity.tgz){ .md-button }'
 latest:
   deb:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
-    name: lyrionmusicserver_9.0.1_all.deb
+    name: lyrionmusicserver_9.0.2_all.deb
     size: 58 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_all.deb
+    timestamp: Sun Mar  9 06:30:53 2025
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_all.deb
   debamd64:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'
-    name: lyrionmusicserver_9.0.1_amd64.deb
+    name: lyrionmusicserver_9.0.2_amd64.deb
     size: 25 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_amd64.deb
+    timestamp: Sun Mar  9 06:30:53 2025
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_amd64.deb
   debarm:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
-    name: lyrionmusicserver_9.0.1_arm.deb
+    name: lyrionmusicserver_9.0.2_arm.deb
     size: 32 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_arm.deb
+    timestamp: Sun Mar  9 06:30:53 2025
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_arm.deb
   debi386:
     desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'
-    name: lyrionmusicserver_9.0.1_i386.deb
+    name: lyrionmusicserver_9.0.2_i386.deb
     size: 17 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver_9.0.1_i386.deb
+    timestamp: Sun Mar  9 06:30:53 2025
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver_9.0.2_i386.deb
   encore:
     desc: ':material-linux::material-music-box: Musical Fidelity'
-    name: lyrionmusicserver-9.0.1-MusicalFidelity.tgz
+    name: lyrionmusicserver-9.0.2-MusicalFidelity.tgz
     size: 19 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1-MusicalFidelity.tgz
+    timestamp: Sun Mar  9 06:30:53 2025
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-MusicalFidelity.tgz
   mac: ~
   macos:
     desc: ':material-apple: Apple macOS'
-    name: LyrionMusicServer-9.0.1.dmg
+    name: LyrionMusicServer-9.0.2.dmg
     size: 45 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/LyrionMusicServer-9.0.1.dmg
+    timestamp: Sun Mar  9 06:30:53 2025
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/LyrionMusicServer-9.0.2.dmg
   majorVersion: 9
   minorVersion: 9.0
   nocpan:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'
-    name: lyrionmusicserver-9.0.1-noCPAN.tgz
+    name: lyrionmusicserver-9.0.2-noCPAN.tgz
     size: 17 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1-noCPAN.tgz
+    timestamp: Sun Mar  9 06:30:53 2025
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-noCPAN.tgz
   rpm:
     desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
-    name: lyrionmusicserver-9.0.1-1.noarch.rpm
-    size: 89 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1-1.noarch.rpm
-  src:
-    desc: ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'
-    name: lyrionmusicserver-9.0.1.tgz
-    size: 120 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1.tgz
-  tararm:
-    desc: ':material-linux::material-code-braces: ARM Linux Tarball'
-    name: lyrionmusicserver-9.0.1-arm-linux.tgz
-    size: 56 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1-arm-linux.tgz
-  version: 9.0.1
-  win: ~
-  win64:
-    desc: ':material-microsoft-windows: Windows 64-bit'
-    name: LyrionMusicServer-9.0.1-win64.exe
-    size: 17 MB
-    timestamp: Tue Jan  7 08:21:11 2025
-    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/LyrionMusicServer-9.0.1-win64.exe
-mac: '[ ()](){ .md-button }'
-macos: '[:material-apple: Apple macOS (45 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/LyrionMusicServer-9.0.1.dmg){ .md-button }'
-nocpan: '[:material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries (17 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1-noCPAN.tgz){ .md-button }'
-rpm: '[:material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution (89 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1-1.noarch.rpm){ .md-button }'
-src: '[:material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM (120 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1.tgz){ .md-button }'
-stable:
-  deb:
-    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
-    name: lyrionmusicserver_9.0.2~1741501853_all.deb
-    size: 58 MB
-    timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.2~1741501853_all.deb
-  debamd64:
-    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'
-    name: lyrionmusicserver_9.0.2~1741501853_amd64.deb
-    size: 25 MB
-    timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.2~1741501853_amd64.deb
-  debarm:
-    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
-    name: lyrionmusicserver_9.0.2~1741501853_arm.deb
-    size: 32 MB
-    timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.2~1741501853_arm.deb
-  debi386:
-    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'
-    name: lyrionmusicserver_9.0.2~1741501853_i386.deb
-    size: 17 MB
-    timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.2~1741501853_i386.deb
-  encore:
-    desc: ':material-linux::material-music-box: Musical Fidelity'
-    name: lyrionmusicserver-9.0.2-1741501853-MusicalFidelity.tgz
-    size: 19 MB
-    timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.2-1741501853-MusicalFidelity.tgz
-  mac: ~
-  macos:
-    desc: ':material-apple: Apple macOS'
-    name: LyrionMusicServer-9.0.2-1741501853.dmg
-    size: 45 MB
-    timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.2-1741501853.dmg
-  majorVersion: 9
-  minorVersion: 9.0
-  nocpan:
-    desc: ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'
-    name: lyrionmusicserver-9.0.2-1741501853-noCPAN.tgz
-    size: 17 MB
-    timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.2-1741501853-noCPAN.tgz
-  rpm:
-    desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
-    name: lyrionmusicserver-9.0.2-0.1.1741501853.noarch.rpm
+    name: lyrionmusicserver-9.0.2-1.noarch.rpm
     size: 89 MB
     timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.2-0.1.1741501853.noarch.rpm
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-1.noarch.rpm
   src:
     desc: ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'
-    name: lyrionmusicserver-9.0.2-1741501853.tgz
+    name: lyrionmusicserver-9.0.2.tgz
     size: 120 MB
     timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.2-1741501853.tgz
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2.tgz
   tararm:
     desc: ':material-linux::material-code-braces: ARM Linux Tarball'
-    name: lyrionmusicserver-9.0.2-1741501853-arm-linux.tgz
+    name: lyrionmusicserver-9.0.2-arm-linux.tgz
     size: 56 MB
     timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.2-1741501853-arm-linux.tgz
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-arm-linux.tgz
   version: 9.0.2
   win: ~
   win64:
     desc: ':material-microsoft-windows: Windows 64-bit'
-    name: LyrionMusicServer-9.0.2-1741501853-win64.exe
+    name: LyrionMusicServer-9.0.2-win64.exe
     size: 17 MB
     timestamp: Sun Mar  9 06:30:53 2025
-    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.2-1741501853-win64.exe
-tararm: '[:material-linux::material-code-braces: ARM Linux Tarball (56 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/lyrionmusicserver-9.0.1-arm-linux.tgz){ .md-button }'
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/LyrionMusicServer-9.0.2-win64.exe
+mac: '[ ()](){ .md-button }'
+macos: '[:material-apple: Apple macOS (45 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/LyrionMusicServer-9.0.2.dmg){ .md-button }'
+nocpan: '[:material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries (17 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-noCPAN.tgz){ .md-button }'
+rpm: '[:material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution (89 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-1.noarch.rpm){ .md-button }'
+src: '[:material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM (120 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2.tgz){ .md-button }'
+stable:
+  deb:
+    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386, x86_64, ARM'
+    name: lyrionmusicserver_9.0.3~1741878972_all.deb
+    size: 58 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.3~1741878972_all.deb
+  debamd64:
+    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu x86_64'
+    name: lyrionmusicserver_9.0.3~1741878972_amd64.deb
+    size: 25 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.3~1741878972_amd64.deb
+  debarm:
+    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - ARM'
+    name: lyrionmusicserver_9.0.3~1741878972_arm.deb
+    size: 32 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.3~1741878972_arm.deb
+  debi386:
+    desc: ':material-debian: Debian / :material-ubuntu: Ubuntu - i386'
+    name: lyrionmusicserver_9.0.3~1741878972_i386.deb
+    size: 17 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver_9.0.3~1741878972_i386.deb
+  encore:
+    desc: ':material-linux::material-music-box: Musical Fidelity'
+    name: lyrionmusicserver-9.0.3-1741878972-MusicalFidelity.tgz
+    size: 19 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.3-1741878972-MusicalFidelity.tgz
+  mac: ~
+  macos:
+    desc: ':material-apple: Apple macOS'
+    name: LyrionMusicServer-9.0.3-1741878972.dmg
+    size: 45 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.3-1741878972.dmg
+  majorVersion: 9
+  minorVersion: 9.0
+  nocpan:
+    desc: ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'
+    name: lyrionmusicserver-9.0.3-1741878972-noCPAN.tgz
+    size: 17 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.3-1741878972-noCPAN.tgz
+  rpm:
+    desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
+    name: lyrionmusicserver-9.0.3-0.1.1741878972.noarch.rpm
+    size: 89 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.3-0.1.1741878972.noarch.rpm
+  src:
+    desc: ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'
+    name: lyrionmusicserver-9.0.3-1741878972.tgz
+    size: 120 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.3-1741878972.tgz
+  tararm:
+    desc: ':material-linux::material-code-braces: ARM Linux Tarball'
+    name: lyrionmusicserver-9.0.3-1741878972-arm-linux.tgz
+    size: 56 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.3-1741878972-arm-linux.tgz
+  version: 9.0.3
+  win: ~
+  win64:
+    desc: ':material-microsoft-windows: Windows 64-bit'
+    name: LyrionMusicServer-9.0.3-1741878972-win64.exe
+    size: 17 MB
+    timestamp: Thu Mar 13 15:16:12 2025
+    url: https://downloads.lms-community.org/nightly/LyrionMusicServer-9.0.3-1741878972-win64.exe
+tararm: '[:material-linux::material-code-braces: ARM Linux Tarball (56 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-arm-linux.tgz){ .md-button }'
 win: '[ ()](){ .md-button }'
-win64: '[:material-microsoft-windows: Windows 64-bit (17 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.1/LyrionMusicServer-9.0.1-win64.exe){ .md-button }'
+win64: '[:material-microsoft-windows: Windows 64-bit (17 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/LyrionMusicServer-9.0.2-win64.exe){ .md-button }'

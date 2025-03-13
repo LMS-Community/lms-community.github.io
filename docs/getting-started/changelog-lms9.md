@@ -32,13 +32,23 @@
 	- Remove more left-overs from removed MySqueezebox integration.
 	- Remove support for MySQL. Existing configurations using it will log an error.
 
-## Version 9.0.2
+## Version 9.0.3
+
+- New Features:
+
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
+## Version 9.0.2 - 2025-03-13 (1470c9412)
 
 - New Features:
 
 	- Add a few more alarm clock sounds to the Sounds & Effects plugin.
-
-- Server Changes:
 
 - Platform Support:
 
