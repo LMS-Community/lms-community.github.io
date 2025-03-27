@@ -13,6 +13,7 @@
 	- Update downloader now validates the installers checksum.
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (@expectingtofly)
 	- [#1356](https://github.com/LMS-Community/slimserver/pull/1356) \- Use ORIGINALDATE tag with Flac (@jbylsma)
+	- [#1363](https://github.com/LMS-Community/slimserver/pull/1363) \- Allow item removal even if playlist has only 1 item (@mw9)
 
 - Platform Support:
 
