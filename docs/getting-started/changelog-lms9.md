@@ -17,7 +17,8 @@
 
 - Platform Support:
 
-	- Make Docker a first class citizan: add Slim::Utils::OS::Docker insted of a Custom.pm
+	- Make piCorePlayer a first class citizan: add Slim::Utils::OS::pCP to support it
+	- Make Docker a first class citizan: add Slim::Utils::OS::Docker instead of a Custom.pm
 	- Remove Win32 legacy support files, code, control panels, build pipeline, etc.
 	- Remove legacy Mac installer from build pipeline.
 	- Remove code dealing with Perl < 5.10.
@@ -28,7 +29,9 @@
 - Bug Fixes:
 
 	- [#1287](https://github.com/LMS-Community/slimserver/pull/1287) \- fix method name for spdr protocol handler.
-	- [#1359](https://github.com/LMS-Community/slimserver/pull/1359) \- Update ConnectionManager.pm to add checks for Wav and Opus (@BoringName15).
+	- [#1359](https://github.com/LMS-Community/slimserver/pull/1359) \- Update UPnP ConnectionManager.pm to add checks for Wav and Opus (@BoringName15).
+	- [#1362](https://github.com/LMS-Community/slimserver/pull/1362) \- Update UPnP AVTransport.pm to move LMS event registration (@BoringName15).
+	- [#1367](https://github.com/LMS-Community/slimserver/pull/1367) \- Update UPnP support to fix gapless playback (setNextAVTransport) (@BoringName15).
 
 - Other:
 
