@@ -14,6 +14,7 @@
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (@expectingtofly)
 	- [#1356](https://github.com/LMS-Community/slimserver/pull/1356) \- Use ORIGINALDATE tag with Flac (@jbylsma)
 	- [#1363](https://github.com/LMS-Community/slimserver/pull/1363) \- Allow item removal even if playlist has only 1 item (@mw9)
+	- [#1364](https://github.com/LMS-Community/slimserver/pull/1364) \- store/return playqueue entry context flag ("addedFromWork")
 
 - Platform Support:
 
@@ -68,18 +69,18 @@
 	- [#1193](https://github.com/LMS-Community/slimserver/issues/1193) \- Don't throw error when fulltext search is being used before the end of a scan.
 	- [#1214](https://github.com/LMS-Community/slimserver/issues/1214) \- If item in queue can't be played, StreamingController leaves player in a bad state, failing further playback.
 	- [#1288](https://github.com/LMS-Community/slimserver/issues/1288) \- Update Carp::Assert to latest to fix compatibility with recent Perl versions.
-	- [#1303](https://github.com/LMS-Community/slimserver/pull/1303) \- Fix an issue where browsing releases would sometimes create thousands of parameters (and more - thanks @darrel-k!).
+	- [#1303](https://github.com/LMS-Community/slimserver/pull/1303) \- Fix an issue where browsing releases would sometimes create thousands of parameters (and more - thanks @darrell-k!).
 	- [#1306](https://github.com/LMS-Community/slimserver/pull/1306) \- Don't run the scanner before we're done with the setup wizard.
 	- [#1307](https://github.com/LMS-Community/slimserver/pull/1307) \- Fix scanner progress information in the web UI.
-	- [#1309](https://github.com/LMS-Community/slimserver/pull/1309) \- Limit works advanced search to discovered albums. (@darrel-k)
+	- [#1309](https://github.com/LMS-Community/slimserver/pull/1309) \- Limit works advanced search to discovered albums. (@darrell-k)
 	- [#1314](https://github.com/LMS-Community/slimserver/issue/1314) \- The server would seemingly hang when trying to connect to the Material skin as long as no work has been found.
-	- [#1319](https://github.com/LMS-Community/slimserver/pull/1319) \- Don't filter by release types if user pref is ignoreReleaseTypes (@darrel-k).
-	- [#1325](https://github.com/LMS-Community/slimserver/pull/1325) \- Fix scanning multiple MusicBrainz IDs (@darrel-k).
+	- [#1319](https://github.com/LMS-Community/slimserver/pull/1319) \- Don't filter by release types if user pref is ignoreReleaseTypes (@darrell-k).
+	- [#1325](https://github.com/LMS-Community/slimserver/pull/1325) \- Fix scanning multiple MusicBrainz IDs (@darrell-k).
 	- Improve compatibility with modern HTML/JS and more strict browsers (eg. Safari).
 
 - Other:
 
-	- [#1315](https://github.com/LMS-Community/slimserver/pull/1315) \- Return contiguous/non-contiguous flag in statusQuery (thanks @darrel-k).
+	- [#1315](https://github.com/LMS-Community/slimserver/pull/1315) \- Return contiguous/non-contiguous flag in statusQuery (thanks @darrell-k).
 
 ## Version 9.0.1 - 2025-01-09 (e3effbe91)
 
@@ -108,15 +109,15 @@
 	- Only re-initialize menu settings for connected players - otherwise Analytics considers them "active" due to a prefs change.
 	- Fix display of final "Scan done" message in Material skin.
 	- Fix track count caching in "titles" query.
-	- [#1235](https://github.com/LMS-Community/slimserver/pull/1235) \- Need to utf8Decode album title for new & changed (thanks @darrel-k!)
+	- [#1235](https://github.com/LMS-Community/slimserver/pull/1235) \- Need to utf8Decode album title for new & changed (thanks @darrell-k!)
 	- [#1237](https://github.com/LMS-Community/slimserver/pull/1237) \- Fix create table syntax for MySQL (MariaDB) (thanks @JKDingwall!)
-	- [#1238](https://github.com/LMS-Community/slimserver/pull/1238) \- Merge multiple works per track into one single work (thanks @darrel-k!)
-	- [#1240](https://github.com/LMS-Community/slimserver/pull/1240) \- Add option to limit works scanning to classical genre(s) (thanks @darrel-k!)
+	- [#1238](https://github.com/LMS-Community/slimserver/pull/1238) \- Merge multiple works per track into one single work (thanks @darrell-k!)
+	- [#1240](https://github.com/LMS-Community/slimserver/pull/1240) \- Add option to limit works scanning to classical genre(s) (thanks @darrell-k!)
 	- [#1242](https://github.com/LMS-Community/slimserver/issues/1242) \- Fix plugin download - must wait for the download to finish before restarting the server
 	- [#1247](https://github.com/LMS-Community/slimserver/issues/1247) \- Fix display of final "Scan done" message and "Abort scan" link in Material/Classic skins.
 	- [#1250](https://github.com/LMS-Community/slimserver/issues/1250) \- Radio stations wouldn't show album artwork any more.
 	- [#1246](https://github.com/LMS-Community/slimserver/issues/1264) \- Windows registry value "DataPath" is in the wrong place.
-	- [#1273](https://github.com/LMS-Community/slimserver/pull/1273) \- Remove grouping & discsubtitle in new & changed scan if tags were removed (thanks @darrel-k!)
+	- [#1273](https://github.com/LMS-Community/slimserver/pull/1273) \- Remove grouping & discsubtitle in new & changed scan if tags were removed (thanks @darrell-k!)
 
 ## Introducing... Lyrion Music Server Version 9.0.0! - 2024-11-29 (2ed5e147e)
 
@@ -127,12 +128,12 @@
 	- New product name! Welcome Lyrion Music Server!
 	- New visuals - thanks @gobuleberbu & @mikes!
 	- Default skin refresh (the old version is still available as "Logic Teal")
-	- [Massive upgrade for (Classical) music lovers](https://github.com/LMS-Community/slimserver/pull/930): add support for Works, Performances, Disc Subtitles, Roles. Thanks a ton @darrel-k!
+	- [Massive upgrade for (Classical) music lovers](https://github.com/LMS-Community/slimserver/pull/930): add support for Works, Performances, Disc Subtitles, Roles. Thanks a ton @darrell-k!
 	- Improved first start setup: suggest a few plugins to install on initial startup.
 	- Add new "Recently Changed" browse mode to complement the "New Music" menu. The latter is no longer based on the file's timestamp, but on the time added to the collection, as stored in the persistant track table.
 	- [#1095](https://github.com/LMS-Community/slimserver/issues/1095) \- Link from online tracks and albums to local library (if possible).
 	- [#1115](https://github.com/LMS-Community/slimserver/pull/1115) \- Add option to show tracks from a given year, even if their album would be listed in a different year.
-	- [#1132](https://github.com/LMS-Community/slimserver/pull/1132) \- Allow user defined contributor roles (thanks @darrel-k!).
+	- [#1132](https://github.com/LMS-Community/slimserver/pull/1132) \- Allow user defined contributor roles (thanks @darrell-k!).
 	- [#1228](https://github.com/LMS-Community/slimserver/issues/1228) \- Allow user to define how many HTTP requests to follow.
 
 - Server Changes:
@@ -159,11 +160,11 @@
 
 - Bug Fixes:
 
-	- [#1027](https://github.com/LMS-Community/slimserver/issues/1027) \- Play count increase with in-track jumps (thanks @darrel-k!)
-	- [#1116](https://github.com/LMS-Community/slimserver/pull/1116) \- Fix album info track count when there are more than 50 tracks in an album (thanks @darrel-k!)
-	- [#1138](https://github.com/LMS-Community/slimserver/issues/1138) \- "Add all songs" from search not working (thanks @darrel-k!)
+	- [#1027](https://github.com/LMS-Community/slimserver/issues/1027) \- Play count increase with in-track jumps (thanks @darrell-k!)
+	- [#1116](https://github.com/LMS-Community/slimserver/pull/1116) \- Fix album info track count when there are more than 50 tracks in an album (thanks @darrell-k!)
+	- [#1138](https://github.com/LMS-Community/slimserver/issues/1138) \- "Add all songs" from search not working (thanks @darrell-k!)
 	- [#1146](https://github.com/LMS-Community/slimserver/pull/1146) \- Restore partial Cometd support for CLI clients (thanks @sodface!)
-	- [#1203](https://github.com/LMS-Community/slimserver/pull/1203) \- Fix display of album roles in the playlist (thanks @darrel-k!)
+	- [#1203](https://github.com/LMS-Community/slimserver/pull/1203) \- Fix display of album roles in the playlist (thanks @darrell-k!)
 	- [#1213](https://github.com/LMS-Community/slimserver/issues/1213) \- Modify #CURRTRACK to first track when playlist finishes
 	- [#1229](https://github.com/LMS-Community/slimserver/pull/1229) \- Only allow audio tracks for RandomPlay (thanks @jbylsma!)
 
