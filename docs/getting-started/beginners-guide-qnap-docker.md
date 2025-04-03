@@ -12,7 +12,7 @@ If you have a QNAP NAS which can run Docker containers aka. "Container Station",
 
 If you're still running the QNAP AppCenter version of "LogitechMediaServer", you must know that it hasn't been updated since 2012 (v7.7.2). Upgrading using this method is recommended.
 
-This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommunity/lyrionmusicserver/). Source and the dockerfile of the image can be found [here](https://github.com/LMS-Community/slimserver-platforms/tree/HEAD/Docker).
+This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommunity/lyrionmusicserver/) (or [from the Github Container Registry](https://github.com/LMS-Community/slimserver/pkgs/container/lyrionmusicserver)). Our examples assume you are pulling from Docker Hub. Source and the dockerfile of the image can be found [here](https://github.com/LMS-Community/slimserver-platforms/tree/HEAD/Docker).
 
 ## Assumptions
 

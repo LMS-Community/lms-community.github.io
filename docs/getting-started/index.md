@@ -68,7 +68,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 === ":material-docker: Docker"
 
-    See [lmscommunity/lyrionmusicserver](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) on Docker hub.
+    See [lmscommunity/lyrionmusicserver](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) on Docker hub, or [lms-community/lyrionmusicserver](https://github.com/LMS-Community/slimserver/pkgs/container/lyrionmusicserver) in the Github Container Registry.
 
     For Docker on Synology NAS see the [Beginner's Docker Guide on Synology](beginners-guide-synology-docker.md).
 

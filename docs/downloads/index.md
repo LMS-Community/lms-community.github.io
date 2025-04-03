@@ -6,7 +6,7 @@ title: LMS Downloads
 ---
 
 !!! hint
-    If you’re looking for the Docker image of Lyrion Music Server, please head over to the [:material-docker: Docker Hub Page](https://hub.docker.com/r/lmscommunity/lyrionmusicserver).
+    If you’re looking for the Docker image of Lyrion Music Server, please head over to the [:material-docker: Docker Hub Page](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) or the [:material-github: Github Container Registry](https://github.com/LMS-Community/slimserver/pkgs/container/lyrionmusicserver).
 
 ## v{{ latest.version }} - Latest Release
 
