@@ -48,6 +48,8 @@
 
 - Platform Support:
 
+	- [#1339](https://github.com/LMS-Community/slimserver/issues/1339) \- Add ghcr.io as an alternative container registry in addition to Docker Hub.
+
 - Bug Fixes:
 
 - Other:
