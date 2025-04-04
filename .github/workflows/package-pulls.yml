@@ -9,6 +9,7 @@ jobs:
 
     steps:
       - name: Set up jq
+        if: false
         run: sudo apt-get install -y jq
 
       - name: Get package downloads
@@ -24,12 +25,7 @@ jobs:
             "https://api.github.com/orgs/${REPO}/packages/container/${PACKAGE}")
 
           PACKAGE_INFO=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
-            "https://api.github.com/orgs/${REPO}/packages/container/${PACKAGE}/versions")
-
-          echo $PACKAGE_INFO | jq '.'
-
-          PACKAGE_INFO=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
-            "https://api.github.com/orgs/${REPO}/packages?package_type=container")
+            "https://api.github.com/orgs/packages?package_type=container")
 
           echo $PACKAGE_INFO | jq '.'
 
