@@ -8,26 +8,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up jq
-        if: false
-        run: sudo apt-get install -y jq
-
       - name: Get package downloads
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository_owner }}
+          # REPO: ${{ github.repository_owner }}
+          REPO: LMS-Community
         run: |
           # Define the repository and package name
           PACKAGE="lyrionmusicserver"
 
           # Fetch package metadata from the GitHub API
           PACKAGE_INFO=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
-            "https://api.github.com/orgs/${REPO}/packages/container/${PACKAGE}")
-
-          PACKAGE_INFO=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
-            "https://api.github.com/orgs/packages?package_type=container")
+            "https://api.github.com/orgs/${REPO}/packages/container/${PACKAGE}/versions?per_page=100")
 
           echo $PACKAGE_INFO | jq '.'
+
+          PACKAGE_INFO=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
+            "https://api.github.com/orgs/${REPO}/packages?package_type=container")
+
+          echo $PACKAGE_INFO | jq '.'
+
 
           # Extract the download count
           DOWNLOAD_COUNT=$(echo "$PACKAGE_INFO" | jq '.downloads')
