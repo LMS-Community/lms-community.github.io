@@ -23,6 +23,14 @@ jobs:
           PACKAGE_INFO=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
             "https://api.github.com/orgs/${REPO}/packages/container/${PACKAGE}")
 
+          PACKAGE_INFO=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
+            "https://api.github.com/orgs/${REPO}/packages/container/${PACKAGE}/versions")
+
+          echo $PACKAGE_INFO | jq '.'
+
+          PACKAGE_INFO=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
+            "https://api.github.com/orgs/${REPO}/packages?package_type=container")
+
           echo $PACKAGE_INFO | jq '.'
 
           # Extract the download count
