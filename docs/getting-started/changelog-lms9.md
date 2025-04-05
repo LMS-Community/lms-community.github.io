@@ -49,6 +49,7 @@
 - Platform Support:
 
 	- [#1339](https://github.com/LMS-Community/slimserver/issues/1339) \- Add ghcr.io as an alternative container registry in addition to Docker Hub.
+	- Download Strawberry Perl for Windows from our own download site. strawberryperl.com has been unstable recently.
 
 - Bug Fixes:
 
