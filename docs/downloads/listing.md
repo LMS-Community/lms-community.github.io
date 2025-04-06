@@ -46,6 +46,7 @@ title: Downloads Archive
         const debarm = deb.replace('x86_64, ', '').replace('i386, ', '');
         const rpm = `<td>${icons.redhat} Red Hat / ${icons.fedora} Fedora / ${icons.linux} other RPM-based distribution</td>`;
         const nocpan = `<td>${icons.linux}${icons.source} Linux/Unix Tarball - No CPAN Libraries</td>`;
+        const pcp = `<td>${icons.linux}${icons.source} pCP/Extension - No CPAN Libraries</td>`;
         const zipball = nocpan.replace('Tarball', 'ZIP Archive');
         const encore = `<td>${icons.linux}${icons.encore} Musical Fidelity</td>`;
         const tarball = `<td>${icons.linux}${icons.source} Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM</td>`;
@@ -79,6 +80,7 @@ title: Downloads Archive
             else if (item.key.endsWith('arm-linux.tgz')) fileType = tarball;
             else if (item.key.endsWith('.tgz') || item.key.endsWith('.tar.gz')) fileType = tararm;
             else if (item.key.endsWith('readynas.bin')) fileType = readynas;
+            else if (item.key.endsWith('tcz')) fileType = pcp;
 
             // firmware
             else if (/(fab4|baby|boom|jive|receiver|squeezebox|transporter).*(\d+)?.*\.bin$/.test(item.key)) fileType = sbFirmware;
