@@ -34,7 +34,6 @@ This is the released version. Please see [Getting Started](../getting-started/in
 | [{{ latest.deb.name }}]({{ latest.deb.url }}) | {{ latest.deb.size }} | {{ latest.deb.timestamp }} | {{ latest.deb.desc }} |
 | [{{ latest.rpm.name }}]({{ latest.rpm.url }}) | {{ latest.rpm.size }} | {{ latest.rpm.timestamp }} | {{ latest.rpm.desc }} |
 | [{{ latest.nocpan.name }}]({{ latest.nocpan.url }}) | {{ latest.nocpan.size }} | {{ latest.nocpan.timestamp }} | {{ latest.nocpan.desc }} |
-| [{{ latest.pcp.name }}]({{ latest.pcp.url }}) | {{ latest.pcp.size }} | {{ latest.pcp.timestamp }} | {{ latest.pcp.desc }} |
 | [{{ latest.tararm.name }}]({{ latest.tararm.url }}) | {{ latest.tararm.size }} | {{ latest.tararm.timestamp }} | {{ latest.tararm.desc }} |
 | [{{ latest.encore.name }}]({{ latest.encore.url }}) | {{ latest.encore.size }} | {{ latest.encore.timestamp }} | {{ latest.encore.desc }} |
 | [{{ latest.src.name }}]({{ latest.src.url }}) | {{ latest.src.size }} | {{ latest.src.timestamp }} | {{ latest.src.desc }} |
@@ -56,7 +55,6 @@ The stable branch is like the officially released latest version, with some addi
 | [{{ stable.deb.name }}]({{ stable.deb.url }}) | {{ stable.deb.size }} | {{ stable.deb.timestamp }} | {{ stable.deb.desc }} |
 | [{{ stable.rpm.name }}]({{ stable.rpm.url }}) | {{ stable.rpm.size }} | {{ stable.rpm.timestamp }} | {{ stable.rpm.desc }} |
 | [{{ stable.nocpan.name }}]({{ stable.nocpan.url }}) | {{ stable.nocpan.size }} | {{ stable.nocpan.timestamp }} | {{ stable.nocpan.desc }} |
-| [{{ stable.pcp.name }}]({{ stable.pcp.url }}) | {{ stable.pcp.size }} | {{ stable.pcp.timestamp }} | {{ stable.pcp.desc }} |
 | [{{ stable.tararm.name }}]({{ stable.tararm.url }}) | {{ stable.tararm.size }} | {{ stable.tararm.timestamp }} | {{ stable.tararm.desc }} |
 | [{{ stable.encore.name }}]({{ stable.encore.url }}) | {{ stable.encore.size }} | {{ stable.encore.timestamp }} | {{ stable.encore.desc }} |
 | [{{ stable.src.name }}]({{ stable.src.url }}) | {{ stable.src.size }} | {{ stable.src.timestamp }} | {{ stable.src.desc }} |
@@ -81,7 +79,6 @@ The development version is where you’ll find all the latest and greatest featu
 | [{{ dev.deb.name }}]({{ dev.deb.url }}) | {{ dev.deb.size }} | {{ dev.deb.timestamp }} | {{ dev.deb.desc }} |
 | [{{ dev.rpm.name }}]({{ dev.rpm.url }}) | {{ dev.rpm.size }} | {{ dev.rpm.timestamp }} | {{ dev.rpm.desc }} |
 | [{{ dev.nocpan.name }}]({{ dev.nocpan.url }}) | {{ dev.nocpan.size }} | {{ dev.nocpan.timestamp }} | {{ dev.nocpan.desc }} |
-| [{{ dev.pcp.name }}]({{ dev.pcp.url }}) | {{ dev.pcp.size }} | {{ dev.pcp.timestamp }} | {{ dev.pcp.desc }} |
 | [{{ dev.tararm.name }}]({{ dev.tararm.url }}) | {{ dev.tararm.size }} | {{ dev.tararm.timestamp }} | {{ dev.tararm.desc }} |
 | [{{ dev.encore.name }}]({{ dev.encore.url }}) | {{ dev.encore.size }} | {{ dev.encore.timestamp }} | {{ dev.encore.desc }} |
 | [{{ dev.src.name }}]({{ dev.src.url }}) | {{ dev.src.size }} | {{ dev.src.timestamp }} | {{ dev.src.desc }} |

@@ -46,7 +46,7 @@ title: Downloads Archive
         const debarm = deb.replace('x86_64, ', '').replace('i386, ', '');
         const rpm = `<td>${icons.redhat} Red Hat / ${icons.fedora} Fedora / ${icons.linux} other RPM-based distribution</td>`;
         const nocpan = `<td>${icons.linux}${icons.source} Linux/Unix Tarball - No CPAN Libraries</td>`;
-        const pcp = `<td>${icons.linux}${icons.source} pCP/Extension - No CPAN Libraries</td>`;
+        const pcp = `<td>${icons.raspberrypi} piCorePlayer - Squashfs</td>`;
         const zipball = nocpan.replace('Tarball', 'ZIP Archive');
         const encore = `<td>${icons.linux}${icons.encore} Musical Fidelity</td>`;
         const tarball = `<td>${icons.linux}${icons.source} Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM</td>`;
@@ -85,7 +85,7 @@ title: Downloads Archive
             // firmware
             else if (/(fab4|baby|boom|jive|receiver|squeezebox|transporter).*(\d+)?.*\.bin$/.test(item.key)) fileType = sbFirmware;
             else if (item.key.endsWith('.version')) fileType = versionFile;
-            else if (item.key.endsWith('version.sha') || item.key.endsWith('bin.sha')) fileType = sha;
+            else if (item.key.endsWith('.sha') || item.key.endsWith('.md5')) fileType = sha;
 
             // other file types
             else if (item.key.endsWith('.pdf')) fileType = pdf;
@@ -156,6 +156,7 @@ title: Downloads Archive
     <span class="icon fedora">:material-fedora:</span>
     <span class="icon linux">:material-linux:</span>
     <span class="icon redhat">:material-redhat:</span>
+    <span class="icon raspberrypi">:simple-raspberrypi:</span>
     <span class="icon ubuntu">:material-ubuntu:</span>
     <span class="icon windows">:material-microsoft-windows:</span>
     <span class="icon firmware">:material-file-download-outline:</span>
