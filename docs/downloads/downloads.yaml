@@ -50,6 +50,12 @@ dev:
     size: 17 MB
     timestamp: Sat Apr  5 05:57:08 2025
     url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.1.0-1743832628-noCPAN.tgz
+  pcp:
+    desc: ':material-linux::material-code-braces: pCP/Extension - No CPAN Libraries - Squashfs'
+    name: lyrionmusicserver-9.1.0-1743832628.tcz
+    size: 17 MB
+    timestamp: Sat Apr  5 05:57:08 2025
+    url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.1.0-1743832628.tcz
   rpm:
     desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
     name: lyrionmusicserver-9.1.0-0.1.1743832628.noarch.rpm
@@ -123,6 +129,12 @@ latest:
     size: 17 MB
     timestamp: Sun Mar  9 06:30:53 2025
     url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-noCPAN.tgz
+  pcp:
+    desc: ':material-linux::material-code-braces: pCP/Extension - No CPAN Libraries - Squashfs'
+    name: lyrionmusicserver-9.0.2.tcz
+    size: 17 MB
+    timestamp: Sun Mar  9 06:30:53 2025
+    url: https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2.tcz
   rpm:
     desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
     name: lyrionmusicserver-9.0.2-1.noarch.rpm
@@ -152,6 +164,7 @@ latest:
 mac: '[ ()](){ .md-button }'
 macos: '[:material-apple: Apple macOS (45 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/LyrionMusicServer-9.0.2.dmg){ .md-button }'
 nocpan: '[:material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries (17 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-noCPAN.tgz){ .md-button }'
+pcp: '[:material-linux::material-code-braces: pCP/Extension - No CPAN Libraries - Squashfs (17 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2.tcz){ .md-button }'
 rpm: '[:material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution (89 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2-1.noarch.rpm){ .md-button }'
 src: '[:material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM (120 MB)](https://downloads.lms-community.org/LyrionMusicServer_v9.0.2/lyrionmusicserver-9.0.2.tgz){ .md-button }'
 stable:
@@ -200,6 +213,7 @@ stable:
     size: 17 MB
     timestamp: Sat Apr  5 05:47:02 2025
     url: https://downloads.lms-community.org/nightly/lyrionmusicserver-9.0.3-1743832022-noCPAN.tgz
+  pcp: ~
   rpm:
     desc: ':material-redhat: Red Hat / :material-fedora: Fedora / :material-linux: other RPM-based distribution'
     name: lyrionmusicserver-9.0.3-0.1.1743832022.noarch.rpm
