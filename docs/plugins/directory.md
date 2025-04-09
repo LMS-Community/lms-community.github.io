@@ -109,14 +109,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 12308
 
--   __:material-music-box-outline: TIDAL local__
-
-    ---
-
-    TIDAL for local LMS use
-
-    Michael Herger, philippe_44    - [:octicons-globe-24: Details](https://github.com/michaelherger/lms-plugin-tidal)    - :octicons-download-24: 4121
-
 -   __:material-music-box-outline: YouTube__
 
     ---
@@ -1086,14 +1078,6 @@ title: Available Plugins
 
     Pierre Beck / Michael Herger / darrell / SamY / sveninndh    - [:octicons-globe-24: Details](https://github.com/LMS-Community/plugin-Qobuz)    - :octicons-download-24: 4347
 
--   __:material-star-shooting: TIDAL local__
-
-    ---
-
-    TIDAL for local LMS use
-
-    Michael Herger, philippe_44    - [:octicons-globe-24: Details](https://github.com/michaelherger/lms-plugin-tidal)    - :octicons-download-24: 4121
-
 -   __:material-star-shooting: AirPlay bridge__
 
     ---
@@ -1165,6 +1149,14 @@ title: Available Plugins
     PlayHLS - a minimal plugin that sets ups LMS conf file to play HLS URL using a media player application - ffmpeg by default
 
     bpa    - :octicons-download-24: 2568
+
+-   __:material-star-shooting: Music Information Screen__
+
+    ---
+
+    The Music Information Screen plugin allows customization of the player's Now Playing screen and other elements.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicInfoSCR/)    - :octicons-download-24: 2083
 
 </div>
 
