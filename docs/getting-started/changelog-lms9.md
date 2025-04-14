@@ -53,6 +53,8 @@
 
 - Bug Fixes:
 
+	- [#1373](https://github.com/LMS-Community/slimserver/issues/1373) \- Transcoding of some APE files does not work with LMS 9 - upgrade the mac binary to v10 (thanks @ralphy!).
+
 - Other:
 
 ## Version 9.0.2 - 2025-03-13 (1470c9412)
@@ -76,7 +78,7 @@
 	- [#1306](https://github.com/LMS-Community/slimserver/pull/1306) \- Don't run the scanner before we're done with the setup wizard.
 	- [#1307](https://github.com/LMS-Community/slimserver/pull/1307) \- Fix scanner progress information in the web UI.
 	- [#1309](https://github.com/LMS-Community/slimserver/pull/1309) \- Limit works advanced search to discovered albums. (@darrell-k)
-	- [#1314](https://github.com/LMS-Community/slimserver/issue/1314) \- The server would seemingly hang when trying to connect to the Material skin as long as no work has been found.
+	- [#1314](https://github.com/LMS-Community/slimserver/issues/1314) \- The server would seemingly hang when trying to connect to the Material skin as long as no work has been found.
 	- [#1319](https://github.com/LMS-Community/slimserver/pull/1319) \- Don't filter by release types if user pref is ignoreReleaseTypes (@darrell-k).
 	- [#1320](https://github.com/LMS-Community/slimserver/pull/1320) \- Scanner crashes on unexpected system folders.
 	- [#1325](https://github.com/LMS-Community/slimserver/pull/1325) \- Fix scanning multiple MusicBrainz IDs (@darrell-k).
