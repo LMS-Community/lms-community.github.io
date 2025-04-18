@@ -15,6 +15,7 @@
 	- [#1356](https://github.com/LMS-Community/slimserver/pull/1356) \- Use ORIGINALDATE tag with Flac (@jbylsma)
 	- [#1363](https://github.com/LMS-Community/slimserver/pull/1363) \- Allow item removal even if playlist has only 1 item (@mw9)
 	- [#1364](https://github.com/LMS-Community/slimserver/pull/1364) \- store/return playqueue entry context flag ("addedFromWork")
+	- [#1377](https://github.com/LMS-Community/slimserver/pull/1377) \- Provide new /time/tz endpoint for Squeezeplay to fetch the local timezone (@mw9)
 
 - Platform Support:
 
