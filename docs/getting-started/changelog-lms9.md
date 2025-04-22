@@ -1,6 +1,6 @@
 ## Version 9.1.0
 
-- [Upstream fixes from Lyrion Music Server 9.0.x](#version-901)
+- [Upstream fixes from Lyrion Music Server 9.0.x](#version-903)
 
 - New Features:
 
@@ -33,7 +33,6 @@
 	- [#1287](https://github.com/LMS-Community/slimserver/pull/1287) \- fix method name for spdr protocol handler.
 	- [#1359](https://github.com/LMS-Community/slimserver/pull/1359) \- Update UPnP ConnectionManager.pm to add checks for Wav and Opus (@BoringName15).
 	- [#1362](https://github.com/LMS-Community/slimserver/pull/1362) \- Update UPnP AVTransport.pm to move LMS event registration (@BoringName15).
-	- [#1367](https://github.com/LMS-Community/slimserver/pull/1367) \- Update UPnP support to fix gapless playback (setNextAVTransport) (@BoringName15).
 
 - Other:
 
@@ -55,6 +54,7 @@
 - Bug Fixes:
 
 	- [#1373](https://github.com/LMS-Community/slimserver/issues/1373) \- Transcoding of some APE files does not work with LMS 9 - upgrade the mac binary to v10 (thanks @ralphy!).
+	- [#1378](https://github.com/LMS-Community/slimserver/issues/1378) \- Rescanning a track with MusicBrainz ID can lead to corrupted ID value in database.
 
 - Other:
 
