@@ -992,6 +992,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SyncOptions.html)    - :octicons-download-24: 548
 
+-   __:material-tools: xAP Home Automation__
+
+    ---
+
+    xAP Home Automation connects Squeezebox Server with other xAP-enabled services and devices around the home.
+
+    Edward Pearson    - [:octicons-globe-24: Details](http://www.erspearson.com/xAP/Slim/slim_main.htm)    - :octicons-download-24: 75
+
 </div>
 
 ## :material-star-shooting: Most popular
