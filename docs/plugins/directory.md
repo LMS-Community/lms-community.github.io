@@ -37,6 +37,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim/)    - :octicons-download-24: 1341
 
+-   __:material-music-box-outline: Deezer local__
+
+    ---
+
+    Deezer for local LMS use
+
+    philippe_44, Michael Herger    - [:octicons-globe-24: Details](https://github.com/philippe44/lms-deezer)    - :octicons-download-24: 1823
+
 -   __:material-music-box-outline: Mixcloud__
 
     ---
@@ -76,14 +84,6 @@ title: Available Plugins
     Daughter of Pandora
 
     sspiff    - :octicons-download-24: 645
-
--   __:material-music-box-outline: Qobuz__
-
-    ---
-
-    Stream Qobuz to your Squeezebox.
-
-    Pierre Beck / Michael Herger / darrell / SamY / sveninndh    - [:octicons-globe-24: Details](https://github.com/LMS-Community/plugin-Qobuz)    - :octicons-download-24: 4160
 
 -   __:material-music-box-outline: SoundCloud__
 
@@ -638,6 +638,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim-plugins)    - :octicons-download-24: 1283
 
+-   __:material-information-box-outline: XSqueezeDisplay__
+
+    ---
+
+    Display Kodi (XBMC) Now Playing info on a Squeezebox SB2/3/Classic display.
+
+    [:octicons-mail-24: bossanova808](mailto:bossanova808@gmail.com)    - :octicons-download-24: 223
+
 </div>
 
 ## :material-playlist-music: Playlists
@@ -1062,14 +1070,6 @@ title: Available Plugins
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.lyrion.org/forum/user-forums/3rd-party-software/111952-announce-radio-now-playing-plugin?view=thread)    - :octicons-download-24: 4195
 
--   __:material-star-shooting: Qobuz__
-
-    ---
-
-    Stream Qobuz to your Squeezebox.
-
-    Pierre Beck / Michael Herger / darrell / SamY / sveninndh    - [:octicons-globe-24: Details](https://github.com/LMS-Community/plugin-Qobuz)    - :octicons-download-24: 4160
-
 -   __:material-star-shooting: DSDPlayer__
 
     ---
@@ -1149,6 +1149,14 @@ title: Available Plugins
     A plugin that shows lyrics from chartlyrics.com and musixmatch.com through the Song Info plugin. This plugin requires that the Song Info plugin also is installed. (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 2518
+
+-   __:material-star-shooting: Music Information Screen__
+
+    ---
+
+    The Music Information Screen plugin allows customization of the player's Now Playing screen and other elements.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicInfoSCR/)    - :octicons-download-24: 2028
 
 </div>
 
