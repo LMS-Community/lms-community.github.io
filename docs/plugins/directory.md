@@ -85,6 +85,14 @@ title: Available Plugins
 
     sspiff    - :octicons-download-24: 645
 
+-   __:material-music-box-outline: Qobuz__
+
+    ---
+
+    Stream Qobuz to your Squeezebox.
+
+    Pierre Beck / Michael Herger / darrell / SamY / sveninndh    - [:octicons-globe-24: Details](https://github.com/LMS-Community/plugin-Qobuz)    - :octicons-download-24: 4160
+
 -   __:material-music-box-outline: SoundCloud__
 
     ---
@@ -1070,6 +1078,14 @@ title: Available Plugins
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.lyrion.org/forum/user-forums/3rd-party-software/111952-announce-radio-now-playing-plugin?view=thread)    - :octicons-download-24: 4195
 
+-   __:material-star-shooting: Qobuz__
+
+    ---
+
+    Stream Qobuz to your Squeezebox.
+
+    Pierre Beck / Michael Herger / darrell / SamY / sveninndh    - [:octicons-globe-24: Details](https://github.com/LMS-Community/plugin-Qobuz)    - :octicons-download-24: 4160
+
 -   __:material-star-shooting: DSDPlayer__
 
     ---
@@ -1149,14 +1165,6 @@ title: Available Plugins
     A plugin that shows lyrics from chartlyrics.com and musixmatch.com through the Song Info plugin. This plugin requires that the Song Info plugin also is installed. (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 2518
-
--   __:material-star-shooting: Music Information Screen__
-
-    ---
-
-    The Music Information Screen plugin allows customization of the player's Now Playing screen and other elements.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicInfoSCR/)    - :octicons-download-24: 2028
 
 </div>
 
