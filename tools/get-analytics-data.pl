@@ -79,13 +79,22 @@ sub prepareData {
     return $data;
 }
 
-my (@players, @versions, @os);
+my (@players, @versions, @os, @playerHistory);
 
 foreach my $historical (@$history) {
     push @players, {
         d => $historical->{d},
         p => $historical->{p}
     };
+
+    push @playerHistory, map {
+        my ($k, $v) = each %$_;
+        {
+            d => $historical->{d},
+            p => $k,
+            c => $v,
+        };
+    } @{from_json($historical->{t} || "[]") || []};
 
     push @os, map {
         my ($k, $v) = each %$_;
@@ -123,6 +132,7 @@ my %stats = (
         $_;
     } @{prepareData($stats->{playerTypes}, 'p') || []} ],
     connectedPlayers => prepareData($stats->{connectedPlayers}, 'p'),
+    playerHistory => \@playerHistory,
     countries => prepareData($stats->{countries}, 'c', 'i'),
     osHistory => \@os,
     os        => prepareData($stats->{os}, 'o'),
