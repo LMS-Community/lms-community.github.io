@@ -21,7 +21,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 ```vegalite
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Number of player types (squeezelite beyond the chart)",
+    "title": "Number of player types",
     "description": "Time series chart of LMS player types",
     "data": {
         "url": "/analytics/stats.json",
@@ -56,104 +56,8 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
             "filter": {
                 "field": "c",
                 "range": [
-                    150,
-                    19000
-                ]
-            }
-        }
-    ],
-    "layer": [
-        {
-            "mark": {
-                "type": "line",
-                "point": {
-                    "filled": true,
-                    "size": 15
-                }
-            }
-        },
-        {
-            "params": [
-                {
-                    "name": "hover",
-                    "select": {
-                        "type": "point",
-                        "on": "pointerover",
-                        "clear": "pointerout"
-                    }
-                }
-            ],
-            "mark": {
-                "type": "circle",
-                "tooltip": true
-            },
-            "encoding": {
-                "opacity": {
-                    "condition": {
-                        "test": {
-                            "param": "hover",
-                            "empty": false
-                        },
-                        "value": 1
-                    },
-                    "value": 0
-                },
-                "size": {
-                    "condition": {
-                        "test": {
-                            "param": "hover",
-                            "empty": false
-                        },
-                        "value": 48
-                    },
-                    "value": 100
-                }
-            }
-        }
-    ]
-}
-```
-
-```vegalite
-{
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Number of player types (with squeezelite)",
-    "description": "Time series chart of LMS player types (with squeezelite)",
-    "data": {
-        "url": "/analytics/stats.json",
-        "format": {
-            "property": "playerHistory"
-        }
-    },
-    "height": 800,
-    "encoding": {
-        "x": {
-            "field": "d",
-            "type": "temporal",
-            "title": "Date",
-            "timeUnit": "yearmonthdate"
-        },
-        "y": {
-            "field": "c",
-            "type": "quantitative",
-            "title": "Installations",
-            "scale": {
-                "domainMin": 500
-            }
-        },
-        "color": {
-            "field": "p",
-            "type": "nominal",
-            "title": "OS"
-        }
-    },
-    "transform": [
-        {
-            "filter": {
-                "field": "c",
-                "range": [
-                    500,
-                    119500
+                    400,
+                    99000
                 ]
             }
         }
