@@ -820,7 +820,7 @@ title: Available Plugins
 
     ---
 
-    Bookmark Plugin - Adds the possibility to bookmark audio files. Useful for radio dramas and audio books. Please define the genres for which you want bookmarks in the settings, otherwise the plugin will create bookmarks also for music albums (which you probably don't want)
+    Bookmark Plugin - Adds the possibility to bookmark audio files. Useful for radio dramas and audio books.
 
     [:octicons-mail-24: Martin Johnen](mailto:m.johnen@gmail.com)    - [:octicons-globe-24: Details](http://forums.lyrion.org/showthread.php?102859-New-plugin-for-audio-bookmarks/)    - :octicons-download-24: 442
 
@@ -980,7 +980,7 @@ title: Available Plugins
 
     ---
 
-    DSP for Squeezebox server version 0.1.11d) - provides EQ and DSP. Number of small tweaks 
+    DSP for Squeezebox server version (0.1.20e) - provides EQ and DSP.
 
     Jonathan Fox    - :octicons-download-24: 551
 
