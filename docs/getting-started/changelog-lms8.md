@@ -210,7 +210,7 @@
 	- Updated Dutch translation - thanks blackfiction!
 	- Add support for TIDAL replay gain.
 	- Dramatically improve Fulltext Search indexing for large playlists (thousands of tracks).
-	- Improve security of LMS <-> MySqueezebox.com communication: don't store credentials, but only a session token.
+	- Improve security of LMS <-> mysqueezebox.com communication: don't store credentials, but only a session token.
 	- Clean up legacy JavaScript support: update PrototypeJS and Scriptaculous to their latest builds, remove some legacy code.
 	- [#678](https://github.com/LMS-Community/slimserver/pull/678) \- Fix up character encoding issues in Web UI Scanner progress reporting and Web UI log display (thanks mw9!)
 	- [#708](https://github.com/LMS-Community/slimserver/pull/708) \- Update to MP3, FLAC, Ogg and WMA Formats to use BPM tags - thanks kwarklabs!
