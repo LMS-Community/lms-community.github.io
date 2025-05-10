@@ -26,7 +26,7 @@ You may need to try this multiple times.  Then navigate to:
 
 Settings → Advanced → Networking → Remote Library → Add New Library → enter IP address of your LMS → Connect to this library
 
-You should then be connected to your local LMS.  If you have the plugin entitled "Community Firmware for Touch/Radio/Controller" installed on your local LMS, you should see a prompt for a firmware update which will eliminate the connection attempt to Mysquezeebox.com and rebrand the startup screen to Lyrion.
+You should then be connected to your local LMS.  If you have the plugin entitled "Community Firmware for Touch/Radio/Controller" installed on your local LMS, you should see a prompt for a firmware update which will eliminate the connection attempt to MySqueezebox.com and rebrand the startup screen to Lyrion.
 
 
 ## UE Smart Radio
