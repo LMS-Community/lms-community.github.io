@@ -17,9 +17,9 @@ The Radio has a two-way, bi-amplified mono speaker (as opposed to stereo speaker
 
 An accessory pack consisting of a battery and an infrared remote control is optional.
 
-## Community Firmware
+## Migrating to Community Firmware
 
-When setting up a Squeezebox Radio to work with your local LMS instance, the setup wizard in older firmware can get stuck trying to connect to Mysqueezebox.com which is now defunct.  Use the same
+When setting up a Squeezebox Radio to work with your local LMS instance, the setup wizard in older firmware can get stuck trying to connect to MySqueezebox.com which is now defunct.  Use the same
 [technique](../getting-started/migrate-from-uesr.md) described in the next section
 to press and hold the "Back" (:material-arrow-left-bold: ) button on your Radio to access the Settings screen.
 You may need to try this multiple times.  Then navigate to:
