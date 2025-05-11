@@ -104,6 +104,7 @@ nav:
     - Advanced guides:
       - Use OpenVPN on SB Radio/Touch: getting-started/advanced-guide-openvpn.md
       - Migrate from UE Smart Radio: getting-started/migrate-from-uesr.md
+      - LMS on ReadyNAS: getting-started/lms-on-readynas.md
     - Changelog:
       - LMS 9 changelog: getting-started/changelog-lms9.md
       - LMS 8 changelog: getting-started/changelog-lms8.md
