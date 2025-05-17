@@ -456,22 +456,6 @@ title: Available Plugins
 
 <div class="grid cards" markdown>
 
--   __:material-page-layout-header-footer: Dark Default Skin__
-
-    ---
-
-    Dark-themed version of the LMS Default skin
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#%EF%B8%8F-dark-default-skin)    - :octicons-download-24: 440
-
--   __:material-page-layout-header-footer: Dark Logic Skin__
-
-    ---
-
-    Dark-themed version of the LMS Logic Teal skin
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-dark-logic-skin)    - :octicons-download-24: 256
-
 -   __:material-page-layout-header-footer: Material Skin__
 
     ---
@@ -485,14 +469,6 @@ title: Available Plugins
 ## :material-information-box-outline: Information, Metadata
 
 <div class="grid cards" markdown>
-
--   __:material-information-box-outline: Alternative Play Count__
-
-    ---
-
-    Provides alternative play counts and skip counts that aim to reflect your true listening history. You set a time after which a song counts as played. If you skip the song before, it counts as skipped, not played. Use the data with other plugins to create/play smart playlists (dynamic playlists), create virtual libraries or skip tracks.
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-alternative-play-count)    - :octicons-download-24: 265
 
 -   __:material-information-box-outline: Database Query__
 
@@ -582,14 +558,6 @@ title: Available Plugins
 
     flipflip    - [:octicons-globe-24: Details](https://github.com/phkehl/lms-plugins)    - :octicons-download-24: 147
 
--   __:material-information-box-outline: Ratings Light__
-
-    ---
-
-    Set, import, export, log, backup and restore track ratings. Create virtual libraries/library views for rated tracks with LMS browse menus.
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-ratings-light)    - :octicons-download-24: 335
-
 -   __:material-information-box-outline: SaverSwitcher__
 
     ---
@@ -630,14 +598,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.lyrion.org/index.php/Title_Switcher_plugin)    - :octicons-download-24: 126
 
--   __:material-information-box-outline: Visual Statistics__
-
-    ---
-
-    Have a look at your library statistics with charts.
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-ratings-light)    - :octicons-download-24: 617
-
 -   __:material-information-box-outline: What Was That Tune?__
 
     ---
@@ -660,30 +620,6 @@ title: Available Plugins
 
 <div class="grid cards" markdown>
 
--   __:material-playlist-music: Context Stats__
-
-    ---
-
-    Display lists of tracks, albums or artists sorted by statistics from the context menus of artists, albums, genres, years and playlists.
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-context-stats)    - :octicons-download-24: 161
-
--   __:material-playlist-music: Custom Skip__
-
-    ---
-
-    Set rules for when the current track or upcoming tracks in your player's playlist should be skipped and removed from the playlist automatically.
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-skip)    - :octicons-download-24: 145
-
--   __:material-playlist-music: Custom Start Stop Times__
-
-    ---
-
-    Skip unwanted parts of a song (e.g. annoying intros, silence at the end or in the middle).
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-start-stop-times)    - :octicons-download-24: 91
-
 -   __:material-playlist-music: Disable Shuffle__
 
     ---
@@ -699,22 +635,6 @@ title: Available Plugins
     Extension for Dynamic Playlist, using MusicIP to produce mixes.
 
     [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/DynamicMixPlugin.htm)    - :octicons-download-24: 481
-
--   __:material-playlist-music: Dynamic Playlist Creator__
-
-    ---
-
-    Helps you create custom smart playlists (dynamic playlists) for the Dynamic Playlists plugin.
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-dynamic-playlist-creator)    - :octicons-download-24: 637
-
--   __:material-playlist-music: Dynamic Playlists__
-
-    ---
-
-    Use smart playlists (dynamic playlists) to play continuous music mixes based on your selection criteria.
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-dynamic-playlists)    - :octicons-download-24: 834
 
 -   __:material-playlist-music: LastMix - Don't Stop The Music support using Last.fm.__
 
@@ -762,14 +682,6 @@ title: Available Plugins
 
     James Marsh; Stuart Hickinbottom    - :octicons-download-24: 1661
 
--   __:material-file-search-outline: Custom Tag Importer__
-
-    ---
-
-    Scans track information from custom tags in your music files (incl. rating tags).
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-tag-importer)    - :octicons-download-24: 285
-
 -   __:material-file-search-outline: LazySearch2__
 
     ---
@@ -793,14 +705,6 @@ title: Available Plugins
     Plugin to easily generate library views.
 
     [:octicons-mail-24: Andy Hawkins](mailto:andy@gently.org.uk)    - [:octicons-globe-24: Details](https://github.com/adhawkins/SimpleLibraryViews)    - :octicons-download-24: 265
-
--   __:material-file-search-outline: Virtual Library Creator__
-
-    ---
-
-    A quick and easy way to create and manage your own virtual libraries/library views.
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-virtual-library-creator)    - :octicons-download-24: 282
 
 </div>
 
@@ -928,14 +832,6 @@ title: Available Plugins
 
     [:octicons-mail-24: bpa](mailto:baltontwo@eircom.net)    - :octicons-download-24: 1074
 
--   __:material-tools: PotPourri__
-
-    ---
-
-    A collection of small features. Examples: change track order of saved/client playlists, set power-on volume level for players or time to turn off all players each day, export saved playlists to playlist files with custom file paths/extensions… Complete feature list, screenshots and more information on the GitHub page.
-
-    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-potpourri)    - :octicons-download-24: 143
-
 -   __:material-tools: PowerCenter__
 
     ---
@@ -959,14 +855,6 @@ title: Available Plugins
     Provides a Web interface for copying settings from one player to another, permanently "linking" settings on multiple Squeezeboxes, setting defaults for newly connected Squeezeboxes or remote /stream.mp3 clients, and importing/exporting client settings, to make it easier to manage multiple Squeezebox players. (Boom, Classic, Receiver, Slimp3, SoftSqueeze, Squeezebox1, Transporter)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/SettingsManager.html)    - :octicons-download-24: 588
-
--   __:material-tools: Signal Generator__
-
-    ---
-
-    Signal Generator plugin.  Now supports Squeezeplay as well as SB2/3/Transporter.
-
-    [:octicons-mail-24: Triode](mailto:triode1@btinternet.com)    - :octicons-download-24: 360
 
 -   __:material-tools: SqueezeboxEQ__
 
