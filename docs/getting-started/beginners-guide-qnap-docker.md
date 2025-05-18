@@ -68,7 +68,7 @@ In this guide the following assumptions apply:
 
 ## Updating the Docker image
 
-It is always advisable to regularly update your software, and with Docker on Synology it is made very easy.
+It is always advisable to regularly update your software, and with Container Station on QNAP it is made very easy.
 
 1. Open "Container Station"
 2. Go to "Images" and click on the cog wheel "⚙️" next to "lmscommunity/lyrionmusicserver".
