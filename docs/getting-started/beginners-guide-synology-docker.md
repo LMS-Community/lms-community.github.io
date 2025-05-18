@@ -6,11 +6,11 @@ title: Beginner's Docker Guide on Synology
 # Beginner's Docker Guide on Synology
 
 !!! note
-    In case you have any difficulties following this guide or have found some errors, please leave a note on the [forums](https://forums.slimdevices.com/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers). Thanks!
+    In case you have any difficulties following this guide or have found some errors, please leave a note on the [forums](https://forums.lyrion.org/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers). Thanks!
 
 If you have a Synology NAS which can run Docker containers, you are in luck! Look [here](https://www.synology.com/en-global/dsm/packages/ContainerManager) to check if your Synology NAS is able to run Docker containers.
 
-This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommunity/lyrionmusicserver/). Source and the dockerfile of the image can be found [here](https://github.com/LMS-Community/slimserver-platforms/tree/HEAD/Docker).
+This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommunity/lyrionmusicserver/) (or [from the Github Container Registry](https://github.com/LMS-Community/slimserver/pkgs/container/lyrionmusicserver)). Our examples assume you are pulling from Docker Hub. Source and the dockerfile of the image can be found [here](https://github.com/LMS-Community/slimserver-platforms/tree/HEAD/Docker).
 
 ## Assumptions
 
@@ -131,10 +131,10 @@ With the release of LMS9 the image `lmscommunity/logitechmediaserver` is depreca
     Change this line to:
 
         "image" : "lmscommunity/lyrionmusicserver:stable",
-        
+
     It is recommended to use the `stable` tag, more information about which tag is most suitable for you is described [here](https://hub.docker.com/r/lmscommunity/lyrionmusicserver). Please also make sure that all the quotation marks and the trailing comma stays intact.
 
 4. Next step is to download the new image. Go to "Registry" and download the `lmscommunity/lyrionmusicserver` image. Choose the same tag you have specified in the json file.
-5. Before we recreate the container using the updated configuration we need to remove the current container (nothing important will be removed, as the data is stored in volumes and the container configuration is saved in the json file). Select the LMS container, choose "Action" > "Stop", and subsequently "Delete". 
+5. Before we recreate the container using the updated configuration we need to remove the current container (nothing important will be removed, as the data is stored in volumes and the container configuration is saved in the json file). Select the LMS container, choose "Action" > "Stop", and subsequently "Delete".
 6. Last step is to recreate the container using the freshly downloaded image and the edited json file. First, go to the "Container" screen. If you do not have any containers running, press the "Import" button, else click "Action" and press "Import" > "From local device". In the "Import Container" screen, browse to the just edited file and enter a suitable "Container name" (for instance `lyrionmusicserver`). Press "Import".
 7. Start the new container and you are all set!

@@ -7,7 +7,7 @@ use JSON;
 use LWP::UserAgent;
 
 use constant STATS_SUMMARY => 'https://stats.lms-community.org/api/stats';
-use constant STATS_HISTORY => 'https://stats.lms-community.org/api/stats/history?version=8.4.0';
+use constant STATS_HISTORY => 'https://stats.lms-community.org/api/stats/history?version=8.4.0&days=365';
 use constant PLAYERNAME_MAP => 'docs/analytics/players-displayname.json';
 
 my $playerTypes = {
@@ -79,13 +79,31 @@ sub prepareData {
     return $data;
 }
 
-my (@players, @versions);
+my (@players, @versions, @os, @playerHistory);
 
 foreach my $historical (@$history) {
     push @players, {
         d => $historical->{d},
         p => $historical->{p}
     };
+
+    push @playerHistory, map {
+        my ($k, $v) = each %$_;
+        {
+            d => $historical->{d},
+            p => $k,
+            c => $v,
+        };
+    } @{from_json($historical->{t} || "[]") || []};
+
+    push @os, map {
+        my ($k, $v) = each %$_;
+        {
+            d => $historical->{d},
+            o => $k,
+            c => $v,
+        };
+    } @{from_json($historical->{o}) || []};
 
     my $total = 0;
     push @versions, map {
@@ -114,7 +132,9 @@ my %stats = (
         $_;
     } @{prepareData($stats->{playerTypes}, 'p') || []} ],
     connectedPlayers => prepareData($stats->{connectedPlayers}, 'p'),
+    playerHistory => \@playerHistory,
     countries => prepareData($stats->{countries}, 'c', 'i'),
+    osHistory => \@os,
     os        => prepareData($stats->{os}, 'o'),
     tracks    => prepareData($stats->{tracks}, 't'),
 );

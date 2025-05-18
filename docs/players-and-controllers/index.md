@@ -46,6 +46,8 @@ After 2010 the LMS community developed DIY hardware offerings:
 
 - [Squeezelite-ESP32](https://github.com/sle118/squeezelite-esp32)
 - [SqueezeAMP](https://github.com/philippe44/SqueezeAMP) - which is an implementation of Sqeezelite-ESP32
+- [Muse Radio](https://github.com/RASPIAUDIO/squeezelite-esp32) - An ESP32-S3 radio made for Lyrion, resembling the Squeezebox Radio and running Squeezelite-ESP32
+- [Muse Luxe](https://raspiaudio.com/muse/) - An ESP32 speaker made for Lyrion, running Squeezelite-ESP32
 
 ## Software based players
 
@@ -57,7 +59,7 @@ After 2010 the LMS community developed DIY hardware offerings:
 For mobile phones and tablets:
 
 - [iPeng](https://penguinlovesmusic.de/) (iOS - paid) - in-app purchase to also be a player
-- [SlimLibrary](https://apps.apple.com/us/app/slimlibrary/id1022479972) (iOS - paid) [Announcement](https://forums.slimdevices.com/forum/user-forums/3rd-party-software/100649-announce-slimlibrary-new-ios-remote-control-and-player-for-logitech-media-server?view=thread)
+- [SlimLibrary](https://apps.apple.com/us/app/slimlibrary/id1022479972) (iOS - paid) [Announcement](https://forums.lyrion.org/forum/user-forums/3rd-party-software/100649-announce-slimlibrary-new-ios-remote-control-and-player-for-logitech-media-server?view=thread)
 - [SB Player](https://play.google.com/store/apps/details?id=com.angrygoat.android.sbplayer) (Android - paid)
 - [SqueezePlayer](https://play.google.com/store/apps/details?id=de.bluegaspode.squeezeplayer) (Android - paid)
 - [Squeezelite via Termux](https://github.com/CDrummond/lms-material-app/wiki/Squeezelite-via-Termux) (Android)

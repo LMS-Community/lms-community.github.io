@@ -20,6 +20,10 @@ title: Applications
 - [Squeezer](https://github.com/kaaholst/android-squeezer) (Android): Control your Lyrion Music Server and players from your Android phone.
 - [Ultralight LMS skin](https://github.com/millerdev/lms-ultralight) (Browser): A responsive skin for Lyrion Music Server that works well on desktop and mobile browsers.
 
+## Voice Control
+- [MediaServer](https://mediaserver.smartskills.tech) (Alexa) A custom Alexa skill to fully control LMS and also stream LMS-audio via Amazon Echo devices.
+- [LMS-Lite](https://smartskills.tech/lmslitesetup/index.html) (Alexa) A smart-home Alexa skill to add LMS players to Alexa routines.
+
 ## Display
 - [LMSMonitor](https://github.com/shunte88/LMSMonitor): OLED information display control program for piCorePlayer or other Raspberry Pi and LMS based audio device.
 - [OLED Control for PCP 7.x, 8.X & 9.X](https://github.com/peteS-UK/EvoSabre-DAC-PCP): Display information from LMS on an OLED display.
@@ -39,7 +43,7 @@ title: Applications
 
 ## Platforms
 - [Home Assistant Add-on: LMS](https://github.com/pssc/ha-addon-lms/tree/master/lms): A complete and easy way to run LMS
-- [LMS on Android](https://forums.slimdevices.com/forum/user-forums/general-discussion/1674045): Run LMS on an Android device using Termux.
+- [LMS on Android](https://forums.lyrion.org/forum/user-forums/general-discussion/1674045): Run LMS on an Android device using Termux.
 
 ## Automatic Playlist / Mix Creation
 - [LMS Recommender](https://www.nexus0.net/pub/sw/lmsrecommender/): A system to create music recommendations for local music based on positive and negative tracks. Results can be further refined by using filters (inferred track classifications (moods, genres, …) or track metadata (ratings, …).

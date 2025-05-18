@@ -93,6 +93,28 @@ Skip to the next track on player `00:04:20:ab:cd:ef`:
     printf "00:04:20:ab:cd:ef playlist index +1\n" | nc 192.168.1.1 9090
     ```
 
+### Practice with a few Telnet commands
+Log in to Telnet using port 9090. Use Telnet commands to get version of LMS, find player id, and use that player id to mute the player. After each command you should get a response.
+
+>`telnet localhost 9090`
+> 
+>`version ?`
+> 
+>`player id 0 ?​`
+> 
+>`00:04:20:ab:cd:ef​ mute`
+
+### Practice with a few curl (jsonrpc.js) commands
+With curl, no need to log in, use port 9000 with the ip address of your player. Use Curl commands to get version of LMS, find player id, and use that player id to mute the player. After each command you should get a response. If curl command is incorrect, there will either be an empty response {} or you'll observe an ECONNRESET error.
+
+>`curl -g -X POST -d '{"id":1,"method":"slim.request","params":["00:00:00:00:00:00",["player","version","?"]]}' http://192.168.1.1:9000/jsonrpc.js​`
+> 
+>`curl -g -X POST -d '{"id":1,"method":"slim.request","params":["00:00:00:00:00:00",["player", "id", "0", "?"]]}' http://192.168.1.1:9000/jsonrpc.js`
+> 
+>`curl -g -X POST -d '{"id":1,"method":"slim.request","params":["00:04:20:ab:cd:ef",["mixer","muting","1"]]}' http://192.168.1.1:9000/jsonrpc.js​`
+
+This example uses the same commands as the previous Telnet example.  It should allow you to convert Telnet commands, used extensively in this documentation, to the equivalent curl (or wget, nc/ncat) commands.
+
 ***
 ## Command format
 

@@ -34,6 +34,7 @@ The available commands and queries are listed below, grouped by their scope:
 ### Changes starting from Lyrion Music Server 9.1
 
 * Added `2` tag to `albums` query to return the number of an album's groupings.
+* Added `4` tag to `albums`, `artists`, `songs` und `status` query to get the artist portrait ID. This ID can be used in a `/contributor/<portraitId>/image` url to get the artist's portrait.
 
 ### Changes starting from Lyrion Music Server 9.0
 

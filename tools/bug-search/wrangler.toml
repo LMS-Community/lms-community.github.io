@@ -1,0 +1,13 @@
+name = "lms-bug-search"
+main = "src/index.ts"
+compatibility_date = "2024-04-05"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[[ d1_databases ]]
+binding = "BUGS_DB" # available in your Worker on env.DB
+database_name = "lms-bugs-archive"
+database_id = "5afba335-d32c-4a4f-8098-ae7c21f837ac"

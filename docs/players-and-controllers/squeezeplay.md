@@ -9,7 +9,7 @@ title: SqueezePlay
   ![](assets/squeezeplay.png){ width="400" }
 </figure>
 
-SqueezePlay is the desktop version of the Jive/Squeezebox Controller software. It provides an audio player with roughly the same look and feel as the Squeezebox user interfaces, for browsing, playing music and internet streams on your personal computer. It's a replacement for [SoftSqueeze](softsqueeze.md) and based on the SqueezeOS software platform. 
+SqueezePlay is the desktop version of the Jive/Squeezebox Controller software. It provides an audio player with roughly the same look and feel as the Squeezebox user interfaces, for browsing, playing music and internet streams on your personal computer. It's a replacement for [SoftSqueeze](softsqueeze.md) and based on the SqueezeOS software platform.
 
 If you are looking for a practical all-in-one solution for playback and to control your music from your desktop, SqueezePlay is your best pick. If you are looking for more advanced playback capabilities and more customization for the control application, please look into the [Jivelite](jivelite.md)+[Squeezelite](squeezelite.md) combination.
 
@@ -64,4 +64,4 @@ Play Favorite 0-9	0-9
 
 ## Troubleshooting
 
-In case you encounter issues, please head over to the [forums](https://forums.slimdevices.com/forum/user-forums/general-discussion/93838-squeezeplay-for-windows-with-asio-directsound-wasapi-and-wdmks-device-support) for assistance. 
+In case you encounter issues, please head over to the [forums](https://forums.lyrion.org/forum/user-forums/general-discussion/93838-squeezeplay-for-windows-with-asio-directsound-wasapi-and-wdmks-device-support) for assistance.

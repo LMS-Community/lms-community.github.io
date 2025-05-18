@@ -24,4 +24,4 @@ If you are running [piCorePlayer](picoreplayer.md), Jivelite is very easy to ins
 
 ## Troubleshooting
 
-In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com/forum/user-forums/linux-unix/95254-announce-jivelite-cut-down-squeezebox-control-application) for assistance. 
+In case you encounter some problems please head over to the [forums](https://forums.lyrion.org/forum/user-forums/linux-unix/95254-announce-jivelite-cut-down-squeezebox-control-application) for assistance.

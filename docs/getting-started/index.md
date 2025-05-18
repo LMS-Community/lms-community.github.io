@@ -11,7 +11,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 === ":material-microsoft-windows: Windows"
     !!! note
-        The 64-bit version is the way to go moving forward. An existing 32-bit version must be uninstalled before installing the 64-bit version (The LMS 9 installer will do this automatically). Please note that there's no Control Panel app any more, nor a tray icon. Tools like eg. [ServiceTray](https://www.coretechnologies.com/products/ServiceTray/) allow you to easily start/stop the LMS service.
+        Lyrion Music Server now comes as a 64-bit application. An existing 32-bit version must be uninstalled before installing the 64-bit version (The LMS 9 installer will do this automatically). Please note that there's no Control Panel app any more, nor a tray icon. Tools like eg. [ServiceTray](https://www.coretechnologies.com/products/ServiceTray/) allow you to easily start/stop the LMS service. [See this document](../reference/migrate-win32-win64.md) if you have to migrate.
 
     {{ win64 }}
 
@@ -68,7 +68,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 === ":material-docker: Docker"
 
-    See [lmscommunity/lyrionmusicserver](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) on Docker hub.
+    See [lmscommunity/lyrionmusicserver](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) on Docker hub, or [lms-community/lyrionmusicserver](https://github.com/LMS-Community/slimserver/pkgs/container/lyrionmusicserver) in the Github Container Registry.
 
     For Docker on Synology NAS see the [Beginner's Docker Guide on Synology](beginners-guide-synology-docker.md).
 

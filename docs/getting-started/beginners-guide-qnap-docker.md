@@ -6,13 +6,13 @@ title: Beginner's Docker Guide on QNAP
 # Beginner's Docker Guide on QNAP
 
 !!! note
-    In case you have any difficulties following this guide or have found some errors, please leave a note on the [forums](https://forums.slimdevices.com/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers). Thanks!
+    In case you have any difficulties following this guide or have found some errors, please leave a note on the [forums](https://forums.lyrion.org/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers). Thanks!
 
 If you have a QNAP NAS which can run Docker containers aka. "Container Station", you are in luck!
 
 If you're still running the QNAP AppCenter version of "LogitechMediaServer", you must know that it hasn't been updated since 2012 (v7.7.2). Upgrading using this method is recommended.
 
-This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommunity/lyrionmusicserver/). Source and the dockerfile of the image can be found [here](https://github.com/LMS-Community/slimserver-platforms/tree/HEAD/Docker).
+This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommunity/lyrionmusicserver/) (or [from the Github Container Registry](https://github.com/LMS-Community/slimserver/pkgs/container/lyrionmusicserver)). Our examples assume you are pulling from Docker Hub. Source and the dockerfile of the image can be found [here](https://github.com/LMS-Community/slimserver-platforms/tree/HEAD/Docker).
 
 ## Assumptions
 
@@ -68,7 +68,7 @@ In this guide the following assumptions apply:
 
 ## Updating the Docker image
 
-It is always advisable to regularly update your software, and with Docker on QNAP it is made very easy.
+It is always advisable to regularly update your software, and with Container Station on QNAP it is made very easy.
 
 1. Open "Container Station"
 2. Go to "Images" and click on the cog wheel "⚙️" next to "lmscommunity/lyrionmusicserver".

@@ -8,7 +8,7 @@ title: Beginner's Guide for a full-featured LMS on Raspberry Pi
 !!! note
     If you are looking for the most simple and cheap LMS setup (comparable to the now defunct MySqueezebox.com service) and just want to use internet streaming services, please follow [this guide](beginners-guide-lms-on-raspberry-pi.md).
 
-This guide will not only make it possible to use internet streaming services on your Squeezeboxes, but you can also play your local music collection with your Squeezeboxes. The hardware mentioned in this guide is a bit more expensive than the hardware you need for [internet-streaming-only LMS](beginners-guide-lms-on-raspberry-pi.md), but you are a lot more flexible into the future.  
+This guide will not only make it possible to use internet streaming services on your Squeezeboxes, but you can also play your local music collection with your Squeezeboxes. The hardware mentioned in this guide is a bit more expensive than the hardware you need for [internet-streaming-only LMS](beginners-guide-lms-on-raspberry-pi.md), but you are a lot more flexible into the future.
 
 ## Getting the hardware
 
@@ -70,4 +70,4 @@ If you have your music collection already available on a file share (for instanc
 
 ## Troubleshooting
 
-In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com) for assistance. See also [this thread](https://forums.slimdevices.com/forum/user-forums/general-discussion/1668970-new-to-lms-get-help-here-installing-on-a-raspberry-pi/) which specifically deals with helping newcomers installing LMS on a Raspberry Pi.
+In case you encounter some problems please head over to the [forums](https://forums.lyrion.org) for assistance. See also [this thread](https://forums.lyrion.org/forum/user-forums/general-discussion/1668970-new-to-lms-get-help-here-installing-on-a-raspberry-pi/) which specifically deals with helping newcomers installing LMS on a Raspberry Pi.

@@ -53,7 +53,7 @@ Before first use the Receiver needs to be connected to your LMS system using the
 
 There are a few alternatives to using `sbconfig`. But some are harder to use, for others the current state is lesser known:
 
-- SqueezeConfig - UDAP Config tool for Android (see eg. the [announcement in the forums](https://forums.slimdevices.com/forum/user-forums/general-discussion/74718-beta-squeezeconfig-udap-config-tool-for-android))
+- SqueezeConfig - UDAP Config tool for Android (see eg. the [announcement in the forums](https://forums.lyrion.org/forum/user-forums/general-discussion/74718-beta-squeezeconfig-udap-config-tool-for-android))
 - The `Net::UDAP` Perl module by [robinbowes](https://github.com/robinbowes/net-udap)
 
 ## Receiver LED codes

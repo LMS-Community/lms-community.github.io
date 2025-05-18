@@ -59,4 +59,4 @@ The last step is to switch your Squeezebox device from MySqueezebox.com to your 
 
 ## Troubleshooting
 
-In case you encounter some problems please head over to the [forums](https://forums.slimdevices.com) for assistance. See also [this thread](https://forums.slimdevices.com/forum/user-forums/general-discussion/1668970-new-to-lms-get-help-here-installing-on-a-raspberry-pi/)  which specifically deals with helping newcomers installing LMS on a Raspberry Pi.
+In case you encounter some problems please head over to the [forums](https://forums.lyrion.org) for assistance. See also [this thread](https://forums.lyrion.org/forum/user-forums/general-discussion/1668970-new-to-lms-get-help-here-installing-on-a-raspberry-pi/)  which specifically deals with helping newcomers installing LMS on a Raspberry Pi.

@@ -25,6 +25,7 @@ my @platforms = (
    ['encore', ':material-linux::material-music-box: Musical Fidelity'],
    ['src', ':material-linux::material-code-braces: Linux/Unix Tarball - i386, x86_64, i386 FreeBSD, ARM'],
    ['nocpan', ':material-linux::material-code-braces: Linux/Unix Tarball - No CPAN Libraries'],
+   ['pcp', ':simple-raspberrypi: piCorePlayer - Squashfs' ],
 );
 
 my $repo;
@@ -61,6 +62,7 @@ foreach ('latest', 'stable', 'dev') {
         tararm => $releases->{tararm},
         src => $releases->{src},
         nocpan => $releases->{nocpan},
+        pcp => $releases->{pcp},
         encore => $releases->{encore},
         version => $version,
         majorVersion => (split(/\./, $version))[0],

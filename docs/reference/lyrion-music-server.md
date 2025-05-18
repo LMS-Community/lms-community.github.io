@@ -64,7 +64,7 @@ Other noteworthy updates in LMS9 include:
 * macOS integration has been completely rewritten. It's no longer a preference pane, but a simple menu bar item (macOS 10.11 required).
 * The Docker image now is based on Debian 12: you'll have to create a new container based on the [lmscommunity/lyrionmusicserver](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) image. But no worries: you'll be able to re-use your existing data folders.
 
-[Release notes](../getting-started/changelog-lms9.md), [Announcement](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1737174-announcing-lyrion-music-server-9-0-0)
+[Release notes](../getting-started/changelog-lms9.md), [Announcement](https://forums.lyrion.org/forum/user-forums/logitech-media-server/1737174-announcing-lyrion-music-server-9-0-0)
 
 ### LMS 8.5
 
@@ -82,7 +82,7 @@ Initially released on Feb 8, 2024.
 * New "Advanced Tag View" plugin allows you to show more information in the Track Info menu, without the need to drill down to "View Tags"
 * ​Add experimental support for Windows 64-bit​
 
-[Release notes](../getting-started/changelog-lms8.md), [Announcement](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/1673928-logitech-media-server-8-4-0-released)
+[Release notes](../getting-started/changelog-lms8.md), [Announcement](https://forums.lyrion.org/forum/user-forums/logitech-media-server/1673928-logitech-media-server-8-4-0-released)
 
 
 ### LMS 8.3
@@ -100,11 +100,11 @@ But there are a ton of changes, smaller or bigger. A few noteworthy changes:
 - Improved security for the MySqueezebox.com integration.
 - Improved JavaScript support for the Settings pages in the Classic/Light skin (and thus Material).
 - More robust https streaming for some very long (but finite) streams and larger files (hires).
-- [Removal of video/picture support.](https://forums.slimdevices.com/forum/developer-forums/beta/113076-v8-3-0-bye-bye-video-picture-support)
+- [Removal of video/picture support.](https://forums.lyrion.org/forum/developer-forums/beta/113076-v8-3-0-bye-bye-video-picture-support)
 
 Other important changes are the removal of PowerPC, Sparc, i386 (Mac), and really old Perl versions are no longer part of the builds.
 
-[Release notes](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/113782-logitech-media-server-8-3-0-released)
+[Release notes](https://forums.lyrion.org/forum/user-forums/logitech-media-server/113782-logitech-media-server-8-3-0-released)
 
 ### LMS 8.2
 
@@ -117,7 +117,7 @@ Initially released on Aug 3, 2021. This release comes with a lot of improvements
 - Improved robustness for online streams
 - Add resampling for Ogg/Flac streams
 
-[Release notes](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/111679-logitech-media-server-8-2-0-released)
+[Release notes](https://forums.lyrion.org/forum/user-forums/logitech-media-server/111679-logitech-media-server-8-2-0-released)
 
 ### LMS 8.1
 
@@ -130,7 +130,7 @@ Initially released on Dec 23, 2020, LMS 8.1 brings the following changes:
 
 Other important changes are the removal of the ReadyNAS NV/Duo/Pro devices, and Perl 5.8 in general. We actually broke Perl 5.8 compatibility somewhere around LMS 7.9.3. These platforms haven't been working correctly since then. Removing them thus doesn't really change anything. ReadyNAS users please note: this is really only about the old, legacy, generation 1/2 Raidiator v4 based devices. Any recent ReadyNAS unit, which was based on Debian, should still continue to work as before. Good or bad.
 
-[Release notes](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/110224-logitech-media-server-8-1-0-released)
+[Release notes](https://forums.lyrion.org/forum/user-forums/logitech-media-server/110224-logitech-media-server-8-1-0-released)
 
 ### LMS 8.0
 
@@ -144,20 +144,20 @@ Initially released on Nov 22, 2020, LMS 8 adds a lot of improvements for users o
 - Docker is everywhere. A Logitech Media Server image is now available on Docker Hub.
 - Updated translations for Swedish and Dutch.
 
-[Release notes](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/109995-logitech-media-server-8-0-0-released)
+[Release notes](https://forums.lyrion.org/forum/user-forums/logitech-media-server/109995-logitech-media-server-8-0-0-released)
 
 ### LMS 7.9
 
 Initially released on Mar 8, 2017. LMS 7.9 comes with lots of improvements, both under the hood as well as in your preferred user interface:
 
-- [Fulltext search](https://forums.slimdevices.com/forum/developer-forums/beta/98887-new-in-7-9-fulltext-search)
+- [Fulltext search](https://forums.lyrion.org/forum/developer-forums/beta/98887-new-in-7-9-fulltext-search)
 - Native support of DSD
 - Customizable browse modes
 - Direct access to other source (LMS or UPnP)
 - Playback of local tunes without adding them to the library
 - Filtered views
 
-[Release notes](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/103726-logitech-media-server-7-9-0-is-out)
+[Release notes](https://forums.lyrion.org/forum/user-forums/logitech-media-server/103726-logitech-media-server-7-9-0-is-out)
 
 ### LMS 7.8
 
@@ -171,4 +171,4 @@ Initially released on Mar 27, 2014, this is the first community supported versio
 - Volume adjustment for internet music services
 - Add Triode's LocalFile 'loc' ProtocolHandler support for squeezelite.
 
-[Release notes](https://forums.slimdevices.com/forum/user-forums/logitech-media-server/97738-logitech-media-server-7-8-0-now-available)
+[Release notes](https://forums.lyrion.org/forum/user-forums/logitech-media-server/97738-logitech-media-server-7-8-0-now-available)

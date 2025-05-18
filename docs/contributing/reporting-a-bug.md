@@ -17,7 +17,7 @@ Chances are that the bug you discovered was already fixed in a subsequent versio
 
 ### Search for solutions
 
-Please search the [issue tracker](https://github.com/LMS-Community/slimserver/issues) and [discussion board](https://github.com/LMS-Community/slimserver/discussions) if someone else already submitted your bug. Also check if there is also a discussion going on the [forums](https://forums.slimdevices.com/).
+Please search the [issue tracker](https://github.com/LMS-Community/slimserver/issues) and [discussion board](https://github.com/LMS-Community/slimserver/discussions) if someone else already submitted your bug. Also check if there is also a discussion going on the [forums](https://forums.lyrion.org/).
 
 ## Submitting an issue
 
@@ -28,3 +28,13 @@ If you did not find a previous report of your issue you can submit your report t
 - description of the issue
 - steps to reproduce the bug
 - browser used (if relevant)
+
+# SlimDevices Bugzilla Archive
+
+We have a static copy of the former bugs.slimdevices.com bugzilla site.
+
+[https://bugs-archive.lyrion.org](https://bugs-archive.lyrion.org)
+
+Use it for reference, or archeology. Or just for fun!
+
+Thanks @gregklanderman who took the effort of archiving the site when it was still available.

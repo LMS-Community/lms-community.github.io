@@ -62,6 +62,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 }
 ```
 
+<a href="players">
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -104,6 +105,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
     }]
 }
 ```
+</a>
 
 ```vegalite
 {
@@ -177,6 +179,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 }
 ```
 
+<a href="players">
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -196,7 +199,9 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
   }
 }
 ```
+</a>
 
+<a href="os">
 ```vegalite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -216,6 +221,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
   }
 }
 ```
+</a>
 
 ```vegalite
 {
