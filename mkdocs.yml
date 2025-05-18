@@ -97,6 +97,7 @@ nav:
       - Beginner's guide for a full-featured LMS: getting-started/beginners-guide-full-featured-lms-on-raspberry-pi.md
       - Beginner's Docker guide on Synology: getting-started/beginners-guide-synology-docker.md
       - Beginner's Docker guide on QNAP: getting-started/beginners-guide-qnap-docker.md
+      - Beginner's Docker guide on OMV: getting-started/beginners-guide-omv-docker.md
       - Beginner's guide to classical music on LMS: getting-started/beginners-guide-to-classical-music-on-lms.md
       - Getting started on macOS: getting-started/mac-install.md
     - Help Guides and FAQs:

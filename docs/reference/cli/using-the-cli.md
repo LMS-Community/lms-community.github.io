@@ -15,13 +15,23 @@ The end of line separator is line feed (<LF\> ASCII decimal 10, hexadecimal 0x0A
 
 To use the command line interface interactively, use the telnet command from your system's command prompt: `telnet localhost 9090` and when it connects, you can start typing commands. Beware that the server expects parameters to be encoded using percent-style escaping (the same method as is used in URLs); `"` and `\\` are not supported as in shell-like environments.
 
-A limited subset of the CometD functionality supported over HTTP is also available to CLI clients. This allows for an alternate command/query and response syntax using JSON structured data instead of the space delimited positional parameters and percent-style escaping format. 
+A limited subset of the CometD functionality supported over HTTP is also available to CLI clients. This allows for an alternate command/query and response syntax using JSON structured data instead of the space delimited positional parameters and percent-style escaping format.
 
 For debugging purposes, CLI formatted commands can be sent using standard in and out. This support is only available on Unix platforms (MacOS X included), and must be enabled by launching the server with the `--stdio` command line option.
 
+### Practice with a few CLI commands
+Log in using telnet on port 9090. Use CLI commands to get the version of LMS, find a player id, and use that player id to mute the player. After each command you should get a response.
+
+```
+telnet localhost 9090
+version ?
+player id 0 ?​
+00:04:20:ab:cd:ef​ mute
+```
+
 ## jsonrpc.js
 
-You can alternatively use a JSON-RPC 1.0 API over HTTP to interact with the CLI. This employs POST requests sent to `http://<server>:<port>/jsonrpc.js`, where port is the normal 9000 http port instead of the 9090 CLI port.
+You can alternatively use a JSON-RPC 1.0 API over HTTP to interact with the CLI. This employs POST requests sent to `http://<server>:<port>/jsonrpc.js`, where port is the normal 9000 http port instead of the 9090 CLI port. There's no need to create a connection as with telnet.
 
 The Content-Type header should be "application/json" and the body of the request should include a JSON-encoded object which includes an array containing the extended query format parameters (see section Command format) as follows:
 
@@ -92,28 +102,6 @@ Skip to the next track on player `00:04:20:ab:cd:ef`:
     ```sh
     printf "00:04:20:ab:cd:ef playlist index +1\n" | nc 192.168.1.1 9090
     ```
-
-### Practice with a few Telnet commands
-Log in to Telnet using port 9090. Use Telnet commands to get version of LMS, find player id, and use that player id to mute the player. After each command you should get a response.
-
->`telnet localhost 9090`
-> 
->`version ?`
-> 
->`player id 0 ?​`
-> 
->`00:04:20:ab:cd:ef​ mute`
-
-### Practice with a few curl (jsonrpc.js) commands
-With curl, no need to log in, use port 9000 with the ip address of your player. Use Curl commands to get version of LMS, find player id, and use that player id to mute the player. After each command you should get a response. If curl command is incorrect, there will either be an empty response {} or you'll observe an ECONNRESET error.
-
->`curl -g -X POST -d '{"id":1,"method":"slim.request","params":["00:00:00:00:00:00",["player","version","?"]]}' http://192.168.1.1:9000/jsonrpc.js​`
-> 
->`curl -g -X POST -d '{"id":1,"method":"slim.request","params":["00:00:00:00:00:00",["player", "id", "0", "?"]]}' http://192.168.1.1:9000/jsonrpc.js`
-> 
->`curl -g -X POST -d '{"id":1,"method":"slim.request","params":["00:04:20:ab:cd:ef",["mixer","muting","1"]]}' http://192.168.1.1:9000/jsonrpc.js​`
-
-This example uses the same commands as the previous Telnet example.  It should allow you to convert Telnet commands, used extensively in this documentation, to the equivalent curl (or wget, nc/ncat) commands.
 
 ***
 ## Command format

@@ -4,7 +4,7 @@
 
 The procedures here work on my system (ReadyNAS Pro running OS 6.10.10, with LMS 9.1.0); there are no guarantees that they will work on yours.
 
-[Update Audio::Scan to version 1.10](#update-audio-scan-to-version-110)
+[Update Audio::Scan to version 1.10](#update-audioscan-to-version-110)
 
 (more topics to follow)
 
