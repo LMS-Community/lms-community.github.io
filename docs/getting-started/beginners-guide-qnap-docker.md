@@ -47,7 +47,7 @@ In this guide the following assumptions apply:
     ```
 6. Click "Validate" to ensure your syntax is correct
 7. Click "Create"
-8. Once created you should see your nous application in the list
+8. Once created you should see your new application in the list
 9. By default, Container Station exposes only one port per application in a NAT configuration. As we need multi ports, we'll switch to "bridge mode" :
    1. Click you application in the list (i.e. "lms")
    2. You'll see one container running (usually something like "lms-lms-1")
