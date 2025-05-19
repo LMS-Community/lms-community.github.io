@@ -37,6 +37,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/slim/)    - :octicons-download-24: 1327
 
+-   __:material-music-box-outline: Deezer local__
+
+    ---
+
+    Deezer for local LMS use
+
+    philippe_44, Michael Herger    - [:octicons-globe-24: Details](https://github.com/philippe44/lms-deezer)    - :octicons-download-24: 1749
+
 -   __:material-music-box-outline: Mixcloud__
 
     ---
@@ -44,6 +52,14 @@ title: Available Plugins
     Play music from Mixcloud
 
     Christian Mueller, Daniel Vijge, KwarkLabs    - [:octicons-globe-24: Details](https://github.com/danielvijge/lms_mixcloud)    - :octicons-download-24: 867
+
+-   __:material-music-box-outline: MyQobuz Extensions__
+
+    ---
+
+    MyQobuz view to Qobuz
+
+    [:octicons-mail-24: Ulrich Pickartz](mailto:ulrich.pickartz@pickartz.me)    - [:octicons-globe-24: Details](https://github.com/upickartz/plugin-MyQobuz)    - :octicons-download-24: 604
 
 -   __:material-music-box-outline: phish.in'__
 
@@ -68,6 +84,14 @@ title: Available Plugins
     Daughter of Pandora
 
     sspiff    - :octicons-download-24: 633
+
+-   __:material-music-box-outline: Qobuz__
+
+    ---
+
+    Stream Qobuz to your Squeezebox.
+
+    Pierre Beck / Michael Herger / darrell / SamY / sveninndh    - [:octicons-globe-24: Details](https://github.com/LMS-Community/plugin-Qobuz)    - :octicons-download-24: 4104
 
 -   __:material-music-box-outline: SoundCloud__
 
@@ -428,9 +452,47 @@ title: Available Plugins
 
 </div>
 
+## :material-page-layout-header-footer: Skins
+
+<div class="grid cards" markdown>
+
+-   __:material-page-layout-header-footer: Dark Default Skin__
+
+    ---
+
+    Dark-themed version of the LMS Default skin
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#%EF%B8%8F-dark-default-skin)    - :octicons-download-24: 441
+
+-   __:material-page-layout-header-footer: Dark Logic Skin__
+
+    ---
+
+    Dark-themed version of the LMS Logic Teal skin
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-dark-logic-skin)    - :octicons-download-24: 256
+
+-   __:material-page-layout-header-footer: Material Skin__
+
+    ---
+
+    Material themed skin, suitable for mobile use.
+
+    Craig Drummond    - :octicons-download-24: 14731
+
+</div>
+
 ## :material-information-box-outline: Information, Metadata
 
 <div class="grid cards" markdown>
+
+-   __:material-information-box-outline: Alternative Play Count__
+
+    ---
+
+    Provides alternative play counts and skip counts that aim to reflect your true listening history. You set a time after which a song counts as played. If you skip the song before, it counts as skipped, not played. Use the data with other plugins to create/play smart playlists (dynamic playlists), create virtual libraries or skip tracks.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-alternative-play-count)    - :octicons-download-24: 265
 
 -   __:material-information-box-outline: Database Query__
 
@@ -520,6 +582,14 @@ title: Available Plugins
 
     flipflip    - [:octicons-globe-24: Details](https://github.com/phkehl/lms-plugins)    - :octicons-download-24: 146
 
+-   __:material-information-box-outline: Ratings Light__
+
+    ---
+
+    Set, import, export, log, backup and restore track ratings. Create virtual libraries/library views for rated tracks with LMS browse menus.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-ratings-light)    - :octicons-download-24: 330
+
 -   __:material-information-box-outline: SaverSwitcher__
 
     ---
@@ -560,6 +630,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://wiki.lyrion.org/index.php/Title_Switcher_plugin)    - :octicons-download-24: 128
 
+-   __:material-information-box-outline: Visual Statistics__
+
+    ---
+
+    Have a look at your library statistics with charts.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-ratings-light)    - :octicons-download-24: 615
+
 -   __:material-information-box-outline: What Was That Tune?__
 
     ---
@@ -582,6 +660,30 @@ title: Available Plugins
 
 <div class="grid cards" markdown>
 
+-   __:material-playlist-music: Context Stats__
+
+    ---
+
+    Display lists of tracks, albums or artists sorted by statistics from the context menus of artists, albums, genres, years and playlists.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-context-stats)    - :octicons-download-24: 163
+
+-   __:material-playlist-music: Custom Skip__
+
+    ---
+
+    Set rules for when the current track or upcoming tracks in your player's playlist should be skipped and removed from the playlist automatically.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-skip)    - :octicons-download-24: 143
+
+-   __:material-playlist-music: Custom Start Stop Times__
+
+    ---
+
+    Skip unwanted parts of a song (e.g. annoying intros, silence at the end or in the middle).
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-start-stop-times)    - :octicons-download-24: 90
+
 -   __:material-playlist-music: Disable Shuffle__
 
     ---
@@ -598,6 +700,22 @@ title: Available Plugins
 
     [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/DynamicMixPlugin.htm)    - :octicons-download-24: 478
 
+-   __:material-playlist-music: Dynamic Playlist Creator__
+
+    ---
+
+    Helps you create custom smart playlists (dynamic playlists) for the Dynamic Playlists plugin.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-dynamic-playlist-creator)    - :octicons-download-24: 633
+
+-   __:material-playlist-music: Dynamic Playlists__
+
+    ---
+
+    Use smart playlists (dynamic playlists) to play continuous music mixes based on your selection criteria.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-dynamic-playlists)    - :octicons-download-24: 829
+
 -   __:material-playlist-music: LastMix - Don't Stop The Music support using Last.fm.__
 
     ---
@@ -613,14 +731,6 @@ title: Available Plugins
     Provides functionality to add songs or albums to any chosen playlist.
 
     [:octicons-mail-24: Philip Meyer](mailto:phil@hergest.demon.co.uk)    - [:octicons-globe-24: Details](http://penguinlovesmusic.de/wp-content/uploads/beta/pmplugins/PlaylistManPlugin.htm)    - :octicons-download-24: 1684
-
--   __:material-playlist-music: Spicefly SugarCube__
-
-    ---
-
-    Travel through your music Library using MusicIPs recommendations. Features Include Filter, Genre, Artist and Recipe Mixing, Trackstat Integration, Artist Blocking, Genre Blocking, Custom Track Weighting Routines, Coming Up Next Display, Sleep Mode, Volume Fade and lots more.  See www.spicefly.com for Details and Change Log.
-
-    [:octicons-mail-24: Charles Parker](mailto:abuse@spicefly.com)    - [:octicons-globe-24: Details](http://www.spicefly.com/)    - :octicons-download-24: 229
 
 -   __:material-playlist-music: Switch Player (Groups compatible)__
 
@@ -643,6 +753,14 @@ title: Available Plugins
     AutoRescan detects changes to your music folder and automatically triggers a rescan of that directory if any files have been added, removed or changed.
 
     James Marsh; Stuart Hickinbottom    - :octicons-download-24: 1668
+
+-   __:material-file-search-outline: Custom Tag Importer__
+
+    ---
+
+    Scans track information from custom tags in your music files (incl. rating tags).
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-tag-importer)    - :octicons-download-24: 284
 
 -   __:material-file-search-outline: LazySearch2__
 
@@ -667,6 +785,14 @@ title: Available Plugins
     Plugin to easily generate library views.
 
     [:octicons-mail-24: Andy Hawkins](mailto:andy@gently.org.uk)    - [:octicons-globe-24: Details](https://github.com/adhawkins/SimpleLibraryViews)    - :octicons-download-24: 264
+
+-   __:material-file-search-outline: Virtual Library Creator__
+
+    ---
+
+    A quick and easy way to create and manage your own virtual libraries/library views.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-virtual-library-creator)    - :octicons-download-24: 279
 
 </div>
 
@@ -794,6 +920,14 @@ title: Available Plugins
 
     [:octicons-mail-24: bpa](mailto:baltontwo@eircom.net)    - :octicons-download-24: 1067
 
+-   __:material-tools: PotPourri__
+
+    ---
+
+    A collection of small features. Examples: change track order of saved/client playlists, set power-on volume level for players or time to turn off all players each day, export saved playlists to playlist files with custom file paths/extensions… Complete feature list, screenshots and more information on the GitHub page.
+
+    AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-potpourri)    - :octicons-download-24: 142
+
 -   __:material-tools: PowerCenter__
 
     ---
@@ -826,6 +960,22 @@ title: Available Plugins
 
     [:octicons-mail-24: Triode](mailto:triode1@btinternet.com)    - :octicons-download-24: 359
 
+-   __:material-tools: SqueezeboxEQ__
+
+    ---
+
+    DSP and EQ for Squeezebox server based off InguzDSP
+
+    Jonathan Fox    - :octicons-download-24: 770
+
+-   __:material-tools: SqueezeDSP__
+
+    ---
+
+    DSP for Lyrion Music Server (version 0.1.21) - provides EQ and DSP.
+
+    Jonathan Fox    - :octicons-download-24: 552
+
 -   __:material-tools: SyncOptions__
 
     ---
@@ -847,6 +997,14 @@ title: Available Plugins
 ## :material-star-shooting: Most popular
 
 <div class="grid cards" markdown>
+
+-   __:material-star-shooting: Material Skin__
+
+    ---
+
+    Material themed skin, suitable for mobile use.
+
+    Craig Drummond    - :octicons-download-24: 14731
 
 -   __:material-star-shooting: Spotify for Squeezebox. Still Spotty.__
 
@@ -903,6 +1061,14 @@ title: Available Plugins
     Play YouTube video
 
     [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-youtube)    - :octicons-download-24: 4406
+
+-   __:material-star-shooting: Qobuz__
+
+    ---
+
+    Stream Qobuz to your Squeezebox.
+
+    Pierre Beck / Michael Herger / darrell / SamY / sveninndh    - [:octicons-globe-24: Details](https://github.com/LMS-Community/plugin-Qobuz)    - :octicons-download-24: 4104
 
 -   __:material-star-shooting: DSDPlayer__
 
@@ -991,22 +1157,6 @@ title: Available Plugins
     A plugin to make it possible to get various information about a song, can for example be used to get artist images from LastFM (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 2474
-
--   __:material-star-shooting: Music Information Screen__
-
-    ---
-
-    The Music Information Screen plugin allows customization of the player's Now Playing screen and other elements.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - [:octicons-globe-24: Details](https://www.herger.net/MusicInfoSCR/)    - :octicons-download-24: 1996
-
--   __:material-star-shooting: SoundCloud__
-
-    ---
-
-    Play music from SoundCloud
-
-    Robert Siebert, Daniel Vijge, Robert Gibbon, David Blackman, KwarkLabs    - [:octicons-globe-24: Details](https://github.com/danielvijge/SqueezeCloud)    - :octicons-download-24: 1838
 
 </div>
 
