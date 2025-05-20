@@ -288,7 +288,7 @@ title: Available Plugins
 
     ---
 
-    Virgin Radio (UK) Plugin.  Access to live Virgin Radio stations and 7 day catch up listening.
+    Virgin Radio (UK) Plugin.  Access to live and 7 day catch up for Virgin Radio, Talk Radio, talkSport and Times Radio, includes all News UK stations
 
     [:octicons-mail-24: ExpectingToFly](mailto:stu@expectingtofly.co.uk)    - [:octicons-globe-24: Details](https://github.com/expectingtofly/LMS_Virgin_Radio_Plugin/releases/download/2.4.0/VirginRadioPlugin_2_4_0.zip)    - :octicons-download-24: 721
 
