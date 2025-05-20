@@ -117,8 +117,6 @@ jobs:
           fi
 
   deploy-mkdocs:
-
-    if: ${{ always() }}
     name: Build website and publish to gh-pages branch
     needs: get-external-changelog
     runs-on: ubuntu-24.04
