@@ -240,7 +240,7 @@ title: Available Plugins
 
     ---
 
-    Programme and track information including cover art for over 6300 radio stations
+    Programme and track information including cover art for over 6800 radio stations
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.lyrion.org/forum/user-forums/3rd-party-software/111952-announce-radio-now-playing-plugin?view=thread)    - :octicons-download-24: 4052
 
@@ -980,7 +980,7 @@ title: Available Plugins
 
     ---
 
-    DSP for Lyrion Music Server (version 0.1.21) - provides EQ and DSP.
+    DSP for Lyrion Music Server (version 0.1.22) - provides EQ and DSP.
 
     Jonathan Fox    - :octicons-download-24: 558
 
@@ -1090,7 +1090,7 @@ title: Available Plugins
 
     ---
 
-    Programme and track information including cover art for over 6300 radio stations
+    Programme and track information including cover art for over 6800 radio stations
 
     Paul Webster    - [:octicons-globe-24: Details](https://forums.lyrion.org/forum/user-forums/3rd-party-software/111952-announce-radio-now-playing-plugin?view=thread)    - :octicons-download-24: 4052
 
