@@ -49,7 +49,7 @@ is identical to the English version.
 
 ```vegalite
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": "Coverage in %",
   "data": {"url": "/contributing/strings-coverage.json"},
   "mark": "bar",

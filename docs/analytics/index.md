@@ -20,7 +20,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 
 ```vegalite
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": "Number of LMS installations",
   "description": "Time series chart of LMS installations by version",
   "data": {
@@ -65,7 +65,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 <a href="players">
 ```vegalite
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": "Number of connected players",
   "description": "Time series chart of number of connected players",
   "data": {
@@ -109,7 +109,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 
 ```vegalite
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": "Connected players per LMS installation",
   "description": "Histogram which shows how many players are connected per LMS installation",
   "data": {
@@ -135,7 +135,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 
 ```vegalite
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": "Number of tracks in library",
   "description": "Histogram which shows how many tracks (about) are in a LMS installation",
   "data": {
@@ -182,7 +182,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 <a href="players">
 ```vegalite
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "width": "container",
   "height": 420,
   "title": "Player types",
@@ -204,7 +204,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 <a href="os">
 ```vegalite
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "width": "container",
   "height": 420,
   "title": "Operating systems and architectures",
@@ -225,7 +225,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 
 ```vegalite
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "width": "container",
   "height": 450,
   "title": "LMS installations worldwide",

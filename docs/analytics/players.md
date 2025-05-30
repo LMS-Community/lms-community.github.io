@@ -20,7 +20,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
 
 ```vegalite
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
     "title": "Number of player types",
     "description": "Time series chart of LMS player types",
     "data": {
