@@ -139,13 +139,13 @@ which denotes the sample size in bits. Little Endian only.
   _SqueezeLite_.
 * **-n &lt;name&gt;**  
   Set the player name. This name is used by the Lyrion Music Server to refer to
-  the player by name. This option is mututally exclusive with
+  the player by name. This option is mutually exclusive with
   **-N**.
 * **-N &lt;filename&gt;**  
   Allow the server to set the player's name. The player name is stored in the file
   pointed to by
   **&lt;filename&gt;**
-  so that it can persist between restarts. This option is mututally exclusive with
+  so that it can persist between restarts. This option is mutually exclusive with
   **-n**.
 * **-O &lt;mixer device&gt;**  
   Specify mixer device, defaults to **&lt;output device&gt;**.
