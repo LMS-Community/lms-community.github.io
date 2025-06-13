@@ -36,6 +36,7 @@
 
 - Bug Fixes:
 
+	- The AudioScrobbler failed to report tracks from online music services when they were integrated with the local library.
 	- [#1287](https://github.com/LMS-Community/slimserver/pull/1287) \- fix method name for spdr protocol handler.
 	- [#1359](https://github.com/LMS-Community/slimserver/pull/1359) \- Update UPnP ConnectionManager.pm to add checks for Wav and Opus (@BoringName15).
 	- [#1362](https://github.com/LMS-Community/slimserver/pull/1362) \- Update UPnP AVTransport.pm to move LMS event registration (@BoringName15).
