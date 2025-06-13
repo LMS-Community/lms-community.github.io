@@ -13,6 +13,7 @@
 	- Improve support for 3rd party player icons, add some for piCorePlayer, SqueezeAMP, WiiM players.
 	- Update downloader now validates the installers checksum.
 	- Updated Chinese translation - thanks @xdsnet!
+	- Purge caches in the early morning hours, even if player activity has been seen
 	- Update the custom user agent string: pretending to be iTunes probably caused more problems than it solved.
 	- [#1216](https://github.com/LMS-Community/slimserver/pull/1216) \- Reset playing position to first track once a playlist or album has ended (@ml-1)
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (@expectingtofly)
