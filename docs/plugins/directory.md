@@ -980,7 +980,7 @@ title: Available Plugins
 
     ---
 
-    DSP for Lyrion Music Server (version 0.1.26) - provides EQ and DSP.
+    DSP for Lyrion Music Server - provides EQ and DSP.
 
     Jonathan Fox    - :octicons-download-24: 531
 
