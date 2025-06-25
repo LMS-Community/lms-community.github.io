@@ -770,6 +770,14 @@ title: Available Plugins
 
     AF    - [:octicons-globe-24: Details](https://github.com/AF-1/#-custom-tag-importer)    - :octicons-download-24: 264
 
+-   __:material-file-search-outline: Ignore files and folders__
+
+    ---
+
+    Set a regular expression to ignore files and folders when scanning or browsing folders.
+
+    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 244
+
 -   __:material-file-search-outline: LazySearch2__
 
     ---
@@ -871,14 +879,6 @@ title: Available Plugins
     on-the-fly group creation
 
     [:octicons-mail-24: Philippe](mailto:philippe_44@outlook.com)    - [:octicons-globe-24: Details](http://github.com/philippe44/LMS-Groups)    - :octicons-download-24: 1043
-
--   __:material-tools: Ignore files and folders__
-
-    ---
-
-    Set a regular expression to ignore files and folders when scanning or browsing folders.
-
-    [:octicons-mail-24: Michael Herger](mailto:slim@herger.net)    - :octicons-download-24: 244
 
 -   __:material-tools: Image Proxy configuration helper__
 
