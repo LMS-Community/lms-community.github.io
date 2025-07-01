@@ -4,16 +4,17 @@
 
 - New Features:
 
+	- Optionally navigate playlists by folders, allowing you to organise your playlists hierarchically.
 	- Implement an artist portrait picture handler. This will read images from folders where you've stored them under the artist's name, or from the artist folder in a typical artist/album/track hierarchy.
 	- Allow GETting the JSONRPC.js handler with a "request" parameter to simplify access by limited clients.
-	- [#1294](https://github.com/LMS-Community/slimserver/issues/1294) \- Bring back list view int the Manage Plugins section. The view can be toggled between grid an list view.
+	- [#1294](https://github.com/LMS-Community/slimserver/issues/1294) \- Bring back list view in the Manage Plugins section. The view can be toggled between grid an list view.
 
 - Server Changes:
 
 	- Improve support for 3rd party player icons, add some for piCorePlayer, SqueezeAMP, WiiM players.
 	- Update downloader now validates the installers checksum.
 	- Updated Chinese translation - thanks @xdsnet!
-	- Purge caches in the early morning hours, even if player activity has been seen
+	- Improve cache purging reliability to avoid unnecessary growth.
 	- Update the custom user agent string: pretending to be iTunes probably caused more problems than it solved.
 	- [#1216](https://github.com/LMS-Community/slimserver/pull/1216) \- Reset playing position to first track once a playlist or album has ended (@ml-1)
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (@expectingtofly)
