@@ -43,6 +43,7 @@
 	- [#1359](https://github.com/LMS-Community/slimserver/pull/1359) \- Update UPnP ConnectionManager.pm to add checks for Wav and Opus (@BoringName15).
 	- [#1362](https://github.com/LMS-Community/slimserver/pull/1362) \- Update UPnP AVTransport.pm to move LMS event registration (@BoringName15).
 	- [#1367](https://github.com/LMS-Community/slimserver/pull/1367) \- Update UPnP support to fix gapless playback (setNextAVTransport) (@BoringName15).
+	- [#1414](https://github.com/LMS-Community/slimserver/pull/1414) \- Make sure custom image proxy handlers are always called (fixes incompatibility with Radio Now Playing's SVG handler).
 
 - Other:
 
