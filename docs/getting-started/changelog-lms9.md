@@ -68,6 +68,7 @@
 
 	- [#1373](https://github.com/LMS-Community/slimserver/issues/1373) \- Transcoding of some APE files does not work with LMS 9 - upgrade the mac binary to v10 (thanks @ralphy!).
 	- [#1378](https://github.com/LMS-Community/slimserver/issues/1378) \- Rescanning a track with MusicBrainz ID can lead to corrupted ID value in database.
+	- [#1423](https://github.com/LMS-Community/slimserver/pull/1423) \- Fix compatibility with Squeezer app (thanks @darrell-k).
 
 - Other:
 
