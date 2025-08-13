@@ -1284,6 +1284,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - :octicons-download-24: 189
 
+-   __:material-toy-brick-outline: SqueezeSonic__
+
+    ---
+
+    Play music from a Subsonic API capable music library
+
+    [:octicons-mail-24: foobarjo](mailto:jo@foobarjo.org)    - [:octicons-globe-24: Details](https://github.com/foobarjo/SqueezeSonic)    - :octicons-download-24: 92
+
 -   __:material-toy-brick-outline: StatusFirst__
 
     ---
