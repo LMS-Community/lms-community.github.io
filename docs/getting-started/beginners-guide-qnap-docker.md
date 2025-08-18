@@ -8,7 +8,7 @@ title: Beginner's Docker Guide on QNAP
 !!! note
     In case you have any difficulties following this guide or have found some errors, please leave a note on the [forums](https://forums.lyrion.org/forum/developer-forums/developers/1668265-documentation-update-call-for-volunteers). Thanks!
 
-If you have a QNAP NAS which can run Docker containers aka. "Container Station", you are in luck!
+If you have a QNAP NAS which can run Docker containers (aka "Container Station"), you are in luck!
 
 If you're still running the QNAP AppCenter version of "LogitechMediaServer", you must know that it hasn't been updated since 2012 (v7.7.2). Upgrading using this method is recommended.
 
@@ -18,6 +18,7 @@ This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommun
 
 In this guide the following assumptions apply:
 
+- You have Container Station installed (available from the QNAP Store in the AppCenter)
 - Your music is stored in the `Music` folder of your `Multimedia` share (`/share/Multimedia/Music`).
 - The state of the docker image is saved in the folder `/share/Container/app-data/lms-config/`. The path can be anything, but it is advisable to restrict write access for other users to this folder.
 - (Optional) You have a shared folder where LMS can store playlists (i.e. : `/share/Multimedia/Playlists/LMS`).
@@ -56,7 +57,7 @@ In this guide the following assumptions apply:
    5. Delete de default network using the bin icon "🗑️"
    6. Click "Add" to create a new network
    7. Choose "Bridge", select the wanted interface
-   8. (Optional) Set a staci IP address, by ticking "Use a static IP address" and filling Address, Mask, and Gateway
+   8. (Optional) Set a static IP address, by ticking "Use a static IP address" and filling Address, Mask, and Gateway
    9. Click "Connect" to add the Network
    10. Click "Apply" to update your container
    11. Take note of the IP address of your container
