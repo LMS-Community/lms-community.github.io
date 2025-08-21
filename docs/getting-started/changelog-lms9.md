@@ -6,6 +6,7 @@
 
 	- Optionally navigate playlists by folders, allowing you to organise your playlists hierarchically.
 	- Implement an artist portrait picture handler. This will read images from folders where you've stored them under the artist's name, or from the artist folder in a typical artist/album/track hierarchy.
+	- [#1426](https://github.com/LMS-Community/slimserver/pull/1426) \- add support for ListenBrainz to AudioScrobbler plugin (thanks @vysmaty & AI)
 	- Allow GETting the JSONRPC.js handler with a "request" parameter to simplify access by limited clients.
 	- [#1294](https://github.com/LMS-Community/slimserver/issues/1294) \- Bring back list view in the Manage Plugins section. The view can be toggled between grid an list view.
 
