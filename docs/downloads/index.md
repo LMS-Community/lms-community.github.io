@@ -67,7 +67,7 @@ The development version is where you’ll find all the latest and greatest featu
 [Git Commit Log](https://github.com/LMS-Community/slimserver/commits/public/{{ dev.minorVersion }}))
 
 !!! danger
-    Please only use this build if you’re willing to deal with the occasional broken build!
+    Please only use this build if you’re willing to deal with the occasional broken revision!
 
 | Name | Size | Creation Date | Description |
 | ---  | --- :| ---           | ---  |
