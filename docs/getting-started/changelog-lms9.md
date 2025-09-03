@@ -18,6 +18,7 @@
 	- Updated Chinese translation - thanks @xdsnet!
 	- Improve cache purging reliability to avoid unnecessary growth.
 	- Update the custom user agent string: pretending to be iTunes probably caused more problems than it solved.
+	- Enable log rotation on Docker based systeme.
 	- [#1216](https://github.com/LMS-Community/slimserver/pull/1216) \- Reset playing position to first track once a playlist or album has ended (@ml-1)
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (@expectingtofly)
 	- [#1356](https://github.com/LMS-Community/slimserver/pull/1356) \- Use ORIGINALDATE tag with Flac (@jbylsma)
