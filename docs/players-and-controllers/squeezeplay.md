@@ -91,5 +91,5 @@ If it isn't possible to disable the other network interfaces during initial setu
 
 In case you encounter other issues, please head over to the [forums](https://forums.lyrion.org/forum/user-forums/general-discussion/93838-squeezeplay-for-windows-with-asio-directsound-wasapi-and-wdmks-device-support) for assistance.
 
-[^fn1]: https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1732388#post1732388
-[^fn2]: https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1745250#post1745250
+[^fn1]: [https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1732388#post1732388](https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1732388#post1732388)
+[^fn2]: [https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1745250#post1745250](https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1745250#post1745250)
