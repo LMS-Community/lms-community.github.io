@@ -35,7 +35,6 @@
 	- Make Docker a first class citizan: add Slim::Utils::OS::Docker instead of a Custom.pm
 	- Remove Win32 legacy support files, code, control panels, build pipeline, etc.
 	- Remove legacy Mac installer from build pipeline.
-	- Add support for Perl 5.40 on aarch64 Linux.
 	- Remove code dealing with Perl < 5.10.
 	- Upgrade DBD::SQLite to v1.75 for Perl 5.40 (Linux x86\_64, aarch64), 5.38 (Linux x86\_64), 5.36 (Linux x86\_64, aarch64, armv7), 5.34 (Linux x86\_64, aarch64; macOS), 5.32 (Linux x86\_64, aarch64, armv7).
 	- [#73](https://github.com/LMS-Community/slimserver-platforms/pull/73) \- Add a note about setting the hostname in a Docker container (thanks @hartzell!)
@@ -66,6 +65,7 @@
 
 - Platform Support:
 
+	- Add support for Perl 5.40 on aarch64/armv7 Linux.
 	- [#1339](https://github.com/LMS-Community/slimserver/issues/1339) \- Add ghcr.io as an alternative container registry in addition to Docker Hub.
 	- Download Strawberry Perl for Windows from our own download site. strawberryperl.com has been unstable recently.
 
