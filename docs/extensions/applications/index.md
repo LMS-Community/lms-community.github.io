@@ -46,6 +46,7 @@ title: Applications
 - [LMS on Android](https://forums.lyrion.org/forum/user-forums/general-discussion/1674045): Run LMS on an Android device using Termux.
 
 ## Automatic Playlist / Mix Creation
+- [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI): Leverages Librosa and TensorFlow for sonic analysis of your local library, powering similar song discovery and smart playlists creation.
 - [LMS Recommender](https://www.nexus0.net/pub/sw/lmsrecommender/): A system to create music recommendations for local music based on positive and negative tracks. Results can be further refined by using filters (inferred track classifications (moods, genres, …) or track metadata (ratings, …).
 - [MusicIP](https://www.spicefly.com/section.php?section=musicip): Analyses your local music library to try to understand the makeup of each music track, then, based on a selected track, generates a playlist of tracks that blend together.
 
