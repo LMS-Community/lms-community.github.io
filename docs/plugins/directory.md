@@ -1274,7 +1274,7 @@ title: Available Plugins
 
     Spotty Helper Application for FreeBSD 14. This plugin requires the Spotty plugin.
 
-    Karl Jeacle    - :octicons-download-24: 275
+    [:octicons-mail-24: Karl Jeacle](mailto:karl@jeacle.ie)    - :octicons-download-24: 275
 
 -   __:material-toy-brick-outline: SqueezeCLI Handler__
 
