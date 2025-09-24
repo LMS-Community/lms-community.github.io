@@ -1188,6 +1188,14 @@ title: Available Plugins
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/AllQuiet.html)    - :octicons-download-24: 148
 
+-   __:material-toy-brick-outline: Auto Play__
+
+    ---
+
+    Start playback when powered on or reconnected
+
+    Craig Drummond    - :octicons-download-24: 10
+
 -   __:material-toy-brick-outline: BlankSaver__
 
     ---
@@ -1195,6 +1203,14 @@ title: Available Plugins
     Screensaver that simply makes the screen go dark -- most useful with SaverSwitcher, providing an easy way to make the display go dark without having to cycle through all brightness options. (Boom, Classic, Squeezebox1, Slimp3, SoftSqueeze)
 
     [:octicons-mail-24: Watkins, Peter](mailto:peter@townsendwatkins.com)    - [:octicons-globe-24: Details](https://tuxreborn.netlify.app/slim/BlankSaver.html)    - :octicons-download-24: 154
+
+-   __:material-toy-brick-outline: Bliss Mixer__
+
+    ---
+
+    Bliss Mixer for DSTM
+
+    Craig Drummond    - :octicons-download-24: 89
 
 -   __:material-toy-brick-outline: Community Firmware__
 
@@ -1235,6 +1251,22 @@ title: Available Plugins
     A plugin that's required for licensed plugins to work, it will give you an overview of licensed plugins available and their current licensing status and links to pay for them. (Boom, Transporter, Classic, Controller, Radio, Touch, SoftSqueeze, SqueezePlay)
 
     [:octicons-mail-24: Erland Isaksson](mailto:erland@isaksson.info)    - [:octicons-globe-24: Details](http://erland.isaksson.info)    - :octicons-download-24: 487
+
+-   __:material-toy-brick-outline: MIP Mixer__
+
+    ---
+
+    MusicIP Mixer for DSTM
+
+    Craig Drummond    - :octicons-download-24: 13
+
+-   __:material-toy-brick-outline: Queue Limit__
+
+    ---
+
+    Limit queue history size
+
+    Craig Drummond
 
 -   __:material-toy-brick-outline: QuickAccess__
 
