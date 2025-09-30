@@ -63,6 +63,7 @@ For mobile phones and tablets:
 - [SB Player](https://play.google.com/store/apps/details?id=com.angrygoat.android.sbplayer) (Android - paid)
 - [SqueezePlayer](https://play.google.com/store/apps/details?id=de.bluegaspode.squeezeplayer) (Android - paid)
 - [Squeezelite via Termux](https://github.com/CDrummond/lms-material-app/wiki/Squeezelite-via-Termux) (Android)
+- [Squeeze Client](https://github.com/maniac103/squeezeclient) (Android) With local playback.
 
 ## Specialist operating system with player / server
 
