@@ -56,9 +56,19 @@
 	- Remove more left-overs from removed MySqueezebox integration.
 	- Remove support for MySQL. Existing configurations using it will log an error.
 
-## Version 9.0.3
+## Version 9.0.4
 
 - New Features:
+
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
+## Version 9.0.3 - 2025-10-03 (9977737c1)
 
 - Server Changes:
 
@@ -71,13 +81,10 @@
 	- Download Strawberry Perl for Windows from our own download site. strawberryperl.com has been unstable recently.
 
 - Bug Fixes:
-
 	- [#1373](https://github.com/LMS-Community/slimserver/issues/1373) \- Transcoding of some APE files does not work with LMS 9 - upgrade the mac binary to v10 (thanks @ralphy!).
 	- [#1378](https://github.com/LMS-Community/slimserver/issues/1378) \- Rescanning a track with MusicBrainz ID can lead to corrupted ID value in database.
 	- [#1423](https://github.com/LMS-Community/slimserver/pull/1423) \- Fix compatibility with Squeezer app (thanks @darrell-k).
 	- [#1429](https://github.com/LMS-Community/slimserver/pull/1429) \- Make sure work is removed from track if removed in tags (thanks @darrell-k).
-
-- Other:
 
 ## Version 9.0.2 - 2025-03-13 (1470c9412)
 
