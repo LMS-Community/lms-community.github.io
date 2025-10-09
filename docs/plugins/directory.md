@@ -840,14 +840,6 @@ title: Available Plugins
 
     [:octicons-mail-24: Martin Johnen](mailto:m.johnen@gmail.com)    - [:octicons-globe-24: Details](http://forums.lyrion.org/showthread.php?102859-New-plugin-for-audio-bookmarks/)    - :octicons-download-24: 389
 
--   __:material-tools: C-3PO Transcoding Helper__
-
-    ---
-
-    Automate transcoding and resampling
-
-    [:octicons-mail-24: marcoc1712](mailto:marcoc1712@gmail.com)    - :octicons-download-24: 471
-
 -   __:material-tools: Client Cleanup__
 
     ---
