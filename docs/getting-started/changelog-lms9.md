@@ -23,6 +23,7 @@
 	- Update the custom user agent string: pretending to be iTunes probably caused more problems than it solved.
 	- Enable log rotation on Docker based systeme.
 	- Don't re-encode lossy streams when bitrate limiting if original stream is of lower or equal bitrate already (thanks @ralphy!)
+	- Add prefs folder to search list for custom types/convert/strings files (macOS/Windows).
 	- [#1216](https://github.com/LMS-Community/slimserver/pull/1216) \- Reset playing position to first track once a playlist or album has ended (@ml-1)
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (@expectingtofly)
 	- [#1356](https://github.com/LMS-Community/slimserver/pull/1356) \- Use ORIGINALDATE tag with Flac (@jbylsma)
@@ -51,6 +52,7 @@
 	- [#1362](https://github.com/LMS-Community/slimserver/pull/1362) \- Update UPnP AVTransport.pm to move LMS event registration (@BoringName15).
 	- [#1367](https://github.com/LMS-Community/slimserver/pull/1367) \- Update UPnP support to fix gapless playback (setNextAVTransport) (@BoringName15).
 	- [#1414](https://github.com/LMS-Community/slimserver/pull/1414) \- Make sure custom image proxy handlers are always called (fixes incompatibility with Radio Now Playing's SVG handler).
+	- [#1442](https://github.com/LMS-Community/slimserver/pull/1442) \- Avoid log flood when player discovery JSON is empty (@mikecappella).
 
 - Other:
 
