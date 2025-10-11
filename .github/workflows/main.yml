@@ -39,13 +39,12 @@ env:
 jobs:
 
   get-external-changelog:
-
     name: Import external data sources
     runs-on: ubuntu-24.04
     steps:
 
       - name: Install Go to satisfy dependencies
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: '>=1.23.0'
 
@@ -88,10 +87,6 @@ jobs:
         run: |
           tools/build-plugin-repository.pl > $PLUGIN_TARGET
 
-      - name: Get analytics data
-        run: |
-          tools/get-analytics-data.pl > $STATS_JSON
-
       - name: Check out LMS code for strings coverage
         uses: actions/checkout@v4
         with:
@@ -126,6 +121,16 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
 
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl libyaml-perl
+
+      - name: Get analytics data
+        run: |
+          tools/get-analytics-data.pl > $STATS_JSON
+          git diff
+
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
@@ -135,6 +140,7 @@ jobs:
         with:
           python-version: 3.x
 
+      # evaluate the week number to use in the cache key
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
 
       - uses: actions/cache@v4
@@ -150,3 +156,4 @@ jobs:
           pip install mkdocs-charts-plugin
 
       - run: mkdocs gh-deploy --force
+        if: ${{ !env.ACT }}

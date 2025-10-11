@@ -28,3 +28,11 @@ Adding a page is very simple, just add the appropriate .md page under the docs f
 If you want to add the page to the navigation you can expand the nav structure in the mkdocs.yml.
 
 Please see https://squidfunk.github.io/mkdocs-material/reference/ for more information about the framework.
+
+## Testing the Github Actions workflow
+
+In order to test the workflow, install [`act`](https://github.com/nektos/act). Then run the following:
+
+```
+act --pull=false workflow_dispatch -P ubuntu-24.04=catthehacker/ubuntu:act-latest --workflows .github/workflows/main.yml
+```
