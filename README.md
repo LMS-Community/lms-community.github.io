@@ -29,6 +29,19 @@ If you want to add the page to the navigation you can expand the nav structure i
 
 Please see https://squidfunk.github.io/mkdocs-material/reference/ for more information about the framework.
 
+## Analytics data, download & plugins page
+
+A few files are no longer maintained in the repository, but only updated at deployment time. They're pulling in data
+and information from external sources which can change daily or more often. By not keeping them in the repository
+we avoid unnecessary updates to the repo. A copy of the following files is still in the repository for local testing
+purposes, but they're not updated automatically. Feel free to update them every now and then manually using the scripts
+in the `tools` folder.
+
+* `docs/analytics/stats.json` (tool: `tools/get-analytics-data.pl`)
+* `docs/plugins/directory.md` (`tools/build-plugin-repository.pl`)
+* `docs/downloads/downloads.yaml` (`tools/build-server-downloads-page.pl`)
+
+
 ## Testing the Github Actions workflow
 
 In order to test the workflow, install [`act`](https://github.com/nektos/act). Then run the following:

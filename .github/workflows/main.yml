@@ -13,13 +13,6 @@ on:
         required: true
         default: main
 
-# Not yet heavily tested - therefore disabled
-#
-# Allow to stop obsolete workflows
-#concurrency:
-#  group: ci-buildtrain-${{ github.ref }}-1
-#  cancel-in-progress: true
-
 # Required for the deployment to be able to upload to the "gh-pages" branch
 # (since the repo settings for default actions permission defaults to read only)
 permissions:
@@ -42,25 +35,20 @@ jobs:
     name: Import external data sources
     runs-on: ubuntu-24.04
     steps:
-
-      - name: Install Go to satisfy dependencies
-        uses: actions/setup-go@v6
-        with:
-          go-version: '>=1.23.0'
-
       - name: Install dependencies
         run: |
-          go install github.com/suntong/html2md@v1.5.0
-          sudo apt-get update
-          sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl libyaml-perl python3-babel
+          # add repo for html2md
+          curl -1sLf 'https://dl.cloudsmith.io/public/suntong/repo/setup.deb.sh' | sudo -E bash
 
-      - name: Checkout code
-        uses: actions/checkout@v4
+          sudo apt-get update
+          apt-cache policy html2md
+          sudo apt install -y html2md python3-babel
+
+      - name: Checkout documentation
+        uses: actions/checkout@v5
 
       - name: Get changelog and convert to markdown
         run: |
-          export PATH=${PATH}:`go env GOPATH`/bin
-
           html2md -i $CHANGELOG_LMS8_SRC > $CHANGELOG_LMS8_TARGET
           sed -Ei 's/http:\/\/raw.githubusercontent.com.*?#v([1-9]+)\.([0-9]+)\.([0-9]+)\)/#version-\1\2\3)/' $CHANGELOG_LMS8_TARGET
           sed -Ei 's/^\s\s*/\t/g' $CHANGELOG_LMS8_TARGET
@@ -79,16 +67,8 @@ jobs:
           perl man-to-md.pl <(curl -s $SQUEEZELITE_MANPAGE_SRC) >>$SQUEEZELITE_MANPAGE_TARGET
           rm man-to-md.pl
 
-      - name: Get release downloads and embed in Getting Started document
-        run: |
-          tools/build-server-downloads-page.pl
-
-      - name: Get plugin repository and convert to markdown
-        run: |
-          tools/build-plugin-repository.pl > $PLUGIN_TARGET
-
       - name: Check out LMS code for strings coverage
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: LMS-Community/slimserver
           path: slimserver
@@ -117,7 +97,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.event.inputs.branch }}
 
@@ -126,17 +106,24 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl libyaml-perl
 
+      - name: Get release downloads and embed in Getting Started document
+        run: |
+          tools/build-server-downloads-page.pl
+
+      - name: Get plugin repository and convert to markdown
+        run: |
+          tools/build-plugin-repository.pl > $PLUGIN_TARGET
+
       - name: Get analytics data
         run: |
           tools/get-analytics-data.pl > $STATS_JSON
-          git diff
 
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: 3.x
 
