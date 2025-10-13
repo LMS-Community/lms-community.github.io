@@ -25,6 +25,15 @@ Binaries compiled from the :octicons-mark-github-16: [source code](https://githu
 
 Squeezelite-X combines the Squeezelite player with Lyrion server default web user interface. It can be installed from [Microsoft App Store](https://apps.microsoft.com/detail/9pbhmtnp9037).
 
+### Android
+
+Packages are available from the following repositories, or [from :octicons-mark-github-16: GitHub](https://github.com/CDrummond/squeezelite/releases).
+
+[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/org.lyrion.squeezelite)
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="80" alt="Get it at IzzyOnDroid">](https://apt.izzysoft.de/packages/org.lyrion.squeezelite)
+
+Use an [F-Droid client](https://f-droid.org/en/packages/org.fdroid.fdroid/) to get automatic updates.
+
 ### Linux/BSD
 
 Squeezelite is available in the following distribution repositories:
