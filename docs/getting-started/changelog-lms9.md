@@ -72,6 +72,8 @@
 
 - Bug Fixes:
 
+	- [#1280](https://github.com/LMS-Community/slimserver/issues/1280) \- persists current song on last track (thanks @MrC!).
+
 - Other:
 
 ## Version 9.0.3 - 2025-10-03 (9977737c1)
