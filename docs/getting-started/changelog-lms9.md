@@ -18,6 +18,7 @@
 
 	- Improve support for 3rd party player icons, add some for piCorePlayer, SqueezeAMP, WiiM players.
 	- Update downloader now validates the installers checksum.
+	- Updated French translation - thanks @Franck-Berry!
 	- Updated Chinese translation - thanks @xdsnet!
 	- Improve cache purging reliability to avoid unnecessary growth.
 	- Update the custom user agent string: pretending to be iTunes probably caused more problems than it solved.
@@ -53,6 +54,8 @@
 	- [#1367](https://github.com/LMS-Community/slimserver/pull/1367) \- Update UPnP support to fix gapless playback (setNextAVTransport) (@BoringName15).
 	- [#1414](https://github.com/LMS-Community/slimserver/pull/1414) \- Make sure custom image proxy handlers are always called (fixes incompatibility with Radio Now Playing's SVG handler).
 	- [#1442](https://github.com/LMS-Community/slimserver/pull/1442) \- Avoid log flood when player discovery JSON is empty (@mikecappella).
+	- [#1444](https://github.com/LMS-Community/slimserver/pull/1444) \- Fix search using terms with quotes in the Default skin (@darrell-k).
+	- [#1445](https://github.com/LMS-Community/slimserver/pull/1445) \- Fix search result count (@darrell-k).
 
 - Other:
 
