@@ -7,3 +7,4 @@ plugins.json
 .DS_Store
 **/.wrangler
 tools/bug-extractor
+.env

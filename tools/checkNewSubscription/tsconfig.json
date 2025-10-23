@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "lib": ["es2021"] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+    "types": ["@cloudflare/workers-types"]
+  }
+}
