@@ -17,7 +17,7 @@ title: Downloads Archive
         // get list of objects with given prefix
         let releaseData = [];
         try {
-            const response = await fetch('archive-listing/' + prefix);
+            const response = await fetch('archive/' + prefix);
             releaseData = await response.json();
         }
         catch(e) {

@@ -21,7 +21,7 @@ const corsHeaders = {
     "Access-Control-Max-Age": "86400",
 }
 
-const urlPrefix = 'downloads/archive-listing/';
+const urlPrefix = 'downloads/listing/archive/';
 
 export default {
     async fetch(request, env): Promise<Response> {
