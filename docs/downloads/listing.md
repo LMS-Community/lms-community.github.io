@@ -17,7 +17,7 @@ title: Downloads Archive
         // get list of objects with given prefix
         let releaseData = [];
         try {
-            const response = await fetch('https://lms-downloads-handler.lyrion.workers.dev/' + prefix);
+            const response = await fetch('archive-listing/' + prefix);
             releaseData = await response.json();
         }
         catch(e) {

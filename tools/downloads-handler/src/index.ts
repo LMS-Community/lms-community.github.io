@@ -21,11 +21,12 @@ const corsHeaders = {
     "Access-Control-Max-Age": "86400",
 }
 
+const urlPrefix = 'downloads/archive-listing/';
 
 export default {
     async fetch(request, env): Promise<Response> {
         const url = new URL(request.url)
-        const prefix = url.pathname.slice(1)
+        const prefix = url.pathname.slice(1).replace(urlPrefix, '')
 
         if (!prefix) {
             return Response.redirect('https://lyrion.org/getting-started')
