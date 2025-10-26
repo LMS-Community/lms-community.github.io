@@ -1,5 +1,6 @@
 import { Hono, Context } from 'hono'
 
+const DEBUG = false
 const urlPrefix = 'downloads/listing/archive';
 
 interface Env {
@@ -25,8 +26,10 @@ const corsHeaders: Record<string, string> = {
 
 const app = new Hono()
 
-app.on('GET', [`/${urlPrefix}/:prefix`, '/:prefix'], async (c: Context, ) => {
+app.get(`/${urlPrefix}/:prefix{.*}`, async (c: Context, ) => {
     const prefix = c.req.param('prefix');
+
+    DEBUG && console.log(prefix)
 
     if (!prefix) {
         return Response.redirect('https://lyrion.org/getting-started')
