@@ -34,6 +34,8 @@ Before first use the Receiver needs to be connected to your LMS system using the
 
 [Jcrummy](https://github.com/jcrummy) has created a tool for multiple platforms to take care of the initialization, which is called [`sbconfig` and can be found here](https://jcrummy.github.io/gosqueeze/). This tool can also be used for older Squeezebox systems, like Classic and Boom and is particularly of use when the VFD display fails.
 
+Recently the downloads are not available anymore. You can refer to this webarchive link te download a snapshot reelease: [https://web.archive.org/web/20201021184456/https://github.com/jcrummy/gosqueeze/releases/](https://web.archive.org/web/20201021184456/https://github.com/jcrummy/gosqueeze/releases/). 
+
 ### `sbconfig` instructions
 1. Download and launch the relevant executable for your OS.
 2. Select the network interface that is connect to the same LAN as your Receiver. If you have only 1 network interface there is no need to select one. Be sure to use a network cable.
