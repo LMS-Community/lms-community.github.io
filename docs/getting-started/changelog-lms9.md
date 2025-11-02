@@ -77,6 +77,7 @@
 
 - Bug Fixes:
 
+	- Classic/Transporter/Boom [would not navigate down the artist](https://forums.lyrion.org/forum/user-forums/logitech-media-server/1794277) of the currently playing track.
 	- [#1280](https://github.com/LMS-Community/slimserver/issues/1280) \- persists current song on last track (thanks @MrC!).
 
 - Other:
