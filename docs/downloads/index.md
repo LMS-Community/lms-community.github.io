@@ -75,7 +75,6 @@ The development version is where you’ll find all the latest and greatest featu
 | [{{ dev.macos.name }}]({{ dev.macos.url }}) | {{ dev.macos.size }} | {{ dev.macos.timestamp }} | {{ dev.macos.desc }} |
 | [{{ dev.debamd64.name }}]({{ dev.debamd64.url }}) | {{ dev.debamd64.size }} | {{ dev.debamd64.timestamp }} | {{ dev.debamd64.desc }} |
 | [{{ dev.debarm.name }}]({{ dev.debarm.url }}) | {{ dev.debarm.size }} | {{ dev.debarm.timestamp }} | {{ dev.debarm.desc }} |
-| [{{ dev.debi386.name }}]({{ dev.debi386.url }}) | {{ dev.debi386.size }} | {{ dev.debi386.timestamp }} | {{ dev.debi386.desc }} |
 | [{{ dev.deb.name }}]({{ dev.deb.url }}) | {{ dev.deb.size }} | {{ dev.deb.timestamp }} | {{ dev.deb.desc }} |
 | [{{ dev.rpm.name }}]({{ dev.rpm.url }}) | {{ dev.rpm.size }} | {{ dev.rpm.timestamp }} | {{ dev.rpm.desc }} |
 | [{{ dev.nocpan.name }}]({{ dev.nocpan.url }}) | {{ dev.nocpan.size }} | {{ dev.nocpan.timestamp }} | {{ dev.nocpan.desc }} |
