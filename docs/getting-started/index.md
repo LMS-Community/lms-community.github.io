@@ -50,7 +50,7 @@ Lyrion Music Server is a fully open source server software to power a wide range
     Install on Fedora/Red Hat Enterprise Linux/CentOS, etc.:
 
     ```
-    sudo dnf install {{ latest.rpm.url }}
+    sudo dnf install --no-gpgchecks {{ latest.rpm.url }}
     ```
 
     Install on openSUSE and derivatives:
