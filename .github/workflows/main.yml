@@ -70,6 +70,7 @@ jobs:
     name: Import external data sources
     needs: check-slimserver-commit
     if: needs.check-slimserver-commit.outputs.changed == 'true'
+    continue-on-error: true
     runs-on: ubuntu-24.04
     steps:
       - name: Install html2md repository and other depedencies
