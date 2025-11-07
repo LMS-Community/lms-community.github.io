@@ -30,9 +30,46 @@ env:
   STATS_JSON: docs/analytics/stats.json
 
 jobs:
+  check-slimserver-commit:
+    name: Check latest slimserver commit
+    runs-on: ubuntu-24.04
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
+      latest_commit: ${{ steps.get_commit.outputs.latest_commit }}
+    steps:
+      - name: Get latest commit hash from slimserver
+        id: get_commit
+        run: |
+          latest_commit=$(git ls-remote https://github.com/LMS-Community/slimserver.git HEAD | awk '{print $1}')
+          echo "latest_commit=$latest_commit" >> $GITHUB_OUTPUT
+
+      - name: Cache last known commit hash
+        id: restore_commit
+        uses: actions/cache@v4
+        with:
+          path: .slimserver_last_commit
+          key: slimserver-last-commit
+
+      - name: Check if commit has changed
+        id: check
+        run: |
+          last_commit=""
+          if [ -f .slimserver_last_commit ]; then
+            last_commit=$(cat .slimserver_last_commit)
+          fi
+
+          if [ "$last_commit" != "${{ steps.get_commit.outputs.latest_commit }}" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+          echo "${{ steps.get_commit.outputs.latest_commit }}" > .slimserver_last_commit
 
   get-external-changelog:
     name: Import external data sources
+    needs: check-slimserver-commit
+    if: needs.check-slimserver-commit.outputs.changed == 'true'
     runs-on: ubuntu-24.04
     steps:
       - name: Install html2md repository and other depedencies
