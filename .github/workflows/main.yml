@@ -35,14 +35,7 @@ jobs:
     name: Import external data sources
     runs-on: ubuntu-24.04
     steps:
-      - name: Install APT depedencies
-        if: ${{ !env.ACT }}
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: html2md python3-babel
-          version: 1
-
-      - name: Install html2md and other depedencies
+      - name: Install html2md repository and other depedencies
         run: |
           # add repo for html2md
           curl -1sLf 'https://dl.cloudsmith.io/public/suntong/repo/setup.deb.sh' | sudo -E bash
@@ -52,6 +45,13 @@ jobs:
             # apt-cache policy html2md
             sudo apt install -y html2md python3-babel
           fi
+
+      - name: Install APT depedencies
+        if: ${{ !env.ACT }}
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: html2md python3-babel
+          version: 1
 
       - name: Checkout documentation
         uses: actions/checkout@v5
