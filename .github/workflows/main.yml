@@ -140,7 +140,7 @@ jobs:
   deploy-mkdocs:
     name: Build website and publish to gh-pages branch
     needs: get-external-changelog
-    if: always().        # run even if previous job failed or was skipped
+    if: always()        # run even if previous job failed or was skipped
     runs-on: ubuntu-24.04
 
     steps:
