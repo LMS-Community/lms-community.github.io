@@ -70,7 +70,6 @@ jobs:
     name: Import external data sources
     needs: check-slimserver-commit
     if: needs.check-slimserver-commit.outputs.changed == 'true'
-    continue-on-error: true
     runs-on: ubuntu-24.04
     steps:
       - name: Install html2md repository and other depedencies
@@ -141,7 +140,7 @@ jobs:
   deploy-mkdocs:
     name: Build website and publish to gh-pages branch
     needs: get-external-changelog
-    if: github.ref == 'refs/heads/main'    # only deploy from main branch
+    if: always().        # run even if previous job failed or was skipped
     runs-on: ubuntu-24.04
 
     steps:
@@ -171,6 +170,7 @@ jobs:
           tools/build-plugin-repository.pl > $PLUGIN_TARGET
 
       - name: Get analytics data
+        # if: github.event_name == 'schedule'
         run: |
           tools/get-analytics-data.pl > $STATS_JSON
 
