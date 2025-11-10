@@ -71,6 +71,8 @@
 
 - Server Changes:
 
+	- Updated Czech translation - thanks @mipa87!
+
 - Platform Support:
 
 	- [#1441](https://github.com/LMS-Community/slimserver/issues/1441) \- Install procps package Docker image in support of plugins which need the tools to manage their helper processes.
