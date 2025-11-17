@@ -130,9 +130,9 @@ With the release of LMS9 the image `lmscommunity/logitechmediaserver` is depreca
 
     Change this line to:
 
-        "image" : "lmscommunity/lyrionmusicserver:stable",
+        "image" : "lmscommunity/lyrionmusicserver:latest",
 
-    It is recommended to use the `stable` tag, more information about which tag is most suitable for you is described [here](https://hub.docker.com/r/lmscommunity/lyrionmusicserver). Please also make sure that all the quotation marks and the trailing comma stays intact.
+    It is recommended to use the `latest` tag, as Synology's Container Manager would only check this tag for updates. More information about which tag is most suitable for you is described [here](https://hub.docker.com/r/lmscommunity/lyrionmusicserver). Please also make sure that all the quotation marks and the trailing comma stays intact.
 
 4. Next step is to download the new image. Go to "Registry" and download the `lmscommunity/lyrionmusicserver` image. Choose the same tag you have specified in the json file.
 5. Before we recreate the container using the updated configuration we need to remove the current container (nothing important will be removed, as the data is stored in volumes and the container configuration is saved in the json file). Select the LMS container, choose "Action" > "Stop", and subsequently "Delete".

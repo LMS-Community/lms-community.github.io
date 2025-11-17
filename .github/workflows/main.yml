@@ -79,7 +79,6 @@ jobs:
 
           if [ "$ACT" == "true" ]; then
             sudo apt-get update
-            # apt-cache policy html2md
             sudo apt install -y html2md python3-babel
           fi
 
