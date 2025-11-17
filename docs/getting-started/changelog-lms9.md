@@ -46,6 +46,7 @@
 	- Upgrade DBD::SQLite to v1.75 for Perl 5.40 (Linux x86\_64, aarch64), 5.38 (Linux x86\_64), 5.36 (Linux x86\_64, aarch64, armv7), 5.34 (Linux x86\_64, aarch64; macOS), 5.32 (Linux x86\_64, aarch64, armv7).
 	- [#73](https://github.com/LMS-Community/slimserver-platforms/pull/73) \- Add a note about setting the hostname in a Docker container (thanks @hartzell!)
 	- [#86](https://github.com/LMS-Community/slimserver-platforms/pull/86) \- Add more tags to Docker images to better support automated updates (thanks @stavros-k!)
+	- [#101](https://github.com/LMS-Community/slimserver-platforms/pull/101) \- Add package opus-tools to docker image (thanks @terual!)
 
 - Bug Fixes:
 
