@@ -58,13 +58,15 @@
 	- [#1414](https://github.com/LMS-Community/slimserver/pull/1414) \- Make sure custom image proxy handlers are always called (fixes incompatibility with Radio Now Playing's SVG handler).
 	- [#1442](https://github.com/LMS-Community/slimserver/pull/1442) \- Avoid log flood when player discovery JSON is empty (@mikecappella).
 	- [#1444](https://github.com/LMS-Community/slimserver/pull/1444) \- Fix search using terms with quotes in the Default skin (@darrell-k).
-	- [#1445](https://github.com/LMS-Community/slimserver/pull/1445) \- Fix search result count (@darrell-k).
+	- [#1444](https://github.com/LMS-Community/slimserver/pull/1444) \- Fix search using terms with quotes in the Default skin (@darrell-k).
+	- [#1460](https://github.com/LMS-Community/slimserver/pull/1460) \- Don't close HTTP when 1.1, unless explicit asked (@philippe44).
 
 - Other:
 
 	- Remove more left-overs from removed picture/video scanning.
 	- Remove more left-overs from removed MySqueezebox integration.
 	- Remove support for MySQL. Existing configurations using it will log an error.
+	- [#1458](https://github.com/LMS-Community/slimserver/pull/1458) \- Add devcontainer configuration with Dockerfile and docker-compose setup (@LMSSonos).
 
 ## Version 9.0.4
 
