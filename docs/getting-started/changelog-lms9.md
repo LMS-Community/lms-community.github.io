@@ -25,6 +25,7 @@
 	- Enable log rotation on Docker based systeme.
 	- Don't re-encode lossy streams when bitrate limiting if original stream is of lower or equal bitrate already (thanks @ralphy!)
 	- Add prefs folder to search list for custom types/convert/strings files (macOS/Windows).
+	- Use online service to convert WEBP images to JPEG if needed (only works with online images).
 	- [#1216](https://github.com/LMS-Community/slimserver/pull/1216) \- Reset playing position to first track once a playlist or album has ended (@ml-1)
 	- [#1245](https://github.com/LMS-Community/slimserver/pull/1245) \- Added a Simple WebSocket client capability for 3rd Party Plugins to support this protocol (@expectingtofly)
 	- [#1356](https://github.com/LMS-Community/slimserver/pull/1356) \- Use ORIGINALDATE tag with Flac (@jbylsma)
