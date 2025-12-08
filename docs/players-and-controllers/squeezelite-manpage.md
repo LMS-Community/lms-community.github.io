@@ -7,7 +7,7 @@ hide:
 
 # squeezelite(1) - Lightweight headless Squeezebox emulator
 
-Debian Project, 2024-04-03
+Debian Project, 2025-10-10
 
 ```
 squeezelite [options]
@@ -174,11 +174,10 @@ which denotes the sample size in bits. Little Endian only.
   (below) for more information. The options
   **-u** and **-R**
   are synonymous.
-* **-D [delay]**  
-  Output device supports DSD over PCM (DoP). DSD streams will be converted to DoP
-  before output. If this option is not supplied, DSD streams will be converted to
-  PCM and resampled, so they can be played on a PCM DAC. Delay is an optional time
-  to wait when switching between PCM and DoP between tracks, in milliseconds.
+* **-D [delay][:format]**  
+  Output device supports DSD over PCM (DoP) or native.
+  **delay** to add when switching between PCM and DSD in milliseconds (optional).
+  **format** dop (default), u8, u16le, u16be, u32le or u32be as required by attached DAC.
 * **-v**  
   Enable visualiser support. This creates a shared memory segment that contains
   some of the audio being played, so that an external visualiser can read and
@@ -352,7 +351,6 @@ linear phase.
 # See Also
 
 
-* http://wiki.slimdevices.com/index.php/Squeezelite  
+* https://wiki.lyrion.org/index.php/Squeezelite  
+* https://docs.picoreplayer.org/components/squeezelite  
 * https://lyrion.org/  
-* sox(1)  
-  for further information about resampling.
