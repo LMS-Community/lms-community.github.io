@@ -62,6 +62,7 @@
 	- [#1444](https://github.com/LMS-Community/slimserver/pull/1444) \- Fix search using terms with quotes in the Default skin (@darrell-k).
 	- [#1444](https://github.com/LMS-Community/slimserver/pull/1444) \- Fix search using terms with quotes in the Default skin (@darrell-k).
 	- [#1460](https://github.com/LMS-Community/slimserver/pull/1460) \- Don't close HTTP when 1.1, unless explicit asked (@philippe44).
+	- [#1471](https://github.com/LMS-Community/slimserver/pull/1471) \- Consider all of a track's genres for scrobbling exclusion (@jbylsma).
 
 - Other:
 
