@@ -5,7 +5,7 @@ title: Music Service Plugin
 
 # Music Service Plugin Implementation Guide
 
-This documen tries to outline how to implement an integration with a music service. It's base on the experience made with eg. [Spotty](https://github.com/michaelherger/Spotty-Plugin) or [Qobuz](https://github.com/pierrepoulpe/SqueezeboxQobuz). Check out one of those plugins if you want to get more ideas.
+This document tries to outline how to implement an integration with a music service. It's base on the experience made with eg. [Spotty](https://github.com/michaelherger/Spotty-Plugin) or [Qobuz](https://github.com/pierrepoulpe/SqueezeboxQobuz). Check out one of those plugins if you want to get more ideas.
 
 ## File/Module Organization
 
