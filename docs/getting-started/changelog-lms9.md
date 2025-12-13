@@ -11,7 +11,7 @@
 	- [#1426](https://github.com/LMS-Community/slimserver/pull/1426) \- add support for ListenBrainz to AudioScrobbler plugin (thanks @vysmaty & AI)
 	- Allow GETting the JSONRPC.js handler with a "request" parameter to simplify access by limited clients.
 	- [#1294](https://github.com/LMS-Community/slimserver/issues/1294) \- Bring back list view in the Manage Plugins section. The view can be toggled between grid an list view.
-	- [#1422](https://github.com/LMS-Community/slimserver/issues/1422) \- Add new sort orders "playcount" and "recentlyplayed" to "albums" query.
+	- [#1422](https://github.com/LMS-Community/slimserver/issues/1422) \- Add new sort orders "playcount", "popular", and "recentlyplayed" to "albums" and "artists" queries.
 	- Provide a hook which would allow a plugin or other to register a method to display track artwork for radio stations which don't provide their own.
 
 - Server Changes:
