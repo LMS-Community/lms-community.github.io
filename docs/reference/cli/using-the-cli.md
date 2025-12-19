@@ -51,6 +51,16 @@ For commands that are global to the server and do not require a `<playerid>`, yo
 
 Note that percent-style encoding of parameters is not needed when using jsonrpc.js.
 
+### `GET`ting a request (LMS 9.1+ only)
+
+The same command and data structure as outline before can also be used when `GET`ting `/jsonrpc.js`. This can be helpful in environments where you want to have a simple URL to be called, or when `POST` is not an option. In this case create the same request object, URI encode it, and add it as the parameter `request`:
+
+> **`curl -s http://192.168.1.1:9000/jsonrpc.js?request=%7B%22id%22%3A0%2C%22params%22%3A%5B%2200%3A04%3A20%3A10%3A01%3Axx%22%2C%5B%22pause%22%5D%5D%2C%22method%22%3A%22slim.request%22%7D`**
+
+As you can see the URI encoding does add quite a bit of overhead to the overall data size. The above represents the same as:
+
+> `{"id":0,"params":["00:04:20:10:01:xx",["pause"]],"method":"slim.request"}`
+
 ## Examples
 
 ### Mute a player
