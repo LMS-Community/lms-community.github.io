@@ -13,6 +13,7 @@
 	- [#1294](https://github.com/LMS-Community/slimserver/issues/1294) \- Bring back list view in the Manage Plugins section. The view can be toggled between grid an list view.
 	- [#1422](https://github.com/LMS-Community/slimserver/issues/1422) \- Add new sort orders "playcount", "popular", and "recentlyplayed" to "albums" and "artists" queries.
 	- Provide a hook which would allow a plugin or other to register a method to display track artwork for radio stations which don't provide their own.
+	- [#1468](https://github.com/LMS-Community/slimserver/issues/1468) \- Add support for SUBTITLE to Advanced Search.
 
 - Server Changes:
 
