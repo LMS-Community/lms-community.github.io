@@ -8,8 +8,9 @@ title: Applications
 
 ## Controller
 - [Cursebox](https://gitlab.com/gorgonzola/cursebox/blob/master/README.md) (Terminal): An interactive utility that allows you to control your players from the terminal.
-- [iPeng](https://penguinlovesmusic.de/ipeng-8/) (iOS): The Music Remote for LMS and compatible music players.
+- [iPeng](https://penguinlovesmusic.de/ipeng-8/) (iOS/iPadOS): The Music Remote for LMS and compatible music players.
 - [LMS TUI ](https://www.nexus0.net/pub/sw/lmstui/) (Terminal): An application with a text-based user interface to remotely control LMS.
+- [LyrPlay](https://apps.apple.com/app/lyrplay/id6746776736) (iOS/iPadOS): Turns your device into a player and controller (using MaterialSkin).
 - [Lyrion](https://f-droid.org/packages/com.craigd.lmsmaterial.app/) (Android): Simple webview wrapper for MaterialSkin on an LMS server.
 - [melodeon](https://github.com/CDrummond/melodeon) (Desktop): Simple QWebEngine wrapper for MaterialSkin on LMS.
 - [ncsb](https://github.com/atisharma/ncsb) (Terminal): A ncurses Squeezebox controller for LMS.
@@ -19,6 +20,7 @@ title: Applications
 - [Squeezelite-X](https://apps.microsoft.com/detail/9pbhmtnp9037) (Windows): Combines the Squeezelite player with Lyrion with easy access to LMS' user interface.
 - [Squeezer](https://github.com/kaaholst/android-squeezer) (Android): Control your Lyrion Music Server and players from your Android phone.
 - [Ultralight LMS skin](https://github.com/millerdev/lms-ultralight) (Browser): A responsive skin for Lyrion Music Server that works well on desktop and mobile browsers.
+- [xTune](https://apps.apple.com/app/xtune-lyrion-remote-player/id6744552136) (iOS/iPadOS): turns your phone/tablet into a remote with built-in player.
 
 ## Voice Control
 - [MediaServer](https://mediaserver.smartskills.tech) (Alexa) A custom Alexa skill to fully control LMS and also stream LMS-audio via Amazon Echo devices.
