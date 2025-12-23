@@ -221,9 +221,9 @@ The Security settings of the server preferences apply to CLI connections when th
 
 All LMS preferences apply to the CLI data. For examples, the preference about composers appearing in the artists list applies to the data returned by the `artists` query.
 
-### Reative Paths for Songs or Playlists
+### Relative Paths for Songs or Playlists
 
-Commands that use paths to songs or playlists (<item> parameters below) can use relative paths from the root of the Music Library folder to specify songs. For example, if the Music Library is specified as `D:\mymusic` and you'd like to refer to a song in that folder named `foo.mp3` you can specify just `foo.mp3` in the command parameter. Likewise, to refer to items in the Saved Playlist folder, you can use a prefix of `__playlists/` before the path. For example, to refer to the saved playlist `bar.m3u` in the Saved Playlists folder, you can specify a path of `__playlists/bar.m3u`.
+Commands that use paths to songs or playlists (`<item>` parameters below) can use relative paths from the root of the Music Library folder to specify songs. For example, if the Music Library is specified as `D:\mymusic` and you'd like to refer to a song in that folder named `foo.mp3` you can specify just `foo.mp3` in the command parameter. Likewise, to refer to items in the Saved Playlist folder, you can use a prefix of `__playlists/` before the path. For example, to refer to the saved playlist `bar.m3u` in the Saved Playlists folder, you can specify a path of `__playlists/bar.m3u`.
 
 ### Cover Art
 
@@ -276,3 +276,4 @@ Transporter Digital Inputs are handled as remote streams, with a URL starting wi
 To set Transporter to the TOSLINK input, use `<playerid> playlist play source:toslink<LF>`.
 
 When set to a digital input, Transporter reports the URL scheme above to the various path, url or status queries.
+
