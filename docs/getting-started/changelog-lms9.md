@@ -19,6 +19,7 @@
 
 	- Improve support for 3rd party player icons, add some for piCorePlayer, SqueezeAMP, WiiM players.
 	- Update downloader now validates the installers checksum.
+	- Updated Czech translation - thanks @mipa87!
 	- Updated French translation - thanks @Franck-Berry!
 	- Updated Chinese translation - thanks @xdsnet!
 	- Improve cache purging reliability to avoid unnecessary growth.
