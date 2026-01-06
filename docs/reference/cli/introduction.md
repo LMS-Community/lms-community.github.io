@@ -36,6 +36,7 @@ The available commands and queries are listed below, grouped by their scope:
 * Added new [`albums`](database.md/#albums) sort orders `recentlyplayed`, `playcount`
 * Added `2` tag to [`albums`](database.md/#albums) query to return the number of an album's groupings.
 * Added `4` tag to [`albums`](database.md/#albums), [`artists`](database.md/#artists), [`songs`](database.md/#songinfo) und [`status`](database.md/#songinfo) query to get the artist portrait ID. This ID can be used in a `/contributor/<portraitId>/image` url to get the artist's portrait.
+* Added option to `rescan album <album_id>` or `rescan track <track_id>`.
 
 ### Changes starting from Lyrion Music Server 9.0
 

@@ -9,14 +9,17 @@ title: CLI - Database commands
 
 ***
 ## rescan
-`rescan <|playlists|onlinelibrary|external|full singlefolder|?>`
+`rescan <|playlists|onlinelibrary|external|full|album|track <item>|?>`
 
 The `rescan` command causes the server to rescan the entire music library, reloading the music file information.
+You can define different types of scans, and in some cases an item you want to scan (path, album/track ID):
 
 * If `playlists` is indicated (`rescan playlists`), only the playlist directory is rescanned.
 * If `onlinelibrary` is indicated (`rescan onlinelibrary`), only the import from online music services is run.
 * If `external` is requested, the rescan will be performed using the external scanner process instead of the in-process scanner.
-* If `full file://some/path` is defined, then only this path will be scanned. Issued with a `?`, `rescan ?` returns if the server is currently scanning.
+* If `full file://some/path` is defined, then only this path will be scanned.
+* If `album <album_id>` or `track <track_id>` are requested, then only that album's or track's folder is scanned (LMS 9.1+). These are quick server internal updates and won't run all the plugin importers!
+* Issued with a `?`, `rescan ?` returns whether the server is currently scanning.
 
 Scanning occurs when the server starts and following `rescan` and `wipecache` commands.
 
