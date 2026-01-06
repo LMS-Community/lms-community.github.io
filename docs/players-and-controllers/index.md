@@ -83,4 +83,3 @@ Using piCorePlayer as its operating system, a basic Raspberry Pi can be configur
 - [Squeeze Ctrl](https://play.google.com/store/apps/details?id=com.angrygoat.android.squeezectrl) (Android - paid)
 - [Orange Squeeze](https://play.google.com/store/apps/details?id=com.orangebikelabs.orangesqueeze) (Android - paid)
 - [SqueezePad](https://apps.apple.com/us/app/squeezepad/id380003002) (iOS - paid)
-- [slimpris2](https://github.com/mavit/slimpris2) (Desktop integration on Linux, etc.)
