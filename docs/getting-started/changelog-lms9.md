@@ -7,6 +7,7 @@
 	- Optionally navigate playlists by folders, allowing you to organise your playlists hierarchically.
 	- Implement an artist portrait picture handler. This will read images from folders where you've stored them under the artist's name, or from the artist folder in a typical artist/album/track hierarchy.
 	- Add a plugin to try to fetch artwork for radio stations which don't provide track artwork.
+	- Add new scan modes "album" and "track" to re-scan individual albums or tracks. Album scan is available from an album's Info menu.
 	- [#1425](https://github.com/LMS-Community/slimserver/pull/1425) \- Add playlist drag and drop support to the Classic skin (thanks @oreillymj)
 	- [#1426](https://github.com/LMS-Community/slimserver/pull/1426) \- add support for ListenBrainz to AudioScrobbler plugin (thanks @vysmaty & AI)
 	- Allow GETting the JSONRPC.js handler with a "request" parameter to simplify access by limited clients.
