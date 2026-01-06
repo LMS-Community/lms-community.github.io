@@ -60,7 +60,7 @@ Please also remove any of the lines relating to downgrading user privileges. Pla
 vi /etc/openvpn/TUN.ovpn
 ```
 
-```bash
+```
 # Downgrade privileges after initialization (non-Windows only)
 # user nobody
 # group nogroup
@@ -84,7 +84,7 @@ We paste these two commands into that file:
 
     ```bash
     # Load the tunnel kernel module.
-    insmod /lib/modules/2.6.26.8-rt16-332-g5849bfa/tun.ko
+    insmod /lib/modules/2.6.26.8-rt16/tun.ko
     # Start openvpn
     /usr/sbin/openvpn --config /etc/openvpn/TUN.ovpn --daemon
     ```
@@ -93,7 +93,7 @@ We paste these two commands into that file:
 
     ```bash
     # Load the tunnel kernel module.
-    insmod /lib/modules/2.6.26.8-rt16/tun.ko
+    insmod /lib/modules/2.6.26.8-rt16-332-g5849bfa/tun.ko
     # Start openvpn
     /usr/sbin/openvpn --config /etc/openvpn/TUN.ovpn --daemon
     ```
