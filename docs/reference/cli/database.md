@@ -696,6 +696,7 @@ The `songinfo` command returns all the information on a song known by the server
 | `y`  `year` | Song year. Only if known. |
 | `Y`  `replay_gain` | Replay gain (in dB), if any |
 | `V`  `live_edge` | The Live edge of a remote stream. -1 is not live, 0 is live at the edge, >0 is number of seconds from the live edge. |
+| `z`  `subtitle` | Subtitle associated with track title e.g. Acoustic, Demo, Live at... etc. Only if known. |
 | `4`  `portraitid` | The contributor's portrait ID |
 
 Example:
