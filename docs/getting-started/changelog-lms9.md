@@ -1,6 +1,6 @@
 ## Version 9.1.0
 
-- [Upstream fixes from Lyrion Music Server 9.0.x](#version-903)
+- [Upstream fixes from Lyrion Music Server 9.0.x](#version-904)
 
 - New Features:
 
