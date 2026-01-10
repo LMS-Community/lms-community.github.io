@@ -41,6 +41,7 @@
 
 	- Make piCorePlayer a first class citizan: add Slim::Utils::OS::pCP to support it
 	- Make Docker a first class citizan: add Slim::Utils::OS::Docker instead of a Custom.pm
+	- Add support for Perl 5.42 on x86\_64 Linux.
 	- Remove Win32 legacy support files, code, control panels, build pipeline, etc.
 	- Remove legacy Mac installer from build pipeline.
 	- Remove code dealing with Perl < 5.10.
