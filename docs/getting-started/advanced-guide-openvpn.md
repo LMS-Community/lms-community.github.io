@@ -37,7 +37,7 @@ Then we `ssh` into the SB Radio/Touch and enter the following commands:
     unzip baby-openvpn-x.y.z.zip
     mv /dev/openvpn /usr/sbin
     chmod 755 /usr/sbin/openvpn
-    mv /dev/tun.ko /lib/modules/2.6.26.8-rt16
+    mv /dev/tun.ko /lib/modules/$(uname -r)
     mkdir -p /etc/openvpn
     ```
 
@@ -49,7 +49,7 @@ Then we `ssh` into the SB Radio/Touch and enter the following commands:
     unzip fab4-openvpn-x.y.z.zip
     mv /dev/openvpn /usr/sbin
     chmod 755 /usr/sbin/openvpn
-    mv /dev/tun.ko /lib/modules/2.6.26.8-rt16-332-g5849bfa
+    mv /dev/tun.ko /lib/modules/$(uname -r)
     mkdir -p /etc/openvpn
     ```
 
@@ -84,7 +84,7 @@ We paste these two commands into that file:
 
     ```bash
     # Load the tunnel kernel module.
-    insmod /lib/modules/2.6.26.8-rt16/tun.ko
+    insmod /lib/modules/$(uname -r)/tun.ko
     # Start openvpn
     /usr/sbin/openvpn --config /etc/openvpn/TUN.ovpn --daemon
     ```
@@ -93,7 +93,7 @@ We paste these two commands into that file:
 
     ```bash
     # Load the tunnel kernel module.
-    insmod /lib/modules/2.6.26.8-rt16-332-g5849bfa/tun.ko
+    insmod /lib/modules/$(uname -r)/tun.ko
     # Start openvpn
     /usr/sbin/openvpn --config /etc/openvpn/TUN.ovpn --daemon
     ```
