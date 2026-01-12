@@ -39,7 +39,6 @@
 
 - Platform Support:
 
-	- Make piCorePlayer a first class citizan: add Slim::Utils::OS::pCP to support it
 	- Make Docker a first class citizan: add Slim::Utils::OS::Docker instead of a Custom.pm
 	- Add support for Perl 5.42 on x86\_64 Linux.
 	- Remove Win32 legacy support files, code, control panels, build pipeline, etc.
@@ -67,6 +66,7 @@
 	- [#1444](https://github.com/LMS-Community/slimserver/pull/1444) \- Fix search using terms with quotes in the Default skin (@darrell-k).
 	- [#1460](https://github.com/LMS-Community/slimserver/pull/1460) \- Don't close HTTP when 1.1, unless explicit asked (@philippe44).
 	- [#1471](https://github.com/LMS-Community/slimserver/pull/1471) \- Consider all of a track's genres for scrobbling exclusion (@jbylsma).
+	- [#1486](https://github.com/LMS-Community/slimserver/pull/1486) \- Replay gain is sometimes not applied to remote tracks (@SamInPgh).
 
 - Other:
 
@@ -87,6 +87,7 @@
 
 	- Add Homebrew's binary path to OSX search paths.
 	- [#1441](https://github.com/LMS-Community/slimserver/issues/1441) \- Install procps package Docker image in support of plugins which need the tools to manage their helper processes.
+	- Make piCorePlayer a first class citizan: add Slim::Utils::OS::pCP to support it
 
 - Bug Fixes:
 
