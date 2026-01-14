@@ -34,44 +34,21 @@ jobs:
     name: Check latest slimserver commit
     runs-on: ubuntu-24.04
     outputs:
-      changed: ${{ steps.check.outputs.changed }}
-      latest_commit: ${{ steps.get_commit.outputs.latest_commit }}
+      changed: ${{ steps.restore_commit.outputs.cache-hit == 'false' }}
     steps:
       - name: Get latest commit hash from slimserver
         id: get_commit
         run: |
           latest_commit=$(git ls-remote https://github.com/LMS-Community/slimserver.git HEAD | awk '{print $1}')
           echo "latest_commit=$latest_commit"
-          echo "latest_commit=$latest_commit" >> $GITHUB_OUTPUT
+          echo "${{ steps.get_commit.outputs.latest_commit }}" > .slimserver_last_commit
 
       - name: Cache last known commit hash
         id: restore_commit
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .slimserver_last_commit
-          key: slimserver-last-commit
-
-      - name: Check if commit has changed
-        id: check
-        run: |
-          last_commit=""
-          if [ -f .slimserver_last_commit ]; then
-            echo "Found cached last commit file"
-            last_commit=$(cat .slimserver_last_commit)
-          fi
-
-          echo "Last known commit: $last_commit"
-
-          if [ "$last_commit" != "${{ steps.get_commit.outputs.latest_commit }}" ]; then
-            echo "last_commit (cached)=${last_commit}, last_commit (latest)=${{ steps.get_commit.outputs.latest_commit }}"
-            echo "changed=true"
-            echo "changed=true" >> $GITHUB_OUTPUT
-          else
-            echo "changed=false"
-            echo "changed=false" >> $GITHUB_OUTPUT
-          fi
-
-          echo "${{ steps.get_commit.outputs.latest_commit }}" > .slimserver_last_commit
+          key: slimserver-last-commit-${{ steps.get_commit.outputs.latest_commit }}
 
   get-external-changelog:
     name: Import external data sources
@@ -80,7 +57,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Debug output from previous job
-        run: echo "changed=${{ needs.check-slimserver-commit.outputs.changed }}"
+        run: echo "${{ needs.check-slimserver-commit.outputs.changed }}"
 
       - name: Install html2md repository and other depedencies
         run: |
