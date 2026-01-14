@@ -41,6 +41,7 @@ jobs:
         id: get_commit
         run: |
           latest_commit=$(git ls-remote https://github.com/LMS-Community/slimserver.git HEAD | awk '{print $1}')
+          echo "latest_commit=$latest_commit"
           echo "latest_commit=$latest_commit" >> $GITHUB_OUTPUT
 
       - name: Cache last known commit hash
@@ -55,10 +56,14 @@ jobs:
         run: |
           last_commit=""
           if [ -f .slimserver_last_commit ]; then
+            echo "Found cached last commit file"
             last_commit=$(cat .slimserver_last_commit)
           fi
 
+          echo "Last known commit: $last_commit"
+
           if [ "$last_commit" != "${{ steps.get_commit.outputs.latest_commit }}" ]; then
+            echo "last_commit (cached)=${last_commit}, last_commit (latest)=${{ steps.get_commit.outputs.latest_commit }}"
             echo "changed=true"
             echo "changed=true" >> $GITHUB_OUTPUT
           else
