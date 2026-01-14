@@ -34,13 +34,14 @@ jobs:
     name: Check latest slimserver commit
     runs-on: ubuntu-24.04
     outputs:
-      changed: ${{ steps.restore_commit.outputs.cache-hit == 'false' }}
+      changed: ${{ steps.restore_commit.outputs.cache-hit != 'true' }}
     steps:
       - name: Get latest commit hash from slimserver
         id: get_commit
         run: |
           latest_commit=$(git ls-remote https://github.com/LMS-Community/slimserver.git HEAD | awk '{print $1}')
           echo "latest_commit=$latest_commit"
+          echo "latest_commit=$latest_commit" >> $GITHUB_OUTPUT
           echo "${{ steps.get_commit.outputs.latest_commit }}" > .slimserver_last_commit
 
       - name: Cache last known commit hash
