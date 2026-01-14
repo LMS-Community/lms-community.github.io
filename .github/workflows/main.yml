@@ -59,8 +59,10 @@ jobs:
           fi
 
           if [ "$last_commit" != "${{ steps.get_commit.outputs.latest_commit }}" ]; then
+            echo "changed=true"
             echo "changed=true" >> $GITHUB_OUTPUT
           else
+            echo "changed=false"
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
@@ -72,6 +74,9 @@ jobs:
     if: needs.check-slimserver-commit.outputs.changed == 'true'
     runs-on: ubuntu-24.04
     steps:
+      - name: Debug output from previous job
+        run: echo "changed=${{ needs.check-slimserver-commit.outputs.changed }}"
+
       - name: Install html2md repository and other depedencies
         run: |
           # add repo for html2md
