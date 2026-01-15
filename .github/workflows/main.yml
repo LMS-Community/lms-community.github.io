@@ -40,7 +40,6 @@ jobs:
         id: get_commit
         run: |
           latest_commit=$(git ls-remote https://github.com/LMS-Community/slimserver.git HEAD | awk '{print $1}')
-          echo "latest_commit=$latest_commit"
           echo "latest_commit=$latest_commit" >> $GITHUB_OUTPUT
           echo "${{ steps.get_commit.outputs.latest_commit }}" > .slimserver_last_commit
 
@@ -57,9 +56,6 @@ jobs:
     if: needs.check-slimserver-commit.outputs.changed == 'true'
     runs-on: ubuntu-24.04
     steps:
-      - name: Debug output from previous job
-        run: echo "${{ needs.check-slimserver-commit.outputs.changed }}"
-
       - name: Install html2md repository and other depedencies
         run: |
           # add repo for html2md
@@ -78,7 +74,7 @@ jobs:
           version: 1
 
       - name: Checkout documentation
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Get changelog and convert to markdown
         run: |
@@ -101,7 +97,7 @@ jobs:
           rm man-to-md.pl
 
       - name: Check out LMS code for strings coverage
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: LMS-Community/slimserver
           path: slimserver
@@ -131,7 +127,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.event.inputs.branch }}
 
@@ -173,7 +169,7 @@ jobs:
       # evaluate the week number to use in the cache key
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
 
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
