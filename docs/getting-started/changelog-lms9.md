@@ -36,6 +36,7 @@
 	- [#1364](https://github.com/LMS-Community/slimserver/pull/1364) \- store/return playqueue entry context flag ("addedFromWork")
 	- [#1377](https://github.com/LMS-Community/slimserver/pull/1377) \- Provide new /time/tz endpoint for Squeezeplay to fetch the local timezone (@mw9)
 	- [#1399](https://github.com/LMS-Community/slimserver/pull/1399) \- Use artwork appropriate for a Work if multiple album covers
+	- [#1487](https://github.com/LMS-Community/slimserver/pull/1487) \- Improve CJK search support (@xxbin)
 
 - Platform Support:
 
