@@ -23,6 +23,7 @@
 	- Updated Czech translation - thanks @mipa87!
 	- Updated French translation - thanks @Franck-Berry!
 	- Updated Chinese translation - thanks @xdsnet!
+	- Updated Swedish translation - thanks @JohanSaaw!
 	- Improve cache purging reliability to avoid unnecessary growth.
 	- Update the custom user agent string: pretending to be iTunes probably caused more problems than it solved.
 	- Enable log rotation on Docker based systeme.
@@ -37,6 +38,7 @@
 	- [#1377](https://github.com/LMS-Community/slimserver/pull/1377) \- Provide new /time/tz endpoint for Squeezeplay to fetch the local timezone (@mw9)
 	- [#1399](https://github.com/LMS-Community/slimserver/pull/1399) \- Use artwork appropriate for a Work if multiple album covers
 	- [#1487](https://github.com/LMS-Community/slimserver/pull/1487) \- Improve CJK search support (@xxbin)
+	- [#1489](https://github.com/LMS-Community/slimserver/pull/1489) \- Allow Replay Gain to be modified in a plugin's onStream() protocol handler routine (@SamInPgh)
 
 - Platform Support:
 
