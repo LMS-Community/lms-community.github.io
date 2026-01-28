@@ -64,7 +64,7 @@ For mobile phones and tablets:
 - [SlimLibrary](https://apps.apple.com/us/app/slimlibrary/id1022479972) (iOS - paid) [Announcement](https://forums.lyrion.org/forum/user-forums/3rd-party-software/100649-announce-slimlibrary-new-ios-remote-control-and-player-for-logitech-media-server?view=thread)
 - [SB Player](https://play.google.com/store/apps/details?id=com.angrygoat.android.sbplayer) (Android - paid)
 - [SqueezePlayer](https://play.google.com/store/apps/details?id=de.bluegaspode.squeezeplayer) (Android - paid)
-- [Squeezelite via Termux](https://github.com/CDrummond/lms-material-app/wiki/Squeezelite-via-Termux) (Android)
+- [Squeezelite for Android](https://github.com/CDrummond/squeezelite) (Android - free)
 - [Squeeze Client](https://github.com/maniac103/squeezeclient) (Android) With local playback.
 
 ## Specialist operating system with player / server
