@@ -78,7 +78,6 @@ These keys drive the “works” and related browsing logic.
 | Concept | Lyrion key | FLAC/Ogg/Opus | MP3 (ID3v2) | MP4/M4A | WMA |
 |---|---|---|---|---|---|
 | Work / piece | `WORK` | `WORK` | `TIT1` | `WRK` | `WM/Work` |
-| Grouping (often used for sub-work grouping) | `GROUPING` | `GROUPING` | `GRP1` | `GRP` | `WM/ContentGroupDescription` |
 | Performance (optional, helps separate multiple performances) | `PERFORMANCE` | `PERFORMANCE` (use this exact key) | (no standard ID3 frame mapped by core) | (no standard atom mapped by core) | (no standard WMA field mapped by core) |
 
 ## Multi-disc and box-set essentials
@@ -89,6 +88,7 @@ Use disc subtitle to identify individual discs by name.
 | Concept | Lyrion key | FLAC/Ogg/Opus | MP3 (ID3v2) | MP4/M4A | WMA |
 |---|---|---|---|---|---|
 | Disc subtitle / set subtitle (eg. box-set disc name, bonus concert disc) | `DISCSUBTITLE` | FLAC: `SETSUBTITLE` → `DISCSUBTITLE`; Ogg/Opus: use `DISCSUBTITLE` | `TSST` | (no standard atom mapped by core) | `WM/SetSubTitle` |
+| Grouping (often used for Classical Work / Sub-work grouping but can be used as an alternative to Disc subtitle for e.g. Original Album/Bonus Tracks)  | `GROUPING` | `GROUPING` | `GRP1` | `GRP` | `WM/ContentGroupDescription` |
 
 
 !!! tip
