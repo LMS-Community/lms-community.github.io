@@ -31,6 +31,7 @@ Community versions: [Operating system](https://github.com/ralph-irving/squeezeos
 ## Other Hardware
 
 Several streamers and amps available from [WiiM](https://www.wiimhome.com/) natively support LMS. Presently, this includes all models except for the Mini.
+WiiM devices now require that Squeezelite is switched on in the WiiM Home App Player Settings and includes auto-discover of local LMS servers on the same sub-net. It is not, currently, possible to manually specify a server address.
 
 Other streaming hardware manufacturers that offer native support of LMS include [AmpliPro](https://www.amplipro.com/), [Antipodes](https://antipodes.audio/), [Eversolo](https://eversolo.com/), [Holo Audio](https://www.kitsunehifi.com/), [Innuos](https://innuos.com/), [Sonore](https://www.sonore.us/), [SOtM](https://sotm-audio.com/) and [Str@mbo](https://nohta.it/).
 
