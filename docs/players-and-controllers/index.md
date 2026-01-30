@@ -59,7 +59,7 @@ After 2010 the LMS community developed DIY hardware offerings:
 For mobile phones and tablets:
 
 - [iPeng](https://penguinlovesmusic.de/) (iOS - paid) - in-app purchase to also be a player
-- [LyrPlay](https://apps.apple.com/gb/app/lyrplay/id6746776736) (iOS - free)
+- [LyrPlay](https://apps.apple.com/gb/app/lyrplay/id6746776736) (iOS - free) - incorporates player and slightly modified Material GUI
 - [xTune](https://apps.apple.com/gb/app/xtune-lyrion-remote-player/id6744552136) (iOS - paid)
 - [SlimLibrary](https://apps.apple.com/us/app/slimlibrary/id1022479972) (iOS - paid) [Announcement](https://forums.lyrion.org/forum/user-forums/3rd-party-software/100649-announce-slimlibrary-new-ios-remote-control-and-player-for-logitech-media-server?view=thread)
 - [SB Player](https://play.google.com/store/apps/details?id=com.angrygoat.android.sbplayer) (Android - paid)
@@ -79,6 +79,8 @@ Using piCorePlayer as its operating system, a basic Raspberry Pi can be configur
 
 - [Jivelite](jivelite.md)
 - [iPeng](https://penguinlovesmusic.de/) (iOS - paid) - in-app purchase to also be a player
+- [LyrPlay](https://apps.apple.com/gb/app/lyrplay/id6746776736) (iOS - free) - incorporates player and slightly modified Material GUI
+- [xTune](https://apps.apple.com/gb/app/xtune-lyrion-remote-player/id6744552136) (iOS - paid)
 - [Material Skin](https://github.com/CDrummond/lms-material) and [Android App](https://github.com/CDrummond/lms-material-app)
 - [Squeezer](https://github.com/kaaholst/android-squeezer) (Android)
 - [OpenSqueeze](https://github.com/orangebikelabs/opensqueeze) (Android)
