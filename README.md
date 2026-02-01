@@ -49,3 +49,10 @@ In order to test the workflow, install [`act`](https://github.com/nektos/act). T
 ```
 act --pull=false workflow_dispatch -P ubuntu-24.04=catthehacker/ubuntu:act-latest --workflows .github/workflows/main.yml
 ```
+
+
+## Code Signing Policy (Windows)
+
+Free code signing for Windows is provided by [SignPath.io](https://about.signpath.io/), certificate by [SignPath Foundation](https://signpath.org/).
+
+See the [Code Signing Policy](docs/signing-policy.md) for more information.
