@@ -10,12 +10,17 @@ Lyrion Music Server is a fully open source server software to power a wide range
 ## Download and install Lyrion Music Server v{{ latest.version }}
 
 === ":material-microsoft-windows: Windows"
-    !!! note
+    !!! note "Important note for users of Logitech Media Server"
         Lyrion Music Server now comes as a 64-bit application. An existing 32-bit version must be uninstalled before installing the 64-bit version (The LMS 9 installer will do this automatically). Please note that there's no Control Panel app any more, nor a tray icon. Tools like eg. [ServiceTray](https://www.coretechnologies.com/products/ServiceTray/) allow you to easily start/stop the LMS service. [See this document](../reference/migrate-win32-win64.md) if you have to migrate.
 
     {{ win64 }}
 
     Then double click the downloaded package to launch the installation process in a familiar installation assistant.
+
+    !!! info "Code Signing Policy"
+        Free code signing for Windows is provided by [SignPath.io](https://about.signpath.io/), certificate by [SignPath Foundation](https://signpath.org/).
+
+        See the [Code Signing Policy](../signing-policy.md) for more information.
 
 
 === ":simple-raspberrypi: Raspberry Pi"
