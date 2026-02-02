@@ -41,6 +41,8 @@
 	- [#1487](https://github.com/LMS-Community/slimserver/pull/1487) \- Improve CJK search support (@xxbin)
 	- [#1489](https://github.com/LMS-Community/slimserver/pull/1489) \- Allow Replay Gain to be modified in a plugin's onStream() protocol handler routine (@SamInPgh)
 	- [#1490](https://github.com/LMS-Community/slimserver/pull/1490) \- Fix incorrect ICY stream title sent during track change (@maniac103)
+	- [#1494](https://github.com/LMS-Community/slimserver/pull/1494) \- Use metadata from the library for remote tracks when possible (@SamInPgh)
+	- [#1500](https://github.com/LMS-Community/slimserver/pull/1500) \- Fix FLAC transcoding to MP3 for embedded cuesheets and when seeking in a stream (@jbylsma)
 
 - Platform Support:
 
