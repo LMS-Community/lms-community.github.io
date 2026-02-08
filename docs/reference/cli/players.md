@@ -245,7 +245,10 @@ Various subcommands which return or set mixer settings.
 
 `<playerid> mixer volume <0 .. 100|-100 .. +100|?>`
 
-The `mixer volume` command returns or sets the current volume setting for the player. The scale is `0` to `100`, in real numbers (i.e. `34.5` is valid). If the player is muted, the volume is returned as a negative value. Note that players display a `0` to `40` scale, that is, the `0..100` volume divided by `2,5` (two and a half). Likewise, using the `button` command with `volume_up` or `volume_down` parameters increases or decreases the volume by 2,5 (two and a half).
+The `mixer volume` command returns or sets the current volume setting for the player. The scale is `0` to `100`, in real numbers (i.e. `34.5` is valid). If the player is muted, the volume is returned as a negative value.
+
+Note that the old ip3k based players display a `0` to `40` scale, that is, the `0..100` volume divided by `2.5` (two and a half). Likewise, using the `button` command with `volume_up` or `volume_down` parameters increases or decreases the volume by 2.5 (two and a half). If you want more granular control use the `mixer volume` command with the
+increment of your liking.
 
 Examples:
 ```
