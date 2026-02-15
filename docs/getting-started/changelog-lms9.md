@@ -15,6 +15,7 @@
 	- [#1422](https://github.com/LMS-Community/slimserver/issues/1422) \- Add new sort orders "playcount", "popular", and "recentlyplayed" to "albums" and "artists" queries.
 	- Provide a hook which would allow a plugin or other to register a method to display track artwork for radio stations which don't provide their own.
 	- [#1468](https://github.com/LMS-Community/slimserver/issues/1468) \- Add support for SUBTITLE to Advanced Search.
+	- [#1510](https://github.com/LMS-Community/slimserver/pull/1510) \- Give option to use ID3 tag TIT1 either as grouping or work.
 
 - Server Changes:
 
@@ -69,7 +70,6 @@
 	- [#1367](https://github.com/LMS-Community/slimserver/pull/1367) \- Update UPnP support to fix gapless playback (setNextAVTransport) (@BoringName15).
 	- [#1414](https://github.com/LMS-Community/slimserver/pull/1414) \- Make sure custom image proxy handlers are always called (fixes incompatibility with Radio Now Playing's SVG handler).
 	- [#1442](https://github.com/LMS-Community/slimserver/pull/1442) \- Avoid log flood when player discovery JSON is empty (@mikecappella).
-	- [#1444](https://github.com/LMS-Community/slimserver/pull/1444) \- Fix search using terms with quotes in the Default skin (@darrell-k).
 	- [#1444](https://github.com/LMS-Community/slimserver/pull/1444) \- Fix search using terms with quotes in the Default skin (@darrell-k).
 	- [#1460](https://github.com/LMS-Community/slimserver/pull/1460) \- Don't close HTTP when 1.1, unless explicit asked (@philippe44).
 	- [#1471](https://github.com/LMS-Community/slimserver/pull/1471) \- Consider all of a track's genres for scrobbling exclusion (@jbylsma).
