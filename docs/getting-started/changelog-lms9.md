@@ -1,3 +1,17 @@
+## Version 9.2.0
+
+- [Upstream fixes from Logitech Media Server 9.1.x](http://raw.githubusercontent.com/v9.1.1)
+
+- New Features:
+
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
 ## Version 9.1.1
 
 - New Features:
