@@ -30,7 +30,6 @@ This is the released version. Please see [Getting Started](../getting-started/in
 | [{{ latest.macos.name }}]({{ latest.macos.url }}) | {{ latest.macos.size }} | {{ latest.macos.timestamp }} | {{ latest.macos.desc }} |
 | [{{ latest.debamd64.name }}]({{ latest.debamd64.url }}) | {{ latest.debamd64.size }} | {{ latest.debamd64.timestamp }} | {{ latest.debamd64.desc }} |
 | [{{ latest.debarm.name }}]({{ latest.debarm.url }}) | {{ latest.debarm.size }} | {{ latest.debarm.timestamp }} | {{ latest.debarm.desc }} |
-| [{{ latest.debi386.name }}]({{ latest.debi386.url }}) | {{ latest.debi386.size }} | {{ latest.debi386.timestamp }} | {{ latest.debi386.desc }} |
 | [{{ latest.deb.name }}]({{ latest.deb.url }}) | {{ latest.deb.size }} | {{ latest.deb.timestamp }} | {{ latest.deb.desc }} |
 | [{{ latest.rpm.name }}]({{ latest.rpm.url }}) | {{ latest.rpm.size }} | {{ latest.rpm.timestamp }} | {{ latest.rpm.desc }} |
 | [{{ latest.nocpan.name }}]({{ latest.nocpan.url }}) | {{ latest.nocpan.size }} | {{ latest.nocpan.timestamp }} | {{ latest.nocpan.desc }} |
@@ -51,7 +50,6 @@ The stable branch is like the officially released latest version, with some addi
 | [{{ stable.macos.name }}]({{ stable.macos.url }}) | {{ stable.macos.size }} | {{ stable.macos.timestamp }} | {{ stable.macos.desc }} |
 | [{{ stable.debamd64.name }}]({{ stable.debamd64.url }}) | {{ stable.debamd64.size }} | {{ stable.debamd64.timestamp }} | {{ stable.debamd64.desc }} |
 | [{{ stable.debarm.name }}]({{ stable.debarm.url }}) | {{ stable.debarm.size }} | {{ stable.debarm.timestamp }} | {{ stable.debarm.desc }} |
-| [{{ stable.debi386.name }}]({{ stable.debi386.url }}) | {{ stable.debi386.size }} | {{ stable.debi386.timestamp }} | {{ stable.debi386.desc }} |
 | [{{ stable.deb.name }}]({{ stable.deb.url }}) | {{ stable.deb.size }} | {{ stable.deb.timestamp }} | {{ stable.deb.desc }} |
 | [{{ stable.rpm.name }}]({{ stable.rpm.url }}) | {{ stable.rpm.size }} | {{ stable.rpm.timestamp }} | {{ stable.rpm.desc }} |
 | [{{ stable.nocpan.name }}]({{ stable.nocpan.url }}) | {{ stable.nocpan.size }} | {{ stable.nocpan.timestamp }} | {{ stable.nocpan.desc }} |
