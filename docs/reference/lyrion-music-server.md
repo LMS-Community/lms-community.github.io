@@ -15,15 +15,17 @@ Sourcecode can be found on :octicons-mark-github-16: [Github: https://github.com
 
 ## Version history
 
-### LMS 9.1
+### LMS 9.2
 
 Currently in development.
+
+### LMS 9.1
+
+Current stable. Initially released on November 29, 2024.
 
 [Release notes](../getting-started/changelog-lms9.md)
 
 ### LMS 9.0
-
-Current stable. Initially released on November 29, 2024.
 
 This version is the first release using the new name Lyrion Music Server and the first post-Logitech era major release!
 
