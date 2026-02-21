@@ -8,21 +8,16 @@ title: LMS Downloads
 !!! hint
     If you’re looking for the Docker image of Lyrion Music Server, please head over to the [:material-docker: Docker Hub Page](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) or the [:material-github: Github Container Registry](https://github.com/LMS-Community/slimserver/pkgs/container/lyrionmusicserver).
 
+!!! info "Code Signing Policy"
+    Free code signing for Windows is provided by [SignPath.io](https://about.signpath.io/), certificate by [SignPath Foundation](https://signpath.org/).
+
+    See the [Code Signing Policy](../signing-policy.md) for more information.
+
 ## v{{ latest.version }} - Latest Release
 
 This is the released version. Please see [Getting Started](../getting-started/index.md) for more information.
 ([Changelog](https://htmlpreview.github.io/?https://raw.githubusercontent.com/LMS-Community/slimserver/{{ latest.version }}/Changelog{{ latest.majorVersion }}.html) -
 [Git Commit Log](https://github.com/LMS-Community/slimserver/commits/{{ latest.version }}))
-
-!!! hint
-    Mac users please note: we no longer ship a preference pane, but a menu bar item. Please see
-    [How to uninstall the legacy Mac Settings Pane Item](../reference/uninstall-legacy-mac.md) for instructions
-    how to uninstall it.
-
-!!! hint
-    Windows 32-bit users please note: your beloved Windows 32-bit build is no longer available due to hardware
-    failure on the build system. You will have to migrate to the new 64-bit version. Please read
-    [How to migrate from Windows 32-bit build to 64-bit](../reference/migrate-win32-win64.md).
 
 | Name | Size | Creation Date | Description |
 | ---  | --- :| ---           | ---  |

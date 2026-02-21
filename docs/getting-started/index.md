@@ -66,6 +66,11 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 
 === ":material-apple: Apple macOS"
+    !!! hint
+        Mac users please note: we no longer ship a preference pane, but a menu bar item. Please see
+        [How to uninstall the legacy Mac Settings Pane Item](../reference/uninstall-legacy-mac.md) for instructions
+        how to uninstall it.
+
     {{ macos }}
 
     Then double click the downloaded image. Drag the application to the Applications folder. Launch Lyrion Music Server from the Applications folder, then check the menu bar item for Start/Stop options. See [Getting started on macOS](mac-install.md) for Details.
