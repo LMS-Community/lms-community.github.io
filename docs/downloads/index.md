@@ -25,7 +25,7 @@ This is the released version. Please see [Getting Started](../getting-started/in
 | [{{ latest.macos.name }}]({{ latest.macos.url }}) | {{ latest.macos.size }} | {{ latest.macos.timestamp }} | {{ latest.macos.desc }} |
 | [{{ latest.debamd64.name }}]({{ latest.debamd64.url }}) | {{ latest.debamd64.size }} | {{ latest.debamd64.timestamp }} | {{ latest.debamd64.desc }} |
 | [{{ latest.debarm.name }}]({{ latest.debarm.url }}) | {{ latest.debarm.size }} | {{ latest.debarm.timestamp }} | {{ latest.debarm.desc }} |
-| [{{ latest.deb.name }}]({{ latest.deb.url }}) | {{ latest.deb.size }} | {{ latest.deb.timestamp }} | {{ latest.deb.desc }} |
+| [{{ latest.deb.name }}]({{ latest.deb.url }}) | {{ latest.deb.size }} | {{ latest.deb.timestamp }} | {{ latest.deb.desc }} <br/>:material-information-outline: use this package for Perl < v5.28. |
 | [{{ latest.rpm.name }}]({{ latest.rpm.url }}) | {{ latest.rpm.size }} | {{ latest.rpm.timestamp }} | {{ latest.rpm.desc }} |
 | [{{ latest.nocpan.name }}]({{ latest.nocpan.url }}) | {{ latest.nocpan.size }} | {{ latest.nocpan.timestamp }} | {{ latest.nocpan.desc }} |
 | [{{ latest.tararm.name }}]({{ latest.tararm.url }}) | {{ latest.tararm.size }} | {{ latest.tararm.timestamp }} | {{ latest.tararm.desc }} |
@@ -45,7 +45,7 @@ The stable branch is like the officially released latest version, with some addi
 | [{{ stable.macos.name }}]({{ stable.macos.url }}) | {{ stable.macos.size }} | {{ stable.macos.timestamp }} | {{ stable.macos.desc }} |
 | [{{ stable.debamd64.name }}]({{ stable.debamd64.url }}) | {{ stable.debamd64.size }} | {{ stable.debamd64.timestamp }} | {{ stable.debamd64.desc }} |
 | [{{ stable.debarm.name }}]({{ stable.debarm.url }}) | {{ stable.debarm.size }} | {{ stable.debarm.timestamp }} | {{ stable.debarm.desc }} |
-| [{{ stable.deb.name }}]({{ stable.deb.url }}) | {{ stable.deb.size }} | {{ stable.deb.timestamp }} | {{ stable.deb.desc }} |
+| [{{ stable.deb.name }}]({{ stable.deb.url }}) | {{ stable.deb.size }} | {{ stable.deb.timestamp }} | {{ stable.deb.desc }} <br/>:material-information-outline: use this package for Perl < v5.28. |
 | [{{ stable.rpm.name }}]({{ stable.rpm.url }}) | {{ stable.rpm.size }} | {{ stable.rpm.timestamp }} | {{ stable.rpm.desc }} |
 | [{{ stable.nocpan.name }}]({{ stable.nocpan.url }}) | {{ stable.nocpan.size }} | {{ stable.nocpan.timestamp }} | {{ stable.nocpan.desc }} |
 | [{{ stable.tararm.name }}]({{ stable.tararm.url }}) | {{ stable.tararm.size }} | {{ stable.tararm.timestamp }} | {{ stable.tararm.desc }} |
@@ -68,7 +68,7 @@ The development version is where you’ll find all the latest and greatest featu
 | [{{ dev.macos.name }}]({{ dev.macos.url }}) | {{ dev.macos.size }} | {{ dev.macos.timestamp }} | {{ dev.macos.desc }} |
 | [{{ dev.debamd64.name }}]({{ dev.debamd64.url }}) | {{ dev.debamd64.size }} | {{ dev.debamd64.timestamp }} | {{ dev.debamd64.desc }} |
 | [{{ dev.debarm.name }}]({{ dev.debarm.url }}) | {{ dev.debarm.size }} | {{ dev.debarm.timestamp }} | {{ dev.debarm.desc }} |
-| [{{ dev.deb.name }}]({{ dev.deb.url }}) | {{ dev.deb.size }} | {{ dev.deb.timestamp }} | {{ dev.deb.desc }} |
+| [{{ dev.deb.name }}]({{ dev.deb.url }}) | {{ dev.deb.size }} | {{ dev.deb.timestamp }} | {{ dev.deb.desc }} <br/>:material-information-outline: use this package for Perl < v5.28. |
 | [{{ dev.rpm.name }}]({{ dev.rpm.url }}) | {{ dev.rpm.size }} | {{ dev.rpm.timestamp }} | {{ dev.rpm.desc }} |
 | [{{ dev.nocpan.name }}]({{ dev.nocpan.url }}) | {{ dev.nocpan.size }} | {{ dev.nocpan.timestamp }} | {{ dev.nocpan.desc }} |
 | [{{ dev.tararm.name }}]({{ dev.tararm.url }}) | {{ dev.tararm.size }} | {{ dev.tararm.timestamp }} | {{ dev.tararm.desc }} |

@@ -42,6 +42,10 @@ Lyrion Music Server is a fully open source server software to power a wide range
 
 
 === ":material-linux: Linux"
+    !!! warning "Legacy Perl Versions"
+        If you are using a Perl version older than v5.26 you will have to install the `*_all.deb` version available from the
+        [Other Downloads](../downloads/index.md) section.
+
     {{ deb }}
 
     Download the package, then install it with its depencencies using the operating system's package manager `apt`:
