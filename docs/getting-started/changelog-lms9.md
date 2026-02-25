@@ -22,6 +22,8 @@
 
 - Bug Fixes:
 
+	- Some radio streams would redirect to web page when using a "Mozilla" user agent string.
+
 - Other:
 
 ## Version 9.1.0 - 2026-02-19 (d19d25040)
