@@ -6,9 +6,13 @@
 
 - Server Changes:
 
+	- More aggressively cache DNS lookups, re-use cached data even if expired, but if lookup fails.
+
 - Platform Support:
 
 - Bug Fixes:
+
+	- [#1517](https://github.com/LMS-Community/slimserver/pull/1517) \- Fix work images and artwork precaching (@darrell-k)
 
 - Other:
 
