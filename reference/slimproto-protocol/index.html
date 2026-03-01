@@ -1,0 +1,5715 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lyrion.org/reference/slimproto-protocol/">
+      
+      
+        <link rel="prev" href="../database-structure/">
+      
+      
+        <link rel="next" href="../slimp3-protocol/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>SlimProto protocol - Lyrion Music Server</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#slimproto-protocol" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lyrion Music Server" class="md-header__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lyrion Music Server
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SlimProto protocol
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Getting Started with LMS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../players-and-controllers/" class="md-tabs__link">
+          
+  
+  
+  Players & Controllers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../extensions/applications/" class="md-tabs__link">
+          
+  
+  
+  Extensions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lyrion-music-server/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../faq/lms/" class="md-tabs__link">
+          
+  
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lyrion Music Server" class="md-nav__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Lyrion Music Server
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started with LMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started with LMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginner's guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-full-featured-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for a full-featured LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-synology-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on Synology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-qnap-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on QNAP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-omv-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on OMV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-to-classical-music-on-lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide to classical music on LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/mac-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started on macOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help Guides and FAQs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help Guides and FAQs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/new-music-help-faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New Music changes in 9.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/advanced-guide-openvpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use OpenVPN on SB Radio/Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/migrate-from-uesr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate from UE Smart Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/lms-on-readynas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS on ReadyNAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Changelog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/changelog-lms9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 9 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/changelog-lms8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 8 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players & Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Players & Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/hardware-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-touch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-radio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-boom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Boom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Duet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezebox Duet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/transporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transporter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-classic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Classic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/SLIMP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/software-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezelite-manpage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite manpage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/jivelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jivelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/softsqueeze/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftSqueeze
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/picoreplayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    piCorePlayer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Available Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/reporting-a-bug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting a bug
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/dco-signoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DCO Sign-off
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/adding-translations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding translations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forums.lyrion.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community forums
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lyrion-music-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Interface (JSON/RPC)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Command Line Interface (JSON/RPC)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/using-the-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/players/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playlist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/favorites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Favorites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/randomplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Randomplay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/compoundqueries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compound Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/alarms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alarms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add-locales-to-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add locales to the Docker container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins/applets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins/applets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezeplay Applet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezeplay Applet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../squeezeplay-applet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applet Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing-applets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing Applets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music-service-plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Music Service Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimProto Protocol
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimProto Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client-server-communications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client -&gt; Server Communications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client -&gt; Server Communications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HELO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HELO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ir-note-padded-with-two-spaces-to-make-it-up-to-4-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "IR " (Note: padded with two spaces to make it up to 4 characters.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RESP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BODY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        META
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STAT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ANIC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bye" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BYE!
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-client-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server -&gt; Client Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server -&gt; Client Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-strm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "strm"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command: &#34;strm&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u-p-a-t-commands-and-replay_gain-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        u, p, a &amp; t commands and replay_gain field
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flac-specific-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FLAC-specific notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wma-specific-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WMA-specific notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aac-specific-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AAC-specific notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-aude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "aude"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-audg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "audg"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-grfb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "grfb"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-grfe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "grfe"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-i2cc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "i2cc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-serv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "serv"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-stat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "stat"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-vfdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "vfdc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-vers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "vers"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-visu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "visu"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undocumented-commands-brief-rundown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Undocumented commands, brief rundown
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Undocumented commands, brief rundown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-audc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "audc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-audp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "audp"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "body"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-cont" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "cont"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-grfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "grfd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-irtm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "irtm"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-knoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "knoa"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-knob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "knob"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-rhap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "rhap"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-rsps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "rsps"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-rstx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "rstx"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-setd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "setd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-upda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "upda"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-updn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "updn"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-ureq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "ureq"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slimp3-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3 Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip3k-graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classic/Boom/Transporter Graphics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_5" id="__nav_6_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay Menu System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SqueezePlay Menu System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../home-vs-slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu vs. SlimBrowse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-menus-squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimBrowse Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_6" id="__nav_6_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH/SCP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SSH/SCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enable-ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enable SSH Access to the Squeezebox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../winscp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WinSCP How To
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curtrack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    #CURTRACK Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../special-ir-keys-reset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Special IR Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slim-utils-os-custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom OS support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-the-most-out-of-metadata-in-lyrion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting the most out of metadata in Lyrion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client-server-communications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client -&gt; Server Communications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client -&gt; Server Communications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HELO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HELO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ir-note-padded-with-two-spaces-to-make-it-up-to-4-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "IR " (Note: padded with two spaces to make it up to 4 characters.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RESP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BODY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        META
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STAT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ANIC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bye" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BYE!
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-client-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server -&gt; Client Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server -&gt; Client Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-strm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "strm"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command: &#34;strm&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u-p-a-t-commands-and-replay_gain-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        u, p, a &amp; t commands and replay_gain field
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flac-specific-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FLAC-specific notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wma-specific-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WMA-specific notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aac-specific-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AAC-specific notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-aude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "aude"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-audg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "audg"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-grfb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "grfb"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-grfe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "grfe"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-i2cc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "i2cc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-serv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "serv"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-stat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "stat"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-vfdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "vfdc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-vers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command: "vers"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-visu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "visu"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undocumented-commands-brief-rundown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Undocumented commands, brief rundown
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Undocumented commands, brief rundown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-audc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "audc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-audp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "audp"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "body"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-cont" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "cont"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-grfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "grfd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-irtm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "irtm"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-knoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "knoa"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-knob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "knob"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-rhap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "rhap"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-rsps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "rsps"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-rstx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "rstx"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-setd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "setd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-upda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "upda"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-updn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "updn"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-ureq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command "ureq"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../lyrion-music-server/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Reference
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../database-structure/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Development
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/lms-community/lms-community.github.io/edit/main/docs/reference/slimproto-protocol.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/lms-community/lms-community.github.io/raw/main/docs/reference/slimproto-protocol.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="slimproto-protocol">SlimProto Protocol</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always check the Perl source code, this documentation is not in sync with actual byte length in multiple places</p>
+</div>
+<p>The SlimProto protocol is the new protocol developed for the squeezebox and replaces the <a href="../slimp3-protocol/">SLIMP3</a> one. It is designed to allow the players to communicate effectively over WANs as well as LANs.</p>
+<p>This document describes the SlimProto for Squeezebox firmware versions 20 and above. The current version of the firmware shipped with SqueezeCenter 7.2.1 is 113. This document describes both version imperfectly.</p>
+<p>The server listens on TCP port 3483 for connections by players. To register a player with the server, they exchange "helo"s and then any of the commands below are valid.</p>
+<p>The client also listens on UDP port 3483 for SlimProto commands from the server it has already established a TCP connection with. It also seems to respond to data sent back in the TCP connection (you send frames back this way).</p>
+<p>The byte order is critical for several of the fields. The best way to check this out is to look at the server source code.</p>
+<h2 id="client-server-communications">Client -&gt; Server Communications</h2>
+<p>For an authoritative answer on the format of the packets see the file <a href="https://github.com/LMS-Community/slimserver/blob/HEAD/Slim/Networking/Slimproto.pm">Slim/Networking/Slimproto.pm</a>. Different versions of the firmware send different formatted packets.</p>
+<p>A command to the server consists of three parts:</p>
+<ol>
+<li>
+<p>The 1st 4 bytes specify the operation. The following operations are supported:</p>
+<ul>
+<li>HELO</li>
+<li>BYE!</li>
+<li>STAT  heartbeat and play-event notification</li>
+<li>RESP  HTTP headers (from data stream)</li>
+<li>BODY  HTTP body (from data stream)</li>
+<li>META  metadata from stream</li>
+<li>DSCO  data stream disconnected</li>
+<li>DBUG  reports firmware revision</li>
+<li>IR    (note the two spaces after IR)</li>
+<li>RAWI  raw infra-red</li>
+<li>ANIC  animation complete</li>
+<li>BUTN  hardware button (transporter)</li>
+<li>KNOB  hardware knob (transporter)</li>
+<li>SETD  update preferences</li>
+<li>UREQ  firmware update request</li>
+</ul>
+</li>
+<li>
+<p>The 2nd part (of four bytes) is simply the length of the data packet (in network order).</p>
+</li>
+<li>
+<p>The 3rd part is the data itself.</p>
+</li>
+</ol>
+<p>Most of the operations above are detailed below:</p>
+<h3 id="helo">HELO</h3>
+<p>This alerts the server to a clients presence and is the first thing normally transmitted by a client powering up.</p>
+<p>Data Length: 10, 20, or 36 bytes, depending upon deviceID and firmware revision.</p>
+<p>Format:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Length</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeviceID</td>
+<td>1 byte</td>
+<td>The Device ID of the player. '2' is squeezebox. '3' is softsqueeze, '4' is squeezebox2,. '5' is transporter, '6' is softsqueeze3, '7' is receiver, '8' is squeezeslave, '9' is controller, '10' is boom, '11' is softboom, '12' is squeezeplay</td>
+</tr>
+<tr>
+<td>Revision</td>
+<td>1 byte</td>
+<td>A number specifying the firmware revision</td>
+</tr>
+<tr>
+<td>MAC 0-5</td>
+<td>6 bytes</td>
+<td>The player's MAC address</td>
+</tr>
+<tr>
+<td>UUID 0-15</td>
+<td>16 bytes</td>
+<td>Unique identifier of device (only in newer firmware)(not sent by softsqueeze)</td>
+</tr>
+<tr>
+<td>WLanChannelList</td>
+<td>2 bytes</td>
+<td>A list of 802.11 channels that are enabled on a given device as a bitfield 0x07ff means that channels 0 through 11 are enabled which means it's configured for the US.</td>
+</tr>
+<tr>
+<td>Bytes received</td>
+<td>8 bytes</td>
+<td>Number of data-stream bytes received (not sent by softsqueeze)</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>2 bytes</td>
+<td>Country code (not sent by softsqueeze)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="capabilities">Capabilities</h4>
+<p><em>This is an extension implemented in LMS 7.4 or later.</em></p>
+<p>The basic HELO packet above can be augmented by a list of capabilities, in which case the packet will be longer than 36 bytes. Capabilities form a comma-separated list. By convention CODEC capabilities are three or four letters all lower case and other capabilities start with an upper-case letter.</p>
+<p>Unrecognized capabilities will probably be ignored.</p>
+<p>CODECs should be stated in order of preference. The following are recognized at the time of writing:</p>
+<ul>
+<li><strong>wma</strong></li>
+<li><strong>wmap</strong> - WMAPro</li>
+<li><strong>wmal</strong> - WMA Lossless</li>
+<li><strong>ogg</strong></li>
+<li><strong>flc</strong></li>
+<li><strong>pcm</strong></li>
+<li><strong>aif</strong></li>
+<li><strong>mp3</strong></li>
+<li><strong>alc</strong> - Apple Lossless</li>
+<li><strong>aac</strong> - AAC &amp; HE-AAC, with or without MP4 wrapper</li>
+</ul>
+<p>The following could be anticipated:</p>
+<ul>
+<li><strong>rtsp</strong></li>
+<li><strong>aud</strong></li>
+</ul>
+<p>The following other capabilities are supported (case sensitive):</p>
+<ul>
+<li><strong>MaxSampleRate</strong>=<em>96000</em> - frames/s, should be multiples of 11025 or 12000</li>
+<li><strong>Model</strong>=<em>controller</em></li>
+<li><strong>ModelName</strong>=<em>Controller</em></li>
+<li><strong>Rhap</strong> - supports Rhapsody</li>
+<li><strong>AccuratePlayPoints</strong> - indicates that playpoints are precise and can be used in synchronization calculations without further filtering.</li>
+<li><strong>SyncgroupID</strong>=<em>nnnnnnnnnn</em> - the sync-group which the player wants to join; used when a group of players is moved from one server to another.</li>
+<li><strong>HasDigitalOut</strong> - somewhat of a misnomer. Currently, its only use is to enable the setting (via the SqueezeboxServer WebUI or CLI) of a preference to tie output volume at 100%.</li>
+<li><strong>HasPreAmp</strong> - does the player have a separate analogue volume control.</li>
+<li><strong>HasDisableDac</strong> - can the player's DAC be disabled.</li>
+</ul>
+<h3 id="ir-note-padded-with-two-spaces-to-make-it-up-to-4-characters">"IR " (Note: padded with two spaces to make it up to 4 characters.)</h3>
+<p>One of these packets is received for each IR code received by the player.</p>
+<p>Data Length: Fixed at 10 bytes.</p>
+<p>Format:</p>
+<div class="highlight"><pre><span></span><code> Time   4 bytes Time since player startup in ticks (@1kHz)
+ Format 1 byte  Code Format (ignored by the server for now.
+                Code represents type of IR code - NEC, JVC or Sony)
+ NoBits 1 byte  Length of IR Code.
+                (ignored by the server for now
+                16 bits for JVC, 32 bits for NEC?)
+ IRCode 4 bytes the IR Code itself (upto 32 bits)
+</code></pre></div>
+<h3 id="resp">RESP</h3>
+<h3 id="body">BODY</h3>
+<p>HTTP (or MMS) response headers or message body from the data stream. These can be parsed for metadata (title, format, bitrate, etc.), or (in the case of a body) for a playlist.</p>
+<h3 id="meta">META</h3>
+<p>Embedded metadata from the data stream from which useful information may be extracted,</p>
+<h3 id="stat">STAT</h3>
+<p>These are sent by the player in response to commands and periodically when there are no commands as a sort of keep-alive. They inform the server of the status of various player internals.</p>
+<p>Format:</p>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td>Event Code (a 4 byte string)</td>
+</tr>
+<tr>
+<td>u8</td>
+<td>Number of consecutive CRLF recieved while parsing headers</td>
+</tr>
+<tr>
+<td>u8</td>
+<td>MAS Initalized - 'm' or 'p'</td>
+</tr>
+<tr>
+<td>u8</td>
+<td>MAS Mode - serdes mode?</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>buffer size - in bytes, of the player's (network/stream) buffer</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>fullness - data bytes in the player's (network/stream) buffer</td>
+</tr>
+<tr>
+<td>u64</td>
+<td>Bytes Recieved</td>
+</tr>
+<tr>
+<td>u16</td>
+<td>Wireless Signal Strength (0-100 - Larger values mean hardwired)</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>jiffies - a timestamp from the player (@1kHz)</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>output buffer size - the decoded audio data buffer size</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>output buffer fullness - bytes in the decoded audio data buffer</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>elapsed seconds - of the current stream</td>
+</tr>
+<tr>
+<td>u16</td>
+<td>voltage</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>elapsed milliseconds - of the current stream</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>server timestamp - reflected from an <strong>strm-t</strong> command</td>
+</tr>
+<tr>
+<td>u16</td>
+<td>error code - used with <strong>STMn</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The Bytes Received field is how many data bytes the player has recieved (since it started playing?).</p>
+<p>Output buffer size/fullness, elapsed time, voltage, elapsed milliseconds, server timestamp &amp; error code, along with the <strong>STMo</strong> were added with more-recent firmware revisions.</p>
+<p>Earlier firmware revisions report the read and write pointers for the player's decoder input buffer, rather than the buffer size and fullness. The bytes received and the read/write pointers are used in this case to update the elapsed time count.</p>
+<p>Event code may be one of the following:</p>
+<table>
+<thead>
+<tr>
+<th>EventCode</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vfdc</td>
+<td>vfd received</td>
+<td>Not observed, presumably an ack to a VFD (display) message</td>
+</tr>
+<tr>
+<td>i2cc</td>
+<td>i2c confirmation</td>
+<td></td>
+</tr>
+<tr>
+<td>STMa</td>
+<td>Autostart</td>
+<td>Track started. Probably Squeezebox v1 only.</td>
+</tr>
+<tr>
+<td>STMc</td>
+<td>Connect</td>
+<td><strong>srtm-s</strong> command received. Guaranteed to be the first response to an strm-s.</td>
+</tr>
+<tr>
+<td>STMd</td>
+<td>Decoder ready</td>
+<td>Instruct server that we are ready for the next track (if any). Sometimes (unfortunately) this will also indicate an error.</td>
+</tr>
+<tr>
+<td>STMe</td>
+<td>Stream connection Established</td>
+<td></td>
+</tr>
+<tr>
+<td>STMf</td>
+<td>Connection flushed</td>
+<td>Streaming track flushed (in response to <strong>strm-f</strong>) or playback stopped (in response to <strong>strm-q</strong>). The number of STMf responses which  may be received in various circumstances is not well defined.</td>
+</tr>
+<tr>
+<td>STMh</td>
+<td>HTTP headers received</td>
+<td>from the streaming connection.</td>
+</tr>
+<tr>
+<td>STMl</td>
+<td>Buffer threshold reached</td>
+<td>When strm-s <em>autostart</em>=0/2.</td>
+</tr>
+<tr>
+<td>STMn</td>
+<td>Not Supported</td>
+<td>Decoder does not support file format or a decoding error has occurred. May include format-specific error code.</td>
+</tr>
+<tr>
+<td>STMo</td>
+<td>Output Underrun</td>
+<td>No more decoded (uncompressed) data to play; triggers rebuffering.</td>
+</tr>
+<tr>
+<td>STMp</td>
+<td>Pause</td>
+<td>Confirmation of Pause.</td>
+</tr>
+<tr>
+<td>STMr</td>
+<td>Resume</td>
+<td>Confirmation of resume. (Not used during playout)</td>
+</tr>
+<tr>
+<td>STMs</td>
+<td>Track Started</td>
+<td>Playback of a new track has started.</td>
+</tr>
+<tr>
+<td>STMt</td>
+<td>Timer</td>
+<td>A simple hearbeat, can be periodic or a response to <strong>strm-t</strong></td>
+</tr>
+<tr>
+<td>STMu</td>
+<td>Underrun</td>
+<td>Normal end of playback.</td>
+</tr>
+</tbody>
+</table>
+<p>The event code is a method of triggering events in the server. For example, <strong>STMd</strong> which occurs on decoder buffer underrun causes the server to switch to the next track.</p>
+<p>The error codes are internal and codec-specific. Not all decoders make use of error codes. The current ones are:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>100</td>
+<td>OGG_ERROR_TOO_MANY_CHANNELS</td>
+</tr>
+<tr>
+<td>101</td>
+<td>OGG_ERROR_HIGH_MEMORY</td>
+</tr>
+<tr>
+<td>102</td>
+<td>OGG_ERROR_INVALID_SAMPLE_RATE</td>
+</tr>
+<tr>
+<td>103</td>
+<td>OGG_ERROR_NOTVORBIS</td>
+</tr>
+<tr>
+<td>104</td>
+<td>OGG_ERROR_BADHEADER</td>
+</tr>
+<tr>
+<td>200</td>
+<td>WMA_ERROR_SPEECH_SUPERFRAMES</td>
+</tr>
+<tr>
+<td>201</td>
+<td>WMA_ERROR_LOSSLESS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anic">ANIC</h3>
+<p>The display animation is complete. This seems to be undocumented. in the squeezecenter code
+Slim\Display\Display.pm there a brief description of the client capabilities.</p>
+<h3 id="bye">BYE!</h3>
+<p>The player is disconnecting.</p>
+<p>If the first data byte to this command is 0x01 then the player is going out for an upgrade...</p>
+<h2 id="server-client-communication">Server -&gt; Client Communication</h2>
+<p>Data from the server to the player consists of 2 bytes of length data (in network order), a 4 byte command header, then the command data itself. The length sent is the size of the data plus the 4 byte command header; it does not include the 2 byte length field itself.</p>
+<h3 id="command-strm">Command: "strm"</h3>
+<p>This takes 24 bytes data of the form:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Length</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$command</td>
+<td>1 byte</td>
+<td>'s' start, 'p' pause, 'u' unpause, 'q' stop, 't' status, 'f' flush, 'a' skip-ahead</td>
+</tr>
+<tr>
+<td>$autostart</td>
+<td>1 byte</td>
+<td>'0' = don't auto-start, '1' = auto-start, '2' = direct streaming, '3' = direct+auto</td>
+</tr>
+<tr>
+<td>$formatbyte</td>
+<td>1 byte</td>
+<td>'p' = PCM, 'm' = MP3, 'f' = FLAC, 'w' = WMA, 'o' = Ogg., 'a' = AAC (&amp; HE-AAC), 'l' = ALAC</td>
+</tr>
+<tr>
+<td>$pcmsamplesize</td>
+<td>1 byte</td>
+<td>'0' = 8, '1' = 16, '2' = 20, '3' = 32;   usually '1', '?' for self-describing formats.</td>
+</tr>
+<tr>
+<td>$pcmsamplerate</td>
+<td>1 byte</td>
+<td>'0'=11kHz, '1'=22kHz, '2'=32kHz, '3'=44.1kHz, '4'=48kHz, '5'=8kHz, '6'=12kHz, '7'=16kHz, '8'=24kHz, '9'=96kHz; usually 3, '?' for self-describing formats.</td>
+</tr>
+<tr>
+<td>$pcmchannels</td>
+<td>1 byte</td>
+<td>'1'=mono, '2'=stereo; usually '2', '?' for self-describing formats.</td>
+</tr>
+<tr>
+<td>$pcmendian</td>
+<td>1 byte</td>
+<td>'0' = big, '1' = little; '1' for WAV, '0' for AIFF, '?' for self-describing formats.</td>
+</tr>
+<tr>
+<td>$threshold</td>
+<td>1 byte</td>
+<td>KB of input buffer data before autostart or notify</td>
+</tr>
+<tr>
+<td>$spdif_enable</td>
+<td>1 byte</td>
+<td>'0'=auto, '1'=on, '2'=off; usually 0</td>
+</tr>
+<tr>
+<td>$trans_period</td>
+<td>1 byte</td>
+<td>transition duration in seconds</td>
+</tr>
+<tr>
+<td>$trans_type</td>
+<td>1 byte</td>
+<td>'0' = none, '1' = crossfade,'2' = fade in, '3' = fade out, '4' = fade in &amp; fade out</td>
+</tr>
+<tr>
+<td>$flags</td>
+<td>1 byte</td>
+<td>0x80 - loop infinitely, 0x40 - stream without restarting decoder, 0x01 - polarity inversion left, 0x02 - polarity inversion right</td>
+</tr>
+<tr>
+<td>$output_threshold.</td>
+<td>1 byte</td>
+<td>amount of output buffer data before playback starts, in tenths of second</td>
+</tr>
+<tr>
+<td>RESERVED</td>
+<td>1 byte</td>
+<td>reserved</td>
+</tr>
+<tr>
+<td>$replay_gain</td>
+<td>4 bytes</td>
+<td>replay gain in 16.16 fixed point, 0 = none (for the 's' command - see below for further discussion).</td>
+</tr>
+<tr>
+<td>$server_port</td>
+<td>2 bytes</td>
+<td>Server Port to use (9000 is the default)</td>
+</tr>
+<tr>
+<td>$server_ip</td>
+<td>4 bytes</td>
+<td>0 means use IP of control server</td>
+</tr>
+</tbody>
+</table>
+<p>This is followed by an HTTP header itself. This is used to obtain the stream data eg:</p>
+<div class="highlight"><pre><span></span><code> GET /stream.mp3?player=$client-id HTTP/1.0
+ (Authorization: Basic $password)
+ (blank line)
+</code></pre></div>
+<p>The Auth line is only sent if authorization is in use. $client-id is the usually the MAC address of the player and $password is a password generated by the server.</p>
+<p>Other headers to be included in the HTTP request may also be supplied.</p>
+<h4 id="u-p-a-t-commands-and-replay_gain-field"><strong>u</strong>, <strong>p</strong>, <strong>a</strong> &amp; <strong>t</strong> commands and <em>replay_gain</em> field</h4>
+<p>The <strong>u</strong>, <strong>p</strong>, <strong>a</strong> &amp; <strong>t</strong> commands all make special use of the <em>replay_gain</em> field, as follows:</p>
+<p><strong>u</strong> - if non-zero, the player-specific internal timestamp (ms) at which to unpause (this is used by the server to coordinate the start of multiple synchronized players).</p>
+<p><strong>p</strong> - if non-zero, an interval (ms) to pause for and then automatically resume - no <strong>STMp</strong> &amp; <strong>STMr</strong> status messages are sent in this case.</p>
+<p><strong>a</strong> - if non-zero, an interval (ms) to skip over (not play).</p>
+<p><strong>t</strong> - a timestamp field from the server to be returned in the corresponding <strong>STMt</strong> status message (used to measure round-trip latency).</p>
+<h4 id="flac-specific-notes">FLAC-specific notes</h4>
+<p>For FLAC, some of the fields are reused, as follows:</p>
+<p><em>pcmsamplesize</em> - container type: '?' (flac), 'o' (ogg/flac)</p>
+<h4 id="wma-specific-notes">WMA-specific notes</h4>
+<p>For WMA, some of the fields are reused, as follows:</p>
+<p><em>pcmsamplesize</em> - response will include HTTP/MMS chunking;</p>
+<p><em>pcmsamplerate</em> - the audio stream number to play;</p>
+<p><em>pcmchannels</em> - the metadata stream number, if any.</p>
+<h4 id="aac-specific-notes">AAC-specific notes</h4>
+<p>For AAC, some of the fields are reused, as follows:</p>
+<p><em>pcmsamplesize</em> - container type and bitstream format: '1' (adif), '2' (adts), '3' (latm within loas), '4' (rawpkts), '5' (mp4ff), '6' (latm within rawpkts);</p>
+<h3 id="command-aude">Command: "aude"</h3>
+<p>Tell the client to enable/disable the audio outputs.</p>
+<p>2 bytes</p>
+<div class="highlight"><pre><span></span><code> $spdif_enable   1 byte  0x0 = disable SPDIF, 0x1 = enable SPDIF
+ $dac_enable     1 byte  0x0 = disable DAC, 0x1 = enable DAC output
+</code></pre></div>
+<h3 id="command-audg">Command: "audg"</h3>
+<p>Tell the client to adjust the audio gain (volume level)</p>
+<p>10 bytes (all ints are network byte order)</p>
+<div class="highlight"><pre><span></span><code> $old_left      4 bytes unsigned int
+ $old_right     4 bytes unsigned int
+ $dvc           1 byte  Digital volume control 0/1
+ $preamp        1 byte  Preamp (byte 255-0)
+ $new_left      4 bytes 16.16 fixed point
+ $new_right     4 bytes 16.16 fixed point
+ $sequence      4 bytes unsigned int, optional
+</code></pre></div>
+<p>total: 18-22 bytes (+ 4 bytes command header "audg")</p>
+<div class="highlight"><pre><span></span><code>old_left/old_right should range from 0..128 new_left/new_right are 16.16 fixed point
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Firmware v22+ on the SB2 use the new style; older use the old-style.
+</code></pre></div>
+<h3 id="command-grfb">Command: "grfb"</h3>
+<p>Tells the client to adjust the brightness of the display.</p>
+<p>Send a short int (2 bytes, network byte order) with a brightness level from 0-4 (on Squeezebox2).
+On newer firmwares (squeezecenter 7.3), it seems to range from -1 up to and including 5.
+-1 means totally off, 5 is the brightest.</p>
+<h3 id="command-grfe">Command: "grfe"</h3>
+<p>Sends a bitmap to the client for display. It starts with a header of 4 bytes, followed by 1280 bytes of data.
+The header is:
+<div class="highlight"><pre><span></span><code> $offset        2 bytes short int
+ $transition    1 byte (&#39;L&#39;,&#39;R&#39;,&#39;U&#39; or &#39;D&#39;)
+ $param         1 byte
+</code></pre></div></p>
+<p>On Squeezebox3, the data is 1280 bytes; each one is a bitfield (0=off 1=on for that bit). Bits are layed out from top to bottom in column 1 of the display, then top to bottom in column 2, etc. The Squeezebox3 has a 320x32 display, so each column is 4 bytes.</p>
+<p>if $transition is a capital, the frame is bounced a few pixels, a lowercase value results in a full scroll. the parameter determines how many pixels are part of the animation (from bottom to top). More information on the transition can be found in pushBumpAnimate() of slim\display\Squeezebox2.pm in the squeezecenter source code.</p>
+<p>For instance, the 4-byte sequence (in binary):</p>
+<div class="highlight"><pre><span></span><code> 1000 0000
+ 0000 0000
+ 0000 0000
+ 0000 0011
+</code></pre></div>
+<p>would light up the top pixel and the two bottom pixels on the row; send a grfe with that sequence 320 times and you get a thin line across the top of the display and a thicker line across the bottom.</p>
+<p>It is also possible to send compressed graphics. the highest byte of 'g' in the 'grfe' command should be set. The frame is then assumed to be compressed using LZF. The length in the header is the length of the compressed data (+4 for the command code).</p>
+<h3 id="command-i2cc">Command: "i2cc"</h3>
+<p>Squeezebox1 only, sends an i2c command to the client.</p>
+<p>The data is the i2c command to send in the same format as for the SLIMP3 protocol.</p>
+<p>This is used to control the setup of the mas chip. Volume commands are embedded in this.</p>
+<h3 id="command-serv">Command: "serv"</h3>
+<p>Tells the client to switch to another server.</p>
+<div class="highlight"><pre><span></span><code> $ip_address   4 bytes in network order; 0x1 means switch to squeezenetwork
+ $syncgroupid  (optional) 10 ASCII digits;
+               this should be reflected in the HELO command
+               (**SyncgroupID** capability) when the player connects
+               to the new server so that it may re-join its sync-group.
+</code></pre></div>
+<h3 id="command-stat">Command "stat"</h3>
+<p>Request a STAT update from the player</p>
+<h3 id="command-vfdc">Command: "vfdc"</h3>
+<p>Sends VFD data to the client.</p>
+<p>The data is the vfd data to send in the same format as for the SLIMP3 protocol.</p>
+<h3 id="command-vers">Command: "vers"</h3>
+<p>Sends server version string to the client.</p>
+<p>The data is the human readable version information for the server (a simple string)</p>
+<h3 id="command-visu">Command "visu"</h3>
+<p>Tells the server to activate/deactivate visualizer for the music.</p>
+<div class="highlight"><pre><span></span><code> $which      1 byte    Which visualizer to use
+ $count      1 byte    How many parameters there are
+ $param_1    4 bytes   first parameter...
+ $param_N    4 bytes   last parameter
+</code></pre></div>
+<p>Values for $which:</p>
+<div class="highlight"><pre><span></span><code> 0    Blank
+ 1    Vumeter
+ 2    Spectrum
+ 3    Waveform
+</code></pre></div>
+<div class="highlight"><pre><span></span><code> $channels    0=stereo 1=mono
+ $style       0=digital 1=analog
+ $position    left/right position in pixels (0=left side)
+ $width       width in pixels
+ $r_position  left/right position of the right channel (stereo only)
+ $r_width     width in pixels of the right channel (stereo only)2    Spectrum analyzer
+ $channels   as for vumeter
+ $bandwidth   0=0..22050Hz, 1=0..11025Hz
+ $Preemphasis in dB per KHz
+ $position    left/right position in pixels (0=left side)
+ $width       width in pixels   $orientation 0=left to right  1=right to left
+ $bar_width   Bar width in pixels   $bar_space   Bar spacing in pixels
+ $clipping    0 = show all subbands  1= clip higher bands
+ $intensity   Bar intensity (greyscale) 1-3
+ $cap         Bar cap intensity (greyscale) 1-3For stereo, repeat the channel-specific
+ $r_position  Right side position   ...
+ $r_cap       Right side bar cap intensity
+</code></pre></div>
+<h2 id="undocumented-commands-brief-rundown">Undocumented commands, brief rundown</h2>
+<h3 id="command-audc">Command "audc"</h3>
+<p>Transporter only, update clock source</p>
+<h3 id="command-audp">Command "audp"</h3>
+<p>Transporter only, update audio source</p>
+<h3 id="command-body">Command "body"</h3>
+<p>Request part of the body of a file from the player (to get remotely downloaded playlists, find bit rates of mp3, etc)</p>
+<h3 id="command-cont">Command "cont"</h3>
+<p>Content-type related, related to playing remote songs</p>
+<h3 id="command-grfd">Command "grfd"</h3>
+<p>SqueezeboxG only, draw graphics</p>
+<h3 id="command-irtm">Command "irtm"</h3>
+<p>Send timing info to client about when IR messages are processed</p>
+<h3 id="command-knoa">Command "knoa"</h3>
+<p>Knob on a remote control?</p>
+<h3 id="command-knob">Command "knob"</h3>
+<p>Transporter only, knob-related</p>
+<h3 id="command-rhap">Command "rhap"</h3>
+<p>Rhapsody-specific</p>
+<h3 id="command-rsps">Command "rsps"</h3>
+<p>Transporter only, adjust RS232 baud rate</p>
+<h3 id="command-rstx">Command "rstx"</h3>
+<p>Transporter only, send RS232 TX</p>
+<h3 id="command-setd">Command "setd"</h3>
+<p>Get/set player firmware settings</p>
+<h3 id="command-upda">Command "upda"</h3>
+<h3 id="command-updn">Command "updn"</h3>
+<h3 id="command-ureq">Command "ureq"</h3>
+<p>The last 3 are firmware update related commands</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="/privacy">Privacy Statement</a> | <a href="/terms">Terms of Service</a> | <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/LMS-Community/slimserver" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/r/lmscommunity/lyrionmusicserver" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://forums.lyrion.org" target="_blank" rel="noopener" title="forums.lyrion.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.09 10.316V24h21.82V0h-2.417l-5.461 19.613h-6.09l-3.134-9.246zm9.283-4.444 1.363 6.308L13.955 0H1.089v5.872Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://opencollective.com/lyrion" target="_blank" rel="noopener" title="opencollective.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c2.54 0 4.894-.79 6.834-2.135l-3.107-3.109a7.715 7.715 0 1 1 0-13.512l3.107-3.109A11.94 11.94 0 0 0 12 0m9.865 5.166-3.109 3.107A7.7 7.7 0 0 1 19.715 12a7.7 7.7 0 0 1-.959 3.727l3.109 3.107A11.94 11.94 0 0 0 24 12c0-2.54-.79-4.894-2.135-6.834"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.tabs.link", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.expand", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/vega@6.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/vega-lite@6.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/vega-embed@6.js"></script>
+      
+    
+  </body>
+</html>

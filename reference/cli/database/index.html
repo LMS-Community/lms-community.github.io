@@ -1,0 +1,6663 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lyrion.org/reference/cli/database/">
+      
+      
+        <link rel="prev" href="../players/">
+      
+      
+        <link rel="next" href="../playlist/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>CLI - Database commands - Lyrion Music Server</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#database-commands-and-queries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Lyrion Music Server" class="md-header__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lyrion Music Server
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CLI - Database commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Getting Started with LMS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../players-and-controllers/" class="md-tabs__link">
+          
+  
+  
+  Players & Controllers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../extensions/applications/" class="md-tabs__link">
+          
+  
+  
+  Extensions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../lyrion-music-server/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../faq/lms/" class="md-tabs__link">
+          
+  
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Lyrion Music Server" class="md-nav__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Lyrion Music Server
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started with LMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started with LMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginner's guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-full-featured-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for a full-featured LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-synology-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on Synology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-qnap-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on QNAP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-omv-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on OMV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-to-classical-music-on-lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide to classical music on LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/mac-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started on macOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help Guides and FAQs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help Guides and FAQs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/new-music-help-faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New Music changes in 9.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/advanced-guide-openvpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use OpenVPN on SB Radio/Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/migrate-from-uesr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate from UE Smart Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/lms-on-readynas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS on ReadyNAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Changelog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/changelog-lms9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 9 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/changelog-lms8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 8 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players & Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Players & Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/hardware-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-touch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-radio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-boom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Boom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Duet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezebox Duet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/transporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transporter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-classic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Classic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/SLIMP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/software-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezelite-manpage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite manpage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/jivelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jivelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/softsqueeze/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftSqueeze
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/picoreplayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    piCorePlayer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensions/applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Available Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/reporting-a-bug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting a bug
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/dco-signoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DCO Sign-off
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/adding-translations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding translations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forums.lyrion.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community forums
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lyrion-music-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Interface (JSON/RPC)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Command Line Interface (JSON/RPC)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../players/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rescan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rescan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rescanprogress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rescanprogress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abortscan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        abortscan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wipecache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wipecache
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        libraries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries-getid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        libraries getid
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total genres
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-artists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total artists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-albums" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total albums
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-songs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total songs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total duration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        genres
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        artists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        roles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#albums" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        albums
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#years" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        years
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#musicfolder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        musicfolder
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="musicfolder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mediafolder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mediafolder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists tracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists rename
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists new
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists delete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists edit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#songinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        songinfo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#titlessongstracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        titles|songs|tracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        search
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pragma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pragma
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playlist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../favorites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Favorites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../randomplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Randomplay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compoundqueries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compound Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alarms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alarms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-locales-to-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add locales to the Docker container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins/applets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins/applets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezeplay Applet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezeplay Applet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../squeezeplay-applet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applet Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installing-applets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing Applets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music-service-plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Music Service Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slimproto-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimProto Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slimp3-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3 Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip3k-graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classic/Boom/Transporter Graphics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_5" id="__nav_6_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay Menu System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SqueezePlay Menu System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home-vs-slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu vs. SlimBrowse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding-menus-squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimBrowse Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_6" id="__nav_6_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH/SCP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SSH/SCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enable-ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enable SSH Access to the Squeezebox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../winscp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WinSCP How To
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curtrack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    #CURTRACK Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../special-ir-keys-reset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Special IR Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slim-utils-os-custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom OS support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-the-most-out-of-metadata-in-lyrion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting the most out of metadata in Lyrion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rescan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rescan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rescanprogress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rescanprogress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abortscan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        abortscan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wipecache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wipecache
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        libraries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries-getid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        libraries getid
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total genres
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-artists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total artists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-albums" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total albums
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-songs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total songs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-total-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        info total duration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        genres
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        artists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        roles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#albums" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        albums
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#years" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        years
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#musicfolder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        musicfolder
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="musicfolder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mediafolder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mediafolder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists tracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists rename
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists new
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists delete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlists edit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#songinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        songinfo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#titlessongstracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        titles|songs|tracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        search
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pragma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pragma
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../lyrion-music-server/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Reference
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../introduction/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Command Line Interface (JSON/RPC)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/lms-community/lms-community.github.io/edit/main/docs/reference/cli/database.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/lms-community/lms-community.github.io/raw/main/docs/reference/cli/database.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<p><link rel="stylesheet" href="../cli-doc.css"></p>
+<h1 id="database-commands-and-queries">Database commands and queries</h1>
+<hr />
+<h2 id="rescan">rescan</h2>
+<p><code>rescan &lt;|playlists|onlinelibrary|external|full|album|track &lt;item&gt;|?&gt;</code></p>
+<p>The <code>rescan</code> command causes the server to rescan the entire music library, reloading the music file information.
+You can define different types of scans, and in some cases an item you want to scan (path, album/track ID):</p>
+<ul>
+<li>If <code>playlists</code> is indicated (<code>rescan playlists</code>), only the playlist directory is rescanned.</li>
+<li>If <code>onlinelibrary</code> is indicated (<code>rescan onlinelibrary</code>), only the import from online music services is run.</li>
+<li>If <code>external</code> is requested, the rescan will be performed using the external scanner process instead of the in-process scanner.</li>
+<li>If <code>full file://some/path</code> is defined, then only this path will be scanned.</li>
+<li>If <code>album &lt;album_id&gt;</code> or <code>track &lt;track_id&gt;</code> are requested, then only that album's or track's folder is scanned (LMS 9.1+). These are quick server internal updates and won't run all the plugin importers!</li>
+<li>Issued with a <code>?</code>, <code>rescan ?</code> returns whether the server is currently scanning.</li>
+</ul>
+<p>Scanning occurs when the server starts and following <code>rescan</code> and <code>wipecache</code> commands.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;rescan&lt;LF&gt;&quot;
+Response: &quot;rescan&lt;LF&gt;&quot;
+
+Request: &quot;rescan ?&lt;LF&gt;&quot;
+Response: &quot;rescan 1&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="rescanprogress">rescanprogress</h2>
+<p><code>rescanprogress</code></p>
+<p>The <code>rescanprogress</code> query returns details on the scanning progress. This query does not take any parameters.</p>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database, otherwise returned with value 0 and the fields below are not returned.</td>
+</tr>
+<tr>
+<td><code>totaltime</code></td>
+<td>Total elapsed time since the start of the scan, format <code>hh:mm:ss</code>.</td>
+</tr>
+<tr>
+<td><code>importer</code></td>
+<td>A completion percentage for each importer. Importers include:-<br> <code>directory</code> (Music folder), <br><code>playlist</code>(Playlist folder), <br><code>iTunes</code> (iTunes), <br><code>musicip</code> (MusicIP), <br><br> as well as more technical ones such as <br> <code>mergeva</code> (Various Artists merging) and <br> <code>dboptimize</code> (Database optimization).<BR><BR> The type, quantity and order of importers is determined dynamically as rescan progresses.</td>
+</tr>
+<tr>
+<td><code>info</code></td>
+<td>Additional information about the current scanning step, like eg. the currently scanned file name.</td>
+</tr>
+<tr>
+<td><code>steps</code></td>
+<td>Scanning steps in the order they've been executed.</td>
+</tr>
+<tr>
+<td><code>lastscanfailed</code></td>
+<td>Information about a possible failure in case a scan has not finished in an attended manner.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;rescanprogress&lt;LF&gt;&quot;
+Response: &quot;rescanprogress rescan:1 totaltime:00:00:07 directory:100 playlist:100 itunes:15 &lt;LF&gt;&quot;
+
+Request: &quot;rescanprogress&lt;LF&gt;&quot;
+Response: &quot;rescanprogress rescan:1 totaltime:00:01:04 directory:100 playlist:100 itunes:100 itunes_playlists:100 mergeva:100 cleanup1:100 cleanup2:100 dboptimize:47 &lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="abortscan">abortscan</h2>
+<p><code>abortscan</code></p>
+<p>The <code>abortscan</code> command causes the server to cancel a running scan. Please note that after stopping a scan this way you'll have to fully rescan your music collection to get consistent data.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;abortscan&lt;LF&gt;&quot;
+Response: &quot;abortscan&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="wipecache">wipecache</h2>
+<p><code>wipecache</code></p>
+<p>The <code>wipecache</code> command allows the caller to have the server rescan its music library, reloading the music file information. This differs from the <code>rescan</code> command in that it first clears the tag database. During a rescan triggered by <code>wipecache</code>, <code>rescan ?</code> returns true.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;wipecache&lt;LF&gt;&quot;
+Response: &quot;wipecache&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="libraries">libraries</h2>
+<p><code>libraries</code></p>
+<p>The <code>libraries</code> query returns a list of known library views with their ID to the caller.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;libraries&lt;LF&gt;&quot;
+Response: &quot;libraries id:8c7ee510 name:FLAC%20files%20only&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="libraries-getid">libraries getid</h2>
+<p><code>&lt;playerid&gt; libraries getid</code></p>
+<p>The <code>libraries getid</code> query returns the ID and the name of library set to be used by the given player. Returns id:0 and no name if no library is active.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 libraries getid&lt;LF&gt;&quot;
+Request: &quot;04:20:00:12:23:45 libraries getid id:8c7ee510 name:FLAC%20files%20only&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="info-total-genres">info total genres</h2>
+<p><code>info total genres ?</code></p>
+<p>The <code>info total genres ?</code> query returns the number of unique genres in the server music database.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;info total genres ?&lt;LF&gt;&quot;
+Response: &quot;info total genres 18&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="info-total-artists">info total artists</h2>
+<p><code>info total artists ?</code></p>
+<p>The <code>info total artists ?</code> query returns the number of unique artists in the server music database. The <code>Composer, band and orchestra in artists</code> preference (Server Settings, Behavior) determines which contributors are considered artists.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;info total artists ?&lt;LF&gt;&quot;
+Response: &quot;info total artists 18&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="info-total-albums">info total albums</h2>
+<p><code>info total albums ?</code></p>
+<p>The <code>info total albums ?</code> query returns the number of unique albums in the server music database.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;info total albums ?&lt;LF&gt;&quot;
+Response: &quot;info total albums 18&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="info-total-songs">info total songs</h2>
+<p><code>info total songs ?</code></p>
+<p>The <code>info total songs ?</code> query returns the number of unique songs in the server music database.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;info total songs ?&lt;LF&gt;&quot;
+Response: &quot;info total songs 18&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="info-total-duration">info total duration</h2>
+<p><code>info total duration ?</code></p>
+<p>The <code>info total duration ?</code> query returns the number of seconds playtime in the server music database.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;info total duration ?&lt;LF&gt;&quot;
+Response: &quot;info total duration 66109&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="genres">genres</h2>
+<p><code>genres &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>genres</code> query returns all genres known by the server.</p>
+<p>Note that the server supports multiple genres per track, depending on the <code>Multiple items in tags</code> preference (Server Settings, Behavior).</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>search</code></td>
+<td>Search string. The search is case insensitive and obeys the <code>Search Within Words</code> server parameter.</td>
+</tr>
+<tr>
+<td><code>artist_id</code></td>
+<td>Limit results to those genres proposed by the artist identified by <code>artist_id</code>.</td>
+</tr>
+<tr>
+<td><code>album_id</code></td>
+<td>Limit results to those genres available on the album identified by <code>album_id</code>.</td>
+</tr>
+<tr>
+<td><code>track_id</code></td>
+<td>Limit results to the genres of the track identified by <code>track_id</code>. If present, other filters are ignored.</td>
+</tr>
+<tr>
+<td><code>genre_id</code></td>
+<td>Limit results to the genre identified by <code>genre_id</code>. The genre_id may be a list of comma separated IDs. If present, other filters are ignored.</td>
+</tr>
+<tr>
+<td><code>library_id</code></td>
+<td>Virtual library ID, to restrict the results to a virtual library view.</td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>Limit results to the genres of the tracks of the given <code>year</code>.</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is empty.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>count</code></td>
+<td>Number of results returned by the query. If no filter parameter is present, this is the same value as returned by <code>info total genres ?</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>CC</code> <code>count</code></td>
+<td>- Only return the number of results, but not the results themselves.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Z</code> <code>indexList</code></td>
+<td>An array of arrays indicating how many items start with each key letter.</td>
+</tr>
+<tr>
+<td colspan="3">For each genre:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>id</code></td>
+<td>Genre ID. Item delimiter.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>genre</code></td>
+<td>Genre name.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>s</code></td>
+<td>textkey</td>
+</tr>
+</tbody>
+</table>
+<p>The genre's <code>textkey</code> is the first letter of the sorting key.</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;genres 0 5&lt;LF&gt;&quot;
+Response: &quot;genres 0 5 rescan:1 count:6 id:3 genre:Acid%20Jazz id:4 genre:Alternative%20&amp;%20Punk id:5 genre:French id:6 genre:No%20Genre id:7 genre:Pop &lt;LF&gt;&quot;
+
+Request: &quot;genres 0 5 search:unk&lt;LF&gt;&quot;
+Response: &quot;genres 0 5 search:unk count:1 id:4 genre:Alternative%20&amp;%20Punk&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="artists">artists</h2>
+<p><code>artists &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>artists</code> query returns all artists known by the server. The results of this query depend in part on the <code>Compilations</code> preference (Server Settings, Behavior). The <code>Various Artists</code> pseudo-artist appears if the server groups compilations.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>search</code></td>
+<td>Search substring. The search is case insensitive and obeys the <code>Search Within Words</code> server parameter.</td>
+</tr>
+<tr>
+<td><code>genre_id</code></td>
+<td>Genre ID, to restrict the results to those artists with songs of that genre. The genre_id may be a list of comma separated IDs.</td>
+</tr>
+<tr>
+<td><code>album_id</code></td>
+<td>Album ID, to restrict the results to those artists with songs of that album.</td>
+</tr>
+<tr>
+<td><code>track_id</code></td>
+<td>Track ID, to restrict the results to the artist of <code>track_id</code>. If specified, all other filters are ignored.</td>
+</tr>
+<tr>
+<td><code>artist_id</code></td>
+<td>Artist ID, to restrict the results to a single artist. If specified, all other filters are ignored.</td>
+</tr>
+<tr>
+<td><code>role_id</code></td>
+<td>Contributor role ID, to restrict the results to the artist of <code>role_id</code>. This parameter must be a comma separated list of role IDs, or a comma separated list of role tokens (eg. ALBUMARTIST, ARTIST)</td>
+</tr>
+<tr>
+<td><code>library_id</code></td>
+<td>Virtual library ID, to restrict the results to a virtual library view.</td>
+</tr>
+<tr>
+<td><code>include_online_only_artists</code></td>
+<td>Include external artists from music services, even if they don't have any track or album in the current collection. This allows callers to browse those artists on the external service. <br><br> Please note that this parmeter would be ignored if some kind of filtering argument was given which didn't apply to artists without related tracks (eg. genre_id, album_id etc.).</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is empty.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>count</code></td>
+<td>Number of results returned by the query. If no search string is present, this is the same value as returned by <code>info total artists ?</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>CC</code>  <code>count</code></td>
+<td>Only return the number of results, but not the results themselves.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Z</code>  <code>indexList</code></td>
+<td>An array of arrays indicating how many items start with each key letter.</td>
+</tr>
+<tr>
+<td colspan="3">For each artist:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>id</code></td>
+<td>Artist ID. Item delimiter.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>artist</code></td>
+<td>Artist name.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>s</code> <code>textkey</code></td>
+<td>The artist's <code>textkey</code> is the first letter of the sorting key. CLARIFICATION-NEEDED</td>
+</tr>
+<tr>
+<td></td>
+<td><code>E</code> <code>extid</code></td>
+<td>The contributor's external ID, if it is eg. from an online music service. CLARIFICATION-NEEDED</td>
+</tr>
+<tr>
+<td></td>
+<td><code>4</code> <code>portraitid</code></td>
+<td>The contributor's portrait ID</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;artists 0 5&lt;LF&gt;&quot;
+Response: &quot;artists 0 5 count:7 id:2 artist:Anastacia id:3 artist:Calogero id:4 artist:Evanescence id:5 artist:Leftfield%20%26%20Lydon id:18 artist:Llorca &lt;LF&gt;&quot;
+
+Request: &quot;artists 0 5 genre_id:7&lt;LF&gt;&quot;
+Response: &quot;artists 0 5 genre_id:7 count:2 id:2 artist:Anastacia id:19 artist:Sarah%20Connor &lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="roles">roles</h2>
+<p><code>roles &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>roles</code> query returns all roles known by the server for a given track, or releases.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>track_id</code></td>
+<td>Track ID, to restrict the results to the album of <code>track_id</code>. If specified, all other filters are ignored.</td>
+</tr>
+<tr>
+<td><code>artist_id</code></td>
+<td>Artist ID, to restrict the results to those albums by <code>artist_id</code>.</td>
+</tr>
+<tr>
+<td><code>album_id</code></td>
+<td>Album ID, to restrict the results to a single album. Or a comma sparated list of album IDs, to restrict the results to a specific list of albums. If specified, all other filters are ignored.</td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>Year, to restrict the results to those albums of that year.</td>
+</tr>
+<tr>
+<td><code>work_id</code></td>
+<td>Limit results to an individual <code>work</code>.</td>
+</tr>
+<tr>
+<td><code>library_id</code></td>
+<td>Virtual library ID, to restrict the results to a virtual library view.</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Determines which tags are returned. Each returned tag is identified by a letter. The only valid values currently are <code>t</code> (textual representation of the contributor type), and <code>CC</code> (only return count of results, but no other data).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td colspan="3">For each role:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>role_id</code></td>
+<td>The role ID.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>role_name</code></td>
+<td>The contributor role name (only if requested with <code>tag:t</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;roles 0 1 tags:t&lt;LF&gt;&quot;
+Response: &quot;roles 0 1 rescan:1 count:6 role_id:1 role_name:ARTIST &lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="albums">albums</h2>
+<p><code>albums &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>albums</code> query returns all albums known by the server. The results of this query depend in part on the <code>Group discs</code> preference (Server Settings, Behavior).</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>search</code></td>
+<td>Search substring. The search is case insensitive and obeys the <code>Search Within Words</code> server parameter.</td>
+</tr>
+<tr>
+<td><code>genre_id</code></td>
+<td>Genre ID, to restrict the results to those albums with songs of that genre. The genre_id may be a list of comma separated IDs.</td>
+</tr>
+<tr>
+<td><code>artist_id</code></td>
+<td>Artist ID, to restrict the results to those albums by <code>artist_id</code>.</td>
+</tr>
+<tr>
+<td><code>track_id</code></td>
+<td>Track ID, to restrict the results to the album of <code>track_id</code>. If specified, all other filters are ignored.</td>
+</tr>
+<tr>
+<td><code>album_id</code></td>
+<td>Album ID, to restrict the results to a single album. Or a comma sparated list of album IDs, to restrict the results to a specific list of albums. If specified, all other filters are ignored.</td>
+</tr>
+<tr>
+<td><code>role_id</code></td>
+<td>Contributor role ID, to restrict the results to those albums by artist of role <code>role_id</code>. This parameter must be a comma separated list of role IDs, or a comma separated list of role tokens (eg. ALBUMARTIST, ARTIST)</td>
+</tr>
+<tr>
+<td><code>library_id</code></td>
+<td>Virtual library ID, to restrict the results to a virtual library view.</td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>Year, to restrict the results to those albums of that year.</td>
+</tr>
+<tr>
+<td><code>compilation</code></td>
+<td>Compilation, to restrict the results to those albums that are (1) or aren't (0) compilations.</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>Sort order of the returned list of albums. One of: <br><code>album</code>, (the default), <br><code>new</code> (sort by the date the item was added to the library, in descending order), <br><code>changed</code> (sort by change date in descending order), <br><code>lastplayed</code> (last time the item was played, in descending order), <br><code>playcount</code> (total count of the item's tracks playcount), <br><code>artflow</code> which sorts by artist, year, album for use with artwork-centric interfaces, <br><code>artistalbum</code>, <br><code>yearalbum</code>, <br><code>yearartistalbum</code>, <br><code>random</code>.</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is <code>l</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>count</code></td>
+<td>Number of results returned by the query. If no filter is present, this is the same value as returned by <code>info total albums ?</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>CC</code>  <code>count</code></td>
+<td>Only return the number of results, but not the results themselves. CLARIFICATION-NEEDED</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Z</code> <code>indexList</code></td>
+<td>An array of arrays indicating how many items start with each key letter (or year for a year-dominated sort order). CLARIFICATION-NEEDED</td>
+</tr>
+<tr>
+<td colspan="3">For each album:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>id</code></td>
+<td>Album ID. Item delimiter.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>l</code> <code>album</code></td>
+<td>Album name, including the server's added <code>(N of M)</code> if the server is set to group multi disc albums together. See tag <code>title</code> for the unmodified value. CLARIFICATION-NEEDED</td>
+</tr>
+<tr>
+<td></td>
+<td><code>y</code> <code>year</code></td>
+<td>Album year. This is determined by the server based on the album tracks.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>j</code> <code>artwork_track_id</code></td>
+<td>Identifier of one of the album tracks, used by the server to display the album's artwork.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>t</code> <code>title</code></td>
+<td><code>Raw</code> album title as found in the album tracks ID3 tags, as opposed to <code>album</code>. Note that <code>title</code> and <code>album</code> are identical if the server is set to group discs together.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>i</code> <code>disc</code></td>
+<td>Disc number of this album. Only if the server is not set to group multi-disc albums together.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>q</code> <code>disccount</code></td>
+<td>Number of discs for this album. Only if known.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>w</code> <code>compilation</code></td>
+<td>1 if this album is a compilation.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>W</code> <code>release_type</code></td>
+<td>The release type of an album, eg. <code>album</code>, <code>ep</code>, etc.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>a</code> <code>artist</code></td>
+<td>The album artist (depends on server configuration).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>aa</code> <code>artists</code></td>
+<td>A comma separated list of album artists (depends on server configuration).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>S</code> <code>artist_id</code></td>
+<td>The album artist id (depends on server configuration).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>SS</code> <code>artist_ids</code></td>
+<td>A comma separated list of album artist ids (depends on server configuration).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>s</code> <code>textkey</code></td>
+<td>The album's <code>textkey</code> is the first letter of the sorting key.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>E</code> <code>extid</code></td>
+<td>The album's external ID, if it is eg. from an online music service.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>R</code> <code>role_ids</code></td>
+<td>A comma separated list of role ids for the album.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>X</code> <code>album_replay_gain</code></td>
+<td>The album's replay-gain.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>2</code> <code>group_count &amp; contiguous_groups</code></td>
+<td>Returns a count of distinct works/groupings/performances on the album and a flag indicating whether the groups are contiguous, to assist UI formatting of the album results.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>4</code> <code>portraitid</code></td>
+<td>The contributor's portrait ID</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;albums 0 4&lt;LF&gt;&quot;
+Response: &quot;albums 0 4 count:14 id:1 album:Amadeus%20(Disc%201%20of%202) id:4 album:Anastacia id:5 album:Bounce%20[Single] id:6 album:Fallen&lt;LF&gt;&quot;
+
+Request: &quot;albums 0 5 genre_id:7&lt;LF&gt;&quot;
+Response: &quot;albums 0 5 genre_id:7 count:2 id:4 album:Anastacia id:5 album:Bounce%20[Single]&lt;LF&gt;&quot;
+
+Request: &quot;albums 0 5 artist_id:19&lt;LF&gt;&quot;
+Response: &quot;albums 0 5 artist_id:19 count:1 id:5 album:Bounce%20[Single]&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="works">works</h2>
+<p><code>works &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>works</code> query returns all works known by the server.</p>
+<p>A Work is a (usually classical) piece of music made up of one or more movements, acts, scenes etc, each of which is usually a separate track.</p>
+<p>A Work is defined by its name and its composer.</p>
+<p>An Album can contain many Works, and an instance of a Work can exist on many Albums. There is therefore a many-to-many relationship between Works and Albums.
+This many-to-many relationship is resolved in the Tracks table which contains the album id and the work id.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>search</code></td>
+<td>Search string. The search is case insensitive and obeys the <code>Search Within Words</code> server parameter.</td>
+</tr>
+<tr>
+<td><code>artist_id</code></td>
+<td>Limit results to those works on which the artist identified by <code>artist_id</code> performs.</td>
+</tr>
+<tr>
+<td><code>genre_id</code></td>
+<td>Limit results to the genre(s) identified by <code>genre_id</code>. The genre_id may be a list of comma separated IDs.</td>
+</tr>
+<tr>
+<td><code>library_id</code></td>
+<td>Virtual library ID, to restrict the results to a virtual library view.</td>
+</tr>
+<tr>
+<td><code>work_id</code></td>
+<td>Limit results to an individual <code>work</code>.</td>
+</tr>
+<tr>
+<td><code>role_id</code></td>
+<td>Limit results to the role(s) identified by <code>role_id</code>. The role_id may be a list of comma separated IDs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td>count</td>
+<td><code>count</code></td>
+<td>Number of results returned by the query.</td>
+</tr>
+<tr>
+<td colspan="3">For each work:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>single_composer</code></td>
+<td>only returned if the results contain works from a single composer who is also the searched-for contributor</td>
+</tr>
+<tr>
+<td></td>
+<td><code>composer</code></td>
+<td>the name of the composer of the work</td>
+</tr>
+<tr>
+<td></td>
+<td><code>work</code></td>
+<td>the name of the work</td>
+</tr>
+<tr>
+<td></td>
+<td><code>composer_id</code></td>
+<td>the id of the composer of the work</td>
+</tr>
+<tr>
+<td></td>
+<td><code>artwork_track_id</code></td>
+<td>the id of the artwork for the first album found containing the work</td>
+</tr>
+<tr>
+<td></td>
+<td><code>artwork_track_ids</code></td>
+<td>a list of all artwork ids of albums containing the work</td>
+</tr>
+<tr>
+<td></td>
+<td><code>album_id</code></td>
+<td>a list of the ids of all albums containing the work</td>
+</tr>
+<tr>
+<td></td>
+<td><code>textkey</code></td>
+<td>if <code>single_composer</code> (see above), the first letter of the work name, otherwise, the first letter of the composer name</td>
+</tr>
+<tr>
+<td></td>
+<td><code>favorites_url</code></td>
+<td>the URL for favoriting the work</td>
+</tr>
+<tr>
+<td></td>
+<td><code>favorites_title</code></td>
+<td>the text to be used for the favorite</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="years">years</h2>
+<p><code>years &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>years</code> query returns all years known by the server.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>year</code></td>
+<td>Return only the specified year.</td>
+</tr>
+<tr>
+<td><code>hasAlbums:1</code></td>
+<td>Return only years which are valid for albums.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td colspan="3">For each year:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>year</code></td>
+<td>Year. Item delimiter.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;years 0 5&lt;LF&gt;&quot;
+Response: &quot;years 0 5 rescan:1 count:6 year:1985 year:1987 year:1988 year:2002 year:2003 year:2004 &lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="musicfolder">musicfolder</h2>
+<p><code>musicfolder &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>musicfolder</code> query returns the content of a given music folder, starting from the top level directory configured in the server.</p>
+<p><code>mediafolder</code> is an alias to <code>musicfolder</code>.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>folder_id</code></td>
+<td>Browses the folder identified by <code>folder_id</code>.</td>
+</tr>
+<tr>
+<td><code>return_top</code></td>
+<td>If set to 1, and <code>folder_id</code> is provided, will return the data about the listed folder instead of the child folders.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Browses the folder identified by <code>url</code>. If the content of <code>url</code> did not happen to be in the server database, it is added to it.<br><br> <code>url</code> has precedence over <code>folder_id</code> if both are provided.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>One of <code>audio</code>, or <code>list</code>. Select the media type you want to browse in the given folder.</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is empty.</td>
+</tr>
+<tr>
+<td><code>recursive</code></td>
+<td>If set to 1, the query will return information about the requested folder and its sub-folders, and all files in there.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>count</code></td>
+<td>Number of results returned by the query.</td>
+</tr>
+<tr>
+<td colspan="3">For each item in the folder:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>id</code></td>
+<td>Track, playlist or folder ID. Item delimiter.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>type</code></td>
+<td>One of <code>track</code>, <code>folder</code>, <code>playlist</code>, or <code>unknown</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>c</code> <code>coverid</code></td>
+<td>coverid to use when constructing an artwork URL, such as /music/$coverid/cover.jpg</td>
+</tr>
+<tr>
+<td></td>
+<td><code>d</code>  <code>duration</code></td>
+<td>Song duration in seconds.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>s</code> <code>textkey</code></td>
+<td>The item's <code>textkey</code> is the first letter of the sorting key.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>u</code>  <code>url</code></td>
+<td>The item's full URL.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;musicfolder 0 10&lt;LF&gt;&quot;
+Response: &quot;musicfolder 0 10 count:26 id:1 title:03%20Barbie%20Girl.mp3 type:audio id:2 title:12%20-%20If%20I%20Had%20You.mp3 type:audio id:313 title:A-Ha type:dir id:50 title:Test.m3u type:playlist&lt;LF&gt;&quot;
+
+Request: &quot;musicfolder 0 10 folder_id:313&lt;LF&gt;&quot;
+Response: &quot;musicfolder 0 10 folder_id:313 count:2 id:335 title:Lifelines type:dir id:336 title:Minor%20Earth%20Major%20Sky type:dir&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="mediafolder">mediafolder</h3>
+<p><code>mediafolder</code> is an alias of <a href="#musicfolder"><code>musicfolder</code></a></p>
+<hr />
+<h2 id="playlists">playlists</h2>
+<p><code>playlists &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>playlists</code> query returns all playlists known by the server.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>search</code></td>
+<td>Search substring. The search is case insensitive and obeys the <code>Search Within Words</code> server parameter.</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is empty.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>count</code></td>
+<td>Number of results returned by the query.</td>
+</tr>
+<tr>
+<td colspan="3">For each playlist:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>id</code></td>
+<td>Playlist ID. Item delimiter.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>playlist</code></td>
+<td>Playlist name</td>
+</tr>
+<tr>
+<td></td>
+<td><code>s</code> <code>textkey</code></td>
+<td>The playlist's <code>textkey</code> is the first letter of the sorting key.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>u</code>  <code>url</code></td>
+<td>The playlist's url.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>E</code>  <code>extid</code></td>
+<td>The playlist's external ID, if it is eg. from an online music service.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>x</code>  <code>remote</code></td>
+<td>If 1, this is a remote playlist.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;playlists 0 2&lt;LF&gt;&quot;
+Response: &quot;playlists 0 2 count:5 id:37 name:Funky%20Beats id:57 name:SUPER&lt;LF&gt;&quot;
+
+Request: &quot;playlists 0 2 search:SUPER tags:u&lt;LF&gt;&quot;
+Response: &quot;playlists 0 2 search:SUPER tags:u count:1 id:57 name:SUPER url:playlist:///Volume/path/file.m3u&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlists-tracks">playlists tracks</h2>
+<p><code>playlists tracks &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>playlists tracks</code> query returns the tracks of a given playlist.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>playlist_id</code></td>
+<td>Playlist ID as returned by the <code>playlists</code> query. This is a mandatory parameter.</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Determines which tags are returned. Each returned tag is identified by a letter (see command <a href="#songinfo"><code>songinfo</code></a> for a list of possible fields and their identifying letter). The default tags value for this command is <code>gald</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>count</code></td>
+<td>Number of tracks in the playlist.</td>
+</tr>
+<tr>
+<td colspan="3">For each track:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>playlist index</code></td>
+<td>Index (first item is 0) of the track in the playlist. The first returned instance of this field is equal to start. Item seperator.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Tags</code></td>
+<td>Same tags as defined in command <a href="#songinfo"><code>songinfo</code></a>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="playlists-rename">playlists rename</h2>
+<p><code>playlists rename &lt;taggedParameters&gt;</code></p>
+<p>This command renames a saved playlist.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>playlist_id</code></td>
+<td>The id of the playlist to rename.</td>
+</tr>
+<tr>
+<td><code>newname</code></td>
+<td>The new name of the playlist (without .m3u).</td>
+</tr>
+<tr>
+<td><code>dry_run</code></td>
+<td>Used to check if the new name is already used by another playlist. The command performs the name check but does not overwrite the existing playlist. If a name conflict occurs, the command will return a <code>overwritten_playlist_id</code> parameter.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>overwritten_playlist_id</code></td>
+<td>This returns the playlist id of the playlist overwritten (if <code>dry_run</code> is 0 or not present) by renaming the playlist. Only present if a playlist is overwritten.</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;playlists rename playlist_id:22 newname:Hello&lt;LF&gt;&quot;
+Response: &quot;playlists rename playlist_id:22 newname:Hello&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlists-new">playlists new</h2>
+<p><code>playlists new &lt;taggedParameters&gt;</code></p>
+<p>This command creates an empty saved playlist, to be further manipulated by other commands.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>The name of the playlist (without .m3u).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>playlist_id</code></td>
+<td>This returns the playlist id of the created playlist.</td>
+</tr>
+<tr>
+<td><code>overwritten_playlist_id</code></td>
+<td>This returns the playlist id of an existing playlist with the same name. The new playlist is not created.</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;playlists new name:Hello&lt;LF&gt;&quot;
+Response: &quot;playlists new name:Hello playlist_id:345&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlists-delete">playlists delete</h2>
+<p><code>playlists delete &lt;taggedParameters&gt;</code></p>
+<p>This command deletes a saved playlist.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>playlist_id</code></td>
+<td>The id of the playlist to delete.</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;playlists delete playlist_id:22&lt;LF&gt;&quot;
+Response: &quot;playlists delete playlist_id:22&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlists-edit">playlists edit</h2>
+<p><code>playlists edit &lt;taggedParameters&gt;</code></p>
+<p>This command manipulates the track content of a saved playlist.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>playlist_id</code></td>
+<td>The id of the playlist to manipulate.</td>
+</tr>
+<tr>
+<td><code>cmd</code></td>
+<td>One of <code>up</code>, <code>down</code>, <code>move</code>, <code>delete</code> or <code>add</code>, in order to move up, down, delete or add a track.</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>For <code>cmd:up</code>, <code>cmd:down</code>, <code>cmd:move</code> and <code>cmd:delete</code> the index of the track to edit.</td>
+</tr>
+<tr>
+<td><code>toindex</code></td>
+<td>For <code>cmd:move</code> the new index of the track to be moved.</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>For <code>cmd:add</code>, the title of the track to add.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>For <code>cmd:add</code>, the url of the track to add.</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;playlists edit cmd:up playlist_id:22 index:3&lt;LF&gt;&quot;
+Response: &quot;playlists edit cmd:up playlist_id:22 index:3&lt;LF&gt;&quot;
+
+Request: &quot;playlists edit cmd:add playlist_id:22 title:Song url:file://...&lt;LF&gt;&quot;
+Response: &quot;playlists edit cmd:add playlist_id:22 title:Song url:file://...&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="songinfo">songinfo</h2>
+<p><code>songinfo &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>songinfo</code> command returns all the information on a song known by the server. Please note that the <start> and <itemsPerResponse> parameters apply to the individual data fields below and not, as they do in other extended CLI queries, to the number of songs (or artists, genres, etc.) returned; the <code>songinfo</code> only ever returns information about a single song.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>Song path as returned by other CLI commands. This is a mandatory parameter, except if <code>track_id</code> is provided.</td>
+</tr>
+<tr>
+<td><code>track_id</code></td>
+<td>Track ID as returned by other CLI commands. This is a mandatory parameter, except if <code>url</code> is provided.</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Determines which tags are returned. Each returned tag is identified by a letter (see below). The default value is all info except the url (<code>u</code>) and the multi-valued tags for genre(s) (<code>G</code> &amp; <code>P</code>) and artists (<code>A</code> &amp; <code>S</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>count</code></td>
+<td>Number of results returned by the query, that is, total number of elements to return for this song.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Track ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>Song title</td>
+<td></td>
+</tr>
+<tr>
+<td><code>a</code>  <code>artist</code></td>
+<td>Artist name.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>A</code>  <code>&lt;role&gt;</code></td>
+<td>For every artist role (one of <code>artist</code>, <code>composer</code>, <code>conductor</code>, <code>band</code>, <code>albumartist</code> or <code>trackartist</code>), a comma and space (', ') separated list of names.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>AA</code>  <code>&lt;role&gt;</code></td>
+<td>This is like <code>A</code>, but without the space after the comma. This should simplify parsing/splitting when required.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>B</code>  <code>buttons</code></td>
+<td>A hash with button definitions. Only available for certain plugins such as Pandora.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>c</code>  <code>coverid</code></td>
+<td>coverid to use when constructing an artwork URL, such as /music/$coverid/cover.jpg</td>
+<td></td>
+</tr>
+<tr>
+<td><code>C</code>  <code>compilation</code></td>
+<td>1 if the album this track belongs to is a compilation</td>
+<td></td>
+</tr>
+<tr>
+<td><code>K</code>  <code>artwork_url</code></td>
+<td>A full URL to remote artwork. Only available for certain online music services.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>W</code>  <code>release_type</code></td>
+<td>The release type of the track's album, eg. <code>album</code>, <code>ep</code>, etc.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>d</code>  <code>duration</code></td>
+<td>Song duration in seconds.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>e</code>  <code>album_id</code></td>
+<td>Album ID. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>f</code>  <code>filesize</code></td>
+<td>Song file length in bytes. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>g</code>  <code>genre</code></td>
+<td>Genre name. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>G</code>  <code>genres</code></td>
+<td>Genre names, separated by commas (only useful if the server is set to handle multiple items in tags).</td>
+<td></td>
+</tr>
+<tr>
+<td><code>i</code>  <code>disc</code></td>
+<td>Disc number. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>I</code>  <code>samplesize</code></td>
+<td>Song sample size (in bits)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>j</code>  <code>coverart</code></td>
+<td>1 if coverart is available for this song. Not listed otherwise.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>J</code>  <code>artwork_track_id</code></td>
+<td>Identifier of the album track used by the server to display the album's artwork. Not listed if artwork is not available for this album.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>k</code>  <code>comment</code></td>
+<td>Song comments, if any.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>K</code>  artwork_url</td>
+<td>A full URL to remote artwork. Only available for certain online music services.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>l</code>  <code>album</code></td>
+<td>Album name. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>L</code>  <code>info_link</code></td>
+<td>A custom link to use for trackinfo. Only available for certain online music services.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>m</code>  <code>bpm</code></td>
+<td>Beats per minute. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>M</code>  <code>musicmagic_mixable</code></td>
+<td>1 if track is mixable, otherwise 0.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>n</code>  <code>modificationTime</code></td>
+<td>Date and time song file was last changed on disk.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>N</code>  <code>remote_title</code></td>
+<td>Title of the internet radio station.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>o</code>  <code>type</code></td>
+<td>Content type. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Q</code> <code>lossless</code></td>
+<td>1 if track is lossless, otherwise 0.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>p</code>  <code>genre_id</code></td>
+<td>Genre ID. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>P</code>  <code>genre_ids</code></td>
+<td>Genre IDs, separated by commas (only useful if the server is set to handle multiple items in tags).</td>
+<td></td>
+</tr>
+<tr>
+<td><code>D</code>  <code>addedTime</code></td>
+<td>Date and time song file was first added to the database.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>U</code>  <code>lastUpdated</code></td>
+<td>Date and time song file was last updated in the database.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>q</code>  <code>disccount</code></td>
+<td>Number of discs. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>r</code>  <code>bitrate</code></td>
+<td>Song bitrate. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>R</code>  <code>rating</code></td>
+<td>Song rating, if known and greater than 0.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>O</code>  <code>playcount</code></td>
+<td>Song play count.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>s</code>  <code>artist_id</code></td>
+<td>Artist ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>S</code>  <code>&lt;role&gt;_ids</code></td>
+<td>For each role as defined above, the list of ids (comma separated).</td>
+<td></td>
+</tr>
+<tr>
+<td><code>t</code>  <code>tracknum</code></td>
+<td>Track number. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>T</code>  <code>samplerate</code></td>
+<td>Song sample rate (in KHz)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>u</code>  <code>url</code></td>
+<td>Song file url.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>v</code>  <code>tagversion</code></td>
+<td>Version of tag information in song file. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>w</code>  <code>lyrics</code></td>
+<td>Lyrics. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>x</code>  <code>remote</code></td>
+<td>If 1, this is a remote track.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>E</code>  <code>extid</code></td>
+<td>Some tracks have an external identifier (eg. from an online music service).</td>
+<td></td>
+</tr>
+<tr>
+<td><code>X</code>  <code>album_replay_gain</code></td>
+<td>Replay gain of the album (in dB), if any</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code>  <code>year</code></td>
+<td>Song year. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Y</code>  <code>replay_gain</code></td>
+<td>Replay gain (in dB), if any</td>
+<td></td>
+</tr>
+<tr>
+<td><code>V</code>  <code>live_edge</code></td>
+<td>The Live edge of a remote stream. -1 is not live, 0 is live at the edge, &gt;0 is number of seconds from the live edge.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code>  <code>subtitle</code></td>
+<td>Subtitle associated with track title e.g. Acoustic, Demo, Live at... etc. Only if known.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>4</code>  <code>portraitid</code></td>
+<td>The contributor's portrait ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;songinfo 0 100 track_id:2&lt;LF&gt;&quot;
+Response: &quot;songinfo 0 100 track_id:2 count:26 id:2 title:If%20I%20Had%20You artist:Diana%20Krall duration:297.117 album_id:2 filesize:5952369 genre:Vocal comment:Pianist%2Fvocalist%20Diana%20Krall%20pays%20tribute%20to%20the%20Nat%20King%20Cole%20Trio.... album:All%20for%20You modificationTime:Thursday%2C%20March%201%2C%202007%2C%209:21:58%20PM type:mp3 genre_id:2 bitrate:160kbps%20VBR artist_id:3 tracknum:12 tagversion:ID3v2.3.0 year:1995 samplerate:44100 url:file:%2F%2F%2FUsers%2Ffred%2FPrograms%2FLyrion Music Server%2FMusic%2F12%2520-%2520If%2520I%2520Had%2520You.mp3 &lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="titlessongstracks">titles|songs|tracks</h2>
+<p><code>titles|songs|tracks &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>titles</code> command returns all titles known by the server.</p>
+<p><code>songs</code> and <code>tracks</code> are aliases for <code>titles</code></p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>genre_id</code></td>
+<td>Genre ID, to restrict the results to the titles of that genre.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>artist_id</code></td>
+<td>Artist ID, to restrict the results to the titles of that artist.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>album_id</code></td>
+<td>Album ID, to restrict the results to the titles of that album.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>track_id</code></td>
+<td>Track ID, to restrict the results to a single track.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>role_id</code></td>
+<td>Contributor role ID, to restrict the results to the artist of role <code>role_id</code>. This parameter must be a comma separated list of role IDs, or a comma separated list of role tokens (eg. ALBUMARTIST, ARTIST)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>release_type</code></td>
+<td>The release type of the track's album, eg. <code>album</code>, <code>ep</code>, etc.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>library_id</code></td>
+<td>Virtual library ID, to restrict the results to a virtual library view.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>Year, to restrict the results to the titles of that year.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>search</code></td>
+<td>Search substring. The search is case insensitive and obeys the <code>Search Within Words</code> server parameter.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Determines which tags are returned. Each returned tag is identified by a letter (see command <a href="#songinfo"><code>songinfo</code></a> for a list of possible fields and their identifying letter). The default tags value for this command is <code>gald</code>.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC</code></td>
+<td>Only return the number of results, but not the results themselves.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>Sorting, one of:-<br><code>title</code> (the default), <br><code>tracknum</code> (in which case the track field (<code>t</code>) is added automatically to the response) or <br><code>albumtrack</code> (in which case the track and album-title fields (<code>l</code> and <code>t</code>) are added automatically to the response). <br><br>Sorting by tracks is possible only if tracks are defined and for a single album.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>count</code></td>
+<td>Number of results returned by the query. If no search string or album/artist/genre filter is present, this is the same value as returned by <code>info total songs ?</code>.</td>
+</tr>
+<tr>
+<td colspan="3">For each title:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Tags</code></td>
+<td>Same tags as defined in command <a href="#songinfo"><code>songinfo</code></a>.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;titles 0 2&lt;LF&gt;&quot;
+Response: &quot;titles 0 2 count:100 id:55 title:Ancestral%20Aid genre:Soundtrack artist:Various%20Artists album:The%20Hunt%20For%20Red%20October duration:136.93387755102 disc:1 track:5 year:1990 url:file://Disk | he%20Hunt%20For%20Red%20October/Ancestral%20Aid.mp3 id:1 title:Any%20How genre:Acid%20Jazz artist:Llorca album:New%20Comer duration:340.297142857143 track:5 year:2001 url:...&lt;LF&gt;&quot;
+
+Request: &quot;titles 0 12 album:Anastacia tags:p&lt;LF&gt;&quot;
+Response: &quot;titles 0 12 album:Anastacia tags:p count:12 id:4 title:Heavy%20On%20My%20Heart url:... id:1 title:I%20Do url:... id:2 title:Left%20Outside%20Alone url:...&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="tags">tags</h2>
+<p><code>tags &lt;url|track_id&gt;</code></p>
+<p>Return the tracks found in the file referenced by the <code>url</code> or <code>track_id</code>.</p>
+<p>Please note that returned data depends on the file format, tagging software used, etc.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>The <code>file://</code> or <code>tmp://</code> URL to the audio file.</td>
+</tr>
+<tr>
+<td><code>track_id</code></td>
+<td>The track's ID</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;tags track_id:454&lt;LF&gt;&quot;
+Response: tags track_id%3A454 ALBUM%3A0 ARTIST%3ALow%20Roar COMMENT%3A%40JW DATE%3A2014 GENRE%3AAlternative REPLAYGAIN_ALBUM_GAIN%3A-9.18%20dB REPLAYGAIN_ALBUM_PEAK%3A1.00000000 REPLAYGAIN_REFERENCE_LOUDNESS%3A89.0%20dB REPLAYGAIN_TRACK_GAIN%3A-3.16%20dB REPLAYGAIN_TRACK_PEAK%3A0.96447754 TITLE%3AIn%20the%20Morning TRACKNUMBER%3A8 VENDOR%3Areference%20libFLAC%201.2.1%2020070917
+</code></pre></div></p>
+<hr />
+<h2 id="search">search</h2>
+<p><code>search &lt;start&gt; &lt;itemsPerResponse&gt; &lt;taggedParameters&gt;</code></p>
+<p>The <code>search</code> command returns artists, albums and tracks matching a search string.</p>
+<p>Please note that <code>start</code> and <code>itemsPerResponse</code> are calculated per category. If you eg. have genres and tracks with the search term in them, you'll get <code>itemsPerResponse</code> number of each of them. The total number of items returned therefore can be a multiple of <code>itemsPerResponse</code>.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>term</code></td>
+<td>Search string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">First block:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>count</code></td>
+<td>Total number of results returned by the query. This is the sum of <code>artists_count</code>, <code>albums_count</code> and <code>tracks_count</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>artists_count</code></td>
+<td>Total number of artists found.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>albums_count</code></td>
+<td>Total number of albums found.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>genres_count</code></td>
+<td>Total number of genres found.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>tracks_count</code></td>
+<td>Total number of tracks found.</td>
+</tr>
+<tr>
+<td colspan="3">For each artist:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>artist_id</code></td>
+<td>Artist ID.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>artist</code></td>
+<td>Artist name.</td>
+</tr>
+<tr>
+<td colspan="3">For each album:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>album_id</code></td>
+<td>Album ID.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>albu</code></td>
+<td>Album title</td>
+</tr>
+<tr>
+<td colspan="3">For each genre:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>genre_id</code></td>
+<td>Genre ID.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>genre</code></td>
+<td>Genre title.</td>
+</tr>
+<tr>
+<td colspan="3">For each track:</td>
+<td style="padding:0">&#8288;</td>
+<td style="padding:0">&#8288;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>track_id</code></td>
+<td>Track ID.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>track</code></td>
+<td>Track title.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;search 0 20 term:al&lt;LF&gt;&quot;
+Response: &quot;search 0 20 term:al count:9 artists_count:2 albums_count:1 tracks_count:6 artist_id:2 artist:Alanis%20Morissette artist_id:37 artist:Alphaville album_id:10 album:All%20Time%20Greatest%20Hits%20%5BBarry%20White%5D%20MMM track_id:11 track:All%20I%20Really%20Want track_id:68 track:The%20Sun%20Always%20Shines%20On%20TV track_id:185 track:All%20Around%20The%20World track_id:189 track:Give%20Me%20All%20Your%20Love%20%5BSingle%20Cut%5D track_id:245 track:Better%20All%20The%20Time
+</code></pre></div></p>
+<hr />
+<h2 id="pragma">pragma</h2>
+<p><code>pragma &lt;pragma string&gt;</code></p>
+<p>The <code>pragma</code> command executes the given pragma string against the SQLite database engine. If using MySQL, this command has no effect. For a list of available pragmas, see sqlite.org. Warning: Do not use this function unless you know what you are doing!</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>pragma locking_mode = NORMAL
+</code></pre></div></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="/privacy">Privacy Statement</a> | <a href="/terms">Terms of Service</a> | <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/LMS-Community/slimserver" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/r/lmscommunity/lyrionmusicserver" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://forums.lyrion.org" target="_blank" rel="noopener" title="forums.lyrion.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.09 10.316V24h21.82V0h-2.417l-5.461 19.613h-6.09l-3.134-9.246zm9.283-4.444 1.363 6.308L13.955 0H1.089v5.872Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://opencollective.com/lyrion" target="_blank" rel="noopener" title="opencollective.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c2.54 0 4.894-.79 6.834-2.135l-3.107-3.109a7.715 7.715 0 1 1 0-13.512l3.107-3.109A11.94 11.94 0 0 0 12 0m9.865 5.166-3.109 3.107A7.7 7.7 0 0 1 19.715 12a7.7 7.7 0 0 1-.959 3.727l3.109 3.107A11.94 11.94 0 0 0 24 12c0-2.54-.79-4.894-2.135-6.834"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.tabs.link", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.expand", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="../../../assets/external/cdn.jsdelivr.net/npm/vega@6.js"></script>
+      
+        <script src="../../../assets/external/cdn.jsdelivr.net/npm/vega-lite@6.js"></script>
+      
+        <script src="../../../assets/external/cdn.jsdelivr.net/npm/vega-embed@6.js"></script>
+      
+    
+  </body>
+</html>

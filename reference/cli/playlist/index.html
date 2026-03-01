@@ -1,0 +1,5745 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lyrion.org/reference/cli/playlist/">
+      
+      
+        <link rel="prev" href="../database/">
+      
+      
+        <link rel="next" href="../favorites/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>CLI - Playlists commands and queries - Lyrion Music Server</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#playlist-commands-and-queries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Lyrion Music Server" class="md-header__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lyrion Music Server
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CLI - Playlists commands and queries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Getting Started with LMS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../players-and-controllers/" class="md-tabs__link">
+          
+  
+  
+  Players & Controllers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../extensions/applications/" class="md-tabs__link">
+          
+  
+  
+  Extensions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../lyrion-music-server/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../faq/lms/" class="md-tabs__link">
+          
+  
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Lyrion Music Server" class="md-nav__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Lyrion Music Server
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started with LMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started with LMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginner's guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-full-featured-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for a full-featured LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-synology-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on Synology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-qnap-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on QNAP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-omv-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on OMV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/beginners-guide-to-classical-music-on-lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide to classical music on LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/mac-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started on macOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help Guides and FAQs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help Guides and FAQs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/new-music-help-faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New Music changes in 9.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/advanced-guide-openvpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use OpenVPN on SB Radio/Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/migrate-from-uesr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate from UE Smart Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/lms-on-readynas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS on ReadyNAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Changelog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/changelog-lms9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 9 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/changelog-lms8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 8 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players & Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Players & Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/hardware-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-touch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-radio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-boom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Boom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Duet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezebox Duet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/transporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transporter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox-classic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Classic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezebox1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/SLIMP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/software-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezelite-manpage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite manpage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/jivelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jivelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/softsqueeze/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftSqueeze
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../players-and-controllers/picoreplayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    piCorePlayer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensions/applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Available Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/reporting-a-bug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting a bug
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/dco-signoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DCO Sign-off
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/adding-translations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding translations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forums.lyrion.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community forums
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lyrion-music-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Interface (JSON/RPC)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Command Line Interface (JSON/RPC)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../players/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playlist
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playlist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        play
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pause
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying-the-song-playing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querying the Song Playing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Querying the Song Playing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current_title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        current_title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        genre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        artist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#album" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        album
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        duration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        path
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist play
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist add
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist insert
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-deleteitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist deleteitem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist delete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist preview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist resume
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist save
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-loadalbum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist loadalbum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-addalbum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist addalbum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-loadtracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist loadtracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-addtracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist addtracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-insertalbum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist insertalbum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-deletealbum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist deletealbum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist clear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-zap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist zap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist name
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist url
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist modified
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-playslistsinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist playslistsinfo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist index
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying-a-song-on-a-playlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querying a Song on a Playlist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Querying a Song on a Playlist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playlist-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist remote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist genre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-artist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist artist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-album" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist album
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist duration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist tracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-shuffle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist shuffle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-repeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist repeat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlistcontrol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlistcontrol
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../favorites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Favorites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../randomplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Randomplay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compoundqueries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compound Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alarms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alarms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-locales-to-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add locales to the Docker container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins/applets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins/applets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezeplay Applet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezeplay Applet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../squeezeplay-applet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applet Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installing-applets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing Applets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music-service-plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Music Service Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slimproto-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimProto Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slimp3-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3 Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip3k-graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classic/Boom/Transporter Graphics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_5" id="__nav_6_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay Menu System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SqueezePlay Menu System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home-vs-slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu vs. SlimBrowse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding-menus-squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimBrowse Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_6" id="__nav_6_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH/SCP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SSH/SCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enable-ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enable SSH Access to the Squeezebox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../winscp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WinSCP How To
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curtrack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    #CURTRACK Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../special-ir-keys-reset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Special IR Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slim-utils-os-custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom OS support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-the-most-out-of-metadata-in-lyrion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting the most out of metadata in Lyrion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        play
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pause
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying-the-song-playing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querying the Song Playing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Querying the Song Playing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current_title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        current_title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        genre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        artist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#album" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        album
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        duration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        path
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist play
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist add
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist insert
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-deleteitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist deleteitem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist delete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist preview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist resume
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist save
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-loadalbum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist loadalbum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-addalbum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist addalbum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-loadtracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist loadtracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-addtracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist addtracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-insertalbum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist insertalbum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-deletealbum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist deletealbum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist clear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-zap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist zap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist name
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist url
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist modified
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-playslistsinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist playslistsinfo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist index
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying-a-song-on-a-playlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querying a Song on a Playlist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Querying a Song on a Playlist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playlist-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist remote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist genre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-artist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist artist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-album" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist album
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playlist-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist duration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist tracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-shuffle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist shuffle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlist-repeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlist repeat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlistcontrol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        playlistcontrol
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../lyrion-music-server/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Reference
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../introduction/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Command Line Interface (JSON/RPC)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/lms-community/lms-community.github.io/edit/main/docs/reference/cli/playlist.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/lms-community/lms-community.github.io/raw/main/docs/reference/cli/playlist.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<p><link rel="stylesheet" href="../cli-doc.css"></p>
+<h1 id="playlist-commands-and-queries">Playlist commands and queries</h1>
+<hr />
+<h2 id="play">play</h2>
+<p><code>&lt;playerid&gt; play &lt;fadeInSecs&gt;</code></p>
+<p>The <code>play</code> command allows to start playing the current playlist. The <code>fadeInSecs</code> parameter may be passed to specify a fade-in period.</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 play&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 play&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="stop">stop</h2>
+<p><code>&lt;playerid&gt; stop</code></p>
+<p>The <code>stop</code> command allows to stop playing the current playlist.</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 stop&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 stop&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="pause">pause</h2>
+<p><code>&lt;playerid&gt; pause &lt;0|1|&gt; &lt;fadeInSecs&gt; &lt;suppressShowBriefly&gt;</code></p>
+<p>You may use <code>pause 1</code> to force the player to pause, <code>pause 0</code> to force the player to unpause and <code>pause</code> to toggle the pause state. The <code>fadeInSecs</code> parameter may be passed to specify a fade-in period when unpausing.</p>
+<p>The <code>suppressShowBriefly</code> parameter may be passed to specify <strong>not</strong> to show a pause icon on squeezeplay-based devices (as is the case with hitting 'power off' on the SBController, which pauses play but should not display an icon, see bug 13521). The popup on squeezeplay-based devices which shows the pause icon is referred  to as the <code>showBriefly</code> popup.</p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 pause&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 pause&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="mode">mode</h2>
+<p><code>&lt;playerid&gt; mode ?</code></p>
+<p>The <code>mode</code> command allows to query the player state and returns one of <code>play</code>, <code>stop</code> or <code>pause</code>.</p>
+<p>If the player is off, <code>mode ?</code> returned value is undefined.</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 mode ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 mode stop&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="time">time</h2>
+<p><code>&lt;playerid&gt; time &lt;number|-number|+number|?&gt;</code></p>
+<p>The <code>time</code> command allows you to query the current number of seconds that the current song has been playing by passing in a <code>?</code>. You may jump to a particular position in a song by specifying a number of seconds to seek to. You may also jump to a relative position within a song by putting an explicit <code>-</code> or <code>+</code> character before a number of seconds you would like to seek.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 time ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 time 12.55&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 time 5&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 time 5&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 time -5&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 time -5&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="querying-the-song-playing">Querying the Song Playing</h2>
+<p>The <code>remote</code>, <code>current_title</code>, <code>genre</code>, <code>artist</code>, <code>album</code>, <code>title</code> <code>duration</code>, and <code>path</code> commands allow for querying information about the song currently playing.</p>
+<p>See also a similar set of queries for a Song on a given playlist at <a href="#querying-a-song-on-a-playlist">Querying a Song on a Playlist</a> (tho that set of queries does not have a <code>current_title</code> query).</p>
+<h3 id="current_title">current_title</h3>
+<p><code>&lt;playerid&gt; current_title ?</code></p>
+<p><code>current_title</code> returns the current title for remote streams or the song title as formatted for the player.</p>
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 current_title ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 current_title 1-Voulez%20vous%20(ABBA)&lt;LF&gt;&quot;
+</code></pre></div>
+<h3 id="remote">remote</h3>
+<p>`<playerid> remote ?'</p>
+<p>The <code>remote</code> command allows for querying information about the song currently playing.
+Command <code>remote</code> returns <code>1</code> if the current song is a remote stream.</p>
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 remote ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 remote 0&lt;LF&gt;&quot;
+</code></pre></div>
+<h3 id="genre">genre</h3>
+<p><code>&lt;playerid&gt; genre ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 genre ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 genre Rock&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="artist">artist</h3>
+<p><code>&lt;playerid&gt; artist ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 artist ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 artist Abba&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="album">album</h3>
+<p><code>&lt;playerid&gt; album ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 album ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 album Greatest%20Hits&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="title">title</h3>
+<p><code>&lt;playerid&gt; title ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 title ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 title Voulez%20vous&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="duration">duration</h3>
+<p><code>&lt;playerid&gt; duration ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 duration ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 duration 103.2&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="path">path</h3>
+<p><code>&lt;playerid&gt; path ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 path ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 path pathtofile&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-play">playlist play</h2>
+<p><code>&lt;playerid&gt; playlist play &lt;item&gt; &lt;title&gt; &lt;fadeInSecs&gt;</code></p>
+<p>The <code>playlist play</code> command puts the specified song URL, playlist or directory contents into the current playlist and plays starting at the first item. Any songs previously in the playlist are discarded. An optional title value may be passed to set a title. This can be useful for remote URLs. The <code>fadeInSecs</code> parameter may be passed to specify a fade-in period.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist play /music/abba/01_Voulez_Vous.mp3&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist play /music/abba/01_Voulez_Vous.mp3&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist play http://someserver/02_Sledgehammer.flac Peter%20Gabriel%20-%20Sledgehammer&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist play http://someserver/02_Sledgehammer.flac Peter%20Gabriel%20-%20Sledgehammer&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-add">playlist add</h2>
+<p><code>&lt;playerid&gt; playlist add &lt;item&gt; &lt;title&gt;</code></p>
+<p>The <code>playlist add</code> command adds the specified song URL, playlist or directory contents to the end of the current playlist. Songs currently playing or already on the playlist are not affected. An optional title value may be passed to set a title. This can be useful for remote URLs.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist add /music/abba/01_Voulez_Vous.mp3&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist add /music/abba/01_Voulez_Vous.mp3&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist add /playlists/abba.m3u&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist add /playlists/abba.m3u&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-insert">playlist insert</h2>
+<p><code>&lt;playerid&gt; playlist insert &lt;item&gt; &lt;title&gt;</code></p>
+<p>The <code>playlist insert</code> command inserts the specified song URL, playlist or directory contents to be played immediately after the current song in the current playlist. Any songs currently playing or already on the playlist are not affected. An optional title value may be passed to set a title. This can be useful for remote URLs.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist insert /music/abba/01_Voulez_Vous.mp3&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist insert /music/abba/01_Voulez_Vous.mp3&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist insert /playlists/abba.m3u&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist insert /playlists/abba.m3u&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-deleteitem">playlist deleteitem</h2>
+<p><code>&lt;playerid&gt; playlist deleteitem &lt;item&gt;</code></p>
+<p>The <code>playlist deleteitem</code> command removes the specified song URL, playlist or directory contents from the current playlist.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist deleteitem /music/abba/01_Voulez_Vous.mp3&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist deleteitem /music/abba/01_Voulez_Vous.mp3&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-move">playlist move</h2>
+<p><code>&lt;playerid&gt; playlist move &lt;fromindex&gt; &lt;toindex&gt;</code></p>
+<p>The <code>playlist move</code> command moves the song at the specified index to a new index in the playlist. An offset of zero is the first song in the playlist.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist move 0 5&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist move 0 5&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-delete">playlist delete</h2>
+<p><code>&lt;playerid&gt; playlist delete &lt;songindex&gt;</code></p>
+<p>The <code>playlist delete</code> command deletes the song at the specified index from the current playlist.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist delete 5&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist delete 5&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-preview">playlist preview</h2>
+<p><code>&lt;playerid&gt; playlist preview &lt;taggedParameters&gt;</code></p>
+<p>When called <strong>without</strong> a cmd param of <code>stop</code>, replace the current playlist with the playlist specified by url, but save the current playlist to tempplaylist_<playerid>.m3u for later retrieval.</p>
+<p>When called <strong>with</strong> the cmd param of <code>stop</code>, stops the currently playing playlist and loads (if possible) the previous playlist. Restored playlist jumps to beginning of CURTRACK when present in m3u file, and does not autoplay restored playlist.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist preview url:db:album.titlesearch=A%20FEAST%20OF%20WIRE title:A%20Feast%20Of%20Wire&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist preview url:db:album.titlesearch=A%20FEAST%20OF%20WIRE title:A%20Feast%20Of%20Wire&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist preview cmd:stop&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist preview cmd:stop&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-resume">playlist resume</h2>
+<p><code>&lt;playerid&gt; playlist resume &lt;playlist&gt; &lt;taggedParameters&gt;</code></p>
+<p>Replace the current playlist with the playlist specified by <code>&lt;playlist&gt;</code> (p2), starting at the song that was playing when the file was saved. (Resuming works only with M3U files saved with the <code>playlist save</code> command below.)</p>
+<p>Shortcut: use a bare playlist name (without leading directories or trailing .m3u suffix) to load a playlist in the saved playlists folder.</p>
+<p><strong>Optional tagged parameters:</strong> <code>noplay</code> which when non-zero will not auto-start the track, and <code>wipePlaylist</code>, which will destroy the saved playlist from both the filesystem and from the DB (these tagged params are typically used for resuming a temporarily cached playlist, e.g. after exiting alarm sound preview on squeezeplay devices).</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist resume abba&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist resume abba&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-save">playlist save</h2>
+<p><code>&lt;playerid&gt; playlist save &lt;filename&gt; &lt;taggedParameters&gt;</code></p>
+<p>Saves a playlist file in the saved playlists directory. Accepts a playlist filename (without .m3u suffix) and saves in the top level of the playlists directory.</p>
+<p><strong>Optional tagged parameter:</strong>
+ <code>silent</code> When non-zero, suppresses any <code>showBriefly</code> displayed.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist save abba&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist save abba&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-loadalbum">playlist loadalbum</h2>
+<p><code>&lt;playerid&gt; playlist loadalbum &lt;genre&gt; &lt;artist&gt; &lt;album&gt;</code></p>
+<p>The <code>playlist loadalbum</code> command puts songs matching the specified genre artist and album criteria on the playlist. Songs previously in the playlist are discarded.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist loadalbum Rock Abba *&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist loadalbum Rock Abba *&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-addalbum">playlist addalbum</h2>
+<p><code>&lt;playerid&gt; playlist addalbum &lt;genre&gt; &lt;artist&gt; &lt;album&gt;</code></p>
+<p>The <code>playlist addalbum</code> command appends all songs matching the specified criteria onto the end of the playlist. Songs currently playing or already on the playlist are not affected.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist addalbum Rock Abba *&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist addalbum Rock Abba *&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-loadtracks">playlist loadtracks</h2>
+<p><code>&lt;playerid&gt; playlist loadtracks &lt;searchparam&gt;</code></p>
+<p>The <code>playlist loadtracks</code> command puts tracks matching the specified query on the playlist. Songs previously in the playlist are discarded. Note: you must provide a particular form to the searchparam (see examples)</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist loadtracks track.titlesearch=purple &lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist loadtracks track.titleseach=purple &lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist loadtracks album.titlesearch=3121 &lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist loadtracks album.titlesearch=3121 &lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist loadtracks contributor.namesearch=prince &lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist loadtracks contributor.namesearch=prince &lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-addtracks">playlist addtracks</h2>
+<p><code>&lt;playerid&gt; playlist addtracks &lt;searchparam&gt;</code></p>
+<p>The <code>playlist addtracks</code> command appends all songs matching the specified criteria onto the end of the playlist. Songs currently playing or already on the playlist are not affected.</p>
+<p>Note: you must provide a particular form to the searchparam (see examples)</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist addtracks track.titlesearch=purple &lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist addtracks track.titleseach=purple &lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist addtracks album.titlesearch=3121 &lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist addtracks album.titlesearch=3121 &lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist addtracks contributor.namesearch=prince &lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist addtracks contributor.namesearch=prince &lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-insertalbum">playlist insertalbum</h2>
+<p><code>&lt;playerid&gt; playlist insertalbum &lt;genre&gt; &lt;artist&gt; &lt;album&gt;</code></p>
+<p>The <code>playlist insertalbum</code> command inserts all songs matching the specified criteria at the top of the playlist. Songs already on the playlist are not affected.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist addalbum Rock Abba *&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist addalbum Rock Abba *&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-deletealbum">playlist deletealbum</h2>
+<p><code>&lt;playerid&gt; playlist deletealbum &lt;genre&gt; &lt;artist&gt; &lt;album&gt;</code></p>
+<p>The <code>playlist deletealbum</code> command removes songs matching the specified genre artist and album criteria from the playlist.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist deletealbum Rock Abba *&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist deletealbum Rock Abba *&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-clear">playlist clear</h2>
+<p><code>&lt;playerid&gt; playlist clear</code></p>
+<p>The <code>playlist clear</code> command removes any song that is on the playlist. The player is stopped.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist clear&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist clear&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-zap">playlist zap</h2>
+<p><code>&lt;playerid&gt; playlist zap &lt;songindex&gt;</code></p>
+<p>The <code>playlist zap</code> command adds the song at index songindex into the zapped song playlist.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist zap 3&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist zap 3&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-name">playlist name</h2>
+<p><code>&lt;playerid&gt; playlist name ?</code></p>
+<p>The <code>playlist name</code> command returns the name of the saved playlist last loaded into the Now Playing playlist, if any.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist name ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist name Jazz%20Favorites &lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-url">playlist url</h2>
+<p><code>&lt;playerid&gt; playlist url ?</code></p>
+<p>The <code>playlist url</code> command returns the URL of the saved playlist last loaded into the Now Playing playlist, if any.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist url ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist url file:///Users/dean/Music/testmusic/Zapped%20Songs.m3u&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-modified">playlist modified</h2>
+<p><code>&lt;playerid&gt; playlist modified ?</code></p>
+<p>The <code>playlist modified</code> returns the modification state of the saved playlist last loaded into the Now Playing playlist, if any. If <code>1</code>, the playlist has been modified since it was loaded.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist modified ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist modified 0&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-playslistsinfo">playlist playslistsinfo</h2>
+<p><code>&lt;playerid&gt; playlist playlistsinfo &lt;taggedParameters&gt;</code></p>
+<p>The <code>playlist playlistsinfo</code> query returns information on the saved playlist last loaded into the Now Playing playlist, if any.</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Playlist id.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Playlist name. Equivalent to <code>playlist name ?</code>.</td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Modification state of the saved playlist. Equivalent to <code>playlist modified ?</code>.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Playlist url. Equivalent to <code>playlist url ?</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Playlist id.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Playlist name. Equivalent to <code>playlist name ?</code>.</td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td>Modification state of the saved playlist. Equivalent to <code>playlist modified ?</code>.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Playlist url. Equivalent to <code>playlist url ?</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;a5:41:d2:cd:cd:05 playlist playlistsinfo &lt;LF&gt;&quot;
+Response: &quot;a5:41:d2:cd:cd:05 playlist playlistsinfo id:267 name:A98 modified:0 url:file://Volumes/... &lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-index">playlist index</h2>
+<p><code>&lt;playerid&gt; playlist index &lt;index|+index|-index|?&gt; &lt;fadeInSecs&gt;</code></p>
+<p>The <code>playlist index</code> command sets or queries the song that is currently playing by index. When setting, a zero-based value may be used to indicate which song to play.</p>
+<p>An explicitly positive or negative number may be used to jump to a song relative to the currently playing song. The index can only be set if the playlist is not empty.</p>
+<p>If an index parameter is set then <code>fadeInSecs</code> may be passed to specify a fade-in period. The value of the current song index may be obtained by passing in <code>?</code> as a parameter.</p>
+<p>Examples:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist index +1&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist index +1&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist index 5&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist index 5&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist index ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist index 5&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="querying-a-song-on-a-playlist">Querying a Song on a Playlist</h2>
+<p>The <code>playlist genre</code>, <code>playlist artist</code>, <code>playlist album</code>, <code>playlist title</code>, <code>playlist path</code>, <code>playlist remote</code> and <code>playlist duration</code> queries return the requested information for a given song at an index position in the current playlist.</p>
+<p>See also the commands under <a href="#querying-the-song-playing">Querying the Song Playing</a> which provided similar information for the song currently playing (plus an additional query, <code>current_title</code>)</p>
+<h3 id="playlist-remote">playlist remote</h3>
+<p><playerid> playlist remote <index> ?
+<code>playlist remote</code> returns 1 if the <code>song</code> is a remote stream.</p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist remote 3 ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist remote 3 0&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="playlist-genre">playlist genre</h3>
+<p><code>&lt;playerid&gt; playlist genre &lt;index&gt; ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist genre 3 ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist genre 3 Rock&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="playlist-artist">playlist artist</h3>
+<p><code>&lt;playerid&gt; playlist artist &lt;index&gt; ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist artist 3 ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist artist 3 Abba&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="playlist-album">playlist album</h3>
+<p><code>&lt;playerid&gt; playlist album &lt;index&gt; ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist album 3 ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist album 3 Greatest Hits&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="playlist-title">playlist title</h3>
+<p><code>&lt;playerid&gt; playlist title &lt;index&gt; ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist title 3 ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist title 3 Voulez Vous&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="playlist-path">playlist path</h3>
+<p><code>&lt;playerid&gt; playlist path &lt;index&gt; ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist path 3 ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist path 3 file:///Volumes/Music/ABBA/...&lt;LF&gt;&quot;
+</code></pre></div></p>
+<h3 id="playlist-duration">playlist duration</h3>
+<p><code>&lt;playerid&gt; playlist duration &lt;index&gt; ?</code></p>
+<p>Example
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist duration 3 ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist duration 3 103.2&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-tracks">playlist tracks</h2>
+<p><code>&lt;playerid&gt; playlist tracks ?1</code></p>
+<p>The <code>playlist tracks</code> command returns the the total number of tracks in the current playlist</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist tracks ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist tracks 7&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-shuffle">playlist shuffle</h2>
+<p><code>&lt;playerid&gt; playlist shuffle &lt;0|1|2|?|&gt;</code></p>
+<p>The <code>playlist shuffle</code> command is used to shuffle, unshuffle or query the shuffle state for the current playlist.</p>
+<p>Meaning of the <code>shuffle</code> parameters:-</p>
+<ul>
+<li><code>0</code> indicates that the playlist is not shuffled,</li>
+<li><code>1</code> indicates that the playlist is shuffled by song,</li>
+<li><code>2</code> indicates that the playlist is shuffled by album.</li>
+<li>Used with no parameter, the command toggles the shuffling state.</li>
+</ul>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist shuffle ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist shuffle 1&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist shuffle 0&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist shuffle 0&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlist-repeat">playlist repeat</h2>
+<p><code>&lt;playerid&gt; playlist repeat &lt;0|1|2|?|&gt;</code></p>
+<p>The <code>playlist repeat</code> command is used to indicate or query if the player will stop playing at the end of the playlist, repeat the current song indefinitely, or repeat the current playlist indefinitely.</p>
+<p>Meaning of the <code>repeat</code> parameters</p>
+<ul>
+<li><code>0</code> indicates that the player will stop at the end of the playlist,</li>
+<li><code>1</code> indicates that the player will repeat the current song indefinitely</li>
+<li><code>2</code> indicates that the player will repeat the entire playlist indefinitely.</li>
+<li>Used with no parameter, the command toggles the repeat state.</li>
+</ul>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;04:20:00:12:23:45 playlist repeat ?&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist repeat 2&lt;LF&gt;&quot;
+
+Request: &quot;04:20:00:12:23:45 playlist repeat 0&lt;LF&gt;&quot;
+Response: &quot;04:20:00:12:23:45 playlist repeat 0&lt;LF&gt;&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="playlistcontrol">playlistcontrol</h2>
+<p><code>&lt;playerid&gt; playlistcontrol &lt;taggedParameters&gt;</code></p>
+<p>The<code>playlistcontrol</code> command enables playlist operations using IDs as returned by extended CLI queries (titles, artists, playlists, etc).</p>
+<p><strong>Accepted tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cmd</code></td>
+<td>Command to perform on the playlist, one of <code>load</code>, <code>add</code>, <code>insert</code> or <code>delete</code>. This parameter is mandatory. If no additional parameter is provided, the entire DB is loaded/added/inserted/deleted.</td>
+</tr>
+<tr>
+<td><code>genre_id</code></td>
+<td>Genre ID, to restrict the results to the titles of that genre.</td>
+</tr>
+<tr>
+<td><code>artist_id</code></td>
+<td>Artist ID, to restrict the results to the titles of that artist.</td>
+</tr>
+<tr>
+<td><code>album_id</code></td>
+<td>Album ID, to restrict the results to the titles of that album.</td>
+</tr>
+<tr>
+<td><code>track_id</code></td>
+<td>Comma-separated list of track IDs, to restrict the results to these track_ids. If this parameter is provided, then any <code>genre_id</code>, <code>artist_id</code> and/or <code>album_id</code> parameter is ignored. The tracks are added to the playlist in the given order.</td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>Year, to restrict the results to the given year. <em>The form <code>year_id</code> is accepted for backwards compatibility but is deprecated.</em></td>
+</tr>
+<tr>
+<td><code>playlist_id</code></td>
+<td>Playlist ID, to restrict the results to this playlist_id. If this parameter is provided, then any <code>genre_id</code>, <code>artist_id</code>, <code>album_id</code> and/or <code>track_id</code> parameter is ignored.</td>
+</tr>
+<tr>
+<td><code>folder_id</code></td>
+<td>Folder ID, to restrict the results to files in this folder_id. If this parameter is provided, then all the others are ignored. <em>Note that <code>cmd:delete</code> is not supported for folders.</em></td>
+</tr>
+<tr>
+<td><code>playlist_name</code></td>
+<td>Playlist name, to restrict the results to this playlist_name. If this parameter is provided, then any <code>genre_id</code>, <code>artist_id</code>, <code>album_id</code>, <code>track_id</code> and/or <code>playlist_id</code> parameter is ignored.</td>
+</tr>
+<tr>
+<td><code>play_index</code></td>
+<td>If this parameter is provided along with <code>cmd:load</code> then playback will start with the indicated track.</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>Album sort order. One of<br><code>album</code>, (the default), <br><code>new</code> (sort by change date in descending order), <br><code>artflow</code> which sorts by artist, year, album for use with artwork-centric interfaces, <br><code>artistalbum</code>, <br><code>yearalbum</code>, <br><code>yearartistalbum</code>, <br><code>random</code><br>Only of relevance if <code>genre_id</code>, <code>artist_id</code>, <code>year</code> or <code>year_id</code> is supplied.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned tagged parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rescan</code></td>
+<td>Returned with value 1 if the server is still scanning the database. The command may therefore have missed items. Not returned if no scan is in progress.</td>
+</tr>
+<tr>
+<td><code>count</code></td>
+<td>Number of elements loaded/added/inserted or max number of elements deleted. For folders, only 1 is returned.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<div class="highlight"><pre><span></span><code>Request: &quot;a5:41:d2:cd:cd:05 playlistcontrol cmd:add genre_id:9&lt;LF&gt;&quot;
+Response: &quot;a5:41:d2:cd:cd:05 playlistcontrol cmd:add genre_id:9 count:33&lt;LF&gt;&quot;
+
+Request: &quot;a5:41:d2:cd:cd:05 playlistcontrol cmd:load album_id:22&lt;LF&gt;&quot;
+Response: &quot;a5:41:d2:cd:cd:05 playlistcontrol cmd:load album_id:22 count:12&lt;LF&gt;&quot;
+</code></pre></div></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="/privacy">Privacy Statement</a> | <a href="/terms">Terms of Service</a> | <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/LMS-Community/slimserver" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/r/lmscommunity/lyrionmusicserver" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://forums.lyrion.org" target="_blank" rel="noopener" title="forums.lyrion.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.09 10.316V24h21.82V0h-2.417l-5.461 19.613h-6.09l-3.134-9.246zm9.283-4.444 1.363 6.308L13.955 0H1.089v5.872Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://opencollective.com/lyrion" target="_blank" rel="noopener" title="opencollective.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c2.54 0 4.894-.79 6.834-2.135l-3.107-3.109a7.715 7.715 0 1 1 0-13.512l3.107-3.109A11.94 11.94 0 0 0 12 0m9.865 5.166-3.109 3.107A7.7 7.7 0 0 1 19.715 12a7.7 7.7 0 0 1-.959 3.727l3.109 3.107A11.94 11.94 0 0 0 24 12c0-2.54-.79-4.894-2.135-6.834"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.tabs.link", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.expand", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="../../../assets/external/cdn.jsdelivr.net/npm/vega@6.js"></script>
+      
+        <script src="../../../assets/external/cdn.jsdelivr.net/npm/vega-lite@6.js"></script>
+      
+        <script src="../../../assets/external/cdn.jsdelivr.net/npm/vega-embed@6.js"></script>
+      
+    
+  </body>
+</html>

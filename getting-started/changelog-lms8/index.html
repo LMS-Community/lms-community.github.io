@@ -1,0 +1,5047 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lyrion.org/getting-started/changelog-lms8/">
+      
+      
+        <link rel="prev" href="../changelog-lms9/">
+      
+      
+        <link rel="next" href="../../players-and-controllers/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>LMS 8 changelog - Lyrion Music Server</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#version-853" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lyrion Music Server" class="md-header__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lyrion Music Server
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LMS 8 changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Getting Started with LMS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../players-and-controllers/" class="md-tabs__link">
+          
+  
+  
+  Players & Controllers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../extensions/applications/" class="md-tabs__link">
+          
+  
+  
+  Extensions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/lyrion-music-server/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../faq/lms/" class="md-tabs__link">
+          
+  
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lyrion Music Server" class="md-nav__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Lyrion Music Server
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started with LMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started with LMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginner's guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beginners-guide-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beginners-guide-full-featured-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for a full-featured LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beginners-guide-synology-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on Synology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beginners-guide-qnap-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on QNAP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beginners-guide-omv-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on OMV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beginners-guide-to-classical-music-on-lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide to classical music on LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mac-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started on macOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help Guides and FAQs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help Guides and FAQs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../new-music-help-faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New Music changes in 9.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-guide-openvpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use OpenVPN on SB Radio/Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrate-from-uesr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate from UE Smart Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lms-on-readynas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS on ReadyNAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Changelog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog-lms9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 9 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 8 changelog
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 8 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-853" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-852-2024-05-26-88ba56f2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5.2 - 2024-05-26 (88ba56f2c)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-851-2024-04-15-3b46196aa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5.1 - 2024-04-15 (3b46196aa)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-850-2024-03-14-8762186a4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5.0 - 2024-03-14 (8762186a4)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-841" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.4.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-840-2024-02-08-e225575dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.4.0 - 2024-02-08 (e225575dc)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-832" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.3.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-831-2023-02-17-026019bb7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.3.1 - 2023-02-17 (026019bb7)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-830-2022-11-04-4e15dbdff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.3.0 - 2022-11-04 (4e15dbdff)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-821" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.2.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-820-2021-08-03-1ec16032b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.2.0 - 2021-08-03 (1ec16032b)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-812" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.1.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-811-2021-01-14-dd356a423" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.1.1 - 2021-01-14 (dd356a423)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-810-2020-12-23-effae8494" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.1.0 - 2020-12-23 (effae8494)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-801" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.0.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-800-2020-11-20-e0eee9c29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.0.0 - 2020-11-20 (e0eee9c29)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players & Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Players & Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/hardware-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-touch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-radio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-boom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Boom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Duet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezebox Duet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/transporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transporter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-classic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Classic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/SLIMP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/software-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezelite-manpage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite manpage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/jivelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jivelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/softsqueeze/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftSqueeze
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/picoreplayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    piCorePlayer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Available Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/reporting-a-bug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting a bug
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/dco-signoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DCO Sign-off
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/adding-translations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding translations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forums.lyrion.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community forums
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/lyrion-music-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Interface (JSON/RPC)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Command Line Interface (JSON/RPC)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/using-the-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/players/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playlist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/favorites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Favorites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/randomplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Randomplay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/compoundqueries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compound Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/alarms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alarms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/add-locales-to-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add locales to the Docker container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins/applets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins/applets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezeplay Applet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezeplay Applet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/squeezeplay-applet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applet Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/installing-applets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing Applets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/music-service-plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Music Service Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/database-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/slimproto-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimProto Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/slimp3-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3 Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ip3k-graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classic/Boom/Transporter Graphics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_5" id="__nav_6_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay Menu System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SqueezePlay Menu System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/home-vs-slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu vs. SlimBrowse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/adding-menus-squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimBrowse Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_6" id="__nav_6_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH/SCP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SSH/SCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/enable-ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enable SSH Access to the Squeezebox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/winscp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WinSCP How To
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/curtrack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    #CURTRACK Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/special-ir-keys-reset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Special IR Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/custom-firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/slim-utils-os-custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom OS support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/getting-the-most-out-of-metadata-in-lyrion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting the most out of metadata in Lyrion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-853" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-852-2024-05-26-88ba56f2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5.2 - 2024-05-26 (88ba56f2c)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-851-2024-04-15-3b46196aa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5.1 - 2024-04-15 (3b46196aa)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-850-2024-03-14-8762186a4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5.0 - 2024-03-14 (8762186a4)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-841" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.4.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-840-2024-02-08-e225575dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.4.0 - 2024-02-08 (e225575dc)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-832" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.3.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-831-2023-02-17-026019bb7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.3.1 - 2023-02-17 (026019bb7)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-830-2022-11-04-4e15dbdff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.3.0 - 2022-11-04 (4e15dbdff)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-821" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.2.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-820-2021-08-03-1ec16032b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.2.0 - 2021-08-03 (1ec16032b)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-812" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.1.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-811-2021-01-14-dd356a423" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.1.1 - 2021-01-14 (dd356a423)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-810-2020-12-23-effae8494" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.1.0 - 2020-12-23 (effae8494)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-801" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.0.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-800-2020-11-20-e0eee9c29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.0.0 - 2020-11-20 (e0eee9c29)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Getting Started with LMS
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../changelog-lms9/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/lms-community/lms-community.github.io/edit/main/docs/getting-started/changelog-lms8.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/lms-community/lms-community.github.io/raw/main/docs/getting-started/changelog-lms8.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+  <h1>LMS 8 changelog</h1>
+
+<h2 id="version-853">Version 8.5.3</h2>
+<ul>
+<li>
+<p>New Features:</p>
+</li>
+<li>
+<p>Server Changes:</p>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li>Add Windows Start menu item to run LMS interactively when not using as a background service (64-bit version).</li>
+<li>On Debian based systems we need to add `squeezeboxuser` to `audio` group or plugins like LocalPlayer to work.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li>Sometimes setting a music or playlist folder might lead the server into an infinite recursion.</li>
+<li>Fix running the scanner from outside LMS on Windows 64-bit.</li>
+<li><a href="https://forums.lyrion.org/forum/developer-forums/beta/1685846-9-0-0-development-build?p=1715083#post1715083">Drag'n'drop a track on the playlist pane sometimes wouldn't work</a> under certain circumstances.</li>
+<li><a href="https://forums.lyrion.org/forum/user-forums/ripping-encoding-transcoding-tagging/1715462">Fix CUE sheets scanning</a> which would result in seemingly random album order when ALBUMSORT was defined at the album level only.</li>
+<li><a href="https://forums.lyrion.org/forum/user-forums/general-discussion/1715826">Fix issue loading the plugins page</a> after an invalid URL got added.</li>
+<li><a href="https://forums.lyrion.org/forum/user-forums/logitech-media-server/1714557">Fix "serverstatus" subscriptions</a> for prefs changes.</li>
+</ul>
+</li>
+<li>
+<p>Other:</p>
+</li>
+</ul>
+<h2 id="version-852-2024-05-26-88ba56f2c">Version 8.5.2 - 2024-05-26 (88ba56f2c)</h2>
+<ul>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li>Fall back to "latest" firmware folder if no server version specific files can be found.</li>
+<li>Improve Analytics reporting to cover more player types.</li>
+</ul>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li>Improve macOS architecture detection</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/Logitech/slimserver/pull/1056">#1056</a> - Fix playback of certain mp4 files (thanks philippe44!)</li>
+<li><a href="https://github.com/Logitech/slimserver/pull/1047">#1047</a> - Fix sort collation when requesting artists</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/1083">#1083</a> - Fixes for playlist add via Release Type groups (thanks darrel-k!)</li>
+<li>Fix /music/current/cover artwork handler for certain cases where resizing would fail (eg. <a href="https://forums.lyrion.org/forum/developer-forums/developers/1699734">Podcasts</a>)</li>
+<li><a href="https://forums.lyrion.org/forum/user-forums/3rd-party-software/106269-announce-material-skin/page652#post1707487">Fix RandomPlay</a> when overriding a selected library view with "all music" (see when using Material skin)</li>
+<li>Use ORIGINALYEAR, ORIGINALDATE, or DATE to parse the year from Ogg files.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-851-2024-04-15-3b46196aa">Version 8.5.1 - 2024-04-15 (3b46196aa)</h2>
+<ul>
+<li>
+<p>New Features:</p>
+<ul>
+<li>Add plugin to report data about your LMS installation - see <a href="https://forums.lyrion.org/forum/user-forums/general-discussion/1697108">forum discussion</a>.</li>
+</ul>
+</li>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li>Add links to the settings of the AudioAddict based services.</li>
+<li>Add support for "DELETE" HTTP verb to SimpleAsyncHTTP.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li>Fix definition of track-level favorites' artwork.</li>
+<li>Correctly prefix settings links from Plugins page with the web root.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/1020">#1020</a> - Add icon to favorites in Default web UI et al. (thanks philippe44 &amp;&amp; darrell-k)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/1029">#1029</a> - Fix incorrect HTTP skipping (thanks philippe44 &amp;&amp; bpa!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/1045">#1045</a> - "shufflemode" is missing from "alarms" query (thanks @CDrummond!)</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-850-2024-03-14-8762186a4">Version 8.5.0 - 2024-03-14 (8762186a4)</h2>
+<ul>
+<li>
+<p><a href="#version-841">Upstream fixes from Logitech Media Server 8.4.x</a></p>
+</li>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li>Remove all dependency on MySqueezebox.com.</li>
+<li>Remove warning about "incompatible" Radio firmware version 7.*.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/1003">#1003</a> - Add alarm information to player "status" query.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/998">#998</a> - Fix Sounds &amp; Effects playback when password protection is enabled.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/1007">#1007</a> - Fix track favorite links in album listings (thanks darrell-k!).</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-841">Version 8.4.1</h2>
+<ul>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li>Improve Release Type readout in Ogg and WMA files.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li>Don't fail http caching due to extended characters in the URL.</li>
+<li>Playing all items from a genre might fail under certain circumstances.</li>
+<li>Use valid sorting arguments if sort order "albums" is requested when queuing up items.</li>
+<li>Fix Last.fm scrobbling issue with some streaming service tracks.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-840-2024-02-08-e225575dc">Version 8.4.0 - 2024-02-08 (e225575dc)</h2>
+<ul>
+<li>
+<p><a href="#version-832">Upstream fixes from Logitech Media Server 8.3.x</a></p>
+</li>
+<li>
+<p>New Features:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/879">#879</a> - Add support for Release Types (see eg. on <a href="https://musicbrainz.org/doc/Release_Group/Type">MusicBrainz</a>).</li>
+<li>New "Advanced Tag View" plugin allows you to show more information in the Track Info menu, without the need to drill down to "View Tags"</li>
+<li>Allow editing of a favourite's icon.</li>
+<li>Add plugins for ClassicalRadio.com, DI.fm, JazzRadio.com, RadioTunes.com, RockRadio.com, ZenRadio.com.</li>
+<li>Add an optional artist albums view which groups albums by release type and contribution. (thanks darrell-k!)</li>
+<li>Add an option to import playlists from online music services.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/987">#987</a> - Add OggFlac support (thanks philippe44!)</li>
+</ul>
+</li>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li>Improve integration of the external image resizing helper daemon.</li>
+<li>Improve built-in imageproxy: don't proxy image if original size is requested, re-direct instead; add support for custom headers when using external image proxy.</li>
+<li>Updated Dutch translation - thanks blackfiction!</li>
+<li>Updated French translation - thanks thanks Frank-Berry &amp; philippe317!</li>
+<li>Improve rendering of links in the web UI menus (comments, file download, etc.)</li>
+<li>Sort tracks in "title" sort order by artist and album, too, if they're part of the result set.</li>
+<li>Add option to check for updates every hour.</li>
+<li>Optionally don't remove online duplicates from library views.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/846">#846</a> - Improve display of multiline lyrics and comments in the web UI (thanks mw9!)</li>
+<li>Move persist.db out of the cache folder - it's music data which can't be restored from the music files.</li>
+<li>Log warning if the server's time seems to be off (only if MySqueezebox integration is enabled).</li>
+<li>Re-implement Sounds &amp; Effects plugin to not depend on MySqueezebox for the navigation and content selection.</li>
+<li>Report actual replay gain value for the currently playing track in "status" query.</li>
+<li>Add "Q" tag to songinfo, status queries etc. to return lossless flag for tracks (thanks AF-1!).</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/862">#862</a> - Make lyrics on Default skin songinfo page collapsible (thanks AF-1!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/868">#868</a> - Populate the release year ('year') attribute for remote tracks in the player queue (thanks SamInPgh!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/956">#956</a> - Add raw AAC (ADTS) file support (thanks philippe44!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/964">#964</a>/ <a href="https://github.com/LMS-Community/slimserver/pull/985">#985</a> - Handle case where user moves/adds/removes tracks in a playlist while the next track is already fully streamed (thanks philippe44!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/986">#986</a> - Add a 'V' query that will return the maximum seek point in seconds within the current track duration for a 'live' radio stream (thanks expectingtofly &amp; philippe44!)</li>
+<li>Fix Napster playback on community firmware players</li>
+</ul>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li>Tweak Apple OS Architecture discovery: use the "arm64" string rather than the CPU's name (eg. "Apple M1")</li>
+<li>Add Perl 5.38 support for Linux x86_64.</li>
+<li>Add <strong>experimental</strong> support for Windows 64-bit - requires installation of <a href="https://strawberryperl.com/releases.html">Strawberry Perl 5.32</a>!</li>
+<li>Update Windows installer to use latest InnoSetup 6 - dropping support for Windows XP, 2003 Server, and Windows Home Server.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/212">#212</a> - Unicode sorting for Browse Music Folder broken (thanks kimmot!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/622">#622</a> - __requestRE should only match words provided to Slim::Control::Request::subscribe. (thanks earlchew!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/799">#799</a> - Update IO::String to latest, fixing some odd Perl version check.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/829">#829</a> - Don't override a content type set by a page handler.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/905">#905</a> - Browsing in to playlists is extremely slow.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/911">#911</a> - Don't shut down the server on "restartserver" when we actually can't restart it.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/939">#939</a> - Player can't be switched from MySqueezebox.com to LMS</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/962">#962</a> - Fix album_contributor updates in New &amp; Changed scan (thanks darrell!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/979">#979</a> - New and changed contributor scanning improvements (thanks darrell!)</li>
+<li><a href="https://forums.lyrion.org/forum/user-forums/logitech-media-server/1648813">Respect a contributor's Musicbrainz ID to separate artists of the same name.</a></li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/969">#969</a> - Add utf-8 guess decoding on Ogg metadata - thanks philippe44!</li>
+<li>Try harder to avoid duplicate (but empty) album entries on singles.</li>
+<li>Clear the Various Artists ID when a scan has finished.</li>
+<li>Don't remove online libraries from library views unless there really is a local copy of the same album.</li>
+<li>Fix Deezer SmartRadio track duration calculation.</li>
+<li>Allow pausing Deezer Flow.</li>
+<li>Fix resizing with a defined background color.</li>
+</ul>
+</li>
+<li>
+<p>Other:</p>
+<ul>
+<li>Simplify plugin and server update repository handling.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-832">Version 8.3.2</h2>
+<ul>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/891">#891</a> - Add Perl 5.36 support for Linux aarch64, armv7.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/874">#874</a> - Fix shuffling when starting off with an empty playlist (thanks robho!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/918">#918</a> - Fix browsing down to album favorites etc.</li>
+<li>Add CPAN/auto/5.14 to lib search path for Windows builds to include Font::FreeType.</li>
+<li>Fix another absolute path to a stylesheet in the Default skin.</li>
+<li>Fix an issue where registering a pre-cache resolution would cause a subsequent LMS start to fail.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-831-2023-02-17-026019bb7">Version 8.3.1 - 2023-02-17 (026019bb7)</h2>
+<ul>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li>Make log viewer template (log.html) skinnable by including skin.css.</li>
+</ul>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li>Update Audio::Scan to 1.06 for certain platforms (thanks ralphy, robho, slartibartfast!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/826">#826</a> - Add Perl 5.36 support for Linux x86_64.</li>
+<li>Add Perl 5.34 support for Linux aarch64.</li>
+<li>Add signed version of our custom Perl build for macOS.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/827">#827</a> - Fix installation of plugin updates - honour user's choice (thanks mw9!)</li>
+<li>Don't use our custom Perl build on macOS 10.x - these versions come with a still working Perl 5.18.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/834">#834</a> - Fix no-transcoding playback of m4a audio (thanks philippe44!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/835">#835</a> - Improve Alarm reliability - prevent accidental/random alarm stops.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/843">#843</a> - HTTPSocks.pm - Binary OR used by mistake - Logical OR needed (thanks mw9!).</li>
+<li>Remove support for "deflate" encoding type in SimpleHTTP requests: it must have been broken for over a decade!</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/852">#852</a> - No result return while using Chinese Keyword in Fulltext Search.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/857">#857</a> - Fix changing MySB credentials using the "setsncredentials" command.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-830-2022-11-04-4e15dbdff">Version 8.3.0 - 2022-11-04 (4e15dbdff)</h2>
+<ul>
+<li>
+<p><a href="#version-821">Upstream fixes from Logitech Media Server 8.2.x</a></p>
+</li>
+<li>
+<p>New Features:</p>
+<ul>
+<li>Add support for macOS 13 Ventura</li>
+</ul>
+</li>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li>Remove support for media types other than audio (video, pictures). Let's make "M" music again.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/651">#651</a> - Updated French translation - thanks Frank-Berry!</li>
+<li>Added British English translations - thanks expectingtofly!</li>
+<li>Updated Czech translation - thanks mipa87!</li>
+<li>Updated Dutch translation - thanks blackfiction!</li>
+<li>Add support for TIDAL replay gain.</li>
+<li>Dramatically improve Fulltext Search indexing for large playlists (thousands of tracks).</li>
+<li>Improve security of LMS &lt;-&gt; mysqueezebox.com communication: don't store credentials, but only a session token.</li>
+<li>Clean up legacy JavaScript support: update PrototypeJS and Scriptaculous to their latest builds, remove some legacy code.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/678">#678</a> - Fix up character encoding issues in Web UI Scanner progress reporting and Web UI log display (thanks mw9!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/708">#708</a> - Update to MP3, FLAC, Ogg and WMA Formats to use BPM tags - thanks kwarklabs!</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/751">#751</a> - Shuffle tracks added with "playlist loadtracks" for a given year (thanks philchillbill!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/758">#758</a> - Allow selection of regional language (eg. ZH_CH or EN_GB) through JSONRPC (thanks expectingtofly!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/785">#785</a> - Improve adding albums as favorites: don't rely on the album title alone, but use the artist to identify the album, too.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/817">#817</a> - Fix JavaScript integration in settings pages for Classic/Light (and thus Material) skins.</li>
+<li>Remove more legacy plugins: Amazon, MP3Tunes, Orange, YALP</li>
+</ul>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/673">#673</a> - Add aarch64 Linux and 64-bit macOS binaries for Monkey's Audio (APE) files (thanks ralphy!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/684">#684</a> - Updated Solaris Binaries for alac, flac, sox, faad, wvunpack, mac (thanks urknall!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/715">#715</a> - Remove I18N::LangTags - it's outdated and has been part of core Perl since 5.12.</li>
+<li>Added native support for Apple Silicon</li>
+<li>Update Audio::Scan to 1.05 for certain platforms (thanks ralphy, slartibartfast!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/773">#773</a> - Update flac to 1.3.4 (macOS, Linux i386, x86_64, armhf, aarch64)</li>
+<li>Added custom Perl 5.34 build for macOS 10.15+, in preparation for Apple's removal of Perl from macOS</li>
+<li>Remove support for the embedded MySQL server. We've been using SQLite for about a decade.</li>
+<li>Remove support for PowerPC and i386 on macOS.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/810">#810</a> - Remove the 'deprecate' pragma vom CGI::Util to improve compatibility with newer Perl versions.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li>Allow seeking in mp4 files with samplerates &gt; 65535 (32 bits) on some platforms (thanks philippe44 &amp; ralphy)</li>
+<li>Improve Deezer metadata lookup when adding albums/playlists through the CLI.</li>
+<li><a href="https://github.com/andygrundman/Audio-Scan/issues/9">(Audio::Scan) #9</a> - For some WavPack DSD file the song_length_ms is incorrect (thanks aeeq &amp; ralphy!)</li>
+<li><a href="https://github.com/andygrundman/Audio-Scan/pulls/12">(Audio::Scan) #12</a> - ID3: Fix v2.4 extended header handling (thanks mw9 &amp; ralphy!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/406">#406</a> - Crossfading fails with very short tracks</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/410">#410</a> - Rescan button for individual music folders does not work in Classic (and hence Material) skin.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/473">#473</a> - Broken playback functionality in Album/More</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/535">#535</a> - some CLI commands duplicate comment tag info</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/547">#547</a> - duplicate albums after adding tracks while renaming album</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/668">#668</a> - Podcasts: Pre-caching image and more-info data can bring the server to a crawl #668 (thanks mw9!)</li>
+<li>Fix image transformation if a cover requested using /current/cover is pointing to a local file.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/699">#699</a> - Improve resume behaviour (thanks philippe44, maniac103 &amp; mw9</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/700">#700</a>/ <a href="https://github.com/LMS-Community/slimserver/pull/718">#718</a> - High CPU load during playback of certain radio streams (thanks philippe44!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/704">#704</a> - changed artist names remain in database after quick rescan</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/705">#705</a> - changing upper and lower case in file name results in double entries</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/746">#746</a> - Windows 11: PreventStandby doesn't prevent standby any more</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/749">#749</a> - fix mp4 streams where audio offset comes from STCO (thanks philippe44 &amp;&amp; bpa!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/754">#754</a> - improve reliability of "what's new" podcast search (thanks philippe44!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/767">#767</a> - fix compatibility with standards compliant cometd libraries (thanks lynniemagoo!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver-vendor/issues/95">#95</a> - update faad helper binaries to fix a crash when the decoder call fails (thanks ralphy!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/777">#777</a> - When syncing with disconnected player through CLI, random player is synced</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/802">#802</a> - Log is flodded with callback warnings "Can't call method "display" on an undefined value"</li>
+<li>Prevent a server crash while re-building the fulltext search index with huge collections.</li>
+<li>Don't show online only artists when a virtual library view tells us to do so.</li>
+<li>Fix IO::Socket::SSL initialization in the scanner's sync http lookup code.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/797">#797</a> - Fix Power off/Power on behaviour - Player would resume playback of stale track when reconnecting, although nothing to be resumed.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-821">Version 8.2.1</h2>
+<ul>
+<li>
+<p>Server Changes:</p>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li>Added Perl 5.34 modules for Linux x86_64</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/646">#646</a> - Fix streaming compatibility with SliMP3 (thanks philippe44!).</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/647">#647</a> - Fix podcast "Play from last position" and skip back trackinfo item (thanks mw9 and philippe44!).</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/656">#656</a> - Correct start time for streams with range offset (thanks philippe44!).</li>
+<li>Fix resizing images with a dash in the name.</li>
+<li>Define $::cachedir in the scanner, too, as many parts of the code rely on it.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/760">#760</a> - Fix various XSS possibilities in settings pages etc.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-820-2021-08-03-1ec16032b">Version 8.2.0 - 2021-08-03 (1ec16032b)</h2>
+<ul>
+<li>
+<p><a href="#version-812">Upstream fixes from Logitech Media Server 8.1.x</a></p>
+</li>
+<li>
+<p>New Features:</p>
+<ul>
+<li>Try to group online artists with local artists by ignoring slightly different spelling (eg. "The Beatles" vs. "Beatles", "Amy Macdonald" vs. "Amy MacDonald").</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/510">#510</a> - Add (optional) "balanced" track shuffling method, which is less random, but hopefully more pleasing to the listener.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/537">#537</a> - Add audio option to combine channels to build a mono signal (whether player is synchronized or not).</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/538">#538</a> - Add Balance setting for players which support it (thanks philippe44!).</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/621">#621</a> - Add Search feature to the Podcasts plugin (thanks philippe44!).</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/630">#630</a> - Add parsing of remote OPML list.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/627">#627</a> - Allow explodePlaylist to return an OPML list, not just an array or urls.</li>
+<li>Enable basic track statistics (play count, last played, ratings) for online tracks imported into the library.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/581">#581</a>, <a href="https://github.com/LMS-Community/slimserver/pull/591">#591</a> - Create new player protocol to buffer http streams to disk or re-establish dropped connections to improve reliability (thanks philippe44!).</li>
+</ul>
+</li>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li>When an online scan doesn't return any track, but previously had some, do not remove tracks from library. The empty new list is likely due to a scan failure.</li>
+<li>Try to improve backwards compatibility with eg. Erland's plugins, which sometimes struggle with the remote tracks.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/411">#411</a> - Transcoder conversion rules: Support resampling for Ogg/Flac streams (thanks bpa/mw9!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/598">#598</a> - Shuffle tracks added with "playlist loadtracks" and certain search filters (thanks philchillbill!)</li>
+<li>Added hook for 3rd party plugins to tell DSTM not to kick in.</li>
+</ul>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver-platforms/pull/18">#18</a> - Add a systemd service file for Debian based systems (thanks mw9 &amp; tomscytale).</li>
+<li><a href="https://github.com/LMS-Community/slimserver-platforms/pull/22">#22</a> - Add systemd service configuration for RPM based systems (thanks JohanSaaw!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver-platforms/pull/25">#25</a> - Add weak dependency on perl IO::Socket:SSL in RPM (thanks JohanSaaw!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/526">#526</a> - Add Perl 5.32 and 5.30 support for Linux aarch64 platform. (thanks clivem!)</li>
+<li>Remove Font::FreeType from Linux distributions. It's easy enough to install it using the system's package manager, and it would conflict on system where we don't provide the binary.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/554">#554</a> - Long current playlist disappears from UI during wipe and rescan.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/601">#601</a> - "icon" for URL="file://..." entries does not work in favorites.ompl.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/629">#629</a> - Set SO_KEEPALIVE for cli socket so they auto-close when peer disappears.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/632">#632</a> - Keep shall in foreground when startTime is required and bitrate is missing.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/617">#617</a> - Handle volatile redirected url, retry from original one if failed after resume.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/612">#612</a> - Ask PH if _currentHandler shall be rewritten (HTTP-&gt;HTTPS upgrade).</li>
+</ul>
+</li>
+<li>
+<p>Other:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/528">#528</a> - On Unix-like platforms, we now ensure that plugins are installed in such a way that none of their files are writable by users other than the user running LMS, even if theyʼre stored that way in the plugin ZIP file.</li>
+<li>No longer include the firmware images for ip3k based players (Classic, Boom, Receiver, Transporter) with the installation packages. Logitech Media Server can download them when needed. But after about a decade without updates it's unlikely anybody would still have to update anyway.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-812">Version 8.1.2</h2>
+<ul>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/522">#522</a> - add new --advertiseaddr startup parameter to tell LMS what user facing IP address to use (in case of NATed setups, like with load balancers or Kubernetes etc.) - thanks fuero!</li>
+<li>Don't sync favorites from mysqueezebox.com when prefs syncing is disabled.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li>Don't poll the Deezer library if the user doesn't have a premium subscription.</li>
+<li>Open App Gallery item in new window/tab - fix some regexes where we'd only accept http instead of https.</li>
+<li>Make sure we get the mysqueezebox.com based app menu even for players which are not registered there.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/508">#508</a> - Don't include the port when using default ports in host header for http requests.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/521">#521</a> - Fix http redirection on HTTPS protocol handlers (thanks philippe44!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/523">#523</a> - Fix http redirection when redirect URL is missing the protocol (thanks philippe44!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/531">#531</a> - Player's library view setting and Random Mix preference conflict with each other.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/536">#536</a> - When an album list is filtered by contributor role, the contributor's name sometimes isn't shown with the album.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/545">#545</a> - Under certain circumstances 3rd party plugins could be hidden on non-Squeezeplay based players.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/559">#559</a> - Deleting favourite via CLI using URL deletes others (thanks CDrummond!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/585">#585</a> - mp4 parser for trailing header must keep original request fields (thanks philippe44!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/593">#593</a> - Handle redirect with processors (eg. mp4 =&gt; aac) (thanks philippe44!)</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-811-2021-01-14-dd356a423">Version 8.1.1 - 2021-01-14 (dd356a423)</h2>
+<ul>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/489">#489</a> - Enable Deezer flac seeking for ip3k players.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/490">#490</a> - Enable "Defeat Touch To Play" for all players.</li>
+</ul>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li>Restore Perl 5.18 support in the x86_64 .deb file.</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li>Fix Ogg Opus on Windows.</li>
+<li>Fix advanced genre replacement in Online Music Library Integration plugin.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/485">#485</a> - HTTP range request is last byte not size.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/486">#486</a> - When using internal transcoding only, the container format must be set.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/488">#488</a> - When resampling FLAC, add targeted $RESAMPLE$,not only the source sample rate.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/501">#501</a> - Fix logging in Deezer and TIDAL importers.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/506">#506</a> - Fix Napster streaming.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-810-2020-12-23-effae8494">Version 8.1.0 - 2020-12-23 (effae8494)</h2>
+<ul>
+<li>
+<p><a href="#version-801">Upstream fixes from Logitech Media Server 8.0.x</a></p>
+</li>
+<li>
+<p>New Features:</p>
+<ul>
+<li>Deezer HiFI! Stream lossless music from Deezer if you have a Deezer HiFi subscription.</li>
+<li>Add support for lyrics stored in the UNSYNCEDLYRICS tag in FLAC files.</li>
+<li>Optionally allow installation of plugins which were targeted at Logitech Media Server 7.*.</li>
+</ul>
+</li>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li>Improve transcoding framework to allow protocol handlers to force transcoding (eg. TIDAL)</li>
+<li>Increase the default maximum playlist length for systems with more memory.</li>
+</ul>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li>Improved compatibility with macOS 11 Big Sur and Apple Silicon (M1 CPU).</li>
+<li>Remove (buggy) support for Perl 5.8 - we broke compatibility already a while back.</li>
+<li>Remove support for ReadyNAS - we broke compatibility already a while back (using Perl 5.8).</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/475">#475</a> - Socket leaks when pipeline is used.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-801">Version 8.0.1</h2>
+<ul>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/437">#437</a> - New Music doesn't respect the library_id parameter.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/459">#459</a> - Library items like artists (db:contributor.name=...) favorites don't return the URL in the CLI.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/460">#460</a> - Retrieving a genre by ID using the CLI is not possible.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/474">PR #474</a> - Ignore non-compliant CUE sheets (thanks oleg-kuh!)</li>
+<li>Make sure we only poll music services for changes in the library which we actually have configured.</li>
+<li>Fix album separation of multi disc sets from online services when grouping is disabled.</li>
+<li>Don't offer direct firmware download if players can't handle it lack of https support.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-800-2020-11-20-e0eee9c29">Version 8.0.0 - 2020-11-20 (e0eee9c29)</h2>
+<ul>
+<li>
+<p><a href="#version-793">Upstream fixes from Logitech Media Server 7.9.3</a></p>
+</li>
+<li>
+<p>New Features:</p>
+<ul>
+<li>Online music library integration: list your collection of albums vetted in your favorite streaming service as part of your "My Music" collection.</li>
+<li>Improved support for Audio Books: automatically create library views and browse modes dealing with Audio Books and Authors.</li>
+<li>Paste TIDAL or Deezer weblinks in to the Tune In field to play albums/playlists/tracks (thanks <a href="https://github.com/LMS-Community/slimserver/pull/360">mavit</a>!)</li>
+<li>Keep track of recently played podcasts (thanks <a href="https://github.com/LMS-Community/slimserver/pull/384">philippe44</a>!)</li>
+</ul>
+</li>
+<li>
+<p>Server Changes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/367">PR #367</a> - Improved parsing of HTTP header allows for new features (eg. AAC transcoding) and fixes some issues with streaming remote files. Thanks a lot philippe44!</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/305">PR #305</a> - use ORIGINALYEAR in FLAC files to override YEAR (thanks jcbodnar!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/267">PR #267</a> - HTTPS certificates are now validated when LMS acts as a client. HTTPS connections to plugin repositories are no-longer retried over HTTP when they fail. The old insecure behaviour can optionally be re-enabled, although, instead, we recommend working out why HTTPS is broken in your environment and fixing that if possible.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/308">PR #308</a> - Update faad binaries to fix several CVE-2017 security issues (thanks ralphy!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/324">PR #324</a> - Implement documented, but non-functional search in "favorites" query.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/346">PR #346</a> - Update Audio::Scan on Windows to 1.02 (thanks ralphy!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/355">PR #355</a> - Improved metadata handling in the xPL plugin (thanks keynet!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/429">PR #429</a> - Hide library folders from scanning with a sentinel file (thanks sciurius!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/434">PR #434</a> - Support for multiple FILE commands in CUE sheets (thanks oleg-kuh!)</li>
+<li><a href="https://github.com/LMS-Community/slimserver/pull/448">PR #448</a> - Add support for TIDAL over HTTPS and seeking (thanks philippe44!)</li>
+<li>Improved Dutch translation (thanks blackfiction!)</li>
+<li>Read Conductor tag from m4a etc. files.</li>
+<li>Persist some web browser side preferences like artwork mode, expanded menus etc. on the server. Safari would regularly "forget" them.</li>
+<li>Improve cache purging to reduce startup time and the risk of locking up other initialization tasks.</li>
+<li>Updated LWP module and dependencies to improve compatibility with newer Perl versions.</li>
+<li>Support import of DSD in WavPack files (requires additional DSDPlay 3rd party plugin).</li>
+<li>Add 'wav wav' rule which keeps headers.</li>
+<li>Add 'aif pcm' rule and change 'aif aif' rule to keep header except for "legacy" SB.</li>
+<li>Add 'H' tag in convert.conf to strip wav/aiff headers.</li>
+</ul>
+</li>
+<li>
+<p>Platform Support:</p>
+<ul>
+<li>Logitech Media Server now is available as a Docker image <a href="https://hub.docker.com/r/lmscommunity/logitechmediaserver">lmscommunity/logitechmediaserver</a> (thanks snoopy86, terual, pascalberger!).</li>
+<li>Added Perl 5.32 modules for Linux x86_64</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/277">#277</a> - add new flac binaries to fix seeking within remote flac streams in some locales (thanks ralphy!).</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/313">#313</a> - Advanced Search for albums returns emtpy "Song Info ()" link.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/327">#327</a> - "playlist loadalbum" command is case sensitive and otherwise fragile.</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/366">#366</a> - Fix gapless PCM Playback on Squeezebox1 (thanks michaldie!).</li>
+<li><a href="https://github.com/LMS-Community/slimserver/issues/388">#388</a> - Fix sorting of index bar in the web UI.</li>
+<li>Always strip BOM from M3U files, not only if the first line is a comment.</li>
+<li>Support wav/aif remote streams (direct and proxied).</li>
+<li>Check that destination (not source) codec is supported in direct streaming.</li>
+<li>Pass all seed tracks, using one API call, to MusicIP mix when used for "Dont Stop The Music".</li>
+<li>Re-build Fulltext Search Index for modified playlists after they've been saved.</li>
+</ul>
+</li>
+<li>
+<p>Other:</p>
+<ul>
+<li>Updated translations: Swedish (thanks Johan!)</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="/privacy">Privacy Statement</a> | <a href="/terms">Terms of Service</a> | <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/LMS-Community/slimserver" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/r/lmscommunity/lyrionmusicserver" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://forums.lyrion.org" target="_blank" rel="noopener" title="forums.lyrion.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.09 10.316V24h21.82V0h-2.417l-5.461 19.613h-6.09l-3.134-9.246zm9.283-4.444 1.363 6.308L13.955 0H1.089v5.872Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://opencollective.com/lyrion" target="_blank" rel="noopener" title="opencollective.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c2.54 0 4.894-.79 6.834-2.135l-3.107-3.109a7.715 7.715 0 1 1 0-13.512l3.107-3.109A11.94 11.94 0 0 0 12 0m9.865 5.166-3.109 3.107A7.7 7.7 0 0 1 19.715 12a7.7 7.7 0 0 1-.959 3.727l3.109 3.107A11.94 11.94 0 0 0 24 12c0-2.54-.79-4.894-2.135-6.834"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.tabs.link", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.expand", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/vega@6.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/vega-lite@6.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/vega-embed@6.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,5135 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lyrion.org/reference/squeezeplay-applet/">
+      
+      
+        <link rel="prev" href="../add-locales-to-docker/">
+      
+      
+        <link rel="next" href="../installing-applets/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>SqueezePlay Applet Developing Guide - Lyrion Music Server</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#squeezeplay-applet-developing-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lyrion Music Server" class="md-header__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lyrion Music Server
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SqueezePlay Applet Developing Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Getting Started with LMS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../players-and-controllers/" class="md-tabs__link">
+          
+  
+  
+  Players & Controllers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../extensions/applications/" class="md-tabs__link">
+          
+  
+  
+  Extensions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lyrion-music-server/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../faq/lms/" class="md-tabs__link">
+          
+  
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lyrion Music Server" class="md-nav__button md-logo" aria-label="Lyrion Music Server" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Lyrion Music Server
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lms-community/slimserver" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started with LMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started with LMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginner's guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-full-featured-lms-on-raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide for a full-featured LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-synology-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on Synology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-qnap-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on QNAP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-omv-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's Docker guide on OMV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/beginners-guide-to-classical-music-on-lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner's guide to classical music on LMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/mac-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started on macOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help Guides and FAQs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help Guides and FAQs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/new-music-help-faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New Music changes in 9.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/advanced-guide-openvpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use OpenVPN on SB Radio/Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/migrate-from-uesr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate from UE Smart Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/lms-on-readynas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS on ReadyNAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Changelog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/changelog-lms9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 9 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/changelog-lms8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LMS 8 changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players & Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Players & Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/hardware-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-touch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Touch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-radio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-boom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Boom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Duet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezebox Duet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/transporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transporter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox-classic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox Classic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezebox1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezebox 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/SLIMP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software based
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software based
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/software-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezelite-manpage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezelite manpage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/jivelite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jivelite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/softsqueeze/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftSqueeze
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../players-and-controllers/picoreplayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    piCorePlayer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Available Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/reporting-a-bug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting a bug
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/dco-signoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DCO Sign-off
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/adding-translations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding translations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forums.lyrion.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community forums
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lyrion-music-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Interface (JSON/RPC)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Command Line Interface (JSON/RPC)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/using-the-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/players/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playlist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/favorites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Favorites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/randomplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Randomplay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/compoundqueries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compound Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/alarms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alarms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add-locales-to-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add locales to the Docker container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins/applets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins/applets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Squeezeplay Applet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Squeezeplay Applet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applet Development
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applet Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applet-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applet Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applet Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta file
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-doomsdaymetalua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: DoomsdayMeta.lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-and-class-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module and Class Declaration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-file-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta File Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-fruits-of-our-labor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Fruits of Our Labor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applet-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applet file
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applet file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-doomsdayappletlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: DoomsdayApplet.lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dissecting-doomsdayappletlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dissecting DoomsdayApplet.lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settingslua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        settings.lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        strings.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embedded-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embedded documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milking-the-testapplet-for-fun-and-profit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Milking the TestApplet for Fun and Profit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-your-applet-on-a-squeezeboxcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting your applet on a SqueezeboxController
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development best practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development best practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bens-tips-and-tricks-on-the-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ben's Tips and tricks on the desktop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-custom-changes-on-the-target-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing custom changes on the target hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing-applets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing Applets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music-service-plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Music Service Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository File Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slimproto-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimProto Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slimp3-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLIMP3 Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip3k-graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classic/Boom/Transporter Graphics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_5" id="__nav_6_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SqueezePlay Menu System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SqueezePlay Menu System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../home-vs-slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu vs. SlimBrowse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-menus-squeezeplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Menu Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slimbrowse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SlimBrowse Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_6" id="__nav_6_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH/SCP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SSH/SCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enable-ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enable SSH Access to the Squeezebox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../winscp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WinSCP How To
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curtrack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    #CURTRACK Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../special-ir-keys-reset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Special IR Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slim-utils-os-custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom OS support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-the-most-out-of-metadata-in-lyrion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting the most out of metadata in Lyrion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/lms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lyrion Music Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applet-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applet Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applet Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta file
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-doomsdaymetalua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: DoomsdayMeta.lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-and-class-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module and Class Declaration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-file-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta File Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-fruits-of-our-labor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Fruits of Our Labor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applet-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applet file
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applet file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-doomsdayappletlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: DoomsdayApplet.lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dissecting-doomsdayappletlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dissecting DoomsdayApplet.lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settingslua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        settings.lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        strings.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embedded-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embedded documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milking-the-testapplet-for-fun-and-profit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Milking the TestApplet for Fun and Profit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-your-applet-on-a-squeezeboxcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting your applet on a SqueezeboxController
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development best practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development best practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bens-tips-and-tricks-on-the-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ben's Tips and tricks on the desktop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-custom-changes-on-the-target-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing custom changes on the target hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../lyrion-music-server/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Reference
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Plugins/applets
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Squeezeplay Applet
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/lms-community/lms-community.github.io/edit/main/docs/reference/squeezeplay-applet.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/lms-community/lms-community.github.io/raw/main/docs/reference/squeezeplay-applet.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="squeezeplay-applet-developing-guide">SqueezePlay Applet Developing Guide</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This document serves as a starting point for those wanting to develop Lua applets for SqueezePlay (and, by extention, the SqueezeboxController).</p>
+<p>It is not intended as a Lua programming guide, which can be found <a href="https://www.lua.org/manual/5.1/index.html#contents">online here</a>.</p>
+<p>First things first, check yourself out a copy of SqueezePlay. Once you have a working desktop version of SqueezePlay, beginning development will be much easier.</p>
+<p>Please also not that the sourcecode provided here was written for the 7.3 firmware. 7.4 changes some variables names when creating menus or popup-windows. Please study the 'Test'-applet provided with SqueezePlay so you can adapt the needed changes.</p>
+<h2 id="applet-files">Applet Files</h2>
+<p>The two main files in any SqueezePlay applet are the Meta and Applet files. The naming convention is AppletNameMeta.lua and AppletNameApplet.lua, respectively. You can also have any number of helper files, notably a strings.txt file to translate string tokens into other languages, and a settings.lua file that contains saved configuration information that your applet might need to store.</p>
+<h3 id="meta-file">Meta file</h3>
+<p>The Meta file registers your applet to SqueezePlay for use. It is required for your applet to load correctly. Typically, a registerApplet function lets SqueezePlay add a menu item(s) for your applet, and an applet function to run when drilling into that menu item.</p>
+<h4 id="example-doomsdaymetalua">Example: DoomsdayMeta.lua</h4>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">oo</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;loop.simple&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">AppletMeta</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.AppletMeta&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">appletManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">appletManager</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">jiveMain</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">jiveMain</span>
+
+<span class="w"> </span><span class="nf">module</span><span class="p">(...)</span>
+<span class="w"> </span><span class="nv">oo</span><span class="p">.</span><span class="nf">class</span><span class="p">(</span><span class="nv">_M</span><span class="p">,</span><span class="w"> </span><span class="nv">AppletMeta</span><span class="p">)</span>
+
+<span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">jiveVersion</span><span class="p">(</span><span class="nv">meta</span><span class="p">)</span>
+<span class="w">       </span><span class="kr">return</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
+<span class="w"> </span><span class="kr">end</span>
+
+<span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">defaultSettings</span><span class="p">(</span><span class="nv">meta</span><span class="p">)</span>
+<span class="w">       </span><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">       </span><span class="p">}</span>
+<span class="w"> </span><span class="kr">end</span>
+
+<span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">registerApplet</span><span class="p">(</span><span class="nv">meta</span><span class="p">)</span>
+<span class="w">       </span><span class="nv">jiveMain</span><span class="p">:</span><span class="nf">addItem</span><span class="p">(</span><span class="nv">meta</span><span class="p">:</span><span class="nf">menuItem</span><span class="p">(</span><span class="s1">&#39;doomsdayApplet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;home&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;DOOMSDAY&quot;</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">applet</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="nv">applet</span><span class="p">:</span><span class="nf">menu</span><span class="p">(...)</span><span class="w"> </span><span class="kr">end</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">))</span>
+<span class="w"> </span><span class="kr">end</span>
+<span class="w"> </span><span class="err">```</span>
+
+<span class="o">####</span><span class="w"> </span><span class="nv">Dissecting</span><span class="w"> </span><span class="nv">DoomsdayMeta</span><span class="p">.</span><span class="py">lua</span>
+
+<span class="nv">Variable</span><span class="w"> </span><span class="nv">Declaration</span><span class="p">:</span>
+
+<span class="err">```</span><span class="py">lua</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">oo</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;loop.simple&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">AppletMeta</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.AppletMeta&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">appletManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">appletManager</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">jiveMain</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">jiveMain</span>
+</code></pre></div>
+<p>In SqueezePlay it is necessary to explicitly define all functions and classes you wish to use in your applet. This is done through require() statements, and in some cases, the pulling in of global variables into local space. Note: this also needs to be done for Lua internal functions like tostring, setmetatable, etc.</p>
+<p>So, in this example, we are defining four things: <code>oo</code>, <code>AppletMeta</code>, <code>appletManager</code>, and <code>jiveMain</code>.</p>
+<h4 id="module-and-class-declaration">Module and Class Declaration</h4>
+<p>Next we define the type of file we are constructing:</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nf">module</span><span class="p">(...)</span>
+<span class="w"> </span><span class="nv">oo</span><span class="p">.</span><span class="nf">class</span><span class="p">(</span><span class="nv">_M</span><span class="p">,</span><span class="w"> </span><span class="nv">AppletMeta</span><span class="p">)</span>
+</code></pre></div>
+<p>In essence what these two lines say are "this is a meta file, and we're going to define all variables to be used locally" or "new class (AppleNameMeta) inheriting from AppetMeta". Note we had to define AppletMeta above by requiring our superclass jive.AppletMeta.</p>
+<h4 id="meta-file-functions">Meta File Functions</h4>
+<p>Now on to the meta functions:</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">jiveVersion</span><span class="p">(</span><span class="nv">meta</span><span class="p">)</span>
+<span class="w">       </span><span class="kr">return</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
+<span class="w"> </span><span class="kr">end</span>
+</code></pre></div>
+<p>sets the valid versions (min and max) that this applet will run under. In this example, min and max are set to 1, which means that the jiveVersion has to be set to 1 for this applet to load. Note: this number does not correspond to the external SqueezePlay version number, e.g., 7.0.1</p>
+<p>Default settings are important to define if a settings.lua file is going to be used:</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">defaultSettings</span><span class="p">(</span><span class="nv">meta</span><span class="p">)</span>
+<span class="w">       </span><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">       </span><span class="p">}</span>
+<span class="w"> </span><span class="kr">end</span>
+</code></pre></div>
+<p>settings.lua files are created dynamically by an applet, so it doesn't exist when first using the applet. This is where you define default settings so SqueezePlay doesn't balk when trying to getSettings()</p>
+<p>Finally we register our applet:</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">registerApplet</span><span class="p">(</span><span class="nv">meta</span><span class="p">)</span>
+<span class="w">       </span><span class="nv">jiveMain</span><span class="p">:</span><span class="nf">addItem</span><span class="p">(</span><span class="nv">meta</span><span class="p">:</span><span class="nf">menuItem</span><span class="p">(</span><span class="s1">&#39;doomsdayApplet&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;home&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;DOOMSDAY&quot;</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">applet</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="nv">applet</span><span class="p">:</span><span class="nf">menu</span><span class="p">(...)</span><span class="w"> </span><span class="kr">end</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">))</span>
+<span class="w"> </span><span class="kr">end</span>
+</code></pre></div>
+<p>This line is a bit complicated with arguments. What we are doing here is adding a menu item to the "homeMenu" area of Squeezeplay, which are those top-level menus that are managed by jive/ui/HomeMenu.lua. The menuItem() function general form is</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nf">menuItem</span><span class="p">(</span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="nv">node</span><span class="p">,</span><span class="w"> </span><span class="nv">token</span><span class="p">,</span><span class="w"> </span><span class="nv">callback</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nv">weight</span><span class="p">])</span>
+</code></pre></div>
+<ul>
+<li>id =&gt; unique key that HomeMenu uses to reference this item</li>
+<li>node =&gt; HomeMenu node to add this item to. 'home' places the item in the top-most menu. Other options include 'myMusic', 'extras', 'settings', and 'advancedSettings'.</li>
+<li>token =&gt; string token to be used for displaying the menu item</li>
+<li>callback =&gt; function to callback when this menu item is drilled into. Typically in a meta file you reference the corresponding applet file function to execute.</li>
+<li>weight =&gt; an optional parameter given to place the item higher or lower in the list. Default weight of unweighted items is 5, and by convention items sent from SqueezeCenter (e.g., Music Library) have weights between 10 and 100.</li>
+</ul>
+<h4 id="the-fruits-of-our-labor">The Fruits of Our Labor</h4>
+<p>The Meta file has now provided a HomeMenu item for the applet:</p>
+<p><img alt="" src="../assets/Doomsday1.png" /></p>
+<h3 id="applet-file">Applet file</h3>
+<p>The Applet file is the main part of your applet. It typically does the majority of the "heavy lifting" for whatever it is you want to do.</p>
+<h4 id="example-doomsdayappletlua">Example: DoomsdayApplet.lua</h4>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="cm">--[[</span>
+<span class="cm"> =head1 NAME</span>
+
+<span class="cm"> applets.Doomsday.DoomsdayApplet - Doomsday Applet</span>
+
+<span class="cm"> =head1 DESCRIPTION</span>
+
+<span class="cm"> This applet was created solely for the purpose of a demonstration</span>
+
+<span class="cm"> =head1 FUNCTIONS</span>
+
+<span class="cm"> Applet related methods are described in L&lt;jive.Applet&gt;.</span>
+
+<span class="cm"> =cut</span>
+<span class="cm"> --]]</span>
+
+
+<span class="w"> </span><span class="c1">-- stuff we use</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nb">tostring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tostring</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">oo</span><span class="w">                     </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;loop.simple&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">string</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">Applet</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.Applet&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">RadioButton</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.RadioButton&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">RadioGroup</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.RadioGroup&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">Window</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.Window&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">Popup</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.Popup&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">Textarea</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s1">&#39;jive.ui.Textarea&#39;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">SimpleMenu</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.SimpleMenu&quot;</span><span class="p">)</span>
+
+<span class="w"> </span><span class="nf">module</span><span class="p">(...)</span>
+<span class="w"> </span><span class="nv">oo</span><span class="p">.</span><span class="nf">class</span><span class="p">(</span><span class="nv">_M</span><span class="p">,</span><span class="w"> </span><span class="nv">Applet</span><span class="p">)</span>
+
+<span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">menu</span><span class="p">(</span><span class="nv">self</span><span class="p">,</span><span class="w"> </span><span class="nv">menuItem</span><span class="p">)</span>
+
+<span class="w">       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;menu&quot;</span><span class="p">)</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioGroup</span><span class="p">()</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">().</span><span class="nv">currentSetting</span>
+
+<span class="w">       </span><span class="c1">-- create a SimpleMenu object with selections to be created</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">SimpleMenu</span><span class="p">(</span><span class="s2">&quot;menu&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="c1">-- first menu item</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                       </span><span class="c1">-- text for the menu item</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY_OPTION1&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="c1">-- add a radiobutton with a callback function to be used when selected</span>
+<span class="w">                       </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioButton</span><span class="p">(</span>
+<span class="w">                               </span><span class="c1">-- skin style of radio button (defined in DefaultSkin)</span>
+<span class="w">                               </span><span class="s2">&quot;radio&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="c1">-- group to attach button</span>
+<span class="w">                               </span><span class="nv">group</span><span class="p">,</span>
+<span class="w">                               </span><span class="c1">-- callback function</span>
+<span class="w">                               </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">                                       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;radio button 1 selected&quot;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="c1">-- show the warning</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">warnMasses</span><span class="p">(</span><span class="s1">&#39;DOOMSDAY_MESSAGE1&#39;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="c1">-- store the setting to settings.lua</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">()[</span><span class="s1">&#39;currentSetting&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">storeSettings</span><span class="p">()</span>
+<span class="w">                               </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">                               </span><span class="c1">-- fill the radio button if this is the currentSetting</span>
+<span class="w">                               </span><span class="p">(</span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">                       </span><span class="p">),</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY_OPTION2&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioButton</span><span class="p">(</span>
+<span class="w">                               </span><span class="s2">&quot;radio&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="nv">group</span><span class="p">,</span>
+<span class="w">                               </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">                                       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;radio button 2 selected&quot;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">warnMasses</span><span class="p">(</span><span class="s1">&#39;DOOMSDAY_MESSAGE2&#39;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">()[</span><span class="s1">&#39;currentSetting&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">storeSettings</span><span class="p">()</span>
+<span class="w">                               </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">                               </span><span class="p">(</span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">                       </span><span class="p">),</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY_OPTION3&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioButton</span><span class="p">(</span>
+<span class="w">                               </span><span class="s2">&quot;radio&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="nv">group</span><span class="p">,</span>
+<span class="w">                               </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">                                       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;radio button 3 selected&quot;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">warnMasses</span><span class="p">(</span><span class="s1">&#39;DOOMSDAY_MESSAGE3&#39;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">()[</span><span class="s1">&#39;currentSetting&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">storeSettings</span><span class="p">()</span>
+<span class="w">                               </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">                               </span><span class="p">(</span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">                       </span><span class="p">),</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY_OPTION4&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioButton</span><span class="p">(</span>
+<span class="w">                               </span><span class="s2">&quot;radio&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="nv">group</span><span class="p">,</span>
+<span class="w">                               </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">                                       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;radio button 4 selected&quot;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">warnMasses</span><span class="p">(</span><span class="s1">&#39;DOOMSDAY_MESSAGE4&#39;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">()[</span><span class="s1">&#39;currentSetting&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">storeSettings</span><span class="p">()</span>
+<span class="w">                               </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">                               </span><span class="p">(</span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+<span class="w">                       </span><span class="p">),</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">       </span><span class="p">})</span>
+
+<span class="w">       </span><span class="c1">-- create a window object</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Window</span><span class="p">(</span><span class="s2">&quot;window&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY&quot;</span><span class="p">))</span>
+
+<span class="w">       </span><span class="c1">-- add the SimpleMenu to the window</span>
+<span class="w">       </span><span class="nv">window</span><span class="p">:</span><span class="nf">addWidget</span><span class="p">(</span><span class="nv">menu</span><span class="p">)</span>
+
+<span class="w">       </span><span class="c1">-- show the window</span>
+<span class="w">       </span><span class="nv">window</span><span class="p">:</span><span class="nf">show</span><span class="p">()</span>
+<span class="w"> </span><span class="kr">end</span>
+
+<span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">warnMasses</span><span class="p">(</span><span class="nv">self</span><span class="p">,</span><span class="w"> </span><span class="nv">warning</span><span class="p">)</span>
+<span class="w">       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="nv">warning</span><span class="p">))</span>
+
+<span class="w">       </span><span class="c1">-- create a Popup object, using already established &#39;toast_popup_text&#39; skin style</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">doomsday</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Popup</span><span class="p">(</span><span class="s1">&#39;toast_popup_text&#39;</span><span class="p">)</span>
+
+<span class="w">       </span><span class="c1">-- add message to popup</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">doomsdayMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Textarea</span><span class="p">(</span><span class="s1">&#39;toast_popup_textarea&#39;</span><span class="p">,</span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="nv">warning</span><span class="p">)),</span>
+<span class="w">             </span><span class="p">})</span>
+<span class="w">       </span><span class="nv">doomsday</span><span class="p">:</span><span class="nf">addWidget</span><span class="p">(</span><span class="nv">doomsdayMessage</span><span class="p">)</span>
+
+<span class="w">       </span><span class="c1">-- display the message for 3 seconds</span>
+<span class="w">       </span><span class="nv">doomsday</span><span class="p">:</span><span class="nf">showBriefly</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="nv">Window</span><span class="p">.</span><span class="py">transitionPushPopupUp</span><span class="p">,</span><span class="w"> </span><span class="nv">Window</span><span class="p">.</span><span class="py">transitionPushPopupDown</span><span class="p">)</span>
+<span class="w"> </span><span class="kr">end</span>
+</code></pre></div>
+<h4 id="dissecting-doomsdayappletlua">Dissecting DoomsdayApplet.lua</h4>
+<p>Embedded documentation</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="cm">--[[</span>
+<span class="cm"> =head1 NAME</span>
+
+<span class="cm"> applets.Doomsday.DoomsdayApplet - Doomsday Applet</span>
+
+<span class="cm"> =head1 DESCRIPTION</span>
+
+<span class="cm"> This applet was created solely for the purpose of a demonstration</span>
+
+<span class="cm"> =head1 FUNCTIONS</span>
+
+<span class="cm"> Applet related methods are described in L&lt;jive.Applet&gt;.</span>
+
+<span class="cm"> =cut</span>
+<span class="cm"> --]]</span>
+</code></pre></div>
+<p>The section at the top of the file here that's within a Lua comment section <code>--[[ comments... ]]---</code> is in standard POD format for documentation, which <a href="http://en.wikipedia.org/wiki/Plain_Old_Documentation">Wikipedia has a nice write-up on</a>.</p>
+<p>Variable Declaration</p>
+<p>As we did in the meta file, it is necessary to declare everything external that's going to be used in the file.</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1">-- stuff we use</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nb">tostring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tostring</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">oo</span><span class="w">                     </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;loop.simple&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">string</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">Applet</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.Applet&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">RadioButton</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.RadioButton&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">RadioGroup</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.RadioGroup&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">Window</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.Window&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">Popup</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.Popup&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">Textarea</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s1">&#39;jive.ui.Textarea&#39;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">SimpleMenu</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.SimpleMenu&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="kd">local</span><span class="w"> </span><span class="nv">Group</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;jive.ui.Group&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>In the case of the applet, we are going to be accessing a bunch of ui widgets (<code>RadioButton</code>, <code>RadioGroup</code>, <code>Window</code>, <code>Popup</code>, <code>Textarea</code>, <code>SimpleMenu</code>, <code>RadioGroup</code>).</p>
+<p>Module and Class Declaration</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nf">module</span><span class="p">(...)</span>
+<span class="w"> </span><span class="nv">oo</span><span class="p">.</span><span class="nf">class</span><span class="p">(</span><span class="nv">_M</span><span class="p">,</span><span class="w"> </span><span class="nv">Applet</span><span class="p">)</span>
+</code></pre></div>
+<p>This is no different from the Meta file, other than declaring that this is an Applet class, not Meta. By using these required lines, you are stating that all variables, including Lua internal functions, need to be declared explicitly above these lines (e.g., see previous section).</p>
+<p>Applet Functions</p>
+<p>There are two functions here, <code>menu()</code> and <code>warnMasses()</code>. <code>menu()</code> as you may recall is the function defined in the Meta file as the one to be called when the "Doomsday" menu item is selected. This function creates a menu via the <code>jive.ui.SimpleMenu</code> widget, and creates four items that can be selected for a special Doomsday popup warning, which is driven by the <code>radioButton</code> callback to <code>warnMasses()</code>.</p>
+<p>(Screenshots below)</p>
+<p>Additionally, when a radio button is selected that setting is stored in settings.lua and subsequent returns to this menu will fill in the last selected item in the menu.</p>
+<p>Note the first row in the menu function</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;menu&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>This uses a "log" variable that hasn't been declared in the declaration section. The reason this works is because SqueezePlay automatically declares a "log" variable for all registered applets. It's declared with the identity "applet.Doomsday" where "Doomsday" is the name of the applet. You can enable different log levels through the SqueezePlay menu Settings/Advanced/Logging.</p>
+<p>The functions are commented for clarity within the code:</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">menu</span><span class="p">(</span><span class="nv">self</span><span class="p">,</span><span class="w"> </span><span class="nv">menuItem</span><span class="p">)</span>
+
+<span class="w">       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;menu&quot;</span><span class="p">)</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioGroup</span><span class="p">()</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">().</span><span class="nv">currentSetting</span>
+
+<span class="w">       </span><span class="c1">-- create a SimpleMenu object with selections to be created</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">SimpleMenu</span><span class="p">(</span><span class="s2">&quot;menu&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="c1">-- first menu item</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                       </span><span class="c1">-- text for the menu item</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY_OPTION1&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="c1">-- add a radiobutton with a callback function to be used when selected</span>
+<span class="w">                       </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioButton</span><span class="p">(</span>
+<span class="w">                               </span><span class="c1">-- skin style of radio button (defined in DefaultSkin)</span>
+<span class="w">                               </span><span class="s2">&quot;radio&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="c1">-- group to attach button</span>
+<span class="w">                               </span><span class="nv">group</span><span class="p">,</span>
+<span class="w">                               </span><span class="c1">-- callback function</span>
+<span class="w">                               </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">                                       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;radio button 1 selected&quot;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="c1">-- show the warning</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">warnMasses</span><span class="p">(</span><span class="s1">&#39;DOOMSDAY_MESSAGE1&#39;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="c1">-- store the setting to settings.lua</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">()[</span><span class="s1">&#39;currentSetting&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">storeSettings</span><span class="p">()</span>
+<span class="w">                               </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">                               </span><span class="c1">-- fill the radio button if this is the currentSetting</span>
+<span class="w">                               </span><span class="p">(</span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">                       </span><span class="p">),</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY_OPTION2&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioButton</span><span class="p">(</span>
+<span class="w">                               </span><span class="s2">&quot;radio&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="nv">group</span><span class="p">,</span>
+<span class="w">                               </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">                                       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;radio button 2 selected&quot;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">warnMasses</span><span class="p">(</span><span class="s1">&#39;DOOMSDAY_MESSAGE2&#39;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">()[</span><span class="s1">&#39;currentSetting&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">storeSettings</span><span class="p">()</span>
+<span class="w">                               </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">                               </span><span class="p">(</span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">                       </span><span class="p">),</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY_OPTION3&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioButton</span><span class="p">(</span>
+<span class="w">                               </span><span class="s2">&quot;radio&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="nv">group</span><span class="p">,</span>
+<span class="w">                               </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">                                       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;radio button 3 selected&quot;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">warnMasses</span><span class="p">(</span><span class="s1">&#39;DOOMSDAY_MESSAGE3&#39;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">()[</span><span class="s1">&#39;currentSetting&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">storeSettings</span><span class="p">()</span>
+<span class="w">                               </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">                               </span><span class="p">(</span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">                       </span><span class="p">),</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY_OPTION4&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">RadioButton</span><span class="p">(</span>
+<span class="w">                               </span><span class="s2">&quot;radio&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="nv">group</span><span class="p">,</span>
+<span class="w">                               </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">                                       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="s2">&quot;radio button 4 selected&quot;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">warnMasses</span><span class="p">(</span><span class="s1">&#39;DOOMSDAY_MESSAGE4&#39;</span><span class="p">)</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">getSettings</span><span class="p">()[</span><span class="s1">&#39;currentSetting&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">                                       </span><span class="nv">self</span><span class="p">:</span><span class="nf">storeSettings</span><span class="p">()</span>
+<span class="w">                               </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">                               </span><span class="p">(</span><span class="nv">currentSetting</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+<span class="w">                       </span><span class="p">),</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">       </span><span class="p">})</span>
+
+<span class="w">       </span><span class="c1">-- create a window object</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Window</span><span class="p">(</span><span class="s2">&quot;window&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="s2">&quot;DOOMSDAY&quot;</span><span class="p">))</span>
+
+<span class="w">       </span><span class="c1">-- add the SimpleMenu to the window</span>
+<span class="w">       </span><span class="nv">window</span><span class="p">:</span><span class="nf">addWidget</span><span class="p">(</span><span class="nv">menu</span><span class="p">)</span>
+
+<span class="w">       </span><span class="c1">-- show the window</span>
+<span class="w">       </span><span class="nv">window</span><span class="p">:</span><span class="nf">show</span><span class="p">()</span>
+<span class="w"> </span><span class="kr">end</span>
+
+<span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">warnMasses</span><span class="p">(</span><span class="nv">self</span><span class="p">,</span><span class="w"> </span><span class="nv">warning</span><span class="p">)</span>
+<span class="w">       </span><span class="nv">log</span><span class="p">:</span><span class="nf">info</span><span class="p">(</span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="nv">warning</span><span class="p">))</span>
+
+<span class="w">       </span><span class="c1">-- create a Popup object, using already established &#39;toast_popup_text&#39; skin style</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">doomsday</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Popup</span><span class="p">(</span><span class="s1">&#39;toast_popup_text&#39;</span><span class="p">)</span>
+
+<span class="w">       </span><span class="c1">-- add message to popup</span>
+<span class="w">       </span><span class="kd">local</span><span class="w"> </span><span class="nv">doomsdayMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                       </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Textarea</span><span class="p">(</span><span class="s1">&#39;toast_popup_textarea&#39;</span><span class="p">,</span><span class="nv">self</span><span class="p">:</span><span class="nf">string</span><span class="p">(</span><span class="nv">warning</span><span class="p">)),</span>
+<span class="w">             </span><span class="p">})</span>
+<span class="w">       </span><span class="nv">doomsday</span><span class="p">:</span><span class="nf">addWidget</span><span class="p">(</span><span class="nv">doomsdayMessage</span><span class="p">)</span>
+
+<span class="w">       </span><span class="c1">-- display the message for 3 seconds</span>
+<span class="w">       </span><span class="nv">doomsday</span><span class="p">:</span><span class="nf">showBriefly</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="nv">Window</span><span class="p">.</span><span class="py">transitionPushPopupUp</span><span class="p">,</span><span class="w"> </span><span class="nv">Window</span><span class="p">.</span><span class="py">transitionPushPopupDown</span><span class="p">)</span>
+<span class="w"> </span><span class="kr">end</span>
+</code></pre></div>
+<p>The Fruits of Our Labor</p>
+<p>A Simple Menu with 4 Radio Button selections:</p>
+<p><img alt="" src="../assets/Doomsday2.png" /></p>
+<p>After a button is selected, a popup "toast" slides up and appears for 3 seconds before sliding back down:</p>
+<p><img alt="" src="../assets/Doomsday3.png" /></p>
+<h3 id="settingslua">settings.lua</h3>
+<p>Applets can write to a settings.lua through the <code>getSettings()</code> method, and allows your applet to load in stored setting information from a previous run of the applet. The contents of a settings.lua file are a Lua table that can be read in by the Applet file through the same <code>getSettings()</code> method.</p>
+<p>an example settings.lua file written after selecting the 4th radio button in the example applet:</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<span class="w"> </span><span class="nv">settings</span><span class="p">[</span><span class="s2">&quot;currentSetting&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="stringstxt">strings.txt</h3>
+<p>Applets may have strings that need translation to other languages. The strings.txt file stores these tokens for use in the Meta and Applet files. The standard format for strings.txt files is listed below (note: whitespace is delimited with tabs not spaces). After defining a strings.txt file, you can add language support simply by adding the associated translations to these strings (DE given as an example in first string)</p>
+<p>Note, if you copy the contents below into a text file you have to replace the spaces before/after language code with a tab character</p>
+<div class="highlight"><pre><span></span><code> #
+ # The two letter codes are defined by ISO 639-1
+ # http://en.wikipedia.org/wiki/List_of_ISO_639_codes
+
+ DOOMSDAY
+       EN      Doomsday Machine
+       DE      Doomstag Arbeitsmashine
+
+ DOOMSDAY_OPTION1
+       EN      Dire Warning 1
+
+ DOOMSDAY_OPTION2
+       EN      Dire Warning 2
+
+ DOOMSDAY_OPTION3
+       EN      Dire Warning 3
+
+ DOOMSDAY_OPTION4
+       EN      Dire Warning 4
+
+ DOOMSDAY_MESSAGE0
+       EN      Fear is in the air!
+
+ DOOMSDAY_MESSAGE1
+       EN      The End is Nigh!
+
+ DOOMSDAY_MESSAGE2
+       EN      Run for the hills!
+
+ DOOMSDAY_MESSAGE3
+       EN      Get your affairs in order!
+
+ DOOMSDAY_MESSAGE4
+       EN      DUCK!
+</code></pre></div>
+<h2 id="additional-resources">Additional Resources</h2>
+<p>What I've laid out above is an applet that does next-to-nothing. Chances are you want your applet to do a little more than that. Here's some pointers to additonal resources to make your SqueezePlay development easier.</p>
+<h3 id="embedded-documentation">Embedded documentation</h3>
+<p>Much of SqueezePlay files, including the various ui widgets, are documented in POD format. From a command-line you can use <code>perldoc</code> to display the documentation for a particular file. For example, the DoomsdayApplet example above has POD documentation embedded in it.</p>
+<div class="highlight"><pre><span></span><code> squeezeplay/src/squeezeplay/share/applets/Doomsday: perldoc DoomsdayApplet.lua
+ DOOMSDAYAPPLET.LUA(1) User Contributed Perl DocumentationDOOMSDAYAPPLET.LUA(1)
+
+ NAME
+      applets.Doomsday.DoomsdayApplet - Doomsday Applet
+
+ DESCRIPTION
+      This applet was created solely for the purpose of a demonstration
+
+ FUNCTIONS
+      Applet related methods are described in jive.Applet.
+
+
+ perl v5.8.8                       2008-04-25             DOOMSDAYAPPLET.LUA(1)
+</code></pre></div>
+<p>The POD documentation for the ui widgets are particularly helpful in understanding what methods are available. Browse to src/squeezeplay/src/share/jive and explore this area with perldoc.</p>
+<p>See this url http://search.cpan.org/dist/Pod-Perldoc/lib/perldoc.pod for a description of PerlDoc</p>
+<p>PerlDoc should normally be included in a default instance of perl.</p>
+<h3 id="milking-the-testapplet-for-fun-and-profit">Milking the TestApplet for Fun and Profit</h3>
+<p>Thankfully, there is a nice applet in the squeezeplay_test directory that can help you learn-by-example. It covers things like fullscreen popup windows, text input entry (text, IP address, time), checkboxes, radio buttons, textareas, etc.</p>
+<p>From your subversion checkout, the TestApplet can be found at src/squeezeplay_test/share/applets/TestApplet</p>
+<h2 id="getting-your-applet-on-a-squeezeboxcontroller">Getting your applet on a SqueezeboxController</h2>
+<p>In order to make your applet available via the applet installer, put all your files (<em>Applet.lua, </em>Meta.lua, strings.txt, ...) in a simple zip-file which is named like your applet. Please be aware, that the zip MUST NOT contain any subfolders ! Then create a repository-file like <a href="../repository-dev/">described here</a>.</p>
+<p>Both file must be uploaded to a web-server, so that squeezebox-server can easily download the files.</p>
+<p>This page should guide you through the process of getting your applet on to your controller via Squeezbox-Server</p>
+<h2 id="development-best-practices">Development best practices</h2>
+<p>As long as possible you should try to develop and test using a desktop build of SqueezePlay. This gives you the most rapid development success. Most but not all applets are not dependent on the target hardware.</p>
+<h3 id="bens-tips-and-tricks-on-the-desktop">Ben's Tips and tricks on the desktop</h3>
+<p>I do a lot of development in OS X in a terminal, and it's very useful to make heavy use of the bash shell's alias function and ability to customize your terminal environment. With a couple path changes in the first few lines, these can be of general use on either an OS X or Linux development environment.</p>
+<div class="highlight"><pre><span></span><code>export MYHOME=&#39;/Users/bklaas&#39;
+export SQUEEZEPLAY=&#39;$MYHOME/svk/squeezeplay&#39;
+export SPAPPLETS=&#39;squeezeplay/src/squeezeplay/share&#39;
+export SC74=&#39;$MYHOME/svk/slim/7.4/trunk/server&#39;
+export SC75=&#39;$MYHOME/svk/slim/7.5/trunk/server&#39;
+
+# alias to quickly jump to the OS X directory where squeezeplay settings files are kept
+alias settings=&#39;cd $MYHOME/Library/Preferences/SqueezePlay/userpath/settings&#39;
+
+# 7.4 trunk branch
+export    SP74PATH=&quot;$SQUEEZEPLAY/7.4/trunk/squeezeplay&quot;
+alias   make74jive=&quot;cd $SP74PATH/src &amp;&amp; make -f Makefile.osx &amp;&amp; go74jive&quot;
+alias       74jive=&quot;cd $SQUEEZEPLAY/7.4/trunk/$SPAPPLETS&quot;
+alias         74up=&quot;cd $SP74PATH &amp;&amp; svk update -s &amp;&amp; 74jive&quot;
+alias     go74jive=&quot;cd $SP74PATH/build/osx/bin &amp;&amp; source ~/7.4rc&quot;
+
+# 7.5 trunk branch
+export    SP75PATH=&quot;$SQUEEZEPLAY/7.5/trunk/squeezeplay&quot;
+alias   make75jive=&quot;cd $SP75PATH/src &amp;&amp; make -f Makefile.osx &amp;&amp; go75jive&quot;
+alias       75jive=&quot;cd $SQUEEZEPLAY/7.5/trunk/$SPAPPLETS&quot;
+alias       75test=&quot;cd $SQUEEZEPLAY/7.5/trunk/squeezeplay/src/squeezeplay_test/share/applets&quot;
+alias         75up=&quot;cd $SP75PATH &amp;&amp; svk update -s &amp;&amp; 75jive&quot;
+alias     go75jive=&quot;cd $SP75PATH/build/osx/bin &amp;&amp; source ~/7.5rc&quot;
+alias       75fab4=&quot;cd $SQUEEZEPLAY/7.5/trunk/squeezeplay/src/squeezeplay_fab4/share/applets&quot;
+alias  75squeezeos=&quot;cd $SQUEEZEPLAY/7.5/trunk/squeezeplay/src/squeezeplay_squeezeos/share/applets&quot;
+alias       75baby=&quot;cd $SQUEEZEPLAY/7.5/trunk/squeezeplay/src/squeezeplay_baby/share/applets&quot;
+
+# 7.4 SC
+alias         74scup=&quot;cd $SC74 &amp;&amp; svk update -s&quot;
+alias         74sc=&quot;cd $SC74/Slim&quot;
+
+# 7.5 SC
+alias         scup=&quot;cd $SC75 &amp;&amp; svk update -s&quot;
+alias         75sc=&quot;cd $SC75/Slim&quot;
+</code></pre></div>
+<p>You'll note in the above file there are a few alias directives to source rc files, which I manage separately. The purpose of these rc files is to set the LUA_PATH environmental variable so changes that I make in the subversion source area are reflected when running the build. Without these, only changes in the applet files of the build itself will be seen-- Or to put it another way, if you make a change in the source area without redefining LUA_PATH you need to rebuild before you see the change.</p>
+<p>Here's an example of an rc file for my 7.5 checkout:</p>
+<div class="highlight"><pre><span></span><code>export LUA_PATH=&#39;/Users/bklaas/svk/squeezeplay/7.5/trunk/squeezeplay/src/squeezeplay/share/?.lua&#39;
+export LUA_PATH=$LUA_PATH\;/Users/bklaas/svk/squeezeplay/7.5/trunk/squeezeplay/src/squeezeplay_desktop/share/?.lua
+export LUA_PATH=$LUA_PATH\;/Users/bklaas/svk/squeezeplay/7.5/trunk/squeezeplay/src/squeezeplay_contrib/share/?.lua
+export LUA_PATH=$LUA_PATH\;/Users/bklaas/svk/squeezeplay/7.5/trunk/squeezeplay/src/squeezeplay_test/share/?.lua
+</code></pre></div>
+<h3 id="testing-custom-changes-on-the-target-hardware">Testing custom changes on the target hardware</h3>
+<p>For testing on the target device (e.g., Squeezebox Radio) use secure copy (scp) to transfer the appropiate files to the device. You can do this with scp on a console like</p>
+<div class="highlight"><pre><span></span><code>scp APPLETNAMEApplet.lua root@192.168.?.?:/usr/share/jive/applets/APPLETNAME/
+</code></pre></div>
+<p>the path for applets on the target device is /usr/share/jive/applets/</p>
+<p>On windows a program like WinSCP or Filezilla can copy the files, or alternatively use a windows shell environment that will give you a command-line, Cygwin.</p>
+<p>Remember to restart SqueezePlay after the changes. Rebooting is one way to accomplish this, but even faster the following line, issued directly from the SSH-console of your device:</p>
+<div class="highlight"><pre><span></span><code>/etc/init.d/squeezeplay stopwdog &amp;&amp; /etc/init.d/squeezeplay restart
+</code></pre></div>
+<p>If you do this often, it's recommended to upload this as a little script to your device:</p>
+<div class="highlight"><pre><span></span><code>#!/bin/sh
+/etc/init.d/squeezeplay stopwdog &amp;&amp; /etc/init.d/squeezeplay restart
+</code></pre></div>
+<p>To watch the messages produced by your applet just follow the messages file</p>
+<div class="highlight"><pre><span></span><code>tail -f /var/log/messages
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="/privacy">Privacy Statement</a> | <a href="/terms">Terms of Service</a> | <a href="/downloads">Downloads</a> | <a href="/analytics">Analytics</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/LMS-Community/slimserver" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/r/lmscommunity/lyrionmusicserver" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://forums.lyrion.org" target="_blank" rel="noopener" title="forums.lyrion.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.09 10.316V24h21.82V0h-2.417l-5.461 19.613h-6.09l-3.134-9.246zm9.283-4.444 1.363 6.308L13.955 0H1.089v5.872Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://opencollective.com/lyrion" target="_blank" rel="noopener" title="opencollective.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c2.54 0 4.894-.79 6.834-2.135l-3.107-3.109a7.715 7.715 0 1 1 0-13.512l3.107-3.109A11.94 11.94 0 0 0 12 0m9.865 5.166-3.109 3.107A7.7 7.7 0 0 1 19.715 12a7.7 7.7 0 0 1-.959 3.727l3.109 3.107A11.94 11.94 0 0 0 24 12c0-2.54-.79-4.894-2.135-6.834"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.tabs.link", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.expand", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/vega@6.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/vega-lite@6.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/vega-embed@6.js"></script>
+      
+    
+  </body>
+</html>
