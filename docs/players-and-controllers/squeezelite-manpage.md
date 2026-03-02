@@ -7,7 +7,7 @@ hide:
 
 # squeezelite(1) - Lightweight headless Squeezebox emulator
 
-Debian Project, 2025-10-10
+Debian Project, 2026-03-01
 
 ```
 squeezelite [options]
