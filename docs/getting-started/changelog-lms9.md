@@ -10,9 +10,12 @@
 
 - Platform Support:
 
+	- Improve SSL support for Windows and macOS builds, updating Mozilla::CA to the latest version.
+
 - Bug Fixes:
 
 	- [#1517](https://github.com/LMS-Community/slimserver/pull/1517) \- Fix work images and artwork precaching (@darrell-k)
+	- [#1528](https://github.com/LMS-Community/slimserver/pull/1528) \- Fix FLAC to MP3 transcoding for mono tracks (@jbylsma)
 
 - Other:
 
