@@ -8,7 +8,7 @@ const DEBUG = DEV || false;
 const useragent = 'mai-api (v0.1)';
 const sender = 'webmaster@lyrion.org';
 
-const fromMatcher = new RegExp(/^noreply-[-a-z0-9]+@vbulletin\.net|postmaster@\w+\.outbound-mail\.sendgrid\.net$/);
+const fromMatcher = new RegExp(/^noreply-(?:[-a-z0-9]+|forums\.lyrion\.org)@vbulletin\.net|postmaster@\w+\.outbound-mail\.sendgrid\.net$/);
 const toMatcher = new RegExp(/^forum-registration-checker@lms-community\.org$/);
 
 const userEmailMatcher = new RegExp(/Email Address : ([-_+\w.@]+)/);
