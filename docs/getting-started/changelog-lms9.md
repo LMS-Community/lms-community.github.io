@@ -4,6 +4,8 @@
 
 - New Features:
 
+	- [#1541](https://github.com/LMS-Community/slimserver/pull/1541) \- Add per-player timezone support: players can now display date and time, and fire alarms, in their own timezone rather than the server's.
+
 - Server Changes:
 
 	- More aggressively cache DNS lookups, re-use cached data even if expired, but if lookup fails.
