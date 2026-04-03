@@ -10,6 +10,7 @@
 - Server Changes:
 
 	- More aggressively cache DNS lookups, re-use cached data even if expired, but if lookup fails.
+	- [#1548](https://github.com/LMS-Community/slimserver/pull/1548) \- Updated Czech translation (@mipa87)
 
 - Platform Support:
 
