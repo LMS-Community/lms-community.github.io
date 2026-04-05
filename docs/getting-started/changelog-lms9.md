@@ -30,6 +30,8 @@
 
 - Server Changes:
 
+	- Enable caching for radio artwork lookups.
+
 - Platform Support:
 
 - Bug Fixes:
