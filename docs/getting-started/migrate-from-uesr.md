@@ -32,3 +32,19 @@ When asked to create an account on MySqueezebox.com, skip that step and continue
 If you get an error "Problem Connecting - There is a problem connecting to MySqueezebox.com", you should be able to scroll down to "Switch Library", from where you can connect to your LMS.
 
 ![](assets/uesr-migration/problem-connecting-mysb.png)
+
+## Manual Migration if `config.logitechmusic.com` is down
+
+[Connect to the UE SmartRadio using SSH](../reference/enable-ssh.md). Add the following line to `/etc/hosts` using `vi` (or use something like [WinSCP](../reference/winscp.md)):
+
+```
+94.126.17.210   config.logitechmusic.com
+```
+
+Restart the device using the following command:
+
+```bash
+> reboot
+```
+
+This "hijacks" the host name `config.logitechmusic.com` and points it at the same host as [`www.herger.net`](https://www.herger.net). As we don't own the `logitechmusic.com` domain name we have to trick the device to believe the host was still up.

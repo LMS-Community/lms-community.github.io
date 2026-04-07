@@ -5,7 +5,9 @@ title: Music Service Plugin
 
 # Music Service Plugin Implementation Guide
 
-This document tries to outline how to implement an integration with a music service. It's base on the experience made with eg. [Spotty](https://github.com/michaelherger/Spotty-Plugin) or [Qobuz](https://github.com/pierrepoulpe/SqueezeboxQobuz). Check out one of those plugins if you want to get more ideas.
+This document tries to outline how to implement an integration with a music service. It's based on the experience made with eg. [Spotty](https://github.com/michaelherger/Spotty-Plugin) or [Qobuz](https://github.com/pierrepoulpe/SqueezeboxQobuz). Check out one of those plugins if you want to get more ideas.
+
+More and more detailed information can be found in the developer's documentation included with LMS: [DEVELOPERS.md](https://github.com/LMS-Community/slimserver/blob/HEAD/DEVELOPERS.md)
 
 ## File/Module Organization
 
