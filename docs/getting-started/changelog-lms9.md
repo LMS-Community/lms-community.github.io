@@ -4,6 +4,7 @@
 
 - New Features:
 
+	- [#1286](https://github.com/LMS-Community/slimserver/issues/1286) \- Display album cover for AudioAddict stations (inspired by some work by @mcduman)
 	- [#1541](https://github.com/LMS-Community/slimserver/pull/1541) \- Add per-player timezone support: players can now display date and time, and fire alarms, in their own timezone rather than the server's. (@boudekerk)
 	- [#1546](https://github.com/LMS-Community/slimserver/pull/1546) \- Add "Default Adjustment for Local Tracks" player option. (@SamInPgh)
 
@@ -21,6 +22,7 @@
 - Bug Fixes:
 
 	- [#1517](https://github.com/LMS-Community/slimserver/pull/1517) \- Fix work images and artwork precaching (@darrell-k)
+	- [#1553](https://github.com/LMS-Community/slimserver/pull/1553) \- Allow plugins to shut down before closing the database (@SamInPgh)
 
 - Other:
 
