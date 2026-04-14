@@ -40,6 +40,7 @@
 
 	- Some radio streams would redirect to web page when using a "Mozilla" user agent string.
 	- Fix software update check for Debian on i686 and older systems.
+	- Fix scheduling scans to run at midnight.
 	- [#1527](https://github.com/LMS-Community/slimserver/pull/1527) \- YAML::XS would turn booleans into read-only values on Perl 5.42
 	- [#1528](https://github.com/LMS-Community/slimserver/pull/1528) \- Fix FLAC to MP3 transcoding for mono tracks (@jbylsma)
 
