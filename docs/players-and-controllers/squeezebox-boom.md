@@ -31,7 +31,7 @@ After years of use, the vacuum fluorescent display (VFD) can turn dim or patchy 
 
 ### Power
 
-The PSU is 12V 2.5A DC, center positive. Connector: 2.5mm ID, 5.5mm OD, 11mm long. A suitable replacement is the Meanwell GST40A12-P1J.
+The PSU is 12V 2.5A DC, center positive. Connector: 2.1mm ID, 5.5mm OD, 11mm long. Suitable replacement PSU's are Meanwell models GST36E12-P1J and GST40A12-P1J.
 
 - Forum thread: [Repairing/ replacing the Boom Power Supply](https://forums.lyrion.org/showthread.php?55668-Repairing-replacing-the-Boom-Power-Supply)
 
