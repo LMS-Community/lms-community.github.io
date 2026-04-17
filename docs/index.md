@@ -95,7 +95,7 @@ Based on the Lyrion philosophy, the system is built on these four pillars:
 Lyrion’s greatest asset is its community repository. Lyrion allows you to "bolt on" features to suit your specific needs:
 
 *   **Material Skin:** A modern, responsive web interface that transforms the look into a sleek, contemporary app experience.
-*   **Streaming services:** All the major streaming services integration, allowing full library integration.
+*   **Streaming services:** All the major streaming services are supported, allowing full library integration for a seamless experience.
 *   **Music and Artist Information:** Automatically pulls biographies, lyrics, and high-quality artwork from multiple web sources.
 *   **Bridge Plugins:** Use the UPnP/DLNA, Chromecast, and AirPlay bridges to turn almost any smart speaker into a Lyrion player.
 *   **DSD support:** Supports DSD64, DSD128, and DSD256. Through the **DSDPlayer plugin**, it handles `.dsf` and `.dff` files. It offers "Native DSD" for supported DACs on Linux/Windows and "DoP" (DSD over PCM) for macOS and hardware-limited bridges. Also, it can transcode DSD streams to players that don't natively support them.
