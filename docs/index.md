@@ -26,7 +26,7 @@ title: Home
 
 **Lyrion Music Server**, formerly known as Logitech Media Server (LMS) or SlimServer, is a mature, community-driven, open-source audio streaming platform. It acts as a central hub for your music, allowing you to stream your personal local music collection (MP3, FLAC, ALAC, DSD, etc.) alongside major internet streaming services to any room in your house.
 
-Unlike many modern alternatives, Lyrion is completely independent of any single hardware brand or cloud service. It is designed to be lightweight enough to run on a low-power Raspberry Pi, yet powerful enough to manage libraries containing hundreds of thousands of tracks on high-end servers or NAS devices.
+Unlike many modern alternatives, Lyrion is completely independent of any single hardware brand or cloud service. It is designed to be lightweight enough to run on a low-power Raspberry Pi, yet powerful enough to manage libraries containing hundreds of thousands of tracks on desktop class hardware or NAS devices.
 
 ## :material-star-shooting: Why Choose Lyrion?
 
@@ -40,7 +40,7 @@ Lyrion is the premier choice for music enthusiasts who value control and longevi
 
     It runs on almost anything, from a vintage laptop to a high-end NAS, Raspberry Pi, or Docker container.
 
-    [:octicons-arrow-right-24: Getting started](getting-started)
+    [:octicons-arrow-right-24: Getting started](getting-started/index.md)
 
 -   :material-human-greeting-variant:{ .lg .middle } __Community powered__
 
@@ -66,9 +66,9 @@ Lyrion is the premier choice for music enthusiasts who value control and longevi
 
     ---
 
-    There are [plugins](plugins) and [extensions](extensions/applications) created for every use case imaginable.
+    There are [plugins](plugins/index.md) and [extensions](extensions/applications/index.md) created for every use case imaginable.
 
-    [:octicons-arrow-right-24: Plugins](plugins/directory)
+    [:octicons-arrow-right-24: Plugins](plugins/directory.md)
 
 -   :material-scale-balance:{ .lg .middle } __Open Source__
 
@@ -95,7 +95,7 @@ Based on the Lyrion philosophy, the system is built on these four pillars:
 Lyrion’s greatest asset is its community repository. Lyrion allows you to "bolt on" features to suit your specific needs:
 
 *   **Material Skin:** A modern, responsive web interface that transforms the look into a sleek, contemporary app experience.
-*   **Spotty:** Arguably the most robust Spotify integration for any music server, allowing full library integration.
+*   **Streaming services:** All the major streaming services integration, allowing full library integration.
 *   **Music and Artist Information:** Automatically pulls biographies, lyrics, and high-quality artwork from multiple web sources.
 *   **Bridge Plugins:** Use the UPnP/DLNA, Chromecast, and AirPlay bridges to turn almost any smart speaker into a Lyrion player.
 *   **DSD support:** Supports DSD64, DSD128, and DSD256. Through the **DSDPlayer plugin**, it handles `.dsf` and `.dff` files. It offers "Native DSD" for supported DACs on Linux/Windows and "DoP" (DSD over PCM) for macOS and hardware-limited bridges. Also, it can transcode DSD streams to players that don't natively support them.
