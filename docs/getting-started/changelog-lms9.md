@@ -24,6 +24,7 @@
 	- [#1517](https://github.com/LMS-Community/slimserver/pull/1517) \- Fix work images and artwork precaching (@darrell-k)
 	- [#1553](https://github.com/LMS-Community/slimserver/pull/1553) \- Allow plugins to shut down before closing the database (@SamInPgh)
 	- [#1555](https://github.com/LMS-Community/slimserver/issues/1555) \- Scanner: stop-gap to prevent contributor row poisoning when the MusicBrainz ID count does not match the artist name count. (@Rouzax)
+	- [#1558](https://github.com/LMS-Community/slimserver/pull/1558) \- Add album link for imported remote tracks (@SamInPgh)
 
 - Other:
 
