@@ -1,4 +1,4 @@
-name: Main GH Actions workflow
+name: Deploy web site
 
 on:
   push:
@@ -186,7 +186,7 @@ jobs:
           pip install mkdocs-charts-plugin
 
       - run: mkdocs gh-deploy --force
-        if: ${{ env.ACT != 'true' && inputs.branch == 'main' }}
+        if: ${{ env.ACT != 'true' && (inputs.branch == 'main' || github.event_name != 'workflow_dispatch') }}
 
       - name: Set-up s5cmd
         if: ${{ inputs.branch != 'main' && github.event_name == 'workflow_dispatch' }}
