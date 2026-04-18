@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Documentation page deployment source branch - any branch other than "main" will be used for testing and will not be deployed to gh-pages'
+        description: 'Documentation page deployment source branch - any branch other than "main" will be used for testing and will not be deployed using gh-pages, but to preview.lyrion.org instead'
         required: true
         default: main
 
@@ -32,7 +32,7 @@ env:
 jobs:
   check-slimserver-commit:
     name: Check latest slimserver commit
-    if: ${{ github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.branch == 'main' }}
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'push' || inputs.branch == 'main' }}
     runs-on: ubuntu-24.04
     outputs:
       changed: ${{ steps.restore_commit.outputs.cache-hit != 'true' }}
@@ -54,7 +54,7 @@ jobs:
   get-external-changelog:
     name: Import external data sources
     needs: check-slimserver-commit
-    if: ${{ needs.check-slimserver-commit.outputs.changed == 'true' && (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.branch == 'main') }}
+    if: ${{ needs.check-slimserver-commit.outputs.changed == 'true' }}
     runs-on: ubuntu-24.04
     steps:
       - name: Install html2md repository and other depedencies
@@ -109,7 +109,7 @@ jobs:
           rm -rf slimserver
 
       - name: Commit changes
-        if: ${{ env.ACT != 'true' }}
+        if: ${{ env.ACT != 'true' && github.event_name != 'workflow_dispatch' }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
@@ -130,7 +130,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: ${{ github.event.inputs.branch }}
+          ref: ${{ inputs.branch }}
 
       - name: Install dependencies
         if: ${{ env.ACT != 'true' }}
@@ -186,19 +186,19 @@ jobs:
           pip install mkdocs-charts-plugin
 
       - run: mkdocs gh-deploy --force
-        if: ${{ env.ACT != 'true' && github.event.inputs.branch != 'main' }}
+        if: ${{ env.ACT != 'true' && inputs.branch == 'main' }}
 
       - name: Set-up s5cmd
-        if: github.event.inputs.branch != 'main'
+        if: ${{ inputs.branch != 'main' && github.event_name == 'workflow_dispatch' }}
         uses: peak/action-setup-s5cmd@main
         with:
           version: v2.3.0
 
       - run: mkdocs build
-        if: github.event.inputs.branch != 'main'
+        if: ${{ inputs.branch != 'main' && github.event_name == 'workflow_dispatch' }}
 
       - name: Deploy to Cloudflare R2
-        if: github.event.inputs.branch != 'main'
+        if: ${{ env.ACT != 'true' && inputs.branch != 'main' && github.event_name == 'workflow_dispatch' }}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
