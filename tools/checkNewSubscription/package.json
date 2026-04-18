@@ -1,12 +1,12 @@
 {
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260313.1",
-    "@types/node": "^25.5.0",
-    "typescript": "^5.9.3"
+    "@cloudflare/workers-types": "^4.20260418.1",
+    "@types/node": "^25.6.0",
+    "typescript": "^6.0.3"
   },
   "dependencies": {
     "cloudflare": "^5.2.0",
     "mimetext": "^3.0.28",
-    "postal-mime": "^2.7.3"
+    "postal-mime": "^2.7.4"
   }
 }

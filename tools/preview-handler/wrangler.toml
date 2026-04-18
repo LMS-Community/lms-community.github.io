@@ -1,0 +1,21 @@
+name = "lms-site-preview"
+main = "src/index.ts"
+compatibility_date = "2024-04-05"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+preview_urls = false
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[[routes]]
+pattern = "preview.lyrion.org"
+custom_domain = true
+
+[[r2_buckets]]
+binding = 'PREVIEW'
+bucket_name = 'site-preview'
+preview_bucket_name = 'site-preview'
+jurisdiction = "eu"
+remote = true
