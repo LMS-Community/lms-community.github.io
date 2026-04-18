@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Documentation page deployment source branch'
+        description: 'Documentation page deployment source branch - any branch other than "main" will be used for testing and will not be deployed to gh-pages'
         required: true
         default: main
 
@@ -32,6 +32,7 @@ env:
 jobs:
   check-slimserver-commit:
     name: Check latest slimserver commit
+    if: github.event.inputs.branch == 'main'
     runs-on: ubuntu-24.04
     outputs:
       changed: ${{ steps.restore_commit.outputs.cache-hit != 'true' }}
@@ -41,7 +42,7 @@ jobs:
         run: |
           latest_commit=$(git ls-remote https://github.com/LMS-Community/slimserver.git HEAD | awk '{print $1}')
           echo "latest_commit=$latest_commit" >> $GITHUB_OUTPUT
-          echo "${{ steps.get_commit.outputs.latest_commit }}" > .slimserver_last_commit
+          echo "$latest_commit" > .slimserver_last_commit
 
       - name: Cache last known commit hash
         id: restore_commit
@@ -53,7 +54,7 @@ jobs:
   get-external-changelog:
     name: Import external data sources
     needs: check-slimserver-commit
-    if: needs.check-slimserver-commit.outputs.changed == 'true'
+    if: needs.check-slimserver-commit.outputs.changed == 'true' && github.event.inputs.branch == 'main'
     runs-on: ubuntu-24.04
     steps:
       - name: Install html2md repository and other depedencies
@@ -145,15 +146,18 @@ jobs:
           sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl libyaml-perl
 
       - name: Get release downloads and embed in Getting Started document
+        if: ${{ !env.ACT }}
         run: |
           tools/build-server-downloads-page.pl
 
       - name: Get plugin repository and convert to markdown
+        if: ${{ !env.ACT }}
         run: |
           tools/build-plugin-repository.pl > $PLUGIN_TARGET
 
       - name: Get analytics data
         # if: github.event_name == 'schedule'
+        if: ${{ !env.ACT }}
         run: |
           tools/get-analytics-data.pl > $STATS_JSON
 
@@ -182,4 +186,21 @@ jobs:
           pip install mkdocs-charts-plugin
 
       - run: mkdocs gh-deploy --force
-        if: ${{ !env.ACT }}
+        if: ${{ !env.ACT && startsWith(github.ref, 'refs/heads/main') }}
+
+      - name: Set-up s5cmd
+        if: github.event.inputs.branch != 'main'
+        uses: peak/action-setup-s5cmd@main
+        with:
+          version: v2.3.0
+
+      - run: mkdocs build
+        if: ${{ env.ACT || github.event.inputs.branch != 'main' }}
+
+      - name: Deploy to Cloudflare R2
+        if: ${{ env.ACT || github.event.inputs.branch != 'main' }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ inputs.AWS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ inputs.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-1
+        run: s5cmd --log=debug --endpoint-url https://e83bc03c881257fada7ca16c243e9298.eu.r2.cloudflarestorage.com sync site/ s3://preview/
