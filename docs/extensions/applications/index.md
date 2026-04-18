@@ -27,7 +27,7 @@ title: Applications
 - [LMS-Lite](https://smartskills.tech/lmslitesetup/index.html) (Alexa) A smart-home Alexa skill to add LMS players to Alexa routines.
 
 ## Display
-- [LMSMonitor](https://github.com/shunte88/LMSMonitor): OLED information display control program for piCorePlayer or other Raspberry Pi and LMS based audio device.
+- [LyMonS](https://github.com/shunte88/LyMonS): OLED information display control program for piCorePlayer or other Raspberry Pi and LMS based audio device.
 - [OLED Control for PCP 7.x, 8.X & 9.X](https://github.com/peteS-UK/EvoSabre-DAC-PCP): Display information from LMS on an OLED display.
 
 ## Music Visualizer
