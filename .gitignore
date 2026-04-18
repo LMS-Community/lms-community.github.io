@@ -8,3 +8,5 @@ plugins.json
 **/.wrangler
 tools/bug-extractor
 .env
+site
+event.json

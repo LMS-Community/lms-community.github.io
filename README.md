@@ -7,12 +7,18 @@ The site is based on mkdocs-material (https://squidfunk.github.io/mkdocs-materia
 
 To get a local development environment up you can do **one of the following**:
 
-### Use docker
+### Use Docker for development
 
 1. Clone this repository (or fork this repository).
 2. Build the Docker image with additional plugins : `docker build -t mkdocs-material-with-plugins .`
 3. Run `docker run --rm -it -p 8000:8000 -v ${PWD}:/docs mkdocs-material-with-plugins` to setup a live preview server from the local repository. The server will automatically rebuild the site upon saving.
 4. Point your browser to [localhost:8000](http://localhost:8000).
+
+### Use Docker to build static files
+
+1. as before
+2. dito
+3. Run `docker run --rm -it -p 8000:8000 -v ${PWD}:/docs mkdocs-material-with-plugins build`. This will produce the static files in a subfolder called `site`.
 
 ### Install mkdocs-material
 
@@ -47,9 +53,18 @@ in the `tools` folder.
 In order to test the workflow, install [`act`](https://github.com/nektos/act). Then run the following:
 
 ```
-act --pull=false workflow_dispatch -P ubuntu-24.04=catthehacker/ubuntu:act-latest --workflows .github/workflows/main.yml
+act --pull=false workflow_dispatch -P ubuntu-24.04=catthehacker/ubuntu:act-latest --workflows .github/workflows/main.yml [-e event.json]
 ```
 
+`event.json` would provide eg. input parameters:
+
+```json
+{
+    "input": {
+        "branch": "my-new-page"
+    }
+}
+```
 
 ## Code Signing Policy (Windows)
 

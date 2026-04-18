@@ -1,4 +1,4 @@
-name: Main GH Actions workflow
+name: Deploy web site
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Documentation page deployment source branch'
+        description: 'Documentation page deployment source branch - any branch other than "main" will be used for testing and will not be deployed using gh-pages, but to preview.lyrion.org instead'
         required: true
         default: main
 
@@ -32,6 +32,7 @@ env:
 jobs:
   check-slimserver-commit:
     name: Check latest slimserver commit
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'push' || inputs.branch == 'main' }}
     runs-on: ubuntu-24.04
     outputs:
       changed: ${{ steps.restore_commit.outputs.cache-hit != 'true' }}
@@ -41,7 +42,7 @@ jobs:
         run: |
           latest_commit=$(git ls-remote https://github.com/LMS-Community/slimserver.git HEAD | awk '{print $1}')
           echo "latest_commit=$latest_commit" >> $GITHUB_OUTPUT
-          echo "${{ steps.get_commit.outputs.latest_commit }}" > .slimserver_last_commit
+          echo "$latest_commit" > .slimserver_last_commit
 
       - name: Cache last known commit hash
         id: restore_commit
@@ -53,7 +54,7 @@ jobs:
   get-external-changelog:
     name: Import external data sources
     needs: check-slimserver-commit
-    if: needs.check-slimserver-commit.outputs.changed == 'true'
+    if: ${{ needs.check-slimserver-commit.outputs.changed == 'true' }}
     runs-on: ubuntu-24.04
     steps:
       - name: Install html2md repository and other depedencies
@@ -67,7 +68,7 @@ jobs:
           fi
 
       - name: Install APT depedencies
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' }}
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: html2md python3-babel
@@ -108,7 +109,7 @@ jobs:
           rm -rf slimserver
 
       - name: Commit changes
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' && github.event_name != 'workflow_dispatch' }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
@@ -129,31 +130,34 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: ${{ github.event.inputs.branch }}
+          ref: ${{ inputs.branch }}
 
       - name: Install dependencies
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' }}
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: libjson-perl libwww-perl libxml-simple-perl libyaml-perl
           version: 1
 
       - name: Install depedencies (ACT mode)
-        if: ${{ env.ACT }}
+        if: ${{ env.ACT == 'true' }}
         run: |
           sudo apt-get update
           sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl libyaml-perl
 
       - name: Get release downloads and embed in Getting Started document
+        if: ${{ env.ACT != 'true' }}
         run: |
           tools/build-server-downloads-page.pl
 
       - name: Get plugin repository and convert to markdown
+        if: ${{ env.ACT != 'true' }}
         run: |
           tools/build-plugin-repository.pl > $PLUGIN_TARGET
 
       - name: Get analytics data
         # if: github.event_name == 'schedule'
+        if: ${{ env.ACT != 'true' }}
         run: |
           tools/get-analytics-data.pl > $STATS_JSON
 
@@ -182,4 +186,21 @@ jobs:
           pip install mkdocs-charts-plugin
 
       - run: mkdocs gh-deploy --force
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' && (inputs.branch == 'main' || github.event_name != 'workflow_dispatch') }}
+
+      - name: Set-up s5cmd
+        if: ${{ inputs.branch != 'main' && github.event_name == 'workflow_dispatch' }}
+        uses: peak/action-setup-s5cmd@main
+        with:
+          version: v2.3.0
+
+      - run: mkdocs build
+        if: ${{ inputs.branch != 'main' && github.event_name == 'workflow_dispatch' }}
+
+      - name: Deploy to Cloudflare R2
+        if: ${{ env.ACT != 'true' && inputs.branch != 'main' && github.event_name == 'workflow_dispatch' }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-1
+        run: s5cmd --log=debug --endpoint-url https://e83bc03c881257fada7ca16c243e9298.eu.r2.cloudflarestorage.com sync site/ s3://site-preview/
