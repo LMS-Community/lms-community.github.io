@@ -68,7 +68,7 @@ jobs:
           fi
 
       - name: Install APT depedencies
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' }}
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: html2md python3-babel
@@ -109,7 +109,7 @@ jobs:
           rm -rf slimserver
 
       - name: Commit changes
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
@@ -133,31 +133,31 @@ jobs:
           ref: ${{ github.event.inputs.branch }}
 
       - name: Install dependencies
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' }}
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: libjson-perl libwww-perl libxml-simple-perl libyaml-perl
           version: 1
 
       - name: Install depedencies (ACT mode)
-        if: ${{ env.ACT }}
+        if: ${{ env.ACT == 'true' }}
         run: |
           sudo apt-get update
           sudo apt-get install -y libjson-perl libwww-perl libxml-simple-perl libyaml-perl
 
       - name: Get release downloads and embed in Getting Started document
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' }}
         run: |
           tools/build-server-downloads-page.pl
 
       - name: Get plugin repository and convert to markdown
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' }}
         run: |
           tools/build-plugin-repository.pl > $PLUGIN_TARGET
 
       - name: Get analytics data
         # if: github.event_name == 'schedule'
-        if: ${{ !env.ACT }}
+        if: ${{ env.ACT != 'true' }}
         run: |
           tools/get-analytics-data.pl > $STATS_JSON
 
@@ -186,7 +186,7 @@ jobs:
           pip install mkdocs-charts-plugin
 
       - run: mkdocs gh-deploy --force
-        if: ${{ !env.ACT && github.event.inputs.branch != 'main' }}
+        if: ${{ env.ACT != 'true' && github.event.inputs.branch != 'main' }}
 
       - name: Set-up s5cmd
         if: github.event.inputs.branch != 'main'
@@ -195,10 +195,10 @@ jobs:
           version: v2.3.0
 
       - run: mkdocs build
-        if: ${{ env.ACT || github.event.inputs.branch != 'main' }}
+        if: github.event.inputs.branch != 'main'
 
       - name: Deploy to Cloudflare R2
-        if: ${{ env.ACT || github.event.inputs.branch != 'main' }}
+        if: github.event.inputs.branch != 'main'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
