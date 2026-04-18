@@ -18,9 +18,18 @@ title: Home
 <p style="margin-top: -1.5rem; font-size: 1.1rem; color: gray;">Free your music.</p>
 
 
-<figure markdown="span">
+<!--<figure markdown="span">
   ![](assets/lyrion-material-screenshot.png){ width="800" }
-</figure>
+</figure>-->
+
+=== "Material skin"
+    ![Material skin](assets/lyrion-material-screenshot.png)
+
+=== "Default skin"
+    ![Default skin](assets/screenshot.png)
+
+=== "Jivelite"
+    ![Jivelite](players-and-controllers/assets/jivelite.jpg)
 
 ## :material-music: What is Lyrion?
 
@@ -85,7 +94,7 @@ Lyrion is the premier choice for music enthusiasts who value control and longevi
 Based on the Lyrion philosophy, the system is built on these four pillars:
 
 1.  **Free Software:** Completely open-source and free to use forever.
-2.  **Hardware Agnostic:** Use your existing audio gear, AirPlay receivers, Chromecasts, or DIY players (like Squeezelite).
+2.  **Hardware Agnostic:** Although originally designed for [Squeezebox audio players](players-and-controllers/index.md#squeezebox-hardware-discontinued), Lyrion has evolved to be hardware agnostic supporting all of the common standards like AirPlay receivers, Chromecasts, or DIY players (like Squeezelite).
 3.  **Massive Scalability:** Effortlessly handles libraries with 100,000+ tracks with lightning-fast indexing and search.
 4.  **Perfect Multi-room:** Achieve sample-accurate synchronization across your entire home, regardless of the different hardware brands you use.
 
