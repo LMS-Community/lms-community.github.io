@@ -186,7 +186,7 @@ jobs:
           pip install mkdocs-charts-plugin
 
       - run: mkdocs gh-deploy --force
-        if: ${{ !env.ACT && startsWith(github.ref, 'refs/heads/main') }}
+        if: ${{ !env.ACT && github.event.inputs.branch != 'main' }}
 
       - name: Set-up s5cmd
         if: github.event.inputs.branch != 'main'
@@ -200,7 +200,7 @@ jobs:
       - name: Deploy to Cloudflare R2
         if: ${{ env.ACT || github.event.inputs.branch != 'main' }}
         env:
-          AWS_ACCESS_KEY_ID: ${{ inputs.AWS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ inputs.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: us-east-1
         run: s5cmd --log=debug --endpoint-url https://e83bc03c881257fada7ca16c243e9298.eu.r2.cloudflarestorage.com sync site/ s3://preview/
