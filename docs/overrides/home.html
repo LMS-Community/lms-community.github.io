@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block tabs %}
+{{ super() }}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{{base_url}}/home.css">
+{% endblock %}
+
+<div class="home">
+    <div class="Lyrion" id="Lyrion">
+		<div class="title">
+			<h1>Lyrion Music Server</h1>
+			<h2>Free your music.</h2>
+		</div>
+		<p>Lyrion Music Server is the open-source heart of your audio setup, seamlessly bridging your personal music library and favorite streaming services to any device in your home.</p>
+        <div class="download-hyperlink upper-button">
+			<a href="{{ 'learn-more/' | url }}">Learn more...</a>
+		</div>
+	</div>
+
+	<div class="feature-list">
+        {% for feat in page.meta.features %}
+        {% set chirality = "left" if loop.index % 2 == 0 else "right" %}
+        <div class="feature feature-{{chirality}}">
+            <div class="feature-text">
+                <h2>{{ feat.title }}</h2>
+                <div class="feature-description-container">
+                    {% for description in feat.bullets %}
+                    <div class="feature-description">
+                        <p class="bullet-point">|</p><p>{{description}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <img src="/assets/{{feat.image}}" />
+        </div>
+        {% endfor %}
+	</div>
+	<div class="download-hyperlink bottom-button">
+		<a href="{{ 'getting-started/' | url }}">Getting started</a>
+	</div>
+</div>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}
+{% endblock %}
