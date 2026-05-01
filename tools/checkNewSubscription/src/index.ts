@@ -7,6 +7,7 @@ const DEBUG = DEV || false;
 
 const useragent = 'mai-api (v0.1)';
 const sender = 'webmaster@lyrion.org';
+const recipient = 'lyrion@herger.net';
 
 const fromMatcher = new RegExp(/^noreply-(?:[-a-z0-9]+|forums\.lyrion\.org)@vbulletin\.net|postmaster@\w+\.outbound-mail\.sendgrid\.net$/);
 const toMatcher = new RegExp(/^forum-registration-checker@lms-community\.org$/);
@@ -26,7 +27,7 @@ export default {
       return message.setReject('Failed to parse email');
     }
 
-    DEBUG && console.log(email);
+    DEBUG && console.log('Original email:', email);
 
     // TODO - forward 1:1 if something fails?
     if (!fromMatcher.test(email.from?.address || '')) {
@@ -58,7 +59,7 @@ async function sendResponse(email: Email, emailReputation: any, ipReputation: an
   const mime = createMimeMessage();
 
   mime.setSender({ name: 'Webmaster Lyrion.org', addr: sender });
-  mime.setRecipient({ addr: env.EMAIL });
+  mime.setRecipient({ addr: recipient });
   mime.setSubject(email.subject || `New user registration`);
 
   let body = email.text?.replaceAll(/\n/, '<br/>') || email.html || `A new user has registered at Lyrion : Community : Forums<br/><br/>`;
@@ -84,7 +85,7 @@ async function sendResponse(email: Email, emailReputation: any, ipReputation: an
 
   mime.addMessage({ contentType: 'text/html', data: body });
 
-  const message = new EmailMessage(sender, env.EMAIL, mime.asRaw());
+  const message = new EmailMessage(sender, recipient, mime.asRaw());
 
   return env.EMAIL.send(message);
 }
