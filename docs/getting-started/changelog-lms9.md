@@ -7,6 +7,7 @@
 	- [#1286](https://github.com/LMS-Community/slimserver/issues/1286) \- Display album cover for AudioAddict stations (inspired by some work by @mcduman)
 	- [#1541](https://github.com/LMS-Community/slimserver/pull/1541) \- Add per-player timezone support: players can now display date and time, and fire alarms, in their own timezone rather than the server's. (@boudekerk)
 	- [#1546](https://github.com/LMS-Community/slimserver/pull/1546) \- Add "Default Adjustment for Local Tracks" player option. (@SamInPgh)
+	- [#1564](https://github.com/LMS-Community/slimserver/pull/1564) \- Add Dismiss option to Jive alarm popup (@boudekerk)
 
 - Server Changes:
 
@@ -18,13 +19,17 @@
 - Platform Support:
 
 	- Improve SSL support for Windows and macOS builds, updating Mozilla::CA to the latest version.
+	- Update Audio-Scan module to version 1.12 (Windows, macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @cheesestraws)
 
 - Bug Fixes:
 
+	- [#10](https://github.com/LMS-Community/Audio-Scan/pull/10) \- id3: Never add undef to tag hash for empty or invalid TXXX key (@cheesestraws)
+	- [#1140](https://github.com/LMS-Community/slimserver/pull/1140) \- Fix stat returning an empty size for most files (@jecaro)
 	- [#1517](https://github.com/LMS-Community/slimserver/pull/1517) \- Fix work images and artwork precaching (@darrell-k)
 	- [#1553](https://github.com/LMS-Community/slimserver/pull/1553) \- Allow plugins to shut down before closing the database (@SamInPgh)
 	- [#1555](https://github.com/LMS-Community/slimserver/issues/1555) \- Scanner: stop-gap to prevent contributor row poisoning when the MusicBrainz ID count does not match the artist name count. (@Rouzax)
 	- [#1558](https://github.com/LMS-Community/slimserver/pull/1558) \- Add album link for imported remote tracks (@SamInPgh)
+	- [#1563](https://github.com/LMS-Community/slimserver/pull/1563) \- Fix restoration of pre-alarm volume when changing the alarm volume while playing (@boudekerk)
 
 - Other:
 
@@ -37,6 +42,8 @@
 	- Enable caching for radio artwork lookups.
 
 - Platform Support:
+
+	- [#1562](https://github.com/LMS-Community/slimserver/pull/1562) \- Improve compatibility with newer versions of DBIx::Class (@paulgevers)
 
 - Bug Fixes:
 
