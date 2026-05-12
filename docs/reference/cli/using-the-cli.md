@@ -61,6 +61,18 @@ As you can see the URI encoding does add quite a bit of overhead to the overall 
 
 > `{"id":0,"params":["00:04:20:10:01:xx",["pause"]],"method":"slim.request"}`
 
+## STDIO (direct input for developers)
+
+If you are a developer and often run Lyrion Music Server from the command line directly (`./slimserver.pl` or `perl slimserver.pl`) you can enable STDIO mode: in this mode you can type CLI commands directly in the terminal where you run the server. In order to do so define an environment variable `LMS_STDIO=1` before you launch the server. After that you can directly type your commands where the log output is shown:
+
+```bash
+% LMS_STDIO=1 ./slimserver.pl
+[26-05-12 07:58:10.7029] main::init (282) Starting Lyrion Music Server (v9.2.0, git-49cc1af44, 2026-05-10 11:03:48 +0200) perl 5.034000 - darwin-thread-multi-2level
+[26-05-12 07:58:11.4062] main::init (555) Server done init: http://192.168.0.123:9000
+status 0 1
+00%3A113A22%3A33%3A44%3A55 status 0 1 player_name%3ALyrion%20Minim player_connected%3A1 player_ip%3A127.0.0.1%3A54820 power%3A1 signalstrength%3A0 mode%3Astop remote%3A1 current_title%3APictures%20-%20Gnarls%20Barkley%20(0) title%3APictures ...
+```
+
 ## Examples
 
 ### Mute a player
