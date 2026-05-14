@@ -19,6 +19,7 @@
 - Platform Support:
 
 	- Improve SSL support for Windows and macOS builds, updating Mozilla::CA to the latest version.
+	- Add ARM64 sox binary for macOS (@ralphy)
 	- Update Audio-Scan module to version 1.12 (Windows, macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @cheesestraws)
 
 - Bug Fixes:
@@ -30,6 +31,7 @@
 	- [#1555](https://github.com/LMS-Community/slimserver/issues/1555) \- Scanner: stop-gap to prevent contributor row poisoning when the MusicBrainz ID count does not match the artist name count. (@Rouzax)
 	- [#1558](https://github.com/LMS-Community/slimserver/pull/1558) \- Add album link for imported remote tracks (@SamInPgh)
 	- [#1563](https://github.com/LMS-Community/slimserver/pull/1563) \- Fix restoration of pre-alarm volume when changing the alarm volume while playing (@boudekerk)
+	- [#1571](https://github.com/LMS-Community/slimserver/pull/1571) \- Guard ReplayGain and URL tag processing against arrayrefs (@Rouzax)
 
 - Other:
 
