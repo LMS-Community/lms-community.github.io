@@ -12,6 +12,7 @@ title: Applications
 - [LMS TUI ](https://www.nexus0.net/pub/sw/lmstui/) (Terminal): An application with a text-based user interface to remotely control LMS.
 - [LyrPlay](https://apps.apple.com/app/lyrplay/id6746776736) (iOS/iPadOS): Turns your device into a player and controller (using MaterialSkin).
 - [Lyrion](https://f-droid.org/packages/com.craigd.lmsmaterial.app/) (Android): Simple webview wrapper for MaterialSkin on an LMS server.
+- [lyrtui](https://github.com/hjelev/lyrtui) (Terminal): TUI with images for Lyrion / LMS (written in rust)
 - [melodeon](https://github.com/CDrummond/melodeon) (Desktop): Simple QWebEngine wrapper for MaterialSkin on LMS.
 - [ncsb](https://github.com/atisharma/ncsb) (Terminal): A ncurses Squeezebox controller for LMS.
 - [Open Squeeze](https://github.com/orangebikelabs/opensqueeze) (Android):  An Android app that can be used to control LMS devices.
