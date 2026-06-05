@@ -407,7 +407,7 @@
 
 ## Version 8.0.0 - 2020-11-20 (e0eee9c29)
 
-- Upstream fixes from Logitech Media Server 7.9.3
+- [Upstream fixes from Logitech Media Server 7.9.3](#version-793)
 
 - New Features:
 
