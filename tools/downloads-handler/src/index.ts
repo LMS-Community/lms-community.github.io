@@ -29,13 +29,15 @@ const app = new Hono()
 app.get(`/${urlPrefix}/:prefix{.*}`, async (c: Context, ) => {
     const prefix = c.req.param('prefix');
 
-    DEBUG && console.log(prefix)
+    DEBUG && console.log(`Prefix: ${prefix}`);
 
-    if (!prefix) {
+    if (!prefix || /\./.test(prefix)) {
         return Response.redirect('https://lyrion.org/getting-started')
     }
 
-    if (prefix && allowedPrefixes.some(p => new RegExp(p).test(prefix))) {
+    if (allowedPrefixes.some(p => new RegExp(`^${p}`).test(prefix))) {
+        DEBUG && console.log(`Listing objects with prefix ${prefix}...`)
+
         const listing = await c.env.DOWNLOADS_BUCKET.list({ prefix })
 
         // we only want objects with the given prefix, but no sub-folders
@@ -45,6 +47,7 @@ app.get(`/${urlPrefix}/:prefix{.*}`, async (c: Context, ) => {
             .filter((i: any) => filterRe.test(i.key))
             .map((i: any) => ({
                 key: i.key,
+                name: i.key.split('/').slice(-1)[0],
                 size: i.size,
             }))
 
@@ -57,6 +60,9 @@ app.get(`/${urlPrefix}/:prefix{.*}`, async (c: Context, ) => {
         ) || '')
 
         return c.json(body)
+    }
+    else {
+        console.warn(`Prefix ${prefix} is not allowed!`)
     }
 
     // we don't want to reveal a path doesn't exist - return valid, but empty result set

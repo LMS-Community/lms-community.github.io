@@ -5,6 +5,13 @@ title: Downloads Archive
 
 For the archeologists among you. Or those who believe that SlimServer v6.3.1 provided the best sound ever: here you go.
 
+## Some random Documents
+
+We've archived a [random selection of manuals, publishings, specs](listing.md?docs), etc. around the Squeezebox
+from back in the days. Enjoy the reading!
+
+
+
 !!! warning
     These releases are unsupported. Many probably don't work any more. Use at your own risk.
 
