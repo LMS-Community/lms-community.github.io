@@ -31,7 +31,7 @@ app.get(`/${urlPrefix}/:prefix{.*}`, async (c: Context, ) => {
 
     DEBUG && console.log(`Prefix: ${prefix}`);
 
-    if (!prefix || /\./.test(prefix)) {
+    if (!prefix || /\.\.+/.test(prefix)) {
         return Response.redirect('https://lyrion.org/getting-started')
     }
 
