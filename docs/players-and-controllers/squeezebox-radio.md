@@ -28,10 +28,15 @@ Settings → Advanced → Networking → Remote Library → Add New Library → 
 
 You should then be connected to your local LMS.  If you have the plugin entitled "Community Firmware for Touch/Radio/Controller" installed on your local LMS, you should see a prompt for a firmware update which will eliminate the connection attempt to MySqueezebox.com and rebrand the startup screen to Lyrion.
 
-
 ## UE Smart Radio
 
 Some SB Radios have been "upgraded" to UE Smart Radio. Follow [this guide](../getting-started/migrate-from-uesr.md) if you want to revert to Squeezebox.
+
+## Service and repair
+
+### Power
+
+The power supply for the Squeezebox Radio is rated at 18V 1A. Before replacing the power supply, please verify that the connector on the Squeezebox Radio is still good or that indeed the power supply unit does not work anymore. A suitable replacement is the Mean Well GST18E18-P1J.
 
 ## See also
 
