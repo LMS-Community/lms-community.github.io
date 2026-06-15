@@ -69,7 +69,7 @@ jobs:
 
       - name: Install APT depedencies
         if: ${{ env.ACT != 'true' }}
-        uses: awalsh128/cache-apt-pkgs-action@latest
+        uses: awalsh128/cache-apt-pkgs-action@v1.6.1
         with:
           packages: html2md python3-babel
           version: 1
@@ -134,7 +134,7 @@ jobs:
 
       - name: Install dependencies
         if: ${{ env.ACT != 'true' }}
-        uses: awalsh128/cache-apt-pkgs-action@latest
+        uses: awalsh128/cache-apt-pkgs-action@v1.6.1
         with:
           packages: libjson-perl libwww-perl libxml-simple-perl libyaml-perl
           version: 1
