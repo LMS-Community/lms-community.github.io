@@ -1,6 +1,6 @@
 ## Version 9.2.0
 
-- [Upstream fixes from Logitech Media Server 9.1.x](http://raw.githubusercontent.com/v9.1.1)
+- [Upstream fixes from Logitech Media Server 9.1.x](http://raw.githubusercontent.com/v9.1.2)
 
 - New Features:
 
@@ -16,16 +16,19 @@
 	- [#1548](https://github.com/LMS-Community/slimserver/pull/1548) \- Updated Czech translation (@mipa87)
 	- [#1549](https://github.com/LMS-Community/slimserver/pull/1549) \- Update CODE2000 font to 1.176 (@mipa87)
 	- [#1550](https://github.com/LMS-Community/slimserver/pull/1550) \- Update wizard plugin JSON encoding to use UTF-8 for HTML templates (@mipa87)
+	- [#1593](https://github.com/LMS-Community/slimserver/pull/1593) \- Make external scanner startup failures visible (@maxxi-bit)
 
 - Platform Support:
 
 	- Improve SSL support for Windows and macOS builds, updating Mozilla::CA to the latest version.
 	- Add ARM64 sox binary for macOS (@ralphy)
-	- Update Audio-Scan module to version 1.12 (Windows, macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @cheesestraws)
+	- Update Audio::Scan module to version 1.13 (Windows, macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @arigit, @cheesestraws)
 	- [#106](https://github.com/LMS-Community/slimserver-platforms/pull/106) \- Removal of SYSV Init support and better systemd support in the RPM package for Red Hat/SUSE (@JohanSaaw, @mavit)
 
 - Bug Fixes:
 
+	- Fix an issue with the image resizer where an explicitly requested format was not honored when padding was needed.
+	- On Debian based systems avoid downloading packages for unsupported Perl versions.
 	- [#10](https://github.com/LMS-Community/Audio-Scan/pull/10) \- id3: Never add undef to tag hash for empty or invalid TXXX key (@cheesestraws)
 	- [#1140](https://github.com/LMS-Community/slimserver/pull/1140) \- Fix stat returning an empty size for most files (@jecaro)
 	- [#1517](https://github.com/LMS-Community/slimserver/pull/1517) \- Fix work images and artwork precaching (@darrell-k)
@@ -38,9 +41,19 @@
 
 - Other:
 
-## Version 9.1.1
+## Version 9.1.2
 
 - New Features:
+
+- Server Changes:
+
+- Platform Support:
+
+- Bug Fixes:
+
+- Other:
+
+## Version 9.1.1 - 2026-06-17 (1ceeaf1d6)
 
 - Server Changes:
 
@@ -59,8 +72,6 @@
 	- [#1527](https://github.com/LMS-Community/slimserver/pull/1527) \- YAML::XS would turn booleans into read-only values on Perl 5.42
 	- [#1528](https://github.com/LMS-Community/slimserver/pull/1528) \- Fix FLAC to MP3 transcoding for mono tracks (@jbylsma)
 	- [#1573](https://github.com/LMS-Community/slimserver/pull/1573) \- Fix release types for Squeezeplay/Touch etc. (@darrell-k)
-
-- Other:
 
 ## Version 9.1.0 - 2026-02-19 (d19d25040)
 
