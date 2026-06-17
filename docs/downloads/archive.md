@@ -17,7 +17,8 @@ from back in the days. Enjoy the reading!
 
 [Go back to safety, get the latest release](../getting-started/index.md).
 
-## Lyrion Music Server (9.0.*)
+## Lyrion Music Server (9.0.0-9.1.*)
+* [LyrionMusicServer_v9.1.0](listing.md?LyrionMusicServer_v9.1.0)
 * [LyrionMusicServer_v9.0.4_unreleased](listing.md?LyrionMusicServer_v9.0.4_unreleased)
 * [LyrionMusicServer_v9.0.3](listing.md?LyrionMusicServer_v9.0.3)
 * [LyrionMusicServer_v9.0.2](listing.md?LyrionMusicServer_v9.0.2)
@@ -25,7 +26,7 @@ from back in the days. Enjoy the reading!
 * [LyrionMusicServer_v9.0.0](listing.md?LyrionMusicServer_v9.0.0)
 
 
-## Logitech Media Server (7.7.0 - 8.5.x)
+## Logitech Media Server (7.7.0-8.5.x)
 
 * [LogitechMediaServer_v8.5.3_unreleased](listing.md?LogitechMediaServer_v8.5.3_unreleased)
 * [LogitechMediaServer_v8.5.2](listing.md?LogitechMediaServer_v8.5.2)
