@@ -29,6 +29,7 @@
 
 	- Fix an issue with the image resizer where an explicitly requested format was not honored when padding was needed.
 	- On Debian based systems avoid downloading packages for unsupported Perl versions.
+	- Do not try to decode http responses if Content-Encoding is "identity" (@505)
 	- [#10](https://github.com/LMS-Community/Audio-Scan/pull/10) \- id3: Never add undef to tag hash for empty or invalid TXXX key (@cheesestraws)
 	- [#1140](https://github.com/LMS-Community/slimserver/pull/1140) \- Fix stat returning an empty size for most files (@jecaro)
 	- [#1517](https://github.com/LMS-Community/slimserver/pull/1517) \- Fix work images and artwork precaching (@darrell-k)
@@ -50,6 +51,8 @@
 - Platform Support:
 
 - Bug Fixes:
+
+	- Make sure we encode user input in search queries to prevent XSS attacks.
 
 - Other:
 
