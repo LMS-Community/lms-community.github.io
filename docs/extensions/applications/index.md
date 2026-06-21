@@ -16,6 +16,7 @@ title: Applications
 - [melodeon](https://github.com/CDrummond/melodeon) (Desktop): Simple QWebEngine wrapper for MaterialSkin on LMS.
 - [ncsb](https://github.com/atisharma/ncsb) (Terminal): A ncurses Squeezebox controller for LMS.
 - [Open Squeeze](https://github.com/orangebikelabs/opensqueeze) (Android):  An Android app that can be used to control LMS devices.
+- [SlimController](https://slimcontroller.app) (tvOS): Apple TV player and controller with a built-in music visualizer.
 - [Squeeze Client](https://f-droid.org/en/packages/de.maniac103.squeezeclient/) (Android): An Android client/controller application for LMS with Material Design 3 UI.
 - [Squeeze Ctrl](https://play.google.com/store/apps/details?id=com.angrygoat.android.squeezectrl) (Android): Remote control app for the Squeezebox system.
 - [Squeezelite-X](https://apps.microsoft.com/detail/9pbhmtnp9037) (Windows): Combines the Squeezelite player with Lyrion with easy access to LMS' user interface.
@@ -36,6 +37,7 @@ title: Applications
 - [cli-visualizer](https://github.com/dpayne/cli-visualizer/): Command line visualizer with support for squeezelite.
 - [Jivelite visualisation](https://github.com/blaisedias/tcz-jivelite/blob/visu-4/README.visu-4.md)
 - [projectMSDL](https://www.nexus0.net/pub/sw/slvis-projectm/): [projectM](https://github.com/projectM-visualizer/projectm) visualizations for squeezelite.
+- [SlimController](https://slimcontroller.app) (tvOS): Apple TV player and controller with a built-in music visualizer.
 
 ## Integration
 - [Domoticz](https://wiki.domoticz.com/Logitech_Media_Server): allow Domoticz to control your Squeezebox and compatible players.
