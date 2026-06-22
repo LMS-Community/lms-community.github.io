@@ -59,12 +59,13 @@ After 2010 the LMS community developed DIY hardware offerings:
   This is based on the player and user interface in Squeezebox Radio and Squeezebox Touch
 - [SoftSqueeze](softsqueeze.md)
 
-For mobile phones and tablets:
+For mobile phones, tablets and TV:
 
 - [iPeng](https://penguinlovesmusic.de/) (iOS - paid) - in-app purchase to also be a player
 - [LyrPlay](https://apps.apple.com/gb/app/lyrplay/id6746776736) (iOS - free) - incorporates player and slightly modified Material GUI
 - [xTune](https://apps.apple.com/gb/app/xtune-lyrion-remote-player/id6744552136) (iOS - paid)
 - [SlimLibrary](https://apps.apple.com/us/app/slimlibrary/id1022479972) (iOS - paid) [Announcement](https://forums.lyrion.org/forum/user-forums/3rd-party-software/100649-announce-slimlibrary-new-ios-remote-control-and-player-for-logitech-media-server?view=thread)
+- [SlimController](https://slimcontroller.app) (tvOS - paid) - player and controller for Apple TV with music visualizer
 - [SB Player](https://play.google.com/store/apps/details?id=com.angrygoat.android.sbplayer) (Android - paid)
 - [SqueezePlayer](https://play.google.com/store/apps/details?id=de.bluegaspode.squeezeplayer) (Android - paid)
 - [Squeezelite for Android](https://github.com/CDrummond/squeezelite) (Android - free)
@@ -84,6 +85,7 @@ Using piCorePlayer as its operating system, a basic Raspberry Pi can be configur
 - [iPeng](https://penguinlovesmusic.de/) (iOS - paid) - in-app purchase to also be a player
 - [LyrPlay](https://apps.apple.com/gb/app/lyrplay/id6746776736) (iOS - free) - incorporates player and slightly modified Material GUI
 - [xTune](https://apps.apple.com/gb/app/xtune-lyrion-remote-player/id6744552136) (iOS - paid)
+- [SlimController](https://slimcontroller.app) (tvOS - paid) - Apple TV controller with player and music visualizer
 - [Material Skin](https://github.com/CDrummond/lms-material) and [Android App](https://github.com/CDrummond/lms-material-app)
 - [Squeezer](https://github.com/kaaholst/android-squeezer) (Android)
 - [OpenSqueeze](https://github.com/orangebikelabs/opensqueeze) (Android)
