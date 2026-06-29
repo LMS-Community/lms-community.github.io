@@ -4,6 +4,7 @@
 
 - New Features:
 
+	- Allow plugins to provide custom fonts to be used when rendering non-latin text on ip3k based players.
 	- [#1286](https://github.com/LMS-Community/slimserver/issues/1286) \- Display album cover for AudioAddict stations (inspired by some work by @mcduman)
 	- [#1541](https://github.com/LMS-Community/slimserver/pull/1541) \- Add per-player timezone support: players can now display date and time, and fire alarms, in their own timezone rather than the server's. (@boudekerk)
 	- [#1546](https://github.com/LMS-Community/slimserver/pull/1546) \- Add "Default Adjustment for Local Tracks" player option. (@SamInPgh)
@@ -12,6 +13,7 @@
 - Server Changes:
 
 	- More aggressively cache DNS lookups, re-use cached data even if expired, but if lookup fails.
+	- Removed CODE2000 font. Use the optional "Render non-latin text on the Squeezebox..." plugin instead.
 	- Improve [HTTP/1.1 compatibility using keep-alive and SSL/TLS.](https://forums.lyrion.org/forum/developer-forums/developers/1823228-possible-issue-with-http-1-1-keep-alive-and-small-body)
 	- [#1548](https://github.com/LMS-Community/slimserver/pull/1548) \- Updated Czech translation (@mipa87)
 	- [#1549](https://github.com/LMS-Community/slimserver/pull/1549) \- Update CODE2000 font to 1.176 (@mipa87)
@@ -23,6 +25,7 @@
 	- Improve SSL support for Windows and macOS builds, updating Mozilla::CA to the latest version.
 	- Add ARM64 sox binary for macOS (@ralphy)
 	- Update Audio::Scan module to version 1.13 (Windows, macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @arigit, @cheesestraws)
+	- RPM packages cleanup to better integrate with system standards (@mavit)
 	- [#106](https://github.com/LMS-Community/slimserver-platforms/pull/106) \- Removal of SYSV Init support and better systemd support in the RPM package for Red Hat/SUSE (@JohanSaaw, @mavit)
 
 - Bug Fixes:
