@@ -9,22 +9,22 @@ title: SqueezePlay
   ![](assets/squeezeplay.png){ width="400" }
 </figure>
 
-SqueezePlay is the desktop version of the Jive/Squeezebox Controller software. It provides an audio player with roughly the same look and feel as the Squeezebox user interfaces, for browsing, playing music and internet streams on your personal computer. It's a replacement for [SoftSqueeze](softsqueeze.md) and based on the SqueezeOS software platform.
+SqueezePlay is the desktop version of the Jive/Squeezebox Controller software. It provides an audio player with roughly the same look and feel as the Squeezebox user interface for browsing and playing music on your personal computer. It's a replacement for [SoftSqueeze](softsqueeze.md) and based on the SqueezeOS software platform.
 
-If you are looking for a practical all-in-one solution for playback and to control your music from your desktop, SqueezePlay is your best pick. If you are looking for more advanced playback capabilities and more customization for the control application, please look into the [Jivelite](jivelite.md)+[Squeezelite](squeezelite.md) combination.
+If you are looking for a practical, all-in-one solution for playback and control of your music from your desktop, SqueezePlay is your best pick. If you are looking for more advanced playback capabilities and more customization for the control application, please look into the [Jivelite](jivelite.md)+[Squeezelite](squeezelite.md) combination.
 
 Currently SqueezePlay is maintained by Ralph Irving and the source code can be found at :octicons-mark-github-16: [Github](https://github.com/ralph-irving/squeezeplay).
 
 ## Downloads
 
-SqueezePlay runs on macOS, Windows, Linux and Solaris desktop operating systems. Current builds can be downloaded from :simple-sourceforge: [Sourceforge](https://sourceforge.net/projects/lmsclients/files/squeezeplay/).
+SqueezePlay runs on macOS, Windows, Linux, and Solaris desktop operating systems. Current builds can be downloaded from :simple-sourceforge: [Sourceforge](https://sourceforge.net/projects/lmsclients/files/squeezeplay/).
 
 ## Main features
 
 - High resolution playback capabilities (up to 192 kHz, 24-bits)
 - Synchronizes with other Squeezebox players
 - Intuitive interface for controlling music playback
-- Same interface as Squeezebox Touch, Squeezebox Controller and Squeezebox Radio
+- Same interface as Squeezebox Touch, Squeezebox Controller, and Squeezebox Radio
 
 ## Keyboard shortcuts
 
@@ -70,9 +70,9 @@ For the various supported platforms, `userpath` is located in:
 
 * `%USERPROFILE%\AppData\Roaming\SqueezePlay` for Windows
 * `~/Library/Preferences/SqueezePlay` for macOS
-* and `~/.squeezeplay` for other Unix/Linux
+* `~/.squeezeplay` for Linux/Unix
 
-Removing/renaming this directory allows you to start with a fresh configuration, and go through the first-launch setup steps again.
+Removing/renaming this directory allows you to start with a fresh configuration and go through the first-launch setup steps again.
 
 ### No libraries showing up during initial setup
 
@@ -93,3 +93,9 @@ In case you encounter other issues, please head over to the [forums](https://for
 
 [^fn1]: [https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1732388#post1732388](https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1732388#post1732388)
 [^fn2]: [https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1745250#post1745250](https://forums.lyrion.org/forum/user-forums/general-discussion/1732269-squeezeplay-setup-8-4-1r1474-exe-windows-not-finding-server?p=1745250#post1745250)
+
+### Media Key Support
+
+In order to support keyboard media keys like play/pause, fast forward, and rewind, Squeezeplay needs privileges to receive media key events in the background. Go to System Settings → Privacy & Security → Accessibility and click the plus sign to add Squeezeplay to the list of applications. Then restart Squeezeplay.
+
+You will also need to do this whenever you upgrade Squeezeplay since macOS will think it is a new application.
