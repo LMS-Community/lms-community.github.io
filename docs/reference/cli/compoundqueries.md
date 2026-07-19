@@ -64,8 +64,8 @@ Please note this mechanism is completely distinct from the `listen` and `subscri
 || `uuid` | Player unique identifier. Equivalent to `player uuid ?`. |
 || `ip` | Player IP and port. Equivalent to `player ip ?`. |
 ||  `name` | Player name. Equivalent to `player name ?`. |
-||  `model` | Whether the player is powered on or off. |
-||  `power` | Player model. Equivalent to `player model ?`. |
+||  `model` | Player model. Equivalent to `player model ?`. |
+||  `power` | Whether the player is powered on or off. |
 ||  `isplayer` | Whether a player is a known player model. Will return 0 for streaming connections. Equivalent to `player isplayer ?`. |
 ||  `displaytype` | Player display type. Not returned for streaming connections. Equivalent to `player displaytype <playerindex> ?`.  |
 ||   `canpoweroff` | Whether the player can be powered off. This value is false for streaming connections. |
@@ -117,7 +117,7 @@ response: via JSON
 
 The `status` query returns the complete status about a given player, including the current playlist. Set the <start> parameter to `-` to get the playlist data starting from the current song.
 
-In this `current` mode and if repeat is on, the server will attempt to return `<itemsPerResponse>` elements, by repeating the playlist at most once, unless shuffling is on and the server is configured to re-shuffle the playlist at each loop (in which case it is impossible to predict the song following the last one in the playlist until this last song has finished playing).
+In this `current` mode and if repeat all is on (`playlist repeat` is `2`), the server will attempt to return `<itemsPerResponse>` elements, by repeating the playlist at most once, unless shuffling is on and the server is configured to re-shuffle the playlist at each loop (in which case it is impossible to predict the song following the last one in the playlist until this last song has finished playing).
 
 Similarly, in the `current` mode, if repeat is one, only the current song is returned, regardless of the value of `<itemsPerResponse>`.
 
@@ -129,6 +129,8 @@ Clients can subscribe to `status` queries, so that the query results are automat
 |---|---|
 | `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command [`songinfo`](database.md/#songinfo) for a list of possible fields and their identifying letter). The default tags value for this query is `gald`. In addition to the tags supported by [`songinfo`](database.md/#songinfo) there's the special `DD` tag, which would return no track information, but the total duration of the current playlist only. |
 | `alarmData` | If set to a truthy value will return information about the next upcoming alarm. |
+| `menu` | If present, returns SlimBrowse menu data in `item_loop` instead of `playlist_loop`. |
+| `useContextMenu` | When used with `menu`, provides a context-menu action in the returned `base` data. |
 | `subscribe` | This optional parameter controls the subscription to the player status. Only one status subscription is possible per player and connection. |
 
 Subscription is enabled by using this parameter with a positive integer. It is disabled by using `-`. When the subscription is enabled, normal `status` queries (i.e. not using the `subscribe` parameter) can be performed and will have no effect on the subscription in place.
@@ -149,48 +151,73 @@ Please note this mechanism is completely distinct from the `listen` and `subscri
 | `rescan` | Returned with value 1 if the server is still scanning the database. The results may therefore be incomplete. Not returned if no scan is in progress. |
 | `error` | Returned with value `invalid player` if the player this subscription query referred to no longer exists. |
 
-In non subscription mode, the query simply echoes itself (i.e. produces no result) if <playerid> is wrong.
+In non subscription mode, the query simply echoes itself (i.e. produces no result) if `<playerid>` is wrong.
+
+`alarmData` (or `menu`) also enables the alarm fields described below. `menu` returns menu-specific fields described after the playlist fields.
 
 | Tag | Description |
 |---|---|
 | `player_name` | Name of the player. |
 | `player_connected` | Connected state of the player. |
+| `player_ip` | Player IP address and port. Only if connected. |
+| `library_id` | ID of the virtual library assigned to the player. Only if one is assigned. |
+| `library_name` | Name of the virtual library assigned to the player. Only if one is assigned. |
 | `player_needs_upgrade` | Connected player needs a firmware upgrade. |
 | `player_is_upgrading` | Connected player is in the process of performing a firmware update. |
-| `power` | Power state of the player. Not returned for remote streaming connections. |
+| `showBriefly` | Current temporary display message. Only while the message has not expired. |
+| `power` | Power state of the player. Only for player devices; not returned for remote streaming connections. |
 | `signalstrength` | Signal strength (only for Squeezeboxen and Transporters). |
-| `waitingToPlay` | A flag telling whether the player isn't actually playing, but still waiting for data or something. |
-| `alarm_state`| One of 'active' (means alarm currently going off), 'set' (alarm set to go off in next 24h on this player), 'none' (no alarm set to go off in next 24h on this player), 'snooze' (alarm is active but currently snoozing). |
-| `alarm_next` | Epochtime seconds when the next alarm within the next 24h is due. |
-| `alarm_days` | A list of 0 or 1, for the days on which the alarm is set (0=Sunday). |
-| `alarm_snooze_seconds` | The snooze duration for the upcoming alarm. |
-| `alarm_timeout_seconds` | The alarm timeout for the upcoming alarm. |
-| If player is on: |  |
 | `mode` | Player mode. |
+| `waitingToPlay` | A flag telling whether the player isn't actually playing, but still waiting for data or something. |
+| `alarm_state`| One of 'active' (means alarm currently going off), 'set' (alarm set to go off in next 24h on this player), 'none' (no alarm set to go off in next 24h on this player), 'snooze' (alarm is active but currently snoozing). Only with `alarmData` or `menu`. |
+| `alarm_next` | Epochtime seconds when the next alarm within the next 24h is due, or `0` when no alarm is due or an alarm is snoozed or active. Only with `alarmData` or `menu`. |
+| `alarm_version` | Alarm response version, currently `2`. Only with `alarmData` or `menu`. |
+| `alarm_next2` | Epoch seconds when the next enabled alarm is due, including alarms beyond 24 hours. Only with `alarmData` or `menu`, and only when such an alarm exists. |
+| `alarm_repeat` | Repeat setting for the next enabled alarm. Only with `alarmData` or `menu`, and only when such an alarm exists. |
+| `alarm_days` | String of seven `0`/`1` characters for Sunday through Saturday, indicating the days enabled for the next alarm. Only with `alarmData` or `menu`, and only when such an alarm exists. |
+| `alarm_snooze_seconds` | The snooze duration for the upcoming alarm. Only with `alarmData` or `menu`. |
+| `alarm_timeout_seconds` | The alarm timeout for the upcoming alarm. Only with `alarmData` or `menu`. |
+| Playback and player state: |  |
 | `remote` | Returns 1 if a remote stream is currently playing. |
 | `current_title` | Returns the current title for remote streams. Only if remote stream is playing. |
 | `time` | Elapsed time into the current song. Decimal seconds. Only if current song. |
-| `rate` | Player rate. Only if there is a current song. |
+| `rate` | Player rate. Always `1`, for backward compatibility with older SBC firmware. Only if there is a current song. |
 | `duration` | Duration of the current song. Decimal seconds. Only if current song and if the duration is known (it is not for remote streams). |
+| `can_seek` | `1` when the current song can be sought, omitted when it can't. |
+| `replay_gain` | Replay-gain value for the current song. Only if the song defines it. |
 | `sleep` | If set to sleep, the amount (in seconds) it was set to. |
 | `will_sleep_in` | Seconds left until sleeping. Only if set to sleep. |
 | `sync_master` | ID of the master player in the sync group this player belongs to. Only if synced. |
 | `sync_slaves` | Comma-separated list of player IDs, slaves to sync_master in the sync group this player belongs to. Only if synced. |
-| `mixer volume` | Not returned for remote streaming connections. |
-| `mixer treble` | Only for SliMP3 and Squeezebox1 players. |
-| `mixer bass` | Only for SliMP3 and Squeezebox1 players. |
-| `mixer pitch` | Only for Squeezebox1 players. |
+| `mixer volume` | Only returned for players with volume control. |
+| `mixer treble` | Only returned when the player supports treble control (SliMP3 and Squeezebox1). |
+| `mixer bass` | Only returned when the player supports bass control (SliMP3 and Squeezebox1). |
+| `mixer pitch` | Only returned when the player supports pitch control (Squeezebox1). |
+| `seq_no` | Player sequence number. Only if defined. |
+| `digital_volume_control` | Player preference indicating whether digital volume control is enabled. Only if defined. |
+| `use_volume_control` | Whether the player's volume control is active. Only if digital-volume and digital-output capabilities are known. |
+| `randomplay` | Returns `1` when the Random Play plugin is active for the player, otherwise `0`. Only if the RandomPlay plugin is loaded. |
+| `playlist mode` | Always `off`; retained for backwards compatibility. |
 | `playlist duration` | Duration of the full playlist. Decimal seconds. Only if tag `DD` was requested and for the duration of tracks where it is known (it is not for eg. radio streams). |
 | `playlist repeat` | 0 no repeat, 1 repeat song, 2 repeat playlist. |
 | `playlist shuffle` | 0 no shuffle, 1 shuffle songs, 2 shuffle albums. |
 | `playlist_id` | Playlist id, if the current playlist is a stored playlist. |
 | `playlist_name` | Playlist name, if the current playlist is a stored playlist. Equivalent to `playlist name ?`. |
 | `playlist_modified` | Modification state of the saved playlist (if the current playlist is one). Equivalent to `playlist modified ?`. |
-| `playlist_timestamp` | Timestamp of the current playlist, in seconds. Changes to the playlist (insertion/removal/shuffling) result in an increase of this value. This can be used to detect the entire playlist has to be reacquired. |
-| `playlist_tracks` | Number of tracks in the current playlist. Only if there is a playlist. |
+| `playlist_cur_index` | Index of the currently playing song in the playlist. Only if there are songs in the current playlist. |
+| `playlist_timestamp` | Timestamp of the current playlist, in seconds. Changes to the playlist (insertion/removal/shuffling) result in an increase of this value. This can be used to detect the entire playlist has to be reacquired. Only if there are songs in the current playlist. |
+| `playlist_tracks` | Number of tracks in the current playlist. `0` when the playlist is empty. |
+| `remoteMeta` | Metadata for the current remote track. Only when a remote track is playing and tag `DD` (means you want total playtime for the current playlist and nothing else) is not requested. |
 |If playlist information exist/requested, for each song in the playlist: |
 | `playlist index` | Index (first item is 0) of the playlist entry in the player playlist. Unless <start> is `-`, the first returned instance of this field is equal to start. If <start> is `-`, the first returned instance of this field contains the index of the currently playing song in the player playlist. Item separator. |
 | `Tags` | Same tags as defined in command [`songinfo`](database.md/#songinfo). Additionally, when returning the playlist_loop (ie current contents of the play queue) tag `2` will return a flag `contiguous_groups` indicating whether the play queue entries are contiguous with respect to work/grouping/performance, to assist UI formatting of the play queue. |
+| In Menu mode: | |
+| `preset_loop` | Array of ten values 0/1 indicating whether each preset button is defined. Only with `menu`. |
+| `preset_data` | Data for the ten preset buttons. Only with `menu`. |
+| `base` | Actions for each returned menu item. Only with `menu`. |
+| `count` | Number of returned menu items, including Save and Clear Playlist when the playlist is non-empty. Only with `menu`. |
+| `offset` | Index of the first returned menu item. Only with `menu` and a non-empty playlist. |
+| `item_loop` | Menu items, including Save Playlist and Clear Playlist controls. Replaces `playlist_loop` when `menu` is requested. |
 
 Examples:
 
