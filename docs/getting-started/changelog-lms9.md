@@ -10,6 +10,7 @@
 	- [#1546](https://github.com/LMS-Community/slimserver/pull/1546) \- Add "Default Adjustment for Local Tracks" player option. (@SamInPgh)
 	- [#1564](https://github.com/LMS-Community/slimserver/pull/1564) \- Add Dismiss option to Jive alarm popup (@boudekerk)
 	- [#1605](https://github.com/LMS-Community/slimserver/pull/1605) \- MusicMagic: add configurable host for remote MusicIP instances (@jonstahl)
+	- [#1612](https://github.com/LMS-Community/slimserver/pull/1612) \- MusicMagic: add configurable genre filter (@jonstahl)
 
 - Server Changes:
 
@@ -27,6 +28,7 @@
 	- Add ARM64 sox binary for macOS (@ralphy)
 	- Update Audio::Scan module to version 1.13 (Windows, macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @arigit, @cheesestraws)
 	- RPM packages cleanup to better integrate with system standards (@mavit)
+	- Removed unused Mac/Windows code from the auto-rescan process (@mavit)
 	- [#106](https://github.com/LMS-Community/slimserver-platforms/pull/106) \- Removal of SYSV Init support and better systemd support in the RPM package for Red Hat/SUSE (@JohanSaaw, @mavit)
 	- [#1606](https://github.com/LMS-Community/slimserver-platforms/pull/1606) \- Improve compatibility with newer DBIx::Class::Schema versions (@paulgevers)
 
