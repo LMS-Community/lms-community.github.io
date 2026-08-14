@@ -9,20 +9,23 @@
 	- [#1541](https://github.com/LMS-Community/slimserver/pull/1541) \- Add per-player timezone support: players can now display date and time, and fire alarms, in their own timezone rather than the server's. (@boudekerk)
 	- [#1546](https://github.com/LMS-Community/slimserver/pull/1546) \- Add "Default Adjustment for Local Tracks" player option. (@SamInPgh)
 	- [#1564](https://github.com/LMS-Community/slimserver/pull/1564) \- Add Dismiss option to Jive alarm popup (@boudekerk)
-	- [#1605](https://github.com/LMS-Community/slimserver/pull/1605) \- MusicMagic: add configurable host for remote MusicIP instances (@jonstahl)
-	- [#1612](https://github.com/LMS-Community/slimserver/pull/1612) \- MusicMagic: add configurable genre filter (@jonstahl)
+	- [#1605](https://github.com/LMS-Community/slimserver/pull/1605) \- MusicIP: add configurable host for remote MusicIP instances (@jonstahl)
+	- [#1612](https://github.com/LMS-Community/slimserver/pull/1612) \- MusicIP: add configurable genre filter (@jonstahl)
+	- [#1629](https://github.com/LMS-Community/slimserver/pull/1629) \- MusicIP: add host setting and Dynamic Path Conversion (@jonstahl)
 
 - Server Changes:
 
 	- More aggressively cache DNS lookups, re-use cached data even if expired, but if lookup fails.
 	- Removed CODE2000 font. Use the optional "Render non-latin text on the Squeezebox..." plugin instead.
 	- Improve [HTTP/1.1 compatibility using keep-alive and SSL/TLS.](https://forums.lyrion.org/forum/developer-forums/developers/1823228-possible-issue-with-http-1-1-keep-alive-and-small-body)
+	- Improve artwork matching based on track metadata.
 	- [#1548](https://github.com/LMS-Community/slimserver/pull/1548) \- Updated Czech translation (@mipa87)
 	- [#1549](https://github.com/LMS-Community/slimserver/pull/1549) \- Update CODE2000 font to 1.176 (@mipa87)
 	- [#1550](https://github.com/LMS-Community/slimserver/pull/1550) \- Update wizard plugin JSON encoding to use UTF-8 for HTML templates (@mipa87)
 	- [#1593](https://github.com/LMS-Community/slimserver/pull/1593) \- Make external scanner startup failures visible (@maxxi-bit)
 	- [#1615](https://github.com/LMS-Community/slimserver/pull/1615) \- Improve UPnP/DLNA Media Renderer compatibility: use HTTP/1.1 (@stsichler)
 	- [#1619](https://github.com/LMS-Community/slimserver/pull/1619) \- Switch from JSON::XS::VersionOneAndTwo to JSON::XS (@mavit)
+	- [#1620](https://github.com/LMS-Community/slimserver/pull/1620) \- Add current track's technical information to status query (@SamInPgh)
 
 - Platform Support:
 
@@ -39,6 +42,7 @@
 	- Fix an issue with the image resizer where an explicitly requested format was not honored when padding was needed.
 	- On Debian based systems avoid downloading packages for unsupported Perl versions.
 	- Do not try to decode http responses if Content-Encoding is "identity" (@505)
+	- Fix TitleFormatter UTF8 encoding (@darrel-k)
 	- [#10](https://github.com/LMS-Community/Audio-Scan/pull/10) \- id3: Never add undef to tag hash for empty or invalid TXXX key (@cheesestraws)
 	- [#1121](https://github.com/LMS-Community/slimserver/issues/1121) \- Try to catch "426 - Upgrade Required" HTTP responses in the remote scanner
 	- [#1140](https://github.com/LMS-Community/slimserver/pull/1140) \- Fix stat returning an empty size for most files (@jecaro)
