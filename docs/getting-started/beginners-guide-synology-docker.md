@@ -25,7 +25,7 @@ In this guide the following assumptions apply:
 
 ## Preparation (if migrating from previous LMS package)
 
-- Do not forget to copy your favorites. You would find the file stored under `/volume1/@appstore/SqueezeCenter/prefs/favorites.opml`. Synology doesn't allow access to root directories using a normal browser. [Use WinSCP instead](../reference/winscp.md) to copy the file to a save place on your computer.
+- Do not forget to copy your favorites. You would find the file stored under `/volume1/@appstore/SqueezeCenter/prefs/favorites.opml`. Synology doesn't allow access to root directories using a normal browser. [Use WinSCP instead](../players-and-controllers/winscp.md) to copy the file to a save place on your computer.
 - Update your Synology Diskstation to the latest DSM. Note that in order to run "Container Manager" you need DMS 7.x.
 
 ## Find out the UID and GID of your user

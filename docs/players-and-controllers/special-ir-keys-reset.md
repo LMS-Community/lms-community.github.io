@@ -41,7 +41,7 @@ You'll need to plug in a keyboard to the USB port. Then press uppercase "`S`" or
 
 ### Getting the screenshots off of your device
 
-Screenshots are stored as `squeezeplay9999.bmp` in `/etc/squeezeplay/userpath`. The `9999` is an increment for each image. [Enable SSH](enable-ssh.md) and use `scp` to copy the file to your host system.
+Screenshots are stored as `squeezeplay9999.bmp` in `/etc/squeezeplay/userpath`. The `9999` is an increment for each image. [Enable SSH](../players-and-controllers/enable-ssh.md) and use `scp` to copy the file to your host system.
 
 !!! warning
     On more recent clients (eg. macOS Ventura and later) `scp` might fail with a message like `sh: /usr/libexec/sftp-server: not found`. In that case use `scp -O ...` to fall back to "outdated" protocols.

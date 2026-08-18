@@ -127,7 +127,7 @@ Clients can subscribe to `status` queries, so that the query results are automat
 
 | Tag | Description |
 |---|---|
-| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command [`songinfo`](database.md/#songinfo) for a list of possible fields and their identifying letter). The default tags value for this query is `gald`. In addition to the tags supported by [`songinfo`](database.md/#songinfo) there's the special `DD` tag, which would return no track information, but the total duration of the current playlist only. |
+| `tags` | Determines which tags are returned. Each returned tag is identified by a letter (see command [`songinfo`](database.md#songinfo) for a list of possible fields and their identifying letter). The default tags value for this query is `gald`. In addition to the tags supported by [`songinfo`](database.md#songinfo) there's the special `DD` tag, which would return no track information, but the total duration of the current playlist only. |
 | `alarmData` | If set to a truthy value will return information about the next upcoming alarm. |
 | `menu` | If present, returns SlimBrowse menu data in `item_loop` instead of `playlist_loop`. |
 | `useContextMenu` | When used with `menu`, provides a context-menu action in the returned `base` data. |
@@ -210,7 +210,7 @@ In non subscription mode, the query simply echoes itself (i.e. produces no resul
 | `remoteMeta` | Metadata for the current remote track. Only when a remote track is playing and tag `DD` (means you want total playtime for the current playlist and nothing else) is not requested. |
 |If playlist information exist/requested, for each song in the playlist: |
 | `playlist index` | Index (first item is 0) of the playlist entry in the player playlist. Unless <start> is `-`, the first returned instance of this field is equal to start. If <start> is `-`, the first returned instance of this field contains the index of the currently playing song in the player playlist. Item separator. |
-| `Tags` | Same tags as defined in command [`songinfo`](database.md/#songinfo). Additionally, when returning the playlist_loop (ie current contents of the play queue) tag `2` will return a flag `contiguous_groups` indicating whether the play queue entries are contiguous with respect to work/grouping/performance, to assist UI formatting of the play queue. |
+| `Tags` | Same tags as defined in command [`songinfo`](database.md#songinfo). Additionally, when returning the playlist_loop (ie current contents of the play queue) tag `2` will return a flag `contiguous_groups` indicating whether the play queue entries are contiguous with respect to work/grouping/performance, to assist UI formatting of the play queue. |
 | In Menu mode: | |
 | `preset_loop` | Array of ten values 0/1 indicating whether each preset button is defined. Only with `menu`. |
 | `preset_data` | Data for the ten preset buttons. Only with `menu`. |
