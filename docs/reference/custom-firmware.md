@@ -8,7 +8,7 @@ title: Custom Firmware for Radio/Touch/Controller
 It is possible to tell Lyrion Music Server to push a specific build of Squeezebox Radio/Touch/Controller firmware out to devices that connect to it by using specially named `custom.<device>.*` files.
 
 !!! danger
-    Load custom firmware at your own risk. While an unlikely scenario, it is possible to "brick" your device by loading a corrupted or buggy-because-not-formally-qualified firmware. If you get in a situation where the custom firmware you've attempted to install won't load, you may be able to recover it by booting to the previous firmware. This is done by continually [holding down the rew key during boot](special-ir-keys-reset.md).
+    Load custom firmware at your own risk. While an unlikely scenario, it is possible to "brick" your device by loading a corrupted or buggy-because-not-formally-qualified firmware. If you get in a situation where the custom firmware you've attempted to install won't load, you may be able to recover it by booting to the previous firmware. This is done by continually [holding down the rew key during boot](../players-and-controllers/special-ir-keys-reset.md).
 
 ## Loading Custom Squeezebox Firmware
 
