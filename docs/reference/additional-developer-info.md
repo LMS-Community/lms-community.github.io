@@ -3,7 +3,7 @@ layout: default
 title: Additional Developer Info
 ---
 
-# Developer info within the Slimserver repository
+# Developer info within the Lyrion Music Server repository (LMS-Community/slimserver)
 
 * Developer Notes - [DEVELOPERS.md](https://github.com/LMS-Community/slimserver/blob/HEAD/DEVELOPERS.md)
 
