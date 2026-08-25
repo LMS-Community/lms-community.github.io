@@ -96,11 +96,10 @@ nav:
     - Download & Installation: getting-started/index.md
     - Beginner's guides:
       - Beginner's guide for LMS: getting-started/beginners-guide-lms-on-raspberry-pi.md
-      - Beginner's guide for a full-featured LMS: getting-started/beginners-guide-full-featured-lms-on-raspberry-pi.md
-      - Beginner's Docker guide on Synology: getting-started/beginners-guide-synology-docker.md
-      - Beginner's Docker guide on QNAP: getting-started/beginners-guide-qnap-docker.md
-      - Beginner's Docker guide on OMV: getting-started/beginners-guide-omv-docker.md
-      - Beginner's guide to classical music on LMS: getting-started/beginners-guide-to-classical-music-on-lms.md
+      - Full-featured LMS on a Raspberry Pi: getting-started/beginners-guide-full-featured-lms-on-raspberry-pi.md
+      - Docker on Synology: getting-started/beginners-guide-synology-docker.md
+      - Docker on QNAP: getting-started/beginners-guide-qnap-docker.md
+      - Docker on OMV: getting-started/beginners-guide-omv-docker.md
       - Getting started on macOS: getting-started/mac-install.md
     - Help Guides and FAQs:
       - New Music changes in 9.0: getting-started/new-music-help-faq.md
@@ -111,6 +110,7 @@ nav:
       - Docker - adding locales to Docker container: getting-started/add-locales-to-docker.md
     - Creating a media library:
       - Getting the most out of LMS metadata: medialibhelp/getting-the-most-out-of-metadata-in-lyrion.md
+      - Guide to classical music on LMS: getting-started/beginners-guide-to-classical-music-on-lms.md
       - "#CURTRACK Guide": medialibhelp/curtrack.md
     - Changelog:
       - LMS 9 changelog: getting-started/changelog-lms9.md
@@ -185,7 +185,7 @@ nav:
       - Squeezeplay Applet:
         - Applet Development: reference/squeezeplay-applet.md
         - Installing Applets: reference/installing-applets.md
-    - Plugin Development:    
+    - Plugin Development:
         - Music Service Plugin: reference/music-service-plugin.md
         - Plugin/Applet Repositories: reference/repository-dev.md
     - Players:

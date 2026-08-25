@@ -15,7 +15,7 @@ Wenn Sie kein Interesse mehr an Squeezebox und Lyrion Music Server (früher auch
 
 Wenn Sie sich entscheiden, hier zu bleiben - ausgezeichnet! Die größte Änderung wird sein, dass sich die URL des Forums ändern muss. Wir können nicht mehr die Logitech-eigene Domain slimdevices.com verwenden. Aber ansonsten werden Sie sich sofort wie zu Hause fühlen, da wir uns bemühen werden, den Übergang völlig transparent zu gestalten.
 
-Bitte beachten Sie, dass es während des Umstellungsprozesses, der für Mitte Januar geplant ist, zu einer gewissen Ausfallzeit kommen kann, während der beide Foren nicht erreichbar sein werden. Aber keine Sorge: Wir kommen wieder.
+Bitte beachten Sie, dass es während des Umstellungsprozesses, der für Mitte Januar 2024 geplant ist, zu einer gewissen Ausfallzeit kommen kann, während der beide Foren nicht erreichbar sein werden. Aber keine Sorge: Wir kommen wieder.
 
 Vielen Dank für Ihr Interesse an Squeezebox und Lyrion.org.
 

@@ -16,7 +16,7 @@ Si vous n'êtes plus intéressé par tout ce qui concerne Squeezebox et Lyrion M
 Si vous décidez de rester, c'est excellent ! Le changement le plus important sera la modification de l'URL du forum. Nous ne pouvons plus utiliser le domaine slimdevices.com appartenant à Logitech. Mais à part cela, vous vous sentirez immédiatement chez vous, car nous nous efforcerons de rendre la transition totalement transparente.
 
 
-Veuillez noter que pendant le processus de migration, qui est prévu pour la mi-janvier, il peut y avoir des temps d'arrêt pendant lesquels aucun des deux forums ne sera accessible. Mais ne vous inquiétez pas : nous reviendrons.
+Veuillez noter que pendant le processus de migration, qui est prévu pour la mi-janvier 2024, il peut y avoir des temps d'arrêt pendant lesquels aucun des deux forums ne sera accessible. Mais ne vous inquiétez pas : nous reviendrons.
 
 Nous vous remercions de l'intérêt que vous portez à Squeezebox et à Lyrion.org.
 

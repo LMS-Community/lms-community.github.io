@@ -3,14 +3,14 @@ layout: default
 title: Additional Developer Info
 ---
 
-# Developer info within the Lyrion Music Server repository (LMS-Community/slimserver)
+# Developer info within the Lyrion Music Server repository ([LMS-Community/slimserver](https://github.com/LMS-Community/slimserver))
 
 * Developer Notes - [DEVELOPERS.md](https://github.com/LMS-Community/slimserver/blob/HEAD/DEVELOPERS.md)
 
     * How Image/Icon/Cover is Passed from the OPML Item to a Track
     * How scanUrl Works
     * Issue of "Volatile" Redirection
-    * Thin Protocol Handler [PH] (e.g. Podcast)
+    * Thin Protocol Handler (e.g. Podcast)
     * Scanning of Remote Tracks
     * Podcast Plugin Extension
     * Some Comments on Tracks/Song Data Structure
