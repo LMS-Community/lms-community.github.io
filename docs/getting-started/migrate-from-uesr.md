@@ -35,7 +35,7 @@ If you get an error "Problem Connecting - There is a problem connecting to MySqu
 
 ## Manual Migration if `config.logitechmusic.com` is down
 
-[Connect to the UE SmartRadio using SSH](../reference/enable-ssh.md). Add the following line to `/etc/hosts` using `vi` (or use something like [WinSCP](../reference/winscp.md)):
+[Connect to the UE SmartRadio using SSH](../players-and-controllers/enable-ssh.md). Add the following line to `/etc/hosts` using `vi` (or use something like [WinSCP](../players-and-controllers/winscp.md)):
 
 ```
 94.126.17.210   config.logitechmusic.com
