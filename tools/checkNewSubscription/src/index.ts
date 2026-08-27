@@ -144,7 +144,8 @@ async function checkIpAddress(ip: string, apiKey: string): Promise<any> {
   // true to make the service less strict while still catching the riskiest connections.
 	const allow_public_access_points = 'true';
 
-	const response = await fetch(`https://www.ipqualityscore.com/api/json/ip/${ apiKey }/${ ip }?strictness=${ strictness }&allow_public_access_points=${ allow_public_access_points }`, {
+  const url = `https://www.ipqualityscore.com/api/json/ip/${ apiKey }/${ ip }?strictness=${ strictness }&allow_public_access_points=${ allow_public_access_points }`;
+	const response = await fetch(url, {
     headers: {
       'User-Agent': useragent,
       'Accept': 'application/json'
@@ -157,12 +158,14 @@ async function checkIpAddress(ip: string, apiKey: string): Promise<any> {
     }
   } as any);
 
-  if (!response.ok) {
-    console.error('IPQS request failed:', response.status, await response.text());
+  const body = await response.json() as { [key: string]: any };
+
+  if (!response.ok || !body?.success) {
+    console.error('IPQS request failed:', { responseStatus: response.status, responseBody: body });
     return { error: `Request failed with status ${response.status}` };
   }
 
-  return response.json();
+  return body;
 }
 
 const EXAMPLE_EMAILREP_RESPONSE = {
