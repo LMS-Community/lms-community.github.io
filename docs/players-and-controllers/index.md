@@ -78,6 +78,7 @@ For mobile phones, tablets and TV:
 Using piCorePlayer as its operating system, a basic Raspberry Pi can be configured to act as a full-featured LMS player. Raspberry Pi can output via USB to an external DAC or power attached headphones. With the addition of an appropriate [HAT board](https://www.raspberrypi.com/news/introducing-raspberry-pi-hats/), the Raspberry Pi can add S/PDIF digital outputs or a small stereo amplifier.
 
 - [Daphile](https://www.daphile.com/) (x86/x64 architecture - PC)
+- [Osmium Sound](https://osmiumsound.it) (x86/x64 architecture - PC)
 
 ## Software based controllers
 
