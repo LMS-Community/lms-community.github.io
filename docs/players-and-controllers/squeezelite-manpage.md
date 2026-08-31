@@ -7,7 +7,7 @@ hide:
 
 # squeezelite(1) - Lightweight headless Squeezebox emulator
 
-Debian Project, 2026-03-01
+Debian Project, 2026-08-18
 
 ```
 squeezelite [options]
@@ -130,6 +130,11 @@ which denotes the sample size in bits. Little Endian only.
   is not provided,
   _~/.lircrc_
   is used instead.
+* **-k**  
+  Terminate if MAC address contains all zeros.  Overrides default behaviour
+  which sets 00:00:00:00:00:00 as the MAC address and connects to a server.
+* **-K**  
+  Wait until MAC address is not all zeros.
 * **-m &lt;mac addr&gt;**  
   Override the player's MAC address. The format must be colon-delimited
   hexadecimal, for example: ab:cd:ef:12:34:56. This is usually automatically

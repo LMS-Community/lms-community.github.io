@@ -12,6 +12,7 @@
 	- [#1605](https://github.com/LMS-Community/slimserver/pull/1605) \- MusicIP: add configurable host for remote MusicIP instances (@jonstahl)
 	- [#1612](https://github.com/LMS-Community/slimserver/pull/1612) \- MusicIP: add configurable genre filter (@jonstahl)
 	- [#1629](https://github.com/LMS-Community/slimserver/pull/1629) \- MusicIP: add host setting and Dynamic Path Conversion (@jonstahl)
+	- [#1635](https://github.com/LMS-Community/slimserver/pull/1635) \- Return results technical data from transcoding in "status" query (@SamInPgh)
 
 - Server Changes:
 
@@ -26,6 +27,7 @@
 	- [#1615](https://github.com/LMS-Community/slimserver/pull/1615) \- Improve UPnP/DLNA Media Renderer compatibility: use HTTP/1.1 (@stsichler)
 	- [#1619](https://github.com/LMS-Community/slimserver/pull/1619) \- Switch from JSON::XS::VersionOneAndTwo to JSON::XS (@mavit)
 	- [#1620](https://github.com/LMS-Community/slimserver/pull/1620) \- Add current track's technical information to status query (@SamInPgh)
+	- [#1644](https://github.com/LMS-Community/slimserver/issues/1644) \- Improve check for writable folder, use more robust File::Copy::move() rather than rename().
 
 - Platform Support:
 
@@ -68,6 +70,7 @@
 - Bug Fixes:
 
 	- Make sure we encode user input in search queries to prevent XSS attacks.
+	- [#1641](https://github.com/LMS-Community/slimserver/issues/1641) \- Trying to play a folder for which exists a playlist of the same name, the playlist would be played.
 
 - Other:
 
