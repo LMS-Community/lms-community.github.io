@@ -4,6 +4,8 @@
 
 - New Features:
 
+	- Add WebSocket plugin providing a /ws endpoint for clients to send commands and receive server notifications.
+	- Implement a WebSocket client in the Default skin, allowing for real-time status change pushes from the server to the web browser.
 	- Allow plugins to provide custom fonts to be used when rendering non-latin text on ip3k based players.
 	- [#1286](https://github.com/LMS-Community/slimserver/issues/1286) \- Display album cover for AudioAddict stations (inspired by some work by @mcduman)
 	- [#1541](https://github.com/LMS-Community/slimserver/pull/1541) \- Add per-player timezone support: players can now display date and time, and fire alarms, in their own timezone rather than the server's. (@boudekerk)
@@ -13,6 +15,7 @@
 	- [#1612](https://github.com/LMS-Community/slimserver/pull/1612) \- MusicIP: add configurable genre filter (@jonstahl)
 	- [#1629](https://github.com/LMS-Community/slimserver/pull/1629) \- MusicIP: add host setting and Dynamic Path Conversion (@jonstahl)
 	- [#1635](https://github.com/LMS-Community/slimserver/pull/1635) \- Return results technical data from transcoding in "status" query (@SamInPgh)
+	- [#1660](https://github.com/LMS-Community/slimserver/pull/1660) \- Expose the LMS host's current UTC offset through the "date" query (@mfs-adam)
 
 - Server Changes:
 
@@ -27,6 +30,7 @@
 	- [#1615](https://github.com/LMS-Community/slimserver/pull/1615) \- Improve UPnP/DLNA Media Renderer compatibility: use HTTP/1.1 (@stsichler)
 	- [#1619](https://github.com/LMS-Community/slimserver/pull/1619) \- Switch from JSON::XS::VersionOneAndTwo to JSON::XS (@mavit)
 	- [#1620](https://github.com/LMS-Community/slimserver/pull/1620) \- Add current track's technical information to status query (@SamInPgh)
+	- [#1638](https://github.com/LMS-Community/slimserver/pull/1638) \- MUSICBRAINZ\_TRACKID is not unique, so use MUSICBRAINZ\_RELEASETRACKID if present. (@darrel-k, @mikes)
 	- [#1644](https://github.com/LMS-Community/slimserver/issues/1644) \- Improve check for writable folder, use more robust File::Copy::move() rather than rename().
 
 - Platform Support:
@@ -38,6 +42,7 @@
 	- Removed unused Mac/Windows code from the auto-rescan process (@mavit)
 	- [#106](https://github.com/LMS-Community/slimserver-platforms/pull/106) \- Removal of SYSV Init support and better systemd support in the RPM package for Red Hat/SUSE (@JohanSaaw, @mavit)
 	- [#1606](https://github.com/LMS-Community/slimserver-platforms/pull/1606) \- Improve compatibility with newer DBIx::Class::Schema versions (@paulgevers)
+	- [#1640](https://github.com/LMS-Community/slimserver/issues/1640) \- Don't include any file in CPAN or lib for the "noCPAN" tarball.
 
 - Bug Fixes:
 
@@ -45,6 +50,7 @@
 	- On Debian based systems avoid downloading packages for unsupported Perl versions.
 	- Do not try to decode http responses if Content-Encoding is "identity" (@505)
 	- Fix TitleFormatter UTF8 encoding (@darrel-k)
+	- Make sure we utf8 encode/decode strings when storing them in our disk cache.
 	- [#10](https://github.com/LMS-Community/Audio-Scan/pull/10) \- id3: Never add undef to tag hash for empty or invalid TXXX key (@cheesestraws)
 	- [#1121](https://github.com/LMS-Community/slimserver/issues/1121) \- Try to catch "426 - Upgrade Required" HTTP responses in the remote scanner
 	- [#1140](https://github.com/LMS-Community/slimserver/pull/1140) \- Fix stat returning an empty size for most files (@jecaro)
@@ -56,6 +62,7 @@
 	- [#1571](https://github.com/LMS-Community/slimserver/pull/1571) \- Guard ReplayGain and URL tag processing against arrayrefs (@Rouzax)
 	- [#1587](https://github.com/LMS-Community/slimserver/pull/1587) \- Fix RSS feed parsing when a podcast URL contains wide characters (@robho)
 	- [#1611](https://github.com/LMS-Community/slimserver/pull/1611) \- Include album-link roles in unified artist list roles (@darrell-k)
+	- [#1651](https://github.com/LMS-Community/slimserver/pull/1651) \- An artist could be shown with another artist's picture, if they shared the role on a common album.
 
 - Other:
 
