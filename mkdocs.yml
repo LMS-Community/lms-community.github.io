@@ -43,6 +43,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+  custom_dir: docs/overrides
 
 plugins:
   - search
