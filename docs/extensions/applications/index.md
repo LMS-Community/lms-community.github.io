@@ -40,6 +40,7 @@ title: Applications
 - [SlimController](https://slimcontroller.app) (tvOS): Apple TV player and controller with a built-in music visualizer.
 
 ## Integration
+- [Crestron Home](https://github.com/jopaul14/Lyrion4Crestron): Lyrion4Crestron drivers add LMS players to Crestron Home as room sources, with now-playing info, transport, volume and presets/favorites.
 - [Domoticz](https://wiki.domoticz.com/Logitech_Media_Server): allow Domoticz to control your Squeezebox and compatible players.
 - [Home Assistant](https://www.home-assistant.io/integrations/squeezebox/): The Squeezebox integration allows you to control music players from the LMS ecosystem.
 - [openHAB](https://www.openhab.org/addons/bindings/squeezebox/): Squeezebox binding, integrates the LMS and compatible Squeezebox players.
