@@ -64,6 +64,7 @@
 	- [#1611](https://github.com/LMS-Community/slimserver/pull/1611) \- Include album-link roles in unified artist list roles (@darrell-k)
 	- [#1651](https://github.com/LMS-Community/slimserver/pull/1651) \- An artist could be shown with another artist's picture, if they shared the role on a common album.
 	- [#1662](https://github.com/LMS-Community/slimserver/pull/1662) \- Fix disappearing library\_track rows on metadata updates (@darrell-k)
+	- [#1669](https://github.com/LMS-Community/slimserver/pull/1669) \- Fix library view artist lists (@darrell-k)
 
 - Other:
 
