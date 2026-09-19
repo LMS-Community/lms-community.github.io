@@ -76,7 +76,7 @@ Removing/renaming this directory allows you to start with a fresh configuration 
 
 ### No libraries showing up during initial setup
 
-SqueezePlay has a known issue[^fn1] on several platforms where it fails to receive the broadcast packets from instances of Lyrion Media Server on your local network, when the host running SqueezePlay has multiple network interfaces. This can leave you stuck at the "Libraries" screen during initial setup, with no obvious way to proceed, as shown in the screenshot below.
+SqueezePlay has a known issue[^fn1] on several platforms where it fails to receive the broadcast packets from instances of Lyrion Media Server on your local network when the host running SqueezePlay has multiple network interfaces. This can leave you stuck at the "Libraries" screen during initial setup, with no obvious way to proceed, as shown in the screenshot below.
 
 <figure markdown="span">
   ![A screenshot of SqueezePlay with an empty "Libraries" screen, as described above](assets/squeezeplay_no_libraries.png)
@@ -96,6 +96,6 @@ In case you encounter other issues, please head over to the [forums](https://for
 
 ### macOS Media Key Support
 
-In order to support keyboard media keys like play/pause, fast forward, and rewind, Squeezeplay needs privileges to receive media key events in the background. Go to System Settings → Privacy & Security → Accessibility and click the plus sign to add Squeezeplay to the list of applications. Then restart Squeezeplay.
+In order to support keyboard media keys like play/pause, fast forward, and rewind, Squeezeplay needs privileges to receive media key events in the background. Go to System Settings → Privacy & Security → Accessibility (or Device Control and Data Access in more recent macOS versions) and click the plus sign to add Squeezeplay to the list of applications. Then restart Squeezeplay.
 
 You will also need to do this whenever you upgrade Squeezeplay since macOS will think it is a new application.
