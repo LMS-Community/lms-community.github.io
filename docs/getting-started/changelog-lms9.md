@@ -63,6 +63,7 @@
 	- [#1587](https://github.com/LMS-Community/slimserver/pull/1587) \- Fix RSS feed parsing when a podcast URL contains wide characters (@robho)
 	- [#1611](https://github.com/LMS-Community/slimserver/pull/1611) \- Include album-link roles in unified artist list roles (@darrell-k)
 	- [#1651](https://github.com/LMS-Community/slimserver/pull/1651) \- An artist could be shown with another artist's picture, if they shared the role on a common album.
+	- [#1662](https://github.com/LMS-Community/slimserver/pull/1662) \- Fix disappearing library\_track rows on metadata updates (@darrell-k)
 
 - Other:
 
