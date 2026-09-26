@@ -1,0 +1,31 @@
+---
+# I have no idea why xyBar would expect YAML style configuration, but Pies JSON...
+
+xyBarStyles: |
+    themeVariables:
+          xyChart:
+              titleColour: "#40E0D0"
+              backgroundColor: transparent
+              plotColorPalette: teal
+              xAxisLabelColor: "#40E0D0"
+              yAxisLabelColor: "#40E0D0"
+              xAxisLineColor: "#40E0D0"
+              xAxisTickColor: "#40E0D0"
+              yAxisLineColor: "#40E0D0"
+              yAxisTickColor: "#40E0D0"
+
+pieStyles: |
+    init: {
+        'theme': 'base',
+        'themeVariables': {
+            'primaryTextColor': 'teal',
+            'primaryColor': '#E2FAA7',
+            'primaryBorderColor': '#7C0000',
+            'lineColor': '#F8B229',
+            'secondaryColor': '#A7FAE7',
+            'tertiaryColor': '#fff',
+            'pieStrokeWidth': 1,
+            'pieOuterStrokeWidth': 1
+        }
+    }
+
