@@ -29,12 +29,17 @@ Response: "player count 2<LF>"
 
 `player id <playerindex> ?`
 
-The `player id ?` query returns the unique identifier of a player, (<playerid> parameter of many CLI commands). For physical players this is generally the MAC address. The IP address is used for remote streams.
+The `player id` query returns the unique identifier of a player, (<playerid> parameter of many CLI commands). For physical players this is generally the MAC address. The IP address is used for remote streams.
+
+Another alias for this command is `player address`.
 
 Example:
 ```
 Request: "player id 0 ?<LF>" (or) "0 player id ?"
 Response: "player id 0 04:20:00:12:23:45<LF>"
+
+Request: "player address 0 ?<LF>"
+Response: "player address 0 04:20:00:12:23:45<LF>"
 ```
 
 ### `player uuid`
@@ -110,7 +115,7 @@ Request: "player displaytype 0 ?<LF>" or "0 player displaytype ?"
 Response: "player displaytype 0 noritake-katakana<LF>"
 ```
 
-### `player canpowerpoff`
+### `player canpoweroff`
 
 `player canpoweroff <playerindex|playerid> ?`
 
@@ -328,6 +333,21 @@ Request: "04:20:00:12:23:45 mixer pitch +10<LF>"
 Response: "04:20:00:12:23:45 mixer pitch +10<LF>"
 ```
 
+### `mixer stereoxl`
+
+`<playerid> mixer stereoxl <0 .. 100|-100 .. +100|?>`
+
+The `mixer stereoxl` command returns or sets the current Stereo Expansion setting for the player (supported by players with stereo expansion capability, such as Boom).
+
+Example:
+```
+Request: "04:20:00:12:23:45 mixer stereoxl ?<LF>"
+Response: "04:20:00:12:23:45 mixer stereoxl 0<LF>"
+
+Request: "04:20:00:12:23:45 mixer stereoxl 50<LF>"
+Response: "04:20:00:12:23:45 mixer stereoxl 50<LF>"
+```
+
 ***
 ## `show`
 
@@ -412,7 +432,7 @@ The `displaynow` command provides access to the data currently on the display. T
 Examples:
 ```
 Request: "04:20:00:12:23:45 displaynow ? ?<LF>"
-Response: "04:20:00:12:23:45 display Hello World<LF>"
+Response: "04:20:00:12:23:45 displaynow Hello World<LF>"
 ```
 
 ***
