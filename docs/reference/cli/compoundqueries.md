@@ -48,6 +48,10 @@ Please note this mechanism is completely distinct from the `listen` and `subscri
  || `progresstotal` | Returned with the total value of items found for current scan phase. Not returned if no scan is in progress. |
  || `lastscanfailed` | Information about a possible failure in case a scan has not finished in an attended manner. |
 || `version` | LMS version. Equivalent to `version ?` |
+|| `newversion` | New version of the LMS software available for download. |
+|| `needsrestart` | Indicates if the server needs to be restarted (e.g. to apply plugin changes). |
+|| `pluginsdownloading` | Indicates if plugins are currently being downloaded in the background. |
+|| `newplugins` | A message detailing any newly available or updated plugins. |
  || `mac` | The MAC address of the computer on which the server software is running. |
  || `ip` | The IP address of the computer on which the server software is running. |
 || `httpport` | The port on which the server software is listening. |
@@ -56,27 +60,34 @@ Please note this mechanism is completely distinct from the `listen` and `subscri
  || `info total artists` | Number of artists known to the server. Equivalent to `info total artists ?` |
  || `info total genres` | Number of genres known to the server. Equivalent to `info total genres ?` |
  || `info total songs` | Number of songs known to the server. Equivalent to `info total songs ?` |
+ || `info total duration` | Total playtime in seconds for the entire music library database. |
 | For each defined pref requested: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
  || `prefName` | Preference value. Only if the value is defined. Equivalent to `pref prefName ?`. |
 || `player count` | Number of players known by the server. Equivalent to `player count ?`. |
 | For each player:  <br>Essentially, this list is equivalent to the one returned by `players`.  {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
+|| `playerindex` | The zero-based index of this player. |
 || `playerid` | Player unique identifier. Item delimiter. Equivalent to `player id ?`. |
 || `uuid` | Player unique identifier. Equivalent to `player uuid ?`. |
 || `ip` | Player IP and port. Equivalent to `player ip ?`. |
 ||  `name` | Player name. Equivalent to `player name ?`. |
+||  `seq_no` | Player command sequence number (omitted when not present). |
 ||  `model` | Player model. Equivalent to `player model ?`. |
+||  `modelname` | Player general name (e.g. Squeezebox Radio). |
 ||  `power` | Whether the player is powered on or off. |
+||  `isplaying` | Whether the player is currently playing a track (1) or not (0). |
 ||  `isplayer` | Whether a player is a known player model. Will return 0 for streaming connections. Equivalent to `player isplayer ?`. |
 ||  `displaytype` | Player display type. Not returned for streaming connections. Equivalent to `player displaytype <playerindex> ?`.  |
 ||   `canpoweroff` | Whether the player can be powered off. This value is false for streaming connections. |
 ||  `connected` | Connected state. Equivalent to `<playerid> connected ?`. |
+||  `firmware` | Player firmware/revision version. |
 ||  `player_needs_upgrade` | Connected player needs a firmware upgrade. |
 ||  `player_is_upgrading` | Connected player is in the process of performing a firmware update. |
 || `other player count` | Number of players connected to other discovered servers in the local network. |
 | For each player connected to some other server in the local network:  {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 ||  `playerid` | Player unique identifier (MAC address). |
 ||  `name` | Player name. |
-||  `server` | The server to which the player is connected
+||  `server` | The server to which the player is connected. |
+||  `serverurl` | The URL of the server to which the player is connected. |
 ||  `model` | Player model. Please note that only Squeezebox2 and later can be remotely disconnected. |
 | For each defined player pref requested: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
 ||  `prefName` | Preference value. Only if the value is defined. Equivalent to `playerpref prefName ?`. |
@@ -287,13 +298,17 @@ Please note that on Windows systems the back slashes must either be escaped or r
 
 **Returned tagged parameters:**
 
-| Tag | Description |
-|---|---|
-| `item` | The folder's item: folder, files etc. |
-| `isfolder` | A flag whether an item is a folder or not. |
+| Block | Tag | Description |
+|---|---|---|
+| First block: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
+|| `count` | Total count of matches in the directory. |
+| For each item: {: colspan=3} |&#8288 {: style="padding:0"}|&#8288 {: style="padding:0"}|
+|| `path` | Absolute URI/path of the file or folder. Item delimiter. |
+|| `name` | Base name of the file or folder. |
+|| `isfolder` | A flag identifying if the item is a folder (1) or not (0). |
 
 Example:
 ```
-Request: "readdirectory 0 10 folder://media/mp3"
-Response: "readdirectory 0 10 folder%3A%2F%2Fmedia%2Fmp3 count%3A251 item%3A%5C%5Cmedia%5Cmp3%5CAerosmith isfolder%3A1 item%3A%5C%5Cmedia%5Cmp3%5CAir isfolder%3A1 item%3A%5C%5Cmedia%5Cmp3%5CAlanis%20Morissette isfolder%3A1 item%3A%5C%5Cmedia%5Cmp3%5CAldo%20Romano%2C%20Michel%20Benita%2C%20Glenn%20Ferris%2C%20Paolo%20Fresu isfolder%3A1 item%3A%5C%5Cmedia%5Cmp3%5CAli%20Farka%20Toure isfolder%3A1 item%3A%5C%5Cmedia%5Cmp3%5CAll%20Saints isfolder%3A1 item%3A%5C%5Cmedia%5Cmp3%5CManu%20Katche isfolder%3A1 item%3A%5C%5Cmedia%5Cmp3%5CSinead%20O'Connor isfolder%3A1 item%3A%5C%5Cmedia%5Cmp3%5CShakira isfolder%3A1 item%3A%5C%5Cmedia%5Cmp3%5CAnastacia isfolder%3A1"
+Request: "readdirectory 0 3 folder:/media/mp3"
+Response: "readdirectory 0 3 folder:/media/mp3 count:251 path:/media/mp3/Aerosmith name:Aerosmith isfolder:1 path:/media/mp3/Air name:Air isfolder:1 path:/media/mp3/Alanis%20Morissette name:Alanis%20Morissette isfolder:1"
 ```
