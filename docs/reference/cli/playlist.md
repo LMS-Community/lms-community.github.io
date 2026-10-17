@@ -97,7 +97,7 @@ Response: "04:20:00:12:23:45 current_title 1-Voulez%20vous%20(ABBA)<LF>"
 ```
 
 ### remote
-`<playerid> remote ?'
+`<playerid> remote ?`
 
 The `remote` command allows for querying information about the song currently playing.
 Command `remote` returns `1` if the current song is a remote stream.
@@ -249,6 +249,15 @@ When called **without** a cmd param of `stop`, replace the current playlist with
 
 When called **with** the cmd param of `stop`, stops the currently playing playlist and loads (if possible) the previous playlist. Restored playlist jumps to beginning of CURTRACK when present in m3u file, and does not autoplay restored playlist.
 
+**Accepted tagged parameters:**
+
+| Tag | Description |
+|---|---|
+| `url` | (Required unless `cmd:stop`) The playlist URL to preview. |
+| `title` | The playlist title. |
+| `fadein` | Specifies the fade-in duration in seconds when initiating the preview. |
+| `cmd` | Use `stop` to end the current preview and restore the previous playlist. No other tagged parameters should be sent with `cmd:stop`. |
+
 Examples:
 ```
 Request: "04:20:00:12:23:45 playlist preview url:db:album.titlesearch=A%20FEAST%20OF%20WIRE title:A%20Feast%20Of%20Wire<LF>"
@@ -292,38 +301,60 @@ Response: "04:20:00:12:23:45 playlist save abba<LF>"
 ***
 ## playlist loadalbum
 
-`<playerid> playlist loadalbum <genre> <artist> <album>`
+`<playerid> playlist loadalbum <genre> <artist> <album> <title>`
 
-The `playlist loadalbum` command puts songs matching the specified genre artist and album criteria on the playlist. Songs previously in the playlist are discarded.
+The `playlist loadalbum` command puts songs matching the specified genre, artist, album, and title criteria on the playlist. Songs previously in the playlist are discarded. Empty strings or `*` act as wildcards for each component.
+
+The name is slightly misleading — there is no special handling of albums in this command, it essentially does the same thing as [`playlist loadtracks`](#playlist-loadtracks), but with a slightly different parameter syntax.
+
+`playlist playalbum` is a direct alias for this command.
+
+
 
 Examples:
 ```
-Request: "04:20:00:12:23:45 playlist loadalbum Rock Abba *<LF>"
-Response: "04:20:00:12:23:45 playlist loadalbum Rock Abba *<LF>"
+Request: "04:20:00:12:23:45 playlist loadalbum Rock Abba * *<LF>"
+Response: "04:20:00:12:23:45 playlist loadalbum Rock Abba * *<LF>"
 ```
 
 ***
 ## playlist addalbum
-`<playerid> playlist addalbum <genre> <artist> <album>`
+`<playerid> playlist addalbum <genre> <artist> <album> <title>`
 
-The `playlist addalbum` command appends all songs matching the specified criteria onto the end of the playlist. Songs currently playing or already on the playlist are not affected.
+The `playlist addalbum` command appends all songs matching the specified criteria onto the end of the playlist. Songs currently playing or already on the playlist are not affected. Empty strings or `*` act as wildcards for each component.
+
+The name is slightly misleading — there is no special handling of albums in this command, it essentially does the same thing as [`playlist addtracks`](#playlist-addtracks), but with a slightly different parameter syntax.
 
 Examples:
 ```
-Request: "04:20:00:12:23:45 playlist addalbum Rock Abba *<LF>"
-Response: "04:20:00:12:23:45 playlist addalbum Rock Abba *<LF>"
+Request: "04:20:00:12:23:45 playlist addalbum Rock Abba * *<LF>"
+Response: "04:20:00:12:23:45 playlist addalbum Rock Abba * *<LF>"
 ```
 
 ***
 ## playlist loadtracks
-`<playerid> playlist loadtracks <searchparam>`
+`<playerid> playlist loadtracks <searchparam> [<listRef>] [<fadeInSecs>] [<index>]`
 
-The `playlist loadtracks` command puts tracks matching the specified query on the playlist. Songs previously in the playlist are discarded. Note: you must provide a particular form to the searchparam (see examples)
+The `playlist loadtracks` command puts tracks matching the specified query on the playlist. Songs previously in the playlist are discarded. Note: you must provide a particular form to the searchparam (see examples).
+
+`playlist playtracks` is a direct alias for this command.
+
+<!-- TODO: document the syntax for the search query -->
+
+Additional optional parameters:
+
+* `<listRef>`, only used when a particular `<searchparam>` is specified:
+    * if `<searchparam>` is `urllist`, `<listRef>` is a comma-separated array of track URLs to load
+    * if `<searchparam>` is `listRef`, `<listRef>` is an array of track objects (for internal use)
+    * if `<searchparam>` is `listRef=someName`, `<listRef>` is unused, and the array of tracks is instead fetched from a mode parameter `someName`
+    * if `<searchparam>` is `searchRef`, `<listRef>` is a hash of parameters for a direct SQL query
+* `<fadeInSecs>`: The fade-in period to start playing the new tracks
+* `<index>`: The 0-based index of the matching tracks to start playback from.
 
 Examples:
 ```
 Request: "04:20:00:12:23:45 playlist loadtracks track.titlesearch=purple <LF>"
-Response: "04:20:00:12:23:45 playlist loadtracks track.titleseach=purple <LF>"
+Response: "04:20:00:12:23:45 playlist loadtracks track.titlesearch=purple <LF>"
 
 Request: "04:20:00:12:23:45 playlist loadtracks album.titlesearch=3121 <LF>"
 Response: "04:20:00:12:23:45 playlist loadtracks album.titlesearch=3121 <LF>"
@@ -344,7 +375,7 @@ Note: you must provide a particular form to the searchparam (see examples)
 Examples:
 ```
 Request: "04:20:00:12:23:45 playlist addtracks track.titlesearch=purple <LF>"
-Response: "04:20:00:12:23:45 playlist addtracks track.titleseach=purple <LF>"
+Response: "04:20:00:12:23:45 playlist addtracks track.titlesearch=purple <LF>"
 
 Request: "04:20:00:12:23:45 playlist addtracks album.titlesearch=3121 <LF>"
 Response: "04:20:00:12:23:45 playlist addtracks album.titlesearch=3121 <LF>"
@@ -354,29 +385,63 @@ Response: "04:20:00:12:23:45 playlist addtracks contributor.namesearch=prince <L
 ```
 
 ***
-## playlist insertalbum
+## playlist inserttracks
 
-`<playerid> playlist insertalbum <genre> <artist> <album>`
+`<playerid> playlist inserttracks <searchparam>`
 
-The `playlist insertalbum` command inserts all songs matching the specified criteria at the top of the playlist. Songs already on the playlist are not affected.
+The `playlist inserttracks` command inserts all songs matching the specified criteria after the currently playing song in the playlist.
+
+Note: you must provide a particular form to the searchparam (see examples)
 
 Examples:
 ```
-Request: "04:20:00:12:23:45 playlist addalbum Rock Abba *<LF>"
-Response: "04:20:00:12:23:45 playlist addalbum Rock Abba *<LF>"
+Request: "04:20:00:12:23:45 playlist inserttracks track.titlesearch=purple <LF>"
+Response: "04:20:00:12:23:45 playlist inserttracks track.titlesearch=purple <LF>"
+```
+
+***
+## playlist deletetracks
+
+`<playerid> playlist deletetracks <searchparam>`
+
+The `playlist deletetracks` command removes all tracks matching the specified query from the current playlist.
+
+Note: you must provide a particular form to the searchparam (see examples)
+
+Examples:
+```
+Request: "04:20:00:12:23:45 playlist deletetracks track.titlesearch=purple <LF>"
+Response: "04:20:00:12:23:45 playlist deletetracks track.titlesearch=purple <LF>"
+```
+
+***
+## playlist insertalbum
+
+`<playerid> playlist insertalbum <genre> <artist> <album> <title>`
+
+The `playlist insertalbum` command inserts all songs matching the specified criteria at the top of the playlist. Songs already on the playlist are not affected. Empty strings or `*` act as wildcards for each component.
+
+The name is slightly misleading — there is no special handling of albums in this command, it essentially does the same thing as [`playlist inserttracks`](#playlist-inserttracks), but with a slightly different parameter syntax.
+
+Examples:
+```
+Request: "04:20:00:12:23:45 playlist insertalbum Rock Abba * *<LF>"
+Response: "04:20:00:12:23:45 playlist insertalbum Rock Abba * *<LF>"
 ```
 
 ***
 ## playlist deletealbum
 
-`<playerid> playlist deletealbum <genre> <artist> <album>`
+`<playerid> playlist deletealbum <genre> <artist> <album> <title>`
 
-The `playlist deletealbum` command removes songs matching the specified genre artist and album criteria from the playlist.
+The `playlist deletealbum` command removes songs matching the specified genre, artist, album, and title criteria from the playlist. Empty strings or `*` act as wildcards for each component.
+
+The name is slightly misleading — there is no special handling of albums in this command, it essentially does the same thing as [`playlist deletetracks`](#playlist-deletetracks), but with a slightly different parameter syntax.
 
 Examples:
 ```
-Request: "04:20:00:12:23:45 playlist deletealbum Rock Abba *<LF>"
-Response: "04:20:00:12:23:45 playlist deletealbum Rock Abba *<LF>"
+Request: "04:20:00:12:23:45 playlist deletealbum Rock Abba * *<LF>"
+Response: "04:20:00:12:23:45 playlist deletealbum Rock Abba * *<LF>"
 ```
 
 ***
@@ -395,9 +460,11 @@ Response: "04:20:00:12:23:45 playlist clear<LF>"
 ***
 ## playlist zap
 
-`<playerid> playlist zap <songindex>`
+`<playerid> playlist zap [<songindex>]`
 
-The `playlist zap` command adds the song at index songindex into the zapped song playlist.
+The `playlist zap` command removes the song at `<songindex>` from the current playlist and appends it to the persistent "Zapped Songs" playlist.
+
+* `<songindex>`: (Optional) The 0-based index of the track to zap. If omitted, the currently playing track is selected.
 
 Examples:
 ```
@@ -445,20 +512,11 @@ Response: "04:20:00:12:23:45 playlist modified 0<LF>"
 ```
 
 ***
-## playlist playslistsinfo
+## playlist playlistsinfo
 
-`<playerid> playlist playlistsinfo <taggedParameters>`
+`<playerid> playlist playlistsinfo`
 
 The `playlist playlistsinfo` query returns information on the saved playlist last loaded into the Now Playing playlist, if any.
-
-**Accepted tagged parameters:**
-
-| Tag | Description |
-|---|---|
-| `id` | Playlist id. |
-| `name` | Playlist name. Equivalent to `playlist name ?`. |
-| `modified` | Modification state of the saved playlist. Equivalent to `playlist modified ?`. |
-| `url` | Playlist url. Equivalent to `playlist url ?`. |
 
 **Returned tagged parameters:**
 
@@ -478,13 +536,22 @@ Response: "a5:41:d2:cd:cd:05 playlist playlistsinfo id:267 name:A98 modified:0 u
 ***
 ## playlist index
 
-`<playerid> playlist index <index|+index|-index|?> <fadeInSecs>`
+`<playerid> playlist index <index|+index|-index|?> [<fadeInSecs>] [<noplay>] [<seekdata>]`
 
 The `playlist index` command sets or queries the song that is currently playing by index. When setting, a zero-based value may be used to indicate which song to play.
 
 An explicitly positive or negative number may be used to jump to a song relative to the currently playing song. The index can only be set if the playlist is not empty.
 
-If an index parameter is set then `fadeInSecs` may be passed to specify a fade-in period. The value of the current song index may be obtained by passing in `?` as a parameter.
+An index of `+0` rewinds to the beginning of the current song.
+
+If an index parameter is set then `fadeInSecs` may be passed to specify a fade-in period. 
+
+* `<noplay>`: (Optional) When true (`1`) and the player is currently stopped, the queued track index is updated without starting playback automatically.
+* `<seekdata>`: (Optional) Seek metadata forwarded directly to the controller when jumping.
+
+The value of the current song index may be obtained by passing in `?` as a parameter.
+
+`playlist jump` is a direct alias for `playlist index`, both as a query and as a command.
 
 Examples:
 ```
@@ -506,7 +573,8 @@ The `playlist genre`, `playlist artist`, `playlist album`, `playlist title`, `pl
 See also the commands under [Querying the Song Playing](#querying-the-song-playing) which provided similar information for the song currently playing (plus an additional query, `current_title`)
 
 ### playlist remote
-<playerid> playlist remote <index> ?
+`<playerid> playlist remote <index> ?`
+
 `playlist remote` returns 1 if the `song` is a remote stream.
 
 Example
@@ -571,9 +639,9 @@ Response: "04:20:00:12:23:45 playlist duration 3 103.2<LF>"
 
 ***
 ## playlist tracks
-`<playerid> playlist tracks ?1`
+`<playerid> playlist tracks ?`
 
-The `playlist tracks` command returns the the total number of tracks in the current playlist
+The `playlist tracks` command returns the total number of tracks in the current playlist
 
 Example:
 ```
@@ -630,22 +698,37 @@ Response: "04:20:00:12:23:45 playlist repeat 0<LF>"
 ## playlistcontrol
 `<playerid> playlistcontrol <taggedParameters>`
 
-The`playlistcontrol` command enables playlist operations using IDs as returned by extended CLI queries (titles, artists, playlists, etc).
+The `playlistcontrol` command enables playlist operations using IDs as returned by extended CLI queries (titles, artists, playlists, etc).
+
+!!! note "Precedence of Filters"
+    If multiple filtering parameters are provided, they are evaluated in the following strict order of precedence (highest to lowest). High-precedence filters cause lower-precedence filters to be completely ignored:
+    
+    1. `folder_id`
+    2. Saved Playlists (`playlist_id` or `playlist_name`)
+    3. Classical Works (`work_id` / `performance`), still reads `album_id`
+    4. Tracks (`track_id`)
+    5. General Filters (`genre_id`, `artist_id`, `album_id`, `year`, `role_id`, `release_type`, `library_id`, `only_album_years`)
 
 **Accepted tagged parameters:**
 
 | Tag | Description |
 |---|---|
 | `cmd` | Command to perform on the playlist, one of `load`, `add`, `insert` or `delete`. This parameter is mandatory. If no additional parameter is provided, the entire DB is loaded/added/inserted/deleted. |
-| `genre_id` | Genre ID, to restrict the results to the titles of that genre. |
-| `artist_id` | Artist ID, to restrict the results to the titles of that artist. |
-| `album_id` | Album ID, to restrict the results to the titles of that album. |
-| `track_id` | Comma-separated list of track IDs, to restrict the results to these track_ids. If this parameter is provided, then any `genre_id`, `artist_id` and/or `album_id` parameter is ignored. The tracks are added to the playlist in the given order. |
-| `year` | Year, to restrict the results to the given year. _The form `year_id` is accepted for backwards compatibility but is deprecated._ |
-| `playlist_id` | Playlist ID, to restrict the results to this playlist_id. If this parameter is provided, then any `genre_id`, `artist_id`, `album_id` and/or `track_id` parameter is ignored. |
-| `folder_id` | Folder ID, to restrict the results to files in this folder_id. If this parameter is provided, then all the others are ignored. _Note that `cmd:delete` is not supported for folders._ |
-| `playlist_name` | Playlist name, to restrict the results to this playlist_name. If this parameter is provided, then any `genre_id`, `artist_id`, `album_id`, `track_id` and/or `playlist_id` parameter is ignored. |
 | `play_index` | If this parameter is provided along with `cmd:load` then playback will start with the indicated track. |
+| `folder_id` | Folder ID, to restrict the results to files in this folder_id. If this parameter is provided, then all the others except for `play_index` are ignored. _Note that `cmd:delete` is not supported for folders._ |
+| `playlist_id` | Playlist ID, to restrict the results to this playlist_id. |
+| `playlist_name` | Playlist name, to restrict the results to this playlist_name. |
+| `work_id` | Classical work ID, to restrict the results to the tracks of that classical work. Specify `-1` to filter out all tracks that are not part of a classical work. |
+| `performance` | Classical performance name, used alongside `work_id` to restrict results to a specific performance. |
+| `track_id` | Comma-separated list of track IDs, to restrict the results to these track_ids. The tracks are added to the playlist in the given order. |
+| `genre_id` | Comma-separated list of genre IDs, to restrict the results to the titles of those genres. |
+| `artist_id` | Artist ID, to restrict the results to the titles of that artist. |
+| `album_id` | Comma-separated list of album IDs, to restrict the results to the titles of those albums. |
+| `role_id` | Contributor role ID, to restrict results to those matching the specified role. |
+| `release_type` | Comma-separated list of release types of an album (e.g. `album`, `ep`, etc.). |
+| `library_id` | Virtual library ID, to restrict the results to a virtual library view. |
+| `year` | Year, to restrict the results to the given year. _The form `year_id` is accepted for backwards compatibility but is deprecated._ |
+| `only_album_years` | If set to 1, restricts the year filter to release years of albums only. |
 | `sort` | Album sort order. One of<br>`album`, (the default), <br>`new` (sort by change date in descending order), <br>`artflow` which sorts by artist, year, album for use with artwork-centric interfaces, <br>`artistalbum`, <br>`yearalbum`, <br>`yearartistalbum`, <br>`random`<br>Only of relevance if `genre_id`, `artist_id`, `year` or `year_id` is supplied. |
 
 **Returned tagged parameters:**
