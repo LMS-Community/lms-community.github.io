@@ -7,6 +7,8 @@
 	- Add WebSocket plugin providing a /ws endpoint for clients to send commands and receive server notifications.
 	- Implement a WebSocket client in the Default skin, allowing for real-time status change pushes from the server to the web browser.
 	- Allow plugins to provide custom fonts to be used when rendering non-latin text on ip3k based players.
+	- Added Catalan translation - thanks @rroset!
+	- [#1679](https://github.com/LMS-Community/slimserver/pull/1679) \- CLI: the `alarms` query returns `usesdefaultvolume` (1 when an alarm follows the player's default alarm volume), and `alarm add|update` accept `usedefaultvolume:1` to return an alarm to it - so clients can show and reset an alarm's own volume (@michalstrelec)
 	- [#1286](https://github.com/LMS-Community/slimserver/issues/1286) \- Display album cover for AudioAddict stations (inspired by some work by @mcduman)
 	- [#1541](https://github.com/LMS-Community/slimserver/pull/1541) \- Add per-player timezone support: players can now display date and time, and fire alarms, in their own timezone rather than the server's. (@boudekerk)
 	- [#1546](https://github.com/LMS-Community/slimserver/pull/1546) \- Add "Default Adjustment for Local Tracks" player option. (@SamInPgh)
@@ -23,6 +25,7 @@
 	- Removed CODE2000 font. Use the optional "Render non-latin text on the Squeezebox..." plugin instead.
 	- Improve [HTTP/1.1 compatibility using keep-alive and SSL/TLS.](https://forums.lyrion.org/forum/developer-forums/developers/1823228-possible-issue-with-http-1-1-keep-alive-and-small-body)
 	- Improve artwork matching based on track metadata.
+	- Allow a plugin to provide custom bitrate/sample size handling by providing a Slim::Player::Song::handleSampleAndBitrate() method.
 	- [#1548](https://github.com/LMS-Community/slimserver/pull/1548) \- Updated Czech translation (@mipa87)
 	- [#1549](https://github.com/LMS-Community/slimserver/pull/1549) \- Update CODE2000 font to 1.176 (@mipa87)
 	- [#1550](https://github.com/LMS-Community/slimserver/pull/1550) \- Update wizard plugin JSON encoding to use UTF-8 for HTML templates (@mipa87)
@@ -36,7 +39,6 @@
 - Platform Support:
 
 	- Improve SSL support for Windows and macOS builds, updating Mozilla::CA to the latest version.
-	- Add ARM64 sox binary for macOS (@ralphy)
 	- Update Audio::Scan module to version 1.13 (Windows, macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @arigit, @cheesestraws)
 	- RPM packages cleanup to better integrate with system standards (@mavit)
 	- Removed unused Mac/Windows code from the auto-rescan process (@mavit)
@@ -76,10 +78,15 @@
 
 - Platform Support:
 
+	- Add ARM64 sox binary for macOS (@ralphy)
+
 - Bug Fixes:
 
 	- Make sure we encode user input in search queries to prevent XSS attacks.
+	- [#1357](https://github.com/LMS-Community/slimserver/issues/1357) \- Random Mix: continuous mode could stop adding tracks right after the first batch, as the plugin didn't recognise its own `loadtracks` request (@michalstrelec).
 	- [#1641](https://github.com/LMS-Community/slimserver/issues/1641) \- Trying to play a folder for which exists a playlist of the same name, the playlist would be played.
+	- [#1676](https://github.com/LMS-Community/slimserver/issues/1676) \- Cannot save Media Folders if invalid value is still in the list (eg. removed folder).
+	- [#1680](https://github.com/LMS-Community/slimserver/pull/1680) \- Don't crash the info menus on an id that doesn't exist (@jonstahl).
 
 - Other:
 
