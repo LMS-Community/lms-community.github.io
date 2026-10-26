@@ -58,6 +58,7 @@ After 2010 the LMS community developed DIY hardware offerings:
 - [SqueezePlay](squeezeplay.md) - [Source](https://github.com/ralph-irving/squeezeplay)
   This is based on the player and user interface in Squeezebox Radio and Squeezebox Touch
 - [SoftSqueeze](softsqueeze.md)
+- [LyrionPlay] (https://simonarnold002.github.io/LyrionPlay/README.html) - MacOS Squeezelite based player.
 
 For mobile phones, tablets and TV:
 
