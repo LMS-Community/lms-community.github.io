@@ -76,7 +76,7 @@ Removing/renaming this directory allows you to start with a fresh configuration 
 
 ### No libraries showing up during initial setup
 
-SqueezePlay has a known issue[^fn1] on several platforms where it fails to receive the broadcast packets from instances of Lyrion Media Server on your local network when the host running SqueezePlay has multiple network interfaces. This can leave you stuck at the "Libraries" screen during initial setup, with no obvious way to proceed, as shown in the screenshot below.
+SqueezePlay has a known issue[^fn1] on several platforms where it fails to receive the broadcast packets from instances of Lyrion Music Server on your local network when the host running SqueezePlay has multiple network interfaces. This can leave you stuck at the "Libraries" screen during initial setup, with no obvious way to proceed, as shown in the screenshot below.
 
 <figure markdown="span">
   ![A screenshot of SqueezePlay with an empty "Libraries" screen, as described above](assets/squeezeplay_no_libraries.png)
