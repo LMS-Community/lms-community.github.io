@@ -1,12 +1,15 @@
 {
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260823.1",
-    "@types/node": "^26.2.0",
+    "@cloudflare/workers-types": "^5.20261028.1",
+    "@types/node": "^26.6.5",
     "typescript": "^7.0.2"
   },
   "dependencies": {
-    "cloudflare": "^7.1.0",
+    "cloudflare": "^7.3.0",
     "mimetext": "^3.0.28",
-    "postal-mime": "^3.0.0"
+    "postal-mime": "^4.1.4"
+  },
+  "allowScripts": {
+    "core-js-pure@3.46.0": true
   }
 }
