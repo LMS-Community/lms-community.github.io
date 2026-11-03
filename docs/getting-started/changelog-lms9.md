@@ -8,6 +8,7 @@
 	- Implement a WebSocket client in the Default skin, allowing for real-time status change pushes from the server to the web browser.
 	- Allow plugins to provide custom fonts to be used when rendering non-latin text on ip3k based players.
 	- Added Catalan translation - thanks @rroset!
+	- Improved Norwegian (Bokmål) translation, add support for Nynorsk - thanks @LarsSimonsen!
 	- [#1679](https://github.com/LMS-Community/slimserver/pull/1679) \- CLI: the `alarms` query returns `usesdefaultvolume` (1 when an alarm follows the player's default alarm volume), and `alarm add|update` accept `usedefaultvolume:1` to return an alarm to it - so clients can show and reset an alarm's own volume (@michalstrelec)
 	- [#1286](https://github.com/LMS-Community/slimserver/issues/1286) \- Display album cover for AudioAddict stations (inspired by some work by @mcduman)
 	- [#1541](https://github.com/LMS-Community/slimserver/pull/1541) \- Add per-player timezone support: players can now display date and time, and fire alarms, in their own timezone rather than the server's. (@boudekerk)
@@ -39,7 +40,8 @@
 - Platform Support:
 
 	- Improve SSL support for Windows and macOS builds, updating Mozilla::CA to the latest version.
-	- Update Audio::Scan module to version 1.13 (Windows, macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @arigit, @cheesestraws)
+	- Update Audio::Scan module to version 1.13 (macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @arigit, @cheesestraws)
+	- Update Audio::Scan module to version 1.14 (Windows) (@ralphy)
 	- RPM packages cleanup to better integrate with system standards (@mavit)
 	- Removed unused Mac/Windows code from the auto-rescan process (@mavit)
 	- [#106](https://github.com/LMS-Community/slimserver-platforms/pull/106) \- Removal of SYSV Init support and better systemd support in the RPM package for Red Hat/SUSE (@JohanSaaw, @mavit)
@@ -67,6 +69,8 @@
 	- [#1651](https://github.com/LMS-Community/slimserver/pull/1651) \- An artist could be shown with another artist's picture, if they shared the role on a common album.
 	- [#1662](https://github.com/LMS-Community/slimserver/pull/1662) \- Fix disappearing library\_track rows on metadata updates (@darrell-k)
 	- [#1669](https://github.com/LMS-Community/slimserver/pull/1669) \- Fix library view artist lists (@darrell-k)
+	- [#1696](https://github.com/LMS-Community/slimserver/pull/1696) \- Fix slow start of remote playlists (eg. HLS) (@falkenhawk)
+	- [#1700](https://github.com/LMS-Community/slimserver/pull/1700) \- Fix memory leak on every proxied HTTPS stream (@benroeder)
 
 - Other:
 
@@ -84,9 +88,12 @@
 
 	- Make sure we encode user input in search queries to prevent XSS attacks.
 	- [#1357](https://github.com/LMS-Community/slimserver/issues/1357) \- Random Mix: continuous mode could stop adding tracks right after the first batch, as the plugin didn't recognise its own `loadtracks` request (@michalstrelec).
+	- [#1689](https://github.com/LMS-Community/slimserver/pull/1689) \- Random Mix: continuous mode could still end right after the first batch while a web client (eg. Material) was connected, as Cometd overwrote the source of the notified request.
 	- [#1641](https://github.com/LMS-Community/slimserver/issues/1641) \- Trying to play a folder for which exists a playlist of the same name, the playlist would be played.
 	- [#1676](https://github.com/LMS-Community/slimserver/issues/1676) \- Cannot save Media Folders if invalid value is still in the list (eg. removed folder).
 	- [#1680](https://github.com/LMS-Community/slimserver/pull/1680) \- Don't crash the info menus on an id that doesn't exist (@jonstahl).
+	- [#1692](https://github.com/LMS-Community/slimserver/issues/1692) \- Incorrect YEAR values for M4A files when DAY is an array reference.
+	- [Fix error downloading plugin updates from Github due to excessively long headers.](https://forums.lyrion.org/forum/user-forums/logitech-media-server/1839647-error-downloading-plugin-updates)
 
 - Other:
 
