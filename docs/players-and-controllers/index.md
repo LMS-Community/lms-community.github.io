@@ -59,6 +59,7 @@ After 2010 the LMS community developed DIY hardware offerings:
   This is based on the player and user interface in Squeezebox Radio and Squeezebox Touch
 - [SoftSqueeze](softsqueeze.md)
 - [LyrionPlay](https://simonarnold002.github.io/LyrionPlay/README.html) - MacOS Squeezelite based player.
+- [Fidelia](https://apps.apple.com/app/fidelia/id416135376) (macOS - paid, 14-day trial) - player and library browser, bit-perfect to USB DACs
 
 For mobile phones, tablets and TV:
 
@@ -67,6 +68,7 @@ For mobile phones, tablets and TV:
 - [xTune](https://apps.apple.com/gb/app/xtune-lyrion-remote-player/id6744552136) (iOS - paid)
 - [SlimLibrary](https://apps.apple.com/us/app/slimlibrary/id1022479972) (iOS - paid) [Announcement](https://forums.lyrion.org/forum/user-forums/3rd-party-software/100649-announce-slimlibrary-new-ios-remote-control-and-player-for-logitech-media-server?view=thread)
 - [SlimController](https://slimcontroller.app) (tvOS - paid) - player and controller for Apple TV with music visualizer
+- [Fidelia](https://apps.apple.com/app/id6789964929) (iOS - paid, 14-day trial) - player and library browser
 - [SB Player](https://play.google.com/store/apps/details?id=com.angrygoat.android.sbplayer) (Android - paid)
 - [SqueezePlayer](https://play.google.com/store/apps/details?id=de.bluegaspode.squeezeplayer) (Android - paid)
 - [Squeezelite for Android](https://github.com/CDrummond/squeezelite) (Android - free)
