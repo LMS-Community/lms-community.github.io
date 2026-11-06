@@ -40,13 +40,14 @@
 - Platform Support:
 
 	- Improve SSL support for Windows and macOS builds, updating Mozilla::CA to the latest version.
-	- Update Audio::Scan module to version 1.13 (macOS, Linux Perl 5.32 x86\_64, 5.36 x86\_64/aarch64, 5.40 x86\_64) (@ralphy, @arigit, @cheesestraws)
-	- Update Audio::Scan module to version 1.14 (Windows) (@ralphy)
+	- Update Audio::Scan module to version 1.13 (macOS, Linux Perl 5.32 x86\_64) (@ralphy, @arigit, @cheesestraws)
+	- Update Audio::Scan module to version 1.14 (Windows, Linux Perl 5.34/5.36/5.40, macOS arm64) (@ralphy)
 	- RPM packages cleanup to better integrate with system standards (@mavit)
 	- Removed unused Mac/Windows code from the auto-rescan process (@mavit)
 	- [#106](https://github.com/LMS-Community/slimserver-platforms/pull/106) \- Removal of SYSV Init support and better systemd support in the RPM package for Red Hat/SUSE (@JohanSaaw, @mavit)
 	- [#1606](https://github.com/LMS-Community/slimserver-platforms/pull/1606) \- Improve compatibility with newer DBIx::Class::Schema versions (@paulgevers)
 	- [#1640](https://github.com/LMS-Community/slimserver/issues/1640) \- Don't include any file in CPAN or lib for the "noCPAN" tarball.
+	- [#129](https://github.com/LMS-Community/slimserver-platforms/pull/129) \- Upgrade Docker base image to Debian 13 (trixie) - (@osnieh)
 
 - Bug Fixes:
 
@@ -71,8 +72,12 @@
 	- [#1669](https://github.com/LMS-Community/slimserver/pull/1669) \- Fix library view artist lists (@darrell-k)
 	- [#1696](https://github.com/LMS-Community/slimserver/pull/1696) \- Fix slow start of remote playlists (eg. HLS) (@falkenhawk)
 	- [#1700](https://github.com/LMS-Community/slimserver/pull/1700) \- Fix memory leak on every proxied HTTPS stream (@benroeder)
+	- [#1711](https://github.com/LMS-Community/slimserver/pull/1711) \- keep the NO\_ARTIST fallback contributor when updating a track (@jochen)
 
 - Other:
+
+	- [#1713](https://github.com/LMS-Community/slimserver/pull/1713) \- Avoid a warning with recent versions of DBIx::Class (@mavit)
+	- [#1714](https://github.com/LMS-Community/slimserver/pull/1714) \- Improve scanner compatibility with current DBIx::Class (@mavit)
 
 ## Version 9.1.2
 
