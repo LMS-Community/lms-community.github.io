@@ -73,11 +73,13 @@
 	- [#1696](https://github.com/LMS-Community/slimserver/pull/1696) \- Fix slow start of remote playlists (eg. HLS) (@falkenhawk)
 	- [#1700](https://github.com/LMS-Community/slimserver/pull/1700) \- Fix memory leak on every proxied HTTPS stream (@benroeder)
 	- [#1711](https://github.com/LMS-Community/slimserver/pull/1711) \- keep the NO\_ARTIST fallback contributor when updating a track (@jochen)
+	- [#1722](https://github.com/LMS-Community/slimserver/pull/1722) \- Fix for smart crossfade not working across albums (@oreillymj)
 
 - Other:
 
 	- [#1713](https://github.com/LMS-Community/slimserver/pull/1713) \- Avoid a warning with recent versions of DBIx::Class (@mavit)
 	- [#1714](https://github.com/LMS-Community/slimserver/pull/1714) \- Improve scanner compatibility with current DBIx::Class (@mavit)
+	- [#1719](https://github.com/LMS-Community/slimserver/issues/1719) \- Scanner: log files and folders it cannot read as errors, with a total per scan (@Rouzax)
 
 ## Version 9.1.2
 
