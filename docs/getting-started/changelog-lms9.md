@@ -27,6 +27,7 @@
 	- Improve [HTTP/1.1 compatibility using keep-alive and SSL/TLS.](https://forums.lyrion.org/forum/developer-forums/developers/1823228-possible-issue-with-http-1-1-keep-alive-and-small-body)
 	- Improve artwork matching based on track metadata.
 	- Allow a plugin to provide custom bitrate/sample size handling by providing a Slim::Player::Song::handleSampleAndBitrate() method.
+	- The plugin manager now shows a warning about the potential security implications of installing third-party plugins on first access.
 	- [#1548](https://github.com/LMS-Community/slimserver/pull/1548) \- Updated Czech translation (@mipa87)
 	- [#1549](https://github.com/LMS-Community/slimserver/pull/1549) \- Update CODE2000 font to 1.176 (@mipa87)
 	- [#1550](https://github.com/LMS-Community/slimserver/pull/1550) \- Update wizard plugin JSON encoding to use UTF-8 for HTML templates (@mipa87)
