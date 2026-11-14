@@ -28,6 +28,8 @@
 	- Improve artwork matching based on track metadata.
 	- Allow a plugin to provide custom bitrate/sample size handling by providing a Slim::Player::Song::handleSampleAndBitrate() method.
 	- The plugin manager now shows a warning about the potential security implications of installing third-party plugins on first access.
+	- Updated French translation - thanks @Franck-Berry!
+	- Updated Swedish translation - thanks @JohanSaaw!
 	- [#1548](https://github.com/LMS-Community/slimserver/pull/1548) \- Updated Czech translation (@mipa87)
 	- [#1549](https://github.com/LMS-Community/slimserver/pull/1549) \- Update CODE2000 font to 1.176 (@mipa87)
 	- [#1550](https://github.com/LMS-Community/slimserver/pull/1550) \- Update wizard plugin JSON encoding to use UTF-8 for HTML templates (@mipa87)
@@ -69,6 +71,7 @@
 	- [#1587](https://github.com/LMS-Community/slimserver/pull/1587) \- Fix RSS feed parsing when a podcast URL contains wide characters (@robho)
 	- [#1611](https://github.com/LMS-Community/slimserver/pull/1611) \- Include album-link roles in unified artist list roles (@darrell-k)
 	- [#1651](https://github.com/LMS-Community/slimserver/pull/1651) \- An artist could be shown with another artist's picture, if they shared the role on a common album.
+	- [#1656](https://github.com/LMS-Community/slimserver/pull/1656) \- Resume transcode pipeline feed when stdin pipe drains - #1656. (@jbylsma)
 	- [#1662](https://github.com/LMS-Community/slimserver/pull/1662) \- Fix disappearing library\_track rows on metadata updates (@darrell-k)
 	- [#1669](https://github.com/LMS-Community/slimserver/pull/1669) \- Fix library view artist lists (@darrell-k)
 	- [#1696](https://github.com/LMS-Community/slimserver/pull/1696) \- Fix slow start of remote playlists (eg. HLS) (@falkenhawk)
