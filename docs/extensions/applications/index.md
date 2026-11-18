@@ -22,6 +22,7 @@ title: Applications
 - [Squeezelite-X](https://apps.microsoft.com/detail/9pbhmtnp9037) (Windows): Combines the Squeezelite player with Lyrion with easy access to LMS' user interface.
 - [Squeezer](https://github.com/kaaholst/android-squeezer) (Android): Control your Lyrion Music Server and players from your Android phone.
 - [Ultralight LMS skin](https://github.com/millerdev/lms-ultralight) (Browser): A responsive skin for Lyrion Music Server that works well on desktop and mobile browsers.
+- [WinSqueeze](https://github.com/hazymat/winsqueeze/releases/latest) (Windows): Clean, glass-style player and controller with a synced local copy of the library for instant browsing, and advanced browsing controls.
 - [xTune](https://apps.apple.com/app/xtune-lyrion-remote-player/id6744552136) (iOS/iPadOS): turns your phone/tablet into a remote with built-in player.
 
 ## Voice Control
