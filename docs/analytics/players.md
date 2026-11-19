@@ -48,7 +48,7 @@ Lyrion Music Server encourages users to share their usage data with the LMS comm
         "color": {
             "field": "p",
             "type": "nominal",
-            "title": "OS"
+            "title": "Player Types"
         }
     },
     "transform": [
