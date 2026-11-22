@@ -353,6 +353,24 @@ linear phase.
 
 <a name="see-also"></a>
 
+## Running squeezelite in the background
+
+### as Linux daemon
+
+```
+systemctl --user enable squeezelite
+systemctl --user start squeezelite
+```
+
+Will setup squezelite to run as a daemon in the background and start it immediately. On the next logon squeezelite will start automatically in the background. Customize settings with
+
+```
+systemctl --user edit squeezelite
+systemctl --user daemon-reload
+systemctl --user restart squeezelite
+```
+
+
 # See Also
 
 
