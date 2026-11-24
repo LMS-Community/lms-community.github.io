@@ -76,8 +76,12 @@
 	- [#1669](https://github.com/LMS-Community/slimserver/pull/1669) \- Fix library view artist lists (@darrell-k)
 	- [#1696](https://github.com/LMS-Community/slimserver/pull/1696) \- Fix slow start of remote playlists (eg. HLS) (@falkenhawk)
 	- [#1700](https://github.com/LMS-Community/slimserver/pull/1700) \- Fix memory leak on every proxied HTTPS stream (@benroeder)
+	- [#1710](https://github.com/LMS-Community/slimserver/issue/1710) \- Fix play queue save and restore on server restart with synced group (@mavit)
 	- [#1711](https://github.com/LMS-Community/slimserver/pull/1711) \- keep the NO\_ARTIST fallback contributor when updating a track (@jochen)
 	- [#1722](https://github.com/LMS-Community/slimserver/pull/1722) \- Fix for smart crossfade not working across albums (@oreillymj)
+	- [#1735](https://github.com/LMS-Community/slimserver/pull/1735) \- don't unescape a remote URL because of an escaped URL in its query
+	- [#1736](https://github.com/LMS-Community/slimserver/pull/1736) \- Podcasts: don't split an episode title containing " - " into artist and title (@arakeis)
+	- [Fix TLS 1.3 delays](https://forums.lyrion.org/forum/developer-forums/developers/1843047) (thanks for the investigation, @crystalgipsy)
 
 - Other:
 
