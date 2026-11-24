@@ -17,7 +17,7 @@ This guide uses our ["official" Docker image](https://hub.docker.com/r/lmscommun
 In this guide the following assumptions apply:
 
 - Your music is stored in a folder in a storage pool, `/pool0/media`
-- Configuration will be stored in `/pool0/lyrion_config`
+- Configuration will be stored in a subfolder of the one set at the compose settings page `lms_config`
 - You run your LMS in "host" mode meaning that the 9000 port needs to be free on you NAS
 
 ## Add an LMS application to Compose Files
@@ -32,7 +32,7 @@ In this guide the following assumptions apply:
             container_name: lms
             image: lmscommunity/lyrionmusicserver
             volumes:
-                - /pool0/lyrion_config:/config:rw
+                - CHANGE_TO_COMPOSE_DATA_PATH/lms_config:/config:rw
                 - /pool0/media:/music:ro
                 - /pool0/media:/playlist:rw
                 - /etc/localtime:/etc/localtime:ro
